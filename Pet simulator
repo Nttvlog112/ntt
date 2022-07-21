@@ -1,0 +1,963 @@
+--scipt tạo bỏi NTT
+
+local UltimateTrollingGuiV3 = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local UIGradient = Instance.new("UIGradient")
+local UICorner = Instance.new("UICorner")
+local Title = Instance.new("TextLabel")
+local SubTitle = Instance.new("TextLabel")
+local Welcome2 = Instance.new("TextLabel")
+local UICorner_2 = Instance.new("UICorner")
+local ScrollSizer = Instance.new("Frame")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local Sonic = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local Gale = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local AmongUs = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local KillBot = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local SmugDance = Instance.new("TextButton")
+local UICorner_7 = Instance.new("UICorner")
+local ShadowBlade = Instance.new("TextButton")
+local UICorner_8 = Instance.new("UICorner")
+local FishingRod = Instance.new("TextButton")
+local UICorner_9 = Instance.new("UICorner")
+local NekoMaid = Instance.new("TextButton")
+local UICorner_10 = Instance.new("UICorner")
+local NeptunionV = Instance.new("TextButton")
+local UICorner_11 = Instance.new("UICorner")
+local RbNeptunion = Instance.new("TextButton")
+local UICorner_12 = Instance.new("UICorner")
+local Wall = Instance.new("TextButton")
+local UICorner_13 = Instance.new("UICorner")
+local FlamingCube = Instance.new("TextButton")
+local UICorner_14 = Instance.new("UICorner")
+local Cop = Instance.new("TextButton")
+local UICorner_15 = Instance.new("UICorner")
+local AchromaticGlitcher = Instance.new("TextButton")
+local UICorner_16 = Instance.new("UICorner")
+local Spider = Instance.new("TextButton")
+local UICorner_17 = Instance.new("UICorner")
+local SwordStand = Instance.new("TextButton")
+local UICorner_18 = Instance.new("UICorner")
+local Joy = Instance.new("TextButton")
+local UICorner_19 = Instance.new("UICorner")
+local UltimateMemeDance = Instance.new("TextButton")
+local UICorner_20 = Instance.new("UICorner")
+local Chill = Instance.new("TextButton")
+local UICorner_21 = Instance.new("UICorner")
+local Grapple = Instance.new("TextButton")
+local UICorner_22 = Instance.new("UICorner")
+local Stand = Instance.new("TextButton")
+local UICorner_23 = Instance.new("UICorner")
+local WallWalk = Instance.new("TextButton")
+local UICorner_24 = Instance.new("UICorner")
+local KrystalDance = Instance.new("TextButton")
+local UICorner_25 = Instance.new("UICorner")
+local VrSword = Instance.new("TextButton")
+local UICorner_26 = Instance.new("UICorner")
+local ParkourGod = Instance.new("TextButton")
+local UICorner_27 = Instance.new("UICorner")
+local ServerAdmin = Instance.new("TextButton")
+local UICorner_28 = Instance.new("UICorner")
+local Sniper = Instance.new("TextButton")
+local UICorner_29 = Instance.new("UICorner")
+local ElioBlasio = Instance.new("TextButton")
+local UICorner_30 = Instance.new("UICorner")
+local Ender = Instance.new("TextButton")
+local UICorner_31 = Instance.new("UICorner")
+local BanHammer = Instance.new("TextButton")
+local UICorner_32 = Instance.new("UICorner")
+local Caducus = Instance.new("TextButton")
+local UICorner_33 = Instance.new("UICorner")
+local Chips = Instance.new("TextButton")
+local UICorner_34 = Instance.new("UICorner")
+local Car = Instance.new("TextButton")
+local UICorner_35 = Instance.new("UICorner")
+local Carnage = Instance.new("TextButton")
+local UICorner_36 = Instance.new("UICorner")
+local SegsDoll = Instance.new("TextButton")
+local UICorner_37 = Instance.new("UICorner")
+local Pen = Instance.new("TextButton")
+local UICorner_38 = Instance.new("UICorner")
+local Broomstick = Instance.new("TextButton")
+local UICorner_39 = Instance.new("UICorner")
+local Memeus = Instance.new("TextButton")
+local UICorner_40 = Instance.new("UICorner")
+local Xester = Instance.new("TextButton")
+local UICorner_41 = Instance.new("UICorner")
+local DistractDance = Instance.new("TextButton")
+local UICorner_42 = Instance.new("UICorner")
+local Goopie = Instance.new("TextButton")
+local UICorner_43 = Instance.new("UICorner")
+local Headless = Instance.new("TextButton")
+local UICorner_44 = Instance.new("UICorner")
+local OrangeJustice = Instance.new("TextButton")
+local UICorner_45 = Instance.new("UICorner")
+local InsanityPowers = Instance.new("TextButton")
+local UICorner_46 = Instance.new("UICorner")
+local Floss = Instance.new("TextButton")
+local UICorner_47 = Instance.new("UICorner")
+local HeadHold = Instance.new("TextButton")
+local UICorner_48 = Instance.new("UICorner")
+local RussainKick = Instance.new("TextButton")
+local UICorner_49 = Instance.new("UICorner")
+local Pillow = Instance.new("TextButton")
+local UICorner_50 = Instance.new("UICorner")
+local Pp = Instance.new("TextButton")
+local UICorner_51 = Instance.new("UICorner")
+local BlackHole = Instance.new("TextButton")
+local UICorner_52 = Instance.new("UICorner")
+local JhonDoe = Instance.new("TextButton")
+local UICorner_53 = Instance.new("UICorner")
+local VR = Instance.new("TextButton")
+local UICorner_54 = Instance.new("UICorner")
+local TouchKill = Instance.new("TextButton")
+local UICorner_55 = Instance.new("UICorner")
+local TakeTheL = Instance.new("TextButton")
+local UICorner_56 = Instance.new("UICorner")
+local Boobs = Instance.new("TextButton")
+local UICorner_57 = Instance.new("UICorner")
+local Rtx = Instance.new("TextButton")
+local UICorner_58 = Instance.new("UICorner")
+local RainbowKing = Instance.new("TextButton")
+local UICorner_59 = Instance.new("UICorner")
+local Gun = Instance.new("TextButton")
+local UICorner_60 = Instance.new("UICorner")
+local PixelCar = Instance.new("TextButton")
+local UICorner_61 = Instance.new("UICorner")
+local HellRobotics = Instance.new("TextButton")
+local UICorner_62 = Instance.new("UICorner")
+local Titain = Instance.new("TextButton")
+local UICorner_63 = Instance.new("UICorner")
+local Neko = Instance.new("TextButton")
+local UICorner_64 = Instance.new("UICorner")
+local Zen = Instance.new("TextButton")
+local UICorner_65 = Instance.new("UICorner")
+local Minigun = Instance.new("TextButton")
+local UICorner_66 = Instance.new("UICorner")
+local Eggdog = Instance.new("TextButton")
+local UICorner_67 = Instance.new("UICorner")
+local Credits = Instance.new("TextLabel")
+local UICorner_68 = Instance.new("UICorner")
+local Respawn = Instance.new("TextButton")
+local UICorner_69 = Instance.new("UICorner")
+local Netless = Instance.new("TextButton")
+local UICorner_70 = Instance.new("UICorner")
+local AntiFling = Instance.new("TextButton")
+local UICorner_71 = Instance.new("UICorner")
+local X = Instance.new("TextButton")
+local UICorner_72 = Instance.new("UICorner")
+local OpenUtg = Instance.new("TextButton")
+
+--Properties:
+
+UltimateTrollingGuiV3.Name = "UltimateTrollingGuiV3"
+UltimateTrollingGuiV3.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+UltimateTrollingGuiV3.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+UltimateTrollingGuiV3.ResetOnSpawn = false
+
+Main.Name = "Main"
+Main.Parent = UltimateTrollingGuiV3
+Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Main.BorderSizePixel = 0
+Main.Position = UDim2.new(0.382268965, 0, 1.18099999, 0)
+Main.Size = UDim2.new(0, 451, 0, 534)
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 5))}
+UIGradient.Parent = Main
+
+UICorner.Parent = Main
+
+Title.Name = "Title"
+Title.Parent = Main
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.Position = UDim2.new(0.0600659028, 0, -0.00186577276, 0)
+Title.Size = UDim2.new(0, 395, 0, 51)
+Title.Font = Enum.Font.SourceSans
+Title.Text = "scipt pet simulator | by NTT"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextWrapped = true
+
+SubTitle.Name = "SubTitle"
+SubTitle.Parent = Main
+SubTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SubTitle.BackgroundTransparency = 1.000
+SubTitle.Position = UDim2.new(0.168713331, 0, 0.0599319786, 0)
+SubTitle.Size = UDim2.new(0, 297, 0, 35)
+SubTitle.Font = Enum.Font.SourceSans
+SubTitle.Text = ""
+SubTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+SubTitle.TextScaled = true
+SubTitle.TextSize = 14.000
+SubTitle.TextWrapped = true
+
+Welcome2.Name = "Welcome2"
+Welcome2.Parent = Main
+Welcome2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Welcome2.BorderSizePixel = 0
+Welcome2.Position = UDim2.new(0.0245891828, 0, 0.114000015, 0)
+Welcome2.Size = UDim2.new(0, 428, 0, 36)
+Welcome2.Font = Enum.Font.SourceSans
+Welcome2.Text = "scipt sẻ được update"
+Welcome2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Welcome2.TextSize = 23.000
+Welcome2.TextWrapped = true
+
+UICorner_2.Parent = Welcome2
+
+ScrollSizer.Name = "ScrollSizer"
+ScrollSizer.Parent = Main
+ScrollSizer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollSizer.BackgroundTransparency = 1.000
+ScrollSizer.BorderSizePixel = 0
+ScrollSizer.Position = UDim2.new(0.0245891828, 0, 0.196629211, 0)
+ScrollSizer.Size = UDim2.new(0, 428, 2, 333)
+
+ScrollingFrame.Parent = ScrollSizer
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame.BorderSizePixel = 0
+ScrollingFrame.Size = UDim2.new(0, 427, 0, 333)
+ScrollingFrame.ScrollBarThickness = 0
+
+Sonic.Name = "Sonic"
+Sonic.Parent = ScrollingFrame
+Sonic.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Sonic.Position = UDim2.new(0.0093457941, 0, 0.0022281385, 0)
+Sonic.Size = UDim2.new(0, 419, 0, 36)
+Sonic.Font = Enum.Font.SourceSansBold
+Sonic.Text = "    trứng tire 1 | 275 coin "
+Sonic.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sonic.TextSize = 20.000
+Sonic.TextWrapped = true
+Sonic.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_3.Parent = Sonic
+
+Gale.Name = "Gale"
+Gale.Parent = ScrollingFrame
+Gale.BackgroundColor3 = Color3.fromRGB(0, 0, 5)
+Gale.Position = UDim2.new(0.0093457941, 0, 0.0175743196, 0)
+Gale.Size = UDim2.new(0, 419, 0, 36)
+Gale.Font = Enum.Font.SourceSansBold
+Gale.Text = "    trứng tier 2 | 2.500 coin"
+Gale.TextColor3 = Color3.fromRGB(255, 255, 255)
+Gale.TextSize = 20.000
+Gale.TextWrapped = true
+Gale.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_4.Parent = Gale
+
+AmongUs.Name = "AmongUs"
+AmongUs.Parent = ScrollingFrame
+AmongUs.BackgroundColor3 = Color3.fromRGB(0, 0, 5)
+AmongUs.Position = UDim2.new(0.0093457941, 0, 0.0329205021, 0)
+AmongUs.Size = UDim2.new(0, 419, 0, 36)
+AmongUs.Font = Enum.Font.SourceSansBold
+AmongUs.Text = "    trứng tier 3 | 12.500 coin"
+AmongUs.TextColor3 = Color3.fromRGB(255, 255, 255)
+AmongUs.TextSize = 20.000
+AmongUs.TextWrapped = true
+AmongUs.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_5.Parent = AmongUs
+
+KillBot.Name = "KillBot"
+KillBot.Parent = ScrollingFrame
+KillBot.BackgroundColor3 = Color3.fromRGB(0, 0, 5)
+KillBot.Position = UDim2.new(0.0093457941, 0, 0.0482666828, 0)
+KillBot.Size = UDim2.new(0, 419, 0, 36)
+KillBot.Font = Enum.Font.SourceSansBold
+KillBot.Text = "    trứng tier 4 | 46.000 coin"
+KillBot.TextColor3 = Color3.fromRGB(255, 255, 255)
+KillBot.TextSize = 20.000
+KillBot.TextWrapped = true
+KillBot.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_6.Parent = KillBot
+
+SmugDance.Name = "SmugDance"
+SmugDance.Parent = ScrollingFrame
+SmugDance.BackgroundColor3 = Color3.fromRGB(0, 0, 5)
+SmugDance.Position = UDim2.new(0.0093457941, 0, 0.077888377, 0)
+SmugDance.Size = UDim2.new(0, 419, 0, 36)
+SmugDance.Font = Enum.Font.SourceSansBold
+SmugDance.Text = "    trứng tier 6 | 450.000 coin "
+SmugDance.TextColor3 = Color3.fromRGB(255, 255, 255)
+SmugDance.TextSize = 20.000
+SmugDance.TextWrapped = true
+SmugDance.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_7.Parent = SmugDance
+
+ShadowBlade.Name = "ShadowBlade"
+ShadowBlade.Parent = ScrollingFrame
+ShadowBlade.BackgroundColor3 = Color3.fromRGB(0, 0, 5)
+ShadowBlade.Position = UDim2.new(0.0093457941, 0, 0.0932345614, 0)
+ShadowBlade.Size = UDim2.new(0, 419, 0, 36)
+ShadowBlade.Font = Enum.Font.SourceSansBold
+ShadowBlade.Text = "    trứng tier 7 | 1.500.000 coin"
+ShadowBlade.TextColor3 = Color3.fromRGB(255, 255, 255)
+ShadowBlade.TextSize = 20.000
+ShadowBlade.TextWrapped = true
+ShadowBlade.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_8.Parent = ShadowBlade
+
+FishingRod.Name = "FishingRod"
+FishingRod.Parent = ScrollingFrame
+FishingRod.BackgroundColor3 = Color3.fromRGB(0, 0, 5)
+FishingRod.Position = UDim2.new(0.0093457941, 0, 0.108580746, 0)
+FishingRod.Size = UDim2.new(0, 419, 0, 36)
+FishingRod.Font = Enum.Font.SourceSansBold
+FishingRod.Text = "     trứng tier 8 | 3.750.000 coin"
+FishingRod.TextColor3 = Color3.fromRGB(255, 255, 255)
+FishingRod.TextSize = 20.000
+FishingRod.TextWrapped = true
+FishingRod.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_9.Parent = FishingRod
+
+NekoMaid.Name = "NekoMaid"
+NekoMaid.Parent = ScrollingFrame
+NekoMaid.BackgroundColor3 = Color3.fromRGB(0, 0, 5)
+NekoMaid.Position = UDim2.new(0.0093457941, 0, 0.0625422001, 0)
+NekoMaid.Size = UDim2.new(0, 419, 0, 36)
+NekoMaid.Font = Enum.Font.SourceSansBold
+NekoMaid.Text = "    trứng tier 5 | 175.000 coin"
+NekoMaid.TextColor3 = Color3.fromRGB(255, 255, 255)
+NekoMaid.TextSize = 20.000
+NekoMaid.TextWrapped = true
+NekoMaid.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_10.Parent = NekoMaid
+
+NeptunionV.Name = "NeptunionV"
+NeptunionV.Parent = ScrollingFrame
+NeptunionV.BackgroundColor3 = Color3.fromRGB(0, 0, 5)
+NeptunionV.Position = UDim2.new(0.0093457941, 0, 0.139630005, 0)
+NeptunionV.Size = UDim2.new(0, 419, 0, 36)
+NeptunionV.Font = Enum.Font.SourceSansBold
+NeptunionV.Text = "    trứng tier 10 | 50.000.000 coin"
+NeptunionV.TextColor3 = Color3.fromRGB(255, 255, 255)
+NeptunionV.TextSize = 20.000
+NeptunionV.TextWrapped = true
+NeptunionV.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_11.Parent = NeptunionV
+
+RbNeptunion.Name = "RbNeptunion"
+RbNeptunion.Parent = ScrollingFrame
+RbNeptunion.BackgroundColor3 = Color3.fromRGB(0, 0, 5)
+RbNeptunion.Position = UDim2.new(0.0093457941, 0, 0.154976189, 0)
+RbNeptunion.Size = UDim2.new(0, 419, 0, 36)
+RbNeptunion.Font = Enum.Font.SourceSansBold
+RbNeptunion.Text = "    trứng tier 11 | 350.000.000 coin "
+RbNeptunion.TextColor3 = Color3.fromRGB(255, 255, 255)
+RbNeptunion.TextSize = 20.000
+RbNeptunion.TextWrapped = true
+RbNeptunion.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_12.Parent = RbNeptunion
+
+Wall.Name = "Wall"
+Wall.Parent = ScrollingFrame
+Wall.BackgroundColor3 = Color3.fromRGB(0, 0, 5)
+Wall.Position = UDim2.new(0.0093457941, 0, 0.170322359, 0)
+Wall.Size = UDim2.new(0, 419, 0, 36)
+Wall.Font = Enum.Font.SourceSansBold
+Wall.Text = "    trứng tier 12 | 5.000.000.000 coin"
+Wall.TextColor3 = Color3.fromRGB(255, 255, 255)
+Wall.TextSize = 20.000
+Wall.TextWrapped = true
+Wall.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_13.Parent = Wall
+
+FlamingCube.Name = "FlamingCube"
+FlamingCube.Parent = ScrollingFrame
+FlamingCube.BackgroundColor3 = Color3.fromRGB(0, 0, 5)
+FlamingCube.Position = UDim2.new(0.0093457941, 0, 0.199944049, 0)
+FlamingCube.Size = UDim2.new(0, 419, 0, 36)
+FlamingCube.Font = Enum.Font.SourceSansBold
+FlamingCube.Text = "    trứng tier 14 | 475.000 mon"
+FlamingCube.TextColor3 = Color3.fromRGB(255, 255, 255)
+FlamingCube.TextSize = 20.000
+FlamingCube.TextWrapped = true
+FlamingCube.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_14.Parent = FlamingCube
+
+Cop.Name = "Cop"
+Cop.Parent = ScrollingFrame
+Cop.BackgroundColor3 = Color3.fromRGB(0, 0, 5)
+Cop.Position = UDim2.new(0.0093457941, 0, 0.230636418, 0)
+Cop.Size = UDim2.new(0, 419, 0, 36)
+Cop.Font = Enum.Font.SourceSansBold
+Cop.Text = "    trứng tier 16 | 8.000.000 mon"
+Cop.TextColor3 = Color3.fromRGB(255, 255, 255)
+Cop.TextSize = 20.000
+Cop.TextWrapped = true
+Cop.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_15.Parent = Cop
+
+AchromaticGlitcher.Name = "AchromaticGlitcher"
+AchromaticGlitcher.Parent = ScrollingFrame
+AchromaticGlitcher.BackgroundColor3 = Color3.fromRGB(0, 0, 5)
+AchromaticGlitcher.Position = UDim2.new(0.0093457941, 0, 0.18459788, 0)
+AchromaticGlitcher.Size = UDim2.new(0, 419, 0, 36)
+AchromaticGlitcher.Font = Enum.Font.SourceSansBold
+AchromaticGlitcher.Text = "    trứng tier 13 | 65.000 mon"
+AchromaticGlitcher.TextColor3 = Color3.fromRGB(255, 255, 255)
+AchromaticGlitcher.TextSize = 20.000
+AchromaticGlitcher.TextWrapped = true
+AchromaticGlitcher.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_16.Parent = AchromaticGlitcher
+
+Spider.Name = "Spider"
+Spider.Parent = ScrollingFrame
+Spider.BackgroundColor3 = Color3.fromRGB(0, 0, 5)
+Spider.Position = UDim2.new(0.0093457941, 0, 0.215290248, 0)
+Spider.Size = UDim2.new(0, 419, 0, 36)
+Spider.Font = Enum.Font.SourceSansBold
+Spider.Text = "    trứng tier 15 | 2.375.000 mon"
+Spider.TextColor3 = Color3.fromRGB(255, 255, 255)
+Spider.TextSize = 20.000
+Spider.TextWrapped = true
+Spider.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_17.Parent = Spider
+
+SwordStand.Name = "SwordStand"
+SwordStand.Parent = ScrollingFrame
+SwordStand.BackgroundColor3 = Color3.fromRGB(0, 0, 5)
+SwordStand.Position = UDim2.new(0.0093457941, 0, 0.124283813, 0)
+SwordStand.Size = UDim2.new(0, 419, 0, 36)
+SwordStand.Font = Enum.Font.SourceSansBold
+SwordStand.Text = "    trứng tier 9 | 8.000.000 coin"
+SwordStand.TextColor3 = Color3.fromRGB(255, 255, 255)
+SwordStand.TextSize = 20.000
+SwordStand.TextWrapped = true
+SwordStand.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_18.Parent = SwordStand
+
+Joy.Name = "Joy"
+Joy.Parent = ScrollingFrame
+Joy.BackgroundColor3 = Color3.fromRGB(0, 0, 5)
+Joy.Position = UDim2.new(0.00934579596, 0, 0.261328787, 0)
+Joy.Size = UDim2.new(0, 419, 0, 36)
+Joy.Font = Enum.Font.SourceSansBold
+Joy.Text = "    trứng tier 18 | 165.000.000 mon"
+Joy.TextColor3 = Color3.fromRGB(255, 255, 255)
+Joy.TextSize = 20.000
+Joy.TextWrapped = true
+Joy.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_19.Parent = Joy
+
+UltimateMemeDance.Name = "UltimateMemeDance"
+UltimateMemeDance.Parent = ScrollingFrame
+UltimateMemeDance.BackgroundColor3 = Color3.fromRGB(0, 0, 5)
+UltimateMemeDance.Position = UDim2.new(0.00934579596, 0, 0.276674956, 0)
+UltimateMemeDance.Size = UDim2.new(0, 419, 0, 36)
+UltimateMemeDance.Font = Enum.Font.SourceSansBold
+UltimateMemeDance.Text = "    trứng giáng sinh tier 1 | 165 snow"
+UltimateMemeDance.TextColor3 = Color3.fromRGB(255, 255, 255)
+UltimateMemeDance.TextSize = 20.000
+UltimateMemeDance.TextWrapped = true
+UltimateMemeDance.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_20.Parent = UltimateMemeDance
+
+Chill.Name = "Chill"
+Chill.Parent = ScrollingFrame
+Chill.BackgroundColor3 = Color3.fromRGB(0, 0, 5)
+Chill.Position = UDim2.new(0.00934579596, 0, 0.292021126, 0)
+Chill.Size = UDim2.new(0, 419, 0, 36)
+Chill.Font = Enum.Font.SourceSansBold
+Chill.Text = "    trứng giáng sinh tier 2 | 90.000 snow"
+Chill.TextColor3 = Color3.fromRGB(255, 255, 255)
+Chill.TextSize = 20.000
+Chill.TextWrapped = true
+Chill.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_21.Parent = Chill
+
+Grapple.Name = "Grapple"
+Grapple.Parent = ScrollingFrame
+Grapple.BackgroundColor3 = Color3.fromRGB(0, 0, 5)
+Grapple.Position = UDim2.new(0.00934579596, 0, 0.321642816, 0)
+Grapple.Size = UDim2.new(0, 419, 0, 36)
+Grapple.Font = Enum.Font.SourceSansBold
+Grapple.Text = "    trứng giáng sinh tier 4 | 8.000.000.000 snow"
+Grapple.TextColor3 = Color3.fromRGB(255, 255, 255)
+Grapple.TextSize = 20.000
+Grapple.TextWrapped = true
+Grapple.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_22.Parent = Grapple
+
+Stand.Name = "Stand"
+Stand.Parent = ScrollingFrame
+Stand.BackgroundColor3 = Color3.fromRGB(0, 0, 5)
+Stand.Position = UDim2.new(0.00934579596, 0, 0.352335185, 0)
+Stand.Size = UDim2.new(0, 419, 0, 36)
+Stand.Font = Enum.Font.SourceSansBold
+Stand.Text = "    speed"
+Stand.TextColor3 = Color3.fromRGB(255, 255, 255)
+Stand.TextSize = 20.000
+Stand.TextWrapped = true
+Stand.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_23.Parent = Stand
+
+WallWalk.Name = "WallWalk"
+WallWalk.Parent = ScrollingFrame
+WallWalk.BackgroundColor3 = Color3.fromRGB(0, 0, 5)
+WallWalk.Position = UDim2.new(0.00934579596, 0, 0.306296647, 0)
+WallWalk.Size = UDim2.new(0, 419, 0, 36)
+WallWalk.Font = Enum.Font.SourceSansBold
+WallWalk.Text = "    trứng giáng sinh tier 3 | 15.000.000 snow"
+WallWalk.TextColor3 = Color3.fromRGB(255, 255, 255)
+WallWalk.TextSize = 20.000
+WallWalk.TextWrapped = true
+WallWalk.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_24.Parent = WallWalk
+
+KrystalDance.Name = "KrystalDance"
+KrystalDance.Parent = ScrollingFrame
+KrystalDance.BackgroundColor3 = Color3.fromRGB(0, 0, 5)
+KrystalDance.Position = UDim2.new(0.00934579596, 0, 0.336989015, 0)
+KrystalDance.Size = UDim2.new(0, 419, 0, 36)
+KrystalDance.Font = Enum.Font.SourceSansBold
+KrystalDance.Text = "    click free game pass teleport"
+KrystalDance.TextColor3 = Color3.fromRGB(255, 255, 255)
+KrystalDance.TextSize = 20.000
+KrystalDance.TextWrapped = true
+KrystalDance.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_25.Parent = KrystalDance
+
+
+ServerAdmin.Name = "ServerAdmin"
+ServerAdmin.Parent = ScrollingFrame
+ServerAdmin.BackgroundColor3 = Color3.fromRGB(0, 0, 5)
+ServerAdmin.Position = UDim2.new(0.00934579596, 0, 0.368038267, 0)
+ServerAdmin.Size = UDim2.new(0, 419, 0, 36)
+ServerAdmin.Font = Enum.Font.SourceSansBold
+ServerAdmin.Text = "    fly"
+ServerAdmin.TextColor3 = Color3.fromRGB(255, 255, 255)
+ServerAdmin.TextSize = 20.000
+ServerAdmin.TextWrapped = true
+ServerAdmin.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_28.Parent = ServerAdmin
+
+
+Chips.Name = "Chips"
+Chips.Parent = ScrollingFrame
+Chips.BackgroundColor3 = Color3.fromRGB(0, 0, 5)
+Chips.Position = UDim2.new(0.00934579596, 0, 0.245982587, 0)
+Chips.Size = UDim2.new(0, 419, 0, 36)
+Chips.Font = Enum.Font.SourceSansBold
+Chips.Text = "   trứng tier 17 | 26.500.000 mon "
+Chips.TextColor3 = Color3.fromRGB(255, 255, 255)
+Chips.TextSize = 20.000
+Chips.TextWrapped = true
+Chips.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_34.Parent = Chips
+
+
+Credits.Name = "Credits"
+Credits.Parent = Main
+Credits.BackgroundColor3 = Color3.fromRGB(0, 2, 1)
+Credits.BorderSizePixel = 0
+Credits.Position = UDim2.new(0.0223718882, 0, 0.834973812, 0)
+Credits.Size = UDim2.new(0, 428, 0, 36)
+Credits.Font = Enum.Font.SourceSans
+Credits.Text = "scipt tạo bởi NTT"
+Credits.TextColor3 = Color3.fromRGB(255, 255, 255)
+Credits.TextSize = 23.000
+Credits.TextWrapped = true
+
+UICorner_68.Parent = Credits
+
+Respawn.Name = "Respawn"
+Respawn.Parent = Main
+Respawn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Respawn.Position = UDim2.new(0.680709541, 0, 0.915730357, 0)
+Respawn.Size = UDim2.new(0, 132, 0, 36)
+Respawn.Font = Enum.Font.SourceSansBold
+Respawn.Text = "Respawn"
+Respawn.TextColor3 = Color3.fromRGB(0, 0, 0)
+Respawn.TextScaled = true
+Respawn.TextSize = 14.000
+Respawn.TextWrapped = true
+
+UICorner_69.Parent = Respawn
+
+Netless.Name = "Netless"
+Netless.Parent = Main
+Netless.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Netless.Position = UDim2.new(0.323725045, 0, 0.915730357, 0)
+Netless.Size = UDim2.new(0, 152, 0, 36)
+Netless.Font = Enum.Font.SourceSansBold
+Netless.Text = "Netless"
+Netless.TextColor3 = Color3.fromRGB(0, 0, 0)
+Netless.TextScaled = true
+Netless.TextSize = 14.000
+Netless.TextWrapped = true
+
+UICorner_70.Parent = Netless
+
+AntiFling.Name = "AntiFling"
+AntiFling.Parent = Main
+AntiFling.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AntiFling.Position = UDim2.new(0.0245891828, 0, 0.915730357, 0)
+AntiFling.Size = UDim2.new(0, 127, 0, 36)
+AntiFling.Font = Enum.Font.SourceSansBold
+AntiFling.Text = "Anti Fling"
+AntiFling.TextColor3 = Color3.fromRGB(0, 0, 0)
+AntiFling.TextScaled = true
+AntiFling.TextSize = 14.000
+AntiFling.TextWrapped = true
+
+UICorner_71.Parent = AntiFling
+
+X.Name = "X"
+X.Parent = Main
+X.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+X.Position = UDim2.new(0.93569845, 0, -0.0337078646, 0)
+X.Size = UDim2.new(0, 50, 0, 50)
+X.Font = Enum.Font.SourceSansBold
+X.Text = "X"
+X.TextColor3 = Color3.fromRGB(255, 255, 255)
+X.TextScaled = true
+X.TextSize = 14.000
+X.TextWrapped = true
+
+UICorner_72.CornerRadius = UDim.new(1, 0)
+UICorner_72.Parent = X
+
+OpenUtg.Name = "OpenUtg"
+OpenUtg.Parent = UltimateTrollingGuiV3
+OpenUtg.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+OpenUtg.BackgroundTransparency = 1.000
+OpenUtg.Position = UDim2.new(0.0599999987, 0, 0.019897461, 0)
+OpenUtg.Size = UDim2.new(0, 10, 0, 10)
+OpenUtg.Visible = false
+OpenUtg.Font = Enum.Font.SourceSans
+OpenUtg.Text = ""
+OpenUtg.TextColor3 = Color3.fromRGB(255, 255, 255)
+OpenUtg.TextScaled = true
+OpenUtg.TextSize = 14.000
+OpenUtg.TextWrapped = true
+
+-- Scripts:
+
+local function ZXMCQPU_fake_script() -- Respawn.LocalScript 
+	local script = Instance.new('LocalScript', Respawn)
+
+	function respawn()
+		local char = game.Players.LocalPlayer.Character
+		if char:FindFirstChildOfClass("Humanoid") then char:FindFirstChildOfClass("Humanoid"):ChangeState(15) end
+		char:ClearAllChildren()
+		local newChar = Instance.new("Model")
+		newChar.Parent = workspace
+		game.Players.LocalPlayer.Character = newChar
+		wait()
+		game.Players.LocalPlayer.Character = char
+		newChar:Destroy()
+	end
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		respawn()
+	end)
+end
+coroutine.wrap(ZXMCQPU_fake_script)()
+local function HMRPCLX_fake_script() -- Netless.NetlessScript 
+	local script = Instance.new('LocalScript', Netless)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
+			if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
+				game:GetService("RunService").Heartbeat:connect(function()
+					v.Velocity = Vector3.new(0,35,0)
+					wait(0.5)
+				end)
+			end
+		end
+	
+		game:GetService("StarterGui"):SetCore("SendNotification", { 
+			Title = "Notification";
+			Text = "Netless activated";
+			Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+		Duration = 16;
+	end)
+end
+coroutine.wrap(HMRPCLX_fake_script)()
+local function HTWNV_fake_script() -- AntiFling.AntiFlingScript 
+	local script = Instance.new('LocalScript', AntiFling)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local Services = setmetatable({}, {__index = function(Self, Index)
+			local NewService = game.GetService(game, Index)
+			if NewService then
+				Self[Index] = NewService
+			end
+			return NewService
+		end})
+	
+		-- [ LocalPlayer ] --
+		local LocalPlayer = Services.Players.LocalPlayer
+	
+		-- // Functions \\ --
+		local function PlayerAdded(Player)
+			local Detected = false
+			local Character;
+			local PrimaryPart;
+	
+			local function CharacterAdded(NewCharacter)
+				Character = NewCharacter
+				repeat
+					wait()
+					PrimaryPart = NewCharacter:FindFirstChild("HumanoidRootPart")
+				until PrimaryPart
+				Detected = false
+			end
+	
+			CharacterAdded(Player.Character or Player.CharacterAdded:Wait())
+			Player.CharacterAdded:Connect(CharacterAdded)
+			Services.RunService.Heartbeat:Connect(function()
+				if (Character and Character:IsDescendantOf(workspace)) and (PrimaryPart and PrimaryPart:IsDescendantOf(Character)) then
+					if PrimaryPart.AssemblyAngularVelocity.Magnitude > 50 or PrimaryPart.AssemblyLinearVelocity.Magnitude > 100 then
+						if Detected == false then
+							game.StarterGui:SetCore("ChatMakeSystemMessage", {
+								Text = "Fling Exploit detected, Player: " .. tostring(Player);
+								Color = Color3.fromRGB(255, 200, 0);
+							})
+						end
+						Detected = true
+						for i,v in ipairs(Character:GetDescendants()) do
+							if v:IsA("BasePart") then
+								v.CanCollide = false
+								v.AssemblyAngularVelocity = Vector3.new(0, 0, 0)
+								v.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
+								v.CustomPhysicalProperties = PhysicalProperties.new(0, 0, 0)
+							end
+						end
+						PrimaryPart.CanCollide = false
+						PrimaryPart.AssemblyAngularVelocity = Vector3.new(0, 0, 0)
+						PrimaryPart.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
+						PrimaryPart.CustomPhysicalProperties = PhysicalProperties.new(0, 0, 0)
+					end
+				end
+			end)
+		end
+	
+		-- // Event Listeners \\ --
+		for i,v in ipairs(Services.Players:GetPlayers()) do
+			if v ~= LocalPlayer then
+				PlayerAdded(v)
+			end
+		end
+		Services.Players.PlayerAdded:Connect(PlayerAdded)
+	
+		local LastPosition = nil
+		Services.RunService.Heartbeat:Connect(function()
+			pcall(function()
+				local PrimaryPart = LocalPlayer.Character.PrimaryPart
+				if PrimaryPart.AssemblyLinearVelocity.Magnitude > 250 or PrimaryPart.AssemblyAngularVelocity.Magnitude > 250 then
+					PrimaryPart.AssemblyAngularVelocity = Vector3.new(0, 0, 0)
+					PrimaryPart.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
+					PrimaryPart.CFrame = LastPosition
+	
+					game.StarterGui:SetCore("ChatMakeSystemMessage", {
+						Text = "You were flung. Neutralizing velocity.";
+						Color = Color3.fromRGB(255, 0, 0);
+					})
+				elseif PrimaryPart.AssemblyLinearVelocity.Magnitude < 50 or PrimaryPart.AssemblyAngularVelocity.Magnitude > 50 then
+					LastPosition = PrimaryPart.CFrame
+				end
+			end)
+		end)
+	end)
+end
+coroutine.wrap(HTWNV_fake_script)()
+local function EEJMKD_fake_script() -- Main.Drag 
+	local script = Instance.new('LocalScript', Main)
+
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent
+	local dragToggle = nil
+	local dragSpeed = 0.25
+	local dragStart = nil
+	local startPos = nil
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+	
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+end
+coroutine.wrap(EEJMKD_fake_script)()
+local function SLCCQC_fake_script() -- X.LocalScript 
+	local script = Instance.new('LocalScript', X)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Main.Visible = false
+		script.Parent.Parent.Parent.OpenUtg.Visible = true
+	end)
+end
+coroutine.wrap(SLCCQC_fake_script)()
+local function DQSW_fake_script() -- OpenUtg.LocalScript 
+	local script = Instance.new('LocalScript', OpenUtg)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Main.Visible = true
+		script.Parent.Visible = false
+	end)
+end
+coroutine.wrap(DQSW_fake_script)()
+local function NJGRIXS_fake_script() -- UltimateTrollingGuiV3.LocalScript 
+	local script = Instance.new('LocalScript', UltimateTrollingGuiV3)
+
+	script.Parent.Main:TweenPosition(
+		UDim2.new(0.382, 0, 0.181, 0)
+	)
+end
+coroutine.wrap(NJGRIXS_fake_script)()
+
+
+Sonic.MouseButton1Click:Connect(function()
+	game:GetService("Workspace")["__REMOTES"]["Game"].Shop:InvokeServer("Buy", "Eggs", "Tier 1")
+end)
+
+Gale.MouseButton1Click:Connect(function()
+	game:GetService("Workspace")["__REMOTES"]["Game"].Shop:InvokeServer("Buy", "Eggs", "Tier 2")
+end)
+
+AmongUs.MouseButton1Click:Connect(function()
+	game:GetService("Workspace")["__REMOTES"]["Game"].Shop:InvokeServer("Buy", "Eggs", "Tier 3")
+end)
+
+KillBot.MouseButton1Click:Connect(function()
+	game:GetService("Workspace")["__REMOTES"]["Game"].Shop:InvokeServer("Buy", "Eggs", "Tier 4")
+end)
+
+NekoMaid.MouseButton1Click:Connect(function()
+	game:GetService("Workspace")["__REMOTES"]["Game"].Shop:InvokeServer("Buy", "Eggs", "Tier 5")
+end)
+
+SmugDance.MouseButton1Click:Connect(function()
+	game:GetService("Workspace")["__REMOTES"]["Game"].Shop:InvokeServer("Buy", "Eggs", "Tier 6")
+end)
+
+ShadowBlade.MouseButton1Click:Connect(function()
+	game:GetService("Workspace")["__REMOTES"]["Game"].Shop:InvokeServer("Buy", "Eggs", "Tier 7")
+end)
+
+FishingRod.MouseButton1Click:Connect(function()
+	game:GetService("Workspace")["__REMOTES"]["Game"].Shop:InvokeServer("Buy", "Eggs", "Tier 8")
+end)
+
+SwordStand.MouseButton1Click:Connect(function()
+	game:GetService("Workspace")["__REMOTES"]["Game"].Shop:InvokeServer("Buy", "Eggs", "Tier 9")
+end)
+
+NeptunionV.MouseButton1Click:Connect(function()
+	game:GetService("Workspace")["__REMOTES"]["Game"].Shop:InvokeServer("Buy", "Eggs", "Tier 10")
+end)
+
+RbNeptunion.MouseButton1Click:Connect(function()
+	game:GetService("Workspace")["__REMOTES"]["Game"].Shop:InvokeServer("Buy", "Eggs", "Tier 11")
+end)
+
+Wall.MouseButton1Click:Connect(function()
+	game:GetService("Workspace")["__REMOTES"]["Game"].Shop:InvokeServer("Buy", "Eggs", "Tier 12")
+end)
+
+AchromaticGlitcher.MouseButton1Click:Connect(function()
+	game:GetService("Workspace")["__REMOTES"]["Game"].Shop:InvokeServer("Buy", "Eggs", "Tier 13")
+end)
+
+FlamingCube.MouseButton1Click:Connect(function()
+	game:GetService("Workspace")["__REMOTES"]["Game"].Shop:InvokeServer("Buy", "Eggs", "Tier 14")
+end)
+
+Spider.MouseButton1Click:Connect(function()
+	game:GetService("Workspace")["__REMOTES"]["Game"].Shop:InvokeServer("Buy", "Eggs", "Tier 15")
+end)
+
+Cop.MouseButton1Click:Connect(function()
+	game:GetService("Workspace")["__REMOTES"]["Game"].Shop:InvokeServer("Buy", "Eggs", "Tier 16")
+end)
+
+Chips.MouseButton1Click:Connect(function()
+	game:GetService("Workspace")["__REMOTES"]["Game"].Shop:InvokeServer("Buy", "Eggs", "Tier 17")
+end)
+
+Joy.MouseButton1Click:Connect(function()
+	game:GetService("Workspace")["__REMOTES"]["Game"].Shop:InvokeServer("Buy", "Eggs", "Tier 18")
+end)
+
+UltimateMemeDance.MouseButton1Click:Connect(function()
+	game:GetService("Workspace")["__REMOTES"]["Game"].Shop:InvokeServer("Buy", "Eggs", "Christmas Tier 1")
+end)
+
+Chill.MouseButton1Click:Connect(function()
+	game:GetService("Workspace")["__REMOTES"]["Game"].Shop:InvokeServer("Buy", "Eggs", "Christmas Tier 2")
+end)
+
+WallWalk.MouseButton1Click:Connect(function()
+	game:GetService("Workspace")["__REMOTES"]["Game"].Shop:InvokeServer("Buy", "Eggs", "Christmas Tier 3")
+end)
+
+Grapple.MouseButton1Click:Connect(function()
+	game:GetService("Workspace")["__REMOTES"]["Game"].Shop:InvokeServer("Buy", "Eggs", "Christmas Tier 4")
+end)
+
+KrystalDance.MouseButton1Click:Connect(function()
+	game.Players.LocalPlayer.PlayerGui.Teleport.Enabled = true
+end)
+
+Stand.MouseButton1Click:Connect(function()
+	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 70
+end)
+
+ServerAdmin.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet(('https://pastebin.com/raw/xJ9NfWnD'),true))();
+end)
