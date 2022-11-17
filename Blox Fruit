@@ -101,10 +101,15 @@ local bp6 = Instance.new("TextButton")
 
 local point1 = Instance.new("TextButton")
 local point2 = Instance.new("TextButton")
+
 local mod1 = Instance.new("TextButton")
 local mod2 = Instance.new("TextButton")
+
 local miss1 = Instance.new("TextButton")
 local miss2 = Instance.new("TextButton")
+local barm2 = Instance.new("Frame")
+local bm5 = Instance.new("TextButton")
+
 local textm1 = Instance.new("TextLabel")
 local textm2 = Instance.new("TextLabel")
 local bm1 = Instance.new("TextButton")
@@ -1580,6 +1585,7 @@ miss1.TextSize = 18.000
 miss1.MouseButton1Down:connect(function()
 miss1.Visible = false
 miss2.Visible = true
+barm2.Visible = false
 end)
 
 miss2.Name = "miss2"
@@ -1594,6 +1600,7 @@ miss2.TextSize = 18.000
 miss2.MouseButton1Down:connect(function()
 miss1.Visible = true
 miss2.Visible = false
+barm2.Visible = true
 end)
 
 
@@ -1722,7 +1729,6 @@ bm3.Visible = true
 bm4.Visible = false
 loadstring(game:HttpGet("https://pastebin.com/raw/q40eGpb8", true))()
 end)
-
 
 --bar miss
 --player
@@ -1926,6 +1932,32 @@ bp6.MouseButton1Down:connect(function()
 bp6.Visible = false
 bp5.Visible = true
 end)
+
+--miss bar
+barm2.Name = "barm2"
+barm2.Parent = scriptspage2
+barm2.Active = true
+barm2.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+barm2.Position = UDim2.new(0, 0, 0.3004392526, 0)
+barm2.Size = UDim2.new(0, 498, 0, 150)
+barm2.Visible = false
+
+bm5.Name = "bm5"
+bm5.Parent = barm2
+bm5.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
+bm5.Position = UDim2.new(0, 0, 0.0904392526, 0)
+bm5.Size = UDim2.new(0, 498, 0, 30)
+bm5.Font = Enum.Font.SourceSans
+bm5.Text = "Fly Gui"
+bm5.TextColor3 = Color3.fromRGB(255, 255, 255)
+bm5.TextSize = 18.000
+bm5.MouseButton1Down:connect(function()
+loadstring(game:HttpGet(('https://pastebin.com/raw/xJ9NfWnD'),true))()
+end)
+
+
+
+
 
 --auto2
 --auto check point
