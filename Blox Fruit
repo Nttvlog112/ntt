@@ -538,76 +538,11 @@ end)
 
 --ẩn ẩn ẩn
 
-game.CoreGui.ScreenGUI.open.Visible = false
 game.CoreGui.ScreenGUI.exit.Visible = false
 welsea1.Visible = true
 welsea2.Visible = false
 welsea3.Visible = false
 
---key
-
-keybar.Name = "keybar"
-keybar.Parent = ScreenGUI
-keybar.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-keybar.Position = UDim2.new(0.288126051, 0, 0.278999169, 0)
-keybar.Size = UDim2.new(0, 488, 0, 280)
-keybar.Active = true
-UIkey.Parent = keybar
-keybar.Draggable = true
-keybar.Visible = true
-
-key.Name = "key"
-key.Parent = keybar
-key.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
-key.Position = UDim2.new(0.24631148, 0, 0.2304392526, 0)
-key.Size = UDim2.new(0, 250, 0, 0)
-key.Font = Enum.Font.SourceSans
-key.Text = "NTT HUB"
-key.TextColor3 = Color3.fromRGB(255, 255, 255)
-key.TextSize = 27.000
-key.MouseButton1Down:connect(function()
-end)
-
-keybutton.Name = "keybutton"
-keybutton.Parent = keybar
-keybutton.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
-keybutton.Position = UDim2.new(0.24631148, 0, 0.6304392526, 0)
-keybutton.Size = UDim2.new(0, 250, 0, 34)
-keybutton.Font = Enum.Font.SourceSans
-keybutton.Text = "Check Key"
-keybutton.TextColor3 = Color3.fromRGB(255, 255, 255)
-keybutton.TextSize = 18.000
-keybutton.MouseButton1Down:connect(function()
-if keybox.Text == "0307" then
-    keybar.Visible = false
-wait(0.5)
-    game.CoreGui.ScreenGUI.open.Visible = true
-end
-end)
-
-keyget.Name = "keyget"
-keyget.Parent = keybar
-keyget.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
-keyget.Position = UDim2.new(0.37631148, 0, 0.8804392526, 0)
-keyget.Size = UDim2.new(0, 125, 0, 20)
-keyget.Font = Enum.Font.SourceSans
-keyget.Text = "Get Key"
-keyget.TextColor3 = Color3.fromRGB(0, 255, 255)
-keyget.TextSize = 12.000
-keyget.MouseButton1Down:connect(function()
-end)
-
-keybox.Name = "keybox"
-keybox.Parent = keybar
-keybox.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
-keybox.Position = UDim2.new(0.24631148, 0, 0.430439342, 0)
-keybox.Size = UDim2.new(0, 250, 0, 34)
-keybox.Font = Enum.Font.SourceSans
-keybox.PlaceholderColor3 = Color3.fromRGB(0, 0, 0)
-keybox.PlaceholderText = "nhập key"
-keybox.Text = "0307"
-keybox.TextColor3 = Color3.fromRGB(0, 0, 0)
-keybox.TextSize = 18.000
 
 --bouty gui
 
