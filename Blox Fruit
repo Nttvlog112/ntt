@@ -1,4 +1,3 @@
-
 --NTT
 
 local ScreenGUI = Instance.new("ScreenGui")
@@ -702,12 +701,6 @@ if _G.bouty then
 end
 end)
 end)
-
---ẩn bouty
-
-bbon.Visible = false
-bboff.Visible = false
-barbouty.Visible = false
 
 bb2.Parent = barbouty
 bb2.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
@@ -1797,7 +1790,6 @@ end)
 
 
 --bar miss
-
 --player
 barm1.Name = "barm1"
 barm1.Parent = scriptspage2
@@ -1984,38 +1976,6 @@ bp5.TextSize = 18.000
 bp5.MouseButton1Down:connect(function()
 bp5.Visible = false
 bp6.Visible = true
-end)
-
---auto hunt bouty
-
-guibox.Name = "guibox"
-guibox.Parent = scriptspage2
-guibox.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
-guibox.Position = UDim2.new(0, 0, 0.6004392526, 0)
-guibox.Size = UDim2.new(0, 250, 0, 34)
-guibox.Font = Enum.Font.SourceSans
-guibox.PlaceholderColor3 = Color3.fromRGB(0, 0, 0)
-guibox.PlaceholderText = "nhập key hoạt động"
-guibox.Text = ""
-guibox.TextColor3 = Color3.fromRGB(0, 0, 0)
-guibox.TextSize = 18.000
-
-gui.Name = "gui"
-gui.Parent = scriptpage2
-gui.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
-gui.Position = UDim2.new(0, 0, 0.6704392526, 0)
-gui.Size = UDim2.new(0, 489, 0, 30)
-gui.Font = Enum.Font.SourceSans
-gui.PlaceholderColor3 = Color3.fromRGB(0, 0, 0)
-gui.Text = "Check Key"
-gui.TextColor3 = Color3.fromRGB(0, 0, 0)
-gui.TextSize = 18.000
-gui.MouseButton1Down:connect(function()
-if guibox.Text == "0307" then
-
-bbon.Visible = true
-
-end
 end)
 
 bp6.Name = "bp6"
