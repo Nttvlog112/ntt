@@ -12,12 +12,10 @@ local welsea2 = Instance.new("TextLabel")
 local welsea3 = Instance.new("TextLabel")
 local credit = Instance.new("TextLabel")
 local bar = Instance.new("Frame")
-local key = Instance.new("TextButton")
-local keybar = Instance.new("Frame")
-local keybox = Instance.new("TextBox")
-local keyget = Instance.new("TextButton")
-local keybutton = Instance.new("TextButton")
 local TextLabel = Instance.new("TextLabel")
+local zone1 = Instance.new("TextButton")
+local zone2 = Instance.new("TextButton")
+local zone3 = Instance.new("TextButton")
 local seabar = Instance.new("Frame")
 local sea = Instance.new("TextButton")
 local sea1 = Instance.new("TextButton")
@@ -548,7 +546,6 @@ welsea1.Visible = true
 welsea2.Visible = false
 welsea3.Visible = false
 
-
 --bouty gui
 
 bboff.Name = "bboff"
@@ -703,6 +700,73 @@ game:GetService'Players'.LocalPlayer.Character.HumanoidRootPart.CFrame = target.
 
 end
 end)
+end)
+  
+  zone1.Visible = false
+zone2.Visible = false
+zone3.Visible = false
+  
+--tp zone all sea
+if game.PlaceId == 2753915549 then -- sea1
+zone1.Visible = true
+zone2.Visible = false
+zone3.Visible = false
+end
+
+if game.PlaceId == 4442272183 then -- sea2
+zone1.Visible = false
+zone2.Visible = true
+zone3.Visible = false
+end
+
+if game.PlaceId == 7449423635 then -- sea3
+zone1.Visible = false
+zone2.Visible = false
+zone3.Visible = true
+end
+
+--tp zone
+
+zone1.Parent = barbouty
+zone1.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+zone1.Position = UDim2.new(0.20631148, 0, 0.8304392526, 0)
+zone1.Size = UDim2.new(0, 250, 0, 34)
+zone1.Font = Enum.Font.SourceSans
+zone1.Text = "Tp Zone"
+zone1.TextColor3 = Color3.fromRGB(255, 255, 255)
+zone1.TextSize = 18.000
+zone1.MouseButton1Down:connect(function()
+
+end)
+
+zone2.Parent = barbouty
+zone2.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+zone2.Position = UDim2.new(0.20631148, 0, 0.8304392526, 0)
+zone2.Size = UDim2.new(0, 250, 0, 34)
+zone2.Font = Enum.Font.SourceSans
+zone2.Text = "Tp Zone"
+zone2.TextColor3 = Color3.fromRGB(255, 255, 255)
+zone2.TextSize = 18.000
+zone2.MouseButton1Down:connect(function()
+local CFrameEnd = CFrame.new(-6502.4, 83.4, -123.2) -- Place your coords in here
+local Time = 0 -- Time in seconds
+local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd})
+tween:Play()
+end)
+
+zone3.Parent = barbouty
+zone3.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+zone3.Position = UDim2.new(0.20631148, 0, 0.8304392526, 0)
+zone3.Size = UDim2.new(0, 250, 0, 34)
+zone3.Font = Enum.Font.SourceSans
+zone3.Text = "Tp Zone"
+zone3.TextColor3 = Color3.fromRGB(255, 255, 255)
+zone3.TextSize = 18.000
+zone3.MouseButton1Down:connect(function()
+local CFrameEnd = CFrame.new(5745.9, 612.2, -286.3) -- Place your coords in here
+local Time = 0 -- Time in seconds
+local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd})
+tween:Play()
 end)
 
 --tp gui
