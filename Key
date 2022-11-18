@@ -46,7 +46,7 @@ keybutton.TextSize = 18.000
 UIkey1.Parent = keybutton
 keybutton.MouseButton1Down:connect(function()
 -- tạo key
-if keybox.Text == "9082" then
+if keybox.Text == "0202" then
 
 _G.key = true
 game:GetService('RunService').RenderStepped:connect(function()
