@@ -1,370 +1,332 @@
-if not _G.LastPiratesCandyHop then
-local NTTLoadingUI = Instance.new("ScreenGui")
-local NTTWindow = Instance.new("ImageLabel")
-local NTTBackground = Instance.new("Frame")
-local NTTText1 = Instance.new("TextLabel")
-local NTTText2 = Instance.new("TextLabel")
-local NTTText2UIGradient = Instance.new("UIGradient")
-local Outline1 = Instance.new("Frame")
-local Outline1UIGradient = Instance.new("UIGradient")
-local AntiAFKToggle = Instance.new("Frame")
-local AntiAFKToggleTitle = Instance.new("TextLabel")
-local AntiAFKToggleButton = Instance.new("TextButton")
-local AntiAFKToggleButtonUIGradient = Instance.new("UIGradient")
-local LoadButton = Instance.new("TextButton")
-local AntiAFKToggleButtonUIGradient_2 = Instance.new("UIGradient")
-local MobileSupportToggle = Instance.new("Frame")
-local MobileSupportToggleTitle = Instance.new("TextLabel")
-local MobileSupportToggleButton = Instance.new("TextButton")
-local MobileSupportToggleButtonUIGradient = Instance.new("UIGradient")
-local NTTDescription = Instance.new("TextLabel")
+local UIGUI = Instance.new("ScreenGui")
+local text1 = Instance.new("TextLabel")
+local bars = Instance.new("Frame")
+local text2 = Instance.new("TextLabel")
+local bar1 = Instance.new("Frame")
+local bar2 = Instance.new("Frame")
+local tload = Instance.new("TextLabel")
+local check1 = Instance.new("TextBox")
+local check2 = Instance.new("TextBox")
+local bcheck1 = Instance.new("TextButton")
+local bcheck2 = Instance.new("TextButton")
+local t1 = Instance.new("TextLabel")
+local bcheck3 = Instance.new("TextButton")
+local bcheck4 = Instance.new("TextButton")
+local t2 = Instance.new("TextLabel")
+local loadbutton = Instance.new("TextButton")
+--làm tròn
+local UIbar1 = Instance.new("UICorner")
+local UIbar2 = Instance.new("UICorner")
+local UIload = Instance.new("UICorner")
+local c1 = Instance.new("UICorner")
+local c2 = Instance.new("UICorner")
+local c3 = Instance.new("UICorner")
+local c4 = Instance.new("UICorner")
 
---Properties:
+UIGUI.Name = "UIGUI"
+UIGUI.Parent = game.CoreGui
+UIGUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-NTTLoadingUI.Name = "NTTLoadingUI"
-NTTLoadingUI.Parent = game.CoreGui
-NTTLoadingUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-NTTLoadingUI.ResetOnSpawn = false
+bar1.Name = "bar1"
+bar1.Parent = UIGUI
+bar1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+bar1.Position = UDim2.new(0.358126051, 0, 0.258999169, 0)
+bar1.Size = UDim2.new(0, 300, 0, 150)
+UIbar1.Parent = bar1
+bar1.Visible = true
 
-NTTWindow.Name = "NTTWindow"
-NTTWindow.Parent = NTTLoadingUI
-NTTWindow.AnchorPoint = Vector2.new(0.5, 0.5)
-NTTWindow.BackgroundTransparency = 1.000
-NTTWindow.BorderSizePixel = 0
-NTTWindow.Position = UDim2.new(0.499629349, 0, 0.499404043, 0)
-NTTWindow.Size = UDim2.new(0.229799852, 0, 0.190703213, 0)
-NTTWindow.Image = "rbxassetid://1316045217"
-NTTWindow.ImageColor3 = Color3.fromRGB(0, 0, 0)
-NTTWindow.ImageTransparency = 0.400
-NTTWindow.ScaleType = Enum.ScaleType.Slice
-NTTWindow.SliceCenter = Rect.new(10, 10, 118, 118)
+bar2.Name = "bar2"
+bar2.Parent = UIGUI
+bar2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+bar2.Position = UDim2.new(0.358126051, 0, 0.258999169, 0)
+bar2.Size = UDim2.new(0, 300, 0, 150)
+UIbar2.Parent = bar2
+bar2.Visible = false
 
-NTTBackground.Name = "NTTBackground"
-NTTBackground.Parent = NTTWindow
-NTTBackground.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-NTTBackground.BorderSizePixel = 0
-NTTBackground.Position = UDim2.new(0.0161290318, 0, 0.03125, 0)
-NTTBackground.Size = UDim2.new(0.967741907, 0, 0.9375, 0)
+--load text
 
-NTTText1.Name = "NTTText1"
-NTTText1.Parent = NTTBackground
-NTTText1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-NTTText1.BackgroundTransparency = 1.000
-NTTText1.BorderSizePixel = 0
-NTTText1.Position = UDim2.new(0.300000012, 0, 0.0333333351, 0)
-NTTText1.Size = UDim2.new(0.216666669, 0, 0.100000001, 0)
-NTTText1.Visible = true
-NTTText1.Font = Enum.Font.GothamSemibold
-NTTText1.Text = "NTT HUB"
-NTTText1.TextColor3 = Color3.fromRGB(180, 180, 180)
-NTTText1.TextSize = 14.000
-NTTText1.TextScaled = true
+tload.Parent = bar2
+tload.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+tload.BackgroundTransparency = 1.000
+tload.Position = UDim2.new(0.24631148, 0, 0.3704392526, 0)
+tload.Size = UDim2.new(0, 170, 0, 30)
+tload.Font = Enum.Font.Ubuntu
+tload.Text = "..."
+tload.TextColor3 = Color3.fromRGB(255, 255, 255)
+tload.TextSize = 18.000
+tload.TextWrapped = true
 
-NTTText2.Name = "NTTText2"
-NTTText2.Parent = NTTBackground
-NTTText2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-NTTText2.BackgroundTransparency = 1.000
-NTTText2.BorderSizePixel = 0
-NTTText2.Position = UDim2.new(0.516666651, 0, 0.0333333351, 0)
-NTTText2.Size = UDim2.new(0.15, 0, 0.100000001, 0)
-NTTText2.Visible = true
-NTTText2.Font = Enum.Font.GothamSemibold
-NTTText2.Text = "loader"
-NTTText2.TextColor3 = Color3.fromRGB(255, 255, 255)
-NTTText2.TextSize = 14.000
-NTTText2.TextScaled = true
+text1.Parent = bar1
+text1.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+text1.BackgroundTransparency = 1.000
+text1.Position = UDim2.new(0.24631148, 0, 0.0704392526, 0)
+text1.Size = UDim2.new(0, 170, 0, 30)
+text1.Font = Enum.Font.Ubuntu
+text1.Text = "NTT HUB"
+text1.TextColor3 = Color3.fromRGB(255, 255, 255)
+text1.TextSize = 18.000
+text1.TextWrapped = true
 
-NTTText2UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(69, 153, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(128, 173, 255))}
-NTTText2UIGradient.Name = "NTTText2UIGradient"
-NTTText2UIGradient.Parent = NTTText2
+text2.Parent = bar1
+text2.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+text2.BackgroundTransparency = 1.000
+text2.Position = UDim2.new(0.64631148, 0, 0.0704392526, 0)
+text2.Size = UDim2.new(0, 100, 0, 30)
+text2.Font = Enum.Font.Ubuntu
+text2.Text = "Drive..."
+text2.TextColor3 = Color3.fromRGB(255, 255, 255)
+text2.TextSize = 14.000
+text2.TextWrapped = true
+--check drive
+if not game:GetService("UserInputService").TouchEnabled and not game:GetService("UserInputService").KeyboardEnabled == false then
+	text2.Text = "PC"
+	else
+	    text2.Text = "Mobile"
+	end
 
-Outline1.Name = "Outline1"
-Outline1.Parent = NTTBackground
-Outline1.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
-Outline1.BorderSizePixel = 0
-Outline1.Position = UDim2.new(0.0333333351, 0, 0.146666661, 0)
-Outline1.Size = UDim2.new(0.933333337, 0, 0.00666666683, 0)
-Outline1.Visible = true
+bars.Name = "bars"
+bars.Parent = bar1
+bars.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+bars.Position = UDim2.new(0.10631148, 0, 0.2704392526, 0)
+bars.Size = UDim2.new(0, 230, 0, 2)
 
-local LocalizationService = game:GetService("LocalizationService")
-local player = game.Players.LocalPlayer
- 
-local result, code = pcall(function()
-    return LocalizationService:GetCountryRegionForPlayerAsync(player)
+bcheck1.Name = "bcheck1"
+bcheck1.Parent = bar1
+bcheck1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+bcheck1.Position = UDim2.new(0.10631148, 0, 0.3704392526, 0)
+bcheck1.Size = UDim2.new(0, 20, 0, 20)
+bcheck1.Font = Enum.Font.SourceSans
+bcheck1.Text = ""
+bcheck1.TextColor3 = Color3.fromRGB(0, 0, 0)
+bcheck1.TextSize = 18.000
+c1.Parent = bcheck1
+bcheck1.MouseButton1Down:connect(function()
+bcheck1.Visible = false
+bcheck2.Visible = true
+check1.Text = "1"
 end)
 
-Outline1UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(69, 153, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(128, 173, 255))}
-Outline1UIGradient.Name = "Outline1UIGradient"
-Outline1UIGradient.Parent = Outline1
-
-AntiAFKToggle.Name = "AntiAFKToggle"
-AntiAFKToggle.Parent = NTTBackground
-AntiAFKToggle.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-AntiAFKToggle.BorderSizePixel = 0
-AntiAFKToggle.Position = UDim2.new(0.0333333351, 0, 0.166666672, 0)
-AntiAFKToggle.Size = UDim2.new(0.933333337, 0, 0.13333334, 0)
-AntiAFKToggle.Visible = true
-
-AntiAFKToggleTitle.Name = "AntiAFKToggleTitle"
-AntiAFKToggleTitle.Parent = AntiAFKToggle
-AntiAFKToggleTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-AntiAFKToggleTitle.BackgroundTransparency = 1.000
-AntiAFKToggleTitle.BorderSizePixel = 0
-AntiAFKToggleTitle.Position = UDim2.new(0.0714285746, 0, 0, 0)
-AntiAFKToggleTitle.Size = UDim2.new(0.928571403, 0, 0.999999881, 0)
-AntiAFKToggleTitle.Font = Enum.Font.GothamSemibold
-AntiAFKToggleTitle.Text = "không kick"
-AntiAFKToggleTitle.TextColor3 = Color3.fromRGB(180, 180, 180)
-AntiAFKToggleTitle.TextSize = 14.000
-AntiAFKToggleTitle.TextXAlignment = Enum.TextXAlignment.Left
-AntiAFKToggleTitle.TextScaled = true
-
-AntiAFKToggleButton.Name = "AntiAFKToggleButton"
-AntiAFKToggleButton.Parent = AntiAFKToggle
-AntiAFKToggleButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-AntiAFKToggleButton.BackgroundTransparency = 0.800
-AntiAFKToggleButton.BorderColor3 = Color3.fromRGB(85, 117, 168)
-AntiAFKToggleButton.Position = UDim2.new(0, 0, 0.199999988, 0)
-AntiAFKToggleButton.Size = UDim2.new(0.042857144, 0, 0.599999964, 0)
-AntiAFKToggleButton.AutoButtonColor = true
-AntiAFKToggleButton.Font = Enum.Font.SourceSans
-AntiAFKToggleButton.Text = ""
-AntiAFKToggleButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-AntiAFKToggleButton.TextSize = 14.000
-AntiAFKToggleButton.TextScaled = true
-
-AntiAFKToggleButtonUIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(68, 128, 205)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(73, 141, 223))}
-AntiAFKToggleButtonUIGradient.Rotation = 80
-AntiAFKToggleButtonUIGradient.Name = "AntiAFKToggleButtonUIGradient"
-AntiAFKToggleButtonUIGradient.Parent = AntiAFKToggleButton
-
-LoadButton.Name = "LoadButton"
-LoadButton.Parent = NTTBackground
-LoadButton.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
-LoadButton.BorderColor3 = Color3.fromRGB(250, 250, 250)
-LoadButton.Position = UDim2.new(0.25, 0, 0.779999971, 0)
-LoadButton.Size = UDim2.new(0.5, 0, 0.13333334, 0)
-LoadButton.Visible = true
-LoadButton.AutoButtonColor = false
-LoadButton.Font = Enum.Font.GothamSemibold
-LoadButton.Text = "Loading"
-LoadButton.TextColor3 = Color3.fromRGB(20, 20, 20)
-LoadButton.TextSize = 14.000
-LoadButton.TextScaled = true
-
-AntiAFKToggleButtonUIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(68, 128, 205)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(73, 141, 223))}
-AntiAFKToggleButtonUIGradient_2.Rotation = 80
-AntiAFKToggleButtonUIGradient_2.Name = "AntiAFKToggleButtonUIGradient"
-AntiAFKToggleButtonUIGradient_2.Parent = LoadButton
-
-MobileSupportToggle.Name = "MobileSupportToggle"
-MobileSupportToggle.Parent = NTTBackground
-MobileSupportToggle.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-MobileSupportToggle.BorderSizePixel = 0
-MobileSupportToggle.Position = UDim2.new(0.0333333351, 0, 0.300000012, 0)
-MobileSupportToggle.Size = UDim2.new(0.933333337, 0, 0.13333334, 0)
-MobileSupportToggle.Visible = true
-
-MobileSupportToggleTitle.Name = "MobileSupportToggleTitle"
-MobileSupportToggleTitle.Parent = MobileSupportToggle
-MobileSupportToggleTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-MobileSupportToggleTitle.BackgroundTransparency = 1.000
-MobileSupportToggleTitle.BorderSizePixel = 0
-MobileSupportToggleTitle.Position = UDim2.new(0.0714285746, 0, 0, 0)
-MobileSupportToggleTitle.Size = UDim2.new(0.928571403, 0, 0.999999881, 0)
-MobileSupportToggleTitle.Font = Enum.Font.GothamSemibold
-MobileSupportToggleTitle.Text = "giảm lag"
-MobileSupportToggleTitle.TextColor3 = Color3.fromRGB(180, 180, 180)
-MobileSupportToggleTitle.TextSize = 14.000
-MobileSupportToggleTitle.TextXAlignment = Enum.TextXAlignment.Left
-MobileSupportToggleTitle.TextScaled = true
-
-MobileSupportToggleButton.Name = "MobileSupportToggleButton"
-MobileSupportToggleButton.Parent = MobileSupportToggle
-MobileSupportToggleButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-MobileSupportToggleButton.BackgroundTransparency = 0.800
-MobileSupportToggleButton.BorderColor3 = Color3.fromRGB(85, 117, 168)
-MobileSupportToggleButton.Position = UDim2.new(0, 0, 0.199999988, 0)
-MobileSupportToggleButton.Size = UDim2.new(0.042857144, 0, 0.599999964, 0)
-MobileSupportToggleButton.AutoButtonColor = false
-MobileSupportToggleButton.Font = Enum.Font.SourceSans
-MobileSupportToggleButton.Text = ""
-MobileSupportToggleButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-MobileSupportToggleButton.TextSize = 14.000
-MobileSupportToggleButton.TextScaled = true
-
-MobileSupportToggleButtonUIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(68, 128, 205)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(73, 141, 223))}
-MobileSupportToggleButtonUIGradient.Rotation = 80
-MobileSupportToggleButtonUIGradient.Name = "MobileSupportToggleButtonUIGradient"
-MobileSupportToggleButtonUIGradient.Parent = MobileSupportToggleButton
-
-NTTDescription.Name = "NTTDescription"
-NTTDescription.Parent = NTTBackground
-NTTDescription.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-NTTDescription.BackgroundTransparency = 1.000
-NTTDescription.BorderSizePixel = 0
-NTTDescription.Position = UDim2.new(0.0333333351, 0, 0.533333361, 0)
-NTTDescription.Size = UDim2.new(0.933333337, 0, 0.200000003, 0)
-NTTDescription.Visible = true
-NTTDescription.Font = Enum.Font.GothamSemibold
-NTTDescription.Text = ""
-NTTDescription.TextColor3 = Color3.fromRGB(150, 150, 150)
-NTTDescription.TextSize = 14.000
-NTTDescription.TextWrapped = true
-NTTDescription.TextXAlignment = Enum.TextXAlignment.Left
-NTTDescription.TextScaled = true
-local antiafktoggled = false
-local mobilesupported = false
-local player = game.Players.LocalPlayer
-local TeleportService = game:GetService("TeleportService")
-local level1Id = 7899144215
-AntiAFKToggleButton.MouseButton1Click:Connect(function()
-	if antiafktoggled then
-		game:GetService("TweenService"):Create(AntiAFKToggleButton, TweenInfo.new(0.08, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), {BackgroundTransparency = 0.8}):Play()
-		antiafktoggled = false
-	else
-		game:GetService("TweenService"):Create(AntiAFKToggleButton, TweenInfo.new(0.08, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), {BackgroundTransparency = 0}):Play()
-		antiafktoggled = true
-	end
-	if antiafktoggled then
-		local AntiAFK = game:GetService("VirtualUser")
-		AntiAFKT = game:GetService("Players").LocalPlayer.Idled:connect(function()
-			AntiAFK:CaptureController()
-			AntiAFK:ClickButton2(Vector2.new())
-		end)
-	else
-		AntiAFKT:Disconnect()
-	end
+bcheck2.Name = "bcheck2"
+bcheck2.Parent = bar1
+bcheck2.BackgroundColor3 = Color3.fromRGB(0, 255, 60)
+bcheck2.Position = UDim2.new(0.10631148, 0, 0.3704392526, 0)
+bcheck2.Size = UDim2.new(0, 20, 0, 20)
+bcheck2.Font = Enum.Font.SourceSans
+bcheck2.Text = ""
+bcheck2.TextColor3 = Color3.fromRGB(0, 0, 0)
+bcheck2.TextSize = 18.000
+bcheck2.Visible = false
+c2.Parent = bcheck2
+bcheck2.MouseButton1Down:connect(function()
+bcheck2.Visible = false
+bcheck1.Visible = true
+check1.Text = ""
 end)
-MobileSupportToggleButton.MouseButton1Click:Connect(function()
-	if mobilesupported then
-		game:GetService("TweenService"):Create(MobileSupportToggleButton, TweenInfo.new(0.08, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), {BackgroundTransparency = 0.8}):Play()
-		mobilesupported = false
-	else
-		game:GetService("TweenService"):Create(MobileSupportToggleButton, TweenInfo.new(0.08, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), {BackgroundTransparency = 0}):Play()
-		mobilesupported = true
-	end
+
+t1.Parent = bar1
+t1.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+t1.BackgroundTransparency = 1.000
+t1.Position = UDim2.new(0.14631148, 0, 0.3304392526, 0)
+t1.Size = UDim2.new(0, 100, 0, 30)
+t1.Font = Enum.Font.Ubuntu
+t1.Text = "ANTI AFK "
+t1.TextColor3 = Color3.fromRGB(255, 255, 255)
+t1.TextSize = 14.000
+t1.TextWrapped = true
+
+bcheck3.Name = "bcheck3"
+bcheck3.Parent = bar1
+bcheck3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+bcheck3.Position = UDim2.new(0.10631148, 0, 0.5404392526, 0)
+bcheck3.Size = UDim2.new(0, 20, 0, 20)
+bcheck3.Font = Enum.Font.SourceSans
+bcheck3.Text = ""
+bcheck3.TextColor3 = Color3.fromRGB(0, 0, 0)
+bcheck3.TextSize = 18.000
+c3.Parent = bcheck3
+bcheck3.MouseButton1Down:connect(function()
+bcheck3.Visible = false
+bcheck4.Visible = true
+check2.Text = "1"
 end)
-local gamesupported = false
-LoadButton.MouseButton1Click:Connect(function()
-	for _, sodi in pairs(NTTBackground:GetChildren()) do
-		sodi:Destroy()
-	end
-	local LoadingTXT = Instance.new("TextLabel")
 
-	--Properties:
-
-	LoadingTXT.Name = "LoadingTXT"
-	LoadingTXT.Parent = NTTBackground
-	LoadingTXT.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	LoadingTXT.BackgroundTransparency = 1.000
-	LoadingTXT.BorderSizePixel = 0
-	LoadingTXT.Position = UDim2.new(0.159999996, 0, 0.406666666, 0)
-	LoadingTXT.Size = UDim2.new(0.666666687, 0, 0.166666672, 0)
-	LoadingTXT.Font = Enum.Font.GothamSemibold
-	LoadingTXT.Text = "vui lòng đợi check máy chủ"
-	LoadingTXT.TextColor3 = Color3.fromRGB(180, 180, 180)
-	LoadingTXT.TextSize = 14.000
-	LoadingTXT.TextScaled = true
-	wait(1)
-LoadingTXT.Text = "."
-wait(0.2)
-LoadingTXT.Text = ".."
-wait(0.2)
-LoadingTXT.Text = "..."
-wait(0.2)
-LoadingTXT.Text = "."
-wait(0.2)
-LoadingTXT.Text = ".."
-wait(0.2)
-LoadingTXT.Text = "..."
-wait(0.2)
-LoadingTXT.Text = "."
-wait(0.2)
-LoadingTXT.Text = ".."
-wait(0.2)
-LoadingTXT.Text = "..."
-	if not game:GetService("UserInputService").TouchEnabled and not game:GetService("UserInputService").KeyboardEnabled == false then
-	LoadingTXT.Text = "bạn đang sử dụng : PC"
-	else
-	 LoadingTXT.Text = "bạn đang sử dụng : Mobile"
-	end
-	wait(1)
-    LoadingTXT.Text = "Vui lòng đợi check game"
-	wait(1)
-    LoadingTXT.Text = "..."
-   wait(0.5)
-	if game.PlaceId == 7449423635 then
-		LoadingTXT.Text = "Blox Fruit NTT HUB Script [ Sea 3 ]"
-	elseif game.PlaceId == 2753915549 then
-		LoadingTXT.Text = "Blox Fruit NTT HUB Script [ Sea 1 ]"
-	elseif game.PlaceId == 4442272183 then
-		LoadingTXT.Text = "Blox Fruit NTT HUB Script [ Sea 2 ]"  
-	end
-	if game.PlaceId == 4520749081 then
-		LoadingTXT.Text = "King Lecagy NTT HUB Script [ Sea 1 ]"   
-	elseif game.PlaceId == 6381829480 then
-		LoadingTXT.Text = "King Lecagy NTT HUB Script [ Sea 2 ]"   
-	elseif game.PlaceId == 5931540094 then
-		LoadingTXT.Text = "King Lecagy NTT HUB Script [ Raid ]"   
-	elseif game.PlaceId == 537413528 then
-		LoadingTXT.Text = "Build a Boat Script BY NTT"   
-	elseif game.PlaceId == 7485253727 then
-	    LoadingTXT.Text = "True Piece Script"   
-	end
-if game.PlaceId == 6284583030 then 
-	    LoadingTXT.Text = "Pet Simulator X scipt BY NTT"
-   end
-
-
-	wait()
-	if mobilesupported then
-		local decalsyeeted = true -- Leaving this on makes games look shitty but the fps goes up by at least 20.
-		local g = game
-		local w = g.Workspace
-		local l = g.Lighting
-		local t = w.Terrain
-		t.WaterWaveSize = 0
-		t.WaterWaveSpeed = 0
-		t.WaterReflectance = 0
-		t.WaterTransparency = 0
-		l.GlobalShadows = false
-		l.FogEnd = 9e9
-		l.Brightness = 0
-		settings().Rendering.QualityLevel = "Level01"
-		for i,v in pairs(g:GetDescendants()) do
-			if v:IsA("Part") or v:IsA("Union") or v:IsA("MeshPart") then
-				v.Material = "Plastic"
-				v.Reflectance = 0
-			elseif v:IsA("Decal") and decalsyeeted then 
-				v.Transparency = 1
-			elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then 
-				v.Lifetime = NumberRange.new(0)
-			end
-		end
-	end
-
-	wait(1)
-
-	LoadingTXT.Text = "xin chào người chơi : " .. code
-
-	wait(2)
-    NTTLoadingUI:Destroy()
-	LoadingTXT.Text = "vui lòng đợi giây lát"
-	wait(2)
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Loader')))()
+bcheck4.Name = "bcheck4"
+bcheck4.Parent = bar1
+bcheck4.BackgroundColor3 = Color3.fromRGB(0, 255, 60)
+bcheck4.Position = UDim2.new(0.10631148, 0, 0.5404392526, 0)
+bcheck4.Size = UDim2.new(0, 20, 0, 20)
+bcheck4.Font = Enum.Font.SourceSans
+bcheck4.Text = ""
+bcheck4.TextColor3 = Color3.fromRGB(0, 0, 0)
+bcheck4.TextSize = 18.000
+bcheck4.Visible = false
+c4.Parent = bcheck4
+bcheck4.MouseButton1Down:connect(function()
+bcheck4.Visible = false
+bcheck3.Visible = true
+check2.Text = ""
 end)
-else
-_G.CandyHopz = true
+
+t2.Parent = bar1
+t2.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+t2.BackgroundTransparency = 1.000
+t2.Position = UDim2.new(0.14631148, 0, 0.5004392526, 0)
+t2.Size = UDim2.new(0, 100, 0, 30)
+t2.Font = Enum.Font.Ubuntu
+t2.Text = "FIX LAG    "
+t2.TextColor3 = Color3.fromRGB(255, 255, 255)
+t2.TextSize = 14.000
+t2.TextWrapped = true
+
+--check button
+check1.Name = "check1"
+check1.Parent = bar1
+check1.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+check1.Position = UDim2.new(0.15662296, 0, 0.101392526, 0)
+check1.Size = UDim2.new(0, 100, 0, 25)
+check1.Font = Enum.Font.SourceSans
+check1.Text = ""
+check1.TextColor3 = Color3.fromRGB(0, 0, 0)
+check1.TextSize = 18.000
+check1.Visible = false
+
+check2.Name = "check2"
+check2.Parent = bar1
+check2.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+check2.Position = UDim2.new(0.15662296, 0, 0.101392526, 0)
+check2.Size = UDim2.new(0, 100, 0, 25)
+check2.Font = Enum.Font.SourceSans
+check2.Text = ""
+check2.TextColor3 = Color3.fromRGB(0, 0, 0)
+check2.TextSize = 18.000
+check2.Visible = false
+
+
+loadbutton.Name = "loadbutton"
+loadbutton.Parent = bar1
+loadbutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+loadbutton.Position = UDim2.new(0.27631148, 0, 0.7704392526, 0)
+loadbutton.Size = UDim2.new(0, 150, 0, 25)
+loadbutton.Font = Enum.Font.SourceSans
+loadbutton.Text = "Loading"
+loadbutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+loadbutton.TextSize = 18.000
+UIload.Parent = loadbutton
+loadbutton.MouseButton1Down:connect(function()
+bar1.Visible = false
+bar2.Visible = true
+tload.Text = "Check Game Suport"
+wait(2)
+tload.Text = "."
+wait(0.1)
+tload.Text = ".."
+wait(0.1)
+tload.Text = "..."
+wait(0.1)
+tload.Text = "."
+wait(0.1)
+tload.Text = ".."
+wait(0.1)
+tload.Text = "..."
+wait(0.1)
+tload.Text = "."
+wait(0.1)
+tload.Text = ".."
+wait(0.1)
+tload.Text = "..."
+wait(0.1)
+tload.Text = "không có script game này"
+
+if game.PlaceId == 4442272183 or game.PlaceId == 7449423635 or game.PlaceId == 2753915549 then -- Blox Fruit
+tload.Text = "Blox Fruit"
 end
-game:GetService("StarterGui"):SetCore("SendNotification",{ 
+if game.PlaceId == 394506555 then -- glue puece
+tload.Text = "Glue Piece"
+end
+if game.PlaceId == 10260193230 then -- meme sea
+tload.Text = "Meme Sea"
+end
+if game.PlaceId == 662417684 then --lucky block
+tload.Text = "Lucky Block"
+end
+if game.PlaceId == 4787629450 then --booga booga
+tload.Text = "Booga Booga"
+end
+if game.PlaceId == 8303902695 then -- pet poss
+tload.Text = "Pet Poss"
+end
 
-Title = "NTT HUB"; 
+wait(3)
+tload.Text = "Check You Button"
+wait(1)
+tload.Text = "."
+wait(0.1)
+tload.Text = ".."
+wait(0.1)
+tload.Text = "..."
+wait(0.1)
+tload.Text = "."
+wait(0.1)
+tload.Text = ".."
+wait(0.1)
+tload.Text = "..."
+--check
+if check1.Text == "1" then
+tload.Text = "ANTI AFK"
+for i,v in pairs(getconnections(game:GetService("Players").LocalPlayer.Idled)) do
+    v:Disable()
+end
+wait(2)
+end
 
-Text = "load script thành công"; 
+if check2.Text == "1" then
+tload.Text = "FIX LAG"
+local decalsyeeted = true -- Leaving this on makes games look shitty but the fps goes up by at least 20.
+local g = game
+local w = g.Workspace
+local l = g.Lighting
+local t = w.Terrain
+t.WaterWaveSize = 0
+t.WaterWaveSpeed = 0
+t.WaterReflectance = 0
+t.WaterTransparency = 0
+l.GlobalShadows = false
+l.FogEnd = 9e9
+l.Brightness = 0
+settings().Rendering.QualityLevel = "Level01"
+for i, v in pairs(g:GetDescendants()) do
+    if v:IsA("Part") or v:IsA("Union") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+        v.Material = "Plastic"
+        v.Reflectance = 0
+    elseif v:IsA("Decal") or v:IsA("Texture") and decalsyeeted then
+        v.Transparency = 1
+    elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+        v.Lifetime = NumberRange.new(0)
+    elseif v:IsA("Explosion") then
+        v.BlastPressure = 1
+        v.BlastRadius = 1
+    elseif v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") then
+        v.Enabled = false
+    elseif v:IsA("MeshPart") then
+        v.Material = "Plastic"
+        v.Reflectance = 0
+        v.TextureID = 10385902758728957
+    end
+end
+for i, e in pairs(l:GetChildren()) do
+    if e:IsA("BlurEffect") or e:IsA("SunRaysEffect") or e:IsA("ColorCorrectionEffect") or e:IsA("BloomEffect") or e:IsA("DepthOfFieldEffect") then
+        e.Enabled = false
+    end
+end
 
-Duration = 5; 
+wait(2)
+end
 
-})
+tload.Text = "load successfully"
+wait(1)
+tload.Text = "vui lòng đợi giây lát"
+wait(1)
+bar2.Visible = false
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Loader')))()
 
-
+end)
