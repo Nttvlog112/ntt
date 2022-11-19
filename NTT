@@ -273,7 +273,8 @@ tload.Text = "..."
 --check
 if check1.Text == "1" then
 tload.Text = "ANTI AFK"
-
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+end)
 wait(2)
 end
 
