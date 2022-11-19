@@ -62,7 +62,7 @@ if game.PlaceId == 183364845 then --Speed Run 4
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/BoaHacker/ROBLOX/main/Games/Speed-Run-4', true))()
 end
 if game.PlaceId == 662417684 then --lucky block
-loadstring(game:HttpGet("https://pastebin.com/raw/sjMG8aPk", true))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Lucky%20block')))()
 end
 if game.PlaceId == 142823291 then --mm2
 loadstring(game:HttpGet("https://pastebin.com/raw/v3PCnELn", true))()
