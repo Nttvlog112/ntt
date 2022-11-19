@@ -1,0 +1,606 @@
+local ScreenGUI = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local open = Instance.new("TextButton")
+local exit = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local bar = Instance.new("Frame")
+local t1 = Instance.new("TextButton")
+local text = Instance.new("TextLabel")
+--menu
+local bar1 = Instance.new("ScrollingFrame")
+local bar2 = Instance.new("Frame")
+local l1 = Instance.new("Frame")
+local l2 = Instance.new("Frame")
+local l3 = Instance.new("Frame")
+local l4 = Instance.new("Frame")
+local l5 = Instance.new("Frame")
+local l6 = Instance.new("Frame")
+local l7 = Instance.new("Frame")
+local t1 = Instance.new("TextLabel")
+local t2 = Instance.new("TextLabel")
+local t3 = Instance.new("TextLabel")
+local t4 = Instance.new("TextLabel")
+local t5 = Instance.new("TextLabel")
+local t6 = Instance.new("TextLabel")
+local t7 = Instance.new("TextLabel")
+local b1 = Instance.new("TextButton")
+local b2 = Instance.new("TextButton")
+local b3 = Instance.new("TextButton")
+local b4 = Instance.new("TextButton")
+local b5 = Instance.new("TextButton")
+local b6 = Instance.new("TextButton")
+local b7 = Instance.new("TextButton")
+local b8 = Instance.new("TextButton")
+local b9 = Instance.new("TextButton")
+local b10 = Instance.new("TextButton")
+local b11 = Instance.new("TextButton")
+local b12 = Instance.new("TextButton")
+local b13 = Instance.new("TextButton")
+local b14 = Instance.new("TextButton")
+
+--làm tròn
+local UIl1 = Instance.new("UICorner")
+local UIl2 = Instance.new("UICorner")
+local UIl3 = Instance.new("UICorner")
+local UIl4 = Instance.new("UICorner")
+local UIl5 = Instance.new("UICorner")
+local UIl6 = Instance.new("UICorner")
+local UIl7 = Instance.new("UICorner")
+local UIo = Instance.new("UICorner")
+local UIf = Instance.new("UICorner")
+
+--main
+
+ScreenGUI.Name = "ScreenGUI"
+ScreenGUI.Parent = game.CoreGui
+ScreenGUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+main.Name = "main"
+main.Parent = ScreenGUI
+main.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+main.Position = UDim2.new(0.288126051, 0, 0.278999169, 0)
+main.Size = UDim2.new(0, 498, 0, 230)
+main.Active = true
+main.Draggable = true
+main.Visible = false
+
+--button
+
+exit.Name = "exit"
+exit.Parent = ScreenGUI
+exit.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+exit.BorderSizePixel = 0
+exit.Position = UDim2.new(0.70162201, 0, 0.103285708, 0)
+exit.Size = UDim2.new(0, 50, 0, 50)
+exit.Font = Enum.Font.Ubuntu
+exit.Text = "Closs"
+exit.TextColor3 = Color3.fromRGB(250, 255, 250)
+exit.TextSize = 20.000
+UIf.Parent = exit
+exit.MouseButton1Down:connect(function()
+game.CoreGui.ScreenGUI.main.Visible = false
+game.CoreGui.ScreenGUI.exit.Visible = false
+game.CoreGui.ScreenGUI.open.Visible = true
+end)
+
+open.Name = "open"
+open.Parent = ScreenGUI
+open.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+open.BorderSizePixel = 0
+open.Position = UDim2.new(0.70162201, 0, 0.103285708, 0)
+open.Size = UDim2.new(0, 50, 0, 50)
+open.Font = Enum.Font.Ubuntu
+open.Text = "Open"
+open.TextColor3 = Color3.fromRGB(250, 255, 250)
+open.TextSize = 20.000
+UIo.Parent = open
+open.MouseButton1Down:connect(function()
+game.CoreGui.ScreenGUI.main.Visible = true
+game.CoreGui.ScreenGUI.open.Visible = false
+game.CoreGui.ScreenGUI.exit.Visible = true
+end)
+
+bar.Name = "bar"
+bar.Parent = main
+bar.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+bar.Size = UDim2.new(0, 498, 0, 26)
+
+TextLabel.Parent = main
+TextLabel.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 93, 0, 26)
+TextLabel.Font = Enum.Font.Ubuntu
+TextLabel.Text = "NTT HUB"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+text.Parent = main
+text.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+text.BackgroundTransparency = 1.000
+text.Position = UDim2.new(0.83662296, 0, 0, 0, 0, 0, 0)
+text.Size = UDim2.new(0, 93, 0, 26)
+text.Font = Enum.Font.Ubuntu
+text.Text = "Lucky Block"
+text.TextColor3 = Color3.fromRGB(255, 255, 255)
+text.TextSize = 14.000
+text.TextWrapped = true
+
+-- menu
+
+bar1.Name = "bar1"
+bar1.Parent = main
+bar1.Active = true
+bar1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+bar1.BackgroundTransparency = 1.000
+bar1.Position = UDim2.new(0, 0, 0.118285722, 0)
+bar1.Size = UDim2.new(0, 498, 0, 200)
+bar1.Visible =  true
+
+
+--lucky gold
+l1.Name = "l1"
+l1.Parent = bar1
+l1.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+l1.Position = UDim2.new(0, 0, 0.010439342, 0)
+l1.Size = UDim2.new(0, 498, 0, 26)
+UIl1.Parent = l1
+
+t1.Parent = l1
+t1.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+t1.BackgroundTransparency = 1.000
+t1.Position = UDim2.new(0, 0, 0, 0)
+t1.Size = UDim2.new(0, 200, 0, 30)
+t1.Font = Enum.Font.Ubuntu
+t1.Text = "        Gold Lucky"
+t1.TextColor3 = Color3.fromRGB(255, 255, 255)
+t1.TextSize = 14.000
+t1.TextWrapped = true
+t1.TextXAlignment = Enum.TextXAlignment.Left
+
+b1.Name = "b1"
+b1.Parent = l1
+b1.BackgroundColor3 = Color3.fromRGB(0, 250, 60)
+b1.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+b1.Size = UDim2.new(0, 20, 0, 20)
+b1.Font = Enum.Font.SourceSans
+b1.Text = ""
+b1.TextColor3 = Color3.fromRGB(255, 255, 255)
+b1.TextSize = 18.000
+b1.MouseButton1Down:connect(function()
+b2.Visible = true
+b1.Visible = false
+_G.lucky1 = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.lucky1 then
+end
+
+end)
+end)
+
+b2.Name = "b2"
+b2.Parent = l1
+b2.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+b2.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+b2.Size = UDim2.new(0, 20, 0, 20)
+b2.Font = Enum.Font.SourceSans
+b2.Text = ""
+b2.TextColor3 = Color3.fromRGB(255, 255, 255)
+b2.TextSize = 18.000
+b2.MouseButton1Down:connect(function()
+b1.Visible = true
+b2.Visible = false
+_G.lucky1 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.lucky1 then
+game.ReplicatedStorage.SpawnLuckyBlock:FireServer()
+end
+
+end)
+end)
+
+--lucky super
+l2.Name = "l2"
+l2.Parent = bar1
+l2.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+l2.Position = UDim2.new(0, 0, 0.110439342, 0)
+l2.Size = UDim2.new(0, 498, 0, 26)
+UIl2.Parent = l2
+
+t2.Parent = l2
+t2.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+t2.BackgroundTransparency = 1.000
+t2.Position = UDim2.new(0, 0, 0, 0)
+t2.Size = UDim2.new(0, 200, 0, 30)
+t2.Font = Enum.Font.Ubuntu
+t2.Text = "        Super Lucky"
+t2.TextColor3 = Color3.fromRGB(255, 255, 255)
+t2.TextSize = 14.000
+t2.TextWrapped = true
+t2.TextXAlignment = Enum.TextXAlignment.Left
+
+b3.Name = "b3"
+b3.Parent = l2
+b3.BackgroundColor3 = Color3.fromRGB(0, 250, 60)
+b3.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+b3.Size = UDim2.new(0, 20, 0, 20)
+b3.Font = Enum.Font.SourceSans
+b3.Text = ""
+b3.TextColor3 = Color3.fromRGB(255, 255, 255)
+b3.TextSize = 18.000
+b3.MouseButton1Down:connect(function()
+b4.Visible = true
+b3.Visible = false
+_G.lucky2 = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.lucky2 then
+
+end
+
+end)
+end)
+
+b4.Name = "b4"
+b4.Parent = l2
+b4.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+b4.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+b4.Size = UDim2.new(0, 20, 0, 20)
+b4.Font = Enum.Font.SourceSans
+b4.Text = ""
+b4.TextColor3 = Color3.fromRGB(255, 255, 255)
+b4.TextSize = 18.000
+b4.MouseButton1Down:connect(function()
+b3.Visible = true
+b4.Visible = false
+_G.lucky2 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.lucky2 then
+game.ReplicatedStorage.SpawnSuperBlock:FireServer()
+end
+
+end)
+end)
+
+--lucky diamond
+l3.Name = "l3"
+l3.Parent = bar1
+l3.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+l3.Position = UDim2.new(0, 0, 0.210439342, 0)
+l3.Size = UDim2.new(0, 498, 0, 26)
+UIl3.Parent = l3
+
+t3.Parent = l3
+t3.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+t3.BackgroundTransparency = 1.000
+t3.Position = UDim2.new(0, 0, 0, 0)
+t3.Size = UDim2.new(0, 200, 0, 30)
+t3.Font = Enum.Font.Ubuntu
+t3.Text = "        Diamond Lucky"
+t3.TextColor3 = Color3.fromRGB(255, 255, 255)
+t3.TextSize = 14.000
+t3.TextWrapped = true
+t3.TextXAlignment = Enum.TextXAlignment.Left
+
+b5.Name = "b5"
+b5.Parent = l3
+b5.BackgroundColor3 = Color3.fromRGB(0, 250, 60)
+b5.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+b5.Size = UDim2.new(0, 20, 0, 20)
+b5.Font = Enum.Font.SourceSans
+b5.Text = ""
+b5.TextColor3 = Color3.fromRGB(255, 255, 255)
+b5.TextSize = 18.000
+b5.MouseButton1Down:connect(function()
+b6.Visible = true
+b5.Visible = false
+_G.lucky3 = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.lucky3 then
+
+end
+
+end)
+end)
+
+b6.Name = "b6"
+b6.Parent = l3
+b6.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+b6.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+b6.Size = UDim2.new(0, 20, 0, 20)
+b6.Font = Enum.Font.SourceSans
+b6.Text = ""
+b6.TextColor3 = Color3.fromRGB(255, 255, 255)
+b6.TextSize = 18.000
+b6.MouseButton1Down:connect(function()
+b5.Visible = true
+b6.Visible = false
+_G.lucky3 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.lucky3 then
+game.ReplicatedStorage.SpawnDiamondBlock:FireServer()
+end
+
+end)
+end)
+
+--lucky rainbow
+l4.Name = "l4"
+l4.Parent = bar1
+l4.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+l4.Position = UDim2.new(0, 0, 0.310439342, 0)
+l4.Size = UDim2.new(0, 498, 0, 26)
+UIl4.Parent = l4
+
+t4.Parent = l4
+t4.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+t4.BackgroundTransparency = 1.000
+t4.Position = UDim2.new(0, 0, 0, 0)
+t4.Size = UDim2.new(0, 200, 0, 30)
+t4.Font = Enum.Font.Ubuntu
+t4.Text = "        Rainbow Lucky"
+t4.TextColor3 = Color3.fromRGB(255, 255, 255)
+t4.TextSize = 14.000
+t4.TextWrapped = true
+t4.TextXAlignment = Enum.TextXAlignment.Left
+
+b7.Name = "b7"
+b7.Parent = l4
+b7.BackgroundColor3 = Color3.fromRGB(0, 250, 60)
+b7.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+b7.Size = UDim2.new(0, 20, 0, 20)
+b7.Font = Enum.Font.SourceSans
+b7.Text = ""
+b7.TextColor3 = Color3.fromRGB(255, 255, 255)
+b7.TextSize = 18.000
+b7.MouseButton1Down:connect(function()
+b8.Visible = true
+b7.Visible = false
+_G.lucky4 = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.lucky4 then
+
+end
+
+end)
+end)
+
+b8.Name = "b8"
+b8.Parent = l4
+b8.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+b8.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+b8.Size = UDim2.new(0, 20, 0, 20)
+b8.Font = Enum.Font.SourceSans
+b8.Text = ""
+b8.TextColor3 = Color3.fromRGB(255, 255, 255)
+b8.TextSize = 18.000
+b8.MouseButton1Down:connect(function()
+b7.Visible = true
+b8.Visible = false
+_G.lucky4 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.lucky4 then
+game.ReplicatedStorage.SpawnRainbowBlock:FireServer()
+end
+
+end)
+end)
+
+--lucky galaxy
+l5.Name = "l5"
+l5.Parent = bar1
+l5.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+l5.Position = UDim2.new(0, 0, 0.410439342, 0)
+l5.Size = UDim2.new(0, 498, 0, 26)
+UIl5.Parent = l5
+
+t5.Parent = l5
+t5.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+t5.BackgroundTransparency = 1.000
+t5.Position = UDim2.new(0, 0, 0, 0)
+t5.Size = UDim2.new(0, 200, 0, 30)
+t5.Font = Enum.Font.Ubuntu
+t5.Text = "        Galaxy Lucky"
+t5.TextColor3 = Color3.fromRGB(255, 255, 255)
+t5.TextSize = 14.000
+t5.TextWrapped = true
+t5.TextXAlignment = Enum.TextXAlignment.Left
+
+b9.Name = "b9"
+b9.Parent = l5
+b9.BackgroundColor3 = Color3.fromRGB(0, 250, 60)
+b9.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+b9.Size = UDim2.new(0, 20, 0, 20)
+b9.Font = Enum.Font.SourceSans
+b9.Text = ""
+b9.TextColor3 = Color3.fromRGB(255, 255, 255)
+b9.TextSize = 18.000
+b9.MouseButton1Down:connect(function()
+b10.Visible = true
+b9.Visible = false
+_G.lucky5 = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.lucky5 then
+
+end
+
+end)
+end)
+
+b10.Name = "b10"
+b10.Parent = l5
+b10.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+b10.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+b10.Size = UDim2.new(0, 20, 0, 20)
+b10.Font = Enum.Font.SourceSans
+b10.Text = ""
+b10.TextColor3 = Color3.fromRGB(255, 255, 255)
+b10.TextSize = 18.000
+b10.MouseButton1Down:connect(function()
+b9.Visible = true
+b10.Visible = false
+_G.lucky5 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.lucky5 then
+game.ReplicatedStorage.SpawnGalaxyBlock:FireServer()
+end
+
+end)
+end)
+
+--speed
+l6.Name = "l6"
+l6.Parent = bar1
+l6.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+l6.Position = UDim2.new(0, 0, 0.310439342, 0)
+l6.Size = UDim2.new(0, 498, 0, 26)
+UIl6.Parent = l6
+
+t6.Parent = l6
+t6.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+t6.BackgroundTransparency = 1.000
+t6.Position = UDim2.new(0, 0, 0, 0)
+t6.Size = UDim2.new(0, 200, 0, 30)
+t6.Font = Enum.Font.Ubuntu
+t6.Text = "        Speed"
+t6.TextColor3 = Color3.fromRGB(255, 255, 255)
+t6.TextSize = 14.000
+t6.TextWrapped = true
+t6.TextXAlignment = Enum.TextXAlignment.Left
+
+b11.Name = "b11"
+b11.Parent = l6
+b11.BackgroundColor3 = Color3.fromRGB(0, 250, 60)
+b11.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+b11.Size = UDim2.new(0, 20, 0, 20)
+b11.Font = Enum.Font.SourceSans
+b11.Text = ""
+b11.TextColor3 = Color3.fromRGB(255, 255, 255)
+b11.TextSize = 18.000
+b11.MouseButton1Down:connect(function()
+b12.Visible = true
+b11.Visible = false
+_G.player1 = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.player1 then
+
+end
+end)
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 20
+end)
+
+b12.Name = "b12"
+b12.Parent = l6
+b12.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+b12.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+b12.Size = UDim2.new(0, 20, 0, 20)
+b12.Font = Enum.Font.SourceSans
+b12.Text = ""
+b12.TextColor3 = Color3.fromRGB(255, 255, 255)
+b12.TextSize = 18.000
+b12.MouseButton1Down:connect(function()
+b11.Visible = true
+b12.Visible = false
+_G.player1 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.player1 then
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
+end
+end)
+end)
+
+--hitbox
+l7.Name = "l7"
+l7.Parent = bar1
+l7.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+l7.Position = UDim2.new(0, 0, 0.410439342, 0)
+l7.Size = UDim2.new(0, 498, 0, 26)
+UIl7.Parent = l7
+
+t7.Parent = l7
+t7.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+t7.BackgroundTransparency = 1.000
+t7.Position = UDim2.new(0, 0, 0, 0)
+t7.Size = UDim2.new(0, 200, 0, 30)
+t7.Font = Enum.Font.Ubuntu
+t7.Text = "        Hix Box Player"
+t7.TextColor3 = Color3.fromRGB(255, 255, 255)
+t7.TextSize = 14.000
+t7.TextWrapped = true
+t7.TextXAlignment = Enum.TextXAlignment.Left
+
+b13.Name = "b13"
+b13.Parent = l7
+b13.BackgroundColor3 = Color3.fromRGB(0, 250, 60)
+b13.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+b13.Size = UDim2.new(0, 20, 0, 20)
+b13.Font = Enum.Font.SourceSans
+b13.Text = ""
+b13.TextColor3 = Color3.fromRGB(255, 255, 255)
+b13.TextSize = 18.000
+b13.MouseButton1Down:connect(function()
+b14.Visible = true
+b13.Visible = false
+_G.player2 = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.player2 then
+
+end
+end)
+for i,v in next, game:GetService('Players'):GetPlayers() do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+pcall(function()
+v.Character.HumanoidRootPart.Size = Vector3.new(2, 2, 2)
+v.Character.HumanoidRootPart.Transparency = 0.9
+v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really black")
+v.Character.HumanoidRootPart.Material = "Neon"
+v.Character.HumanoidRootPart.CanCollide = false
+end)
+end
+end
+end)
+
+b14.Name = "b14"
+b14.Parent = l7
+b14.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+b14.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+b14.Size = UDim2.new(0, 20, 0, 20)
+b14.Font = Enum.Font.SourceSans
+b14.Text = ""
+b14.TextColor3 = Color3.fromRGB(255, 255, 255)
+b14.TextSize = 18.000
+b14.MouseButton1Down:connect(function()
+b13.Visible = true
+b14.Visible = false
+_G.player2 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.player2 then
+for i,v in next, game:GetService('Players'):GetPlayers() do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+pcall(function()
+v.Character.HumanoidRootPart.Size = Vector3.new(50, 50, 50)
+v.Character.HumanoidRootPart.Transparency = 0.9
+v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really black")
+v.Character.HumanoidRootPart.Material = "Neon"
+v.Character.HumanoidRootPart.CanCollide = false
+end)
+end
+end
+end
+end)
+
+end)
