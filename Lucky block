@@ -462,7 +462,7 @@ end)
 l6.Name = "l6"
 l6.Parent = bar1
 l6.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-l6.Position = UDim2.new(0, 0, 0.310439342, 0)
+l6.Position = UDim2.new(0, 0, 0.510439342, 0)
 l6.Size = UDim2.new(0, 498, 0, 26)
 UIl6.Parent = l6
 
@@ -525,7 +525,7 @@ end)
 l7.Name = "l7"
 l7.Parent = bar1
 l7.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-l7.Position = UDim2.new(0, 0, 0.410439342, 0)
+l7.Position = UDim2.new(0, 0, 0.610439342, 0)
 l7.Size = UDim2.new(0, 498, 0, 26)
 UIl7.Parent = l7
 
