@@ -1,0 +1,179 @@
+local ScreenGUI = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local open = Instance.new("TextButton")
+local exit = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local bar = Instance.new("Frame")
+local b1 = Instance.new("TextButton")
+local b2 = Instance.new("TextButton")
+local b3 = Instance.new("TextButton")
+local text = Instance.new("TextLabel")
+
+--main
+
+ScreenGUI.Name = "ScreenGUI"
+ScreenGUI.Parent = game.CoreGui
+ScreenGUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+main.Name = "main"
+main.Parent = ScreenGUI
+main.BackgroundColor3 = Color3.fromRGB(12, 12, 12)
+main.Position = UDim2.new(0.288126051, 0, 0.278999169, 0)
+main.Size = UDim2.new(0, 488, 0, 60)
+main.Active = true
+main.Draggable = true
+main.Visible = false
+
+--button
+
+exit.Name = "exit"
+exit.Parent = ScreenGUI
+exit.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+exit.BorderSizePixel = 0
+exit.Position = UDim2.new(0.70162201, 0, 0.103285708, 0)
+exit.Size = UDim2.new(0, 50, 0, 50)
+exit.Font = Enum.Font.Ubuntu
+exit.Text = "Closs"
+exit.TextColor3 = Color3.fromRGB(250, 255, 250)
+exit.TextSize = 20.000
+exit.MouseButton1Down:connect(function()
+game.CoreGui.ScreenGUI.main.Visible = false
+game.CoreGui.ScreenGUI.exit.Visible = false
+game.CoreGui.ScreenGUI.open.Visible = true
+end)
+
+open.Name = "open"
+open.Parent = ScreenGUI
+open.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+open.BorderSizePixel = 0
+open.Position = UDim2.new(0.70162201, 0, 0.103285708, 0)
+open.Size = UDim2.new(0, 50, 0, 50)
+open.Font = Enum.Font.Ubuntu
+open.Text = "Open"
+open.TextColor3 = Color3.fromRGB(250, 255, 250)
+open.TextSize = 20.000
+open.MouseButton1Down:connect(function()
+game.CoreGui.ScreenGUI.main.Visible = true
+game.CoreGui.ScreenGUI.open.Visible = false
+game.CoreGui.ScreenGUI.exit.Visible = true
+end)
+
+bar.Name = "bar"
+bar.Parent = main
+bar.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+bar.Size = UDim2.new(0, 488, 0, 26)
+
+TextLabel.Parent = main
+TextLabel.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 93, 0, 26)
+TextLabel.Font = Enum.Font.Ubuntu
+TextLabel.Text = "NTT HUB"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+text.Parent = main
+text.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+text.BackgroundTransparency = 1.000
+text.Position = UDim2.new(0.83662296, 0, 0, 0, 0, 0, 0)
+text.Size = UDim2.new(0, 93, 0, 26)
+text.Font = Enum.Font.Ubuntu
+text.Text = "Door"
+text.TextColor3 = Color3.fromRGB(255, 255, 255)
+text.TextSize = 14.000
+text.TextWrapped = true
+
+b1.Name = "b1"
+b1.Parent = main
+b1.BackgroundColor3 = Color3.fromRGB(12, 12, 12)
+b1.BorderSizePixel = 0
+b1.Position = UDim2.new(0, 0, 0.4724285722, 0)
+b1.Size = UDim2.new(0, 100, 0, 26)
+b1.Font = Enum.Font.Ubuntu
+b1.Text = "Speed"
+b1.TextColor3 = Color3.fromRGB(255, 255, 255)
+b1.TextSize = 14.000
+b1.MouseButton1Down:connect(function()
+end)
+
+--ẩn
+b3.Visible = false
+
+b2.Name = "b2"
+b2.Parent = main
+b2.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+b2.BorderSizePixel = 0
+b2.Position = UDim2.new(0.93662296, 0, 0.5724285722, 0)
+b2.Size = UDim2.new(0, 17, 0, 17)
+b2.Font = Enum.Font.Ubuntu
+b2.Text = ""
+b2.TextColor3 = Color3.fromRGB(255, 255, 255)
+b2.TextSize = 14.000
+b2.MouseButton1Down:connect(function()
+b2.Visible = false
+b3.Visible = true
+_G.player1 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.player1 then
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 40
+end
+end)
+
+end)
+
+
+b3.Name = "b3"
+b3.Parent = main
+b3.BackgroundColor3 = Color3.fromRGB(0, 250, 60)
+b3.BorderSizePixel = 0
+b3.Position = UDim2.new(0.93662296, 0, 0.5724285722, 0)
+b3.Size = UDim2.new(0, 17, 0, 17)
+b3.Font = Enum.Font.Ubuntu
+b3.Text = ""
+b3.TextColor3 = Color3.fromRGB(255, 255, 255)
+b3.TextSize = 14.000
+b3.MouseButton1Down:connect(function()
+b3.Visible = false
+b2.Visible = true
+
+_G.player1 = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.player1 then
+
+end
+end)
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 15
+end)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
