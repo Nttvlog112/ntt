@@ -964,7 +964,7 @@ bm6.TextColor3 = Color3.fromRGB(255, 255, 255)
 bm6.TextSize = 18.000
 UIbm6.Parent = bm6
 bm6.MouseButton1Down:connect(function()
-loadstring(game:HttpGet(('https://pastebin.com/raw/xJ9NfWnD'),true))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Fly')))()
 end)
 
 bm7.Name = "bm7"
