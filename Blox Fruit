@@ -65,16 +65,15 @@ local bbox = Instance.new("TextBox")
 local bb1 = Instance.new("TextButton")
 local bb2 = Instance.new("TextButton")
 local bb3 = Instance.new("TextButton")
---barmiss
-local m1 = Instance.new("Frame")
-local m2 = Instance.new("Frame")
-local m3 = Instance.new("Frame")
-local m4 = Instance.new("Frame")
-local m5 = Instance.new("Frame")
-local m6 = Instance.new("Frame")
-local m7 = Instance.new("Frame")
-local m8 = Instance.new("Frame")
-local m9 = Instance.new("Frame")
+
+local bm1 = Instance.new("TextButton")
+local bm2 = Instance.new("TextButton")
+local bm3 = Instance.new("TextButton")
+local bm4 = Instance.new("TextButton")
+local bm5 = Instance.new("TextButton")
+local bm6 = Instance.new("TextButton")
+local bm7 = Instance.new("TextButton")
+local bm8 = Instance.new("TextButton")
 
 --auto1
 local a1 = Instance.new("Frame")
@@ -148,6 +147,14 @@ local UIcode2 = Instance.new("UICorner")
 local UIcodegui = Instance.new("UICorner")
 local UIcodebox = Instance.new("UICorner")
 local UIcodecheck = Instance.new("UICorner")
+local UIbm1 = Instance.new("UICorner")
+local UIbm2 = Instance.new("UICorner")
+local UIbm3 = Instance.new("UICorner")
+local UIbm4 = Instance.new("UICorner")
+local UIbm5 = Instance.new("UICorner")
+local UIbm6 = Instance.new("UICorner")
+local UIbm7 = Instance.new("UICorner")
+local UIbm8 = Instance.new("UICorner")
 
 --main
 
@@ -269,7 +276,7 @@ scriptspage2.Parent = main
 scriptspage2.Active = true
 scriptspage2.BackgroundColor3 = Color3.fromRGB(12, 12, 12)
 scriptspage2.BorderSizePixel = 0
-scriptspage2.Size = UDim2.new(0, 497, 0, 230)
+scriptspage2.Size = UDim2.new(0, 498, 0, 230)
 scriptspage2.ScrollBarThickness = 0
 scriptspage2.Position = UDim2.new(0.17631148, 0, 0.094285722, 0)
 scriptspage2.Visible = false
@@ -279,7 +286,7 @@ scriptspage3.Parent = main
 scriptspage3.Active = true
 scriptspage3.BackgroundColor3 = Color3.fromRGB(12, 12, 12)
 scriptspage3.BorderSizePixel = 0
-scriptspage3.Size = UDim2.new(0, 497, 0, 230)
+scriptspage3.Size = UDim2.new(0, 498, 0, 230)
 scriptspage3.ScrollBarThickness = 0
 scriptspage3.Position = UDim2.new(0.17631148, 0, 0.094285722, 0)
 scriptspage3.Visible = false
@@ -356,7 +363,7 @@ sea.Name = "sea"
 sea.Parent = main
 sea.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
 sea.BorderSizePixel = 0
-sea.Position = UDim2.new(0.86262296, 0, 0, 0)
+sea.Position = UDim2.new(0.85262296, 0, 0, 0)
 sea.Size = UDim2.new(0, 90, 0, 26)
 sea.Font = Enum.Font.Ubuntu
 sea.Text = "Blox Fruit | Sea ."
@@ -815,11 +822,11 @@ end)
 --player
 code1.Name = "code1"
 code1.Parent = scriptspage2
-code1.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
+code1.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
 code1.Position = UDim2.new(0, 0, 0.0304392526, 0)
 code1.Size = UDim2.new(0, 498, 0, 30)
 code1.Font = Enum.Font.SourceSans
-code1.Text = "Closse | Code Gui"
+code1.Text = "Đóng | Code Gui"
 code1.TextColor3 = Color3.fromRGB(255, 255, 255)
 code1.TextSize = 18.000
 UIcode1.Parent = code1
@@ -831,11 +838,11 @@ end)
 
 code2.Name = "code2"
 code2.Parent = scriptspage2
-code2.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
+code2.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
 code2.Position = UDim2.new(0, 0, 0.0304392526, 0)
 code2.Size = UDim2.new(0, 498, 0, 30)
 code2.Font = Enum.Font.SourceSans
-code2.Text = "Open | Code Gui"
+code2.Text = "Mở | Code Gui"
 code2.TextColor3 = Color3.fromRGB(255, 255, 255)
 code2.TextSize = 18.000
 UIcode2.Parent = code2
@@ -845,11 +852,156 @@ code2.Visible = false
 code1.Visible = true
 end)
 
+bm2.Name = "bm2"
+bm2.Parent = scriptspage2
+bm2.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+bm2.Position = UDim2.new(0, 0, 0.1004392526, 0)
+bm2.Size = UDim2.new(0, 498, 0, 30)
+bm2.Font = Enum.Font.SourceSans
+bm2.Text = "Tắt | Hix Box Quái"
+bm2.TextColor3 = Color3.fromRGB(255, 255, 255)
+bm2.TextSize = 18.000
+UIbm2.Parent = bm2
+bm2.MouseButton1Down:connect(function()
+bm2.Visible = false
+bm1.Visible = true
+_G.mod = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.mod then
+
+end
+end)
+for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+      v.HumanoidRootPart.Size = Vector3.new(2, 2, 2)
+      v.HumanoidRootPart.Transparency = 1
+			v.HumanoidRootPart.Color = Color3.new("Really White")
+			v.HumanoidRootPart.CanCollide = true
+			end
+end)
+
+bm1.Name = "bm1"
+bm1.Parent = scriptspage2
+bm1.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+bm1.Position = UDim2.new(0, 0, 0.1004392526, 0)
+bm1.Size = UDim2.new(0, 498, 0, 30)
+bm1.Font = Enum.Font.SourceSans
+bm1.Text = "Bật | Hix Box Quái"
+bm1.TextColor3 = Color3.fromRGB(255, 255, 255)
+bm1.TextSize = 18.000
+UIbm1.Parent = bm1
+bm1.MouseButton1Down:connect(function()
+bm1.Visible = false
+bm2.Visible = true
+_G.mod = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.mod then
+for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+      v.HumanoidRootPart.Size = Vector3.new(30, 30, 30)
+      v.HumanoidRootPart.Transparency = 0.9
+			v.HumanoidRootPart.Color = Color3.new("Really White")
+			v.HumanoidRootPart.CanCollide = true
+		end
+end
+end)
+end)
+
+--inventory
+bm3.Name = "bm3"
+bm3.Parent = scriptspage2
+bm3.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+bm3.Position = UDim2.new(0, 0, 0.1704392526, 0)
+bm3.Size = UDim2.new(0, 498, 0, 30)
+bm3.Font = Enum.Font.SourceSans
+bm3.Text = "Rương đồ"
+bm3.TextColor3 = Color3.fromRGB(255, 255, 255)
+bm3.TextSize = 18.000
+UIbm3.Parent = bm3
+bm3.MouseButton1Down:connect(function()
+game.Players.localPlayer.PlayerGui.Main.Inventory.Visible = true
+end)
+
+--inventory fruit
+bm4.Name = "bm4"
+bm4.Parent = scriptspage2
+bm4.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+bm4.Position = UDim2.new(0, 0, 0.2404392526, 0)
+bm4.Size = UDim2.new(0, 498, 0, 30)
+bm4.Font = Enum.Font.SourceSans
+bm4.Text = "Rương trái cây"
+bm4.TextColor3 = Color3.fromRGB(255, 255, 255)
+bm4.TextSize = 18.000
+UIbm4.Parent = bm4
+bm4.MouseButton1Down:connect(function()
+game.Players.localPlayer.PlayerGui.Main.FruitInventory.Visible = true
+end)
+
+--random fruit
+bm5.Name = "bm5"
+bm5.Parent = scriptspage2
+bm5.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+bm5.Position = UDim2.new(0, 0, 0.3154392526, 0)
+bm5.Size = UDim2.new(0, 498, 0, 30)
+bm5.Font = Enum.Font.SourceSans
+bm5.Text = "Cửa hàng trái cây"
+bm5.TextColor3 = Color3.fromRGB(255, 255, 255)
+bm5.TextSize = 18.000
+UIbm5.Parent = bm5
+bm5.MouseButton1Down:connect(function()
+game.Players.localPlayer.PlayerGui.Main.FruitShop.Visible = true
+end)
+
+--fly
+bm6.Name = "bm6"
+bm6.Parent = scriptspage2
+bm6.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+bm6.Position = UDim2.new(0, 0, 0.3804392526, 0)
+bm6.Size = UDim2.new(0, 498, 0, 30)
+bm6.Font = Enum.Font.SourceSans
+bm6.Text = "Fly"
+bm6.TextColor3 = Color3.fromRGB(255, 255, 255)
+bm6.TextSize = 18.000
+UIbm6.Parent = bm6
+bm6.MouseButton1Down:connect(function()
+loadstring(game:HttpGet(('https://pastebin.com/raw/xJ9NfWnD'),true))()
+end)
+
+bm7.Name = "bm7"
+bm7.Parent = scriptspage2
+bm7.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+bm7.Position = UDim2.new(0, 0, 0.4504392526, 0)
+bm7.Size = UDim2.new(0, 498, 0, 30)
+bm7.Font = Enum.Font.SourceSans
+bm7.Text = "Rejon"
+bm7.TextColor3 = Color3.fromRGB(255, 255, 255)
+bm7.TextSize = 18.000
+UIbm7.Parent = bm7
+bm7.MouseButton1Down:connect(function()
+local ts = game:GetService("TeleportService")
+          local p = game:GetService("Players").LocalPlayer
+          ts:Teleport(game.PlaceId, p)
+end)
+
+bm8.Name = "bm8"
+bm8.Parent = scriptspage2
+bm8.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+bm8.Position = UDim2.new(0, 0, 0.5204392526, 0)
+bm8.Size = UDim2.new(0, 498, 0, 30)
+bm8.Font = Enum.Font.SourceSans
+bm8.Text = "Sever Vip"
+bm8.TextColor3 = Color3.fromRGB(255, 255, 255)
+bm8.TextSize = 18.000
+UIbm8.Parent = bm8
+bm8.MouseButton1Down:connect(function()
+loadstring(game:HttpGet("https://pastebin.com/raw/q40eGpb8", true))()
+end)
+
 --bar code
 barm1.Name = "barm1"
 barm1.Parent = scriptspage2
 barm1.Active = true
-barm1.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+barm1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 barm1.Position = UDim2.new(0, 0, 0.1004392526, 0)
 barm1.Size = UDim2.new(0, 498, 0, 120)
 barm1.Visible = false
@@ -858,8 +1010,8 @@ barm1.Visible = false
 codegui.Name = "codegui"
 codegui.Parent = barm1
 codegui.Active = true
-codegui.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
-codegui.Position = UDim2.new(0, 0, 0.0904392526, 0)
+codegui.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+codegui.Position = UDim2.new(0, 0, 0.0604392526, 0)
 codegui.Size = UDim2.new(0, 498, 0, 30)
 UIcodegui.Parent = codegui
 
@@ -889,8 +1041,8 @@ UIcodebox.Parent = codebox
 --check code
 codecheck.Name = "codecheck"
 codecheck.Parent = barm1
-codecheck.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
-codecheck.Position = UDim2.new(0, 0, 0.6904392526, 0)
+codecheck.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+codecheck.Position = UDim2.new(0, 0, 0.7204392526, 0)
 codecheck.Size = UDim2.new(0, 498, 0, 30)
 codecheck.Font = Enum.Font.SourceSans
 codecheck.Text = "Check Code"
@@ -902,6 +1054,9 @@ if codebox.Text == "bountyhunt" then
 bbon.Visible = true
 end
 end)
+
+
+
 
 --auto2
 --auto check point
