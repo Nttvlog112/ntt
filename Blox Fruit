@@ -456,13 +456,25 @@ bb1.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
 bb1.Position = UDim2.new(0.20631148, 0, 0.6304392526, 0)
 bb1.Size = UDim2.new(0, 250, 0, 34)
 bb1.Font = Enum.Font.SourceSans
-bb1.Text = "Unannoy Player"
+bb1.Text = "Tắt | TP Player"
 bb1.TextColor3 = Color3.fromRGB(255, 255, 255)
 bb1.TextSize = 18.000
 UIbb1.Parent = bb1
 bb1.MouseButton1Down:connect(function()
 bb1.Visible = false
 bb2.Visible = true
+
+for i,v in next, game:GetService('Players'):GetPlayers() do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+pcall(function()
+v.Character.HumanoidRootPart.Size = Vector3.new(2, 2, 2)
+v.Character.HumanoidRootPart.Transparency = 1
+v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really black")
+v.Character.HumanoidRootPart.Material = "Neon"
+v.Character.HumanoidRootPart.CanCollide = false
+end)
+end
+end
 
 _G.bouty = false
 
@@ -478,13 +490,25 @@ bb2.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
 bb2.Position = UDim2.new(0.20631148, 0, 0.6304392526, 0)
 bb2.Size = UDim2.new(0, 250, 0, 34)
 bb2.Font = Enum.Font.SourceSans
-bb2.Text = "Annoy Player"
+bb2.Text = "Bật | TP Player"
 bb2.TextColor3 = Color3.fromRGB(255, 255, 255)
 bb2.TextSize = 18.000
 UIbb2.Parent = bb2
 bb2.MouseButton1Down:connect(function()
 bb2.Visible = false
 bb1.Visible = true
+
+for i,v in next, game:GetService('Players'):GetPlayers() do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+pcall(function()
+v.Character.HumanoidRootPart.Size = Vector3.new(50, 50, 50)
+v.Character.HumanoidRootPart.Transparency = 1
+v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really black")
+v.Character.HumanoidRootPart.Material = "Neon"
+v.Character.HumanoidRootPart.CanCollide = false
+end)
+end
+end
 
 _G.bouty = true
 
