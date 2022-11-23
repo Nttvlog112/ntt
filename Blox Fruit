@@ -699,10 +699,10 @@ btp.TextSize = 18.000
 btp.MouseButton1Down:connect(function()
 if b1.Text == "Star Island" then
 game.Players.LocalPlayer.Character.Humanoid.Health = 0
-_G.tp = true
+_G.tp1 = true
 
 game:GetService('RunService').RenderStepped:connect(function()
-if _G.tp then
+if _G.tp1 then
 local pl = game.Players.LocalPlayer.Character.HumanoidRootPart 
 
 local location = CFrame.new(-31, 23, 3821) 
@@ -712,21 +712,21 @@ local humanoid = game.Players.LocalPlayer.Character.Humanoid
 pl.CFrame = location
 end
 end)
-wait(3)
-_G.tp = false
+wait(5)
+_G.tp1 = false
 
 game:GetService('RunService').RenderStepped:connect(function()
-if _G.tp then
+if _G.tp1 then
 end
 end)
 
 end
 if b1.Text == "Cafe" then
 game.Players.LocalPlayer.Character.Humanoid.Health = 0
-_G.tp = true
+_G.tp2 = true
 
 game:GetService('RunService').RenderStepped:connect(function()
-if _G.tp then
+if _G.tp2 then
 local pl = game.Players.LocalPlayer.Character.HumanoidRootPart 
 
 local location = CFrame.new(-382, 73, 270) 
@@ -736,21 +736,21 @@ local humanoid = game.Players.LocalPlayer.Character.Humanoid
 pl.CFrame = location
 end
 end)
-wait(3)
-_G.tp = false
+wait(5)
+_G.tp2 = false
 
 game:GetService('RunService').RenderStepped:connect(function()
-if _G.tp then
+if _G.tp2 then
 end
 end)
 
 end
 if b1.Text == "Green Zone" then
 game.Players.LocalPlayer.Character.Humanoid.Health = 0
-_G.tp = true
+_G.tp3 = true
 
 game:GetService('RunService').RenderStepped:connect(function()
-if _G.tp then
+if _G.tp3 then
 local pl = game.Players.LocalPlayer.Character.HumanoidRootPart 
 
 local location = CFrame.new(-2483, 73, -3384) 
@@ -760,21 +760,21 @@ local humanoid = game.Players.LocalPlayer.Character.Humanoid
 pl.CFrame = location
 end
 end)
-wait(3)
-_G.tp = false
+wait(5)
+_G.tp3 = false
 
 game:GetService('RunService').RenderStepped:connect(function()
-if _G.tp then
+if _G.tp3 then
 end
 end)
 
 end
 if b1.Text == "Graveyard" then
 game.Players.LocalPlayer.Character.Humanoid.Health = 0
-_G.tp = true
+_G.tp4 = true
 
 game:GetService('RunService').RenderStepped:connect(function()
-if _G.tp then
+if _G.tp4 then
 local pl = game.Players.LocalPlayer.Character.HumanoidRootPart 
 
 local location = CFrame.new(-5684, 49, -896) 
@@ -784,21 +784,21 @@ local humanoid = game.Players.LocalPlayer.Character.Humanoid
 pl.CFrame = location
 end
 end)
-wait(3)
-_G.tp = false
+wait(5)
+_G.tp4 = false
 
 game:GetService('RunService').RenderStepped:connect(function()
-if _G.tp then
+if _G.tp4 then
 end
 end)
 
 end
 if b1.Text == "Snow" then
 game.Players.LocalPlayer.Character.Humanoid.Health = 0
-_G.tp = true
+_G.tp5 = true
 
 game:GetService('RunService').RenderStepped:connect(function()
-if _G.tp then
+if _G.tp5 then
 local pl = game.Players.LocalPlayer.Character.HumanoidRootPart 
 
 local location = CFrame.new(1000, 500, -5045) 
@@ -808,21 +808,21 @@ local humanoid = game.Players.LocalPlayer.Character.Humanoid
 pl.CFrame = location
 end
 end)
-wait(3)
-_G.tp = false
+wait(5)
+_G.tp5 = false
 
 game:GetService('RunService').RenderStepped:connect(function()
-if _G.tp then
+if _G.tp5 then
 end
 end)
 
 end
 if b1.Text == "Hot And Cold" then
 game.Players.LocalPlayer.Character.Humanoid.Health = 0
-_G.tp = true
+_G.tp6 = true
 
 game:GetService('RunService').RenderStepped:connect(function()
-if _G.tp then
+if _G.tp6 then
 local pl = game.Players.LocalPlayer.Character.HumanoidRootPart 
 
 local location = CFrame.new(-5464, 16, -5100) 
@@ -832,21 +832,21 @@ local humanoid = game.Players.LocalPlayer.Character.Humanoid
 pl.CFrame = location
 end
 end)
-wait(3)
-_G.tp = false
+wait(5)
+_G.tp6 = false
 
 game:GetService('RunService').RenderStepped:connect(function()
-if _G.tp then
+if _G.tp6 then
 end
 end)
 
 end
 if b1.Text == "Haunted Ship" then
 game.Players.LocalPlayer.Character.Humanoid.Health = 0
-_G.tp = true
+_G.tp7 = true
 
 game:GetService('RunService').RenderStepped:connect(function()
-if _G.tp then
+if _G.tp7 then
 local pl = game.Players.LocalPlayer.Character.HumanoidRootPart 
 
 local location = CFrame.new(1000, 40, 32989) 
@@ -856,21 +856,21 @@ local humanoid = game.Players.LocalPlayer.Character.Humanoid
 pl.CFrame = location
 end
 end)
-wait(3)
-_G.tp = false
+wait(5)
+_G.tp7 = false
 
 game:GetService('RunService').RenderStepped:connect(function()
-if _G.tp then
+if _G.tp7 then
 end
 end)
 
 end
 if b1.Text == "Ice Castle" then
 game.Players.LocalPlayer.Character.Humanoid.Health = 0
-_G.tp = true
+_G.tp8 = true
 
 game:GetService('RunService').RenderStepped:connect(function()
-if _G.tp then
+if _G.tp8 then
 local pl = game.Players.LocalPlayer.Character.HumanoidRootPart 
 
 local location = CFrame.new(5690, 30, -6390) 
@@ -880,21 +880,21 @@ local humanoid = game.Players.LocalPlayer.Character.Humanoid
 pl.CFrame = location
 end
 end)
-wait(3)
-_G.tp = false
+wait(5)
+_G.tp8 = false
 
 game:GetService('RunService').RenderStepped:connect(function()
-if _G.tp then
+if _G.tp8 then
 end
 end)
 
 end
 if b1.Text == "Forgotten" then
 game.Players.LocalPlayer.Character.Humanoid.Health = 0
-_G.tp = true
+_G.tp9 = true
 
 game:GetService('RunService').RenderStepped:connect(function()
-if _G.tp then
+if _G.tp9 then
 local pl = game.Players.LocalPlayer.Character.HumanoidRootPart 
 
 local location = CFrame.new(-3063, 6, 9612) 
@@ -904,11 +904,11 @@ local humanoid = game.Players.LocalPlayer.Character.Humanoid
 pl.CFrame = location
 end
 end)
-wait(3)
-_G.tp = false
+wait(5)
+_G.tp9 = false
 
 game:GetService('RunService').RenderStepped:connect(function()
-if _G.tp then
+if _G.tp9 then
 end
 end)
 
