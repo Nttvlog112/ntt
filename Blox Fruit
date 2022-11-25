@@ -3240,7 +3240,5 @@ local function GBKPG_fake_script() -- hometab.LocalScript
 	
 end
 coroutine.wrap(GBKPG_fake_script)()
-    
-
-
+ 
  
