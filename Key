@@ -8,10 +8,31 @@ local UIkey = Instance.new("UICorner")
 local UIkey1 = Instance.new("UICorner")
 local UIkey2 = Instance.new("UICorner")
 local UIkey3 = Instance.new("UICorner")
+local baotri = Instance.new("TextLabel")
 
 UIGUI.Name = "UIGUI"
 UIGUI.Parent = game.CoreGui
 UIGUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+baotri.Name = "baotri"
+baotri.Parent = keybar
+baotri.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+baotri.BackgroundTransparency = 1.000
+baotri.BorderSizePixel = 0
+baotri.Position = UDim2.new(0.24631148, 0, 0.430439342, 0)
+baotri.Size = UDim2.new(0, 250, 0, 34)
+baotri.Font = Enum.Font.TitilliumWeb
+baotri.Text = "Script Đang Được Bảo Trì"
+baotri.TextColor3 = Color3.fromRGB(0, 255, 255)
+baotri.TextScaled = true
+baotri.TextSize = 5.000
+baotri.TextWrapped = true
+key.Visible = false
+keybutton.Visible = false
+keyget.Visible = false
+keybox.Visible = false
+wait(5)
+keybar.Visible = false
 
 keybar.Name = "keybar"
 keybar.Parent = UIGUI
