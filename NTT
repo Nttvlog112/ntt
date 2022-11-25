@@ -1,8 +1,16 @@
+
 local UIGUI = Instance.new("ScreenGui")
 local text1 = Instance.new("TextLabel")
 local bars = Instance.new("Frame")
+local bars1 = Instance.new("Frame")
 local text2 = Instance.new("TextLabel")
+local text4 = Instance.new("TextLabel")
+local textkey = Instance.new("TextLabel")
+local keybox = Instance.new("TextBox")
 local bar1 = Instance.new("Frame")
+local keybar = Instance.new("Frame")
+local checkkey = Instance.new("TextButton")
+local keyget = Instance.new("TextButton")
 local bar2 = Instance.new("Frame")
 local tload = Instance.new("TextLabel")
 local check1 = Instance.new("TextBox")
@@ -16,16 +24,105 @@ local t2 = Instance.new("TextLabel")
 local loadbutton = Instance.new("TextButton")
 --làm tròn
 local UIbar1 = Instance.new("UICorner")
+local UIkeybar = Instance.new("UICorner")
+local UIkey = Instance.new("UICorner")
 local UIbar2 = Instance.new("UICorner")
 local UIload = Instance.new("UICorner")
+local UIkeyget = Instance.new("UICorner")
 local c1 = Instance.new("UICorner")
+local cc1 = Instance.new("UICorner")
 local c2 = Instance.new("UICorner")
 local c3 = Instance.new("UICorner")
 local c4 = Instance.new("UICorner")
 
 UIGUI.Name = "UIGUI"
-UIGUI.Parent = game.CoreGui
+UIGUI.Parent = game:WaitForChild("CoreGui")
 UIGUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+--key
+
+keybar.Name = "keybar"
+keybar.Parent = UIGUI
+keybar.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+keybar.Position = UDim2.new(0.358126051, 0, 0.258999169, 0)
+keybar.Size = UDim2.new(0, 300, 0, 150)
+UIkeybar.Parent = keybar
+keybar.Visible = true
+
+textkey.Parent = keybar
+textkey.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+textkey.BackgroundTransparency = 1.000
+textkey.Position = UDim2.new(0.24631148, 0, 0.0704392526, 0)
+textkey.Size = UDim2.new(0, 170, 0, 30)
+textkey.Font = Enum.Font.Ubuntu
+textkey.Text = "NTT HUB"
+textkey.TextColor3 = Color3.fromRGB(255, 255, 255)
+textkey.TextSize = 18.000
+textkey.TextWrapped = true
+
+text4.Parent = keybar
+text4.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+text4.BackgroundTransparency = 1.000
+text4.Position = UDim2.new(0.64631148, 0, 0.0704392526, 0)
+text4.Size = UDim2.new(0, 100, 0, 30)
+text4.Font = Enum.Font.Ubuntu
+text4.Text = "Key"
+text4.TextColor3 = Color3.fromRGB(255, 255, 255)
+text4.TextSize = 14.000
+text4.TextWrapped = true
+
+bars1.Name = "bars1"
+bars1.Parent = keybar
+bars1.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+bars1.Position = UDim2.new(0.10631148, 0, 0.2704392526, 0)
+bars1.Size = UDim2.new(0, 230, 0, 2)
+
+keybox.Name = "keybox"
+keybox.Parent = keybar
+keybox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+keybox.BorderColor3 = Color3.fromRGB(20, 20, 20)
+keybox.Position = UDim2.new(0.20631148, 0, 0.3704392526, 0)
+keybox.Size = UDim2.new(0, 180, 0, 27)
+keybox.Font = Enum.Font.SourceSans
+keybox.Text = "Nhập Key"
+keybox.TextColor3 = Color3.fromRGB(0, 0, 0)
+keybox.TextSize = 18.000
+cc1.Parent = keybox
+
+checkkey.Name = "checkkey"
+checkkey.Parent = keybar
+checkkey.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+checkkey.BorderColor3 = Color3.fromRGB(250, 250, 250)
+checkkey.Position = UDim2.new(0.27631148, 0, 0.6204392526, 0)
+checkkey.Size = UDim2.new(0, 150, 0, 25)
+checkkey.Font = Enum.Font.SourceSans
+checkkey.Text = "Check Key"
+checkkey.TextColor3 = Color3.fromRGB(250, 250, 250)
+checkkey.TextSize = 18.000
+UIkey.Parent = checkkey
+checkkey.MouseButton1Down:connect(function()
+if keybox.Text == "71509" then
+keybar.Visible = false
+bar1.Visible = true
+end
+end)
+
+keyget.Name = "keyget"
+keyget.Parent = keybar
+keyget.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+keyget.BorderColor3 = Color3.fromRGB(250, 250, 250)
+keyget.Position = UDim2.new(0.42631148, 0, 0.8204392526, 0)
+keyget.Size = UDim2.new(0, 70, 0, 20)
+keyget.Font = Enum.Font.SourceSans
+keyget.Text = "Get Key"
+keyget.TextColor3 = Color3.fromRGB(0, 250, 250)
+keyget.TextSize = 18.000
+UIkeyget.Parent = keyget
+keyget.MouseButton1Down:connect(function()
+setclipboard("Có Con Cặc:))")
+end)
+
+--end key
 
 bar1.Name = "bar1"
 bar1.Parent = UIGUI
@@ -33,7 +130,7 @@ bar1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 bar1.Position = UDim2.new(0.358126051, 0, 0.258999169, 0)
 bar1.Size = UDim2.new(0, 300, 0, 150)
 UIbar1.Parent = bar1
-bar1.Visible = true
+bar1.Visible = false
 
 bar2.Name = "bar2"
 bar2.Parent = UIGUI
@@ -326,6 +423,7 @@ wait(1)
 tload.Text = "vui lòng đợi giây lát"
 wait(1)
 bar2.Visible = false
+--loader
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Loader')))()
 
 end)
