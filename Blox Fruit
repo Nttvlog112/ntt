@@ -510,19 +510,6 @@ cc3.Parent = bcheck3
 bcheck3.MouseButton1Down:connect(function()
 bcheck3.Visible = false
 bcheck4.Visible = true
-
-for i,v in next, game:GetService('Players'):GetPlayers() do
-if v.Name ~= game:GetService('Players').LocalPlayer.Name then
-pcall(function()
-v.Character.HumanoidRootPart.Size = Vector3.new(10, 10, 10)
-v.Character.HumanoidRootPart.Transparency = 1
-v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really black")
-v.Character.HumanoidRootPart.Material = "Neon"
-v.Character.HumanoidRootPart.CanCollide = false
-end)
-end
-end
-
 _G.bouty = true
 
 game:GetService('RunService').RenderStepped:connect(function()
@@ -588,19 +575,6 @@ cc4.Parent = bcheck4
 bcheck4.MouseButton1Down:connect(function()
 bcheck4.Visible = false
 bcheck3.Visible = true
-
-for i,v in next, game:GetService('Players'):GetPlayers() do
-if v.Name ~= game:GetService('Players').LocalPlayer.Name then
-pcall(function()
-v.Character.HumanoidRootPart.Size = Vector3.new(6, 6, 6)
-v.Character.HumanoidRootPart.Transparency = 1
-v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really black")
-v.Character.HumanoidRootPart.Material = "Neon"
-v.Character.HumanoidRootPart.CanCollide = false
-end)
-end
-end
-
 _G.bouty = false
 
 game:GetService('RunService').RenderStepped:connect(function()
@@ -631,6 +605,16 @@ _G.Zone = true
 game:GetService('RunService').RenderStepped:connect(function()
 if _G.Zone then
 if  game.Players.LocalPlayer.Character.Humanoid.Health < 3500 then
+
+bcheck3.Visible = true
+bcheck4.Visible = false
+
+_G.bouty = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.bouty then
+end
+end)
 	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,100,0)
 end
 end
