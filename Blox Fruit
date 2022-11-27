@@ -82,6 +82,7 @@ local bcheck3 = Instance.new("TextButton")
 local bcheck4 = Instance.new("TextButton")
 local t1 = Instance.new("TextLabel")
 local zone = Instance.new("TextButton")
+local zone1 = Instance.new("TextButton")
 --làm tròn
 local UIbarr1 = Instance.new("UICorner")
 local UIbarr2 = Instance.new("UICorner")
@@ -90,6 +91,7 @@ local cc1 = Instance.new("UICorner")
 local cc2 = Instance.new("UICorner")
 local cc3 = Instance.new("UICorner")
 local cc4 = Instance.new("UICorner")
+local cc5 = Instance.new("UICorner")
 
 local bm1 = Instance.new("TextButton")
 local bm2 = Instance.new("TextButton")
@@ -609,10 +611,7 @@ end)
 
 end)
 
-
---tp zone all sea
-if game.PlaceId == 2753915549 then -- sea1
-sea.Text = "Blox Fruit | Sea 1"
+--tp zone
 
 zone.Name = "zone"
 zone.Parent = barr1
@@ -620,64 +619,45 @@ zone.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 zone.Position = UDim2.new(0.27631148, 0, 0.7704392526, 0)
 zone.Size = UDim2.new(0, 150, 0, 25)
 zone.Font = Enum.Font.SourceSans
-zone.Text = "Tp Zone"
+zone.Text = "On | Auto Tp Zone"
 zone.TextColor3 = Color3.fromRGB(0, 0, 0)
 zone.TextSize = 18.000
 UIload.Parent = zone
 zone.MouseButton1Down:connect(function()
-local CFrameEnd = CFrame.new(-7906, 5546, -380) -- Place your coords in here
-local Time = 0 -- Time in seconds
-local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd})
-tween:Play()
+zone.Visible = false
+zone1.Visible = true
+_G.Zone = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.Zone then
+if  game.Players.LocalPlayer.Character.Humanoid.Health < 3500 then
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,100,0)
+end
+end
+end)
 end)
 
+zone1.Visible = false
+zone1.Name = "zone1"
+zone1.Parent = barr1
+zone1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+zone1.Position = UDim2.new(0.27631148, 0, 0.7704392526, 0)
+zone1.Size = UDim2.new(0, 150, 0, 25)
+zone1.Font = Enum.Font.SourceSans
+zone1.Text = "Off | Auto Tp Zone"
+zone1.TextColor3 = Color3.fromRGB(0, 0, 0)
+zone1.TextSize = 18.000
+cc5.Parent = zone1
+zone1.MouseButton1Down:connect(function()
+zone1.Visible = false
+zone.Visible = true
+_G.Zone = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.Zone then
 end
-
-if game.PlaceId == 4442272183 then -- sea2
-sea.Text = "Blox Fruit | Sea 2"
-
-zone.Name = "zone"
-zone.Parent = barr1
-zone.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-zone.Position = UDim2.new(0.27631148, 0, 0.7704392526, 0)
-zone.Size = UDim2.new(0, 150, 0, 25)
-zone.Font = Enum.Font.SourceSans
-zone.Text = "Tp Zone"
-zone.TextColor3 = Color3.fromRGB(0, 0, 0)
-zone.TextSize = 18.000
-UIload.Parent = zone
-zone.MouseButton1Down:connect(function()
-local CFrameEnd = CFrame.new(-287, 306, 595) -- Place your coords in here
-local Time = 0 -- Time in seconds
-local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd})
-tween:Play()
 end)
-
-end
-
-if game.PlaceId == 7449423635 then -- sea3
-sea.Text = "Blox Fruit | Sea 3"
-
-zone.Name = "zone"
-zone.Parent = barr1
-zone.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-zone.Position = UDim2.new(0.27631148, 0, 0.7704392526, 0)
-zone.Size = UDim2.new(0, 150, 0, 25)
-zone.Font = Enum.Font.SourceSans
-zone.Text = "Tp Zone"
-zone.TextColor3 = Color3.fromRGB(0, 0, 0)
-zone.TextSize = 18.000
-UIload.Parent = zone
-zone.MouseButton1Down:connect(function()
-local CFrameEnd = CFrame.new(5745.9, 612.2, -286.3) -- Place your coords in here
-local Time = 0 -- Time in seconds
-local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd})
-tween:Play()
 end)
-
-end
-
-
 
 --tp gui1
 
