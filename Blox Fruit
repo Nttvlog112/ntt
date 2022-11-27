@@ -102,6 +102,20 @@ local bm6 = Instance.new("TextButton")
 local bm7 = Instance.new("TextButton")
 local bm8 = Instance.new("TextButton")
 
+local barm2 = Instance.new("Frame")
+local bare1 = Instance.new("Frame")
+local bare2 = Instance.new("Frame")
+local bare3 = Instance.new("Frame")
+local texte1 = Instance.new("TextLabel")
+local texte2 = Instance.new("TextLabel")
+local texte3 = Instance.new("TextLabel")
+local be1 = Instance.new("TextButton")
+local be2 = Instance.new("TextButton")
+local be3 = Instance.new("TextButton")
+local be4 = Instance.new("TextButton")
+local be5 = Instance.new("TextButton")
+local be6 = Instance.new("TextButton")
+
 --auto1
 local a1 = Instance.new("Frame")
 local a2 = Instance.new("Frame")
@@ -1908,53 +1922,31 @@ bm2.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
 bm2.Position = UDim2.new(0, 0, 0.1004392526, 0)
 bm2.Size = UDim2.new(0, 498, 0, 30)
 bm2.Font = Enum.Font.SourceSans
-bm2.Text = "Tắt | Hix Box Quái"
+bm2.Text = "Mở | Esp Gui"
 bm2.TextColor3 = Color3.fromRGB(255, 255, 255)
 bm2.TextSize = 18.000
 UIbm2.Parent = bm2
 bm2.MouseButton1Down:connect(function()
 bm2.Visible = false
 bm1.Visible = true
-_G.mod = false
+barm2.Visible = true
 
-game:GetService('RunService').RenderStepped:connect(function()
-if _G.mod then
-
-end
 end)
-for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-      v.HumanoidRootPart.Size = Vector3.new(2, 2, 2)
-      v.HumanoidRootPart.Transparency = 1
-			v.HumanoidRootPart.Color = Color3.new("Really White")
-			v.HumanoidRootPart.CanCollide = true
-			end
-end)
-
+bm1.Visible = false
 bm1.Name = "bm1"
 bm1.Parent = scriptspage2
 bm1.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
 bm1.Position = UDim2.new(0, 0, 0.1004392526, 0)
 bm1.Size = UDim2.new(0, 498, 0, 30)
 bm1.Font = Enum.Font.SourceSans
-bm1.Text = "Bật | Hix Box Quái"
+bm1.Text = "Đóng | Esp Gui"
 bm1.TextColor3 = Color3.fromRGB(255, 255, 255)
 bm1.TextSize = 18.000
 UIbm1.Parent = bm1
 bm1.MouseButton1Down:connect(function()
 bm1.Visible = false
 bm2.Visible = true
-_G.mod = true
-
-game:GetService('RunService').RenderStepped:connect(function()
-if _G.mod then
-for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-      v.HumanoidRootPart.Size = Vector3.new(30, 30, 30)
-      v.HumanoidRootPart.Transparency = 0.9
-			v.HumanoidRootPart.Color = Color3.new("Really White")
-			v.HumanoidRootPart.CanCollide = true
-		end
-end
-end)
+barm2.Visible = false
 end)
 
 --inventory
@@ -2104,6 +2096,343 @@ if codebox.Text == "bountyhunt" then
 bbon.Visible = true
 end
 end)
+
+--bar esp
+barm2.Name = "barm2"
+barm2.Parent = scriptspage2
+barm2.Active = true
+barm2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+barm2.Position = UDim2.new(0, 0, 0.1704392526, 0)
+barm2.Size = UDim2.new(0, 498, 0, 120)
+barm2.Visible = false
+
+--esp gui
+bare1.Name = "bare1"
+bare1.Parent = barm2
+bare1.Active = true
+bare1.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+bare1.Position = UDim2.new(0, 0, 0.0604392526, 0)
+bare1.Size = UDim2.new(0, 498, 0, 30)
+
+bare2.Name = "bare2"
+bare2.Parent = barm2
+bare2.Active = true
+bare2.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+bare2.Position = UDim2.new(0, 0, 0.3904392526, 0)
+bare2.Size = UDim2.new(0, 498, 0, 30)
+
+bare3.Name = "bare3"
+bare3.Parent = barm2
+bare3.Active = true
+bare3.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+bare3.Position = UDim2.new(0, 0, 0.7204392526, 0)
+bare3.Size = UDim2.new(0, 498, 0, 30)
+
+--player
+texte1.Parent = bare1
+texte1.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+texte1.BackgroundTransparency = 1.000
+texte1.Position = UDim2.new(0, 0, 0, 0)
+texte1.Size = UDim2.new(0, 200, 0, 30)
+texte1.Font = Enum.Font.Ubuntu
+texte1.Text = "   Esp Player"
+texte1.TextColor3 = Color3.fromRGB(255, 255, 255)
+texte1.TextSize = 14.000
+texte1.TextWrapped = true
+texte1.TextXAlignment = Enum.TextXAlignment.Left
+
+be1.Name = "be1"
+be1.Parent = bare1
+be1.BackgroundColor3 = Color3.fromRGB(0, 250, 60)
+be1.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+be1.Size = UDim2.new(0, 20, 0, 20)
+be1.Font = Enum.Font.SourceSans
+be1.Text = ""
+be1.TextColor3 = Color3.fromRGB(255, 255, 255)
+be1.TextSize = 18.000
+be1.MouseButton1Down:connect(function()
+be1.Visible = false
+be2.Visible = true
+_G.e1 = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.e1 then
+-- script
+end
+
+end)
+pcall(function()
+       for i,v in pairs(game.Players:GetChildren()) do
+            if not v.Character.Head:FindFirstChild("ESP") then
+                local BillboardGui = Instance.new("BillboardGui")
+                local TextLabel = Instance.new("TextLabel")
+                BillboardGui.Parent = v.Character.Head
+                BillboardGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+                BillboardGui.Active = true
+                BillboardGui.Name = "ESP"
+                BillboardGui.AlwaysOnTop = true
+                BillboardGui.LightInfluence = 1.000
+                BillboardGui.Size = UDim2.new(0, 100, 0, 50)
+                BillboardGui.StudsOffset = Vector3.new(0, 2.5, 0)
+                TextLabel.Parent = BillboardGui
+                TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+                TextLabel.BackgroundTransparency = 1.000
+                TextLabel.Size = UDim2.new(0, 100, 0, 50)
+                TextLabel.Font = Enum.Font.GothamBold
+                TextLabel.Text = v.Name
+                TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+               
+                TextLabel.TextSize = 0.000
+                TextLabel.TextStrokeTransparency = 0.000
+                
+            end
+        end
+    end) 
+end)
+
+be2.Name = "be2"
+be2.Parent = bare1
+be2.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+be2.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+be2.Size = UDim2.new(0, 20, 0, 20)
+be2.Font = Enum.Font.SourceSans
+be2.Text = ""
+be2.TextColor3 = Color3.fromRGB(255, 255, 255)
+be2.TextSize = 18.000
+be2.MouseButton1Down:connect(function()
+be2.Visible = false
+be1.Visible = true
+_G.e1 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.e1 then
+-- script
+pcall(function()
+       for i,v in pairs(game.Players:GetChildren()) do
+            if not v.Character.Head:FindFirstChild("ESP") then
+                local BillboardGui = Instance.new("BillboardGui")
+                local TextLabel = Instance.new("TextLabel")
+                BillboardGui.Parent = v.Character.Head
+                BillboardGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+                BillboardGui.Active = true
+                BillboardGui.Name = "ESP"
+                BillboardGui.AlwaysOnTop = true
+                BillboardGui.LightInfluence = 1.000
+                BillboardGui.Size = UDim2.new(0, 100, 0, 50)
+                BillboardGui.StudsOffset = Vector3.new(0, 2.5, 0)
+                TextLabel.Parent = BillboardGui
+                TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+                TextLabel.BackgroundTransparency = 1.000
+                TextLabel.Size = UDim2.new(0, 100, 0, 50)
+                TextLabel.Font = Enum.Font.GothamBold
+                TextLabel.Text = v.Name
+                TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+                
+                TextLabel.TextSize = 14.000
+                TextLabel.TextStrokeTransparency = 0.000
+                
+            end
+        end
+    end) 
+end
+
+end)
+end)
+
+
+--fruit
+texte2.Parent = bare2
+texte2.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+texte2.BackgroundTransparency = 1.000
+texte2.Position = UDim2.new(0, 0, 0, 0)
+texte2.Size = UDim2.new(0, 200, 0, 30)
+texte2.Font = Enum.Font.Ubuntu
+texte2.Text = "   Esp Fruit"
+texte2.TextColor3 = Color3.fromRGB(255, 255, 255)
+texte2.TextSize = 14.000
+texte2.TextWrapped = true
+texte2.TextXAlignment = Enum.TextXAlignment.Left
+
+be3.Name = "be3"
+be3.Parent = bare2
+be3.BackgroundColor3 = Color3.fromRGB(0, 250, 60)
+be3.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+be3.Size = UDim2.new(0, 20, 0, 20)
+be3.Font = Enum.Font.SourceSans
+be3.Text = ""
+be3.TextColor3 = Color3.fromRGB(255, 255, 255)
+be3.TextSize = 18.000
+be3.MouseButton1Down:connect(function()
+be3.Visible = false
+be4.Visible = true
+_G.e2 = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.e2 then
+-- script
+end
+
+end)
+for _,v in pairs (workspace:GetChildren()) do
+		if v.Name:match('Fruit') and not v:IsA('Folder') and (v:IsA("Model") or v:IsA("Part")) then
+			local BillboardGui = Instance.new("BillboardGui")
+        	local TextLabel = Instance.new("TextLabel")
+	        BillboardGui.Parent = v
+	        BillboardGui.AlwaysOnTop = true
+	        BillboardGui.LightInfluence = 1
+	        BillboardGui.Size = UDim2.new(0, 25, 0, 25)
+	        BillboardGui.StudsOffset = Vector3.new(0, 2, 0)
+	        TextLabel.Parent = BillboardGui
+	        TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+	        TextLabel.BackgroundTransparency = 1
+	        TextLabel.Size = UDim2.new(2, 0, 2, 0)
+	        TextLabel.TextSize = 0.000
+	        TextLabel.Text = v.Name
+	        TextLabel.TextColor3 = Color3.new(105, 0, 171)
+			TextLabel.Font = "SourceSans"
+        end
+    end
+end)
+
+be4.Name = "be4"
+be4.Parent = bare2
+be4.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+be4.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+be4.Size = UDim2.new(0, 20, 0, 20)
+be4.Font = Enum.Font.SourceSans
+be4.Text = ""
+be4.TextColor3 = Color3.fromRGB(255, 255, 255)
+be4.TextSize = 18.000
+be4.MouseButton1Down:connect(function()
+be4.Visible = false
+be3.Visible = true
+_G.e2 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.e2 then
+-- script
+for _,v in pairs (workspace:GetChildren()) do
+		if v.Name:match('Fruit') and not v:IsA('Folder') and (v:IsA("Model") or v:IsA("Part")) then
+			local BillboardGui = Instance.new("BillboardGui")
+        	local TextLabel = Instance.new("TextLabel")
+	        BillboardGui.Parent = v
+	        BillboardGui.AlwaysOnTop = true
+	        BillboardGui.LightInfluence = 1
+	        BillboardGui.Size = UDim2.new(0, 25, 0, 25)
+	        BillboardGui.StudsOffset = Vector3.new(0, 2, 0)
+	        TextLabel.Parent = BillboardGui
+	        TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+	        TextLabel.BackgroundTransparency = 1
+	        TextLabel.Size = UDim2.new(2, 0, 2, 0)
+	        TextLabel.TextSize = 20.000
+	        TextLabel.Text = v.Name
+	        TextLabel.TextColor3 = Color3.new(105, 0, 171)
+			TextLabel.Font = "SourceSans"
+        end
+    end
+end
+
+end)
+end)
+
+
+--lower
+texte3.Parent = bare3
+texte3.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+texte3.BackgroundTransparency = 1.000
+texte3.Position = UDim2.new(0, 0, 0, 0)
+texte3.Size = UDim2.new(0, 200, 0, 30)
+texte3.Font = Enum.Font.Ubuntu
+texte3.Text = "   Esp Flower"
+texte3.TextColor3 = Color3.fromRGB(255, 255, 255)
+texte3.TextSize = 14.000
+texte3.TextWrapped = true
+texte3.TextXAlignment = Enum.TextXAlignment.Left
+
+be5.Name = "be5"
+be5.Parent = bare3
+be5.BackgroundColor3 = Color3.fromRGB(0, 250, 60)
+be5.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+be5.Size = UDim2.new(0, 20, 0, 20)
+be5.Font = Enum.Font.SourceSans
+be5.Text = ""
+be5.TextColor3 = Color3.fromRGB(255, 255, 255)
+be5.TextSize = 18.000
+be5.MouseButton1Down:connect(function()
+be5.Visible = false
+be6.Visible = true
+_G.e3 = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.e3 then
+-- script
+end
+
+end)
+for _,v in pairs (workspace:GetChildren()) do
+		if v.Name:match('Flower') then
+		    local BillboardGui = Instance.new("BillboardGui")
+	        local TextLabel = Instance.new("TextLabel")
+	        BillboardGui.Parent = v
+	        BillboardGui.AlwaysOnTop = true
+	        BillboardGui.LightInfluence = 1
+	        BillboardGui.Size = UDim2.new(0, 25, 0, 25)
+	        BillboardGui.StudsOffset = Vector3.new(0, 2, 0)
+	        TextLabel.Parent = BillboardGui
+	        TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+	        TextLabel.BackgroundTransparency = 1
+	        TextLabel.Size = UDim2.new(2, 0, 2, 0)
+	        TextLabel.TextSize = 0.000
+	        TextLabel.Text = v.Name
+			TextLabel.Font = "SourceSans"
+			TextLabel.TextColor3 = Color3.fromRGB(255, 171, 254)
+		end
+    end
+
+end)
+
+be6.Name = "be6"
+be6.Parent = bare3
+be6.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+be6.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+be6.Size = UDim2.new(0, 20, 0, 20)
+be6.Font = Enum.Font.SourceSans
+be6.Text = ""
+be6.TextColor3 = Color3.fromRGB(255, 255, 255)
+be6.TextSize = 18.000
+be6.MouseButton1Down:connect(function()
+be6.Visible = false
+be5.Visible = true
+_G.e3 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.e3 then
+-- script
+for _,v in pairs (workspace:GetChildren()) do
+		if v.Name:match('Flower') then
+		    local BillboardGui = Instance.new("BillboardGui")
+	        local TextLabel = Instance.new("TextLabel")
+	        BillboardGui.Parent = v
+	        BillboardGui.AlwaysOnTop = true
+	        BillboardGui.LightInfluence = 1
+	        BillboardGui.Size = UDim2.new(0, 25, 0, 25)
+	        BillboardGui.StudsOffset = Vector3.new(0, 2, 0)
+	        TextLabel.Parent = BillboardGui
+	        TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+	        TextLabel.BackgroundTransparency = 1
+	        TextLabel.Size = UDim2.new(2, 0, 2, 0)
+	        TextLabel.TextSize = 20.000
+	        TextLabel.Text = v.Name
+			TextLabel.Font = "SourceSans"
+			TextLabel.TextColor3 = Color3.fromRGB(255, 171, 254)
+		end
+    end
+
+end
+
+end)
+end)
+
 
 
 
