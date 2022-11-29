@@ -31,9 +31,9 @@ exit.TextColor3 = Color3.fromRGB(250, 255, 250)
 exit.TextSize = 20.000
 UIexit.Parent = exit
 exit.MouseButton1Down:connect(function()
-game.CoreGui.ScreenGUI.main.Visible = false
-game.CoreGui.ScreenGUI.exit.Visible = false
-game.CoreGui.ScreenGUI.open.Visible = true
+main.Visible = false
+exit.Visible = false
+open.Visible = true
 end)
 
 open.Name = "open"
@@ -48,9 +48,9 @@ open.TextColor3 = Color3.fromRGB(250, 255, 250)
 open.TextSize = 20.000
 UIopen.Parent = open
 open.MouseButton1Down:connect(function()
-game.CoreGui.ScreenGUI.main.Visible = true
-game.CoreGui.ScreenGUI.open.Visible = false
-game.CoreGui.ScreenGUI.exit.Visible = true
+main.Visible = true
+open.Visible = false
+exit.Visible = true
 end)
 
 main.Name = "main"
