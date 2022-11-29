@@ -1,3 +1,5 @@
+if game.PlaceId == 4442272183 or game.PlaceId == 7449423635 or game.PlaceId == 2753915549 then -- Blox Fruit
+
 local UIGUI = Instance.new("ScreenGui")
 local b1 = Instance.new("TextButton")
 local b2 = Instance.new("TextButton")
@@ -60,6 +62,7 @@ main.Position = UDim2.new(0.358126051, 0, 0.258999169, 0)
 main.Size = UDim2.new(0, 220, 0, 120)
 main.Active = true
 main.Draggable = true
+main.Visible = false
 
 bar.Name = "bar"
 bar.Parent = main
@@ -147,6 +150,8 @@ b3.TextColor3 = Color3.fromRGB(0, 0, 0)
 b3.TextSize = 18.000
 UI3.Parent = b3
 b3.MouseButton1Down:connect(function()
+b3.Text = "Đang Đỏi Sever"
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Svv')))()
 end)
 
+end
