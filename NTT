@@ -5,6 +5,7 @@ local bars = Instance.new("Frame")
 local bars1 = Instance.new("Frame")
 local text2 = Instance.new("TextLabel")
 local text4 = Instance.new("TextLabel")
+local tkey = Instance.new("TextLabel")
 local textkey = Instance.new("TextLabel")
 local keybox = Instance.new("TextBox")
 local bar1 = Instance.new("Frame")
@@ -120,7 +121,86 @@ keyget.TextSize = 18.000
 UIkeyget.Parent = keyget
 keyget.MouseButton1Down:connect(function()
 setclipboard("https://link1s.com/P1Fc")
+keyget.Visible = false
+keybox.Visible = false
+checkkey.Visible = false
+
+tkey.Visible = true
+wait(0.1)
+tkey.Text = "T"
+wait(0.1)
+tkey.Text = "Th"
+wait(0.1)
+tkey.Text = "The"
+wait(0.1)
+tkey.Text = "The l"
+wait(0.1)
+tkey.Text = "The li"
+wait(0.1)
+tkey.Text = "The lin"
+wait(0.1)
+tkey.Text = "The link"
+wait(0.1)
+tkey.Text = "The link t"
+wait(0.1)
+tkey.Text = "The link to"
+wait(0.1)
+tkey.Text = "The link to g"
+wait(0.1)
+tkey.Text = "The link to ge"
+wait(0.1)
+tkey.Text = "The link to get"
+wait(0.1)
+tkey.Text = "The link to get t"
+wait(0.1)
+tkey.Text = "The link to get th"
+wait(0.1)
+tkey.Text = "The link to get the"
+wait(0.1)
+tkey.Text = "The link to get the k"
+wait(0.1)
+tkey.Text = "The link to get the ke"
+wait(0.1)
+tkey.Text = "The link to get the key"
+wait(0.1)
+tkey.Text = "The link to get the key h"
+wait(0.1)
+tkey.Text = "The link to get the key ha"
+wait(0.1)
+tkey.Text = "The link to get the key has"
+wait(0.1)
+tkey.Text = "The link to get the key has b"
+wait(0.1)
+tkey.Text = "The link to get the key has be"
+wait(0.1)
+tkey.Text = "The link to get the key has bee"
+wait(0.1)
+tkey.Text = "The link to get the key has been"
+wait(0.1)
+tkey.Text = "The link to get the key has been c"
+wait(0.1)
+tkey.Text = "The link to get the key has been co"
+wait(0.1)
+tkey.Text = "The link to get the key has been cop"
+wait(0.1)
+tkey.Text = "The link to get the key has been copi"
+wait(0.1)
+tkey.Text = "The link to get the key has been copie"
+wait(0.1)
+tkey.Text = "The link to get the key has been copied"
 end)
+
+tkey.Parent = keybar
+tkey.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+tkey.BackgroundTransparency = 1.000
+tkey.Position = UDim2.new(0.24631148, 0, 0.3704392526, 0)
+tkey.Size = UDim2.new(0, 170, 0, 70)
+tkey.Font = Enum.Font.Ubuntu
+tkey.Text = ""
+tkey.TextColor3 = Color3.fromRGB(255, 255, 255)
+tkey.TextSize = 18.000
+tkey.TextWrapped = true
+tkey.Visible = false
 
 --end key
 
