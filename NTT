@@ -101,7 +101,7 @@ checkkey.TextColor3 = Color3.fromRGB(250, 250, 250)
 checkkey.TextSize = 18.000
 UIkey.Parent = checkkey
 checkkey.MouseButton1Down:connect(function()
-if keybox.Text == "1234" then
+if keybox.Text == "cee631121c2ec9232f3a2f28ad5c89b" then
 keybar.Visible = false
 bar1.Visible = true
 end
@@ -119,7 +119,7 @@ keyget.TextColor3 = Color3.fromRGB(0, 250, 250)
 keyget.TextSize = 18.000
 UIkeyget.Parent = keyget
 keyget.MouseButton1Down:connect(function()
-setclipboard("Có Con Cặc Nha Có Cái Đầu Buồi")
+setclipboard("https://link1s.com/P1Fc")
 end)
 
 --end key
