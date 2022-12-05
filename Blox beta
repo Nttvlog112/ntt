@@ -4354,7 +4354,3 @@ end
      Setting:Button("Destroy Gui",function()
         Library:Destroy()
      end)
-for i  = 0 , math.huge do wait()
-    
-      
-end
