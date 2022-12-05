@@ -1,3 +1,4 @@
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Fly')))()
 local S = Instance.new("ScreenGui")
 local L = Instance.new("Frame")
 local open = Instance.new("TextButton")
@@ -78,11 +79,29 @@ T.BorderColor3 = Color3.fromRGB(250, 250, 250)
 T.Position = UDim2.new(0.046875, 0, 0.551724136, 0)
 T.Size = UDim2.new(0, 289, 0, 50)
 T.Font = Enum.Font.Gotham
-T.Text = "Coppy X, Y, Z"
+T.Text = "Esp Chest"
 T.TextColor3 = Color3.fromRGB(255, 255, 255)
 T.TextSize = 15.000
 T.MouseButton1Click:connect(function()
-setclipboard("X.Text, Y.Text, Z.Text")
+for _,v in pairs (workspace:GetChildren()) do
+		if v.Name:match('Chest') then
+		    local BillboardGui = Instance.new("BillboardGui")
+	        local TextLabel = Instance.new("TextLabel")
+	        BillboardGui.Parent = v
+	        BillboardGui.AlwaysOnTop = true
+	        BillboardGui.LightInfluence = 1
+	        BillboardGui.Size = UDim2.new(0, 25, 0, 25)
+	        BillboardGui.StudsOffset = Vector3.new(0, 2, 0)
+	        TextLabel.Parent = BillboardGui
+	        TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+	        TextLabel.BackgroundTransparency = 1
+	        TextLabel.Size = UDim2.new(2, 0, 2, 0)
+	        TextLabel.Text = v.Name
+	        TextLabel.TextScaled = true
+			TextLabel.Font = "SourceSans"
+			TextLabel.TextColor3 = Color3.fromRGB(255, 127, 80)
+		end
+    end
 end)
 
 X.Name = "X"
