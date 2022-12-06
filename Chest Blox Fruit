@@ -284,6 +284,57 @@ local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.C
 tween:Play()
 wait(2)
 
+--tp6
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+_G.tp5 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp5 then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart 
+
+local location = CFrame.new(2399,26,-6387) 
+
+local humanoid = game.Players.LocalPlayer.Character.Humanoid 
+
+pl.CFrame = location
+end
+end)
+wait(5)
+_G.tp5 = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp5 then
+end
+end)
+wait(3)
+
+--star
+local Time = 6-- Time in seconds
+local CFrameEnd = CFrame.new(2499,191,-7135) -- Place your coords in here
+local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd})
+tween:Play()
+wait(7)
+local Time = 2-- Time in seconds
+local CFrameEnd = CFrame.new(2721,433,-7095) -- Place your coords in here
+local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd})
+tween:Play()
+wait(3)
+local Time = 3-- Time in seconds
+local CFrameEnd = CFrame.new(2955,457,-7490) -- Place your coords in here
+local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd})
+tween:Play()
+wait(4)
+local Time = 2-- Time in seconds
+local CFrameEnd = CFrame.new(2789,116,-7664) -- Place your coords in here
+local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd})
+tween:Play()
+wait(3)
+local Time = 2-- Time in seconds
+local CFrameEnd = CFrame.new(2839,168,-8024) -- Place your coords in here
+local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd})
+tween:Play()
+wait(3)
+
 --tp5
 game.Players.LocalPlayer.Character.Humanoid.Health = 0
 _G.tp4 = true
@@ -336,57 +387,6 @@ tween:Play()
 wait(3)
 local Time = 2-- Time in seconds
 local CFrameEnd = CFrame.new(-1827,38,-10548) -- Place your coords in here
-local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd})
-tween:Play()
-wait(3)
-
---tp6
-game.Players.LocalPlayer.Character.Humanoid.Health = 0
-_G.tp5 = true
-
-game:GetService('RunService').RenderStepped:connect(function()
-if _G.tp5 then
-local pl = game.Players.LocalPlayer.Character.HumanoidRootPart 
-
-local location = CFrame.new(2399,26,-6387) 
-
-local humanoid = game.Players.LocalPlayer.Character.Humanoid 
-
-pl.CFrame = location
-end
-end)
-wait(5)
-_G.tp5 = false
-
-game:GetService('RunService').RenderStepped:connect(function()
-if _G.tp5 then
-end
-end)
-wait(3)
-
---star
-local Time = 6-- Time in seconds
-local CFrameEnd = CFrame.new(2499,191,-7135) -- Place your coords in here
-local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd})
-tween:Play()
-wait(7)
-local Time = 2-- Time in seconds
-local CFrameEnd = CFrame.new(2721,433,-7095) -- Place your coords in here
-local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd})
-tween:Play()
-wait(3)
-local Time = 3-- Time in seconds
-local CFrameEnd = CFrame.new(2955,457,-7490) -- Place your coords in here
-local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd})
-tween:Play()
-wait(4)
-local Time = 2-- Time in seconds
-local CFrameEnd = CFrame.new(2789,116,-7664) -- Place your coords in here
-local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd})
-tween:Play()
-wait(3)
-local Time = 2-- Time in seconds
-local CFrameEnd = CFrame.new(2839,168,-8024) -- Place your coords in here
 local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd})
 tween:Play()
 wait(3)
