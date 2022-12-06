@@ -283,6 +283,11 @@ local CFrameEnd = CFrame.new(-9497,3457,6708) -- Place your coords in here
 local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd})
 tween:Play()
 wait(2)
+local CFrameEnd = CFrame.new(5743,612,-284) -- Place your coords in here
+local Time = 1-- Time in seconds
+local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd})
+tween:Play()
+wait(3.5)
 
 --tp6
 game.Players.LocalPlayer.Character.Humanoid.Health = 0
