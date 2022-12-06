@@ -1,4 +1,4 @@
-game.Players.LocalPlayer.Character.Humanoid.Health = 2
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
 _G.tp1 = true
 
 game:GetService('RunService').RenderStepped:connect(function()
@@ -40,7 +40,7 @@ local Time = 2-- Time in seconds
 local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd})
 tween:Play()
 wait(3)
-game.Players.LocalPlayer.Character.Humanoid.Health = 2
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
 _G.tp2 = true
 
 game:GetService('RunService').RenderStepped:connect(function()
@@ -200,7 +200,7 @@ local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.C
 tween:Play()
 
 --tp4
-game.Players.LocalPlayer.Character.Humanoid.Health = 2
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
 _G.tp3 = true
 
 game:GetService('RunService').RenderStepped:connect(function()
