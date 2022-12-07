@@ -112,6 +112,8 @@ b2.Text = "Vui Lòng Đợi 10 Phút"
 --star script
 
 
+
+
 local CFrameEnd = CFrame.new(5743,612,-284) -- Place your coords in here
 local Time = 1-- Time in seconds
 local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd})
