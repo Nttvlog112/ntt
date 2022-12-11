@@ -4,6 +4,9 @@ end
 if game.PlaceId == 1537690962 then --beespawn 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/arktzyt/test/main/DarkCyber2.0"))()
 end
+if game.PlaceId == 1240123653 then --zombie atack 
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Zombie%20atack')))()
+end
 if game.PlaceId == 4787629450 then --booga booga
 	loadstring(game:HttpGet("https://pastebin.com/raw/kFe5xATU", true))()
 end
