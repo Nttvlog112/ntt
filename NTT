@@ -102,7 +102,7 @@ checkkey.TextColor3 = Color3.fromRGB(250, 250, 250)
 checkkey.TextSize = 18.000
 UIkey.Parent = checkkey
 checkkey.MouseButton1Down:connect(function()
-if keybox.Text == "233505087524tg36" then
+if keybox.Text == "A1256" then
 keybar.Visible = false
 bar1.Visible = true
 end
