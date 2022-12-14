@@ -4266,7 +4266,7 @@ local win = VLib:Window("NTT HUB", "Blox Fruit", Color3.fromRGB(252, 83, 83))
          end)
        end
        local Setting = win:Tab("Setting", "http://www.roblox.com/asset/?id=6023426915")
-       Setting:Label("Credit | MagmaHub")
+       Setting:Label("Credit | Nguyễn Thanh Thảo")
        Setting:Button("Rejoin",function()
           local ts = game:GetService("TeleportService")
           local p = game:GetService("Players").LocalPlayer
@@ -4349,10 +4349,11 @@ local win = VLib:Window("NTT HUB", "Blox Fruit", Color3.fromRGB(252, 83, 83))
 
           Teleport()
       end)
-     Setting:line(
-     Setting:Button("",function()
-        
+     Setting:line()
+     Setting:Button("Copy link FaceBook",function()
+        setclipboard("")
      end)
      Setting:Button("Destroy Gui",function()
         Library:Destroy()
      end)
+
