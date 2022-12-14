@@ -117,6 +117,11 @@ local be5 = Instance.new("TextButton")
 local be6 = Instance.new("TextButton")
 
 --auto1
+local tool = Instance.new("TextButton")
+local bartool = Instance.new("Frame")
+local it1 = Instance.new("TextButton")
+local it2 = Instance.new("TextButton")
+local it3 = Instance.new("TextButton")
 local a1 = Instance.new("Frame")
 local ta1 = Instance.new("TextButton")
 local a2 = Instance.new("Frame")
@@ -197,6 +202,7 @@ local UIa8 = Instance.new("UICorner")
 local UIa9 = Instance.new("UICorner")
 local UIa10 = Instance.new("UICorner")
 local UIa11 = Instance.new("UICorner")
+local UItool = Instance.new("UICorner")
 
 --main
 
@@ -1910,567 +1916,33 @@ end)
 
 --miss2
 
---player
-code1.Name = "code1"
-code1.Parent = scriptspage2
-code1.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-code1.Position = UDim2.new(0, 0, 0.0304392526, 0)
-code1.Size = UDim2.new(0, 498, 0, 30)
-code1.Font = Enum.Font.SourceSans
-code1.Text = "Đóng | Code Gui"
-code1.TextColor3 = Color3.fromRGB(255, 255, 255)
-code1.TextSize = 18.000
-UIcode1.Parent = code1
-code1.MouseButton1Down:connect(function()
-barm1.Visible = false
-code1.Visible = false
-code2.Visible = true
-end)
-
-code2.Name = "code2"
-code2.Parent = scriptspage2
-code2.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-code2.Position = UDim2.new(0, 0, 0.0304392526, 0)
-code2.Size = UDim2.new(0, 498, 0, 30)
-code2.Font = Enum.Font.SourceSans
-code2.Text = "Mở | Code Gui"
-code2.TextColor3 = Color3.fromRGB(255, 255, 255)
-code2.TextSize = 18.000
-UIcode2.Parent = code2
-code2.MouseButton1Down:connect(function()
-barm1.Visible = true
-code2.Visible = false
-code1.Visible = true
-end)
-
-bm2.Name = "bm2"
-bm2.Parent = scriptspage2
-bm2.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-bm2.Position = UDim2.new(0, 0, 0.1004392526, 0)
-bm2.Size = UDim2.new(0, 498, 0, 30)
-bm2.Font = Enum.Font.SourceSans
-bm2.Text = "Mở | Esp Gui"
-bm2.TextColor3 = Color3.fromRGB(255, 255, 255)
-bm2.TextSize = 18.000
-UIbm2.Parent = bm2
-bm2.MouseButton1Down:connect(function()
-bm2.Visible = false
-bm1.Visible = true
-barm2.Visible = true
-
-end)
-bm1.Visible = false
-bm1.Name = "bm1"
-bm1.Parent = scriptspage2
-bm1.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-bm1.Position = UDim2.new(0, 0, 0.1004392526, 0)
-bm1.Size = UDim2.new(0, 498, 0, 30)
-bm1.Font = Enum.Font.SourceSans
-bm1.Text = "Đóng | Esp Gui"
-bm1.TextColor3 = Color3.fromRGB(255, 255, 255)
-bm1.TextSize = 18.000
-UIbm1.Parent = bm1
-bm1.MouseButton1Down:connect(function()
-bm1.Visible = false
-bm2.Visible = true
-barm2.Visible = false
-end)
-
---inventory
-bm3.Name = "bm3"
-bm3.Parent = scriptspage2
-bm3.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-bm3.Position = UDim2.new(0, 0, 0.1704392526, 0)
-bm3.Size = UDim2.new(0, 498, 0, 30)
-bm3.Font = Enum.Font.SourceSans
-bm3.Text = "Camara Check Player"
-bm3.TextColor3 = Color3.fromRGB(255, 255, 255)
-bm3.TextSize = 18.000
-UIbm3.Parent = bm3
-bm3.MouseButton1Down:connect(function()
-loadstring(game:HttpGet(('https://pastebin.com/raw/qDPszDgV')))()
-end)
-
---inventory fruit
-bm4.Name = "bm4"
-bm4.Parent = scriptspage2
-bm4.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-bm4.Position = UDim2.new(0, 0, 0.2404392526, 0)
-bm4.Size = UDim2.new(0, 498, 0, 30)
-bm4.Font = Enum.Font.SourceSans
-bm4.Text = "Rương trái cây"
-bm4.TextColor3 = Color3.fromRGB(255, 255, 255)
-bm4.TextSize = 18.000
-UIbm4.Parent = bm4
-bm4.MouseButton1Down:connect(function()
-game.Players.localPlayer.PlayerGui.Main.FruitInventory.Visible = true
-end)
-
---random fruit
-bm5.Name = "bm5"
-bm5.Parent = scriptspage2
-bm5.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-bm5.Position = UDim2.new(0, 0, 0.3154392526, 0)
-bm5.Size = UDim2.new(0, 498, 0, 30)
-bm5.Font = Enum.Font.SourceSans
-bm5.Text = "Cửa hàng trái cây"
-bm5.TextColor3 = Color3.fromRGB(255, 255, 255)
-bm5.TextSize = 18.000
-UIbm5.Parent = bm5
-bm5.MouseButton1Down:connect(function()
-game.Players.localPlayer.PlayerGui.Main.FruitShop.Visible = true
-end)
-
---fly
-bm6.Name = "bm6"
-bm6.Parent = scriptspage2
-bm6.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-bm6.Position = UDim2.new(0, 0, 0.3804392526, 0)
-bm6.Size = UDim2.new(0, 498, 0, 30)
-bm6.Font = Enum.Font.SourceSans
-bm6.Text = "Fly"
-bm6.TextColor3 = Color3.fromRGB(255, 255, 255)
-bm6.TextSize = 18.000
-UIbm6.Parent = bm6
-bm6.MouseButton1Down:connect(function()
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Fly')))()
-end)
-
-bm7.Name = "bm7"
-bm7.Parent = scriptspage2
-bm7.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-bm7.Position = UDim2.new(0, 0, 0.4504392526, 0)
-bm7.Size = UDim2.new(0, 498, 0, 30)
-bm7.Font = Enum.Font.SourceSans
-bm7.Text = "Rejon"
-bm7.TextColor3 = Color3.fromRGB(255, 255, 255)
-bm7.TextSize = 18.000
-UIbm7.Parent = bm7
-bm7.MouseButton1Down:connect(function()
-local ts = game:GetService("TeleportService")
-          local p = game:GetService("Players").LocalPlayer
-          ts:Teleport(game.PlaceId, p)
-end)
-
-bm8.Name = "bm8"
-bm8.Parent = scriptspage2
-bm8.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-bm8.Position = UDim2.new(0, 0, 0.5204392526, 0)
-bm8.Size = UDim2.new(0, 498, 0, 30)
-bm8.Font = Enum.Font.SourceSans
-bm8.Text = "Sever Vip"
-bm8.TextColor3 = Color3.fromRGB(255, 255, 255)
-bm8.TextSize = 18.000
-UIbm8.Parent = bm8
-bm8.MouseButton1Down:connect(function()
-loadstring(game:HttpGet("https://pastebin.com/raw/q40eGpb8", true))()
-end)
-
---bar code
-barm1.Name = "barm1"
-barm1.Parent = scriptspage2
-barm1.Active = true
-barm1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-barm1.Position = UDim2.new(0, 0, 0.1004392526, 0)
-barm1.Size = UDim2.new(0, 498, 0, 120)
-barm1.Visible = false
-
---code gui
-codegui.Name = "codegui"
-codegui.Parent = barm1
-codegui.Active = true
-codegui.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-codegui.Position = UDim2.new(0, 0, 0.0604392526, 0)
-codegui.Size = UDim2.new(0, 498, 0, 30)
-UIcodegui.Parent = codegui
-
-codetext.Parent = codegui
-codetext.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-codetext.BackgroundTransparency = 1.000
-codetext.Position = UDim2.new(0, 0, 0, 0)
-codetext.Size = UDim2.new(0, 498, 0, 30)
-codetext.Font = Enum.Font.Ubuntu
-codetext.Text = "CODE GUI"
-codetext.TextColor3 = Color3.fromRGB(255, 255, 255)
-codetext.TextSize = 14.000
-codetext.TextWrapped = true
-
---nhập code
-codebox.Name = "codebox"
-codebox.Parent = barm1
-codebox.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
-codebox.Position = UDim2.new(0, 0, 0.3904392526, 0)
-codebox.Size = UDim2.new(0, 498, 0, 30)
-codebox.Font = Enum.Font.SourceSans
-codebox.Text = "Nhập Code"
-codebox.TextColor3 = Color3.fromRGB(0, 0, 0)
-codebox.TextSize = 18.000
-UIcodebox.Parent = codebox
-
---check code
-codecheck.Name = "codecheck"
-codecheck.Parent = barm1
-codecheck.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-codecheck.Position = UDim2.new(0, 0, 0.7204392526, 0)
-codecheck.Size = UDim2.new(0, 498, 0, 30)
-codecheck.Font = Enum.Font.SourceSans
-codecheck.Text = "Check Code"
-codecheck.TextColor3 = Color3.fromRGB(255, 255, 255)
-codecheck.TextSize = 18.000
-UIcodecheck.Parent = codecheck
-codecheck.MouseButton1Down:connect(function()
-if codebox.Text == "bountyhunt" then
-bbon.Visible = true
-end
-end)
-
---bar esp
-barm2.Name = "barm2"
-barm2.Parent = scriptspage2
-barm2.Active = true
-barm2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-barm2.Position = UDim2.new(0, 0, 0.1704392526, 0)
-barm2.Size = UDim2.new(0, 498, 0, 120)
-barm2.Visible = false
-
---esp gui
-bare1.Name = "bare1"
-bare1.Parent = barm2
-bare1.Active = true
-bare1.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-bare1.Position = UDim2.new(0, 0, 0.0604392526, 0)
-bare1.Size = UDim2.new(0, 498, 0, 30)
-
-bare2.Name = "bare2"
-bare2.Parent = barm2
-bare2.Active = true
-bare2.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-bare2.Position = UDim2.new(0, 0, 0.3904392526, 0)
-bare2.Size = UDim2.new(0, 498, 0, 30)
-
-bare3.Name = "bare3"
-bare3.Parent = barm2
-bare3.Active = true
-bare3.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-bare3.Position = UDim2.new(0, 0, 0.7204392526, 0)
-bare3.Size = UDim2.new(0, 498, 0, 30)
-
---player
-texte1.Parent = bare1
-texte1.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-texte1.BackgroundTransparency = 1.000
-texte1.Position = UDim2.new(0, 0, 0, 0)
-texte1.Size = UDim2.new(0, 200, 0, 30)
-texte1.Font = Enum.Font.Ubuntu
-texte1.Text = "   Esp Player"
-texte1.TextColor3 = Color3.fromRGB(255, 255, 255)
-texte1.TextSize = 14.000
-texte1.TextWrapped = true
-texte1.TextXAlignment = Enum.TextXAlignment.Left
-
-be1.Name = "be1"
-be1.Parent = bare1
-be1.BackgroundColor3 = Color3.fromRGB(0, 250, 60)
-be1.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
-be1.Size = UDim2.new(0, 20, 0, 20)
-be1.Font = Enum.Font.SourceSans
-be1.Text = ""
-be1.TextColor3 = Color3.fromRGB(255, 255, 255)
-be1.TextSize = 18.000
-be1.MouseButton1Down:connect(function()
-be1.Visible = false
-be2.Visible = true
-_G.e1 = false
-
-game:GetService('RunService').RenderStepped:connect(function()
-if _G.e1 then
--- script
-end
-
-end)
-pcall(function()
-       for i,v in pairs(game.Players:GetChildren()) do
-            if not v.Character.Head:FindFirstChild("ESP") then
-                local BillboardGui = Instance.new("BillboardGui")
-                local TextLabel = Instance.new("TextLabel")
-                BillboardGui.Parent = v.Character.Head
-                BillboardGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-                BillboardGui.Active = true
-                BillboardGui.Name = "ESP"
-                BillboardGui.AlwaysOnTop = true
-                BillboardGui.LightInfluence = 1.000
-                BillboardGui.Size = UDim2.new(0, 100, 0, 50)
-                BillboardGui.StudsOffset = Vector3.new(0, 2.5, 0)
-                TextLabel.Parent = BillboardGui
-                TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-                TextLabel.BackgroundTransparency = 1.000
-                TextLabel.Size = UDim2.new(0, 100, 0, 50)
-                TextLabel.Font = Enum.Font.GothamBold
-                TextLabel.Text = v.Name
-                TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-               
-                TextLabel.TextSize = 0.000
-                TextLabel.TextStrokeTransparency = 0.000
-                
-            end
-        end
-    end) 
-end)
-
-be2.Name = "be2"
-be2.Parent = bare1
-be2.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
-be2.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
-be2.Size = UDim2.new(0, 20, 0, 20)
-be2.Font = Enum.Font.SourceSans
-be2.Text = ""
-be2.TextColor3 = Color3.fromRGB(255, 255, 255)
-be2.TextSize = 18.000
-be2.MouseButton1Down:connect(function()
-be2.Visible = false
-be1.Visible = true
-_G.e1 = true
-
-game:GetService('RunService').RenderStepped:connect(function()
-if _G.e1 then
--- script
-pcall(function()
-       for i,v in pairs(game.Players:GetChildren()) do
-            if not v.Character.Head:FindFirstChild("ESP") then
-                local BillboardGui = Instance.new("BillboardGui")
-                local TextLabel = Instance.new("TextLabel")
-                BillboardGui.Parent = v.Character.Head
-                BillboardGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-                BillboardGui.Active = true
-                BillboardGui.Name = "ESP"
-                BillboardGui.AlwaysOnTop = true
-                BillboardGui.LightInfluence = 1.000
-                BillboardGui.Size = UDim2.new(0, 100, 0, 50)
-                BillboardGui.StudsOffset = Vector3.new(0, 2.5, 0)
-                TextLabel.Parent = BillboardGui
-                TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-                TextLabel.BackgroundTransparency = 1.000
-                TextLabel.Size = UDim2.new(0, 100, 0, 50)
-                TextLabel.Font = Enum.Font.GothamBold
-                TextLabel.Text = v.Name
-                TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-                
-                TextLabel.TextSize = 14.000
-                TextLabel.TextStrokeTransparency = 0.000
-                
-            end
-        end
-    end) 
-end
-
-end)
-end)
-
-
---fruit
-texte2.Parent = bare2
-texte2.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-texte2.BackgroundTransparency = 1.000
-texte2.Position = UDim2.new(0, 0, 0, 0)
-texte2.Size = UDim2.new(0, 200, 0, 30)
-texte2.Font = Enum.Font.Ubuntu
-texte2.Text = "   Esp Fruit"
-texte2.TextColor3 = Color3.fromRGB(255, 255, 255)
-texte2.TextSize = 14.000
-texte2.TextWrapped = true
-texte2.TextXAlignment = Enum.TextXAlignment.Left
-
-be3.Name = "be3"
-be3.Parent = bare2
-be3.BackgroundColor3 = Color3.fromRGB(0, 250, 60)
-be3.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
-be3.Size = UDim2.new(0, 20, 0, 20)
-be3.Font = Enum.Font.SourceSans
-be3.Text = ""
-be3.TextColor3 = Color3.fromRGB(255, 255, 255)
-be3.TextSize = 18.000
-be3.MouseButton1Down:connect(function()
-be3.Visible = false
-be4.Visible = true
-_G.e2 = false
-
-game:GetService('RunService').RenderStepped:connect(function()
-if _G.e2 then
--- script
-end
-
-end)
-for _,v in pairs (workspace:GetChildren()) do
-		if v.Name:match('Fruit') and not v:IsA('Folder') and (v:IsA("Model") or v:IsA("Part")) then
-			local BillboardGui = Instance.new("BillboardGui")
-        	local TextLabel = Instance.new("TextLabel")
-	        BillboardGui.Parent = v
-	        BillboardGui.AlwaysOnTop = true
-	        BillboardGui.LightInfluence = 1
-	        BillboardGui.Size = UDim2.new(0, 25, 0, 25)
-	        BillboardGui.StudsOffset = Vector3.new(0, 2, 0)
-	        TextLabel.Parent = BillboardGui
-	        TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
-	        TextLabel.BackgroundTransparency = 1
-	        TextLabel.Size = UDim2.new(2, 0, 2, 0)
-	        TextLabel.TextSize = 0.000
-	        TextLabel.Text = v.Name
-	        TextLabel.TextColor3 = Color3.new(105, 0, 171)
-			TextLabel.Font = "SourceSans"
-        end
-    end
-end)
-
-be4.Name = "be4"
-be4.Parent = bare2
-be4.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
-be4.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
-be4.Size = UDim2.new(0, 20, 0, 20)
-be4.Font = Enum.Font.SourceSans
-be4.Text = ""
-be4.TextColor3 = Color3.fromRGB(255, 255, 255)
-be4.TextSize = 18.000
-be4.MouseButton1Down:connect(function()
-be4.Visible = false
-be3.Visible = true
-_G.e2 = true
-
-game:GetService('RunService').RenderStepped:connect(function()
-if _G.e2 then
--- script
-for _,v in pairs (workspace:GetChildren()) do
-		if v.Name:match('Fruit') and not v:IsA('Folder') and (v:IsA("Model") or v:IsA("Part")) then
-			local BillboardGui = Instance.new("BillboardGui")
-        	local TextLabel = Instance.new("TextLabel")
-	        BillboardGui.Parent = v
-	        BillboardGui.AlwaysOnTop = true
-	        BillboardGui.LightInfluence = 1
-	        BillboardGui.Size = UDim2.new(0, 25, 0, 25)
-	        BillboardGui.StudsOffset = Vector3.new(0, 2, 0)
-	        TextLabel.Parent = BillboardGui
-	        TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
-	        TextLabel.BackgroundTransparency = 1
-	        TextLabel.Size = UDim2.new(2, 0, 2, 0)
-	        TextLabel.TextSize = 20.000
-	        TextLabel.Text = v.Name
-	        TextLabel.TextColor3 = Color3.new(105, 0, 171)
-			TextLabel.Font = "SourceSans"
-        end
-    end
-end
-
-end)
-end)
-
-
---lower
-texte3.Parent = bare3
-texte3.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-texte3.BackgroundTransparency = 1.000
-texte3.Position = UDim2.new(0, 0, 0, 0)
-texte3.Size = UDim2.new(0, 200, 0, 30)
-texte3.Font = Enum.Font.Ubuntu
-texte3.Text = "   Esp Flower"
-texte3.TextColor3 = Color3.fromRGB(255, 255, 255)
-texte3.TextSize = 14.000
-texte3.TextWrapped = true
-texte3.TextXAlignment = Enum.TextXAlignment.Left
-
-be5.Name = "be5"
-be5.Parent = bare3
-be5.BackgroundColor3 = Color3.fromRGB(0, 250, 60)
-be5.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
-be5.Size = UDim2.new(0, 20, 0, 20)
-be5.Font = Enum.Font.SourceSans
-be5.Text = ""
-be5.TextColor3 = Color3.fromRGB(255, 255, 255)
-be5.TextSize = 18.000
-be5.MouseButton1Down:connect(function()
-be5.Visible = false
-be6.Visible = true
-_G.e3 = false
-
-game:GetService('RunService').RenderStepped:connect(function()
-if _G.e3 then
--- script
-end
-
-end)
-for _,v in pairs (workspace:GetChildren()) do
-		if v.Name:match('Flower') then
-		    local BillboardGui = Instance.new("BillboardGui")
-	        local TextLabel = Instance.new("TextLabel")
-	        BillboardGui.Parent = v
-	        BillboardGui.AlwaysOnTop = true
-	        BillboardGui.LightInfluence = 1
-	        BillboardGui.Size = UDim2.new(0, 25, 0, 25)
-	        BillboardGui.StudsOffset = Vector3.new(0, 2, 0)
-	        TextLabel.Parent = BillboardGui
-	        TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
-	        TextLabel.BackgroundTransparency = 1
-	        TextLabel.Size = UDim2.new(2, 0, 2, 0)
-	        TextLabel.TextSize = 0.000
-	        TextLabel.Text = v.Name
-			TextLabel.Font = "SourceSans"
-			TextLabel.TextColor3 = Color3.fromRGB(255, 171, 254)
-		end
-    end
-
-end)
-
-be6.Name = "be6"
-be6.Parent = bare3
-be6.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
-be6.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
-be6.Size = UDim2.new(0, 20, 0, 20)
-be6.Font = Enum.Font.SourceSans
-be6.Text = ""
-be6.TextColor3 = Color3.fromRGB(255, 255, 255)
-be6.TextSize = 18.000
-be6.MouseButton1Down:connect(function()
-be6.Visible = false
-be5.Visible = true
-_G.e3 = true
-
-game:GetService('RunService').RenderStepped:connect(function()
-if _G.e3 then
--- script
-for _,v in pairs (workspace:GetChildren()) do
-		if v.Name:match('Flower') then
-		    local BillboardGui = Instance.new("BillboardGui")
-	        local TextLabel = Instance.new("TextLabel")
-	        BillboardGui.Parent = v
-	        BillboardGui.AlwaysOnTop = true
-	        BillboardGui.LightInfluence = 1
-	        BillboardGui.Size = UDim2.new(0, 25, 0, 25)
-	        BillboardGui.StudsOffset = Vector3.new(0, 2, 0)
-	        TextLabel.Parent = BillboardGui
-	        TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
-	        TextLabel.BackgroundTransparency = 1
-	        TextLabel.Size = UDim2.new(2, 0, 2, 0)
-	        TextLabel.TextSize = 20.000
-	        TextLabel.Text = v.Name
-			TextLabel.Font = "SourceSans"
-			TextLabel.TextColor3 = Color3.fromRGB(255, 171, 254)
-		end
-    end
-
-end
-
-end)
-end)
-
-
-
 
 
 --auto2
+--chọn mele
+tool.Name = "tool"
+tool.Parent = scriptspage3
+tool.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+tool.Position = UDim2.new(0, 0, 0.0304392526, 0)
+tool.Size = UDim2.new(0, 498, 0, 30)
+tool.Font = Enum.Font.SourceSans
+tool.Text = "Chọn Vật Phẩm Sử Dụng Fram"
+tool.TextColor3 = Color3.fromRGB(255, 255, 255)
+tool.TextSize = 18.000
+UItool.Parent = tool
+tool.MouseButton1Down:connect(function()
+bartool.Visible = true
+end)
+
+--code tool
+
+
 --auto boss
 a1.Name = "a1"
 a1.Parent = scriptspage3
 a1.Active = true
 a1.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
-a1.Position = UDim2.new(0, 0, 0.0304392526, 0)
+a1.Position = UDim2.new(0, 0, 0.1004392526, 0)
 a1.Size = UDim2.new(0, 498, 0, 30)
 UIa1.Parent = a1
 
@@ -2480,7 +1952,7 @@ ta1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 ta1.Position = UDim2.new(0.01662296, 0, 0, 0)
 ta1.Size = UDim2.new(0, 200, 0, 30)
 ta1.Font = Enum.Font.SourceSans
-ta1.Text = "chọn boss"
+ta1.Text = "Chọn Boss"
 ta1.TextColor3 = Color3.fromRGB(255, 255, 255)
 ta1.TextSize = 18.000
 ta1.MouseButton1Down:connect(function()
@@ -2492,9 +1964,9 @@ texta1.BackgroundTransparency = 1.000
 texta1.Position = UDim2.new(0.50662296, 0, 0.121392526, 0)
 texta1.Size = UDim2.new(0, 200, 0, 30)
 texta1.Font = Enum.Font.Ubuntu
-texta1.Text = "auto boss"
+texta1.Text = "Auto Boss"
 texta1.TextColor3 = Color3.fromRGB(255, 255, 255)
-texta1.TextSize = 14.000
+texta1.TextSize = 15.000
 texta1.TextWrapped = true
 
 ba1.Name = "ba1"
@@ -2526,6 +1998,118 @@ ba1.Visible = true
 if texta1.Text == "auto boss" then
 end
 end)
+
+a2.Name = "a2"
+a2.Parent = scriptspage3
+a2.Active = true
+a2.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+a2.Position = UDim2.new(0, 0, 0.1704392526, 0)
+a2.Size = UDim2.new(0, 498, 0, 30)
+UIa2.Parent = a2
+
+
+
+texta2.Parent = a2
+texta2.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+texta2.BackgroundTransparency = 1.000
+texta2.Position = UDim2.new(0, 0, 0, 0)
+texta2.Size = UDim2.new(0, 200, 0, 30)
+texta2.Font = Enum.Font.Ubuntu
+texta2.Text = "   Auto Chest"
+texta2.TextColor3 = Color3.fromRGB(255, 255, 255)
+texta2.TextSize = 14.000
+texta2.TextWrapped = true
+texta2.TextXAlignment = Enum.TextXAlignment.Left
+
+ba3.Name = "ba3"
+ba3.Parent = a2
+ba3.BackgroundColor3 = Color3.fromRGB(0, 250, 60)
+ba3.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+ba3.Size = UDim2.new(0, 20, 0, 20)
+ba3.Font = Enum.Font.SourceSans
+ba3.Text = ""
+ba3.TextColor3 = Color3.fromRGB(255, 255, 255)
+ba3.TextSize = 18.000
+ba3.MouseButton1Down:connect(function()
+ba3.Visible = false
+ba4.Visible = true
+-- dont cant stop
+
+end)
+
+ba4.Name = "ba4"
+ba4.Parent = a2
+ba4.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+ba4.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+ba4.Size = UDim2.new(0, 20, 0, 20)
+ba4.Font = Enum.Font.SourceSans
+ba4.Text = ""
+ba4.TextColor3 = Color3.fromRGB(255, 255, 255)
+ba4.TextSize = 18.000
+ba4.MouseButton1Down:connect(function()
+ba4.Visible = false
+ba3.Visible = true
+
+end)
+
+
+--bar auto
+
+--bar tool
+bartool.Name = "bartool"
+bartool.Parent = scriptspage3
+bartool.Active = false
+bartool.BackgroundTransparency = 1.000
+bartool.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+bartool.Position = UDim2.new(0, 0, 0.0904392526, 0)
+bartool.Size = UDim2.new(0, 498, 0, 150)
+bartool.Visible = false
+
+--mele
+it1.Name = "it1"
+it1.Parent = bartool
+it1.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+it1.Position = UDim2.new(0, 0, 0.0104392526, 0)
+it1.Size = UDim2.new(0, 498, 0, 20)
+it1.Font = Enum.Font.SourceSans
+it1.Text = "..."
+it1.TextColor3 = Color3.fromRGB(255, 255, 255)
+it1.TextSize = 18.000
+it1.MouseButton1Down:connect(function()
+bartool.Visible = false
+
+end)
+
+--fruit
+it2.Name = "it2"
+it2.Parent = bartool
+it2.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+it2.Position = UDim2.new(0, 0, 0.2104392526, 0)
+it2.Size = UDim2.new(0, 498, 0, 20)
+it2.Font = Enum.Font.SourceSans
+it2.Text = "..."
+it2.TextColor3 = Color3.fromRGB(255, 255, 255)
+it2.TextSize = 18.000
+it2.MouseButton1Down:connect(function()
+bartool.Visible = false
+
+end)
+
+--sword
+it3.Name = "it3"
+it3.Parent = bartool
+it3.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+it3.Position = UDim2.new(0, 0, 0.4104392526, 0)
+it3.Size = UDim2.new(0, 498, 0, 20)
+it3.Font = Enum.Font.SourceSans
+it3.Text = "..."
+it3.TextColor3 = Color3.fromRGB(255, 255, 255)
+it3.TextSize = 18.000
+it3.MouseButton1Down:connect(function()
+bartool.Visible = false
+
+end)
+
 
 -- Scripts:
 
