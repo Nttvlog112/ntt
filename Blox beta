@@ -538,6 +538,8 @@ _G.bouty = true
 game:GetService('RunService').RenderStepped:connect(function()
 if _G.bouty then
 
+Click()
+
 local lplayer = game:GetService('Players').LocalPlayer
  
 local yeeting = false
@@ -584,14 +586,15 @@ end)
 for i,v in next, game:GetService('Players'):GetPlayers() do
 if v.Name ~= game:GetService('Players').LocalPlayer.Name then
 pcall(function()
-v.Character.HumanoidRootPart.Size = Vector3.new(50, 50, 50)
-v.Character.HumanoidRootPart.Transparency = 0.9
+v.Character.HumanoidRootPart.Size = Vector3.new(20, 20, 20)
+v.Character.HumanoidRootPart.Transparency = 1
 v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really black")
 v.Character.HumanoidRootPart.Material = "Neon"
 v.Character.HumanoidRootPart.CanCollide = false
 end)
 end
 end
+
 end)
 
 bcheck4.Name = "bcheck4"
@@ -620,7 +623,7 @@ for i,v in next, game:GetService('Players'):GetPlayers() do
 if v.Name ~= game:GetService('Players').LocalPlayer.Name then
 pcall(function()
 v.Character.HumanoidRootPart.Size = Vector3.new(2, 2, 2)
-v.Character.HumanoidRootPart.Transparency = 0.9
+v.Character.HumanoidRootPart.Transparency = 1
 v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really black")
 v.Character.HumanoidRootPart.Material = "Neon"
 v.Character.HumanoidRootPart.CanCollide = false
