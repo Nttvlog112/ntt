@@ -1989,11 +1989,11 @@ local Player = game:GetService('Players').LocalPlayer
     for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
       if v.Name == "Bandit [Lv. 5]" then
       v.HumanoidRootPart.CanCollide = false
-      v.HumanoidRootPart.Size = Vector3.new(5, 50, 5)
+      v.HumanoidRootPart.Size = Vector3.new(5, 60, 5)
       Player.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame
       end
       end
-      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,22,0)
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,18,0)
       Click()
       end
       end)
