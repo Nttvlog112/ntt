@@ -1,5 +1,10 @@
 --NTT
 
+if game.CoreGui:FindFirstChild("ScreenGui") then
+   game.CoreGui:FindFirstChild("ScreenGui"):Destroy()
+   end
+
+
 local ScreenGUI = Instance.new("ScreenGui")
 local main = Instance.new("Frame")
 local bar2 = Instance.new("TextButton")
@@ -117,11 +122,12 @@ local be5 = Instance.new("TextButton")
 local be6 = Instance.new("TextButton")
 
 --auto1
-local tool = Instance.new("TextButton")
-local bartool = Instance.new("Frame")
-local it1 = Instance.new("TextButton")
-local it2 = Instance.new("TextButton")
-local it3 = Instance.new("TextButton")
+local nl = Instance.new("Frame")
+local bnn1 = Instance.new("TextButton")
+local bnn2 = Instance.new("TextButton")
+local tnl = Instance.new("TextLabel")
+local barnl = Instance.new("Frame")
+
 local a1 = Instance.new("Frame")
 local ta1 = Instance.new("TextButton")
 local a2 = Instance.new("Frame")
@@ -202,7 +208,7 @@ local UIa8 = Instance.new("UICorner")
 local UIa9 = Instance.new("UICorner")
 local UIa10 = Instance.new("UICorner")
 local UIa11 = Instance.new("UICorner")
-local UItool = Instance.new("UICorner")
+local UInl = Instance.new("UICorner")
 
 --main
 
@@ -652,7 +658,7 @@ _G.Zone = true
 
 game:GetService('RunService').RenderStepped:connect(function()
 if _G.Zone then
-if  game.Players.LocalPlayer.Character.Humanoid.Health < 3500 then
+if  game.Players.LocalPlayer.Character.Humanoid.Health < 4000 then
 
 bcheck3.Visible = true
 bcheck4.Visible = false
@@ -1920,22 +1926,80 @@ end)
 
 
 --auto2
---chọn mele
-tool.Name = "tool"
-tool.Parent = scriptspage3
-tool.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
-tool.Position = UDim2.new(0, 0, 0.0304392526, 0)
-tool.Size = UDim2.new(0, 498, 0, 30)
-tool.Font = Enum.Font.SourceSans
-tool.Text = "Chọn Vật Phẩm Sử Dụng Fram"
-tool.TextColor3 = Color3.fromRGB(255, 255, 255)
-tool.TextSize = 18.000
-UItool.Parent = tool
-tool.MouseButton1Down:connect(function()
-bartool.Visible = true
+--fram bone
+nl.Name = "nl"
+nl.Parent = scriptspage3
+nl.Active = true
+nl.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+nl.Position = UDim2.new(0, 0, 0.0304392526, 0)
+nl.Size = UDim2.new(0, 498, 0, 30)
+UInl.Parent = nl
+
+tnl.Parent = nl
+tnl.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+tnl.BackgroundTransparency = 1.000
+tnl.Position = UDim2.new(0.50662296, 0, 0.121392526, 0)
+tnl.Size = UDim2.new(0, 200, 0, 30)
+tnl.Font = Enum.Font.Ubuntu
+tnl.Text = "Auto Fram"
+tnl.TextColor3 = Color3.fromRGB(255, 255, 255)
+tnl.TextSize = 15.000
+tnl.TextWrapped = true
+
+bnn1.Name = "bnn1"
+bnn1.Parent = nl
+bnn1.BackgroundColor3 = Color3.fromRGB(0, 250, 60)
+bnn1.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+bnn1.Size = UDim2.new(0, 20, 0, 20)
+bnn1.Font = Enum.Font.SourceSans
+bnn1.Text = ""
+bnn1.TextColor3 = Color3.fromRGB(255, 255, 255)
+bnn1.TextSize = 18.000
+bnn1.MouseButton1Down:connect(function()
+bnn1.Visible = false
+bnn2.Visible = true
+
+_G.bone = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.bone then
+end
+end)
+v.HumanoidRootPart.Size = Vector3.new(2, 2, 2)
 end)
 
---code tool
+bnn2.Name = "bnn2"
+bnn2.Parent = nl
+bnn2.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+bnn2.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+bnn2.Size = UDim2.new(0, 20, 0, 20)
+bnn2.Font = Enum.Font.SourceSans
+bnn2.Text = ""
+bnn2.TextColor3 = Color3.fromRGB(255, 255, 255)
+bnn2.TextSize = 18.000
+bnn2.MouseButton1Down:connect(function()
+bnn2.Visible = false
+bnn1.Visible = true
+_G.bone = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.bone then
+
+local Player = game:GetService('Players').LocalPlayer
+    for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
+      if v.Name == "Bandit [Lv. 5]" then
+      v.HumanoidRootPart.CanCollide = false
+      v.HumanoidRootPart.Size = Vector3.new(5, 50, 5)
+      Player.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame
+      end
+      end
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,22,0)
+      Click()
+      end
+      end)
+
+end)
+
 
 
 --auto boss
@@ -2001,6 +2065,7 @@ if texta1.Text == "auto boss" then
 end
 end)
 
+ --auto click v1
 a2.Name = "a2"
 a2.Parent = scriptspage3
 a2.Active = true
@@ -2008,9 +2073,6 @@ a2.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
 a2.Position = UDim2.new(0, 0, 0.1704392526, 0)
 a2.Size = UDim2.new(0, 498, 0, 30)
 UIa2.Parent = a2
-
-
---auto click
 
 function Click()
           game:GetService'VirtualUser':CaptureController()
@@ -2023,7 +2085,7 @@ texta2.BackgroundTransparency = 1.000
 texta2.Position = UDim2.new(0, 0, 0, 0)
 texta2.Size = UDim2.new(0, 200, 0, 30)
 texta2.Font = Enum.Font.Ubuntu
-texta2.Text = "   Auto Click"
+texta2.Text = "   Auto Click V1"
 texta2.TextColor3 = Color3.fromRGB(255, 255, 255)
 texta2.TextSize = 14.000
 texta2.TextWrapped = true
@@ -2104,66 +2166,326 @@ end
 end)
 end)
 
+--auto click v2
+a3.Name = "a3"
+a3.Parent = scriptspage3
+a3.Active = true
+a3.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+a3.Position = UDim2.new(0, 0, 0.2404392526, 0)
+a3.Size = UDim2.new(0, 498, 0, 30)
+UIa3.Parent = a3
+
+texta3.Parent = a3
+texta3.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+texta3.BackgroundTransparency = 1.000
+texta3.Position = UDim2.new(0, 0, 0, 0)
+texta3.Size = UDim2.new(0, 200, 0, 30)
+texta3.Font = Enum.Font.Ubuntu
+texta3.Text = "   Auto Click V2"
+texta3.TextColor3 = Color3.fromRGB(255, 255, 255)
+texta3.TextSize = 14.000
+texta3.TextWrapped = true
+texta3.TextXAlignment = Enum.TextXAlignment.Left
+
+ba5.Name = "ba5"
+ba5.Parent = a3
+ba5.BackgroundColor3 = Color3.fromRGB(0, 250, 60)
+ba5.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+ba5.Size = UDim2.new(0, 20, 0, 20)
+ba5.Font = Enum.Font.SourceSans
+ba5.Text = ""
+ba5.TextColor3 = Color3.fromRGB(255, 255, 255)
+ba5.TextSize = 18.000
+ba5.MouseButton1Down:connect(function()
+ba5.Visible = false
+ba6.Visible = true
+
+end)
+
+ba6.Name = "ba6"
+ba6.Parent = a3
+ba6.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+ba6.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+ba6.Size = UDim2.new(0, 20, 0, 20)
+ba6.Font = Enum.Font.SourceSans
+ba6.Text = ""
+ba6.TextColor3 = Color3.fromRGB(255, 255, 255)
+ba6.TextSize = 18.000
+ba6.MouseButton1Down:connect(function()
+ba6.Visible = false
+ba5.Visible = true
+
+end)
+
+--auto Fartory
+a4.Name = "a4"
+a4.Parent = scriptspage3
+a4.Active = true
+a4.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+a4.Position = UDim2.new(0, 0, 0.3104392526, 0)
+a4.Size = UDim2.new(0, 498, 0, 30)
+UIa4.Parent = a4
+
+texta4.Parent = a4
+texta4.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+texta4.BackgroundTransparency = 1.000
+texta4.Position = UDim2.new(0, 0, 0, 0)
+texta4.Size = UDim2.new(0, 200, 0, 30)
+texta4.Font = Enum.Font.Ubuntu
+texta4.Text = "   Auto Fartory"
+texta4.TextColor3 = Color3.fromRGB(255, 255, 255)
+texta4.TextSize = 14.000
+texta4.TextWrapped = true
+texta4.TextXAlignment = Enum.TextXAlignment.Left
+
+ba7.Name = "ba7"
+ba7.Parent = a4
+ba7.BackgroundColor3 = Color3.fromRGB(0, 250, 60)
+ba7.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+ba7.Size = UDim2.new(0, 20, 0, 20)
+ba7.Font = Enum.Font.SourceSans
+ba7.Text = ""
+ba7.TextColor3 = Color3.fromRGB(255, 255, 255)
+ba7.TextSize = 18.000
+ba7.MouseButton1Down:connect(function()
+ba7.Visible = false
+ba8.Visible = true
+
+end)
+
+ba8.Name = "ba8"
+ba8.Parent = a4
+ba8.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+ba8.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+ba8.Size = UDim2.new(0, 20, 0, 20)
+ba8.Font = Enum.Font.SourceSans
+ba8.Text = ""
+ba8.TextColor3 = Color3.fromRGB(255, 255, 255)
+ba8.TextSize = 18.000
+ba8.MouseButton1Down:connect(function()
+ba8.Visible = false
+ba7.Visible = true
+
+end)
+
+--auto buy haki color
+a5.Name = "a5"
+a5.Parent = scriptspage3
+a5.Active = true
+a5.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+a5.Position = UDim2.new(0, 0, 0.3804392526, 0)
+a5.Size = UDim2.new(0, 498, 0, 30)
+UIa5.Parent = a5
+
+texta5.Parent = a5
+texta5.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+texta5.BackgroundTransparency = 1.000
+texta5.Position = UDim2.new(0, 0, 0, 0)
+texta5.Size = UDim2.new(0, 200, 0, 30)
+texta5.Font = Enum.Font.Ubuntu
+texta5.Text = "   Auto Buy Haki Color"
+texta5.TextColor3 = Color3.fromRGB(255, 255, 255)
+texta5.TextSize = 14.000
+texta5.TextWrapped = true
+texta5.TextXAlignment = Enum.TextXAlignment.Left
+
+ba9.Name = "ba9"
+ba9.Parent = a5
+ba9.BackgroundColor3 = Color3.fromRGB(0, 250, 60)
+ba9.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+ba9.Size = UDim2.new(0, 20, 0, 20)
+ba9.Font = Enum.Font.SourceSans
+ba9.Text = ""
+ba9.TextColor3 = Color3.fromRGB(255, 255, 255)
+ba9.TextSize = 18.000
+ba9.MouseButton1Down:connect(function()
+ba9.Visible = false
+ba10.Visible = true
+
+_G.hakicolor = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.hakicolor then
+-- script
+end
+
+end)
+end)
+
+ba10.Name = "ba10"
+ba10.Parent = a5
+ba10.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+ba10.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+ba10.Size = UDim2.new(0, 20, 0, 20)
+ba10.Font = Enum.Font.SourceSans
+ba10.Text = ""
+ba10.TextColor3 = Color3.fromRGB(255, 255, 255)
+ba10.TextSize = 18.000
+ba10.MouseButton1Down:connect(function()
+ba10.Visible = false
+ba9.Visible = true
+
+_G.hakicolor = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.hakicolor then
+local args = {
+              [1] = "Buso"
+          }
+          game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end
+end)
+end)
+
+--auto buy sword legend
+a6.Name = "a6"
+a6.Parent = scriptspage3
+a6.Active = true
+a6.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+a6.Position = UDim2.new(0, 0, 0.4504392526, 0)
+a6.Size = UDim2.new(0, 498, 0, 30)
+UIa6.Parent = a6
+
+texta6.Parent = a6
+texta6.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+texta6.BackgroundTransparency = 1.000
+texta6.Position = UDim2.new(0, 0, 0, 0)
+texta6.Size = UDim2.new(0, 200, 0, 30)
+texta6.Font = Enum.Font.Ubuntu
+texta6.Text = "   Auto Buy Sword Legend"
+texta6.TextColor3 = Color3.fromRGB(255, 255, 255)
+texta6.TextSize = 14.000
+texta6.TextWrapped = true
+texta6.TextXAlignment = Enum.TextXAlignment.Left
+
+ba11.Name = "ba11"
+ba11.Parent = a6
+ba11.BackgroundColor3 = Color3.fromRGB(0, 250, 60)
+ba11.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+ba11.Size = UDim2.new(0, 20, 0, 20)
+ba11.Font = Enum.Font.SourceSans
+ba11.Text = ""
+ba11.TextColor3 = Color3.fromRGB(255, 255, 255)
+ba11.TextSize = 18.000
+ba11.MouseButton1Down:connect(function()
+ba11.Visible = false
+ba12.Visible = true
+
+_G.sword = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.sword then
+
+end
+end)
+end)
+
+ba12.Name = "ba12"
+ba12.Parent = a6
+ba12.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+ba12.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+ba12.Size = UDim2.new(0, 20, 0, 20)
+ba12.Font = Enum.Font.SourceSans
+ba12.Text = ""
+ba12.TextColor3 = Color3.fromRGB(255, 255, 255)
+ba12.TextSize = 18.000
+ba12.MouseButton1Down:connect(function()
+ba12.Visible = false
+ba11.Visible = true
+
+_G.sword = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.sword then
+
+local args = {
+                   [1] = "LegendarySwordDealer",
+                   [2] = "2"
+                }
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+
+end
+end)
+end)
+
+--auto random fruit
+a7.Name = "a7"
+a7.Parent = scriptspage3
+a7.Active = true
+a7.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+a7.Position = UDim2.new(0, 0, 0.5204392526, 0)
+a7.Size = UDim2.new(0, 498, 0, 30)
+UIa7.Parent = a7
+
+texta7.Parent = a7
+texta7.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+texta7.BackgroundTransparency = 1.000
+texta7.Position = UDim2.new(0, 0, 0, 0)
+texta7.Size = UDim2.new(0, 200, 0, 30)
+texta7.Font = Enum.Font.Ubuntu
+texta7.Text = "   Auto Random Fruit"
+texta7.TextColor3 = Color3.fromRGB(255, 255, 255)
+texta7.TextSize = 14.000
+texta7.TextWrapped = true
+texta7.TextXAlignment = Enum.TextXAlignment.Left
+
+ba13.Name = "ba13"
+ba13.Parent = a7
+ba13.BackgroundColor3 = Color3.fromRGB(0, 250, 60)
+ba13.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+ba13.Size = UDim2.new(0, 20, 0, 20)
+ba13.Font = Enum.Font.SourceSans
+ba13.Text = ""
+ba13.TextColor3 = Color3.fromRGB(255, 255, 255)
+ba13.TextSize = 18.000
+ba13.MouseButton1Down:connect(function()
+ba13.Visible = false
+ba14.Visible = true
+_G.random = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.random then
+
+end
+end)
+
+end)
+
+ba14.Name = "ba14"
+ba14.Parent = a7
+ba14.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+ba14.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+ba14.Size = UDim2.new(0, 20, 0, 20)
+ba14.Font = Enum.Font.SourceSans
+ba14.Text = ""
+ba14.TextColor3 = Color3.fromRGB(255, 255, 255)
+ba14.TextSize = 18.000
+ba14.MouseButton1Down:connect(function()
+ba14.Visible = false
+ba13.Visible = true
+
+_G.random = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.random then
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Cousin","Buy")
+end
+end)
+
+end)
+
 
 --bar auto
 
---bar tool
-bartool.Name = "bartool"
-bartool.Parent = scriptspage3
-bartool.Active = false
-bartool.BackgroundTransparency = 1.000
-bartool.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
-bartool.Position = UDim2.new(0, 0, 0.0904392526, 0)
-bartool.Size = UDim2.new(0, 498, 0, 150)
-bartool.Visible = false
-
---mele
-it1.Name = "it1"
-it1.Parent = bartool
-it1.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
-it1.Position = UDim2.new(0, 0, 0.0104392526, 0)
-it1.Size = UDim2.new(0, 498, 0, 20)
-it1.Font = Enum.Font.SourceSans
-it1.Text = "..."
-it1.TextColor3 = Color3.fromRGB(255, 255, 255)
-it1.TextSize = 18.000
-it1.MouseButton1Down:connect(function()
-bartool.Visible = false
-
-end)
-
-
-
---fruit
-it2.Name = "it2"
-it2.Parent = bartool
-it2.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
-it2.Position = UDim2.new(0, 0, 0.2104392526, 0)
-it2.Size = UDim2.new(0, 498, 0, 20)
-it2.Font = Enum.Font.SourceSans
-it2.Text = "..."
-it2.TextColor3 = Color3.fromRGB(255, 255, 255)
-it2.TextSize = 18.000
-it2.MouseButton1Down:connect(function()
-bartool.Visible = false
-
-end)
-
---sword
-it3.Name = "it3"
-it3.Parent = bartool
-it3.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
-it3.Position = UDim2.new(0, 0, 0.4104392526, 0)
-it3.Size = UDim2.new(0, 498, 0, 20)
-it3.Font = Enum.Font.SourceSans
-it3.Text = "..."
-it3.TextColor3 = Color3.fromRGB(255, 255, 255)
-it3.TextSize = 18.000
-it3.MouseButton1Down:connect(function()
-bartool.Visible = false
-
-end)
-
+--bar fram bone
+barnl.Name = "barnl"
+barnl.Parent = scriptspage3
+barnl.Active = false
+barnl.BackgroundTransparency = 1.000
+barnl.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+barnl.Position = UDim2.new(0, 0, 0.0904392526, 0)
+barnl.Size = UDim2.new(0, 498, 0, 150)
+barnl.Visible = false
 
 -- Scripts:
 
