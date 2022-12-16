@@ -1,0 +1,3416 @@
+--NTT
+if game.CoreGui:FindFirstChild("ScreenGui") then
+   ScreenGui:Destroy()
+   end
+
+
+local ScreenGUI = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local bar2 = Instance.new("TextButton")
+local bar1 = Instance.new("Frame")
+local home = Instance.new("TextButton")
+local hometab = Instance.new("Frame")
+local PlayerImage = Instance.new("ImageLabel")
+local credit = Instance.new("TextLabel")
+local bar = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local sea = Instance.new("TextButton")
+local seatext = Instance.new("TextButton")
+
+local scriptspage = Instance.new("Frame")
+local scriptspage1 = Instance.new("Frame")
+local scriptspage2 = Instance.new("ScrollingFrame")
+local scriptspage3 = Instance.new("ScrollingFrame")
+local scripts = Instance.new("TextButton")
+local buygui = Instance.new("TextButton")
+local miss = Instance.new("TextButton")
+local raid = Instance.new("TextButton")
+local hubspage = Instance.new("Frame")
+local hubs = Instance.new("TextButton")
+local exit = Instance.new("TextButton")
+local open = Instance.new("TextButton")
+--tp gui
+local nametp = Instance.new("TextButton")
+local b1 = Instance.new("TextButton")
+local bartp = Instance.new("ScrollingFrame")
+local btp = Instance.new("TextButton")
+local tp1 = Instance.new("TextButton")
+local tp2 = Instance.new("TextButton")
+local tp3 = Instance.new("TextButton")
+local tp4 = Instance.new("TextButton")
+local tp5 = Instance.new("TextButton")
+local tp6 = Instance.new("TextButton")
+local tp7 = Instance.new("TextButton")
+local tp8 = Instance.new("TextButton")
+local tp9 = Instance.new("TextButton")
+local tp10 = Instance.new("TextButton")
+local tp11 = Instance.new("TextButton")
+local tp12 = Instance.new("TextButton")
+local tp13 = Instance.new("TextButton")
+local tp14 = Instance.new("TextButton")
+local tp15 = Instance.new("TextButton")
+
+--buy gui
+local b2 = Instance.new("TextButton")
+local c2 = Instance.new("TextButton")
+local c3 = Instance.new("TextButton")
+local c4 = Instance.new("TextButton")
+local c5 = Instance.new("TextButton")
+local c6 = Instance.new("TextButton")
+local c7 = Instance.new("TextButton")
+local c8 = Instance.new("TextButton")
+local c9 = Instance.new("TextButton")
+local c10 = Instance.new("TextButton")
+local c11 = Instance.new("TextButton")
+local c12 = Instance.new("TextButton")
+local c13 = Instance.new("TextButton")
+local c14 = Instance.new("TextButton")
+local c15 = Instance.new("TextButton")
+
+--miss
+local bh = Instance.new("Frame")
+local th = Instance.new("TextLabel")
+local h1 = Instance.new("TextButton")
+local h2 = Instance.new("TextButton")
+
+local bm1 = Instance.new("Frame")
+local bm2 = Instance.new("Frame")
+local bm3 = Instance.new("Frame")
+local te1 = Instance.new("TextLabel")
+local te2 = Instance.new("TextLabel")
+local te3 = Instance.new("TextLabel")
+local be1 = Instance.new("TextButton")
+local be2 = Instance.new("TextButton")
+local be3 = Instance.new("TextButton")
+local be4 = Instance.new("TextButton")
+local be5 = Instance.new("TextButton")
+local be6 = Instance.new("TextButton")
+local bm4 = Instance.new("TextButton")
+local bm5 = Instance.new("TextButton")
+local bm6 = Instance.new("TextButton")
+local bm7 = Instance.new("TextButton")
+
+--auto1
+local nl = Instance.new("Frame")
+local bnn1 = Instance.new("TextButton")
+local bnn2 = Instance.new("TextButton")
+local tnl = Instance.new("TextLabel")
+local cnl = Instance.new("TextButton")
+local barnl = Instance.new("Frame")
+local ni1 = Instance.new("TextButton")
+local ni2 = Instance.new("TextButton")
+local ni3 = Instance.new("TextButton")
+local ni4 = Instance.new("TextButton")
+local ni5 = Instance.new("TextButton")
+local ni6 = Instance.new("TextButton")
+local ni7 = Instance.new("TextButton")
+
+local a1 = Instance.new("Frame")
+local ta1 = Instance.new("TextButton")
+local a2 = Instance.new("Frame")
+local a3 = Instance.new("Frame")
+local a4 = Instance.new("Frame")
+local a5 = Instance.new("Frame")
+local a6 = Instance.new("Frame")
+local a7 = Instance.new("Frame")
+local a8 = Instance.new("Frame")
+local a9 = Instance.new("Frame")
+local a10 = Instance.new("Frame")
+local a11 = Instance.new("Frame")
+local texta1 = Instance.new("TextLabel")
+local texta2 = Instance.new("TextLabel")
+local texta3 = Instance.new("TextLabel")
+local texta4 = Instance.new("TextLabel")
+local texta5 = Instance.new("TextLabel")
+local texta6 = Instance.new("TextLabel")
+local texta7 = Instance.new("TextLabel")
+local texta8 = Instance.new("TextLabel")
+local texta9 = Instance.new("TextLabel")
+local texta10 = Instance.new("TextLabel")
+local texta11 = Instance.new("TextLabel")
+local ba1 = Instance.new("TextButton")
+local ba2 = Instance.new("TextButton")
+local ba3 = Instance.new("TextButton")
+local ba4 = Instance.new("TextButton")
+local ba5 = Instance.new("TextButton")
+local ba6 = Instance.new("TextButton")
+local ba7 = Instance.new("TextButton")
+local ba8 = Instance.new("TextButton")
+local ba9 = Instance.new("TextButton")
+local ba10 = Instance.new("TextButton")
+local ba11 = Instance.new("TextButton")
+local ba12 = Instance.new("TextButton")
+local ba13 = Instance.new("TextButton")
+local ba14 = Instance.new("TextButton")
+local ba15 = Instance.new("TextButton")
+local ba16 = Instance.new("TextButton")
+local ba17 = Instance.new("TextButton")
+local ba18 = Instance.new("TextButton")
+local ba19 = Instance.new("TextButton")
+local ba20 = Instance.new("TextButton")
+local ba21 = Instance.new("TextButton")
+local ba22 = Instance.new("TextButton")
+--UI làm tròn
+local UIexit = Instance.new("UICorner")
+
+local UIbbox = Instance.new("UICorner")
+local UIbb1 = Instance.new("UICorner")
+local UIbb2 = Instance.new("UICorner")
+local UIopen = Instance.new("UICorner")
+local UIkey = Instance.new("UICorner")
+local UIa1 = Instance.new("UICorner")
+local UIa2 = Instance.new("UICorner")
+local UIa3 = Instance.new("UICorner")
+local UIa4 = Instance.new("UICorner")
+local UIa5 = Instance.new("UICorner")
+local UIa6 = Instance.new("UICorner")
+local UIa7 = Instance.new("UICorner")
+local UIa8 = Instance.new("UICorner")
+local UIa9 = Instance.new("UICorner")
+local UIa10 = Instance.new("UICorner")
+local UIa11 = Instance.new("UICorner")
+local UInl = Instance.new("UICorner")
+
+
+
+--main
+
+ScreenGUI.Name = "ScreenGUI"
+ScreenGUI.Parent = game.CoreGui
+ScreenGUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+main.Name = "main"
+main.Parent = ScreenGUI -- nằm trên khung ẩn
+main.BackgroundColor3 = Color3.fromRGB(0, 0, 0) --màu khung
+main.Position = UDim2.new(0.200126051, 0, 0.228999169, 0) -- vị trí đứng
+main.Size = UDim2.new(0, 640, 0, 280) -- kích cở
+main.Visible = false
+
+bar1.Name = "bar1"
+bar1.Parent = main
+bar1.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+bar1.Position = UDim2.new(0, 0, 0.114285722, 0)
+bar1.Size = UDim2.new(0, 100, 0, 245)
+
+home.Name = "home"
+home.Parent = main
+home.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+home.BorderSizePixel = 0
+home.Position = UDim2.new(0, 0, 0.114285722, 0)
+home.Size = UDim2.new(0, 100, 0, 34)
+home.Font = Enum.Font.Ubuntu
+home.Text = "Home"
+home.TextColor3 = Color3.fromRGB(255, 255, 255)
+home.TextSize = 14.000
+
+scripts.Name = "scripts"
+scripts.Parent = main
+scripts.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+scripts.BorderSizePixel = 0
+scripts.Position = UDim2.new(0, 0, 0.244285722, 0)
+scripts.Size = UDim2.new(0, 100, 0, 34)
+scripts.Font = Enum.Font.Ubuntu
+scripts.Text = "TP Gui"
+scripts.TextColor3 = Color3.fromRGB(255, 255, 255)
+scripts.TextSize = 14.000
+scripts.TextWrapped = true
+
+buygui.Name = "buygui"
+buygui.Parent = main
+buygui.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+buygui.BorderSizePixel = 0
+buygui.Position = UDim2.new(0, 0, 0.374285722, 0)
+buygui.Size = UDim2.new(0, 100, 0, 34)
+buygui.Font = Enum.Font.Ubuntu
+buygui.Text = "Buy Gui"
+buygui.TextColor3 = Color3.fromRGB(255, 255, 255)
+buygui.TextSize = 14.000
+buygui.TextWrapped = true
+
+miss.Name = "miss"
+miss.Parent = main
+miss.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+miss.BorderSizePixel = 0
+miss.Position = UDim2.new(0, 0, 0.504285722, 0)
+miss.Size = UDim2.new(0, 100, 0, 34)
+miss.Font = Enum.Font.Ubuntu
+miss.Text = "Miss"
+miss.TextColor3 = Color3.fromRGB(255, 255, 255)
+miss.TextSize = 14.000
+miss.TextWrapped = true
+
+raid.Name = "raid"
+raid.Parent = main
+raid.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+raid.BorderSizePixel = 0
+raid.Position = UDim2.new(0, 0, 0.634285722, 0)
+raid.Size = UDim2.new(0, 100, 0, 34)
+raid.Font = Enum.Font.Ubuntu
+raid.Text = "Auto"
+raid.TextColor3 = Color3.fromRGB(255, 250, 250)
+raid.TextSize = 14.000
+raid.TextWrapped = true
+--trang tab
+
+hubspage.Name = "hubspage"
+hubspage.Parent = main
+hubspage.Active = true
+hubspage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+hubspage.BackgroundTransparency = 1.000
+hubspage.Position = UDim2.new(0.20631148, 0, 0.235714287, 0)
+hubspage.Size = UDim2.new(0, 488, 0, 400)
+
+hometab.Name = "hometab"
+hometab.Parent = main
+hometab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+hometab.BackgroundTransparency = 1.000
+hometab.Position = UDim2.new(0.20631148, 0, 0.235714287, 0)
+hometab.Size = UDim2.new(0, 488, 0, 214)
+hometab.Visible = true
+
+scriptspage.Name = "scriptspage"
+scriptspage.Parent = main
+scriptspage.Active = true
+scriptspage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+scriptspage.BackgroundTransparency = 1.000
+scriptspage.Position = UDim2.new(0.17631148, 0, 0.094285722, 0)
+scriptspage.Size = UDim2.new(0, 488, 0, 400)
+scriptspage.Visible = false
+
+scriptspage1.Name = "scriptspage1"
+scriptspage1.Parent = main
+scriptspage1.Active = true
+scriptspage1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+scriptspage1.BackgroundTransparency = 1.000
+scriptspage1.Position = UDim2.new(0.17631148, 0, 0.094285722, 0)
+scriptspage1.Size = UDim2.new(0, 488, 0, 400)
+scriptspage1.Visible = false
+
+scriptspage2.Name = "scriptspage2"
+scriptspage2.Parent = main
+scriptspage2.Active = true
+scriptspage2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+scriptspage2.BackgroundTransparency = 1.000
+scriptspage2.BorderSizePixel = 0
+scriptspage2.Size = UDim2.new(0, 498, 0, 230)
+scriptspage2.ScrollBarThickness = 0
+scriptspage2.Position = UDim2.new(0.17631148, 0, 0.094285722, 0)
+scriptspage2.Visible = false
+
+scriptspage3.Name = "scriptspage3"
+scriptspage3.Parent = main
+scriptspage3.Active = true
+scriptspage3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+scriptspage3.BackgroundTransparency = 1.000
+scriptspage3.BorderSizePixel = 0
+scriptspage3.Size = UDim2.new(0, 498, 0, 230)
+scriptspage3.ScrollBarThickness = 0
+scriptspage3.Position = UDim2.new(0.17631148, 0, 0.094285722, 0)
+scriptspage3.Visible = false
+
+bar.Name = "bar"
+bar.Parent = main
+bar.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+bar.Size = UDim2.new(0, 640, 0, 26)
+
+TextLabel.Parent = main
+TextLabel.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 93, 0, 26)
+TextLabel.Font = Enum.Font.Ubuntu
+TextLabel.Text = "NTT HUB"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+credit.Name = "credit"
+credit.Parent = hometab
+credit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+credit.BackgroundTransparency = 1.000
+credit.BorderSizePixel = 0
+credit.Position = UDim2.new(0.190573767, 0, 0.648130822, 0)
+credit.Size = UDim2.new(0, 299, 0, 64)
+credit.Font = Enum.Font.TitilliumWeb
+credit.Text = "Script By | NTT Việt Nam"
+credit.TextColor3 = Color3.fromRGB(0, 255, 255)
+credit.TextScaled = true
+credit.TextSize = 5.000
+credit.TextWrapped = true
+
+--đóng  mở
+
+exit.Name = "exit"
+exit.Parent = ScreenGUI
+exit.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+exit.BorderSizePixel = 0
+exit.Position = UDim2.new(0.70162201, 0, 0.103285708, 0)
+exit.Size = UDim2.new(0, 50, 0, 50)
+exit.Font = Enum.Font.Ubuntu
+exit.Text = "Closs"
+exit.TextColor3 = Color3.fromRGB(250, 255, 250)
+exit.TextSize = 20.000
+UIexit.Parent = exit
+exit.MouseButton1Down:connect(function()
+game.CoreGui.ScreenGUI.main.Visible = false
+game.CoreGui.ScreenGUI.exit.Visible = false
+game.CoreGui.ScreenGUI.open.Visible = true
+end)
+
+open.Name = "open"
+open.Parent = ScreenGUI
+open.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+open.BorderSizePixel = 0
+open.Position = UDim2.new(0.70162201, 0, 0.103285708, 0)
+open.Size = UDim2.new(0, 50, 0, 50)
+open.Font = Enum.Font.Ubuntu
+open.Text = "Open"
+open.TextColor3 = Color3.fromRGB(250, 255, 250)
+open.TextSize = 20.000
+UIopen.Parent = open
+open.MouseButton1Down:connect(function()
+game.CoreGui.ScreenGUI.main.Visible = true
+game.CoreGui.ScreenGUI.open.Visible = false
+game.CoreGui.ScreenGUI.exit.Visible = true
+end)
+
+--setting sea
+
+sea.Name = "sea"
+sea.Parent = main
+sea.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+sea.BorderSizePixel = 0
+sea.Position = UDim2.new(0.85262296, 0, 0, 0)
+sea.Size = UDim2.new(0, 90, 0, 26)
+sea.Font = Enum.Font.Ubuntu
+sea.Text = "Blox Fruit | Sea ."
+sea.TextColor3 = Color3.fromRGB(255, 255, 255)
+sea.TextSize = 14.000
+sea.MouseButton1Down:connect(function()
+end)
+--check sea
+if game.PlaceId == 2753915549 then -- sea1
+end
+
+
+
+
+--ẩn ẩn ẩn
+
+game.CoreGui.ScreenGUI.exit.Visible = false
+
+--tp gui1
+
+--sea1
+if game.PlaceId == 2753915549 then -- sea1
+nametp.Name = "nametp"
+nametp.Parent = scriptspage
+nametp.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+nametp.Position = UDim2.new(0.1031148, 0, 0.0304392526, 0)
+nametp.Size = UDim2.new(0, 418, 0, 30)
+nametp.Font = Enum.Font.SourceSans
+nametp.Text = "Tp Island"
+nametp.TextColor3 = Color3.fromRGB(255, 255, 255)
+nametp.TextSize = 18.000
+nametp.MouseButton1Down:connect(function()
+end)
+
+btp.Name = "btp"
+btp.Parent = scriptspage
+btp.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+btp.Position = UDim2.new(0.1031148, 0, 0.2304392526, 0)
+btp.Size = UDim2.new(0, 418, 0, 30)
+btp.Font = Enum.Font.SourceSans
+btp.Text = "Teleport"
+btp.TextColor3 = Color3.fromRGB(255, 255, 255)
+btp.TextSize = 18.000
+btp.MouseButton1Down:connect(function()
+if b1.Text == "Star Island Marine" then
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+_G.tp1 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp1 then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart 
+
+local location = CFrame.new(-2546, 7, 2050) 
+
+local humanoid = game.Players.LocalPlayer.Character.Humanoid 
+
+pl.CFrame = location
+end
+end)
+wait(5)
+_G.tp1 = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp1 then
+end
+end)
+
+end
+if b1.Text == "Star Island Pirate" then
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+_G.tp2 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp2 then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart 
+
+local location = CFrame.new(912, 17, 432) 
+
+local humanoid = game.Players.LocalPlayer.Character.Humanoid 
+
+pl.CFrame = location
+end
+end)
+wait(5)
+_G.tp2 = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp2 then
+end
+end)
+
+end
+if b1.Text == "Middle Town" then
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+_G.tp3 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp3 then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart 
+
+local location = CFrame.new(-1059, 9, 1542) 
+
+local humanoid = game.Players.LocalPlayer.Character.Humanoid 
+
+pl.CFrame = location
+end
+end)
+wait(5)
+_G.tp3 = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp3 then
+end
+end)
+
+end
+if b1.Text == "Jungle" then
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+_G.tp4 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp4 then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart 
+
+local location = CFrame.new(-1327, 23, 216) 
+
+local humanoid = game.Players.LocalPlayer.Character.Humanoid 
+
+pl.CFrame = location
+end
+end)
+wait(5)
+_G.tp4 = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp4 then
+end
+end)
+
+end
+if b1.Text == "Pirate Village" then
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+_G.tp5 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp5 then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart 
+
+local location = CFrame.new(-1167, 5, 3970) 
+
+local humanoid = game.Players.LocalPlayer.Character.Humanoid 
+
+pl.CFrame = location
+end
+end)
+wait(5)
+_G.tp5 = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp5 then
+end
+end)
+
+end
+if b1.Text == "Desert" then
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+_G.tp6 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp6 then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart 
+
+local location = CFrame.new(927, 7, 4475) 
+
+local humanoid = game.Players.LocalPlayer.Character.Humanoid 
+
+pl.CFrame = location
+end
+end)
+wait(5)
+_G.tp6 = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp6 then
+end
+end)
+
+end
+if b1.Text == "Frozen Village" then
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+_G.tp7 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp7 then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart 
+
+local location = CFrame.new(1433, 90, -1352) 
+
+local humanoid = game.Players.LocalPlayer.Character.Humanoid 
+
+pl.CFrame = location
+end
+end)
+wait(5)
+_G.tp7 = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp7 then
+end
+end)
+
+end
+if b1.Text == "Whirlpool" then
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+_G.tp8 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp8 then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart 
+
+local location = CFrame.new(3885, 49, -1966) 
+
+local humanoid = game.Players.LocalPlayer.Character.Humanoid 
+
+pl.CFrame = location
+end
+end)
+wait(5)
+_G.tp8 = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp8 then
+end
+end)
+
+end
+if b1.Text == "Prison" then
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+_G.tp9 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp9 then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart 
+
+local location = CFrame.new(5111, 4, 791) 
+
+local humanoid = game.Players.LocalPlayer.Character.Humanoid 
+
+pl.CFrame = location
+end
+end)
+wait(5)
+_G.tp9 = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp9 then
+end
+end)
+
+end
+
+if b1.Text == "Marine Fortress" then
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+_G.tp10 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp10 then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart 
+
+local location = CFrame.new(-5097, 100, 4404) 
+
+local humanoid = game.Players.LocalPlayer.Character.Humanoid 
+
+pl.CFrame = location
+end
+end)
+wait(5)
+_G.tp10 = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp10 then
+end
+end)
+
+end
+
+if b1.Text == "Magma Village" then
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+_G.tp11 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp11 then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart 
+
+local location = CFrame.new-5396, 9, 8560 
+
+local humanoid = game.Players.LocalPlayer.Character.Humanoid 
+
+pl.CFrame = location
+end
+end)
+wait(5)
+_G.tp11 = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp11 then
+end
+end)
+
+end
+
+if b1.Text == "Fountain City" then
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+_G.tp12 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp12 then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart 
+
+local location = CFrame.new(5130, 39, 4270) 
+
+local humanoid = game.Players.LocalPlayer.Character.Humanoid 
+
+pl.CFrame = location
+end
+end)
+wait(5)
+_G.tp12 = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp12 then
+end
+end)
+
+end
+
+if b1.Text == "Sky 1" then
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+_G.tp13 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp13 then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart 
+
+local location = CFrame.new(-4745, 718, -2579) 
+
+local humanoid = game.Players.LocalPlayer.Character.Humanoid 
+
+pl.CFrame = location
+end
+end)
+wait(5)
+_G.tp13 = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp13 then
+end
+end)
+
+end
+
+if b1.Text == "Sky 2" then
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+_G.tp14 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp14 then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart 
+
+local location = CFrame.new(-7881, 5546, -355) 
+
+local humanoid = game.Players.LocalPlayer.Character.Humanoid 
+
+pl.CFrame = location
+end
+end)
+wait(5)
+_G.tp14 = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp14 then
+end
+end)
+
+end
+
+end)
+
+bartp.Name = "bartp"
+bartp.Parent = scriptspage
+bartp.Active = true
+bartp.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+bartp.BackgroundTransparency = 1.000
+bartp.Position = UDim2.new(0, 0, 0.194392526, 0)
+bartp.Size = UDim2.new(0, 500, 0, 160)
+bartp.Visible = false
+
+
+tp1.Name = "tp1"
+tp1.Parent = bartp
+tp1.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+tp1.Position = UDim2.new(0.1031148 ,0 ,0.0204392526,0)
+tp1.Size = UDim2.new(0, 418, 0, 30)
+tp1.Font = Enum.Font.SourceSans
+tp1.Text = "Star Island Pirate"
+tp1.TextColor3 = Color3.fromRGB(255, 255, 255)
+tp1.TextSize = 18.000
+tp1.MouseButton1Down:connect(function()
+bartp.Visible = false
+b1.Text = "Star Island Pirate"
+btp.Visible = true
+end)
+
+tp2.Name = "tp2"
+tp2.Parent = bartp
+tp2.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+tp2.Position = UDim2.new(0.1031148 ,0 ,0.0704392526,0)
+tp2.Size = UDim2.new(0, 418, 0, 30)
+tp2.Font = Enum.Font.SourceSans
+tp2.Text = "Star Island Marine"
+tp2.TextColor3 = Color3.fromRGB(255, 255, 255)
+tp2.TextSize = 18.000
+tp2.MouseButton1Down:connect(function()
+bartp.Visible = false
+b1.Text = "Star Island Marine"
+btp.Visible = true
+end)
+
+tp3.Name = "tp3"
+tp3.Parent = bartp
+tp3.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+tp3.Position = UDim2.new(0.1031148 ,0 ,0.1204392526,0)
+tp3.Size = UDim2.new(0, 418, 0, 30)
+tp3.Font = Enum.Font.SourceSans
+tp3.Text = "Middle Town"
+tp3.TextColor3 = Color3.fromRGB(255, 255, 255)
+tp3.TextSize = 18.000
+tp3.MouseButton1Down:connect(function()
+bartp.Visible = false
+b1.Text = "Middle Town"
+btp.Visible = true
+end)
+
+tp4.Name = "tp4"
+tp4.Parent = bartp
+tp4.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+tp4.Position = UDim2.new(0.1031148 ,0 ,0.1704392526,0)
+tp4.Size = UDim2.new(0, 418, 0, 30)
+tp4.Font = Enum.Font.SourceSans
+tp4.Text = "Jungle"
+tp4.TextColor3 = Color3.fromRGB(255, 255, 255)
+tp4.TextSize = 18.000
+tp4.MouseButton1Down:connect(function()
+bartp.Visible = false
+b1.Text = "Jungle"
+btp.Visible = true
+end)
+
+tp5.Name = "tp5"
+tp5.Parent = bartp
+tp5.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+tp5.Position = UDim2.new(0.1031148 ,0 ,0.2204392526,0)
+tp5.Size = UDim2.new(0, 418, 0, 30)
+tp5.Font = Enum.Font.SourceSans
+tp5.Text = "Pirate Village"
+tp5.TextColor3 = Color3.fromRGB(255, 255, 255)
+tp5.TextSize = 18.000
+tp5.MouseButton1Down:connect(function()
+bartp.Visible = false
+b1.Text = "Pirate Village"
+btp.Visible = true
+end)
+
+tp6.Name = "tp6"
+tp6.Parent = bartp
+tp6.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+tp6.Position = UDim2.new(0.1031148 ,0 ,0.2704392526,0)
+tp6.Size = UDim2.new(0, 418, 0, 30)
+tp6.Font = Enum.Font.SourceSans
+tp6.Text = "Desert"
+tp6.TextColor3 = Color3.fromRGB(255, 255, 255)
+tp6.TextSize = 18.000
+tp6.MouseButton1Down:connect(function()
+bartp.Visible = false
+b1.Text = "Desert"
+btp.Visible = true
+end)
+
+tp7.Name = "tp7"
+tp7.Parent = bartp
+tp7.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+tp7.Position = UDim2.new(0.1031148 ,0 ,0.3204392526,0)
+tp7.Size = UDim2.new(0, 418, 0, 30)
+tp7.Font = Enum.Font.SourceSans
+tp7.Text = "Frozen Village"
+tp7.TextColor3 = Color3.fromRGB(255, 255, 255)
+tp7.TextSize = 18.000
+tp7.MouseButton1Down:connect(function()
+bartp.Visible = false
+b1.Text = "Frozen Village"
+btp.Visible = true
+end)
+
+tp8.Name = "tp8"
+tp8.Parent = bartp
+tp8.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+tp8.Position = UDim2.new(0.1031148 ,0 ,0.3704392526,0)
+tp8.Size = UDim2.new(0, 418, 0, 30)
+tp8.Font = Enum.Font.SourceSans
+tp8.Text = "Whirlpool"
+tp8.TextColor3 = Color3.fromRGB(255, 255, 255)
+tp8.TextSize = 18.000
+tp8.MouseButton1Down:connect(function()
+bartp.Visible = false
+b1.Text = "Whirlpool"
+btp.Visible = true
+end)
+
+tp9.Name = "tp9"
+tp9.Parent = bartp
+tp9.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+tp9.Position = UDim2.new(0.1031148 ,0 ,0.4204392526,0)
+tp9.Size = UDim2.new(0, 418, 0, 30)
+tp9.Font = Enum.Font.SourceSans
+tp9.Text = "Prison"
+tp9.TextColor3 = Color3.fromRGB(255, 255, 255)
+tp9.TextSize = 18.000
+tp9.MouseButton1Down:connect(function()
+bartp.Visible = false
+b1.Text = "Prison"
+btp.Visible = true
+end)
+
+tp10.Name = "tp10"
+tp10.Parent = bartp
+tp10.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+tp10.Position = UDim2.new(0.1031148 ,0 ,0.4704392526,0)
+tp10.Size = UDim2.new(0, 418, 0, 30)
+tp10.Font = Enum.Font.SourceSans
+tp10.Text = "Marine Fortress"
+tp10.TextColor3 = Color3.fromRGB(255, 255, 255)
+tp10.TextSize = 18.000
+tp10.MouseButton1Down:connect(function()
+bartp.Visible = false
+b1.Text = "Marine Fortress"
+btp.Visible = true
+end)
+
+tp11.Name = "tp11"
+tp11.Parent = bartp
+tp11.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+tp11.Position = UDim2.new(0.1031148 ,0 ,0.5204392526,0)
+tp11.Size = UDim2.new(0, 418, 0, 30)
+tp11.Font = Enum.Font.SourceSans
+tp11.Text = "Magma Village"
+tp11.TextColor3 = Color3.fromRGB(255, 255, 255)
+tp11.TextSize = 18.000
+tp11.MouseButton1Down:connect(function()
+bartp.Visible = false
+b1.Text = "Magma Village"
+btp.Visible = true
+end)
+
+tp12.Name = "tp12"
+tp12.Parent = bartp
+tp12.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+tp12.Position = UDim2.new(0.1031148 ,0 ,0.5704392526,0)
+tp12.Size = UDim2.new(0, 418, 0, 30)
+tp12.Font = Enum.Font.SourceSans
+tp12.Text = "Fountain City"
+tp12.TextColor3 = Color3.fromRGB(255, 255, 255)
+tp12.TextSize = 18.000
+tp12.MouseButton1Down:connect(function()
+bartp.Visible = false
+b1.Text = "Fountain City"
+btp.Visible = true
+end)
+
+tp13.Name = "tp13"
+tp13.Parent = bartp
+tp13.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+tp13.Position = UDim2.new(0.1031148 ,0 ,0.6204392526,0)
+tp13.Size = UDim2.new(0, 418, 0, 30)
+tp13.Font = Enum.Font.SourceSans
+tp13.Text = "Sky 1"
+tp13.TextColor3 = Color3.fromRGB(255, 255, 255)
+tp13.TextSize = 18.000
+tp13.MouseButton1Down:connect(function()
+bartp.Visible = false
+b1.Text = "Sky 1"
+btp.Visible = true
+end)
+
+tp14.Name = "tp14"
+tp14.Parent = bartp
+tp14.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+tp14.Position = UDim2.new(0.1031148 ,0 ,0.6704392526,0)
+tp14.Size = UDim2.new(0, 418, 0, 30)
+tp14.Font = Enum.Font.SourceSans
+tp14.Text = "Sky 2"
+tp14.TextColor3 = Color3.fromRGB(255, 255, 255)
+tp14.TextSize = 18.000
+tp14.MouseButton1Down:connect(function()
+bartp.Visible = false
+b1.Text = "Sky 2"
+btp.Visible = true
+end)
+
+--button chọn map
+b1.Name = "b1"
+b1.Parent = scriptspage
+b1.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+b1.Position = UDim2.new(0.1031148, 0, 0.1304392526, 0)
+b1.Size = UDim2.new(0, 418, 0, 30)
+b1.Font = Enum.Font.SourceSans
+b1.Text = "Chọn Nơi TP"
+b1.TextColor3 = Color3.fromRGB(255, 255, 255)
+b1.TextSize = 18.000
+b1.MouseButton1Down:connect(function()
+bartp.Visible = true
+btp.Visible = false
+end)
+end
+
+
+--sea2
+if game.PlaceId == 4442272183 then -- sea2
+
+nametp.Name = "nametp"
+nametp.Parent = scriptspage
+nametp.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+nametp.Position = UDim2.new(0.1031148, 0, 0.0304392526, 0)
+nametp.Size = UDim2.new(0, 418, 0, 30)
+nametp.Font = Enum.Font.SourceSans
+nametp.Text = "Tp Island"
+nametp.TextColor3 = Color3.fromRGB(255, 255, 255)
+nametp.TextSize = 18.000
+nametp.MouseButton1Down:connect(function()
+end)
+
+btp.Name = "btp"
+btp.Parent = scriptspage
+btp.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+btp.Position = UDim2.new(0.1031148, 0, 0.2304392526, 0)
+btp.Size = UDim2.new(0, 418, 0, 30)
+btp.Font = Enum.Font.SourceSans
+btp.Text = "Teleport"
+btp.TextColor3 = Color3.fromRGB(255, 255, 255)
+btp.TextSize = 18.000
+btp.MouseButton1Down:connect(function()
+if b1.Text == "Star Island" then
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+_G.tp1 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp1 then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart 
+
+local location = CFrame.new(-31, 23, 3821) 
+
+local humanoid = game.Players.LocalPlayer.Character.Humanoid 
+
+pl.CFrame = location
+end
+end)
+wait(5)
+_G.tp1 = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp1 then
+end
+end)
+
+end
+if b1.Text == "Cafe" then
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+_G.tp2 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp2 then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart 
+
+local location = CFrame.new(-382, 73, 270) 
+
+local humanoid = game.Players.LocalPlayer.Character.Humanoid 
+
+pl.CFrame = location
+end
+end)
+wait(5)
+_G.tp2 = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp2 then
+end
+end)
+
+end
+if b1.Text == "Green Zone" then
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+_G.tp3 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp3 then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart 
+
+local location = CFrame.new(-2483, 73, -3384) 
+
+local humanoid = game.Players.LocalPlayer.Character.Humanoid 
+
+pl.CFrame = location
+end
+end)
+wait(5)
+_G.tp3 = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp3 then
+end
+end)
+
+end
+if b1.Text == "Graveyard" then
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+_G.tp4 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp4 then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart 
+
+local location = CFrame.new(-5684, 49, -896) 
+
+local humanoid = game.Players.LocalPlayer.Character.Humanoid 
+
+pl.CFrame = location
+end
+end)
+wait(5)
+_G.tp4 = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp4 then
+end
+end)
+
+end
+if b1.Text == "Snow" then
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+_G.tp5 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp5 then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart 
+
+local location = CFrame.new(1000, 500, -5045) 
+
+local humanoid = game.Players.LocalPlayer.Character.Humanoid 
+
+pl.CFrame = location
+end
+end)
+wait(5)
+_G.tp5 = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp5 then
+end
+end)
+
+end
+if b1.Text == "Hot And Cold" then
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+_G.tp6 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp6 then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart 
+
+local location = CFrame.new(-5464, 16, -5100) 
+
+local humanoid = game.Players.LocalPlayer.Character.Humanoid 
+
+pl.CFrame = location
+end
+end)
+wait(5)
+_G.tp6 = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp6 then
+end
+end)
+
+end
+if b1.Text == "Haunted Ship" then
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+_G.tp7 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp7 then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart 
+
+local location = CFrame.new(1000, 40, 32989) 
+
+local humanoid = game.Players.LocalPlayer.Character.Humanoid 
+
+pl.CFrame = location
+end
+end)
+wait(5)
+_G.tp7 = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp7 then
+end
+end)
+
+end
+if b1.Text == "Ice Castle" then
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+_G.tp8 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp8 then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart 
+
+local location = CFrame.new(5690, 30, -6390) 
+
+local humanoid = game.Players.LocalPlayer.Character.Humanoid 
+
+pl.CFrame = location
+end
+end)
+wait(5)
+_G.tp8 = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp8 then
+end
+end)
+
+end
+if b1.Text == "Forgotten" then
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+_G.tp9 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp9 then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart 
+
+local location = CFrame.new(-3063, 6, 9612) 
+
+local humanoid = game.Players.LocalPlayer.Character.Humanoid 
+
+pl.CFrame = location
+end
+end)
+wait(5)
+_G.tp9 = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp9 then
+end
+end)
+
+end
+
+end)
+
+bartp.Name = "bartp"
+bartp.Parent = scriptspage
+bartp.Active = true
+bartp.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+bartp.BackgroundTransparency = 1.000
+bartp.Position = UDim2.new(0, 0, 0.194392526, 0)
+bartp.Size = UDim2.new(0, 500, 0, 160)
+bartp.Visible = false
+
+
+tp1.Name = "tp1"
+tp1.Parent = bartp
+tp1.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+tp1.Position = UDim2.new(0.1031148 ,0 ,0.0204392526,0)
+tp1.Size = UDim2.new(0, 418, 0, 30)
+tp1.Font = Enum.Font.SourceSans
+tp1.Text = "Star Island"
+tp1.TextColor3 = Color3.fromRGB(255, 255, 255)
+tp1.TextSize = 18.000
+tp1.MouseButton1Down:connect(function()
+bartp.Visible = false
+b1.Text = "Star Island"
+btp.Visible = true
+end)
+
+tp2.Name = "tp2"
+tp2.Parent = bartp
+tp2.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+tp2.Position = UDim2.new(0.1031148 ,0 ,0.0704392526,0)
+tp2.Size = UDim2.new(0, 418, 0, 30)
+tp2.Font = Enum.Font.SourceSans
+tp2.Text = "Cafe"
+tp2.TextColor3 = Color3.fromRGB(255, 255, 255)
+tp2.TextSize = 18.000
+tp2.MouseButton1Down:connect(function()
+bartp.Visible = false
+b1.Text = "Cafe"
+btp.Visible = true
+end)
+
+tp3.Name = "tp3"
+tp3.Parent = bartp
+tp3.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+tp3.Position = UDim2.new(0.1031148 ,0 ,0.1204392526,0)
+tp3.Size = UDim2.new(0, 418, 0, 30)
+tp3.Font = Enum.Font.SourceSans
+tp3.Text = "Green Zone"
+tp3.TextColor3 = Color3.fromRGB(255, 255, 255)
+tp3.TextSize = 18.000
+tp3.MouseButton1Down:connect(function()
+bartp.Visible = false
+b1.Text = "Green Zone"
+btp.Visible = true
+end)
+
+tp4.Name = "tp4"
+tp4.Parent = bartp
+tp4.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+tp4.Position = UDim2.new(0.1031148 ,0 ,0.1704392526,0)
+tp4.Size = UDim2.new(0, 418, 0, 30)
+tp4.Font = Enum.Font.SourceSans
+tp4.Text = "Graveyard"
+tp4.TextColor3 = Color3.fromRGB(255, 255, 255)
+tp4.TextSize = 18.000
+tp4.MouseButton1Down:connect(function()
+bartp.Visible = false
+b1.Text = "Graveyard"
+btp.Visible = true
+end)
+
+tp5.Name = "tp5"
+tp5.Parent = bartp
+tp5.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+tp5.Position = UDim2.new(0.1031148 ,0 ,0.2204392526,0)
+tp5.Size = UDim2.new(0, 418, 0, 30)
+tp5.Font = Enum.Font.SourceSans
+tp5.Text = "Snow"
+tp5.TextColor3 = Color3.fromRGB(255, 255, 255)
+tp5.TextSize = 18.000
+tp5.MouseButton1Down:connect(function()
+bartp.Visible = false
+b1.Text = "Snow"
+btp.Visible = true
+end)
+
+tp6.Name = "tp6"
+tp6.Parent = bartp
+tp6.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+tp6.Position = UDim2.new(0.1031148 ,0 ,0.2704392526,0)
+tp6.Size = UDim2.new(0, 418, 0, 30)
+tp6.Font = Enum.Font.SourceSans
+tp6.Text = "Hot And Cold"
+tp6.TextColor3 = Color3.fromRGB(255, 255, 255)
+tp6.TextSize = 18.000
+tp6.MouseButton1Down:connect(function()
+bartp.Visible = false
+b1.Text = "Hot And Cold"
+btp.Visible = true
+end)
+
+tp7.Name = "tp7"
+tp7.Parent = bartp
+tp7.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+tp7.Position = UDim2.new(0.1031148 ,0 ,0.3204392526,0)
+tp7.Size = UDim2.new(0, 418, 0, 30)
+tp7.Font = Enum.Font.SourceSans
+tp7.Text = "Haunted Ship"
+tp7.TextColor3 = Color3.fromRGB(255, 255, 255)
+tp7.TextSize = 18.000
+tp7.MouseButton1Down:connect(function()
+bartp.Visible = false
+b1.Text = "Haunted Ship"
+btp.Visible = true
+end)
+
+tp8.Name = "tp8"
+tp8.Parent = bartp
+tp8.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+tp8.Position = UDim2.new(0.1031148 ,0 ,0.3704392526,0)
+tp8.Size = UDim2.new(0, 418, 0, 30)
+tp8.Font = Enum.Font.SourceSans
+tp8.Text = "Ice Castle"
+tp8.TextColor3 = Color3.fromRGB(255, 255, 255)
+tp8.TextSize = 18.000
+tp8.MouseButton1Down:connect(function()
+bartp.Visible = false
+b1.Text = "Ice Castle"
+btp.Visible = true
+end)
+
+tp9.Name = "tp9"
+tp9.Parent = bartp
+tp9.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+tp9.Position = UDim2.new(0.1031148 ,0 ,0.4204392526,0)
+tp9.Size = UDim2.new(0, 418, 0, 30)
+tp9.Font = Enum.Font.SourceSans
+tp9.Text = "Forgotten"
+tp9.TextColor3 = Color3.fromRGB(255, 255, 255)
+tp9.TextSize = 18.000
+tp9.MouseButton1Down:connect(function()
+bartp.Visible = false
+b1.Text = "Forgotten"
+btp.Visible = true
+end)
+
+--button chọn map
+b1.Name = "b1"
+b1.Parent = scriptspage
+b1.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+b1.Position = UDim2.new(0.1031148, 0, 0.1304392526, 0)
+b1.Size = UDim2.new(0, 418, 0, 30)
+b1.Font = Enum.Font.SourceSans
+b1.Text = "Chọn Nơi TP"
+b1.TextColor3 = Color3.fromRGB(255, 255, 255)
+b1.TextSize = 18.000
+b1.MouseButton1Down:connect(function()
+bartp.Visible = true
+btp.Visible = false
+end)
+
+end
+
+
+
+
+--buy gui
+b2.Name = "b2"
+b2.Parent = scriptspage1
+b2.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+b2.Position = UDim2.new(0, 0, 0.0304392526, 0)
+b2.Size = UDim2.new(0, 100, 0, 34)
+b2.Font = Enum.Font.SourceSans
+b2.Text = "Back Leg"
+b2.TextColor3 = Color3.fromRGB(255, 255, 255)
+b2.TextSize = 18.000
+b2.MouseButton1Down:connect(function()
+local args = {
+                         [1] = "BuyBackLeg"
+                      }
+                      game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+
+end)
+
+c2.Name = "c2"
+c2.Parent = scriptspage1
+c2.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+c2.Position = UDim2.new(0, 0, 0.1304392526, 0)
+c2.Size = UDim2.new(0, 100, 0, 34)
+c2.Font = Enum.Font.SourceSans
+c2.Text = "Electro"
+c2.TextColor3 = Color3.fromRGB(255, 255, 255)
+c2.TextSize = 18.000
+c2.MouseButton1Down:connect(function()
+local args = {
+                         [1] = "Electro"
+                      }
+                      game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+
+c3.Name = "c3"
+c3.Parent = scriptspage1
+c3.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+c3.Position = UDim2.new(0, 0, 0.2304392526, 0)
+c3.Size = UDim2.new(0, 100, 0, 34)
+c3.Font = Enum.Font.SourceSans
+c3.Text = "Kungfu Water"
+c3.TextColor3 = Color3.fromRGB(255, 255, 255)
+c3.TextSize = 18.000
+c3.MouseButton1Down:connect(function()
+local args = {
+                         [1] = "BuyKhungfuWater"
+                      }
+                      game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+
+c4.Name = "c4"
+c4.Parent = scriptspage1
+c4.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+c4.Position = UDim2.new(0, 0, 0.3304392526, 0)
+c4.Size = UDim2.new(0, 100, 0, 34)
+c4.Font = Enum.Font.SourceSans
+c4.Text = "Dragon Claw"
+c4.TextColor3 = Color3.fromRGB(255, 255, 255)
+c4.TextSize = 18.000
+c4.MouseButton1Down:connect(function()
+end)
+
+c5.Name = "c5"
+c5.Parent = scriptspage1
+c5.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+c5.Position = UDim2.new(0, 0, 0.4304392526, 0)
+c5.Size = UDim2.new(0, 100, 0, 34)
+c5.Font = Enum.Font.SourceSans
+c5.Text = "Super Human"
+c5.TextColor3 = Color3.fromRGB(255, 255, 255)
+c5.TextSize = 18.000
+c5.MouseButton1Down:connect(function()
+local args = {
+                         [1] = "BuySuperhuman"
+                      }
+                      game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+
+c6.Name = "c6"
+c6.Parent = scriptspage1
+c6.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+c6.Position = UDim2.new(0.22631148, 0, 0.030439342, 0)
+c6.Size = UDim2.new(0, 100, 0, 34)
+c6.Font = Enum.Font.SourceSans
+c6.Text = "Death Step"
+c6.TextColor3 = Color3.fromRGB(255, 255, 255)
+c6.TextSize = 18.000
+c6.MouseButton1Down:connect(function()
+local args = {
+                         [1] = "BuyDeathStep"
+                      }
+                      game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+
+c7.Name = "c7"
+c7.Parent = scriptspage1
+c7.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+c7.Position = UDim2.new(0.22631148, 0, 0.130439342, 0)
+c7.Size = UDim2.new(0, 100, 0, 34)
+c7.Font = Enum.Font.SourceSans
+c7.Text = "Sharkman Karate"
+c7.TextColor3 = Color3.fromRGB(255, 255, 255)
+c7.TextSize = 18.000
+c7.MouseButton1Down:connect(function()
+local args = {
+                         [1] = "BuySharkmanKarate"
+                      }
+                      game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+
+c8.Name = "c8"
+c8.Parent = scriptspage1
+c8.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+c8.Position = UDim2.new(0.22631148, 0, 0.230439342, 0)
+c8.Size = UDim2.new(0, 100, 0, 34)
+c8.Font = Enum.Font.SourceSans
+c8.Text = "Electric Claw"
+c8.TextColor3 = Color3.fromRGB(255, 255, 255)
+c8.TextSize = 18.000
+c8.MouseButton1Down:connect(function()
+local args = {
+                         [1] = "BuyElectricClaw"
+                      }
+                      game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+
+c9.Name = "c9"
+c9.Parent = scriptspage1
+c9.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+c9.Position = UDim2.new(0.22631148, 0, 0.330439342, 0)
+c9.Size = UDim2.new(0, 100, 0, 34)
+c9.Font = Enum.Font.SourceSans
+c9.Text = "Dragon Talon"
+c9.TextColor3 = Color3.fromRGB(255, 255, 255)
+c9.TextSize = 18.000
+c9.MouseButton1Down:connect(function()
+local args = {
+                         [1] = "BuyDragonTalon"
+                      }
+                      game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+
+c10.Name = "c10"
+c10.Parent = scriptspage1
+c10.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+c10.Position = UDim2.new(0.22631148, 0, 0.430439342, 0)
+c10.Size = UDim2.new(0, 100, 0, 34)
+c10.Font = Enum.Font.SourceSans
+c10.Text = "God Human"
+c10.TextColor3 = Color3.fromRGB(255, 255, 255)
+c10.TextSize = 18.000
+c10.MouseButton1Down:connect(function()
+local args = {
+                         [1] = "BuyGodhuman"
+                      }
+                      game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+
+c11.Name = "c11"
+c11.Parent = scriptspage1
+c11.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+c11.Position = UDim2.new(0.44631148, 0, 0.030439342, 0)
+c11.Size = UDim2.new(0, 100, 0, 34)
+c11.Font = Enum.Font.SourceSans
+c11.Text = "Random Fruit"
+c11.TextColor3 = Color3.fromRGB(255, 255, 255)
+c11.TextSize = 18.000
+c11.MouseButton1Down:connect(function()
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Cousin","Buy")
+end)
+
+c12.Name = "c12"
+c12.Parent = scriptspage1
+c12.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+c12.Position = UDim2.new(0.44631148, 0, 0.130439342, 0)
+c12.Size = UDim2.new(0, 100, 0, 34)
+c12.Font = Enum.Font.SourceSans
+c12.Text = "Sword Legend"
+c12.TextColor3 = Color3.fromRGB(255, 255, 255)
+c12.TextSize = 18.000
+c12.MouseButton1Down:connect(function()
+local args = {
+                   [1] = "LegendarySwordDealer",
+                   [2] = "2"
+                }
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+
+c13.Name = "c13"
+c13.Parent = scriptspage1
+c13.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+c13.Position = UDim2.new(0.44631148, 0, 0.230439342, 0)
+c13.Size = UDim2.new(0, 100, 0, 34)
+c13.Font = Enum.Font.SourceSans
+c13.Text = "Haki Color"
+c13.TextColor3 = Color3.fromRGB(255, 255, 255)
+c13.TextSize = 18.000
+c13.MouseButton1Down:connect(function()
+local args = {
+                  [1] = "ColorsDealer",
+                  [2] = "2"
+            }
+           game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+
+
+
+
+--miss2
+bh.Name = "bh"
+bh.Parent = scriptspage2
+bh.Active = false
+bh.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+bh.Position = UDim2.new(0, 0, 0.0304392526, 0)
+bh.Size = UDim2.new(0, 498, 0, 30)
+
+th.Parent = bh
+th.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+th.BackgroundTransparency = 1.000
+th.Position = UDim2.new(0, 0, 0, 0)
+th.Size = UDim2.new(0, 200, 0, 30)
+th.Font = Enum.Font.Ubuntu
+th.Text = "   Hix Box Player"
+th.TextColor3 = Color3.fromRGB(255, 255, 255)
+th.TextSize = 14.000
+th.TextWrapped = true
+th.TextXAlignment = Enum.TextXAlignment.Left
+
+h1.Name = "h1"
+h1.Parent = bh
+h1.BackgroundColor3 = Color3.fromRGB(0, 250, 60)
+h1.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+h1.Size = UDim2.new(0, 20, 0, 20)
+h1.Font = Enum.Font.SourceSans
+h1.Text = ""
+h1.TextColor3 = Color3.fromRGB(255, 255, 255)
+h1.TextSize = 18.000
+h1.MouseButton1Down:connect(function()
+h1.Visible = false
+h2.Visible = true
+_G.hix = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.hix then
+
+
+end
+end)
+for i,v in next, game:GetService('Players'):GetPlayers() do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+pcall(function()
+v.Character.HumanoidRootPart.Size = Vector3.new(4, 4, 4)
+v.Character.HumanoidRootPart.Transparency = 0.9
+v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really black")
+v.Character.HumanoidRootPart.Material = "Neon"
+v.Character.HumanoidRootPart.CanCollide = false
+end)
+end
+end
+end)
+
+h2.Name = "h2"
+h2.Parent = bh
+h2.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+h2.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+h2.Size = UDim2.new(0, 20, 0, 20)
+h2.Font = Enum.Font.SourceSans
+h2.Text = ""
+h2.TextColor3 = Color3.fromRGB(255, 255, 255)
+h2.TextSize = 18.000
+h2.MouseButton1Down:connect(function()
+h2.Visible = false
+h1.Visible = true
+_G.hix = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.hix then
+for i,v in next, game:GetService('Players'):GetPlayers() do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+pcall(function()
+v.Character.HumanoidRootPart.Size = Vector3.new(40, 40, 40)
+v.Character.HumanoidRootPart.Transparency = 0.9
+v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really black")
+v.Character.HumanoidRootPart.Material = "Neon"
+v.Character.HumanoidRootPart.CanCollide = false
+end)
+end
+end
+
+end
+end)
+
+end)
+
+--esp player
+bm1.Name = "bm1"
+bm1.Parent = scriptspage2
+bm1.Active = false
+bm1.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+bm1.Position = UDim2.new(0, 0, 0.1004392526, 0)
+bm1.Size = UDim2.new(0, 498, 0, 30)
+
+te1.Parent = bm1
+te1.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+te1.BackgroundTransparency = 1.000
+te1.Position = UDim2.new(0, 0, 0, 0)
+te1.Size = UDim2.new(0, 200, 0, 30)
+te1.Font = Enum.Font.Ubuntu
+te1.Text = "   Esp Player"
+te1.TextColor3 = Color3.fromRGB(255, 255, 255)
+te1.TextSize = 14.000
+te1.TextWrapped = true
+te1.TextXAlignment = Enum.TextXAlignment.Left
+
+be1.Name = "be1"
+be1.Parent = bm1
+be1.BackgroundColor3 = Color3.fromRGB(0, 250, 60)
+be1.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+be1.Size = UDim2.new(0, 20, 0, 20)
+be1.Font = Enum.Font.SourceSans
+be1.Text = ""
+be1.TextColor3 = Color3.fromRGB(255, 255, 255)
+be1.TextSize = 18.000
+be1.MouseButton1Down:connect(function()
+be1.Visible = false
+be2.Visible = true
+_G.e1 = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.e1 then
+end
+end)
+end)
+
+be2.Name = "be2"
+be2.Parent = bm1
+be2.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+be2.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+be2.Size = UDim2.new(0, 20, 0, 20)
+be2.Font = Enum.Font.SourceSans
+be2.Text = ""
+be2.TextColor3 = Color3.fromRGB(255, 255, 255)
+be2.TextSize = 18.000
+be2.MouseButton1Down:connect(function()
+be2.Visible = false
+be1.Visible = true
+_G.e1 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.e1 then
+-- script
+pcall(function()
+       for i,v in pairs(game.Players:GetChildren()) do
+            if not v.Character.Head:FindFirstChild("ESP") then
+                local BillboardGui = Instance.new("BillboardGui")
+                local TextLabel = Instance.new("TextLabel")
+                BillboardGui.Parent = v.Character.Head
+                BillboardGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+                BillboardGui.Active = true
+                BillboardGui.Name = "ESP"
+                BillboardGui.AlwaysOnTop = true
+                BillboardGui.LightInfluence = 1.000
+                BillboardGui.Size = UDim2.new(0, 100, 0, 50)
+                BillboardGui.StudsOffset = Vector3.new(0, 2.5, 0)
+                TextLabel.Parent = BillboardGui
+                TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+                TextLabel.BackgroundTransparency = 1.000
+                TextLabel.Size = UDim2.new(0, 100, 0, 50)
+                TextLabel.Font = Enum.Font.GothamBold
+                TextLabel.Text = v.Name
+                TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+                
+                TextLabel.TextSize = 14.000
+                TextLabel.TextStrokeTransparency = 0.000
+                
+            end
+        end
+    end) 
+end
+
+end)
+end)
+
+--esp fuit
+bm2.Name = "bm2"
+bm2.Parent = scriptspage2
+bm2.Active = false
+bm2.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+bm2.Position = UDim2.new(0, 0, 0.1704392526, 0)
+bm2.Size = UDim2.new(0, 498, 0, 30)
+
+te2.Parent = bm2
+te2.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+te2.BackgroundTransparency = 1.000
+te2.Position = UDim2.new(0, 0, 0, 0)
+te2.Size = UDim2.new(0, 200, 0, 30)
+te2.Font = Enum.Font.Ubuntu
+te2.Text = "   Esp Fruit"
+te2.TextColor3 = Color3.fromRGB(255, 255, 255)
+te2.TextSize = 14.000
+te2.TextWrapped = true
+te2.TextXAlignment = Enum.TextXAlignment.Left
+
+be3.Name = "be3"
+be3.Parent = bm2
+be3.BackgroundColor3 = Color3.fromRGB(0, 250, 60)
+be3.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+be3.Size = UDim2.new(0, 20, 0, 20)
+be3.Font = Enum.Font.SourceSans
+be3.Text = ""
+be3.TextColor3 = Color3.fromRGB(255, 255, 255)
+be3.TextSize = 18.000
+be3.MouseButton1Down:connect(function()
+be3.Visible = false
+be4.Visible = true
+_G.e2 = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.e2 then
+end
+end)
+
+end)
+
+be4.Name = "be4"
+be4.Parent = bm2
+be4.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+be4.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+be4.Size = UDim2.new(0, 20, 0, 20)
+be4.Font = Enum.Font.SourceSans
+be4.Text = ""
+be4.TextColor3 = Color3.fromRGB(255, 255, 255)
+be4.TextSize = 18.000
+be4.MouseButton1Down:connect(function()
+be4.Visible = false
+be3.Visible = true
+_G.e2 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.e2 then
+-- script
+for _,v in pairs (workspace:GetChildren()) do
+		if v.Name:match('Fruit') and not v:IsA('Folder') and (v:IsA("Model") or v:IsA("Part")) then
+			local BillboardGui = Instance.new("BillboardGui")
+        	local TextLabel = Instance.new("TextLabel")
+	        BillboardGui.Parent = v
+	        BillboardGui.AlwaysOnTop = true
+	        BillboardGui.LightInfluence = 1
+	        BillboardGui.Size = UDim2.new(0, 25, 0, 25)
+	        BillboardGui.StudsOffset = Vector3.new(0, 2, 0)
+	        TextLabel.Parent = BillboardGui
+	        TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+	        TextLabel.BackgroundTransparency = 1
+	        TextLabel.Size = UDim2.new(2, 0, 2, 0)
+	        TextLabel.TextSize = 20.000
+	        TextLabel.Text = v.Name
+	        TextLabel.TextColor3 = Color3.new(105, 0, 171)
+			TextLabel.Font = "SourceSans"
+        end
+    end
+end
+
+end)
+end)
+
+--esp Flower
+bm3.Name = "bm3"
+bm3.Parent = scriptspage2
+bm3.Active = false
+bm3.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+bm3.Position = UDim2.new(0, 0, 0.2404392526, 0)
+bm3.Size = UDim2.new(0, 498, 0, 30)
+
+te3.Parent = bm3
+te3.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+te3.BackgroundTransparency = 1.000
+te3.Position = UDim2.new(0, 0, 0, 0)
+te3.Size = UDim2.new(0, 200, 0, 30)
+te3.Font = Enum.Font.Ubuntu
+te3.Text = "   Esp Flower"
+te3.TextColor3 = Color3.fromRGB(255, 255, 255)
+te3.TextSize = 14.000
+te3.TextWrapped = true
+te3.TextXAlignment = Enum.TextXAlignment.Left
+
+be5.Name = "be5"
+be5.Parent = bm3
+be5.BackgroundColor3 = Color3.fromRGB(0, 250, 60)
+be5.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+be5.Size = UDim2.new(0, 20, 0, 20)
+be5.Font = Enum.Font.SourceSans
+be5.Text = ""
+be5.TextColor3 = Color3.fromRGB(255, 255, 255)
+be5.TextSize = 18.000
+be5.MouseButton1Down:connect(function()
+be5.Visible = false
+be6.Visible = true
+_G.e3 = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.e3 then
+end
+end)
+end)
+
+be6.Name = "be6"
+be6.Parent = bm3
+be6.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+be6.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+be6.Size = UDim2.new(0, 20, 0, 20)
+be6.Font = Enum.Font.SourceSans
+be6.Text = ""
+be6.TextColor3 = Color3.fromRGB(255, 255, 255)
+be6.TextSize = 18.000
+be6.MouseButton1Down:connect(function()
+be6.Visible = false
+be5.Visible = true
+_G.e3 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.e3 then
+-- script
+for _,v in pairs (workspace:GetChildren()) do
+		if v.Name:match('Flower') then
+		    local BillboardGui = Instance.new("BillboardGui")
+	        local TextLabel = Instance.new("TextLabel")
+	        BillboardGui.Parent = v
+	        BillboardGui.AlwaysOnTop = true
+	        BillboardGui.LightInfluence = 1
+	        BillboardGui.Size = UDim2.new(0, 25, 0, 25)
+	        BillboardGui.StudsOffset = Vector3.new(0, 2, 0)
+	        TextLabel.Parent = BillboardGui
+	        TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+	        TextLabel.BackgroundTransparency = 1
+	        TextLabel.Size = UDim2.new(2, 0, 2, 0)
+	        TextLabel.TextSize = 20.000
+	        TextLabel.Text = v.Name
+			TextLabel.Font = "SourceSans"
+			TextLabel.TextColor3 = Color3.fromRGB(255, 171, 254)
+		end
+    end
+
+end
+
+end)
+end)
+
+--fly
+bm5.Name = "bm5"
+bm5.Parent = scriptspage2
+bm5.Active = false
+bm5.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+bm5.Position = UDim2.new(0, 0, 0.3104392526, 0)
+bm5.Size = UDim2.new(0, 498, 0, 30)
+bm5.Font = Enum.Font.SourceSans
+bm5.Text = "Fly"
+bm5.TextColor3 = Color3.fromRGB(255, 255, 255)
+bm5.TextSize = 18.000
+bm5.MouseButton1Down:connect(function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Fly')))()
+end)
+
+bm6.Name = "bm6"
+bm6.Parent = scriptspage2
+bm6.Active = false
+bm6.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+bm6.Position = UDim2.new(0, 0, 0.3804392526, 0)
+bm6.Size = UDim2.new(0, 498, 0, 30)
+bm6.Font = Enum.Font.SourceSans
+bm6.Text = "Rejon"
+bm6.TextColor3 = Color3.fromRGB(255, 255, 255)
+bm6.TextSize = 18.000
+bm6.MouseButton1Down:connect(function()
+local ts = game:GetService("TeleportService")
+          local p = game:GetService("Players").LocalPlayer
+          ts:Teleport(game.PlaceId, p)
+end)
+
+bm7.Name = "bm7"
+bm7.Parent = scriptspage2
+bm7.Active = false
+bm7.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+bm7.Position = UDim2.new(0, 0, 0.4504392526, 0)
+bm7.Size = UDim2.new(0, 498, 0, 30)
+bm7.Font = Enum.Font.SourceSans
+bm7.Text = "Teleport Sever Vip"
+bm7.TextColor3 = Color3.fromRGB(255, 255, 255)
+bm7.TextSize = 18.000
+bm7.MouseButton1Down:connect(function()
+loadstring(game:HttpGet("https://pastebin.com/raw/q40eGpb8", true))()
+end)
+
+--auto2
+
+
+--auto boss
+a1.Name = "a1"
+a1.Parent = scriptspage3
+a1.Active = false
+a1.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+a1.Position = UDim2.new(0, 0, 0.1004392526, 0)
+a1.Size = UDim2.new(0, 498, 0, 30)
+UIa1.Parent = a1
+
+texta1.Parent = a1
+texta1.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+texta1.BackgroundTransparency = 1.000
+texta1.Position = UDim2.new(0, 0, 0.121392526, 0)
+texta1.Size = UDim2.new(0, 200, 0, 30)
+texta1.Font = Enum.Font.Ubuntu
+texta1.Text = "   Auto Haki"
+texta1.TextColor3 = Color3.fromRGB(255, 255, 255)
+texta1.TextSize = 15.000
+texta1.TextWrapped = true
+texta1.TextXAlignment = Enum.TextXAlignment.Left
+
+ba1.Name = "ba1"
+ba1.Parent = a1
+ba1.BackgroundColor3 = Color3.fromRGB(0, 250, 60)
+ba1.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+ba1.Size = UDim2.new(0, 20, 0, 20)
+ba1.Font = Enum.Font.SourceSans
+ba1.Text = ""
+ba1.TextColor3 = Color3.fromRGB(255, 255, 255)
+ba1.TextSize = 18.000
+ba1.MouseButton1Down:connect(function()
+ba1.Visible = false
+ba2.Visible = true
+_G.mele = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.mele then
+end
+end)
+end)
+
+ba2.Name = "ba2"
+ba2.Parent = a1
+ba2.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+ba2.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+ba2.Size = UDim2.new(0, 20, 0, 20)
+ba2.Font = Enum.Font.SourceSans
+ba2.Text = ""
+ba2.TextColor3 = Color3.fromRGB(255, 255, 255)
+ba2.TextSize = 18.000
+ba2.MouseButton1Down:connect(function()
+ba2.Visible = false
+ba1.Visible = true
+_G.mele = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.mele then
+if game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
+       
+                else
+                   local args = {
+                      [1] = "Buso"
+                   }
+                   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+                end
+end
+end)
+end)
+
+ --auto click v1
+a2.Name = "a2"
+a2.Parent = scriptspage3
+a2.Active = false
+a2.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+a2.Position = UDim2.new(0, 0, 0.1704392526, 0)
+a2.Size = UDim2.new(0, 498, 0, 30)
+UIa2.Parent = a2
+
+function Click()
+          game:GetService'VirtualUser':CaptureController()
+          game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+      end
+
+texta2.Parent = a2
+texta2.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+texta2.BackgroundTransparency = 1.000
+texta2.Position = UDim2.new(0, 0, 0, 0)
+texta2.Size = UDim2.new(0, 200, 0, 30)
+texta2.Font = Enum.Font.Ubuntu
+texta2.Text = "   Auto Click V1"
+texta2.TextColor3 = Color3.fromRGB(255, 255, 255)
+texta2.TextSize = 14.000
+texta2.TextWrapped = true
+texta2.TextXAlignment = Enum.TextXAlignment.Left
+
+ba3.Name = "ba3"
+ba3.Parent = a2
+ba3.BackgroundColor3 = Color3.fromRGB(0, 250, 60)
+ba3.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+ba3.Size = UDim2.new(0, 20, 0, 20)
+ba3.Font = Enum.Font.SourceSans
+ba3.Text = ""
+ba3.TextColor3 = Color3.fromRGB(255, 255, 255)
+ba3.TextSize = 18.000
+ba3.MouseButton1Down:connect(function()
+ba3.Visible = false
+ba4.Visible = true
+_G.click = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.click then
+
+end
+end)
+for i,v in next, game:GetService('Players'):GetPlayers() do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+pcall(function()
+v.Character.HumanoidRootPart.Size = Vector3.new(4, 4, 4)
+v.Character.HumanoidRootPart.Transparency = 1
+v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really black")
+v.Character.HumanoidRootPart.Material = "Neon"
+v.Character.HumanoidRootPart.CanCollide = false
+end)
+end
+end
+for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+    v.HumanoidRootPart.Size = Vector3.new(2, 2, 2)
+    v.HumanoidRootPart.Transparency = 1
+end
+end)
+
+ba4.Name = "ba4"
+ba4.Parent = a2
+ba4.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+ba4.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+ba4.Size = UDim2.new(0, 20, 0, 20)
+ba4.Font = Enum.Font.SourceSans
+ba4.Text = ""
+ba4.TextColor3 = Color3.fromRGB(255, 255, 255)
+ba4.TextSize = 18.000
+ba4.MouseButton1Down:connect(function()
+ba4.Visible = false
+ba3.Visible = true
+_G.click = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.click then
+
+Click()
+for i,v in next, game:GetService('Players'):GetPlayers() do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+pcall(function()
+v.Character.HumanoidRootPart.Size = Vector3.new(50, 50, 50)
+v.Character.HumanoidRootPart.Transparency = 1
+v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really black")
+v.Character.HumanoidRootPart.Material = "Neon"
+v.Character.HumanoidRootPart.CanCollide = false
+end)
+end
+end
+
+for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+    v.HumanoidRootPart.Size = Vector3.new(35, 35, 35)
+    v.HumanoidRootPart.Transparency = 1
+end
+
+end
+end)
+end)
+
+--auto click v2
+a3.Name = "a3"
+a3.Parent = scriptspage3
+a3.Active = false
+a3.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+a3.Position = UDim2.new(0, 0, 0.2404392526, 0)
+a3.Size = UDim2.new(0, 498, 0, 30)
+UIa3.Parent = a3
+
+texta3.Parent = a3
+texta3.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+texta3.BackgroundTransparency = 1.000
+texta3.Position = UDim2.new(0, 0, 0, 0)
+texta3.Size = UDim2.new(0, 200, 0, 30)
+texta3.Font = Enum.Font.Ubuntu
+texta3.Text = "   Auto Click V2"
+texta3.TextColor3 = Color3.fromRGB(255, 255, 255)
+texta3.TextSize = 14.000
+texta3.TextWrapped = true
+texta3.TextXAlignment = Enum.TextXAlignment.Left
+
+ba5.Name = "ba5"
+ba5.Parent = a3
+ba5.BackgroundColor3 = Color3.fromRGB(0, 250, 60)
+ba5.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+ba5.Size = UDim2.new(0, 20, 0, 20)
+ba5.Font = Enum.Font.SourceSans
+ba5.Text = ""
+ba5.TextColor3 = Color3.fromRGB(255, 255, 255)
+ba5.TextSize = 18.000
+ba5.MouseButton1Down:connect(function()
+ba5.Visible = false
+ba6.Visible = true
+
+end)
+
+ba6.Name = "ba6"
+ba6.Parent = a3
+ba6.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+ba6.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+ba6.Size = UDim2.new(0, 20, 0, 20)
+ba6.Font = Enum.Font.SourceSans
+ba6.Text = ""
+ba6.TextColor3 = Color3.fromRGB(255, 255, 255)
+ba6.TextSize = 18.000
+ba6.MouseButton1Down:connect(function()
+ba6.Visible = false
+ba5.Visible = true
+local SuperFastMode = false -- Change to true if you want Super Super Super Fast attack (Like instant kill) but it will make the game kick you more than normal mode
+
+local plr = game.Players.LocalPlayer
+
+local CbFw = debug.getupvalues(require(plr.PlayerScripts.CombatFramework))
+local CbFw2 = CbFw[2]
+
+function GetCurrentBlade() 
+    local p13 = CbFw2.activeController
+    local ret = p13.blades[1]
+    if not ret then return end
+    while ret.Parent~=game.Players.LocalPlayer.Character do ret=ret.Parent end
+    return ret
+end
+function AttackNoCD() 
+    local AC = CbFw2.activeController
+    for i = 1, 1 do 
+        local bladehit = require(game.ReplicatedStorage.CombatFramework.RigLib).getBladeHits(
+            plr.Character,
+            {plr.Character.HumanoidRootPart},
+            60
+        )
+        local cac = {}
+        local hash = {}
+        for k, v in pairs(bladehit) do
+            if v.Parent:FindFirstChild("HumanoidRootPart") and not hash[v.Parent] then
+                table.insert(cac, v.Parent.HumanoidRootPart)
+                hash[v.Parent] = true
+            end
+        end
+        bladehit = cac
+        if #bladehit > 0 then
+            local u8 = debug.getupvalue(AC.attack, 5)
+            local u9 = debug.getupvalue(AC.attack, 6)
+            local u7 = debug.getupvalue(AC.attack, 4)
+            local u10 = debug.getupvalue(AC.attack, 7)
+            local u12 = (u8 * 798405 + u7 * 727595) % u9
+            local u13 = u7 * 798405
+            (function()
+                u12 = (u12 * u9 + u13) % 1099511627776
+                u8 = math.floor(u12 / u9)
+                u7 = u12 - u8 * u9
+            end)()
+            u10 = u10 + 1
+            debug.setupvalue(AC.attack, 5, u8)
+            debug.setupvalue(AC.attack, 6, u9)
+            debug.setupvalue(AC.attack, 4, u7)
+            debug.setupvalue(AC.attack, 7, u10)
+            pcall(function()
+                for k, v in pairs(AC.animator.anims.basic) do
+                    v:Play()
+                end                  
+            end)
+            if plr.Character:FindFirstChildOfClass("Tool") and AC.blades and AC.blades[1] then 
+                game:GetService("ReplicatedStorage").RigControllerEvent:FireServer("weaponChange",tostring(GetCurrentBlade()))
+                game.ReplicatedStorage.Remotes.Validator:FireServer(math.floor(u12 / 1099511627776 * 16777215), u10)
+                game:GetService("ReplicatedStorage").RigControllerEvent:FireServer("hit", bladehit, i, "") 
+            end
+        end
+    end
+end
+local cac
+if SuperFastMode then 
+	cac=task.wait
+else
+	cac=wait
+end
+while cac() do 
+	AttackNoCD()
+end
+end)
+
+--auto Fartory
+a4.Name = "a4"
+a4.Parent = scriptspage3
+a4.Active = false
+a4.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+a4.Position = UDim2.new(0, 0, 0.3104392526, 0)
+a4.Size = UDim2.new(0, 498, 0, 30)
+UIa4.Parent = a4
+
+texta4.Parent = a4
+texta4.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+texta4.BackgroundTransparency = 1.000
+texta4.Position = UDim2.new(0, 0, 0, 0)
+texta4.Size = UDim2.new(0, 200, 0, 30)
+texta4.Font = Enum.Font.Ubuntu
+texta4.Text = "   Auto Fartory"
+texta4.TextColor3 = Color3.fromRGB(255, 255, 255)
+texta4.TextSize = 14.000
+texta4.TextWrapped = true
+texta4.TextXAlignment = Enum.TextXAlignment.Left
+
+ba7.Name = "ba7"
+ba7.Parent = a4
+ba7.BackgroundColor3 = Color3.fromRGB(0, 250, 60)
+ba7.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+ba7.Size = UDim2.new(0, 20, 0, 20)
+ba7.Font = Enum.Font.SourceSans
+ba7.Text = ""
+ba7.TextColor3 = Color3.fromRGB(255, 255, 255)
+ba7.TextSize = 18.000
+ba7.MouseButton1Down:connect(function()
+ba7.Visible = false
+ba8.Visible = true
+
+end)
+
+ba8.Name = "ba8"
+ba8.Parent = a4
+ba8.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+ba8.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+ba8.Size = UDim2.new(0, 20, 0, 20)
+ba8.Font = Enum.Font.SourceSans
+ba8.Text = ""
+ba8.TextColor3 = Color3.fromRGB(255, 255, 255)
+ba8.TextSize = 18.000
+ba8.MouseButton1Down:connect(function()
+ba8.Visible = false
+ba7.Visible = true
+
+end)
+
+--auto buy haki color
+a5.Name = "a5"
+a5.Parent = scriptspage3
+a5.Active = false
+a5.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+a5.Position = UDim2.new(0, 0, 0.3804392526, 0)
+a5.Size = UDim2.new(0, 498, 0, 30)
+UIa5.Parent = a5
+
+texta5.Parent = a5
+texta5.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+texta5.BackgroundTransparency = 1.000
+texta5.Position = UDim2.new(0, 0, 0, 0)
+texta5.Size = UDim2.new(0, 200, 0, 30)
+texta5.Font = Enum.Font.Ubuntu
+texta5.Text = "   Auto Buy Haki Color"
+texta5.TextColor3 = Color3.fromRGB(255, 255, 255)
+texta5.TextSize = 14.000
+texta5.TextWrapped = true
+texta5.TextXAlignment = Enum.TextXAlignment.Left
+
+ba9.Name = "ba9"
+ba9.Parent = a5
+ba9.BackgroundColor3 = Color3.fromRGB(0, 250, 60)
+ba9.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+ba9.Size = UDim2.new(0, 20, 0, 20)
+ba9.Font = Enum.Font.SourceSans
+ba9.Text = ""
+ba9.TextColor3 = Color3.fromRGB(255, 255, 255)
+ba9.TextSize = 18.000
+ba9.MouseButton1Down:connect(function()
+ba9.Visible = false
+ba10.Visible = true
+
+_G.hakicolor = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.hakicolor then
+-- script
+end
+
+end)
+end)
+
+ba10.Name = "ba10"
+ba10.Parent = a5
+ba10.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+ba10.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+ba10.Size = UDim2.new(0, 20, 0, 20)
+ba10.Font = Enum.Font.SourceSans
+ba10.Text = ""
+ba10.TextColor3 = Color3.fromRGB(255, 255, 255)
+ba10.TextSize = 18.000
+ba10.MouseButton1Down:connect(function()
+ba10.Visible = false
+ba9.Visible = true
+
+_G.hakicolor = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.hakicolor then
+local args = {
+              [1] = "Buso"
+          }
+          game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end
+end)
+end)
+
+--auto buy sword legend
+a6.Name = "a6"
+a6.Parent = scriptspage3
+a6.Active = falae
+a6.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+a6.Position = UDim2.new(0, 0, 0.4504392526, 0)
+a6.Size = UDim2.new(0, 498, 0, 30)
+UIa6.Parent = a6
+
+texta6.Parent = a6
+texta6.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+texta6.BackgroundTransparency = 1.000
+texta6.Position = UDim2.new(0, 0, 0, 0)
+texta6.Size = UDim2.new(0, 200, 0, 30)
+texta6.Font = Enum.Font.Ubuntu
+texta6.Text = "   Auto Buy Sword Legend"
+texta6.TextColor3 = Color3.fromRGB(255, 255, 255)
+texta6.TextSize = 14.000
+texta6.TextWrapped = true
+texta6.TextXAlignment = Enum.TextXAlignment.Left
+
+ba11.Name = "ba11"
+ba11.Parent = a6
+ba11.BackgroundColor3 = Color3.fromRGB(0, 250, 60)
+ba11.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+ba11.Size = UDim2.new(0, 20, 0, 20)
+ba11.Font = Enum.Font.SourceSans
+ba11.Text = ""
+ba11.TextColor3 = Color3.fromRGB(255, 255, 255)
+ba11.TextSize = 18.000
+ba11.MouseButton1Down:connect(function()
+ba11.Visible = false
+ba12.Visible = true
+
+_G.sword = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.sword then
+
+end
+end)
+end)
+
+ba12.Name = "ba12"
+ba12.Parent = a6
+ba12.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+ba12.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+ba12.Size = UDim2.new(0, 20, 0, 20)
+ba12.Font = Enum.Font.SourceSans
+ba12.Text = ""
+ba12.TextColor3 = Color3.fromRGB(255, 255, 255)
+ba12.TextSize = 18.000
+ba12.MouseButton1Down:connect(function()
+ba12.Visible = false
+ba11.Visible = true
+
+_G.sword = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.sword then
+
+local args = {
+                   [1] = "LegendarySwordDealer",
+                   [2] = "2"
+                }
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+
+end
+end)
+end)
+
+--auto random fruit
+a7.Name = "a7"
+a7.Parent = scriptspage3
+a7.Active = false
+a7.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+a7.Position = UDim2.new(0, 0, 0.5204392526, 0)
+a7.Size = UDim2.new(0, 498, 0, 30)
+UIa7.Parent = a7
+
+texta7.Parent = a7
+texta7.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+texta7.BackgroundTransparency = 1.000
+texta7.Position = UDim2.new(0, 0, 0, 0)
+texta7.Size = UDim2.new(0, 200, 0, 30)
+texta7.Font = Enum.Font.Ubuntu
+texta7.Text = "   Auto Random Fruit"
+texta7.TextColor3 = Color3.fromRGB(255, 255, 255)
+texta7.TextSize = 14.000
+texta7.TextWrapped = true
+texta7.TextXAlignment = Enum.TextXAlignment.Left
+
+ba13.Name = "ba13"
+ba13.Parent = a7
+ba13.BackgroundColor3 = Color3.fromRGB(0, 250, 60)
+ba13.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+ba13.Size = UDim2.new(0, 20, 0, 20)
+ba13.Font = Enum.Font.SourceSans
+ba13.Text = ""
+ba13.TextColor3 = Color3.fromRGB(255, 255, 255)
+ba13.TextSize = 18.000
+ba13.MouseButton1Down:connect(function()
+ba13.Visible = false
+ba14.Visible = true
+_G.random = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.random then
+
+end
+end)
+
+end)
+
+ba14.Name = "ba14"
+ba14.Parent = a7
+ba14.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+ba14.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+ba14.Size = UDim2.new(0, 20, 0, 20)
+ba14.Font = Enum.Font.SourceSans
+ba14.Text = ""
+ba14.TextColor3 = Color3.fromRGB(255, 255, 255)
+ba14.TextSize = 18.000
+ba14.MouseButton1Down:connect(function()
+ba14.Visible = false
+ba13.Visible = true
+
+_G.random = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.random then
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Cousin","Buy")
+end
+end)
+
+end)
+
+
+--bar auto
+
+--code use tool
+
+function Tooluse()
+game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild( "Sharkman Karate"))
+game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild( "Dragon Talon"))
+game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild( "Superhuman"))
+game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild( "Electric Claw"))
+game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild( "Death Step"))
+end
+
+--fram auto
+nl.Name = "nl"
+nl.Parent = scriptspage3
+nl.Active = true
+nl.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+nl.Position = UDim2.new(0, 0, 0.0304392526, 0)
+nl.Size = UDim2.new(0, 498, 0, 30)
+UInl.Parent = nl
+
+tnl.Parent = nl
+tnl.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+tnl.BackgroundTransparency = 1.000
+tnl.Position = UDim2.new(0.50662296, 0, 0.121392526, 0)
+tnl.Size = UDim2.new(0, 200, 0, 30)
+tnl.Font = Enum.Font.Ubuntu
+tnl.Text = "Auto Fram"
+tnl.TextColor3 = Color3.fromRGB(255, 255, 255)
+tnl.TextSize = 15.000
+tnl.TextWrapped = true
+
+bnn1.Name = "bnn1"
+bnn1.Parent = nl
+bnn1.BackgroundColor3 = Color3.fromRGB(0, 250, 60)
+bnn1.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+bnn1.Size = UDim2.new(0, 20, 0, 20)
+bnn1.Font = Enum.Font.SourceSans
+bnn1.Text = ""
+bnn1.TextColor3 = Color3.fromRGB(255, 255, 255)
+bnn1.TextSize = 18.000
+bnn1.MouseButton1Down:connect(function()
+bnn1.Visible = false
+bnn2.Visible = true
+if cnl.Text == "Bone" then
+_G.bone = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.bone then
+end
+end)
+end
+
+if cnl.Text == "Auto Ectoplasm" then
+_G.ship = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.ship then
+end
+end)
+end
+
+if cnl.Text == "Auto Rengoku" then
+_G.rengoku = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.rengoku then
+end
+end)
+
+_G.rengoku1 = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.rengoku1 then
+end
+end)
+end
+
+if cnl.Text == "Auto Law" then
+_G.Law = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.Law then
+end
+end)
+end
+
+v.HumanoidRootPart.Size = Vector3.new(2, 2, 2)
+--end script off
+end)
+
+
+--chọn fram item
+bnn2.Name = "bnn2"
+bnn2.Parent = nl
+bnn2.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+bnn2.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+bnn2.Size = UDim2.new(0, 20, 0, 20)
+bnn2.Font = Enum.Font.SourceSans
+bnn2.Text = ""
+bnn2.TextColor3 = Color3.fromRGB(255, 255, 255)
+bnn2.TextSize = 18.000
+bnn2.MouseButton1Down:connect(function()
+bnn2.Visible = false
+bnn1.Visible = true
+--ectoplasm
+if cnl.Text == "Auto Ectoplasm" then
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+_G.tp7 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp7 then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart 
+
+local location = CFrame.new(1000, 40, 32989) 
+
+local humanoid = game.Players.LocalPlayer.Character.Humanoid 
+
+pl.CFrame = location
+end
+end)
+wait(5)
+_G.tp7 = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp7 then
+end
+end)
+wait(2)
+_G.ship = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.ship then
+local Player = game:GetService('Players').LocalPlayer
+    for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
+      if v.Name == "Ship Steward [Lv. 1300]" then
+      v.HumanoidRootPart.CanCollide = false
+      v.HumanoidRootPart.Size = Vector3.new(60, 60, 5)
+      Player.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(35,0,0)
+      end
+      end
+      Click()
+      Tooluse()
+      local Player = game:GetService('Players').LocalPlayer
+    for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
+      if v.Name == "Cursed Captain [Lv. 1325] [Raid Boss]" then
+      v.HumanoidRootPart.CanCollide = false
+      v.HumanoidRootPart.Size = Vector3.new(60, 60, 5)
+      Player.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(35,0,0)
+      end
+      end
+      Click()
+      Tooluse()
+end
+end)
+
+end
+--Bone
+if cnl.Text == "Auto Bone" then
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+_G.tpbone = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tpbone then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart 
+
+local location = CFrame.new(-9503,142,5534) 
+
+local humanoid = game.Players.LocalPlayer.Character.Humanoid 
+
+pl.CFrame = location
+end
+end)
+wait(5)
+_G.tpbone = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tpbone then
+end
+end)
+wait(2) 
+_G.bone = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.bone then
+local Player = game:GetService('Players').LocalPlayer
+    for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
+      if v.Name == "Posessed Mummy [Lv. 2050]" then
+      v.HumanoidRootPart.CanCollide = false
+      v.HumanoidRootPart.Size = Vector3.new(60, 60, 5)
+      Player.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(35,0,0)
+      end
+      end
+      Click()
+      Tooluse()
+end
+end)
+end
+--renoku
+if cnl.Text == "Auto Rengoku" then
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+_G.tp8 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp8 then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart 
+
+local location = CFrame.new(5690, 30, -6390) 
+
+local humanoid = game.Players.LocalPlayer.Character.Humanoid 
+
+pl.CFrame = location
+end
+end)
+wait(5)
+_G.tp8 = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp8 then
+end
+end)
+wait(2)
+_G.rengoku1 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.rengoku1 then
+
+  
+if not game.Players.LocalPlayer.Character:FindFirstChild("Hidden Key") then  
+local Player = game:GetService('Players').LocalPlayer
+    for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
+      if v.Name == "Snow Lurker [Lv. 1375]" then
+      v.HumanoidRootPart.CanCollide = false
+      v.HumanoidRootPart.Size = Vector3.new(60, 60, 5)
+      Player.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(35,0,0)
+      end
+      end
+      Click()
+      Tooluse()
+      local Player = game:GetService('Players').LocalPlayer
+    for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
+      if v.Name == "Awakened Ice Admiral [Lv. 1400] [Boss]" then
+      v.HumanoidRootPart.CanCollide = false
+      v.HumanoidRootPart.Size = Vector3.new(60, 60, 5)
+      Player.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(35,0,0)
+      end
+      end
+      Click()
+      Tooluse()
+      
+end
+
+end
+end)
+
+_G.rengoku = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.rengoku then
+
+if game.Players.LocalPlayer.Character:FindFirstChild("Hidden Key") then 
+
+game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild( "Hidden Key"))
+
+local CFrameEnd = CFrame.new(6574,297,-6965) -- Place your coords in here
+local Time = 10-- Time in seconds
+local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd})
+tween:Play()
+
+_G.rengoku1 = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.rengoku1 then
+end
+end)
+
+end
+end
+end)
+end
+
+if cnl.Text == "Auto Law" then
+_G.Law = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.Law then
+
+if  game.Players.LocalPlayer.Character.Humanoid.Health > 3000 then
+local Player = game:GetService('Players').LocalPlayer
+    for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
+      if v.Name == "Order [Lv. 1250] [Raid Boss]" then
+      v.HumanoidRootPart.CanCollide = false
+      v.HumanoidRootPart.Size = Vector3.new(60, 60, 10)
+      Player.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(35,0,0)
+      end
+      end
+      Click()
+      Tooluse()
+      end
+      if  game.Players.LocalPlayer.Character.Humanoid.Health < 3000 then
+      local pl = game.Players.LocalPlayer.Character.HumanoidRootPart 
+local location = CFrame.new(-6547, 850, -5011) 
+local humanoid = game.Players.LocalPlayer.Character.Humanoid 
+pl.CFrame = location
+      end
+      end
+      end)
+end
+
+--end script
+end)
+
+
+
+
+
+
+cnl.Name = "cnl"
+cnl.Parent = nl
+cnl.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+cnl.Position = UDim2.new(0, 0, 0, 0)
+cnl.Size = UDim2.new(0, 200, 0, 30)
+cnl.Font = Enum.Font.SourceSans
+cnl.Text = "Auto : Lựa Chọn Fram"
+cnl.TextColor3 = Color3.fromRGB(255, 255, 255)
+cnl.TextSize = 18.000
+cnl.MouseButton1Down:connect(function()
+barnl.Visible = true
+
+end)
+
+barnl.Name = "barnl"
+barnl.Parent = scriptspage3
+barnl.Active = true
+barnl.BackgroundTransparency = 0.000
+barnl.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+barnl.Position = UDim2.new(0, 0, 0.0904392526, 0)
+barnl.Size = UDim2.new(0, 200, 0, 170)
+barnl.Visible = false
+
+ni1.Name = "ni1"
+ni1.Parent = barnl
+ni1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ni1.Position = UDim2.new(0, 0, 0.0104392526, 0)
+ni1.Size = UDim2.new(0, 200, 0, 20)
+ni1.Font = Enum.Font.SourceSans
+ni1.Text = "Auto Ectoplasm"
+ni1.TextColor3 = Color3.fromRGB(255, 255, 255)
+ni1.TextSize = 18.000
+ni1.MouseButton1Down:connect(function()
+barnl.Visible = false
+cnl.Text = "Auto Ectoplasm"
+end)
+
+ni2.Name = "ni2"
+ni2.Parent = barnl
+ni2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ni2.Position = UDim2.new(0, 0, 0.1604392526, 0)
+ni2.Size = UDim2.new(0, 200, 0, 20)
+ni2.Font = Enum.Font.SourceSans
+ni2.Text = "Auto Bone"
+ni2.TextColor3 = Color3.fromRGB(255, 255, 255)
+ni2.TextSize = 18.000
+ni2.MouseButton1Down:connect(function()
+barnl.Visible = false
+cnl.Text = "Auto Bone"
+
+end)
+
+ni3.Name = "ni3"
+ni3.Parent = barnl
+ni3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ni3.Position = UDim2.new(0, 0, 0.3104392526, 0)
+ni3.Size = UDim2.new(0, 200, 0, 20)
+ni3.Font = Enum.Font.SourceSans
+ni3.Text = "Auto Katakuri"
+ni3.TextColor3 = Color3.fromRGB(255, 255, 255)
+ni3.TextSize = 18.000
+ni3.MouseButton1Down:connect(function()
+barnl.Visible = false
+cnl.Text = "Auto Katakuri"
+
+end)
+
+ni4.Name = "ni4"
+ni4.Parent = barnl
+ni4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ni4.Position = UDim2.new(0, 0, 0.4604392526, 0)
+ni4.Size = UDim2.new(0, 200, 0, 20)
+ni4.Font = Enum.Font.SourceSans
+ni4.Text = "Auto Rengoku"
+ni4.TextColor3 = Color3.fromRGB(255, 255, 255)
+ni4.TextSize = 18.000
+ni4.MouseButton1Down:connect(function()
+barnl.Visible = false
+cnl.Text = "Auto Rengoku"
+
+end)
+
+ni5.Name = "ni5"
+ni5.Parent = barnl
+ni5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ni5.Position = UDim2.new(0, 0, 0.6104392526, 0)
+ni5.Size = UDim2.new(0, 200, 0, 20)
+ni5.Font = Enum.Font.SourceSans
+ni5.Text = "Auto Lv"
+ni5.TextColor3 = Color3.fromRGB(255, 255, 255)
+ni5.TextSize = 18.000
+ni5.MouseButton1Down:connect(function()
+barnl.Visible = false
+cnl.Text = "Auto Lv"
+
+end)
+
+ni6.Name = "ni6"
+ni6.Parent = barnl
+ni6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ni6.Position = UDim2.new(0, 0, 0.7604392526, 0)
+ni6.Size = UDim2.new(0, 200, 0, 20)
+ni6.Font = Enum.Font.SourceSans
+ni6.Text = "Auto Saber"
+ni6.TextColor3 = Color3.fromRGB(255, 255, 255)
+ni6.TextSize = 18.000
+ni6.MouseButton1Down:connect(function()
+barnl.Visible = false
+cnl.Text = "Auto Saber"
+
+end)
+
+ni7.Name = "ni7"
+ni7.Parent = barnl
+ni7.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ni7.Position = UDim2.new(0, 0, 0.9104392526, 0)
+ni7.Size = UDim2.new(0, 200, 0, 20)
+ni7.Font = Enum.Font.SourceSans
+ni7.Text = "Auto Law"
+ni7.TextColor3 = Color3.fromRGB(255, 255, 255)
+ni7.TextSize = 18.000
+ni7.MouseButton1Down:connect(function()
+barnl.Visible = false
+cnl.Text = "Auto Law"
+
+end)
+
+-- Scripts:
+
+local function LDLMGWH_fake_script() -- home.LocalScript 
+	local script = Instance.new('LocalScript', home)
+
+	script.Parent.MouseButton1Down:connect(function()
+		script.Parent.Parent.hometab.Visible = true
+		script.Parent.Parent.scriptspage.Visible = false
+		script.Parent.Parent.hubspage.Visible = false
+          script.Parent.Parent.scriptspage1.Visible = false
+          script.Parent.Parent.scriptspage2.Visible = false
+           script.Parent.Parent.scriptspage3.Visible = false
+           
+	end)
+end
+coroutine.wrap(LDLMGWH_fake_script)()
+local function OJTG_fake_script() -- scripts.LocalScript 
+	local script = Instance.new('LocalScript', scripts)
+
+	script.Parent.MouseButton1Down:connect(function()
+		script.Parent.Parent.scriptspage.Visible = true
+		script.Parent.Parent.hometab.Visible = false
+		script.Parent.Parent.hubspage.Visible = false
+          script.Parent.Parent.scriptspage1.Visible = false
+           script.Parent.Parent.scriptspage2.Visible = false
+           script.Parent.Parent.scriptspage3.Visible = false
+          
+	end)
+end
+coroutine.wrap(OJTG_fake_script)()
+local function OJTGA_fake_script() --buygui
+local script = Instance.new('LocalScript', buygui)
+
+    script.Parent.MouseButton1Down:connect(function()
+        script.Parent.Parent.scriptspage1.Visible = true
+        script.Parent.Parent.scriptspage.Visible = false
+        script.Parent.Parent.hometab.Visible = false
+        script.Parent.Parent.hubspage.Visible = false
+        script.Parent.Parent.scriptspage2.Visible = false
+        script.Parent.Parent.scriptspage3.Visible = false
+           
+    end)
+    end
+
+coroutine.wrap(OJTGA_fake_script)()
+local function OJTGB_fake_script() --miss
+local script = Instance.new('LocalScript', miss)
+
+    script.Parent.MouseButton1Down:connect(function()
+        script.Parent.Parent.scriptspage2.Visible = true
+        script.Parent.Parent.scriptspage.Visible = false
+        script.Parent.Parent.hometab.Visible = false
+        script.Parent.Parent.hubspage.Visible = false
+         script.Parent.Parent.scriptspage1.Visible = false
+         script.Parent.Parent.scriptspage3.Visible = false
+             
+    end)
+    end
+
+      coroutine.wrap(OJTGB_fake_script)()
+local function OJTGC_fake_script() --auto
+local script = Instance.new('LocalScript', raid)
+
+    script.Parent.MouseButton1Down:connect(function()
+        script.Parent.Parent.scriptspage3.Visible = true
+        script.Parent.Parent.scriptspage.Visible = false
+        script.Parent.Parent.hometab.Visible = false
+        script.Parent.Parent.hubspage.Visible = false
+         script.Parent.Parent.scriptspage1.Visible = false
+         script.Parent.Parent.scriptspage2.Visible = false
+             
+    end)
+    end
+
+coroutine.wrap(OJTGC_fake_script)()
+local function ASEUYNU_fake_script() -- hubs.LocalScript 
+	local script = Instance.new('LocalScript', hubs)
+
+	script.Parent.MouseButton1Down:connect(function()
+script.Parent.Parent.hubspage.Visible = false
+		script.Parent.Parent.scriptspage.Visible = false
+		script.Parent.Parent.hometab.Visible = true
+           script.Parent.Parent.scriptspage1.Visible = false
+           script.Parent.Parent.scriptspage2.Visible = false
+          script.Parent.Parent.scriptspage3.Visible = false
+           
+	end)
+end
+coroutine.wrap(ASEUYNU_fake_script)()
+local function GBKPG_fake_script() -- hometab.LocalScript 
+	local script = Instance.new('LocalScript', hometab)
+
+	local frame = script.Parent
+	
+	
+	
+	local player = game.Players.LocalPlayer
+	
+	
+	
+	local userId = player.UserId
+	
+	local thumbType = Enum.ThumbnailType.AvatarBust
+	 
+	local thumbSize = Enum.ThumbnailSize.Size420x420
+	
+	local content, isReady = game.Players:GetUserThumbnailAsync(userId, thumbType, thumbSize)
+	
+	
+	
+	
+	
+	
+	
+end
+coroutine.wrap(GBKPG_fake_script)()
+ 
+ --bouty
+ local Guibouty = Instance.new("ScreenGui")
+ local bbon = Instance.new("TextButton")
+local bboff = Instance.new("TextButton")
+local text1 = Instance.new("TextLabel")
+local bars = Instance.new("Frame")
+local barr1 = Instance.new("Frame")
+local barr2 = Instance.new("Frame")
+local bountybox = Instance.new("TextBox")
+local bcheck3 = Instance.new("TextButton")
+local bcheck4 = Instance.new("TextButton")
+local t1 = Instance.new("TextLabel")
+local zone = Instance.new("TextButton")
+local zone1 = Instance.new("TextButton")
+local UIbarr1 = Instance.new("UICorner")
+local UIbarr2 = Instance.new("UICorner")
+local UIload = Instance.new("UICorner")
+local cc1 = Instance.new("UICorner")
+local cc2 = Instance.new("UICorner")
+local cc3 = Instance.new("UICorner")
+local cc4 = Instance.new("UICorner")
+local cc5 = Instance.new("UICorner")
+local UIoff = Instance.new("UICorner")
+local UIon = Instance.new("UICorner")
+local UIbarbouty = Instance.new("UICorner")
+
+Guibouty.Name = "Guibouty"
+Guibouty.Parent = game.CoreGui
+Guibouty.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+bboff.Visible = false
+bbon.Visible = true
+
+--bouty gui
+
+bboff.Name = "bboff"
+bboff.Parent = Guibouty
+bboff.BackgroundColor3 = Color3.fromRGB(0, 250, 60)
+bboff.BorderSizePixel = 0
+bboff.Position = UDim2.new(0.85162201, 0, 0.663285708, 0)
+bboff.Size = UDim2.new(0, 40, 0, 40)
+bboff.Font = Enum.Font.Ubuntu
+bboff.Text = ""
+bboff.TextColor3 = Color3.fromRGB(250, 255, 250)
+bboff.TextSize = 20.000
+UIoff.Parent = bboff
+bboff.MouseButton1Down:connect(function()
+barr1.Visible = false
+game.CoreGui.Guibouty.bboff.Visible = false
+game.CoreGui.Guibouty.bbon.Visible = true
+end)
+
+bbon.Name = "bbon"
+bbon.Parent = Guibouty
+bbon.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+bbon.BorderSizePixel = 0
+bbon.Position = UDim2.new(0.85162201, 0, 0.663285708, 0)
+bbon.Size = UDim2.new(0, 40, 0, 40)
+bbon.Font = Enum.Font.Ubuntu
+bbon.Text = ""
+bbon.TextColor3 = Color3.fromRGB(250, 255, 250)
+bbon.TextSize = 20.000
+UIon.Parent = bbon
+bbon.MouseButton1Down:connect(function()
+barr1.Visible = true
+game.CoreGui.Guibouty.bbon.Visible = false
+game.CoreGui.Guibouty.bboff.Visible = true
+end)
+
+barr1.Name = "barr1"
+barr1.Parent = Guibouty
+barr1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+barr1.Position = UDim2.new(0.358126051, 0, 0.258999169, 0)
+barr1.Size = UDim2.new(0, 310, 0, 150)
+UIbarr1.Parent = barr1
+barr1.Visible = false
+
+text1.Parent = barr1
+text1.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+text1.BackgroundTransparency = 1.000
+text1.Position = UDim2.new(0.24631148, 0, 0.0704392526, 0)
+text1.Size = UDim2.new(0, 170, 0, 30)
+text1.Font = Enum.Font.Ubuntu
+text1.Text = "Bounty Gui"
+text1.TextColor3 = Color3.fromRGB(255, 255, 255)
+text1.TextSize = 18.000
+text1.TextWrapped = true
+
+bars.Name = "bars"
+bars.Parent = barr1
+bars.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+bars.Position = UDim2.new(0.10631148, 0, 0.2704392526, 0)
+bars.Size = UDim2.new(0, 250, 0, 2)
+
+bountybox.Name = "bountybox"
+bountybox.Parent = barr1
+bountybox.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+bountybox.Position = UDim2.new(0.10631148, 0, 0.3204392526, 0)
+bountybox.Size = UDim2.new(0, 250, 0, 25)
+bountybox.Font = Enum.Font.SourceSans
+bountybox.Text = "Name Player"
+bountybox.TextColor3 = Color3.fromRGB(0, 0, 0)
+bountybox.TextSize = 18.000
+cc1.Parent = bountybox
+
+barr2.Name = "barr2"
+barr2.Parent = barr1
+barr2.Active = true
+barr2.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+barr2.Position = UDim2.new(0.10631148, 0, 0.5404392526, 0)
+barr2.Size = UDim2.new(0, 250, 0, 30)
+UIbarr2.Parent = barr2
+
+t1.Parent = barr2
+t1.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+t1.BackgroundTransparency = 1.000
+t1.Position = UDim2.new(0, 0, 0, 0)
+t1.Size = UDim2.new(0, 100, 0, 30)
+t1.Font = Enum.Font.Ubuntu
+t1.Text = "TP Player"
+t1.TextColor3 = Color3.fromRGB(255, 255, 255)
+t1.TextSize = 14.000
+t1.TextWrapped = true
+t1.TextXAlignment = Enum.TextXAlignment.Left
+
+bcheck3.Name = "bcheck3"
+bcheck3.Parent = barr2
+bcheck3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+bcheck3.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+bcheck3.Size = UDim2.new(0, 20, 0, 20)
+bcheck3.Font = Enum.Font.SourceSans
+bcheck3.Text = ""
+bcheck3.TextColor3 = Color3.fromRGB(0, 0, 0)
+bcheck3.TextSize = 18.000
+cc3.Parent = bcheck3
+bcheck3.MouseButton1Down:connect(function()
+bcheck3.Visible = false
+bcheck4.Visible = true
+_G.bouty = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.bouty then
+
+Click()
+
+local lplayer = game:GetService('Players').LocalPlayer
+ 
+local yeeting = false
+function GetPlayer(String)
+local Found = {}
+local strl = String:lower()
+if strl == "all" then
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+table.insert(Found,v)
+end
+elseif strl == "Random" then
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+if v.Name ~= lplayer.Name then
+table.insert(Found,v)
+end
+end 
+elseif strl == "me" then
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+if v.Name == lplayer.Name then
+table.insert(Found,v)
+end
+end 
+else
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+if v.Name:lower():sub(1, #String) == String:lower() then
+table.insert(Found,v)
+end
+end 
+end
+return Found 
+end
+function ahh(thing)
+local asd = {'yeet','gui','yeet gui'}
+local f = string.upper(asd[math.random(1,#asd)])
+return f
+end
+
+local target = unpack(GetPlayer(bountybox.Text)).Character
+ 
+game:GetService'Players'.LocalPlayer.Character.HumanoidRootPart.CFrame = target.Head.CFrame;coin.Location = target.Head.Position game["Run Service"].Heartbeat:wait()
+
+end
+end)
+for i,v in next, game:GetService('Players'):GetPlayers() do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+pcall(function()
+v.Character.HumanoidRootPart.Size = Vector3.new(20, 20, 20)
+v.Character.HumanoidRootPart.Transparency = 1
+v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really black")
+v.Character.HumanoidRootPart.Material = "Neon"
+v.Character.HumanoidRootPart.CanCollide = false
+end)
+end
+end
+
+end)
+
+bcheck4.Name = "bcheck4"
+bcheck4.Parent = barr2
+bcheck4.BackgroundColor3 = Color3.fromRGB(0, 255, 60)
+bcheck4.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+bcheck4.Size = UDim2.new(0, 20, 0, 20)
+bcheck4.Font = Enum.Font.SourceSans
+bcheck4.Text = ""
+bcheck4.TextColor3 = Color3.fromRGB(0, 0, 0)
+bcheck4.TextSize = 18.000
+bcheck4.Visible = false
+cc4.Parent = bcheck4
+bcheck4.MouseButton1Down:connect(function()
+bcheck4.Visible = false
+bcheck3.Visible = true
+_G.bouty = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.bouty then
+
+end
+end)
+
+for i,v in next, game:GetService('Players'):GetPlayers() do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+pcall(function()
+v.Character.HumanoidRootPart.Size = Vector3.new(2, 2, 2)
+v.Character.HumanoidRootPart.Transparency = 1
+v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really black")
+v.Character.HumanoidRootPart.Material = "Neon"
+v.Character.HumanoidRootPart.CanCollide = false
+end)
+end
+end
+
+end)
+
+--tp zone
+
+zone.Name = "zone"
+zone.Parent = barr1
+zone.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+zone.Position = UDim2.new(0.27631148, 0, 0.7704392526, 0)
+zone.Size = UDim2.new(0, 150, 0, 25)
+zone.Font = Enum.Font.SourceSans
+zone.Text = "On | Auto Tp Zone"
+zone.TextColor3 = Color3.fromRGB(0, 0, 0)
+zone.TextSize = 18.000
+UIload.Parent = zone
+zone.MouseButton1Down:connect(function()
+zone.Visible = false
+zone1.Visible = true
+_G.Zone = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.Zone then
+if  game.Players.LocalPlayer.Character.Humanoid.Health < 4000 then
+
+bcheck3.Visible = true
+bcheck4.Visible = false
+
+_G.bouty = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.bouty then
+end
+end)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,100,0)
+end
+end
+end)
+end)
+
+zone1.Visible = false
+zone1.Name = "zone1"
+zone1.Parent = barr1
+zone1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+zone1.Position = UDim2.new(0.27631148, 0, 0.7704392526, 0)
+zone1.Size = UDim2.new(0, 150, 0, 25)
+zone1.Font = Enum.Font.SourceSans
+zone1.Text = "Off | Auto Tp Zone"
+zone1.TextColor3 = Color3.fromRGB(0, 0, 0)
+zone1.TextSize = 18.000
+cc5.Parent = zone1
+zone1.MouseButton1Down:connect(function()
+zone1.Visible = false
+zone.Visible = true
+_G.Zone = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.Zone then
+end
+end)
+end)
