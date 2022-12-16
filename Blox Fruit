@@ -2611,7 +2611,7 @@ end
 end)
 end
 
-if cnl.Text == "Ectoplasm" then
+if cnl.Text == "Auto Ectoplasm" then
 _G.ship = false
 
 game:GetService('RunService').RenderStepped:connect(function()
@@ -2620,7 +2620,7 @@ end
 end)
 end
 
-if cnl.Text == "Rengoku" then
+if cnl.Text == "Auto Rengoku" then
 _G.rengoku = false
 
 game:GetService('RunService').RenderStepped:connect(function()
