@@ -103,6 +103,7 @@ local ni3 = Instance.new("TextButton")
 local ni4 = Instance.new("TextButton")
 local ni5 = Instance.new("TextButton")
 local ni6 = Instance.new("TextButton")
+local ni7 = Instance.new("TextButton")
 
 local a1 = Instance.new("Frame")
 local ta1 = Instance.new("TextButton")
@@ -2635,8 +2636,17 @@ end
 end)
 end
 
-v.HumanoidRootPart.Size = Vector3.new(2, 2, 2)
+if cnl.Text == "Auto Law" then
+_G.Law = false
 
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.Law then
+end
+end)
+end
+
+v.HumanoidRootPart.Size = Vector3.new(2, 2, 2)
+--end script off
 end)
 
 
@@ -2654,7 +2664,7 @@ bnn2.MouseButton1Down:connect(function()
 bnn2.Visible = false
 bnn1.Visible = true
 --ectoplasm
-if cnl.Text == "Ectoplasm" then
+if cnl.Text == "Auto Ectoplasm" then
 game.Players.LocalPlayer.Character.Humanoid.Health = 0
 _G.tp7 = true
 
@@ -2676,7 +2686,7 @@ game:GetService('RunService').RenderStepped:connect(function()
 if _G.tp7 then
 end
 end)
-wait(6)
+wait(2)
 _G.ship = true
 
 game:GetService('RunService').RenderStepped:connect(function()
@@ -2691,12 +2701,22 @@ local Player = game:GetService('Players').LocalPlayer
       end
       Click()
       Tooluse()
+      local Player = game:GetService('Players').LocalPlayer
+    for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
+      if v.Name == "Cursed Captain [Lv. 1325] [Raid Boss]" then
+      v.HumanoidRootPart.CanCollide = false
+      v.HumanoidRootPart.Size = Vector3.new(60, 60, 5)
+      Player.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(35,0,0)
+      end
+      end
+      Click()
+      Tooluse()
 end
 end)
 
 end
 --Bone
-if cnl.Text == "Bone" then
+if cnl.Text == "Auto Bone" then
 game.Players.LocalPlayer.Character.Humanoid.Health = 0
 _G.tpbone = true
 
@@ -2718,12 +2738,11 @@ game:GetService('RunService').RenderStepped:connect(function()
 if _G.tpbone then
 end
 end)
-wait(6) 
+wait(2) 
 _G.bone = true
 
 game:GetService('RunService').RenderStepped:connect(function()
 if _G.bone then
-Click()
 local Player = game:GetService('Players').LocalPlayer
     for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
       if v.Name == "Posessed Mummy [Lv. 2050]" then
@@ -2738,7 +2757,7 @@ end
 end)
 end
 --renoku
-if cnl.Text == "Rengoku" then
+if cnl.Text == "Auto Rengoku" then
 game.Players.LocalPlayer.Character.Humanoid.Health = 0
 _G.tp8 = true
 
@@ -2760,7 +2779,7 @@ game:GetService('RunService').RenderStepped:connect(function()
 if _G.tp8 then
 end
 end)
-wait(5)
+wait(2)
 _G.rengoku1 = true
 
 game:GetService('RunService').RenderStepped:connect(function()
@@ -2778,6 +2797,17 @@ local Player = game:GetService('Players').LocalPlayer
       end
       Click()
       Tooluse()
+      local Player = game:GetService('Players').LocalPlayer
+    for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
+      if v.Name == "Awakened Ice Admiral [Lv. 1400] [Boss]" then
+      v.HumanoidRootPart.CanCollide = false
+      v.HumanoidRootPart.Size = Vector3.new(60, 60, 5)
+      Player.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(35,0,0)
+      end
+      end
+      Click()
+      Tooluse()
+      
 end
 
 end
@@ -2809,7 +2839,33 @@ end
 end)
 end
 
+if cnl.Text == "Auto Law" then
+_G.Law = true
 
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.Law then
+
+if  game.Players.LocalPlayer.Character.Humanoid.Health > 3000 then
+local Player = game:GetService('Players').LocalPlayer
+    for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
+      if v.Name == "Order [Lv. 1250] [Raid Boss]" then
+      v.HumanoidRootPart.CanCollide = false
+      v.HumanoidRootPart.Size = Vector3.new(60, 60, 10)
+      Player.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(35,0,0)
+      end
+      end
+      Click()
+      Tooluse()
+      end
+      if  game.Players.LocalPlayer.Character.Humanoid.Health < 3000 then
+      local pl = game.Players.LocalPlayer.Character.HumanoidRootPart 
+local location = CFrame.new(-6547, 850, -5011) 
+local humanoid = game.Players.LocalPlayer.Character.Humanoid 
+pl.CFrame = location
+      end
+      end
+      end)
+end
 
 --end script
 end)
@@ -2825,7 +2881,7 @@ cnl.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 cnl.Position = UDim2.new(0, 0, 0, 0)
 cnl.Size = UDim2.new(0, 200, 0, 30)
 cnl.Font = Enum.Font.SourceSans
-cnl.Text = "Lựa Chọn Fram"
+cnl.Text = "Auto : Lựa Chọn Fram"
 cnl.TextColor3 = Color3.fromRGB(255, 255, 255)
 cnl.TextSize = 18.000
 cnl.MouseButton1Down:connect(function()
@@ -2848,12 +2904,12 @@ ni1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 ni1.Position = UDim2.new(0, 0, 0.0104392526, 0)
 ni1.Size = UDim2.new(0, 200, 0, 20)
 ni1.Font = Enum.Font.SourceSans
-ni1.Text = "Ectoplasm"
+ni1.Text = "Auto Ectoplasm"
 ni1.TextColor3 = Color3.fromRGB(255, 255, 255)
 ni1.TextSize = 18.000
 ni1.MouseButton1Down:connect(function()
 barnl.Visible = false
-cnl.Text = "Ectoplasm"
+cnl.Text = "Auto Ectoplasm"
 end)
 
 ni2.Name = "ni2"
@@ -2862,12 +2918,12 @@ ni2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 ni2.Position = UDim2.new(0, 0, 0.1604392526, 0)
 ni2.Size = UDim2.new(0, 200, 0, 20)
 ni2.Font = Enum.Font.SourceSans
-ni2.Text = "Bone"
+ni2.Text = "Auto Bone"
 ni2.TextColor3 = Color3.fromRGB(255, 255, 255)
 ni2.TextSize = 18.000
 ni2.MouseButton1Down:connect(function()
 barnl.Visible = false
-cnl.Text = "Bone"
+cnl.Text = "Auto Bone"
 
 end)
 
@@ -2877,12 +2933,12 @@ ni3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 ni3.Position = UDim2.new(0, 0, 0.3104392526, 0)
 ni3.Size = UDim2.new(0, 200, 0, 20)
 ni3.Font = Enum.Font.SourceSans
-ni3.Text = "Katakuri"
+ni3.Text = "Auto Katakuri"
 ni3.TextColor3 = Color3.fromRGB(255, 255, 255)
 ni3.TextSize = 18.000
 ni3.MouseButton1Down:connect(function()
 barnl.Visible = false
-cnl.Text = "Katakuri"
+cnl.Text = "Auto Katakuri"
 
 end)
 
@@ -2892,12 +2948,12 @@ ni4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 ni4.Position = UDim2.new(0, 0, 0.4604392526, 0)
 ni4.Size = UDim2.new(0, 200, 0, 20)
 ni4.Font = Enum.Font.SourceSans
-ni4.Text = "Rengoku"
+ni4.Text = "Auto Rengoku"
 ni4.TextColor3 = Color3.fromRGB(255, 255, 255)
 ni4.TextSize = 18.000
 ni4.MouseButton1Down:connect(function()
 barnl.Visible = false
-cnl.Text = "Rengoku"
+cnl.Text = "Auto Rengoku"
 
 end)
 
@@ -2907,12 +2963,12 @@ ni5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 ni5.Position = UDim2.new(0, 0, 0.6104392526, 0)
 ni5.Size = UDim2.new(0, 200, 0, 20)
 ni5.Font = Enum.Font.SourceSans
-ni5.Text = "Lv"
+ni5.Text = "Auto Lv"
 ni5.TextColor3 = Color3.fromRGB(255, 255, 255)
 ni5.TextSize = 18.000
 ni5.MouseButton1Down:connect(function()
 barnl.Visible = false
-cnl.Text = "Lv"
+cnl.Text = "Auto Lv"
 
 end)
 
@@ -2922,12 +2978,27 @@ ni6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 ni6.Position = UDim2.new(0, 0, 0.7604392526, 0)
 ni6.Size = UDim2.new(0, 200, 0, 20)
 ni6.Font = Enum.Font.SourceSans
-ni6.Text = "Saber"
+ni6.Text = "Auto Saber"
 ni6.TextColor3 = Color3.fromRGB(255, 255, 255)
 ni6.TextSize = 18.000
 ni6.MouseButton1Down:connect(function()
 barnl.Visible = false
-cnl.Text = "Saber"
+cnl.Text = "Auto Saber"
+
+end)
+
+ni7.Name = "ni7"
+ni7.Parent = barnl
+ni7.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ni7.Position = UDim2.new(0, 0, 0.9104392526, 0)
+ni7.Size = UDim2.new(0, 200, 0, 20)
+ni7.Font = Enum.Font.SourceSans
+ni7.Text = "Auto Law"
+ni7.TextColor3 = Color3.fromRGB(255, 255, 255)
+ni7.TextSize = 18.000
+ni7.MouseButton1Down:connect(function()
+barnl.Visible = false
+cnl.Text = "Auto Law"
 
 end)
 
