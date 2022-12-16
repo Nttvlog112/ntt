@@ -1,4 +1,4 @@
-
+game.Players.localPlayer:Kick("Florentino:))")
 local UIGUI = Instance.new("ScreenGui")
 local text1 = Instance.new("TextLabel")
 local bars = Instance.new("Frame")
