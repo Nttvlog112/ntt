@@ -2602,7 +2602,8 @@ bnn1.TextSize = 18.000
 bnn1.MouseButton1Down:connect(function()
 bnn1.Visible = false
 bnn2.Visible = true
-if cnl.Text == "Bone" then
+
+if cnl.Text == "Auto Bone" then
 _G.bone = false
 
 game:GetService('RunService').RenderStepped:connect(function()
@@ -2645,9 +2646,28 @@ end
 end)
 end
 
+if cnl.Text == "Auto Katakuri" then
+_G.Kata = false
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.Kata then
+end
+end)
+end
+
+if cnl.Text == "Auto Saber" then
+_G.saber = false
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.saber then
+
+end
+end)
+end
 v.HumanoidRootPart.Size = Vector3.new(2, 2, 2)
 --end script off
 end)
+
+
+
 
 
 --chọn fram item
@@ -2857,6 +2877,88 @@ pl.CFrame = location
       end)
 end
 
+if cnl.Text == "Auto Katakuri" then
+_G.Kata = true
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.Kata then
+
+local Player = game:GetService('Players').LocalPlayer
+
+for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
+      if v.Name == "Cookie Crafter [Lv. 2200]" then
+      v.HumanoidRootPart.CanCollide = false
+      v.HumanoidRootPart.Size = Vector3.new(60, 60, 5)     
+local Time = 0-- Time in seconds -- thời gian đi tới
+local CFrameEnd =  v.HumanoidRootPart.CFrame -- tọa độ tp tới
+local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd * CFrame.new(35,10,0) })
+tween:Play()
+tween.Completed:Wait(X)
+end
+end
+Click()
+      Tooluse()
+ --boss
+      local Player = game:GetService('Players').LocalPlayer
+
+for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
+      if v.Name == "Cookie Crafter [Lv. 2200]" then
+      v.HumanoidRootPart.CanCollide = false
+      v.HumanoidRootPart.Size = Vector3.new(60, 60, 5)     
+local Time = 0-- Time in seconds -- thời gian đi tới
+local CFrameEnd =  v.HumanoidRootPart.CFrame -- tọa độ tp tới
+local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd * CFrame.new(35,10,0) })
+tween:Play()
+tween.Completed:Wait(X)
+end
+end
+Click()
+      Tooluse()
+
+end
+end)
+end
+
+if cnl.Text == "Auto Saber" then
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+_G.tp4 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp4 then
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart 
+
+local location = CFrame.new(-1327, 23, 216) 
+
+local humanoid = game.Players.LocalPlayer.Character.Humanoid 
+
+pl.CFrame = location
+end
+end)
+wait(5)
+_G.tp4 = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tp4 then
+end
+end)
+wait(2)
+_G.saber = true
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.saber then
+
+local Player = game:GetService('Players').LocalPlayer
+    for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
+      if v.Name == "Saber Expert [Lv. 200] [Boss]" then
+      v.HumanoidRootPart.CanCollide = false
+      v.HumanoidRootPart.Size = Vector3.new(60, 60, 10)
+      Player.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(35,0,0)
+      end
+      end
+      Click()
+      Tooluse()
+
+end
+end)
+end
 --end script
 end)
 
@@ -2953,12 +3055,12 @@ ni5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 ni5.Position = UDim2.new(0, 0, 0.6104392526, 0)
 ni5.Size = UDim2.new(0, 200, 0, 20)
 ni5.Font = Enum.Font.SourceSans
-ni5.Text = "Auto Lv"
+ni5.Text = "Auto Admin Boss"
 ni5.TextColor3 = Color3.fromRGB(255, 255, 255)
 ni5.TextSize = 18.000
 ni5.MouseButton1Down:connect(function()
 barnl.Visible = false
-cnl.Text = "Auto Lv"
+cnl.Text = "Auto Admin Boss"
 
 end)
 
