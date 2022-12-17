@@ -2716,7 +2716,7 @@ local Player = game:GetService('Players').LocalPlayer
       if v.Name == "Ship Steward [Lv. 1300]" then
       v.HumanoidRootPart.CanCollide = false
       v.HumanoidRootPart.Size = Vector3.new(60, 60, 5)
-      Player.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(35,0,0)
+      Player.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(35,12,0)
       end
       end
       Click()
@@ -2726,7 +2726,7 @@ local Player = game:GetService('Players').LocalPlayer
       if v.Name == "Cursed Captain [Lv. 1325] [Raid Boss]" then
       v.HumanoidRootPart.CanCollide = false
       v.HumanoidRootPart.Size = Vector3.new(60, 60, 5)
-      Player.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(35,0,0)
+      Player.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(35,12,0)
       end
       end
       Click()
@@ -2768,7 +2768,7 @@ local Player = game:GetService('Players').LocalPlayer
       if v.Name == "Posessed Mummy [Lv. 2050]" then
       v.HumanoidRootPart.CanCollide = false
       v.HumanoidRootPart.Size = Vector3.new(60, 60, 5)
-      Player.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(35,0,0)
+      Player.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(35,12,0)
       end
       end
       Click()
@@ -2809,10 +2809,10 @@ if _G.rengoku1 then
 if not game.Players.LocalPlayer.Character:FindFirstChild("Hidden Key") then  
 local Player = game:GetService('Players').LocalPlayer
     for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
-      if v.Name == "Snow Lurker [Lv. 1375]" then
+      if v.Name == "Arctic Warrior [Lv. 1350]" then
       v.HumanoidRootPart.CanCollide = false
       v.HumanoidRootPart.Size = Vector3.new(60, 60, 5)
-      Player.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(35,0,0)
+      Player.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(35,12,0)
       end
       end
       Click()
@@ -2861,7 +2861,7 @@ local Player = game:GetService('Players').LocalPlayer
       if v.Name == "Order [Lv. 1250] [Raid Boss]" then
       v.HumanoidRootPart.CanCollide = false
       v.HumanoidRootPart.Size = Vector3.new(60, 60, 10)
-      Player.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(35,0,0)
+      Player.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(35,5,0)
       end
       end
       Click()
@@ -2890,7 +2890,7 @@ for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
       v.HumanoidRootPart.Size = Vector3.new(60, 60, 5)     
 local Time = 0-- Time in seconds -- thời gian đi tới
 local CFrameEnd =  v.HumanoidRootPart.CFrame -- tọa độ tp tới
-local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd * CFrame.new(35,10,0) })
+local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd * CFrame.new(35,12,0) })
 tween:Play()
 tween.Completed:Wait(X)
 end
@@ -2906,7 +2906,7 @@ for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
       v.HumanoidRootPart.Size = Vector3.new(60, 60, 5)     
 local Time = 0-- Time in seconds -- thời gian đi tới
 local CFrameEnd =  v.HumanoidRootPart.CFrame -- tọa độ tp tới
-local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd * CFrame.new(35,10,0) })
+local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd * CFrame.new(35,12,0) })
 tween:Play()
 tween.Completed:Wait(X)
 end
@@ -2933,7 +2933,7 @@ local humanoid = game.Players.LocalPlayer.Character.Humanoid
 pl.CFrame = location
 end
 end)
-wait(5)
+wait(4)
 _G.tp4 = false
 
 game:GetService('RunService').RenderStepped:connect(function()
