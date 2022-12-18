@@ -102,7 +102,7 @@ checkkey.TextColor3 = Color3.fromRGB(250, 250, 250)
 checkkey.TextSize = 18.000
 UIkey.Parent = checkkey
 checkkey.MouseButton1Down:connect(function()
-if keybox.Text == "10974" then
+if keybox.Text == "6572" then
 keybar.Visible = false
 bar1.Visible = true
 end
@@ -112,7 +112,7 @@ keyget.Name = "keyget"
 keyget.Parent = keybar
 keyget.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
 keyget.BorderColor3 = Color3.fromRGB(250, 250, 250)
-keyget.Position = UDim2.new(0.45631148, 0, 0.8204392526, 0)
+keyget.Position = UDim2.new(0.38631148, 0, 0.8204392526, 0)
 keyget.Size = UDim2.new(0, 70, 0, 20)
 keyget.Font = Enum.Font.SourceSans
 keyget.Text = "Get Key"
@@ -120,7 +120,7 @@ keyget.TextColor3 = Color3.fromRGB(0, 250, 250)
 keyget.TextSize = 18.000
 UIkeyget.Parent = keyget
 keyget.MouseButton1Down:connect(function()
-setclipboard("https://link1s.com/NxhULZ")
+setclipboard("https://link1s.com/KpOGKk")
 keyget.Visible = false
 keybox.Visible = false
 checkkey.Visible = false
