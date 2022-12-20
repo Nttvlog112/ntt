@@ -3544,7 +3544,7 @@ tween:Play()
       end
       end
       for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
-      if v.Name == "String Master [Lv. 2200]" or v.Name == "String User [Lv. 2200] [Tanky]" or v.Name == "String" User [Lv. 2200]" then
+      if v.Name == "String Master [Lv. 2200]" or v.Name == "String User [Lv. 2200] [Tanky]" or v.Name == "String User [Lv. 2200]" then
       v.HumanoidRootPart.CanCollide = false
       v.HumanoidRootPart.Size = Vector3.new(60, 60, 5)     
       local Time = 0 -- Time in seconds -- thời gian đi tới
