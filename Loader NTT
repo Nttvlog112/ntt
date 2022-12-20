@@ -94,3 +94,6 @@ end
 if game.PlaceId == 394506555 then -- glue puece
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/AltsegoD/script/master/GluePiece.lua')))()
 end
+if game.PlaceId == 6839171747 then -- door
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Door')))()
+end
