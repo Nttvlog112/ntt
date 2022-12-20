@@ -103,12 +103,12 @@ checkkey.TextSize = 18.000
 UIkey.Parent = checkkey
 checkkey.MouseButton1Down:connect(function()
 --key đúng
-if keybox.Text == "11510411510411510411597" then
+if keybox.Text == "9d6df4d601f1a9e9eaab6c23f314b9" then
 keybar.Visible = false
 bar1.Visible = true
 end
 --key sai
-if not keybox.Text == "11510411510411510411597" then
+if not keybox.Text == "9d6df4d601f1a9e9eaab6c23f314b9" then
 keybox.Text = "Key Không Chính Xác"
 end
 
@@ -126,7 +126,7 @@ keyget.TextColor3 = Color3.fromRGB(0, 250, 250)
 keyget.TextSize = 18.000
 UIkeyget.Parent = keyget
 keyget.MouseButton1Down:connect(function()
-setclipboard("https://link1s.com/nXETRfce")
+setclipboard("https://link1s.com/LJ4TJl")
 keyget.Visible = false
 keybox.Visible = false
 checkkey.Visible = false
