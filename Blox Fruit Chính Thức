@@ -2269,7 +2269,7 @@ if v.Name == item then
 
 local Time = 0-- Time in seconds -- thời gian đi tới
 local CFrameEnd =  v.CFrame -- tọa độ tp tới
-local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd })
+local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd* CFrame.new(0,0)})
 tween:Play()
 end
 end
@@ -2763,7 +2763,7 @@ game:GetService('RunService').RenderStepped:connect(function()
 if _G.ship then
 local Player = game:GetService('Players').LocalPlayer
     for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
-      if v.Name == "Ship Steward [Lv. 1300]" then
+      if v.Name == "Ship Steward [Lv. 1300]" or v.Name == "Cursed Captain [Lv. 1325] [Raid Boss]" then
       v.HumanoidRootPart.CanCollide = false
       v.HumanoidRootPart.Size = Vector3.new(60, 60, 5)
       Player.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(35,12,0)
@@ -2771,16 +2771,7 @@ local Player = game:GetService('Players').LocalPlayer
       end
       Click()
       Tooluse()
-      local Player = game:GetService('Players').LocalPlayer
-    for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
-      if v.Name == "Cursed Captain [Lv. 1325] [auto Boss]" then
-      v.HumanoidRootPart.CanCollide = false
-      v.HumanoidRootPart.Size = Vector3.new(60, 60, 5)
-      Player.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(35,12,0)
-      end
-      end
-      Click()
-      Tooluse()
+      
 end
 end)
 
@@ -3375,144 +3366,18 @@ br3.Visible = true
 _G.raid = true
 game:GetService('RunService').RenderStepped:connect(function()
 if _G.raid then
-
 local Player = game:GetService('Players').LocalPlayer
     for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
-      if v.Name == "Bladesmith [Lv. 2200]" then
+      if v.Name == "Bladesmith [Lv. 2200]" or v.Name == "Sorcerer [Lv. 2200]" or v.Name == "Bone Breaker [Lv. 2200]" or v.Name == "Shocker [Lv. 2200]" or v.Name == "Bladesmith [Lv. 2200] [Tanky]" or v.Name == "Sorcerer [Lv. 2200] [Tanky]" or v.Name == "Bone Breaker [Lv. 2200] [Tanky]" or v.Name == "Shocker [Lv. 2200] [Tanky]" or v.Name == "Dark Master [Lv. 2200]" or v.Name == "Dark User [Lv. 2200] [Tanky]" or v.Name == "Dark User [Lv. 2200]" or v.Name == "Ice Master [Lv. 2200]" or v.Name == "Ice User [Lv. 2200] [Tanky]" or v.Name == "Ice User [Lv. 2200]" or v.Name == "Flame Master [Lv. 2200]" or v.Name == "Flame User [Lv. 2200] [Tanky]" or v.Name == "Flame User [Lv. 2200]" or v.Name == "Quake Master [Lv. 2200]" or v.Name == "Quake User [Lv. 2200] [Tanky]" or v.Name == "Quake User [Lv. 2200]" or v.Name == "Magma Master [Lv. 2200]" or v.Name == "Magma User [Lv. 2200] [Tanky]" or v.Name == "Magma User [Lv. 2200]" or v.Name == "Phonix Master [Lv. 2200]" or v.Name == "Phonix User [Lv. 2200] [Tanky]" or v.Name == "Phonix User [Lv. 2200]" or v.Name == "Light Master [Lv. 2200]" or v.Name == "Light User [Lv. 2200] [Tanky]" or v.Name == "Light User [Lv. 2200]" or v.Name == "String Master [Lv. 2200]" or v.Name == "String User [Lv. 2200] [Tanky]" or v.Name == "String User [Lv. 2200]" then
       v.HumanoidRootPart.CanCollide = false
       v.HumanoidRootPart.Size = Vector3.new(60, 60, 5)     
-      local Time = 0 -- Time in seconds -- thời gian đi tới
+      local Time = 0 -- Time in seconds -- thời gian đi tới    
+local CFrameEnd =  v.HumanoidRootPart.CFrame -- tọa độ tp tới
+local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd * CFrame.new(35,12,0) })
+tween:Play()
+      end
+      end
       
-local CFrameEnd =  v.HumanoidRootPart.CFrame -- tọa độ tp tới
-local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd * CFrame.new(35,12,0) })
-tween:Play()
-      end
-      end
-      local Player = game:GetService('Players').LocalPlayer
-    for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
-      if v.Name == "Sorcerer [Lv. 2200]" then
-      v.HumanoidRootPart.CanCollide = false
-      v.HumanoidRootPart.Size = Vector3.new(60, 60, 5)     
-      local Time = 0 -- Time in seconds -- thời gian đi tới
-local CFrameEnd =  v.HumanoidRootPart.CFrame -- tọa độ tp tới
-local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd * CFrame.new(35,12,0) })
-tween:Play()
-      end
-      end     
-      local Player = game:GetService('Players').LocalPlayer
-    for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
-      if v.Name == "Bone Breaker [Lv. 2200]" then
-      v.HumanoidRootPart.CanCollide = false
-      v.HumanoidRootPart.Size = Vector3.new(60, 60, 5)     
-      local Time = 0 -- Time in seconds -- thời gian đi tới
-local CFrameEnd =  v.HumanoidRootPart.CFrame -- tọa độ tp tới
-local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd * CFrame.new(35,12,0) })
-tween:Play()
-      end
-      end
-local Player = game:GetService('Players').LocalPlayer
-    for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
-      if v.Name == "Shocker [Lv. 2200]" then
-      v.HumanoidRootPart.CanCollide = false
-      v.HumanoidRootPart.Size = Vector3.new(60, 60, 5)     
-      local Time = 0 -- Time in seconds -- thời gian đi tới
-local CFrameEnd =  v.HumanoidRootPart.CFrame -- tọa độ tp tới
-local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd * CFrame.new(35,12,0) })
-tween:Play()
-      end
-      end
-      local Player = game:GetService('Players').LocalPlayer
-    for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
-      if v.Name == "Bladesmith [Lv. 2200] [Tanky]" then
-      v.HumanoidRootPart.CanCollide = false
-      v.HumanoidRootPart.Size = Vector3.new(60, 60, 5)     
-      local Time = 0 -- Time in seconds -- thời gian đi tới
-local CFrameEnd =  v.HumanoidRootPart.CFrame -- tọa độ tp tới
-local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd * CFrame.new(35,12,0) })
-tween:Play()
-      end
-      end
-      local Player = game:GetService('Players').LocalPlayer
-    for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
-      if v.Name == "Sorcerer [Lv. 2200] [Tanky]" then
-      v.HumanoidRootPart.CanCollide = false
-      v.HumanoidRootPart.Size = Vector3.new(60, 60, 5)     
-      local Time = 0 -- Time in seconds -- thời gian đi tới
-local CFrameEnd =  v.HumanoidRootPart.CFrame -- tọa độ tp tới
-local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd * CFrame.new(35,12,0) })
-tween:Play()
-      end
-      end     
-    for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
-      if v.Name == "Bone Breaker [Lv. 2200] [Tanky]" then
-      v.HumanoidRootPart.CanCollide = false
-      v.HumanoidRootPart.Size = Vector3.new(60, 60, 5)     
-      local Time = 0 -- Time in seconds -- thời gian đi tới
-local CFrameEnd =  v.HumanoidRootPart.CFrame -- tọa độ tp tới
-local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd * CFrame.new(35,12,0) })
-tween:Play()
-      end
-      end
-    for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
-      if v.Name == "Shocker [Lv. 2200] [Tanky]" then
-      v.HumanoidRootPart.CanCollide = false
-      v.HumanoidRootPart.Size = Vector3.new(60, 60, 5)     
-      local Time = 0 -- Time in seconds -- thời gian đi tới
-local CFrameEnd =  v.HumanoidRootPart.CFrame -- tọa độ tp tới
-local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd * CFrame.new(35,12,0) })
-tween:Play()
-      end
-      end
-      for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
-      if v.Name == "Dark Master [Lv. 2200]" or v.Name == "Dark User [Lv. 2200] [Tanky]" or v.Name == "Dark User [Lv. 2200]" then
-      v.HumanoidRootPart.CanCollide = false
-      v.HumanoidRootPart.Size = Vector3.new(60, 60, 5)     
-      local Time = 0 -- Time in seconds -- thời gian đi tới
-local CFrameEnd =  v.HumanoidRootPart.CFrame -- tọa độ tp tới
-local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd * CFrame.new(35,12,0) })
-tween:Play()
-      end
-      end
-      for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
-      if v.Name == "Ice Master [Lv. 2200]" or v.Name == "Ice User [Lv. 2200] [Tanky]" or v.Name == "Ice User [Lv. 2200]" then
-      v.HumanoidRootPart.CanCollide = false
-      v.HumanoidRootPart.Size = Vector3.new(60, 60, 5)     
-      local Time = 0 -- Time in seconds -- thời gian đi tới
-local CFrameEnd =  v.HumanoidRootPart.CFrame -- tọa độ tp tới
-local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd * CFrame.new(35,12,0) })
-tween:Play()
-      end
-      end
-      for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
-      if v.Name == "Flame Master [Lv. 2200]" or v.Name == "Flame User [Lv. 2200] [Tanky]" or v.Name == "Flame User [Lv. 2200]" then
-      v.HumanoidRootPart.CanCollide = false
-      v.HumanoidRootPart.Size = Vector3.new(60, 60, 5)     
-      local Time = 0 -- Time in seconds -- thời gian đi tới
-local CFrameEnd =  v.HumanoidRootPart.CFrame -- tọa độ tp tới
-local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd * CFrame.new(35,12,0) })
-tween:Play()
-      end
-      end
-      for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
-      if v.Name == "Quake Master [Lv. 2200]" or v.Name == "Quake User [Lv. 2200] [Tanky]" or v.Name == "Quake User [Lv. 2200]" then
-      v.HumanoidRootPart.CanCollide = false
-      v.HumanoidRootPart.Size = Vector3.new(60, 60, 5)     
-      local Time = 0 -- Time in seconds -- thời gian đi tới
-local CFrameEnd =  v.HumanoidRootPart.CFrame -- tọa độ tp tới
-local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd * CFrame.new(35,12,0) })
-tween:Play()
-      end
-      end
-      for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
-      if v.Name == "Magma Master [Lv. 2200]" or v.Name == "Magma User [Lv. 2200] [Tanky]" or v.Name == "Magma User [Lv. 2200]" then
-      v.HumanoidRootPart.CanCollide = false
-      v.HumanoidRootPart.Size = Vector3.new(60, 60, 5)     
-      local Time = 0 -- Time in seconds -- thời gian đi tới
-local CFrameEnd =  v.HumanoidRootPart.CFrame -- tọa độ tp tới
-local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd * CFrame.new(35,12,0) })
-tween:Play()
-      end
-      end
       for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
       if v.Name == "Mochi Master [Lv. 2200]" or v.Name == "Mochi User [Lv. 2200] [Tanky]" or v.Name == "Mochi User [Lv. 2200]" then
       v.HumanoidRootPart.CanCollide = false
@@ -3523,36 +3388,7 @@ local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.C
 tween:Play()
       end
       end
-      for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
-      if v.Name == "Phonix Master [Lv. 2200]" or v.Name == "Phonix User [Lv. 2200] [Tanky]" or v.Name == "Phonix User [Lv. 2200]" then
-      v.HumanoidRootPart.CanCollide = false
-      v.HumanoidRootPart.Size = Vector3.new(60, 60, 5)     
-      local Time = 0 -- Time in seconds -- thời gian đi tới
-local CFrameEnd =  v.HumanoidRootPart.CFrame -- tọa độ tp tới
-local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd * CFrame.new(35,12,0) })
-tween:Play()
-      end
-      end
-      for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
-      if v.Name == "Light Master [Lv. 2200]" or v.Name == "Light User [Lv. 2200] [Tanky]" or v.Name == "Light User [Lv. 2200]" then
-      v.HumanoidRootPart.CanCollide = false
-      v.HumanoidRootPart.Size = Vector3.new(60, 60, 5)     
-      local Time = 0 -- Time in seconds -- thời gian đi tới
-local CFrameEnd =  v.HumanoidRootPart.CFrame -- tọa độ tp tới
-local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd * CFrame.new(35,12,0) })
-tween:Play()
-      end
-      end
-      for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
-      if v.Name == "String Master [Lv. 2200]" or v.Name == "String User [Lv. 2200] [Tanky]" or v.Name == "String User [Lv. 2200]" then
-      v.HumanoidRootPart.CanCollide = false
-      v.HumanoidRootPart.Size = Vector3.new(60, 60, 5)     
-      local Time = 0 -- Time in seconds -- thời gian đi tới
-local CFrameEnd =  v.HumanoidRootPart.CFrame -- tọa độ tp tới
-local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd * CFrame.new(35,12,0) })
-tween:Play()
-      end
-      end
+      
       --tool use and click
       Click()
       Tooluse()
