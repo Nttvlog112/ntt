@@ -107,10 +107,6 @@ if keybox.Text == "9d6df4d601f1a9e9eaab6c23f314b9" then
 keybar.Visible = false
 bar1.Visible = true
 end
---key sai
-if not keybox.Text == "9d6df4d601f1a9e9eaab6c23f314b9" then
-keybox.Text = "Key Không Chính Xác"
-end
 
 end)
 
@@ -456,8 +452,13 @@ tload.Text = "..."
 --check
 if check1.Text == "1" then
 tload.Text = "ANTI AFK"
-game:GetService("Players").LocalPlayer.Idled:connect(function()
-end)
+local AntiAFK = game:GetService("VirtualUser")
+		AntiAFKT = game:GetService("Players").LocalPlayer.Idled:connect(function()
+			AntiAFK:CaptureController()
+			AntiAFK:ClickButton2(Vector2.new())
+		end)
+	else
+		AntiAFKT:Disconnect()
 wait(2)
 end
 
