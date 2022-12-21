@@ -2221,6 +2221,7 @@ ba5.TextSize = 18.000
 ba5.MouseButton1Down:connect(function()
 ba5.Visible = false
 ba6.Visible = true
+
 if citem.Text == "Flower" then
 _G.Flower = false
 game:GetService('RunService').RenderStepped:connect(function()
@@ -2276,14 +2277,14 @@ end
 
 end
 end)
-wait(4)
+wait(5)
 _G.fruittp = false
 
 game:GetService('RunService').RenderStepped:connect(function()
 if _G.fruittp then
 end
 end)
-wait(2)
+wait(4)
 
 local item = "Fruit"   -- tên vật tp tới
 
@@ -3450,4 +3451,298 @@ local script = Instance.new('LocalScript', auto)
 
 coroutine.wrap(OJTGC_fake_script)()
 
-loadstring(game:HttpGet(('https://github.com/Nttvlog112/ntt/edit/main/Bouty%20blox')))()
+--bouty
+ local Guibouty = Instance.new("ScreenGui")
+ local bbon = Instance.new("TextButton")
+local bboff = Instance.new("TextButton")
+local text1 = Instance.new("TextLabel")
+local bars = Instance.new("Frame")
+local barr1 = Instance.new("Frame")
+local barr2 = Instance.new("Frame")
+local bountybox = Instance.new("TextBox")
+local bcheck3 = Instance.new("TextButton")
+local bcheck4 = Instance.new("TextButton")
+local t1 = Instance.new("TextLabel")
+local zone = Instance.new("TextButton")
+local zone1 = Instance.new("TextButton")
+local UIbarr1 = Instance.new("UICorner")
+local UIbarr2 = Instance.new("UICorner")
+local UIload = Instance.new("UICorner")
+local cc1 = Instance.new("UICorner")
+local cc2 = Instance.new("UICorner")
+local cc3 = Instance.new("UICorner")
+local cc4 = Instance.new("UICorner")
+local cc5 = Instance.new("UICorner")
+local UIoff = Instance.new("UICorner")
+local UIon = Instance.new("UICorner")
+local UIbarbouty = Instance.new("UICorner")
+
+Guibouty.Name = "Guibouty"
+Guibouty.Parent = game.CoreGui
+Guibouty.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+bboff.Visible = false
+bbon.Visible = true
+
+--bouty gui
+
+bboff.Name = "bboff"
+bboff.Parent = Guibouty
+bboff.BackgroundColor3 = Color3.fromRGB(0, 250, 60)
+bboff.BorderSizePixel = 0
+bboff.Position = UDim2.new(0.85162201, 0, 0.663285708, 0)
+bboff.Size = UDim2.new(0, 40, 0, 40)
+bboff.Font = Enum.Font.Ubuntu
+bboff.Text = ""
+bboff.TextColor3 = Color3.fromRGB(250, 255, 250)
+bboff.TextSize = 20.000
+UIoff.Parent = bboff
+bboff.MouseButton1Down:connect(function()
+barr1.Visible = false
+game.CoreGui.Guibouty.bboff.Visible = false
+game.CoreGui.Guibouty.bbon.Visible = true
+end)
+
+bbon.Name = "bbon"
+bbon.Parent = Guibouty
+bbon.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+bbon.BorderSizePixel = 0
+bbon.Position = UDim2.new(0.85162201, 0, 0.663285708, 0)
+bbon.Size = UDim2.new(0, 40, 0, 40)
+bbon.Font = Enum.Font.Ubuntu
+bbon.Text = ""
+bbon.TextColor3 = Color3.fromRGB(250, 255, 250)
+bbon.TextSize = 20.000
+UIon.Parent = bbon
+bbon.MouseButton1Down:connect(function()
+barr1.Visible = true
+game.CoreGui.Guibouty.bbon.Visible = false
+game.CoreGui.Guibouty.bboff.Visible = true
+end)
+
+barr1.Name = "barr1"
+barr1.Parent = Guibouty
+barr1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+barr1.Position = UDim2.new(0.358126051, 0, 0.258999169, 0)
+barr1.Size = UDim2.new(0, 310, 0, 150)
+UIbarr1.Parent = barr1
+barr1.Visible = false
+
+text1.Parent = barr1
+text1.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+text1.BackgroundTransparency = 1.000
+text1.Position = UDim2.new(0.24631148, 0, 0.0704392526, 0)
+text1.Size = UDim2.new(0, 170, 0, 30)
+text1.Font = Enum.Font.Ubuntu
+text1.Text = "Bounty Gui"
+text1.TextColor3 = Color3.fromRGB(255, 255, 255)
+text1.TextSize = 18.000
+text1.TextWrapped = true
+
+bars.Name = "bars"
+bars.Parent = barr1
+bars.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+bars.Position = UDim2.new(0.10631148, 0, 0.2704392526, 0)
+bars.Size = UDim2.new(0, 250, 0, 2)
+
+bountybox.Name = "bountybox"
+bountybox.Parent = barr1
+bountybox.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+bountybox.Position = UDim2.new(0.10631148, 0, 0.3204392526, 0)
+bountybox.Size = UDim2.new(0, 250, 0, 25)
+bountybox.Font = Enum.Font.SourceSans
+bountybox.Text = "Name Player"
+bountybox.TextColor3 = Color3.fromRGB(0, 0, 0)
+bountybox.TextSize = 18.000
+cc1.Parent = bountybox
+
+barr2.Name = "barr2"
+barr2.Parent = barr1
+barr2.Active = true
+barr2.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+barr2.Position = UDim2.new(0.10631148, 0, 0.5404392526, 0)
+barr2.Size = UDim2.new(0, 250, 0, 30)
+UIbarr2.Parent = barr2
+
+t1.Parent = barr2
+t1.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+t1.BackgroundTransparency = 1.000
+t1.Position = UDim2.new(0, 0, 0, 0)
+t1.Size = UDim2.new(0, 100, 0, 30)
+t1.Font = Enum.Font.Ubuntu
+t1.Text = "TP Player"
+t1.TextColor3 = Color3.fromRGB(255, 255, 255)
+t1.TextSize = 14.000
+t1.TextWrapped = true
+t1.TextXAlignment = Enum.TextXAlignment.Left
+
+bcheck3.Name = "bcheck3"
+bcheck3.Parent = barr2
+bcheck3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+bcheck3.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+bcheck3.Size = UDim2.new(0, 20, 0, 20)
+bcheck3.Font = Enum.Font.SourceSans
+bcheck3.Text = ""
+bcheck3.TextColor3 = Color3.fromRGB(0, 0, 0)
+bcheck3.TextSize = 18.000
+cc3.Parent = bcheck3
+bcheck3.MouseButton1Down:connect(function()
+bcheck3.Visible = false
+bcheck4.Visible = true
+_G.bouty = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.bouty then
+
+Click()
+
+local lplayer = game:GetService('Players').LocalPlayer
+ 
+local yeeting = false
+function GetPlayer(String)
+local Found = {}
+local strl = String:lower()
+if strl == "all" then
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+table.insert(Found,v)
+end
+elseif strl == "Random" then
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+if v.Name ~= lplayer.Name then
+table.insert(Found,v)
+end
+end 
+elseif strl == "me" then
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+if v.Name == lplayer.Name then
+table.insert(Found,v)
+end
+end 
+else
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+if v.Name:lower():sub(1, #String) == String:lower() then
+table.insert(Found,v)
+end
+end 
+end
+return Found 
+end
+function ahh(thing)
+local asd = {'yeet','gui','yeet gui'}
+local f = string.upper(asd[math.random(1,#asd)])
+return f
+end
+
+local target = unpack(GetPlayer(bountybox.Text)).Character
+ 
+game:GetService'Players'.LocalPlayer.Character.HumanoidRootPart.CFrame = target.Head.CFrame;coin.Location = target.Head.Position game["Run Service"].Heartbeat:wait()
+
+end
+end)
+for i,v in next, game:GetService('Players'):GetPlayers() do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+pcall(function()
+v.Character.HumanoidRootPart.Size = Vector3.new(20, 20, 20)
+v.Character.HumanoidRootPart.Transparency = 1
+v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really black")
+v.Character.HumanoidRootPart.Material = "Neon"
+v.Character.HumanoidRootPart.CanCollide = false
+end)
+end
+end
+
+end)
+
+bcheck4.Name = "bcheck4"
+bcheck4.Parent = barr2
+bcheck4.BackgroundColor3 = Color3.fromRGB(0, 255, 60)
+bcheck4.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+bcheck4.Size = UDim2.new(0, 20, 0, 20)
+bcheck4.Font = Enum.Font.SourceSans
+bcheck4.Text = ""
+bcheck4.TextColor3 = Color3.fromRGB(0, 0, 0)
+bcheck4.TextSize = 18.000
+bcheck4.Visible = false
+cc4.Parent = bcheck4
+bcheck4.MouseButton1Down:connect(function()
+bcheck4.Visible = false
+bcheck3.Visible = true
+_G.bouty = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.bouty then
+
+end
+end)
+
+for i,v in next, game:GetService('Players'):GetPlayers() do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+pcall(function()
+v.Character.HumanoidRootPart.Size = Vector3.new(2, 2, 2)
+v.Character.HumanoidRootPart.Transparency = 1
+v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really black")
+v.Character.HumanoidRootPart.Material = "Neon"
+v.Character.HumanoidRootPart.CanCollide = false
+end)
+end
+end
+
+end)
+
+--tp zone
+
+zone.Name = "zone"
+zone.Parent = barr1
+zone.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+zone.Position = UDim2.new(0.27631148, 0, 0.7704392526, 0)
+zone.Size = UDim2.new(0, 150, 0, 25)
+zone.Font = Enum.Font.SourceSans
+zone.Text = "On | Auto Tp Zone"
+zone.TextColor3 = Color3.fromRGB(0, 0, 0)
+zone.TextSize = 18.000
+UIload.Parent = zone
+zone.MouseButton1Down:connect(function()
+zone.Visible = false
+zone1.Visible = true
+_G.Zone = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.Zone then
+if  game.Players.LocalPlayer.Character.Humanoid.Health < 4000 then
+
+bcheck3.Visible = true
+bcheck4.Visible = false
+
+_G.bouty = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.bouty then
+end
+end)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,100,0)
+end
+end
+end)
+end)
+
+zone1.Visible = false
+zone1.Name = "zone1"
+zone1.Parent = barr1
+zone1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+zone1.Position = UDim2.new(0.27631148, 0, 0.7704392526, 0)
+zone1.Size = UDim2.new(0, 150, 0, 25)
+zone1.Font = Enum.Font.SourceSans
+zone1.Text = "Off | Auto Tp Zone"
+zone1.TextColor3 = Color3.fromRGB(0, 0, 0)
+zone1.TextSize = 18.000
+cc5.Parent = zone1
+zone1.MouseButton1Down:connect(function()
+zone1.Visible = false
+zone.Visible = true
+_G.Zone = false
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.Zone then
+end
+end)
+end)
