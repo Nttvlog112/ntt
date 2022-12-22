@@ -148,6 +148,10 @@ local r2 = Instance.new("Frame")
 local tr2 = Instance.new("TextLabel")
 local br3 = Instance.new("TextButton")
 local br4 = Instance.new("TextButton")
+local r3 = Instance.new("Frame")
+local tr3 = Instance.new("TextLabel")
+local br5 = Instance.new("TextButton")
+local br6 = Instance.new("TextButton")
 
 --UI làm tròn
 local UIexit = Instance.new("UICorner")
@@ -171,7 +175,7 @@ local UIa11 = Instance.new("UICorner")
 local UInl = Instance.new("UICorner")
 local UIr1 = Instance.new("UICorner")
 local UIr2 = Instance.new("UICorner")
-
+local UIr3 = Instance.new("UICorner")
 
 
 --main
@@ -2005,6 +2009,122 @@ end)
 
 --auto2
 
+--check lv
+function checknv()
+local MyLevel = game.Players.localPlayer.Data.Level.Value
+if MyLevel == 700 or MyLevel <= 724 then -- Raider [Lv. 700]
+                 Ms = "Raider [Lv. 700]"
+                 NaemQuest = "Area1Quest"
+                 LevelQuest = 1
+                 Tp = "Text"
+                 elseif MyLevel == 725 or MyLevel <= 774 then -- Mercenary [Lv. 725]
+                 Ms = "Mercenary [Lv. 725]"
+                 NaemQuest = "Area1Quest"
+                 LevelQuest = 2
+                 Tp = "text"
+                 elseif MyLevel == 775 or MyLevel <= 799 then -- Swan Pirate [Lv. 775]
+                 Ms = "Swan Pirate [Lv. 775]"
+                 NaemQuest = "Area2Quest"
+                 LevelQuest = 1
+                 Tp = "text"
+                 elseif MyLevel == 800 or MyLevel <= 874 then -- Factory Staff [Lv. 800]
+                 Ms = "Factory Staff [Lv. 800]"
+                 NaemQuest = "Area2Quest"
+                 LevelQuest = 2
+                 Tp = "text"
+                 elseif MyLevel == 875 or MyLevel <= 899 then -- Marine Lieutenant [Lv. 875]
+                 Ms = "Marine Lieutenant [Lv. 875]"
+                 NaemQuest = "MarineQuest3"
+                 LevelQuest = 1
+                 Tp = "Text"
+                 elseif MyLevel == 900 or MyLevel <= 949 then -- Marine Captain [Lv. 900]
+                 Ms = "Marine Captain [Lv. 900]"
+                 NaemQuest = "MarineQuest3"
+                 LevelQuest = 2
+                 Tp = "text"
+                 elseif MyLevel == 950 or MyLevel <= 974 then -- Zombie [Lv. 950]
+                 Ms = "Zombie [Lv. 950]"
+                 NaemQuest = "ZombieQuest"
+                 LevelQuest = 1
+                 Tp = "text"
+                 Ms = "Vampire [Lv. 975]"
+                 NaemQuest = "ZombieQuest"
+                 LevelQuest = 2
+                 Tp = "text"
+                 elseif MyLevel == 1000 or MyLevel <= 1049 then -- Snow Trooper [Lv. 1000] **
+                 Ms = "Snow Trooper [Lv. 1000]"
+                 NaemQuest = "SnowMountainQuest"
+                 LevelQuest = 1
+                 Tp = "Text"
+                 elseif MyLevel == 1050 or MyLevel <= 1099 then -- Winter Warrior [Lv. 1050]
+                 Ms = "Winter Warrior [Lv. 1050]"
+                 NaemQuest = "SnowMountainQuest"
+                 LevelQuest = 2
+                 Tp = "text"
+                 elseif MyLevel == 1100 or MyLevel <= 1124 then -- Lab Subordinate [Lv. 1100]
+                 Ms = "Lab Subordinate [Lv. 1100]"
+                 NaemQuest = "IceSideQuest"
+                 LevelQuest = 1
+                 Tp = "text"
+                 elseif MyLevel == 1125 or MyLevel <= 1174 then -- Horned Warrior [Lv. 1125]
+                 Ms = "Horned Warrior [Lv. 1125]"
+                 NaemQuest = "IceSideQuest"
+                 LevelQuest = 2
+                 Tp = "texr"
+                 elseif MyLevel == 1175 or MyLevel <= 1199 then -- Magma Ninja [Lv. 1175]
+                 Ms = "Magma Ninja [Lv. 1175]"
+                 NaemQuest = "FireSideQuest"
+                 LevelQuest = 1
+                 Tp = "Text"
+                 elseif MyLevel == 1200 or MyLevel <= 1249 then -- Lava Pirate [Lv. 1200]
+                 Ms = "Lava Pirate [Lv. 1200]"
+                 NaemQuest = "FireSideQuest"
+                 LevelQuest = 2
+                 Tp = "text"
+                 --ship
+                 elseif MyLevel == 1250 or MyLevel <= 1274 then -- Ship Deckhand [Lv. 1250]
+                 Ms = "Ship Deckhand [Lv. 1250]"
+                 NaemQuest = "ShipQuest1"
+                 LevelQuest = 1
+                 Tp = "text"
+                 elseif MyLevel == 1275 or MyLevel <= 1299 then -- Ship Engineer [Lv. 1275]
+                 Ms = "Ship Engineer [Lv. 1275]"
+                 NaemQuest = "ShipQuest1"
+                 LevelQuest = 2
+                 Tp = "text"
+                 elseif MyLevel == 1300 or MyLevel <= 1324 then -- Ship Steward [Lv. 1300]
+                 Ms = "Ship Steward [Lv. 1300]"
+                 NaemQuest = "ShipQuest2"
+                 LevelQuest = 1
+                 Tp = "text"
+                 elseif MyLevel == 1325 or MyLevel <= 1349 then -- Ship Officer [Lv. 1325]
+                 Ms = "Ship Officer [Lv. 1325]"
+                 NaemQuest = "ShipQuest2"
+                 LevelQuest = 2
+                 Tp = "text"
+                 elseif MyLevel == 1350 or MyLevel <= 1374 then -- Arctic Warrior [Lv. 1350]
+                 Ms = "Arctic Warrior [Lv. 1350]"
+                 NaemQuest = "FrostQuest"
+                 LevelQuest = 1
+                 Tp = "text"
+                 elseif MyLevel == 1375 or MyLevel <= 1424 then -- Snow Lurker [Lv. 1375]
+                 Ms = "Snow Lurker [Lv. 1375]"
+                 NaemQuest = "FrostQuest"
+                 LevelQuest = 2
+                 Tp = "text"
+                 elseif MyLevel == 1425 or MyLevel <= 1449 then -- Sea Soldier [Lv. 1425]
+                  Ms = "Sea Soldier [Lv. 1425]"
+                  NaemQuest = "ForgottenQuest"
+                  LevelQuest = 1
+                  Tp = "text"
+                  elseif MyLevel >= 1450 then -- Water Fighter [Lv. 1450]
+                  Ms = "Water Fighter [Lv. 1450]"
+                  NaemQuest = "ForgottenQuest"
+                  LevelQuest = 2
+                  Tp = "Text"
+                 end
+                 end
+                 
 
 --auto haki
 a1.Name = "a1"
@@ -2713,6 +2833,14 @@ if _G.saber then
 end
 end)
 end
+
+if cnl.Text == "Auto Lv" then
+_G.lv = false
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.lv then
+end
+end)
+end
 v.HumanoidRootPart.Size = Vector3.new(2, 2, 2)
 --end script off
 end)
@@ -2977,6 +3105,43 @@ local Player = game:GetService('Players').LocalPlayer
 end
 end)
 end
+--lv fram
+if cnl.Text == "Auto Lv" then
+_G.lv = true
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.lv then
+checknv()
+                 if game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible == true then
+ 
+ local Player = game:GetService('Players').LocalPlayer
+    for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
+      if v.Name == Ms then
+      v.HumanoidRootPart.CanCollide = false
+      v.HumanoidRootPart.Size = Vector3.new(60, 60, 5)     
+      local Time = 0 -- Time in seconds -- thời gian đi tới
+local CFrameEnd =  v.HumanoidRootPart.CFrame -- tọa độ tp tới
+local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd * CFrame.new(35,12,0) })
+tween:Play()
+      end
+      end
+      Click()
+      Tooluse()
+ 
+ end
+ 
+ --Ms
+ --LevelQuest
+--NameQuest
+ 
+ if game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible == false then
+ 
+ game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StartQuest", NaemQuest, LevelQuest)
+ 
+ end
+end
+end)
+end
+
 --end script
 end)
 
@@ -3301,7 +3466,7 @@ tr2.BackgroundTransparency = 1.000
 tr2.Position = UDim2.new(0, 0, 0, 0)
 tr2.Size = UDim2.new(0, 200, 0, 30)
 tr2.Font = Enum.Font.Ubuntu
-tr2.Text = "   Auto Fram Raid Beta"
+tr2.Text = "   Auto Fram Raid"
 tr2.TextColor3 = Color3.fromRGB(255, 255, 255)
 tr2.TextSize = 14.000
 tr2.TextWrapped = true
@@ -3373,6 +3538,103 @@ tween:Play()
       end)
 
 end)
+
+r3.Name = "r3"
+r3.Parent = scriptspage4
+r3.Active = false
+r3.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+r3.Position = UDim2.new(0, 0, 0.2304392526, 0)
+r3.Size = UDim2.new(0, 498, 0, 30)
+UIr3.Parent = r3
+
+tr3.Parent = r3
+tr3.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+tr3.BackgroundTransparency = 1.000
+tr3.Position = UDim2.new(0, 0, 0, 0)
+tr3.Size = UDim2.new(0, 200, 0, 30)
+tr3.Font = Enum.Font.Ubuntu
+tr3.Text = "   Auto Kill Aura Raid Beta"
+tr3.TextColor3 = Color3.fromRGB(255, 255, 255)
+tr3.TextSize = 14.000
+tr3.TextWrapped = true
+tr3.TextXAlignment = Enum.TextXAlignment.Left
+
+br5.Name = "br5"
+br5.Parent = r3
+br5.BackgroundColor3 = Color3.fromRGB(0, 250, 60)
+br5.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+br5.Size = UDim2.new(0, 20, 0, 20)
+br5.Font = Enum.Font.SourceSans
+br5.Text = ""
+br5.TextColor3 = Color3.fromRGB(255, 255, 255)
+br5.TextSize = 18.000
+br5.MouseButton1Down:connect(function()
+br5.Visible = false
+br6.Visible = true
+_G.raid1 = false
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.raid1 then
+end
+end)
+local dist = math.huge
+    local target = nil
+    for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+        if v.ClassName == "Model" then
+                    local magnitude = (v.HumanoidRootPart.Position - game:GetService("Players").LocalPlayer.Character.Head.Position).magnitude
+                    if magnitude < dist then
+                        dist = magnitude
+                        target = v.Name
+                        v.Humanoid.Health =  10000000
+                        print(target)
+                    end
+        end
+    for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+    v.HumanoidRootPart.Size = Vector3.new(2, 2, 2)
+    v.HumanoidRootPart.Transparency = 1
+end
+
+end
+end)
+
+br6.Name = "br6"
+br6.Parent = r3
+br6.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+br6.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
+br6.Size = UDim2.new(0, 20, 0, 20)
+br6.Font = Enum.Font.SourceSans
+br6.Text = ""
+br6.TextColor3 = Color3.fromRGB(255, 255, 255)
+br6.TextSize = 18.000
+br6.MouseButton1Down:connect(function()
+br6.Visible = false
+br5.Visible = true
+_G.raid1 = true
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.raid1 then
+
+local dist = math.huge
+    local target = nil
+    for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+        if v.ClassName == "Model" then
+                    local magnitude = (v.HumanoidRootPart.Position - game:GetService("Players").LocalPlayer.Character.Head.Position).magnitude
+                    if magnitude < dist then
+                        dist = magnitude
+                        target = v.Name
+                        v.Humanoid.Health =  0
+                        print(target)
+                    end
+        end
+end
+for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+    v.HumanoidRootPart.Size = Vector3.new(60, 60, 5)
+    v.HumanoidRootPart.Transparency = 1
+    end
+end
+end)
+
+end)
+
+
 
 
 -- Scripts:
@@ -3746,3 +4008,4 @@ if _G.Zone then
 end
 end)
 end)
+
