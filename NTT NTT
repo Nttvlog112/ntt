@@ -456,9 +456,9 @@ local AntiAFK = game:GetService("VirtualUser")
 		AntiAFKT = game:GetService("Players").LocalPlayer.Idled:connect(function()
 			AntiAFK:CaptureController()
 			AntiAFK:ClickButton2(Vector2.new())
-		end)
-	else
+
 		AntiAFKT:Disconnect()
+end)
 wait(2)
 end
 
