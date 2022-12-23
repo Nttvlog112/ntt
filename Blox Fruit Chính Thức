@@ -8,7 +8,7 @@ local raid = Instance.new("TextButton")
 local scriptspage4 = Instance.new("Frame")
 local bar = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
-local sea = Instance.new("TextButton")
+local sea = Instance.new("TextLabel")
 local seatext = Instance.new("TextButton")
 
 local scriptspage = Instance.new("Frame")
@@ -24,7 +24,7 @@ local hubs = Instance.new("TextButton")
 local exit = Instance.new("TextButton")
 local open = Instance.new("TextButton")
 --tp gui
-local nametp = Instance.new("TextButton")
+local nametp = Instance.new("TextLabel")
 local b1 = Instance.new("TextButton")
 local bartp = Instance.new("ScrollingFrame")
 local btp = Instance.new("TextButton")
@@ -85,10 +85,9 @@ local bm6 = Instance.new("TextButton")
 local bm7 = Instance.new("TextButton")
 
 --auto1
-local nl = Instance.new("Frame")
 local bnn1 = Instance.new("TextButton")
 local bnn2 = Instance.new("TextButton")
-local tnl = Instance.new("TextLabel")
+local nl = Instance.new("TextLabel")
 local cnl = Instance.new("TextButton")
 local barnl = Instance.new("Frame")
 local ni1 = Instance.new("TextButton")
@@ -99,28 +98,19 @@ local ni5 = Instance.new("TextButton")
 local ni6 = Instance.new("TextButton")
 local ni7 = Instance.new("TextButton")
 
-local a1 = Instance.new("Frame")
-local ta1 = Instance.new("TextButton")
-local a2 = Instance.new("Frame")
-local a3 = Instance.new("Frame")
 local citem = Instance.new("TextButton")
 local baritem = Instance.new("Frame")
 local item1 = Instance.new("TextButton")
 local item2 = Instance.new("TextButton")
 local item3 = Instance.new("TextButton")
-local a4 = Instance.new("Frame")
-local a5 = Instance.new("Frame")
-local a6 = Instance.new("Frame")
-local a7 = Instance.new("Frame")
-local a8 = Instance.new("Frame")
-local texta1 = Instance.new("TextLabel")
-local texta2 = Instance.new("TextLabel")
-local texta3 = Instance.new("TextLabel")
-local texta4 = Instance.new("TextLabel")
-local texta5 = Instance.new("TextLabel")
-local texta6 = Instance.new("TextLabel")
-local texta7 = Instance.new("TextLabel")
-local texta8 = Instance.new("TextLabel")
+local a1 = Instance.new("TextLabel")
+local a2 = Instance.new("TextLabel")
+local a3 = Instance.new("TextLabel")
+local a4 = Instance.new("TextLabel")
+local a5 = Instance.new("TextLabel")
+local a6 = Instance.new("TextLabel")
+local a7 = Instance.new("TextLabel")
+local a8 = Instance.new("TextLabel")
 local ba1 = Instance.new("TextButton")
 local ba2 = Instance.new("TextButton")
 local ba3 = Instance.new("TextButton")
@@ -139,43 +129,21 @@ local ba15 = Instance.new("TextButton")
 local ba16 = Instance.new("TextButton")
 
 --raid1
-local r1 = Instance.new("Frame")
-local tr1 = Instance.new("TextLabel")
+local r1 = Instance.new("TextLabel")
 local br1 = Instance.new("TextButton")
 local br2 = Instance.new("TextButton")
 local dr1 = Instance.new("TextLabel")
-local r2 = Instance.new("Frame")
-local tr2 = Instance.new("TextLabel")
+local r2 = Instance.new("TextLabel")
 local br3 = Instance.new("TextButton")
 local br4 = Instance.new("TextButton")
-local r3 = Instance.new("Frame")
-local tr3 = Instance.new("TextLabel")
+local r3 = Instance.new("TextLabel")
 local br5 = Instance.new("TextButton")
 local br6 = Instance.new("TextButton")
 
 --UI làm tròn
 local UIexit = Instance.new("UICorner")
-
-local UIbbox = Instance.new("UICorner")
-local UIbb1 = Instance.new("UICorner")
-local UIbb2 = Instance.new("UICorner")
 local UIopen = Instance.new("UICorner")
-local UIkey = Instance.new("UICorner")
-local UIa1 = Instance.new("UICorner")
-local UIa2 = Instance.new("UICorner")
-local UIa3 = Instance.new("UICorner")
-local UIa4 = Instance.new("UICorner")
-local UIa5 = Instance.new("UICorner")
-local UIa6 = Instance.new("UICorner")
-local UIa7 = Instance.new("UICorner")
-local UIa8 = Instance.new("UICorner")
-local UIa9 = Instance.new("UICorner")
-local UIa10 = Instance.new("UICorner")
-local UIa11 = Instance.new("UICorner")
-local UInl = Instance.new("UICorner")
-local UIr1 = Instance.new("UICorner")
-local UIr2 = Instance.new("UICorner")
-local UIr3 = Instance.new("UICorner")
+
 
 
 --main
@@ -193,7 +161,7 @@ main.Visible = false
 
 bar1.Name = "bar1"
 bar1.Parent = main
-bar1.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+bar1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
 bar1.Position = UDim2.new(0, 0, 0.102285722, 0)
 bar1.Size = UDim2.new(0, 100, 0, 250)
 
@@ -322,11 +290,11 @@ scriptspage3.Visible = false
 
 bar.Name = "bar"
 bar.Parent = main
-bar.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+bar.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
 bar.Size = UDim2.new(0, 640, 0, 26)
 
 TextLabel.Parent = main
-TextLabel.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+TextLabel.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
 TextLabel.BackgroundTransparency = 1.000
 TextLabel.Position = UDim2.new(0, 0, 0, 0)
 TextLabel.Size = UDim2.new(0, 93, 0, 26)
@@ -376,7 +344,8 @@ end)
 
 sea.Name = "sea"
 sea.Parent = main
-sea.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+sea.BackgroundTransparency = 1.000
+sea.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
 sea.BorderSizePixel = 0
 sea.Position = UDim2.new(0.85262296, 0, 0, 0)
 sea.Size = UDim2.new(0, 90, 0, 26)
@@ -384,8 +353,7 @@ sea.Font = Enum.Font.Ubuntu
 sea.Text = "Blox Fruit | Sea ."
 sea.TextColor3 = Color3.fromRGB(255, 255, 255)
 sea.TextSize = 14.000
-sea.MouseButton1Down:connect(function()
-end)
+
 --check sea
 if game.PlaceId == 2753915549 then -- sea1
 sea.Text = "Blox Fruit | Sea 1"
@@ -412,8 +380,7 @@ nametp.Font = Enum.Font.SourceSans
 nametp.Text = "Tp Island"
 nametp.TextColor3 = Color3.fromRGB(255, 255, 255)
 nametp.TextSize = 18.000
-nametp.MouseButton1Down:connect(function()
-end)
+
 
 btp.Name = "btp"
 btp.Parent = scriptspage
@@ -774,7 +741,7 @@ bartp.Parent = scriptspage
 bartp.Active = true
 bartp.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 bartp.BackgroundTransparency = 1.000
-bartp.Position = UDim2.new(0, 0, 0.194392526, 0)
+bartp.Position = UDim2.new(0, 0, 0.224392526, 0)
 bartp.Size = UDim2.new(0, 500, 0, 160)
 bartp.Visible = false
 
@@ -782,8 +749,8 @@ bartp.Visible = false
 tp1.Name = "tp1"
 tp1.Parent = bartp
 tp1.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-tp1.Position = UDim2.new(0.1031148 ,0 ,0.0204392526,0)
-tp1.Size = UDim2.new(0, 418, 0, 30)
+tp1.Position = UDim2.new(0.1031148 ,0 ,0.0104392526,0)
+tp1.Size = UDim2.new(0, 418, 0, 20)
 tp1.Font = Enum.Font.SourceSans
 tp1.Text = "Star Island Pirate"
 tp1.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -797,8 +764,8 @@ end)
 tp2.Name = "tp2"
 tp2.Parent = bartp
 tp2.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-tp2.Position = UDim2.new(0.1031148 ,0 ,0.0704392526,0)
-tp2.Size = UDim2.new(0, 418, 0, 30)
+tp2.Position = UDim2.new(0.1031148 ,0 ,0.0404392526,0)
+tp2.Size = UDim2.new(0, 418, 0, 20)
 tp2.Font = Enum.Font.SourceSans
 tp2.Text = "Star Island Marine"
 tp2.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -812,8 +779,8 @@ end)
 tp3.Name = "tp3"
 tp3.Parent = bartp
 tp3.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-tp3.Position = UDim2.new(0.1031148 ,0 ,0.1204392526,0)
-tp3.Size = UDim2.new(0, 418, 0, 30)
+tp3.Position = UDim2.new(0.1031148 ,0 ,0.0704392526,0)
+tp3.Size = UDim2.new(0, 418, 0, 20)
 tp3.Font = Enum.Font.SourceSans
 tp3.Text = "Middle Town"
 tp3.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -827,8 +794,8 @@ end)
 tp4.Name = "tp4"
 tp4.Parent = bartp
 tp4.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-tp4.Position = UDim2.new(0.1031148 ,0 ,0.1704392526,0)
-tp4.Size = UDim2.new(0, 418, 0, 30)
+tp4.Position = UDim2.new(0.1031148 ,0 ,0.1004392526,0)
+tp4.Size = UDim2.new(0, 418, 0, 20)
 tp4.Font = Enum.Font.SourceSans
 tp4.Text = "Jungle"
 tp4.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -842,8 +809,8 @@ end)
 tp5.Name = "tp5"
 tp5.Parent = bartp
 tp5.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-tp5.Position = UDim2.new(0.1031148 ,0 ,0.2204392526,0)
-tp5.Size = UDim2.new(0, 418, 0, 30)
+tp5.Position = UDim2.new(0.1031148 ,0 ,0.1304392526,0)
+tp5.Size = UDim2.new(0, 418, 0, 20)
 tp5.Font = Enum.Font.SourceSans
 tp5.Text = "Pirate Village"
 tp5.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -857,8 +824,8 @@ end)
 tp6.Name = "tp6"
 tp6.Parent = bartp
 tp6.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-tp6.Position = UDim2.new(0.1031148 ,0 ,0.2704392526,0)
-tp6.Size = UDim2.new(0, 418, 0, 30)
+tp6.Position = UDim2.new(0.1031148 ,0 ,0.1604392526,0)
+tp6.Size = UDim2.new(0, 418, 0, 20)
 tp6.Font = Enum.Font.SourceSans
 tp6.Text = "Desert"
 tp6.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -872,8 +839,8 @@ end)
 tp7.Name = "tp7"
 tp7.Parent = bartp
 tp7.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-tp7.Position = UDim2.new(0.1031148 ,0 ,0.3204392526,0)
-tp7.Size = UDim2.new(0, 418, 0, 30)
+tp7.Position = UDim2.new(0.1031148 ,0 ,0.1904392526,0)
+tp7.Size = UDim2.new(0, 418, 0, 20)
 tp7.Font = Enum.Font.SourceSans
 tp7.Text = "Frozen Village"
 tp7.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -887,8 +854,8 @@ end)
 tp8.Name = "tp8"
 tp8.Parent = bartp
 tp8.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-tp8.Position = UDim2.new(0.1031148 ,0 ,0.3704392526,0)
-tp8.Size = UDim2.new(0, 418, 0, 30)
+tp8.Position = UDim2.new(0.1031148 ,0 ,0.2204392526,0)
+tp8.Size = UDim2.new(0, 418, 0, 20)
 tp8.Font = Enum.Font.SourceSans
 tp8.Text = "Whirlpool"
 tp8.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -902,8 +869,8 @@ end)
 tp9.Name = "tp9"
 tp9.Parent = bartp
 tp9.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-tp9.Position = UDim2.new(0.1031148 ,0 ,0.4204392526,0)
-tp9.Size = UDim2.new(0, 418, 0, 30)
+tp9.Position = UDim2.new(0.1031148 ,0 ,0.2504392526,0)
+tp9.Size = UDim2.new(0, 418, 0, 20)
 tp9.Font = Enum.Font.SourceSans
 tp9.Text = "Prison"
 tp9.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -917,8 +884,8 @@ end)
 tp10.Name = "tp10"
 tp10.Parent = bartp
 tp10.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-tp10.Position = UDim2.new(0.1031148 ,0 ,0.4704392526,0)
-tp10.Size = UDim2.new(0, 418, 0, 30)
+tp10.Position = UDim2.new(0.1031148 ,0 ,0.2804392526,0)
+tp10.Size = UDim2.new(0, 418, 0, 20)
 tp10.Font = Enum.Font.SourceSans
 tp10.Text = "Marine Fortress"
 tp10.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -932,8 +899,8 @@ end)
 tp11.Name = "tp11"
 tp11.Parent = bartp
 tp11.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-tp11.Position = UDim2.new(0.1031148 ,0 ,0.5204392526,0)
-tp11.Size = UDim2.new(0, 418, 0, 30)
+tp11.Position = UDim2.new(0.1031148 ,0 ,0.3104392526,0)
+tp11.Size = UDim2.new(0, 418, 0, 20)
 tp11.Font = Enum.Font.SourceSans
 tp11.Text = "Magma Village"
 tp11.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -947,8 +914,8 @@ end)
 tp12.Name = "tp12"
 tp12.Parent = bartp
 tp12.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-tp12.Position = UDim2.new(0.1031148 ,0 ,0.5704392526,0)
-tp12.Size = UDim2.new(0, 418, 0, 30)
+tp12.Position = UDim2.new(0.1031148 ,0 ,0.3404392526,0)
+tp12.Size = UDim2.new(0, 418, 0, 20)
 tp12.Font = Enum.Font.SourceSans
 tp12.Text = "Fountain City"
 tp12.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -962,8 +929,8 @@ end)
 tp13.Name = "tp13"
 tp13.Parent = bartp
 tp13.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-tp13.Position = UDim2.new(0.1031148 ,0 ,0.6204392526,0)
-tp13.Size = UDim2.new(0, 418, 0, 30)
+tp13.Position = UDim2.new(0.1031148 ,0 ,0.3704392526,0)
+tp13.Size = UDim2.new(0, 418, 0, 20)
 tp13.Font = Enum.Font.SourceSans
 tp13.Text = "Sky 1"
 tp13.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -977,8 +944,8 @@ end)
 tp14.Name = "tp14"
 tp14.Parent = bartp
 tp14.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-tp14.Position = UDim2.new(0.1031148 ,0 ,0.6704392526,0)
-tp14.Size = UDim2.new(0, 418, 0, 30)
+tp14.Position = UDim2.new(0.1031148 ,0 ,0.4004392526,0)
+tp14.Size = UDim2.new(0, 418, 0, 20)
 tp14.Font = Enum.Font.SourceSans
 tp14.Text = "Sky 2"
 tp14.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -1018,8 +985,7 @@ nametp.Font = Enum.Font.SourceSans
 nametp.Text = "Tp Island"
 nametp.TextColor3 = Color3.fromRGB(255, 255, 255)
 nametp.TextSize = 18.000
-nametp.MouseButton1Down:connect(function()
-end)
+
 
 btp.Name = "btp"
 btp.Parent = scriptspage
@@ -1255,7 +1221,7 @@ bartp.Parent = scriptspage
 bartp.Active = true
 bartp.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 bartp.BackgroundTransparency = 1.000
-bartp.Position = UDim2.new(0, 0, 0.194392526, 0)
+bartp.Position = UDim2.new(0, 0, 0.224392526, 0)
 bartp.Size = UDim2.new(0, 500, 0, 160)
 bartp.Visible = false
 
@@ -1263,8 +1229,8 @@ bartp.Visible = false
 tp1.Name = "tp1"
 tp1.Parent = bartp
 tp1.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-tp1.Position = UDim2.new(0.1031148 ,0 ,0.0204392526,0)
-tp1.Size = UDim2.new(0, 418, 0, 30)
+tp1.Position = UDim2.new(0.1031148 ,0 ,0.0104392526,0)
+tp1.Size = UDim2.new(0, 418, 0, 20)
 tp1.Font = Enum.Font.SourceSans
 tp1.Text = "Star Island"
 tp1.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -1278,8 +1244,8 @@ end)
 tp2.Name = "tp2"
 tp2.Parent = bartp
 tp2.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-tp2.Position = UDim2.new(0.1031148 ,0 ,0.0704392526,0)
-tp2.Size = UDim2.new(0, 418, 0, 30)
+tp2.Position = UDim2.new(0.1031148 ,0 ,0.0404392526,0)
+tp2.Size = UDim2.new(0, 418, 0, 20)
 tp2.Font = Enum.Font.SourceSans
 tp2.Text = "Cafe"
 tp2.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -1293,8 +1259,8 @@ end)
 tp3.Name = "tp3"
 tp3.Parent = bartp
 tp3.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-tp3.Position = UDim2.new(0.1031148 ,0 ,0.1204392526,0)
-tp3.Size = UDim2.new(0, 418, 0, 30)
+tp3.Position = UDim2.new(0.1031148 ,0 ,0.0704392526,0)
+tp3.Size = UDim2.new(0, 418, 0, 20)
 tp3.Font = Enum.Font.SourceSans
 tp3.Text = "Green Zone"
 tp3.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -1308,8 +1274,8 @@ end)
 tp4.Name = "tp4"
 tp4.Parent = bartp
 tp4.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-tp4.Position = UDim2.new(0.1031148 ,0 ,0.1704392526,0)
-tp4.Size = UDim2.new(0, 418, 0, 30)
+tp4.Position = UDim2.new(0.1031148 ,0 ,0.1004392526,0)
+tp4.Size = UDim2.new(0, 418, 0, 20)
 tp4.Font = Enum.Font.SourceSans
 tp4.Text = "Graveyard"
 tp4.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -1323,8 +1289,8 @@ end)
 tp5.Name = "tp5"
 tp5.Parent = bartp
 tp5.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-tp5.Position = UDim2.new(0.1031148 ,0 ,0.2204392526,0)
-tp5.Size = UDim2.new(0, 418, 0, 30)
+tp5.Position = UDim2.new(0.1031148 ,0 ,0.1304392526,0)
+tp5.Size = UDim2.new(0, 418, 0, 20)
 tp5.Font = Enum.Font.SourceSans
 tp5.Text = "Snow"
 tp5.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -1338,8 +1304,8 @@ end)
 tp6.Name = "tp6"
 tp6.Parent = bartp
 tp6.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-tp6.Position = UDim2.new(0.1031148 ,0 ,0.2704392526,0)
-tp6.Size = UDim2.new(0, 418, 0, 30)
+tp6.Position = UDim2.new(0.1031148 ,0 ,0.1604392526,0)
+tp6.Size = UDim2.new(0, 418, 0, 20)
 tp6.Font = Enum.Font.SourceSans
 tp6.Text = "Hot And Cold"
 tp6.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -1353,8 +1319,8 @@ end)
 tp7.Name = "tp7"
 tp7.Parent = bartp
 tp7.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-tp7.Position = UDim2.new(0.1031148 ,0 ,0.3204392526,0)
-tp7.Size = UDim2.new(0, 418, 0, 30)
+tp7.Position = UDim2.new(0.1031148 ,0 ,0.1904392526,0)
+tp7.Size = UDim2.new(0, 418, 0, 20)
 tp7.Font = Enum.Font.SourceSans
 tp7.Text = "Haunted Ship"
 tp7.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -1368,8 +1334,8 @@ end)
 tp8.Name = "tp8"
 tp8.Parent = bartp
 tp8.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-tp8.Position = UDim2.new(0.1031148 ,0 ,0.3704392526,0)
-tp8.Size = UDim2.new(0, 418, 0, 30)
+tp8.Position = UDim2.new(0.1031148 ,0 ,0.2204392526,0)
+tp8.Size = UDim2.new(0, 418, 0, 20)
 tp8.Font = Enum.Font.SourceSans
 tp8.Text = "Ice Castle"
 tp8.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -1383,8 +1349,8 @@ end)
 tp9.Name = "tp9"
 tp9.Parent = bartp
 tp9.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-tp9.Position = UDim2.new(0.1031148 ,0 ,0.4204392526,0)
-tp9.Size = UDim2.new(0, 418, 0, 30)
+tp9.Position = UDim2.new(0.1031148 ,0 ,0.2504392526,0)
+tp9.Size = UDim2.new(0, 418, 0, 20)
 tp9.Font = Enum.Font.SourceSans
 tp9.Text = "Forgotten"
 tp9.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -1632,7 +1598,7 @@ bh.Position = UDim2.new(0, 0, 0.0304392526, 0)
 bh.Size = UDim2.new(0, 498, 0, 30)
 
 th.Parent = bh
-th.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+th.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
 th.BackgroundTransparency = 1.000
 th.Position = UDim2.new(0, 0, 0, 0)
 th.Size = UDim2.new(0, 200, 0, 30)
@@ -1718,7 +1684,7 @@ bm1.Position = UDim2.new(0, 0, 0.1004392526, 0)
 bm1.Size = UDim2.new(0, 498, 0, 30)
 
 te1.Parent = bm1
-te1.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+te1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
 te1.BackgroundTransparency = 1.000
 te1.Position = UDim2.new(0, 0, 0, 0)
 te1.Size = UDim2.new(0, 200, 0, 30)
@@ -1807,7 +1773,7 @@ bm2.Position = UDim2.new(0, 0, 0.1704392526, 0)
 bm2.Size = UDim2.new(0, 498, 0, 30)
 
 te2.Parent = bm2
-te2.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+te2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
 te2.BackgroundTransparency = 1.000
 te2.Position = UDim2.new(0, 0, 0, 0)
 te2.Size = UDim2.new(0, 200, 0, 30)
@@ -1889,7 +1855,7 @@ bm3.Position = UDim2.new(0, 0, 0.2404392526, 0)
 bm3.Size = UDim2.new(0, 498, 0, 30)
 
 te3.Parent = bm3
-te3.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+te3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
 te3.BackgroundTransparency = 1.000
 te3.Position = UDim2.new(0, 0, 0, 0)
 te3.Size = UDim2.new(0, 200, 0, 30)
@@ -2022,15 +1988,10 @@ if MyLevel == 700 or MyLevel <= 724 then -- Raider [Lv. 700]
                  NaemQuest = "Area1Quest"
                  LevelQuest = 2
                  Tp = "text"
-                 elseif MyLevel == 775 or MyLevel <= 799 then -- Swan Pirate [Lv. 775]
+                 elseif MyLevel == 775 or MyLevel <= 874 then -- Swan Pirate [Lv. 775]
                  Ms = "Swan Pirate [Lv. 775]"
                  NaemQuest = "Area2Quest"
                  LevelQuest = 1
-                 Tp = "text"
-                 elseif MyLevel == 800 or MyLevel <= 874 then -- Factory Staff [Lv. 800]
-                 Ms = "Factory Staff [Lv. 800]"
-                 NaemQuest = "Area2Quest"
-                 LevelQuest = 2
                  Tp = "text"
                  elseif MyLevel == 875 or MyLevel <= 899 then -- Marine Lieutenant [Lv. 875]
                  Ms = "Marine Lieutenant [Lv. 875]"
@@ -2127,25 +2088,16 @@ if MyLevel == 700 or MyLevel <= 724 then -- Raider [Lv. 700]
                  
 
 --auto haki
-a1.Name = "a1"
 a1.Parent = scriptspage3
-a1.Active = false
-a1.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+a1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
 a1.Position = UDim2.new(0, 0, 0.1704392526, 0)
 a1.Size = UDim2.new(0, 498, 0, 30)
-UIa1.Parent = a1
-
-texta1.Parent = a1
-texta1.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-texta1.BackgroundTransparency = 1.000
-texta1.Position = UDim2.new(0, 0, 0.121392526, 0)
-texta1.Size = UDim2.new(0, 200, 0, 30)
-texta1.Font = Enum.Font.Ubuntu
-texta1.Text = "   Auto Haki"
-texta1.TextColor3 = Color3.fromRGB(255, 255, 255)
-texta1.TextSize = 15.000
-texta1.TextWrapped = true
-texta1.TextXAlignment = Enum.TextXAlignment.Left
+a1.Font = Enum.Font.Ubuntu
+a1.Text = "   Auto Haki"
+a1.TextColor3 = Color3.fromRGB(255, 255, 255)
+a1.TextSize = 15.000
+a1.TextWrapped = true
+a1.TextXAlignment = Enum.TextXAlignment.Left
 
 ba1.Name = "ba1"
 ba1.Parent = a1
@@ -2196,30 +2148,22 @@ end)
 end)
 
  --auto click v1
-a2.Name = "a2"
-a2.Parent = scriptspage3
-a2.Active = false
-a2.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-a2.Position = UDim2.new(0, 0, 0.2404392526, 0)
-a2.Size = UDim2.new(0, 498, 0, 30)
-UIa2.Parent = a2
 
 function Click()
           game:GetService'VirtualUser':CaptureController()
           game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
       end
 
-texta2.Parent = a2
-texta2.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-texta2.BackgroundTransparency = 1.000
-texta2.Position = UDim2.new(0, 0, 0, 0)
-texta2.Size = UDim2.new(0, 200, 0, 30)
-texta2.Font = Enum.Font.Ubuntu
-texta2.Text = "   Auto Click V1"
-texta2.TextColor3 = Color3.fromRGB(255, 255, 255)
-texta2.TextSize = 14.000
-texta2.TextWrapped = true
-texta2.TextXAlignment = Enum.TextXAlignment.Left
+a2.Parent = scriptspage3
+a2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+a2.Position = UDim2.new(0, 0, 0.2404392526, 0)
+a2.Size = UDim2.new(0, 498, 0, 30)
+a2.Font = Enum.Font.Ubuntu
+a2.Text = "   Auto Click V1"
+a2.TextColor3 = Color3.fromRGB(255, 255, 255)
+a2.TextSize = 14.000
+a2.TextWrapped = true
+a2.TextXAlignment = Enum.TextXAlignment.Left
 
 ba3.Name = "ba3"
 ba3.Parent = a2
@@ -2297,24 +2241,15 @@ end)
 end)
 
 --auto tp item
-a3.Name = "a3"
 a3.Parent = scriptspage3
-a3.Active = false
-a3.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+a3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
 a3.Position = UDim2.new(0, 0, 0.1004392526, 0)
 a3.Size = UDim2.new(0, 498, 0, 30)
-UIa3.Parent = a3
-
-texta3.Parent = a3
-texta3.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-texta3.BackgroundTransparency = 1.000
-texta3.Position = UDim2.new(0.50662296, 0, 0.121392526, 0)
-texta3.Size = UDim2.new(0, 200, 0, 30)
-texta3.Font = Enum.Font.Ubuntu
-texta3.Text = "Auto Tp"
-texta3.TextColor3 = Color3.fromRGB(255, 255, 255)
-texta3.TextSize = 14.000
-texta3.TextWrapped = true
+a3.Font = Enum.Font.Ubuntu
+a3.Text = ""
+a3.TextColor3 = Color3.fromRGB(255, 255, 255)
+a3.TextSize = 14.000
+a3.TextWrapped = true
 
 citem.Name = "citem"
 citem.Parent = a3
@@ -2472,25 +2407,16 @@ end
 end)
 
 --auto Fartory
-a4.Name = "a4"
 a4.Parent = scriptspage3
-a4.Active = false
-a4.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+a4.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
 a4.Position = UDim2.new(0, 0, 0.3104392526, 0)
 a4.Size = UDim2.new(0, 498, 0, 30)
-UIa4.Parent = a4
-
-texta4.Parent = a4
-texta4.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-texta4.BackgroundTransparency = 1.000
-texta4.Position = UDim2.new(0, 0, 0, 0)
-texta4.Size = UDim2.new(0, 200, 0, 30)
-texta4.Font = Enum.Font.Ubuntu
-texta4.Text = "   Auto Fartory"
-texta4.TextColor3 = Color3.fromRGB(255, 255, 255)
-texta4.TextSize = 14.000
-texta4.TextWrapped = true
-texta4.TextXAlignment = Enum.TextXAlignment.Left
+a4.Font = Enum.Font.Ubuntu
+a4.Text = "   Auto Fartory"
+a4.TextColor3 = Color3.fromRGB(255, 255, 255)
+a4.TextSize = 14.000
+a4.TextWrapped = true
+a4.TextXAlignment = Enum.TextXAlignment.Left
 
 ba7.Name = "ba7"
 ba7.Parent = a4
@@ -2523,25 +2449,16 @@ ba7.Visible = true
 end)
 
 --auto buy haki color
-a5.Name = "a5"
 a5.Parent = scriptspage3
-a5.Active = false
-a5.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+a5.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
 a5.Position = UDim2.new(0, 0, 0.3804392526, 0)
 a5.Size = UDim2.new(0, 498, 0, 30)
-UIa5.Parent = a5
-
-texta5.Parent = a5
-texta5.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-texta5.BackgroundTransparency = 1.000
-texta5.Position = UDim2.new(0, 0, 0, 0)
-texta5.Size = UDim2.new(0, 200, 0, 30)
-texta5.Font = Enum.Font.Ubuntu
-texta5.Text = "   Auto Buy Haki Color"
-texta5.TextColor3 = Color3.fromRGB(255, 255, 255)
-texta5.TextSize = 14.000
-texta5.TextWrapped = true
-texta5.TextXAlignment = Enum.TextXAlignment.Left
+a5.Font = Enum.Font.Ubuntu
+a5.Text = "   Auto Buy Haki Color"
+a5.TextColor3 = Color3.fromRGB(255, 255, 255)
+a5.TextSize = 14.000
+a5.TextWrapped = true
+a5.TextXAlignment = Enum.TextXAlignment.Left
 
 ba9.Name = "ba9"
 ba9.Parent = a5
@@ -2592,25 +2509,16 @@ end)
 end)
 
 --auto buy sword legend
-a6.Name = "a6"
 a6.Parent = scriptspage3
-a6.Active = falae
-a6.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+a6.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
 a6.Position = UDim2.new(0, 0, 0.3804392526, 0)
 a6.Size = UDim2.new(0, 498, 0, 30)
-UIa6.Parent = a6
-
-texta6.Parent = a6
-texta6.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-texta6.BackgroundTransparency = 1.000
-texta6.Position = UDim2.new(0, 0, 0, 0)
-texta6.Size = UDim2.new(0, 200, 0, 30)
-texta6.Font = Enum.Font.Ubuntu
-texta6.Text = "   Auto Buy Sword Legend"
-texta6.TextColor3 = Color3.fromRGB(255, 255, 255)
-texta6.TextSize = 14.000
-texta6.TextWrapped = true
-texta6.TextXAlignment = Enum.TextXAlignment.Left
+a6.Font = Enum.Font.Ubuntu
+a6.Text = "   Auto Buy Sword Legend"
+a6.TextColor3 = Color3.fromRGB(255, 255, 255)
+a6.TextSize = 14.000
+a6.TextWrapped = true
+a6.TextXAlignment = Enum.TextXAlignment.Left
 
 ba11.Name = "ba11"
 ba11.Parent = a6
@@ -2663,25 +2571,16 @@ end)
 end)
 
 --auto random fruit
-a7.Name = "a7"
 a7.Parent = scriptspage3
-a7.Active = false
-a7.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+a7.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
 a7.Position = UDim2.new(0, 0, 0.4504392526, 0)
 a7.Size = UDim2.new(0, 498, 0, 30)
-UIa7.Parent = a7
-
-texta7.Parent = a7
-texta7.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-texta7.BackgroundTransparency = 1.000
-texta7.Position = UDim2.new(0, 0, 0, 0)
-texta7.Size = UDim2.new(0, 200, 0, 30)
-texta7.Font = Enum.Font.Ubuntu
-texta7.Text = "   Auto Random Fruit"
-texta7.TextColor3 = Color3.fromRGB(255, 255, 255)
-texta7.TextSize = 14.000
-texta7.TextWrapped = true
-texta7.TextXAlignment = Enum.TextXAlignment.Left
+a7.Font = Enum.Font.Ubuntu
+a7.Text = "   Auto Random Fruit"
+a7.TextColor3 = Color3.fromRGB(255, 255, 255)
+a7.TextSize = 14.000
+a7.TextWrapped = true
+a7.TextXAlignment = Enum.TextXAlignment.Left
 
 ba13.Name = "ba13"
 ba13.Parent = a7
@@ -2742,24 +2641,15 @@ game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players")
 end
 
 --fram auto
-nl.Name = "nl"
 nl.Parent = scriptspage3
-nl.Active = true
-nl.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+nl.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
 nl.Position = UDim2.new(0, 0, 0.0304392526, 0)
 nl.Size = UDim2.new(0, 498, 0, 30)
-UInl.Parent = nl
-
-tnl.Parent = nl
-tnl.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-tnl.BackgroundTransparency = 1.000
-tnl.Position = UDim2.new(0.50662296, 0, 0.121392526, 0)
-tnl.Size = UDim2.new(0, 200, 0, 30)
-tnl.Font = Enum.Font.Ubuntu
-tnl.Text = "Auto Fram"
-tnl.TextColor3 = Color3.fromRGB(255, 255, 255)
-tnl.TextSize = 15.000
-tnl.TextWrapped = true
+nl.Font = Enum.Font.Ubuntu
+nl.Text = ""
+nl.TextColor3 = Color3.fromRGB(255, 255, 255)
+nl.TextSize = 15.000
+nl.TextWrapped = true
 
 bnn1.Name = "bnn1"
 bnn1.Parent = nl
@@ -3331,29 +3221,19 @@ end)
 
 
 --raid2
-
-r1.Name = "r1"
 r1.Parent = scriptspage4
-r1.Active = false
-r1.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+r1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
 r1.Position = UDim2.new(0, 0, 0.0304392526, 0)
 r1.Size = UDim2.new(0, 498, 0, 30)
-UIr1.Parent = r1
-
-tr1.Parent = r1
-tr1.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-tr1.BackgroundTransparency = 1.000
-tr1.Position = UDim2.new(0, 0, 0, 0)
-tr1.Size = UDim2.new(0, 200, 0, 30)
-tr1.Font = Enum.Font.Ubuntu
-tr1.Text = "   Auto Tp Island"
-tr1.TextColor3 = Color3.fromRGB(255, 255, 255)
-tr1.TextSize = 14.000
-tr1.TextWrapped = true
-tr1.TextXAlignment = Enum.TextXAlignment.Left
+r1.Font = Enum.Font.Ubuntu
+r1.Text = "   Auto Tp Island"
+r1.TextColor3 = Color3.fromRGB(255, 255, 255)
+r1.TextSize = 14.000
+r1.TextWrapped = true
+r1.TextXAlignment = Enum.TextXAlignment.Left
 
 dr1.Parent = r1
-dr1.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+dr1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
 dr1.BackgroundTransparency = 1.000
 dr1.Position = UDim2.new(0, 0, 0, 0)
 dr1.Size = UDim2.new(0, 200, 0, 30)
@@ -3452,25 +3332,17 @@ end
 end
 end)
 
-r2.Name = "r2"
+--raid fram
 r2.Parent = scriptspage4
-r2.Active = false
-r2.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+r2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
 r2.Position = UDim2.new(0, 0, 0.1304392526, 0)
 r2.Size = UDim2.new(0, 498, 0, 30)
-UIr2.Parent = r2
-
-tr2.Parent = r2
-tr2.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-tr2.BackgroundTransparency = 1.000
-tr2.Position = UDim2.new(0, 0, 0, 0)
-tr2.Size = UDim2.new(0, 200, 0, 30)
-tr2.Font = Enum.Font.Ubuntu
-tr2.Text = "   Auto Fram Raid"
-tr2.TextColor3 = Color3.fromRGB(255, 255, 255)
-tr2.TextSize = 14.000
-tr2.TextWrapped = true
-tr2.TextXAlignment = Enum.TextXAlignment.Left
+r2.Font = Enum.Font.Ubuntu
+r2.Text = "   Auto Fram Raid"
+r2.TextColor3 = Color3.fromRGB(255, 255, 255)
+r2.TextSize = 14.000
+r2.TextWrapped = true
+r2.TextXAlignment = Enum.TextXAlignment.Left
 
 br3.Name = "br3"
 br3.Parent = r2
@@ -3484,9 +3356,9 @@ br3.TextSize = 18.000
 br3.MouseButton1Down:connect(function()
 br3.Visible = false
 br4.Visible = true
-_G.raid = false
+_G.raid2 = false
 game:GetService('RunService').RenderStepped:connect(function()
-if _G.raid then
+if _G.raid2 then
 end
 end)
 
@@ -3505,12 +3377,13 @@ br4.MouseButton1Down:connect(function()
 br4.Visible = false
 br3.Visible = true
 
-_G.raid = true
+_G.raid2 = true
 game:GetService('RunService').RenderStepped:connect(function()
-if _G.raid then
-local Player = game:GetService('Players').LocalPlayer
+if _G.raid2 then
+local Players = game.Players
+local Player = Players.LocalPlayer
     for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
-      if v.Name == "Bladesmith [Lv. 2200]" or v.Name == "Sorcerer [Lv. 2200]" or v.Name == "Bone Breaker [Lv. 2200]" or v.Name == "Shocker [Lv. 2200]" or v.Name == "Bladesmith [Lv. 2200] [Tanky]" or v.Name == "Sorcerer [Lv. 2200] [Tanky]" or v.Name == "Bone Breaker [Lv. 2200] [Tanky]" or v.Name == "Shocker [Lv. 2200] [Tanky]" or v.Name == "Darkness Master [Lv. 2200]" or v.Name == "Darkness User [Lv. 2200] [Tanky]" or v.Name == "Darkness User [Lv. 2200]" or v.Name == "Ice Master [Lv. 2200]" or v.Name == "Ice User [Lv. 2200] [Tanky]" or v.Name == "Ice User [Lv. 2200]" or v.Name == "Flame Master [Lv. 2200]" or v.Name == "Flame User [Lv. 2200] [Tanky]" or v.Name == "Flame User [Lv. 2200]" or v.Name == "Quake Master [Lv. 2200]" or v.Name == "Quake User [Lv. 2200] [Tanky]" or v.Name == "Quake User [Lv. 2200]" or v.Name == "Magma Master [Lv. 2200]" or v.Name == "Magma User [Lv. 2200] [Tanky]" or v.Name == "Magma User [Lv. 2200]" or v.Name == "Phonix Master [Lv. 2200]" or v.Name == "Phonix User [Lv. 2200] [Tanky]" or v.Name == "Phonix User [Lv. 2200]" or v.Name == "Light Master [Lv. 2200]" or v.Name == "Light User [Lv. 2200] [Tanky]" or v.Name == "Light User [Lv. 2200]" or v.Name == "String Master [Lv. 2200]" or v.Name == "String User [Lv. 2200] [Tanky]" or v.Name == "String User [Lv. 2200]" then
+      if v.Name == "Bladesmith [Lv. 2200]" or v.Name == "Sorcerer [Lv. 2200]" or v.Name == "Bone Breaker [Lv. 2200]" or v.Name == "Shocker [Lv. 2200]" or v.Name == "Bladesmith [Lv. 2200] [Tanky]" or v.Name == "Sorcerer [Lv. 2200] [Tanky]" or v.Name == "Bone Breaker [Lv. 2200] [Tanky]" or v.Name == "Shocker [Lv. 2200] [Tanky]" or v.Name == "Darkness Master [Lv. 2200]" or v.Name == "Darkness User [Lv. 2200] [Tanky]" or v.Name == "Darkness User [Lv. 2200]" or v.Name == "Ice Master [Lv. 2200]" or v.Name == "Ice User [Lv. 2200] [Tanky]" or v.Name == "Ice User [Lv. 2200]" or v.Name == "Flame Master [Lv. 2200]" or v.Name == "Flame User [Lv. 2200] [Tanky]" or v.Name == "Flame User [Lv. 2200]" or v.Name == "Quake Master [Lv. 2200]" or v.Name == "Quake User [Lv. 2200] [Tanky]" or v.Name == "Quake User [Lv. 2200]" or v.Name == "Magma Master [Lv. 2200]" or v.Name == "Magma User [Lv. 2200] [Tanky]" or v.Name == "Magma User [Lv. 2200]" or v.Name == "Phonix Master [Lv. 2200]" or v.Name == "Phonix User [Lv. 2200] [Tanky]" or v.Name == "Phonix User [Lv. 2200]" or v.Name == "Light Master [Lv. 2200]" or v.Name == "Light User [Lv. 2200] [Tanky]" or v.Name == "Light User [Lv. 2200]" or v.Name == "String Master [Lv. 2200]" or v.Name == "String User [Lv. 2200] [Tanky]" or v.Name == "String User [Lv. 2200]" or v.Name == "Mochi Master [Lv. 2200]" or v.Name == "Mochi User [Lv. 2200] [Tanky]" or v.Name == "Mochi User [Lv. 2200]" then
       v.HumanoidRootPart.CanCollide = false
       v.HumanoidRootPart.Size = Vector3.new(60, 60, 5)     
       local Time = 0 -- Time in seconds -- thời gian đi tới    
@@ -3520,44 +3393,25 @@ tween:Play()
       end
       end
       
-      for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
-      if v.Name == "Mochi Master [Lv. 2200]" or v.Name == "Mochi User [Lv. 2200] [Tanky]" or v.Name == "Mochi User [Lv. 2200]" then
-      v.HumanoidRootPart.CanCollide = false
-      v.HumanoidRootPart.Size = Vector3.new(60, 60, 5)     
-      local Time = 0 -- Time in seconds -- thời gian đi tới
-local CFrameEnd =  v.HumanoidRootPart.CFrame -- tọa độ tp tới
-local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd * CFrame.new(30,-7,0) })
-tween:Play()
-      end
-      end
-      
+     
       --tool use and click
       Click()
       Tooluse()
       end
       end)
-
 end)
 
-r3.Name = "r3"
+--raid flas
 r3.Parent = scriptspage4
-r3.Active = false
-r3.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+r3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
 r3.Position = UDim2.new(0, 0, 0.2304392526, 0)
 r3.Size = UDim2.new(0, 498, 0, 30)
-UIr3.Parent = r3
-
-tr3.Parent = r3
-tr3.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-tr3.BackgroundTransparency = 1.000
-tr3.Position = UDim2.new(0, 0, 0, 0)
-tr3.Size = UDim2.new(0, 200, 0, 30)
-tr3.Font = Enum.Font.Ubuntu
-tr3.Text = "   Auto Kill Aura Raid Beta"
-tr3.TextColor3 = Color3.fromRGB(255, 255, 255)
-tr3.TextSize = 14.000
-tr3.TextWrapped = true
-tr3.TextXAlignment = Enum.TextXAlignment.Left
+r3.Font = Enum.Font.Ubuntu
+r3.Text = "   Auto Kill Aura Raid Beta"
+r3.TextColor3 = Color3.fromRGB(255, 255, 255)
+r3.TextSize = 14.000
+r3.TextWrapped = true
+r3.TextXAlignment = Enum.TextXAlignment.Left
 
 br5.Name = "br5"
 br5.Parent = r3
@@ -3625,16 +3479,11 @@ local dist = math.huge
                     end
         end
 end
-for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-    v.HumanoidRootPart.Size = Vector3.new(60, 60, 5)
-    v.HumanoidRootPart.Transparency = 1
-    end
+
 end
 end)
 
 end)
-
-
 
 
 -- Scripts:
@@ -3791,7 +3640,7 @@ UIbarr1.Parent = barr1
 barr1.Visible = false
 
 text1.Parent = barr1
-text1.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+text1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
 text1.BackgroundTransparency = 1.000
 text1.Position = UDim2.new(0.24631148, 0, 0.0704392526, 0)
 text1.Size = UDim2.new(0, 170, 0, 30)
@@ -3821,13 +3670,13 @@ cc1.Parent = bountybox
 barr2.Name = "barr2"
 barr2.Parent = barr1
 barr2.Active = true
-barr2.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+barr2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
 barr2.Position = UDim2.new(0.10631148, 0, 0.5404392526, 0)
 barr2.Size = UDim2.new(0, 250, 0, 30)
 UIbarr2.Parent = barr2
 
 t1.Parent = barr2
-t1.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+t1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
 t1.BackgroundTransparency = 1.000
 t1.Position = UDim2.new(0, 0, 0, 0)
 t1.Size = UDim2.new(0, 100, 0, 30)
