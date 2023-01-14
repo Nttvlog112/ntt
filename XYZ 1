@@ -1,5 +1,5 @@
 
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Fly')))()
+loadstring(game:HttpGet(('https://github.com/Nttvlog112/ntt/blob/main/Fly%201')))()
 local S = Instance.new("ScreenGui")
 local L = Instance.new("Frame")
 local open = Instance.new("TextButton")
