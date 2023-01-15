@@ -1,1 +1,518 @@
 
+
+
+local UIGUI = Instance.new("ScreenGui")
+local text1 = Instance.new("TextLabel")
+local bars = Instance.new("Frame")
+local bars1 = Instance.new("Frame")
+local text2 = Instance.new("TextLabel")
+local text4 = Instance.new("TextLabel")
+local tkey = Instance.new("TextLabel")
+local textkey = Instance.new("TextLabel")
+local keybox = Instance.new("TextBox")
+local bar1 = Instance.new("Frame")
+local keybar = Instance.new("Frame")
+local checkkey = Instance.new("TextButton")
+local keyget = Instance.new("TextButton")
+local bar2 = Instance.new("Frame")
+local tload = Instance.new("TextLabel")
+local check1 = Instance.new("TextBox")
+local check2 = Instance.new("TextBox")
+local bcheck1 = Instance.new("TextButton")
+local bcheck2 = Instance.new("TextButton")
+local t1 = Instance.new("TextLabel")
+local bcheck3 = Instance.new("TextButton")
+local bcheck4 = Instance.new("TextButton")
+local t2 = Instance.new("TextLabel")
+local loadbutton = Instance.new("TextButton")
+--làm tròn
+local UIbar1 = Instance.new("UICorner")
+local UIkeybar = Instance.new("UICorner")
+local UIkey = Instance.new("UICorner")
+local UIbar2 = Instance.new("UICorner")
+local UIload = Instance.new("UICorner")
+local UIkeyget = Instance.new("UICorner")
+local c1 = Instance.new("UICorner")
+local cc1 = Instance.new("UICorner")
+local c2 = Instance.new("UICorner")
+local c3 = Instance.new("UICorner")
+local c4 = Instance.new("UICorner")
+
+UIGUI.Name = "UIGUI"
+UIGUI.Parent = game:WaitForChild("CoreGui")
+UIGUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+--key
+
+keybar.Name = "keybar"
+keybar.Parent = UIGUI
+keybar.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+keybar.Position = UDim2.new(0.358126051, 0, 0.258999169, 0)
+keybar.Size = UDim2.new(0, 300, 0, 150)
+UIkeybar.Parent = keybar
+keybar.Visible = true
+
+textkey.Parent = keybar
+textkey.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+textkey.BackgroundTransparency = 1.000
+textkey.Position = UDim2.new(0.24631148, 0, 0.0704392526, 0)
+textkey.Size = UDim2.new(0, 170, 0, 30)
+textkey.Font = Enum.Font.Ubuntu
+textkey.Text = "NTT HUB"
+textkey.TextColor3 = Color3.fromRGB(255, 255, 255)
+textkey.TextSize = 18.000
+textkey.TextWrapped = true
+
+text4.Parent = keybar
+text4.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+text4.BackgroundTransparency = 1.000
+text4.Position = UDim2.new(0.64631148, 0, 0.0704392526, 0)
+text4.Size = UDim2.new(0, 100, 0, 30)
+text4.Font = Enum.Font.Ubuntu
+text4.Text = "Key"
+text4.TextColor3 = Color3.fromRGB(255, 255, 255)
+text4.TextSize = 14.000
+text4.TextWrapped = true
+
+bars1.Name = "bars1"
+bars1.Parent = keybar
+bars1.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+bars1.Position = UDim2.new(0.10631148, 0, 0.2704392526, 0)
+bars1.Size = UDim2.new(0, 230, 0, 2)
+
+keybox.Name = "keybox"
+keybox.Parent = keybar
+keybox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+keybox.BorderColor3 = Color3.fromRGB(20, 20, 20)
+keybox.Position = UDim2.new(0.20631148, 0, 0.3704392526, 0)
+keybox.Size = UDim2.new(0, 180, 0, 27)
+keybox.Font = Enum.Font.SourceSans
+keybox.Text = "Nhập Key"
+keybox.TextColor3 = Color3.fromRGB(0, 0, 0)
+keybox.TextSize = 18.000
+cc1.Parent = keybox
+
+checkkey.Name = "checkkey"
+checkkey.Parent = keybar
+checkkey.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+checkkey.BorderColor3 = Color3.fromRGB(250, 250, 250)
+checkkey.Position = UDim2.new(0.27631148, 0, 0.6204392526, 0)
+checkkey.Size = UDim2.new(0, 150, 0, 25)
+checkkey.Font = Enum.Font.SourceSans
+checkkey.Text = "Check Key"
+checkkey.TextColor3 = Color3.fromRGB(250, 250, 250)
+checkkey.TextSize = 18.000
+UIkey.Parent = checkkey
+checkkey.MouseButton1Down:connect(function()
+--key đúng
+if keybox.Text == "ae7e73d919456ddaf039208ab7c4f4fe" then
+keybar.Visible = false
+bar1.Visible = true
+end
+
+end)
+
+keyget.Name = "keyget"
+keyget.Parent = keybar
+keyget.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+keyget.BorderColor3 = Color3.fromRGB(250, 250, 250)
+keyget.Position = UDim2.new(0.38631148, 0, 0.8004392526, 0)
+keyget.Size = UDim2.new(0, 70, 0, 20)
+keyget.Font = Enum.Font.SourceSans
+keyget.Text = "Get Key"
+keyget.TextColor3 = Color3.fromRGB(0, 250, 250)
+keyget.TextSize = 18.000
+UIkeyget.Parent = keyget
+keyget.MouseButton1Down:connect(function()
+setclipboard("https://link1s.com/key3")
+keyget.Visible = false
+keybox.Visible = false
+checkkey.Visible = false
+
+tkey.Visible = true
+wait(0.1)
+tkey.Text = "T"
+wait(0.1)
+tkey.Text = "Th"
+wait(0.1)
+tkey.Text = "The"
+wait(0.1)
+tkey.Text = "The l"
+wait(0.1)
+tkey.Text = "The li"
+wait(0.1)
+tkey.Text = "The lin"
+wait(0.1)
+tkey.Text = "The link"
+wait(0.1)
+tkey.Text = "The link t"
+wait(0.1)
+tkey.Text = "The link to"
+wait(0.1)
+tkey.Text = "The link to g"
+wait(0.1)
+tkey.Text = "The link to ge"
+wait(0.1)
+tkey.Text = "The link to get"
+wait(0.1)
+tkey.Text = "The link to get t"
+wait(0.1)
+tkey.Text = "The link to get th"
+wait(0.1)
+tkey.Text = "The link to get the"
+wait(0.1)
+tkey.Text = "The link to get the k"
+wait(0.1)
+tkey.Text = "The link to get the ke"
+wait(0.1)
+tkey.Text = "The link to get the key"
+wait(0.1)
+tkey.Text = "The link to get the key h"
+wait(0.1)
+tkey.Text = "The link to get the key ha"
+wait(0.1)
+tkey.Text = "The link to get the key has"
+wait(0.1)
+tkey.Text = "The link to get the key has b"
+wait(0.1)
+tkey.Text = "The link to get the key has be"
+wait(0.1)
+tkey.Text = "The link to get the key has bee"
+wait(0.1)
+tkey.Text = "The link to get the key has been"
+wait(0.1)
+tkey.Text = "The link to get the key has been c"
+wait(0.1)
+tkey.Text = "The link to get the key has been co"
+wait(0.1)
+tkey.Text = "The link to get the key has been cop"
+wait(0.1)
+tkey.Text = "The link to get the key has been copi"
+wait(0.1)
+tkey.Text = "The link to get the key has been copie"
+wait(0.1)
+tkey.Text = "The link to get the key has been copied"
+end)
+
+tkey.Parent = keybar
+tkey.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+tkey.BackgroundTransparency = 1.000
+tkey.Position = UDim2.new(0.24631148, 0, 0.3704392526, 0)
+tkey.Size = UDim2.new(0, 170, 0, 70)
+tkey.Font = Enum.Font.Ubuntu
+tkey.Text = ""
+tkey.TextColor3 = Color3.fromRGB(255, 255, 255)
+tkey.TextSize = 18.000
+tkey.TextWrapped = true
+tkey.Visible = false
+
+--end key
+
+bar1.Name = "bar1"
+bar1.Parent = UIGUI
+bar1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+bar1.Position = UDim2.new(0.358126051, 0, 0.258999169, 0)
+bar1.Size = UDim2.new(0, 300, 0, 150)
+UIbar1.Parent = bar1
+bar1.Visible = false
+
+bar2.Name = "bar2"
+bar2.Parent = UIGUI
+bar2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+bar2.Position = UDim2.new(0.358126051, 0, 0.258999169, 0)
+bar2.Size = UDim2.new(0, 300, 0, 150)
+UIbar2.Parent = bar2
+bar2.Visible = false
+
+--load text
+
+tload.Parent = bar2
+tload.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+tload.BackgroundTransparency = 1.000
+tload.Position = UDim2.new(0.24631148, 0, 0.3704392526, 0)
+tload.Size = UDim2.new(0, 170, 0, 30)
+tload.Font = Enum.Font.Ubuntu
+tload.Text = "..."
+tload.TextColor3 = Color3.fromRGB(255, 255, 255)
+tload.TextSize = 18.000
+tload.TextWrapped = true
+
+text1.Parent = bar1
+text1.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+text1.BackgroundTransparency = 1.000
+text1.Position = UDim2.new(0.24631148, 0, 0.0704392526, 0)
+text1.Size = UDim2.new(0, 170, 0, 30)
+text1.Font = Enum.Font.Ubuntu
+text1.Text = "NTT HUB"
+text1.TextColor3 = Color3.fromRGB(255, 255, 255)
+text1.TextSize = 18.000
+text1.TextWrapped = true
+
+text2.Parent = bar1
+text2.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+text2.BackgroundTransparency = 1.000
+text2.Position = UDim2.new(0.64631148, 0, 0.0704392526, 0)
+text2.Size = UDim2.new(0, 100, 0, 30)
+text2.Font = Enum.Font.Ubuntu
+text2.Text = "Drive..."
+text2.TextColor3 = Color3.fromRGB(255, 255, 255)
+text2.TextSize = 14.000
+text2.TextWrapped = true
+--check drive
+if not game:GetService("UserInputService").TouchEnabled and not game:GetService("UserInputService").KeyboardEnabled == false then
+	text2.Text = "PC"
+	else
+	    text2.Text = "Mobile"
+	end
+
+bars.Name = "bars"
+bars.Parent = bar1
+bars.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+bars.Position = UDim2.new(0.10631148, 0, 0.2704392526, 0)
+bars.Size = UDim2.new(0, 230, 0, 2)
+
+bcheck1.Name = "bcheck1"
+bcheck1.Parent = bar1
+bcheck1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+bcheck1.Position = UDim2.new(0.10631148, 0, 0.3704392526, 0)
+bcheck1.Size = UDim2.new(0, 20, 0, 20)
+bcheck1.Font = Enum.Font.SourceSans
+bcheck1.Text = ""
+bcheck1.TextColor3 = Color3.fromRGB(0, 0, 0)
+bcheck1.TextSize = 18.000
+c1.Parent = bcheck1
+bcheck1.MouseButton1Down:connect(function()
+bcheck1.Visible = false
+bcheck2.Visible = true
+check1.Text = "1"
+end)
+
+bcheck2.Name = "bcheck2"
+bcheck2.Parent = bar1
+bcheck2.BackgroundColor3 = Color3.fromRGB(0, 255, 60)
+bcheck2.Position = UDim2.new(0.10631148, 0, 0.3704392526, 0)
+bcheck2.Size = UDim2.new(0, 20, 0, 20)
+bcheck2.Font = Enum.Font.SourceSans
+bcheck2.Text = ""
+bcheck2.TextColor3 = Color3.fromRGB(0, 0, 0)
+bcheck2.TextSize = 18.000
+bcheck2.Visible = false
+c2.Parent = bcheck2
+bcheck2.MouseButton1Down:connect(function()
+bcheck2.Visible = false
+bcheck1.Visible = true
+check1.Text = ""
+end)
+
+t1.Parent = bar1
+t1.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+t1.BackgroundTransparency = 1.000
+t1.Position = UDim2.new(0.14631148, 0, 0.3304392526, 0)
+t1.Size = UDim2.new(0, 100, 0, 30)
+t1.Font = Enum.Font.Ubuntu
+t1.Text = "ANTI AFK "
+t1.TextColor3 = Color3.fromRGB(255, 255, 255)
+t1.TextSize = 14.000
+t1.TextWrapped = true
+
+bcheck3.Name = "bcheck3"
+bcheck3.Parent = bar1
+bcheck3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+bcheck3.Position = UDim2.new(0.10631148, 0, 0.5404392526, 0)
+bcheck3.Size = UDim2.new(0, 20, 0, 20)
+bcheck3.Font = Enum.Font.SourceSans
+bcheck3.Text = ""
+bcheck3.TextColor3 = Color3.fromRGB(0, 0, 0)
+bcheck3.TextSize = 18.000
+c3.Parent = bcheck3
+bcheck3.MouseButton1Down:connect(function()
+bcheck3.Visible = false
+bcheck4.Visible = true
+check2.Text = "1"
+end)
+
+bcheck4.Name = "bcheck4"
+bcheck4.Parent = bar1
+bcheck4.BackgroundColor3 = Color3.fromRGB(0, 255, 60)
+bcheck4.Position = UDim2.new(0.10631148, 0, 0.5404392526, 0)
+bcheck4.Size = UDim2.new(0, 20, 0, 20)
+bcheck4.Font = Enum.Font.SourceSans
+bcheck4.Text = ""
+bcheck4.TextColor3 = Color3.fromRGB(0, 0, 0)
+bcheck4.TextSize = 18.000
+bcheck4.Visible = false
+c4.Parent = bcheck4
+bcheck4.MouseButton1Down:connect(function()
+bcheck4.Visible = false
+bcheck3.Visible = true
+check2.Text = ""
+end)
+
+t2.Parent = bar1
+t2.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+t2.BackgroundTransparency = 1.000
+t2.Position = UDim2.new(0.14631148, 0, 0.5004392526, 0)
+t2.Size = UDim2.new(0, 100, 0, 30)
+t2.Font = Enum.Font.Ubuntu
+t2.Text = "FIX LAG    "
+t2.TextColor3 = Color3.fromRGB(255, 255, 255)
+t2.TextSize = 14.000
+t2.TextWrapped = true
+
+--check button
+check1.Name = "check1"
+check1.Parent = bar1
+check1.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+check1.Position = UDim2.new(0.15662296, 0, 0.101392526, 0)
+check1.Size = UDim2.new(0, 100, 0, 25)
+check1.Font = Enum.Font.SourceSans
+check1.Text = ""
+check1.TextColor3 = Color3.fromRGB(0, 0, 0)
+check1.TextSize = 18.000
+check1.Visible = false
+
+check2.Name = "check2"
+check2.Parent = bar1
+check2.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+check2.Position = UDim2.new(0.15662296, 0, 0.101392526, 0)
+check2.Size = UDim2.new(0, 100, 0, 25)
+check2.Font = Enum.Font.SourceSans
+check2.Text = ""
+check2.TextColor3 = Color3.fromRGB(0, 0, 0)
+check2.TextSize = 18.000
+check2.Visible = false
+
+
+loadbutton.Name = "loadbutton"
+loadbutton.Parent = bar1
+loadbutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+loadbutton.Position = UDim2.new(0.27631148, 0, 0.7704392526, 0)
+loadbutton.Size = UDim2.new(0, 150, 0, 25)
+loadbutton.Font = Enum.Font.SourceSans
+loadbutton.Text = "Loading"
+loadbutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+loadbutton.TextSize = 18.000
+UIload.Parent = loadbutton
+loadbutton.MouseButton1Down:connect(function()
+bar1.Visible = false
+bar2.Visible = true
+tload.Text = "Check Game Suport"
+wait(2)
+tload.Text = "."
+wait(0.1)
+tload.Text = ".."
+wait(0.1)
+tload.Text = "..."
+wait(0.1)
+tload.Text = "."
+wait(0.1)
+tload.Text = ".."
+wait(0.1)
+tload.Text = "..."
+wait(0.1)
+tload.Text = "."
+wait(0.1)
+tload.Text = ".."
+wait(0.1)
+tload.Text = "..."
+wait(0.1)
+tload.Text = "không có script game này"
+
+if game.PlaceId == 4442272183 or game.PlaceId == 7449423635 or game.PlaceId == 2753915549 then -- Blox Fruit
+tload.Text = "Blox Fruit"
+end
+if game.PlaceId == 394506555 then -- glue puece
+tload.Text = "Glue Piece"
+end
+if game.PlaceId == 10260193230 then -- meme sea
+tload.Text = "Meme Sea"
+end
+if game.PlaceId == 662417684 then --lucky block
+tload.Text = "Lucky Block"
+end
+if game.PlaceId == 4787629450 then --booga booga
+tload.Text = "Booga Booga"
+end
+if game.PlaceId == 8303902695 then -- pet poss
+tload.Text = "Pet Poss"
+end
+
+wait(3)
+tload.Text = "Check You Button"
+wait(1)
+tload.Text = "."
+wait(0.1)
+tload.Text = ".."
+wait(0.1)
+tload.Text = "..."
+wait(0.1)
+tload.Text = "."
+wait(0.1)
+tload.Text = ".."
+wait(0.1)
+tload.Text = "..."
+--check
+if check1.Text == "1" then
+tload.Text = "ANTI AFK"
+local AntiAFK = game:GetService("VirtualUser")
+		AntiAFKT = game:GetService("Players").LocalPlayer.Idled:connect(function()
+			AntiAFK:CaptureController()
+			AntiAFK:ClickButton2(Vector2.new())
+
+		AntiAFKT:Disconnect()
+end)
+wait(2)
+end
+
+if check2.Text == "1" then
+tload.Text = "FIX LAG"
+local decalsyeeted = true -- Leaving this on makes games look shitty but the fps goes up by at least 20.
+local g = game
+local w = g.Workspace
+local l = g.Lighting
+local t = w.Terrain
+t.WaterWaveSize = 0
+t.WaterWaveSpeed = 0
+t.WaterReflectance = 0
+t.WaterTransparency = 0
+l.GlobalShadows = false
+l.FogEnd = 9e9
+l.Brightness = 0
+settings().Rendering.QualityLevel = "Level01"
+for i, v in pairs(g:GetDescendants()) do
+    if v:IsA("Part") or v:IsA("Union") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+        v.Material = "Plastic"
+        v.Reflectance = 0
+    elseif v:IsA("Decal") or v:IsA("Texture") and decalsyeeted then
+        v.Transparency = 1
+    elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+        v.Lifetime = NumberRange.new(0)
+    elseif v:IsA("Explosion") then
+        v.BlastPressure = 1
+        v.BlastRadius = 1
+    elseif v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") then
+        v.Enabled = false
+    elseif v:IsA("MeshPart") then
+        v.Material = "Plastic"
+        v.Reflectance = 0
+        v.TextureID = 10385902758728957
+    end
+end
+for i, e in pairs(l:GetChildren()) do
+    if e:IsA("BlurEffect") or e:IsA("SunRaysEffect") or e:IsA("ColorCorrectionEffect") or e:IsA("BloomEffect") or e:IsA("DepthOfFieldEffect") then
+        e.Enabled = false
+    end
+end
+
+wait(2)
+end
+
+tload.Text = "load successfully"
+wait(1)
+tload.Text = "vui lòng đợi giây lát"
+wait(1)
+bar2.Visible = false
+--loader
+loadstring(game:HttpGet(('https://github.com/Nttvlog112/ntt/blob/main/Loader%20NTT%201')))()
+
+end)
