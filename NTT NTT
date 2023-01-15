@@ -513,6 +513,6 @@ tload.Text = "vui lòng đợi giây lát"
 wait(1)
 bar2.Visible = false
 --loader
-loadstring(game:HttpGet(('https://github.com/Nttvlog112/ntt/blob/main/Loader%20NTT%201')))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Loader%20NTT%201')))()
 
 end)
