@@ -392,7 +392,7 @@ s1.Font = Enum.Font.Ubuntu
 s1.Text = ""
 s1.TextColor3 = Color3.fromRGB(250, 255, 250)
 s1.TextSize = 20.000
-scriptspage4.BackgroundTransparency = 1.000
+s1.BackgroundTransparency = 1.000
 s1.MouseButton1Down:connect(function()
 
 local pl = game.Players.LocalPlayer.Character.HumanoidRootPart 
