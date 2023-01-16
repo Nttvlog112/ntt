@@ -3493,7 +3493,6 @@ local script = Instance.new('LocalScript', fram)
 
 coroutine.wrap(OJTGD_fake_script)()
 
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/H%E1%BB%87%20Th%E1%BB%91ng')))()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Bouty%20blox')))()
 
 
