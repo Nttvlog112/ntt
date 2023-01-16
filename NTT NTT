@@ -511,6 +511,7 @@ tload.Text = "load successfully"
 wait(1)
 tload.Text = "vui lòng đợi giây lát"
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Loader%20NTT%201')))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/H%E1%BB%87%20Th%E1%BB%91ng')))()
 wait(1)
 bar2.Visible = false
 --loader
