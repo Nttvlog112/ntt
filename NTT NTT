@@ -1,6 +1,4 @@
 
-
-
 local UIGUI = Instance.new("ScreenGui")
 local text1 = Instance.new("TextLabel")
 local bars = Instance.new("Frame")
@@ -42,8 +40,10 @@ UIGUI.Name = "UIGUI"
 UIGUI.Parent = game:WaitForChild("CoreGui")
 UIGUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
---key
 
+--load menu
+
+-- key script
 keybar.Name = "keybar"
 keybar.Parent = UIGUI
 keybar.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
@@ -104,13 +104,12 @@ checkkey.TextColor3 = Color3.fromRGB(250, 250, 250)
 checkkey.TextSize = 18.000
 UIkey.Parent = checkkey
 checkkey.MouseButton1Down:connect(function()
---key đúng
-if keybox.Text == "ae7e73d919456ddaf039208ab7c4f4fe" then
+if keybox.Text == "1950" then
 keybar.Visible = false
 bar1.Visible = true
 end
-
 end)
+
 
 keyget.Name = "keyget"
 keyget.Parent = keybar
@@ -128,7 +127,7 @@ setclipboard("https://link1s.com/key3")
 keyget.Visible = false
 keybox.Visible = false
 checkkey.Visible = false
-
+--run text
 tkey.Visible = true
 wait(0.1)
 tkey.Text = "T"
@@ -417,25 +416,52 @@ wait(0.1)
 tload.Text = "..."
 wait(0.1)
 tload.Text = "không có script game này"
+--check game script text
 
 if game.PlaceId == 4442272183 or game.PlaceId == 7449423635 or game.PlaceId == 2753915549 then -- Blox Fruit
 tload.Text = "Blox Fruit"
-end
-if game.PlaceId == 394506555 then -- glue puece
+
+elseif game.PlaceId == 394506555 then -- glue puece
 tload.Text = "Glue Piece"
-end
-if game.PlaceId == 10260193230 then -- meme sea
+
+elseif game.PlaceId == 10260193230 then -- meme sea
 tload.Text = "Meme Sea"
-end
-if game.PlaceId == 662417684 then --lucky block
+
+elseif game.PlaceId == 662417684 then --lucky block
 tload.Text = "Lucky Block"
-end
-if game.PlaceId == 4787629450 then --booga booga
+
+elseif game.PlaceId == 4787629450 then --booga booga
 tload.Text = "Booga Booga"
-end
-if game.PlaceId == 8303902695 then -- pet poss
+
+elseif game.PlaceId == 8303902695 then -- pet poss
 tload.Text = "Pet Poss"
-end
+
+elseif game.PlaceId == 1537690962 then --beespawn 
+tload.Text = "Bee Spawn"
+
+elseif game.PlaceId == 1240123653 then --zombie atack 
+tload.Text = "Zombie Atack"
+
+elseif game.PlaceId == 4787629450 then --booga booga
+tload.Text = "Booga Booga"
+
+elseif game.PlaceId == 537413528 then --Build A Boat For Treasure
+tload.Text = "Build A Boat For Treasure"
+
+elseif game.PlaceId == 6284583030 or game.PlaceId == 7722306047 then --Pet Simulator X
+tload.Text = "Pet Simulator X"
+
+elseif game.PlaceId == 142823291 then --mm2
+tload.Text = "Muder Mythic 2"
+
+elseif game.PlaceId == 1345139196 then -- treasure hunt
+tload.Text = "Treasure Hunt"
+
+elseif game.PlaceId == 6839171747 then -- door
+tload.Text = "Door"
+
+end -- check game
+
 
 wait(3)
 tload.Text = "Check You Button"
