@@ -1,0 +1,471 @@
+
+--NTT
+
+local ScreenGUI = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local bar2 = Instance.new("TextButton")
+local bar1 = Instance.new("Frame")
+local raid = Instance.new("TextButton")
+local scriptspage4 = Instance.new("Frame")
+local bar = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local sea = Instance.new("TextLabel")
+local plr = Instance.new("TextLabel")
+local scriptspage5 = Instance.new("ScrollingFrame")
+local scriptspage = Instance.new("Frame")
+local scriptspage1 = Instance.new("Frame")
+local scriptspage2 = Instance.new("ScrollingFrame")
+local scriptspage3 = Instance.new("ScrollingFrame")
+
+local scripts = Instance.new("TextButton")
+local buygui = Instance.new("TextButton")
+local miss = Instance.new("TextButton")
+local star = Instance.new("TextButton")
+local fram = Instance.new("TextButton")
+local hubs = Instance.new("TextButton")
+local exit = Instance.new("TextButton")
+
+--b = button
+--c = check
+--p = ponit
+
+--star1
+local cp = Instance.new("TextLabel") --check point
+local p1 = Instance.new("TextLabel") -- frame ponit
+local p2 = Instance.new("TextLabel")
+local p3 = Instance.new("TextLabel")
+local p4 = Instance.new("TextLabel")
+local bp1 = Instance.new("TextButton") --button up point
+local bp2 = Instance.new("TextButton")
+local bp3 = Instance.new("TextButton")
+local bp4 = Instance.new("TextButton")
+
+--miss
+local m1 = Instance.new("TextLabel") -- frame miss
+local m2 = Instance.new("TextLabel")
+local bm1 = Instance.new("TextButton") --button miss
+local bm2 = Instance.new("TextButton")
+
+--main code frame button script
+
+ScreenGUI.Name = "ScreenGUI"
+ScreenGUI.Parent = game.CoreGui
+ScreenGUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+main.Name = "main"
+main.Parent = ScreenGUI -- nằm trên khung ẩn
+main.BackgroundColor3 = Color3.fromRGB(0, 0, 0) --màu khung
+main.Position = UDim2.new(0.200126051, 0, 0.228999169, 0) -- vị trí đứng
+main.Size = UDim2.new(0, 640, 0, 280) -- kích cở
+main.BorderColor3 = Color3.fromRGB(250, 250, 250)
+main.Visible = false
+
+bar1.Name = "bar1"
+bar1.Parent = main
+bar1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+bar1.Position = UDim2.new(0, 0, 0.102285722, 0)
+bar1.Size = UDim2.new(0, 100, 0, 250)
+bar1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+
+scripts.Name = "scripts"
+scripts.Parent = main
+scripts.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+scripts.Position = UDim2.new(0, 0, 0.110000000, 0)
+scripts.Size = UDim2.new(0, 100, 0, 34)
+scripts.Font = Enum.Font.Ubuntu
+scripts.BorderColor3 = Color3.fromRGB(250, 250, 250)
+scripts.Text = "   Auto Gui"
+scripts.TextColor3 = Color3.fromRGB(255, 255, 255)
+scripts.TextSize = 14.000
+scripts.TextWrapped = false
+scripts.TextXAlignment = Enum.TextXAlignment.Left
+
+buygui.Name = "buygui"
+buygui.Parent = main
+buygui.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+buygui.Position = UDim2.new(0, 0, 0.240000000, 0)
+buygui.Size = UDim2.new(0, 100, 0, 34)
+buygui.Font = Enum.Font.Ubuntu
+buygui.BorderColor3 = Color3.fromRGB(250, 250, 250)
+buygui.Text = "   Buy Gui"
+buygui.TextColor3 = Color3.fromRGB(255, 255, 255)
+buygui.TextSize = 14.000
+buygui.TextWrapped = false
+buygui.TextXAlignment = Enum.TextXAlignment.Left
+
+miss.Name = "miss"
+miss.Parent = main
+miss.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+miss.Position = UDim2.new(0, 0, 0.370000000, 0)
+miss.Size = UDim2.new(0, 100, 0, 34)
+miss.Font = Enum.Font.Ubuntu
+miss.BorderColor3 = Color3.fromRGB(250, 250, 250)
+miss.Text = "   Miss Gui"
+miss.TextColor3 = Color3.fromRGB(255, 255, 255)
+miss.TextSize = 14.000
+miss.TextWrapped = false
+miss.TextXAlignment = Enum.TextXAlignment.Left
+
+star.Name = "star"
+star.Parent = main
+star.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+star.Position = UDim2.new(0, 0, 0.500000000, 0)
+star.Size = UDim2.new(0, 100, 0, 34)
+star.Font = Enum.Font.Ubuntu
+star.BorderColor3 = Color3.fromRGB(250, 250, 250)
+star.Text = "   Fram Gui"
+star.TextColor3 = Color3.fromRGB(255, 250, 250)
+star.TextSize = 14.000
+star.TextWrapped = false
+star.TextXAlignment = Enum.TextXAlignment.Left
+
+raid.Name = "raid"
+raid.Parent = main
+raid.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+raid.Position = UDim2.new(0, 0, 0.630000000, 0)
+raid.Size = UDim2.new(0, 100, 0, 34)
+raid.Font = Enum.Font.Ubuntu
+raid.BorderColor3 = Color3.fromRGB(250, 250, 250)
+raid.Text = "   Raid Gui"
+raid.TextColor3 = Color3.fromRGB(255, 255, 255)
+raid.TextSize = 14.000
+raid.TextWrapped = true
+raid.TextXAlignment = Enum.TextXAlignment.Left
+
+fram.Name = "fram"
+fram.Parent = main
+fram.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+fram.Position = UDim2.new(0, 0, 0.760000000, 0)
+fram.Size = UDim2.new(0, 100, 0, 34)
+fram.Font = Enum.Font.Ubuntu
+fram.BorderColor3 = Color3.fromRGB(250, 250, 250)
+fram.Text = "   Star Gui"
+fram.TextColor3 = Color3.fromRGB(255, 255, 255)
+fram.TextSize = 14.000
+fram.TextWrapped = true
+fram.TextXAlignment = Enum.TextXAlignment.Left
+
+-- ẩn
+
+buygui.Visible = false
+fram.Visible = false
+raid.Visible = false
+star.Visible = false
+miss.Visible = false
+
+--check name player
+plr.Name = "plr"
+plr.Parent = main
+plr.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+plr.Position = UDim2.new(0, 0, 0.890000000, 0)
+plr.Size = UDim2.new(0, 100, 0, 30)
+plr.Font = Enum.Font.Ubuntu
+plr.BorderColor3 = Color3.fromRGB(250, 250, 250)
+plr.Text = "   "
+plr.TextColor3 = Color3.fromRGB(255, 255, 255)
+plr.TextSize = 14.000
+plr.TextWrapped = true
+plr.TextXAlignment = Enum.TextXAlignment.Left
+
+_G.plr = true
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.plr then
+plr.Text = ("   #"..game.Players.localPlayer.Name)
+end
+end)
+
+
+--trang tab
+
+--raid
+scriptspage4.Name = "scriptspage4"
+scriptspage4.Parent = main
+scriptspage4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+scriptspage4.BackgroundTransparency = 1.000
+scriptspage4.Position = UDim2.new(0.17631148, 0, 0.094285722, 0)
+scriptspage4.Size = UDim2.new(0, 488, 0, 400)
+scriptspage4.Visible = false
+
+--tp
+scriptspage.Name = "scriptspage"
+scriptspage.Parent = main
+scriptspage.Active = true
+scriptspage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+scriptspage.BackgroundTransparency = 1.000
+scriptspage.Position = UDim2.new(0.17631148, 0, 0.094285722, 0)
+scriptspage.Size = UDim2.new(0, 488, 0, 400)
+scriptspage.Visible = true
+
+--buy gui
+scriptspage1.Name = "scriptspage1"
+scriptspage1.Parent = main
+scriptspage1.Active = true
+scriptspage1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+scriptspage1.BackgroundTransparency = 1.000
+scriptspage1.Position = UDim2.new(0.17631148, 0, 0.094285722, 0)
+scriptspage1.Size = UDim2.new(0, 488, 0, 400)
+scriptspage1.Visible = false
+
+--miss
+scriptspage2.Name = "scriptspage2"
+scriptspage2.Parent = main
+scriptspage2.Active = true
+scriptspage2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+scriptspage2.BackgroundTransparency = 1.000
+scriptspage2.BorderSizePixel = 0
+scriptspage2.Size = UDim2.new(0, 498, 0, 230)
+scriptspage2.ScrollBarThickness = 0
+scriptspage2.Position = UDim2.new(0.17631148, 0, 0.094285722, 0)
+scriptspage2.Visible = false
+
+--star
+scriptspage3.Name = "scriptspage3"
+scriptspage3.Parent = main
+scriptspage3.Active = true
+scriptspage3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+scriptspage3.BackgroundTransparency = 1.000
+scriptspage3.BorderSizePixel = 0
+scriptspage3.Size = UDim2.new(0, 498, 0, 230)
+scriptspage3.ScrollBarThickness = 0
+scriptspage3.Position = UDim2.new(0.17631148, 0, 0.094285722, 0)
+scriptspage3.Visible = false
+
+--fram
+scriptspage5.Name = "scriptspage5"
+scriptspage5.Parent = main
+scriptspage5.Active = true
+scriptspage5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+scriptspage5.BackgroundTransparency = 1.000
+scriptspage5.BorderSizePixel = 0
+scriptspage5.Size = UDim2.new(0, 498, 0, 230)
+scriptspage5.ScrollBarThickness = 0
+scriptspage5.Position = UDim2.new(0.17631148, 0, 0.094285722, 0)
+scriptspage5.Visible = false
+
+--bar
+
+bar.Name = "bar"
+bar.Parent = main
+bar.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+bar.Size = UDim2.new(0, 640, 0, 26)
+bar.BorderColor3 = Color3.fromRGB(250, 250, 250)
+
+TextLabel.Parent = main
+TextLabel.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 93, 0, 26)
+TextLabel.Font = Enum.Font.Ubuntu
+TextLabel.Text = "NTT HUB"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+--đóng  mở
+
+exit.Name = "exit"
+exit.Parent = ScreenGUI
+exit.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+exit.Position = UDim2.new(0.70162201, 0, 0.103285708, 0)
+exit.Size = UDim2.new(0, 50, 0, 50)
+exit.Font = Enum.Font.Ubuntu
+exit.Text = "Open"
+exit.TextColor3 = Color3.fromRGB(250, 255, 250)
+exit.TextSize = 20.000
+exit.BorderColor3 = Color3.fromRGB(250, 250, 250)
+exit.MouseButton1Down:connect(function()
+--on off 
+if exit.Text == "Open" then --on
+exit.Text = "Close"
+game.CoreGui.ScreenGUI.main.Visible = true
+elseif exit.Text == "Close" then --off
+exit.Text = "Open"
+game.CoreGui.ScreenGUI.main.Visible = false
+end
+end)
+
+
+--setting sea
+
+sea.Name = "sea"
+sea.Parent = main
+sea.BackgroundTransparency = 1.000
+sea.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+sea.BorderSizePixel = 0
+sea.Position = UDim2.new(0.85262296, 0, 0, 0)
+sea.Size = UDim2.new(0, 90, 0, 26)
+sea.Font = Enum.Font.Ubuntu
+sea.Text = "Legend Piece"
+sea.TextColor3 = Color3.fromRGB(255, 255, 255)
+sea.TextSize = 14.000
+
+--frame
+
+m1.Parent = scriptspage
+m1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+m1.Position = UDim2.new(0, 0, 0.0300000000, 0)
+m1.Size = UDim2.new(0, 498, 0, 30)
+m1.Font = Enum.Font.Ubuntu
+m1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+m1.Text = "   Auto Farme Level"
+m1.TextColor3 = Color3.fromRGB(255, 255, 255)
+m1.TextSize = 14.000
+m1.TextWrapped = true
+m1.TextXAlignment = Enum.TextXAlignment.Left
+
+bm1.Name = "bm1"
+bm1.Parent = m1
+bm1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+bm1.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+bm1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+bm1.Size = UDim2.new(0, 20, 0, 20)
+bm1.Font = Enum.Font.SourceSans
+bm1.Text = ""
+bm1.TextColor3 = Color3.fromRGB(250, 250, 250)
+bm1.TextSize = 30.000
+bm1.MouseButton1Down:connect(function()
+--on off 
+if bm1.Text == "" then --on
+bm1.Text = "X"
+_G.bm1 = true
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.bm1 then --script
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-3719,-32,-766))
+local args = {
+    [1] = "Quest",
+    [2] = "QuakeMan"
+}
+
+game:GetService("ReplicatedStorage").Remotes.NPC:FireServer(unpack(args))
+wait(3)
+game:GetService("Players").LocalPlayer.PlayerGui.QuestGui.Frame.Accept.RemoteEvent:FireServer()
+end
+end)
+
+elseif bm1.Text == "X" then --off
+bm1.Text = ""
+_G.bm1 = false
+end
+end)
+
+m2.Parent = scriptspage
+m2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+m2.Position = UDim2.new(0, 0, 0.1300000000, 0)
+m2.Size = UDim2.new(0, 498, 0, 30)
+m2.Font = Enum.Font.Ubuntu
+m2.BorderColor3 = Color3.fromRGB(250, 250, 250)
+m2.Text = "   Auto Skill"
+m2.TextColor3 = Color3.fromRGB(255, 255, 255)
+m2.TextSize = 14.000
+m2.TextWrapped = true
+m2.TextXAlignment = Enum.TextXAlignment.Left
+
+bm2.Name = "bm2"
+bm2.Parent = m2
+bm2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+bm2.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+bm2.Size = UDim2.new(0, 20, 0, 20)
+bm2.Font = Enum.Font.SourceSans
+bm2.BorderColor3 = Color3.fromRGB(250, 250, 250)
+bm2.Text = ""
+bm2.TextColor3 = Color3.fromRGB(250, 250, 250)
+bm2.TextSize = 30.000
+bm2.MouseButton1Down:connect(function()
+--on off 
+if bm2.Text == "" then --on
+bm2.Text = "X"
+_G.bm2 = true
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.bm2 then
+local args = {
+    [1] = "Fire",
+    [2] = CFrame.new(-1439.96630859375, -28.787927627563477, -1922.735595703125) * CFrame.Angles(-2.110635280609131, -1.1332659721374512, -2.155231475830078)
+}
+game:GetService("Players").LocalPlayer.Character.Combat.SkillKey:InvokeServer(unpack(args))
+end
+end)
+elseif bm2.Text == "X" then --off
+bm2.Text = ""
+_G.bm2 = false
+end
+end)
+
+--quesst
+
+--skill
+
+
+-- Scripts:
+
+local function LDLMGWH_fake_script() -- raid.LocalScript 
+	local script = Instance.new('LocalScript', raid)
+	script.Parent.MouseButton1Down:connect(function()
+		script.Parent.Parent.scriptspage4.Visible = true
+		script.Parent.Parent.scriptspage.Visible = false
+          script.Parent.Parent.scriptspage1.Visible = false
+          script.Parent.Parent.scriptspage2.Visible = false
+           script.Parent.Parent.scriptspage3.Visible = false
+           script.Parent.Parent.scriptspage5.Visible = false     
+	end)
+end
+coroutine.wrap(LDLMGWH_fake_script)()
+local function OJTG_fake_script() -- scripts.LocalScript 
+	local script = Instance.new('LocalScript', scripts)
+	script.Parent.MouseButton1Down:connect(function()
+		script.Parent.Parent.scriptspage.Visible = true
+		script.Parent.Parent.scriptspage4.Visible = false
+          script.Parent.Parent.scriptspage1.Visible = false
+           script.Parent.Parent.scriptspage2.Visible = false
+           script.Parent.Parent.scriptspage3.Visible = false
+           script.Parent.Parent.scriptspage5.Visible = false       
+	end)
+end
+coroutine.wrap(OJTG_fake_script)()
+local function OJTGA_fake_script() --buygui
+local script = Instance.new('LocalScript', buygui)
+    script.Parent.MouseButton1Down:connect(function()
+        script.Parent.Parent.scriptspage1.Visible = true
+        script.Parent.Parent.scriptspage.Visible = false
+        script.Parent.Parent.scriptspage4.Visible = false      
+        script.Parent.Parent.scriptspage2.Visible = false
+        script.Parent.Parent.scriptspage3.Visible = false
+        script.Parent.Parent.scriptspage5.Visible = false        
+    end)
+    end
+coroutine.wrap(OJTGA_fake_script)()
+local function OJTGB_fake_script() --miss
+local script = Instance.new('LocalScript', miss)
+    script.Parent.MouseButton1Down:connect(function()
+        script.Parent.Parent.scriptspage2.Visible = true
+        script.Parent.Parent.scriptspage.Visible = false
+        script.Parent.Parent.scriptspage4.Visible = false      
+         script.Parent.Parent.scriptspage1.Visible = false
+         script.Parent.Parent.scriptspage3.Visible = false
+         script.Parent.Parent.scriptspage5.Visible = false         
+    end)
+    end
+      coroutine.wrap(OJTGB_fake_script)()
+local function OJTGC_fake_script() --star
+local script = Instance.new('LocalScript', star)
+    script.Parent.MouseButton1Down:connect(function()
+        script.Parent.Parent.scriptspage3.Visible = false
+        script.Parent.Parent.scriptspage.Visible = false
+        script.Parent.Parent.scriptspage4.Visible = false        
+         script.Parent.Parent.scriptspage1.Visible = false
+         script.Parent.Parent.scriptspage2.Visible = false
+         script.Parent.Parent.scriptspage5.Visible = true        
+    end)
+    end 
+    coroutine.wrap(OJTGC_fake_script)()
+local function OJTGD_fake_script() --fram
+local script = Instance.new('LocalScript', fram)
+    script.Parent.MouseButton1Down:connect(function()
+        script.Parent.Parent.scriptspage3.Visible = true
+        script.Parent.Parent.scriptspage.Visible = false
+        script.Parent.Parent.scriptspage4.Visible = false
+         script.Parent.Parent.scriptspage1.Visible = false
+         script.Parent.Parent.scriptspage2.Visible = false
+         script.Parent.Parent.scriptspage5.Visible = false         
+    end)
+    end
+coroutine.wrap(OJTGD_fake_script)()
