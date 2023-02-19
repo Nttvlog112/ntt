@@ -540,3 +540,12 @@ wait(1)
 bar2.Visible = false
 --loader
 end)
+
+--check buy key
+if game.Players.localPlayer.Name ~= "TAT_Chanol" then 
+keybar.Visible = false 
+bar1.Visible = true
+elseif game.Players.localPlayer.Name ~= "hoang10372" then 
+keybar.Visible = false 
+bar1.Visible = true
+end
