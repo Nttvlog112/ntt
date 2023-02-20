@@ -42,25 +42,39 @@ local MinimizeButton = Instance.new("TextButton")
 local ImageLabel_3 = Instance.new("ImageLabel")
 local ToolTip = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
+local main = Instance.new("Frame")
+local bar = Instance.new("Frame")
+local max = Instance.new("TextButton")
+local im2 = Instance.new("ImageLabel")
+local mini = Instance.new("TextButton")
+local im3 = Instance.new("ImageLabel")
 
 --Properties:
 
 SimpleSpy2.Name = "SimpleSpy2"
 SimpleSpy2.ResetOnSpawn = false
 
+main.Name = "main"
+main.Parent = SimpleSpy2 -- nằm trên khung ẩn
+main.BackgroundColor3 = Color3.fromRGB(0, 0, 0) --màu khung
+main.Position = UDim2.new(0.450126051, 0, 0.103285708, 0) -- vị trí đứng
+main.Size = UDim2.new(0, 462, 0, 280) -- kích cở
+main.BackgroundTransparency = 1
+main.Visible = true
+
 Background.Name = "Background"
-Background.Parent = SimpleSpy2
+Background.Parent = main
 Background.BackgroundColor3 = Color3.new(1, 1, 1)
 Background.BackgroundTransparency = 1
-Background.Position = UDim2.new(0, 500, 0, 200)
-Background.Size = UDim2.new(0, 450, 0, 268)
+Background.Position = UDim2.new(0, 0, 0, 0)
+Background.Size = UDim2.new(0, 450, 0, 200)
 
 LeftPanel.Name = "LeftPanel"
-LeftPanel.Parent = Background
+LeftPanel.Parent = main
 LeftPanel.BackgroundColor3 = Color3.fromRGB(53, 52, 55)
-LeftPanel.BorderSizePixel = 0
-LeftPanel.Position = UDim2.new(0, 0, 0, 19)
-LeftPanel.Size = UDim2.new(0, 131, 0, 249)
+LeftPanel.BorderColor3 = Color3.fromRGB(250, 250, 250)
+LeftPanel.Position = UDim2.new(0, 0, 0.0750000000, 0)
+LeftPanel.Size = UDim2.new(0, 140, 0, 300)
 
 LogList.Name = "LogList"
 LogList.Parent = LeftPanel
@@ -119,23 +133,23 @@ Button.TextColor3 = Color3.new(0, 0, 0)
 Button.TextSize = 14
 
 RightPanel.Name = "RightPanel"
-RightPanel.Parent = Background
+RightPanel.Parent = main
 RightPanel.BackgroundColor3 = Color3.fromRGB(37, 36, 38)
-RightPanel.BorderSizePixel = 0
-RightPanel.Position = UDim2.new(0, 131, 0, 19)
-RightPanel.Size = UDim2.new(0, 319, 0, 249)
+RightPanel.BorderColor3 = Color3.fromRGB(250, 250, 250)
+RightPanel.Position = UDim2.new(0.3000000000, 0, 0.0750000000, 0)
+RightPanel.Size = UDim2.new(0, 319, 0, 300)
 
 CodeBox.Name = "CodeBox"
 CodeBox.Parent = RightPanel
 CodeBox.BackgroundColor3 = Color3.new(0.0823529, 0.0745098, 0.0784314)
-CodeBox.BorderSizePixel = 0
-CodeBox.Size = UDim2.new(0, 319, 0, 119)
+CodeBox.BorderColor3 = Color3.fromRGB(250, 250, 250)
+CodeBox.Size = UDim2.new(0, 319, 0, 200)
 
 ScrollingFrame.Parent = RightPanel
 ScrollingFrame.Active = true
 ScrollingFrame.BackgroundColor3 = Color3.new(1, 1, 1)
 ScrollingFrame.BackgroundTransparency = 1
-ScrollingFrame.Position = UDim2.new(0, 0, 0.5, 0)
+ScrollingFrame.Position = UDim2.new(0, 0, 1.2, 0)
 ScrollingFrame.Size = UDim2.new(1, 0, 0.5, -9)
 ScrollingFrame.CanvasSize = UDim2.new(0, 0, 0, 0)
 ScrollingFrame.ScrollBarThickness = 4
@@ -188,11 +202,18 @@ Button_2.Text = ""
 Button_2.TextColor3 = Color3.new(0, 0, 0)
 Button_2.TextSize = 14
 
+bar.Name = "bar"
+bar.Parent = main
+bar.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+bar.Size = UDim2.new(0, 448, 0, 19)
+bar.BorderColor3 = Color3.fromRGB(250, 250, 250)
+
+
 TopBar.Name = "TopBar"
-TopBar.Parent = Background
+TopBar.Parent = main
 TopBar.BackgroundColor3 = Color3.fromRGB(37, 35, 38)
 TopBar.BorderSizePixel = 0
-TopBar.Size = UDim2.new(0, 450, 0, 19)
+TopBar.Size = UDim2.new(0, 0, 0, 0)
 
 Simple.Name = "Simple"
 Simple.Parent = TopBar
@@ -200,12 +221,56 @@ Simple.BackgroundColor3 = Color3.new(1, 1, 1)
 Simple.AutoButtonColor = false
 Simple.BackgroundTransparency = 1
 Simple.Position = UDim2.new(0, 5, 0, 0)
-Simple.Size = UDim2.new(0, 57, 0, 18)
+Simple.Size = UDim2.new(0, 290, 0, 18)
 Simple.Font = Enum.Font.SourceSansBold
 Simple.Text = "NTT | Dex Script"
 Simple.TextColor3 = Color3.new(1, 1, 1)
 Simple.TextSize = 14
 Simple.TextXAlignment = Enum.TextXAlignment.Left
+
+max.Name = "max"
+max.Parent = TopBar
+max.BackgroundColor3 = Color3.new(0.145098, 0.141176, 0.14902)
+max.BorderSizePixel = 0
+max.Position = UDim2.new(1, -24, 0, 0)
+max.Size = UDim2.new(0, 19, 0, 19)
+max.Font = Enum.Font.SourceSans
+max.Text = ""
+max.TextColor3 = Color3.new(0, 0, 0)
+max.TextSize = 14
+max.MouseButton1Down:connect(function()
+RightPanel.Visible = true
+LeftPanel.Visible = true
+end)
+
+im2.Parent = max
+im2.BackgroundColor3 = Color3.new(1, 1, 1)
+im2.BackgroundTransparency = 1
+im2.Position = UDim2.new(0, 5, 0, 5)
+im2.Size = UDim2.new(0, 9, 0, 9)
+im2.Image = "http://www.roblox.com/asset/?id=5597108117"
+
+mini.Name = "mini"
+mini.Parent = TopBar
+mini.BackgroundColor3 = Color3.new(0.145098, 0.141176, 0.14902)
+mini.BorderSizePixel = 0
+mini.Position = UDim2.new(1, -43, 0, 0)
+mini.Size = UDim2.new(0, 19, 0, 19)
+mini.Font = Enum.Font.SourceSans
+mini.Text = ""
+mini.TextColor3 = Color3.new(0, 0, 0)
+mini.TextSize = 14
+mini.MouseButton1Down:connect(function()
+RightPanel.Visible = false
+LeftPanel.Visible = false
+end)
+
+im3.Parent = mini
+im3.BackgroundColor3 = Color3.new(1, 1, 1)
+im3.BackgroundTransparency = 1
+im3.Position = UDim2.new(0, 5, 0, 5)
+im3.Size = UDim2.new(0, 9, 0, 9)
+im3.Image = "http://www.roblox.com/asset/?id=5597105827"
 
 CloseButton.Name = "CloseButton"
 CloseButton.Parent = TopBar
@@ -217,6 +282,7 @@ CloseButton.Font = Enum.Font.SourceSans
 CloseButton.Text = ""
 CloseButton.TextColor3 = Color3.new(0, 0, 0)
 CloseButton.TextSize = 14
+CloseButton.Visible = false
 
 ImageLabel.Parent = CloseButton
 ImageLabel.BackgroundColor3 = Color3.new(1, 1, 1)
@@ -229,12 +295,13 @@ MaximizeButton.Name = "MaximizeButton"
 MaximizeButton.Parent = TopBar
 MaximizeButton.BackgroundColor3 = Color3.new(0.145098, 0.141176, 0.14902)
 MaximizeButton.BorderSizePixel = 0
-MaximizeButton.Position = UDim2.new(1, -38, 0, 0)
+MaximizeButton.Position = UDim2.new(1, -24, 0, 0)
 MaximizeButton.Size = UDim2.new(0, 19, 0, 19)
 MaximizeButton.Font = Enum.Font.SourceSans
 MaximizeButton.Text = ""
 MaximizeButton.TextColor3 = Color3.new(0, 0, 0)
 MaximizeButton.TextSize = 14
+MaximizeButton.Visible = false
 
 ImageLabel_2.Parent = MaximizeButton
 ImageLabel_2.BackgroundColor3 = Color3.new(1, 1, 1)
@@ -247,12 +314,13 @@ MinimizeButton.Name = "MinimizeButton"
 MinimizeButton.Parent = TopBar
 MinimizeButton.BackgroundColor3 = Color3.new(0.145098, 0.141176, 0.14902)
 MinimizeButton.BorderSizePixel = 0
-MinimizeButton.Position = UDim2.new(1, -57, 0, 0)
+MinimizeButton.Position = UDim2.new(1, -43, 0, 0)
 MinimizeButton.Size = UDim2.new(0, 19, 0, 19)
 MinimizeButton.Font = Enum.Font.SourceSans
 MinimizeButton.Text = ""
 MinimizeButton.TextColor3 = Color3.new(0, 0, 0)
 MinimizeButton.TextSize = 14
+MinimizeButton.Visible = false
 
 ImageLabel_3.Parent = MinimizeButton
 ImageLabel_3.BackgroundColor3 = Color3.new(1, 1, 1)
@@ -262,7 +330,7 @@ ImageLabel_3.Size = UDim2.new(0, 9, 0, 9)
 ImageLabel_3.Image = "http://www.roblox.com/asset/?id=5597105827"
 
 ToolTip.Name = "ToolTip"
-ToolTip.Parent = SimpleSpy2
+ToolTip.Parent = main
 ToolTip.BackgroundColor3 = Color3.fromRGB(26, 26, 26)
 ToolTip.BackgroundTransparency = 0.1
 ToolTip.BorderColor3 = Color3.new(1, 1, 1)
