@@ -88,7 +88,7 @@ if game.PlaceId == 8303902695 then -- pet poss
 loadstring(game:HttpGet("https://pastebin.com/raw/Lg48Ft4Q", true))()
 end
 if game.PlaceId == 4442272183 or game.PlaceId == 7449423635 or game.PlaceId == 2753915549 then -- Blox Fruit
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Blox%20Ch%C3%ADnh%20th%E1%BB%A9c%201')))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Blox%20Fruit%2032%20bit%20Beta')))()
 end
 if game.PlaceId == 10260193230 then -- meme sea
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Meme%20Sea')))()
