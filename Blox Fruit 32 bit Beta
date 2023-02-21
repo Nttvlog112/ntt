@@ -3,7 +3,7 @@
 
 --check on - off script
 _G.bse4 = true
-_G.flasatack = false -- true on flas atack, flase off flas atacl
+_G.flasatack = true -- true on flas atack, flase off flas atacl
 
 local ScreenGUI = Instance.new("ScreenGui")
 local main = Instance.new("Frame")
@@ -507,8 +507,8 @@ function TP2(P1)
                         Speed = 725
                     elseif Distance < 1000 then
                         Speed = 365
-                    elseif Distance >= 1000 then
-                        Speed = 365
+                    elseif Distance >= 2000 then
+                        Speed = 100
                     end
                     game:GetService("TweenService"):Create(
                         game.Players.LocalPlayer.Character.HumanoidRootPart,
@@ -2282,7 +2282,7 @@ game:GetService('RunService').RenderStepped:connect(function()
 if _G.bef2 then --script
 
 for _,v in pairs (workspace:GetChildren()) do
-		if v.Name:match('Fruit') and not v:IsA('Folder') and (v:IsA("Model") or v:IsA("Part")) then
+		if v.Name:match('Fruit') then
 			local BillboardGui = Instance.new("BillboardGui")
         	local TextLabel = Instance.new("TextLabel")
 	        BillboardGui.Parent = v
@@ -2457,25 +2457,8 @@ _G.bef5 = true
 game:GetService('RunService').RenderStepped:connect(function()
 if _G.bef5 then --script
 for _,v in pairs (workspace:GetChildren()) do
-if v.Name == "Fruit" then
-
-local pos = v.HumanoidRootPart --check pos
-                    local Dis = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
-                  if Dis < 500 then
-                  Speed = 725
-                  elseif Dis < 200 then
-                  Speed = 7000
-                  elseif Dis < 150 then
-                  Speed = 200000
-                  elseif Dis < 1500 then
-                  Speed = 110 
-                  elseif Dis >= 2000 then
-                        if game.Players.LocalPlayer.Character.Humanoid.Health > 0 then
-            game.Players.LocalPlayer.Character.Humanoid.Health = 0
-            end end              
-                    if  game.Players.LocalPlayer.Character.Humanoid.Health == 0 then
-                    TP1(v.CFrame)
-                    end                    
+if v.Name == "Fruit" then                    
+                    TP2(v.CFrame)                                    
 end end end
 end)
 elseif bef5.Text == "X" then --off
