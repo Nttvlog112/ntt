@@ -2,7 +2,7 @@
 --NTT --blox fruit
 
 --check on - off script
-_G.bse4 = false
+_G.bse4 = true
 _G.flasatack = false -- true on flas atack, flase off flas atacl
 
 local ScreenGUI = Instance.new("ScreenGui")
@@ -689,7 +689,7 @@ end)
 
 if bse4.Text == "X" then
 game:GetService('RunService').RenderStepped:connect(function()
-if _G.flasatack then --script
+if _G.bse4 then --script
 if game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then                
                else
     local args = {
@@ -950,6 +950,7 @@ click()
 usetool()
 for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
       if v.Name == "Galley Pirate [Lv. 625]" then
+      if v.Humanoid.Health > 0 then -- check health
       local pos = v.HumanoidRootPart --check pos
                     local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
                   if Distance < 500 then
@@ -958,8 +959,10 @@ for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
                   Speed = 7000
                   elseif Distance < 150 then
                   Speed = 200000
-                  elseif Distance >= 1000 then
-                        Speed = 400            
+                  elseif Distance < 1000 then
+                        Speed = 400        
+    elseif Distance >= 1500 then
+    TP2(CFrame.new(5300, 39, 4040))
                       end
        --farm
       v.HumanoidRootPart.CanCollide = false
@@ -969,12 +972,65 @@ game:GetService("TweenService"):Create(
                         TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
                         {CFrame = v.HumanoidRootPart.CFrame* CFrame.new(30,12,0) }
                     ):Play()
-                    end end end end end)                                  
+                    end end end end end end)                                  
                                        
 end
            
 if game.PlaceId == 4442272183 then -- sea2
+_G.b6 = true
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.b6 then
+TP1(CFrame.new(970.369446, 142.653198, 1217.3667, 0.162079468, -4.85452638e-08, -0.986777723, 1.03357589e-08, 1, -4.74980872e-08, 0.986777723, -2.50063148e-09, 0.162079468))
+end end)
 
+wait(5)
+_G.b6 = false
+wait(2)
+TP2(CFrame.new(970.369446, 142.653198, 1217.3667, 0.162079468, -4.85452638e-08, -0.986777723, 1.03357589e-08, 1, -4.74980872e-08, 0.986777723, -2.50063148e-09, 0.162079468))
+wait(6)
+_G.bf6 = true
+--farm
+game:GetService('RunService').RenderStepped:connect(function()
+if game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible == false then
+if _G.bf6 then --script
+local args = {
+    [1] = "StartQuest",
+    [2] = "Area2Quest",
+    [3] = 1
+}
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+           end  end           
+if game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible == true then
+if _G.bf6 then --script
+click()
+usetool()
+for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
+      if v.Name == "Swan Pirate [Lv. 775]" then
+      if v.Humanoid.Health > 0 then -- check health
+      local pos = v.HumanoidRootPart --check pos
+                    local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                  if Distance < 500 then
+                  Speed = 725
+                  elseif Distance < 200 then
+                  Speed = 7000
+                  elseif Distance < 150 then
+                  Speed = 200000
+                  elseif Distance < 1000 then
+                        Speed = 300       
+     elseif Distance >= 1500 then
+                        TP2(CFrame.new(970.369446, 142.653198, 1217.3667, 0.162079468, -4.85452638e-08, -0.986777723, 1.03357589e-08, 1, -4.74980872e-08, 0.986777723, -2.50063148e-09, 0.162079468))
+                      end
+       --farm
+      v.HumanoidRootPart.CanCollide = false
+      v.HumanoidRootPart.Size = Vector3.new(60, 60, 5)     
+game:GetService("TweenService"):Create(
+                        game.Players.LocalPlayer.Character.HumanoidRootPart,
+                        TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
+                        {CFrame = v.HumanoidRootPart.CFrame* CFrame.new(30,12,0) }
+                    ):Play()                   
+                    end end end end end end)                 
+                    
 end
 
 if game.PlaceId == 7449423635 then -- sea3
