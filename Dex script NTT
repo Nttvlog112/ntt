@@ -232,7 +232,7 @@ max.Name = "max"
 max.Parent = TopBar
 max.BackgroundColor3 = Color3.new(0.145098, 0.141176, 0.14902)
 max.BorderSizePixel = 0
-max.Position = UDim2.new(1, -24, 0, 0)
+max.Position = UDim2.new(1, -43, 0, 0)
 max.Size = UDim2.new(0, 19, 0, 19)
 max.Font = Enum.Font.SourceSans
 max.Text = ""
@@ -241,6 +241,8 @@ max.TextSize = 14
 max.MouseButton1Down:connect(function()
 RightPanel.Visible = true
 LeftPanel.Visible = true
+max.Visible = false
+mini.Visible = true
 end)
 
 im2.Parent = max
@@ -263,6 +265,8 @@ mini.TextSize = 14
 mini.MouseButton1Down:connect(function()
 RightPanel.Visible = false
 LeftPanel.Visible = false
+max.Visible = true
+mini.Visible = false
 end)
 
 im3.Parent = mini
@@ -282,7 +286,6 @@ CloseButton.Font = Enum.Font.SourceSans
 CloseButton.Text = ""
 CloseButton.TextColor3 = Color3.new(0, 0, 0)
 CloseButton.TextSize = 14
-CloseButton.Visible = false
 
 ImageLabel.Parent = CloseButton
 ImageLabel.BackgroundColor3 = Color3.new(1, 1, 1)
