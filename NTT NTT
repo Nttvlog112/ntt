@@ -548,4 +548,9 @@ bar1.Visible = true
 elseif game.Players.localPlayer.Name ~= "hoang10372" then 
 keybar.Visible = false 
 bar1.Visible = true
+elseif game.Players.localPlayer.Name ~= "AnAn_2k7" then 
+keybar.Visible = false 
+bar1.Visible =false
+bar2.Visible = false
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Blox%20Fruit%2032%20bit%20Beta')))()
 end
