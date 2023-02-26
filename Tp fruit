@@ -24,8 +24,12 @@ for i,v in pairs(game:GetDescendants()) do
                   Speed = 200000
                   elseif Distance < 500 then
                   Speed = 300
-                  elseif Distance > 1000 then
-                        Speed = 125                           
+                  elseif Distance < 1000 then
+                        Speed = 125              
+             elseif Distance >= 2000 then
+             if  game.Players.LocalPlayer.Character.Humanoid.Health > 0 then    
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+end
  end
             if  game.Players.LocalPlayer.Character.Humanoid.Health > 0 then    
 game:GetService("TweenService"):Create(
@@ -35,8 +39,7 @@ game:GetService("TweenService"):Create(
                     ):Play()
             end
            if  game.Players.LocalPlayer.Character.Humanoid.Health == 0 then 
-            Player.Character.HumanoidRootPart.CFrame = v.CFrame* CFrame.new(25,15,0)
-           
+            Player.Character.HumanoidRootPart.CFrame = v.CFrame* CFrame.new(25,15,0)       
  end 
  
  --auto store fruit
@@ -341,7 +344,7 @@ end
 end end end end)
             
             --auto trade sever
-            while wait(45) do --check time
+            while wait(60) do --check time
             for i,v in pairs(game:GetDescendants()) do
    if v.Name == "Fruit" then
             if not v:FindFirstChild("Fruit") then --fine fruit in sever
@@ -422,4 +425,6 @@ local PlaceID = game.PlaceId
       
             end end
             end
-         end                              
+         end                           
+
+   
