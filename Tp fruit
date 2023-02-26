@@ -25,7 +25,7 @@ for i,v in pairs(game:GetDescendants()) do
                   elseif Distance < 500 then
                   Speed = 300
                   elseif Distance > 1000 then
-                        Speed = 2250000                              
+                        Speed = 125                           
  end
             if  game.Players.LocalPlayer.Character.Humanoid.Health > 0 then    
 game:GetService("TweenService"):Create(
@@ -341,7 +341,7 @@ end
 end end end end)
             
             --auto trade sever
-            while wait(60) do --check time
+            while wait(45) do --check time
             for i,v in pairs(game:GetDescendants()) do
    if v.Name == "Fruit" then
             if not v:FindFirstChild("Fruit") then --fine fruit in sever
