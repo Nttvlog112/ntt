@@ -4,18 +4,24 @@ _G.load = true
 local Players = game.Players
 local Player = Players.LocalPlayer
 
-while wait(.1) do
+game:GetService('RunService').RenderStepped:connect(function()
 if _G.load then
 for i,v in pairs(game:GetDescendants()) do
    if v.Name == "Fruit" then
                     local Distance = (v.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude                
                   if Distance < 250 then
-                  Speed = 7000000
+                  Speed = 7000
                   elseif Distance < 150 then
-                  Speed = 2000000
-                  elseif Distance >= 500 then
-                  Speed = 7250000           
-            end
+                  Speed = 200000
+                  elseif Distance < 500 then
+                  Speed = 300
+                  elseif Distance < 1000 then
+                        Speed = 225
+                   elseif Distance >= 1500 then
+                         if  game.Players.LocalPlayer.Character.Humanoid.Health > 0 then   
+         game.Players.LocalPlayer.Character.Humanoid.Health = 0
+           end
+ end
             if  game.Players.LocalPlayer.Character.Humanoid.Health > 0 then    
 game:GetService("TweenService"):Create(
                         game.Players.LocalPlayer.Character.HumanoidRootPart,
@@ -28,46 +34,6 @@ game:GetService("TweenService"):Create(
            
  end  
  
-local args = {
-    [1] = "StoreFruit",
-    [2] = "Spin-Spin",
-    [3] = game:GetService("Players").LocalPlayer.Character:FindFirstChild("Spin Fruit")
-}
-
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-
-local args = {
-    [1] = "StoreFruit",
-    [2] = "Bomb-Bomb",
-    [3] = game:GetService("Players").LocalPlayer.Character:FindFirstChild("Bomb Fruit")
-}
-
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-
-local args = {
-    [1] = "StoreFruit",
-    [2] = "Chop-Chop",
-    [3] = game:GetService("Players").LocalPlayer.Character:FindFirstChild("Chop Fruit")
-}
-
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-
-local args = {
-    [1] = "StoreFruit",
-    [2] = "Spring-Spring",
-    [3] = game:GetService("Players").LocalPlayer.Character:FindFirstChild("Spring Fruit")
-}
-
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-
-local args = {
-    [1] = "StoreFruit",
-    [2] = "Kilo-Kilo",
-    [3] = game:GetService("Players").LocalPlayer.Character:FindFirstChild("Kilo Fruit")
-}
-
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-
 local args = {
     [1] = "StoreFruit",
     [2] = "Smoke-Smoke",
@@ -309,12 +275,13 @@ local args = {
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
 
  
-end end end end
+end end end end)
             --tp
             
             while wait(60) do
             for i,v in pairs(game:GetDescendants()) do
-   if v.Name == "Fruit" then        
+   if v.Name == "Fruit" then
+            if not v:FindFirstChild("Fruit") then
             --svv
 
 local PlaceID = game.PlaceId
@@ -392,8 +359,4 @@ local PlaceID = game.PlaceId
       
             end end
             end
-         
-           
-            
-            
-           
+         end                              
