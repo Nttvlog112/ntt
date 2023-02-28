@@ -1,0 +1,195 @@
+local NTTGUI = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local bartop = Instance.new("TextLabel")
+local open = Instance.new("TextButton")
+local close = Instance.new("TextButton")
+local barcode = Instance.new("ScrollingFrame")
+local code = Instance.new("TextBox")
+local Lines = Instance.new("TextLabel")
+local barleft = Instance.new("Frame")
+local barright = Instance.new("Frame")
+local barb = Instance.new("Frame")
+local ex = Instance.new("TextButton")
+local clear = Instance.new("TextButton")
+local attach = Instance.new("TextButton")
+local mini = Instance.new("TextButton")
+local im1 = Instance.new("ImageLabel")
+local exit = Instance.new("TextButton")
+local im2 = Instance.new("ImageLabel")
+
+NTTGUI.Name = "NTTGUI"
+NTTGUI.Parent = game.CoreGui
+NTTGUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+_G.attach = false
+
+main.Name = "main"
+main.Parent = NTTGUI -- nằm trên khung ẩn
+main.BackgroundColor3 = Color3.fromRGB(0, 0, 0) --màu khung
+main.Position = UDim2.new(0.200126051, 0, 0.228999169, 0) -- vị trí đứng
+main.Size = UDim2.new(0, 640, 0, 280) -- kích cở
+main.Visible = true
+
+bartop.Name = "bartop"
+bartop.Parent = main -- nằm trên khung ẩn
+bartop.BackgroundColor3 = Color3.fromRGB(30,30,30) --màu khung
+bartop.Position = UDim2.new(0.00000000, 0, 0.000000000, 0) -- vị trí đứng
+bartop.Size = UDim2.new(0, 640, 0, 27) -- kích cở
+bartop.Text = "NTT Explore - 1.10.60A"
+bartop.TextColor3 = Color3.fromRGB(254, 254, 254)
+bartop.TextSize = 8.000
+
+mini.Name = "mini"
+mini.Parent = bartop
+mini.BackgroundColor3 = Color3.new(0.145098, 0.141176, 0.14902)
+mini.BorderSizePixel = 0
+mini.Position = UDim2.new(0.93000000, 0, 0, 0)
+mini.Size = UDim2.new(0, 19, 0, 19)
+mini.Font = Enum.Font.SourceSans
+mini.Text = ""
+mini.TextColor3 = Color3.new(0, 0, 0)
+mini.TextSize = 14
+mini.MouseButton1Down:connect(function()
+main.Visible = false
+end)
+
+im1.Parent = mini
+im1.BackgroundColor3 = Color3.new(1, 1, 1)
+im1.BackgroundTransparency = 1
+im1.Position = UDim2.new(0, 5, 0, 5)
+im1.Size = UDim2.new(0, 9, 0, 9)
+im1.Image = "http://www.roblox.com/asset/?id=5597105827"
+
+exit.Name = "exit"
+exit.Parent = bartop
+exit.BackgroundColor3 = Color3.new(0.145098, 0.141176, 0.14902)
+exit.BorderSizePixel = 0
+exit.Position = UDim2.new(0.97000000, 0, 0, 0)
+exit.Size = UDim2.new(0, 19, 0, 19)
+exit.Font = Enum.Font.SourceSans
+exit.Text = ""
+exit.TextColor3 = Color3.new(0, 0, 0)
+exit.TextSize = 14
+exit.MouseButton1Down:connect(function()
+main.Visible = false
+end)
+
+im2.Parent = exit
+im2.BackgroundColor3 = Color3.new(1, 1, 1)
+im2.BackgroundTransparency = 1
+im2.Position = UDim2.new(0, 5, 0, 5)
+im2.Size = UDim2.new(0, 9, 0, 9)
+im2.Image = "http://www.roblox.com/asset/?id=5597086202"
+
+barcode.Name = "barcode"
+barcode.Parent = main
+barcode.Active = true
+barcode.BackgroundColor3 = Color3.fromRGB(25, 25, 25) --màu khung
+barcode.BorderSizePixel = 0
+barcode.Size = UDim2.new(0, 485, 0, 200) -- kích cở
+barcode.ScrollBarThickness = 0
+barcode.Position = UDim2.new(0.07000000, 0, 0.120000000, 0) -- vị trí đứng
+
+code.Name = "code"
+code.Parent = barcode
+code.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+code.BackgroundTransparency = 1.000
+code.Position = UDim2.new(0, 5, 0, 0)
+code.Size = UDim2.new(485, 0, 1, 0)
+code.ZIndex = 3
+code.ClearTextOnFocus = false
+code.Font = Enum.Font.Code
+code.MultiLine = true
+code.PlaceholderColor3 = Color3.fromRGB(204, 204, 204)
+code.Text = ""
+code.TextColor3 = Color3.fromRGB(204, 204, 204)
+code.TextSize = 15.000
+code.TextXAlignment = Enum.TextXAlignment.Left
+code.TextYAlignment = Enum.TextYAlignment.Top
+
+barleft.Name = "barleft"
+barleft.Parent = main -- nằm trên khung ẩn
+barleft.BackgroundColor3 = Color3.fromRGB(30, 30, 30) --màu khung
+barleft.Position = UDim2.new(0.00000000, 0, 0.120000000, 0) -- vị trí đứng
+barleft.Size = UDim2.new(0, 37, 0, 200) -- kích cở
+
+Lines.Name = "Lines"
+Lines.Parent = barleft
+Lines.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Lines.BackgroundTransparency = 1.000
+Lines.Size = UDim2.new(0, 30, 1, 0)
+Lines.ZIndex = 4
+Lines.Font = Enum.Font.Code
+Lines.Text = "1"
+Lines.TextColor3 = Color3.fromRGB(255, 255, 255)
+Lines.TextSize = 15.000
+Lines.TextYAlignment = Enum.TextYAlignment.Top
+
+barright.Name = "barright"
+barright.Parent = main -- nằm trên khung ẩn
+barright.BackgroundColor3 = Color3.fromRGB(50,50, 50) --màu khung
+barright.Position = UDim2.new(0.84000000, 0, 0.120000000, 0) -- vị trí đứng
+barright.Size = UDim2.new(0, 100, 0, 200) -- kích cở
+
+barb.Name = "barb"
+barb.Parent = main -- nằm trên khung ẩn
+barb.BackgroundColor3 = Color3.fromRGB(30, 30, 30) --màu khung
+barb.Position = UDim2.new(0.00000000, 0, 0.860000000, 0) -- vị trí đứng
+barb.Size = UDim2.new(0, 640, 0, 35) -- kích cở
+
+ex.Name = "ex"
+ex.Parent = barb
+ex.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ex.Position = UDim2.new(0, 0, 0, 0)
+ex.Size = UDim2.new(0, 92, 0, 35)
+ex.Font = Enum.Font.Arial
+ex.Text = "Execute"
+ex.TextColor3 = Color3.fromRGB(255, 255, 255)
+ex.TextSize = 14.000
+ex.MouseButton1Click:Connect(function()
+loadstring(code.Text)()
+end)
+
+clear.Name = "clear"
+clear.Parent = barb
+clear.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+clear.Position = UDim2.new(0.1650000, 0, 0, 0)
+clear.Size = UDim2.new(0, 92, 0, 35)
+clear.Font = Enum.Font.Arial
+clear.Text = "Clear"
+clear.TextColor3 = Color3.fromRGB(255, 255, 255)
+clear.TextSize = 14.000
+clear.MouseButton1Click:Connect(function()
+code.Text = ""
+end)
+
+attach.Name = "attach"
+attach.Parent = barb
+attach.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+attach.Position = UDim2.new(0.84000000, 0, 0, 0)
+attach.Size = UDim2.new(0, 100, 0, 35)
+attach.Font = Enum.Font.Arial
+attach.Text = "Attach"
+attach.TextColor3 = Color3.fromRGB(255, 255, 255)
+attach.TextSize = 14.000
+attach.MouseButton1Click:Connect(function()
+if _G.attach == true then
+bartop.Text = "NTT Explore - 1.10.60A (Already Injected!)"
+wait(0.8)
+bartop.Text = "NTT Explore - 1.10.60A"
+end
+
+if _G.attach == false then
+bartop.Text = "NTT Explore - 1.10.60A (Checking...)"
+wait(1.9)
+bartop.Text = "NTT Explore - 1.10.60A (Injecting...)"
+wait(2.5)
+bartop.Text = "NTT Explore - 1.10.60A (Scanning...)"
+wait(1)
+bartop.Text = "NTT Explore - 1.10.60A (Ready!)"
+_G.attach = true
+wait(0.5)
+bartop.Text = "NTT Explore - 1.10.60A"
+end
+
+end)
