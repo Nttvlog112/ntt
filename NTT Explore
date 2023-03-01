@@ -16,12 +16,31 @@ local mini = Instance.new("TextButton")
 local im1 = Instance.new("ImageLabel")
 local exit = Instance.new("TextButton")
 local im2 = Instance.new("ImageLabel")
+local darkdex = Instance.new("TextButton")
+local dumpcode = Instance.new("TextButton")
+local op = Instance.new("TextButton")
+local op1 = Instance.new("UICorner")
 
 NTTGUI.Name = "NTTGUI"
 NTTGUI.Parent = game.CoreGui
 NTTGUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 _G.attach = false
+
+op.Name = "op"
+op.Parent = NTTGUI
+op.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+op.Position = UDim2.new(0.014000000, 0, 0.030085708, 0)
+op.Size = UDim2.new(0, 40, 0, 40)
+op.Font = Enum.Font.Ubuntu
+op.Text = "X"
+op.TextColor3 = Color3.fromRGB(250, 255, 250)
+op.TextSize = 30.000
+op.BorderColor3 = Color3.fromRGB(250, 250, 250)
+op1.Parent = op
+op.MouseButton1Down:connect(function()
+main.Visible = true
+end)
 
 main.Name = "main"
 main.Parent = NTTGUI -- nằm trên khung ẩn
@@ -72,6 +91,7 @@ exit.TextColor3 = Color3.new(0, 0, 0)
 exit.TextSize = 14
 exit.MouseButton1Down:connect(function()
 main.Visible = false
+op.Visible = false
 end)
 
 im2.Parent = exit
@@ -130,6 +150,51 @@ barright.Parent = main -- nằm trên khung ẩn
 barright.BackgroundColor3 = Color3.fromRGB(50,50, 50) --màu khung
 barright.Position = UDim2.new(0.84000000, 0, 0.120000000, 0) -- vị trí đứng
 barright.Size = UDim2.new(0, 100, 0, 200) -- kích cở
+
+darkdex.Name = "darkdex"
+darkdex.Parent = barright
+darkdex.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+darkdex.Position = UDim2.new(0, 0, 0, 0)
+darkdex.Size = UDim2.new(0, 100, 0, 35)
+darkdex.Font = Enum.Font.Arial
+darkdex.Text = "Dark Dex"
+darkdex.TextColor3 = Color3.fromRGB(255, 255, 255)
+darkdex.TextSize = 14.000
+darkdex.MouseButton1Click:Connect(function()
+if _G.attach == false then
+bartop.Text = "NTT Explore - 1.10.60A (Need you attach!)"
+wait(0.8)
+bartop.Text = "NTT Explore - 1.10.60A"
+end
+
+if _G.attach == true then
+if darkdex.Text == "Dark Dex" then
+darkdex.Text = "Dark Dex." 
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Dark%20dex')))()
+end
+end
+end)
+
+dumpcode.Name = "dumpcode"
+dumpcode.Parent = barright
+dumpcode.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+dumpcode.Position = UDim2.new(0, 0, 0.200000000, 0)
+dumpcode.Size = UDim2.new(0, 100, 0, 35)
+dumpcode.Font = Enum.Font.Arial
+dumpcode.Text = "Dump Code"
+dumpcode.TextColor3 = Color3.fromRGB(255, 255, 255)
+dumpcode.TextSize = 14.000
+dumpcode.MouseButton1Click:Connect(function()
+if _G.attach == false then
+bartop.Text = "NTT Explore - 1.10.60A (Need you attach!)"
+wait(0.8)
+bartop.Text = "NTT Explore - 1.10.60A"
+end
+if _G.attach == true then
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Dex%20script%20NTT')))()
+end
+end)
+
 
 barb.Name = "barb"
 barb.Parent = main -- nằm trên khung ẩn
