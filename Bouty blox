@@ -1,147 +1,143 @@
---bouty
- local Guibouty = Instance.new("ScreenGui")
- local bbon = Instance.new("TextButton")
-local bboff = Instance.new("TextButton")
-local text1 = Instance.new("TextLabel")
+
+local NTTGUI = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local on = Instance.new("TextButton")
+local off = Instance.new("TextButton")
+local text = Instance.new("TextLabel")
+local nameprl = Instance.new("TextLabel")
+local healthprl = Instance.new("TextLabel")
 local bars = Instance.new("Frame")
-local barr1 = Instance.new("Frame")
-local barr2 = Instance.new("Frame")
-local bountybox = Instance.new("TextBox")
-local bcheck3 = Instance.new("TextButton")
-local bcheck4 = Instance.new("TextButton")
-local t1 = Instance.new("TextLabel")
-local zone = Instance.new("TextButton")
-local zone1 = Instance.new("TextButton")
-local UIbarr1 = Instance.new("UICorner")
-local UIbarr2 = Instance.new("UICorner")
-local UIload = Instance.new("UICorner")
-local cc1 = Instance.new("UICorner")
-local cc2 = Instance.new("UICorner")
-local cc3 = Instance.new("UICorner")
-local cc4 = Instance.new("UICorner")
-local cc5 = Instance.new("UICorner")
-local UIoff = Instance.new("UICorner")
-local UIon = Instance.new("UICorner")
-local UIbarbouty = Instance.new("UICorner")
+local name = Instance.new("TextBox")
+local a1 = Instance.new("TextLabel")
+local ba1 = Instance.new("TextButton")
+local a2 = Instance.new("TextLabel")
+local ba2 = Instance.new("TextButton")
+local a3 = Instance.new("TextLabel")
+local ba3 = Instance.new("TextButton")
+local op1 = Instance.new("UICorner")
+local op2 = Instance.new("UICorner")
+local tpprl = Instance.new("TextButton")
 
-Guibouty.Name = "Guibouty"
-Guibouty.Parent = game.CoreGui
-Guibouty.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+NTTGUI.Name = "NTTGUI"
+NTTGUI.Parent = game.CoreGui
+NTTGUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-bboff.Visible = false
-bbon.Visible = true
+function Click()
+game:GetService'VirtualUser':CaptureController()
+        game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+end
 
---bouty gui
+main.Name = "main"
+main.Parent = NTTGUI -- nằm trên khung ẩn
+main.BackgroundColor3 = Color3.fromRGB(0, 0, 0) --màu khung
+main.Position = UDim2.new(0.580126051, 0, 0.180999169, 0) -- vị trí đứng
+main.Size = UDim2.new(0, 200, 0, 280) -- kích cở
+main.Visible = true
 
-bboff.Name = "bboff"
-bboff.Parent = Guibouty
-bboff.BackgroundColor3 = Color3.fromRGB(0, 250, 60)
-bboff.BorderSizePixel = 0
-bboff.Position = UDim2.new(0.85162201, 0, 0.663285708, 0)
-bboff.Size = UDim2.new(0, 40, 0, 40)
-bboff.Font = Enum.Font.Ubuntu
-bboff.Text = ""
-bboff.TextColor3 = Color3.fromRGB(250, 255, 250)
-bboff.TextSize = 20.000
-UIoff.Parent = bboff
-bboff.MouseButton1Down:connect(function()
-barr1.Visible = false
-game.CoreGui.Guibouty.bboff.Visible = false
-game.CoreGui.Guibouty.bbon.Visible = true
+text.Name = "text"
+text.Parent = main -- nằm trên khung ẩn
+text.BackgroundColor3 = Color3.fromRGB(30,30,30) --màu khung
+text.Position = UDim2.new(0.00000000, 0, 0.000000000, 0) -- vị trí đứng
+text.Size = UDim2.new(0, 200, 0, 27) -- kích cở
+text.Text = "NTT HUB - BOUNTY"
+text.TextColor3 = Color3.fromRGB(254, 254, 254)
+text.TextSize = 12.000
+
+
+on.Name = "on"
+on.Parent = NTTGUI -- nằm trên khung ẩn
+on.BackgroundColor3 = Color3.fromRGB(30,30,30) --màu khung
+on.Position = UDim2.new(0.85162201, 0, 0.663285708, 0)
+on.Size = UDim2.new(0, 27, 0, 27) -- kích cở
+on.Text = "X"
+on.TextColor3 = Color3.fromRGB(254, 254, 254)
+on.TextSize = 20.000
+op1.Parent = on
+on.MouseButton1Down:connect(function()
+on.Visible = false
+off.Visible = true
+main.Visible = true
 end)
 
-bbon.Name = "bbon"
-bbon.Parent = Guibouty
-bbon.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
-bbon.BorderSizePixel = 0
-bbon.Position = UDim2.new(0.85162201, 0, 0.663285708, 0)
-bbon.Size = UDim2.new(0, 40, 0, 40)
-bbon.Font = Enum.Font.Ubuntu
-bbon.Text = ""
-bbon.TextColor3 = Color3.fromRGB(250, 255, 250)
-bbon.TextSize = 20.000
-UIon.Parent = bbon
-bbon.MouseButton1Down:connect(function()
-barr1.Visible = true
-game.CoreGui.Guibouty.bbon.Visible = false
-game.CoreGui.Guibouty.bboff.Visible = true
+off.Name = "off"
+off.Parent = NTTGUI -- nằm trên khung ẩn
+off.BackgroundColor3 = Color3.fromRGB(30,30,30) --màu khung
+off.Position = UDim2.new(0.85162201, 0, 0.663285708, 0)
+off.Size = UDim2.new(0, 27, 0, 27) -- kích cở
+off.Text = "X"
+off.TextColor3 = Color3.fromRGB(254, 254, 254)
+off.TextSize = 20.000
+op2.Parent = off
+off.MouseButton1Down:connect(function()
+main.Visible = false
+on.Visible = true
+off.Visible = false
 end)
 
-barr1.Name = "barr1"
-barr1.Parent = Guibouty
-barr1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-barr1.Position = UDim2.new(0.358126051, 0, 0.258999169, 0)
-barr1.Size = UDim2.new(0, 310, 0, 150)
-UIbarr1.Parent = barr1
-barr1.Visible = false
+nameprl.Name = "nameprl"
+nameprl.Parent = main -- nằm trên khung ẩn
+nameprl.BackgroundColor3 = Color3.fromRGB(30,30,30) --màu khung
+nameprl.Position = UDim2.new(0.00000000, 0, 0.120000000, 0) -- vị trí đứng
+nameprl.Size = UDim2.new(0, 200, 0, 27) -- kích cở
+nameprl.Text = "   Name: ..."
+nameprl.TextColor3 = Color3.fromRGB(254, 254, 254)
+nameprl.TextSize = 10.000
+nameprl.TextXAlignment = Enum.TextXAlignment.Left
 
-text1.Parent = barr1
-text1.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-text1.BackgroundTransparency = 1.000
-text1.Position = UDim2.new(0.24631148, 0, 0.0704392526, 0)
-text1.Size = UDim2.new(0, 170, 0, 30)
-text1.Font = Enum.Font.Ubuntu
-text1.Text = "Bounty Gui"
-text1.TextColor3 = Color3.fromRGB(255, 255, 255)
-text1.TextSize = 18.000
-text1.TextWrapped = true
+healthprl.Name = "healthprl"
+healthprl.Parent = main -- nằm trên khung ẩn
+healthprl.BackgroundColor3 = Color3.fromRGB(30,30,30) --màu khung
+healthprl.Position = UDim2.new(0.00000000, 0, 0.240000000, 0) -- vị trí đứng
+healthprl.Size = UDim2.new(0, 200, 0, 27) -- kích cở
+healthprl.Text = "   Health : ..."
+healthprl.TextColor3 = Color3.fromRGB(254, 254, 254)
+healthprl.TextSize = 10.000
+healthprl.TextXAlignment = Enum.TextXAlignment.Left
+
 
 bars.Name = "bars"
-bars.Parent = barr1
-bars.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
-bars.Position = UDim2.new(0.10631148, 0, 0.2704392526, 0)
-bars.Size = UDim2.new(0, 250, 0, 2)
+bars.Parent = main -- nằm trên khung ẩn
+bars.BackgroundColor3 = Color3.fromRGB(250,250,250) --màu khung
+bars.Position = UDim2.new(0.10000000, 0, 0.360000000, 0) -- vị trí đứng
+bars.Size = UDim2.new(0, 160, 0, 1) -- kích cở
 
-bountybox.Name = "bountybox"
-bountybox.Parent = barr1
-bountybox.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
-bountybox.Position = UDim2.new(0.10631148, 0, 0.3204392526, 0)
-bountybox.Size = UDim2.new(0, 250, 0, 25)
-bountybox.Font = Enum.Font.SourceSans
-bountybox.Text = "Name Player"
-bountybox.TextColor3 = Color3.fromRGB(0, 0, 0)
-bountybox.TextSize = 18.000
-cc1.Parent = bountybox
+name.Name = "name"
+name.Parent = main -- nằm trên khung ẩn
+name.BackgroundColor3 = Color3.fromRGB(250,250,250) --màu khung
+name.Position = UDim2.new(0.10000000, 0, 0.400000000, 0) -- vị trí đứng
+name.Size = UDim2.new(0, 160, 0, 27) -- kích cở
+name.Text = "Nhập tên player"
+name.TextColor3 = Color3.fromRGB(4, 4, 4)
+name.TextSize = 10.000
 
-barr2.Name = "barr2"
-barr2.Parent = barr1
-barr2.Active = true
-barr2.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-barr2.Position = UDim2.new(0.10631148, 0, 0.5404392526, 0)
-barr2.Size = UDim2.new(0, 250, 0, 30)
-UIbarr2.Parent = barr2
+a1.Parent = main
+a1.BackgroundColor3 = Color3.fromRGB(30,30,30)
+a1.Position = UDim2.new(0, 0, 0.5200000000, 0)
+a1.Size = UDim2.new(0, 200, 0, 27)
+a1.Text = "   Kill Player"
+a1.TextColor3 = Color3.fromRGB(255, 255, 255)
+a1.TextSize = 10.000
+a1.TextWrapped = true
+a1.TextXAlignment = Enum.TextXAlignment.Left
 
-t1.Parent = barr2
-t1.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-t1.BackgroundTransparency = 1.000
-t1.Position = UDim2.new(0, 0, 0, 0)
-t1.Size = UDim2.new(0, 100, 0, 30)
-t1.Font = Enum.Font.Ubuntu
-t1.Text = "TP Player"
-t1.TextColor3 = Color3.fromRGB(255, 255, 255)
-t1.TextSize = 14.000
-t1.TextWrapped = true
-t1.TextXAlignment = Enum.TextXAlignment.Left
-
-bcheck3.Name = "bcheck3"
-bcheck3.Parent = barr2
-bcheck3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-bcheck3.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
-bcheck3.Size = UDim2.new(0, 20, 0, 20)
-bcheck3.Font = Enum.Font.SourceSans
-bcheck3.Text = ""
-bcheck3.TextColor3 = Color3.fromRGB(0, 0, 0)
-bcheck3.TextSize = 18.000
-cc3.Parent = bcheck3
-bcheck3.MouseButton1Down:connect(function()
-bcheck3.Visible = false
-bcheck4.Visible = true
-_G.bouty = true
+ba1.Name = "ba1"
+ba1.Parent = a1
+ba1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ba1.Position = UDim2.new(0.85000000, 0, 0.120000000, 0)
+ba1.Size = UDim2.new(0, 20, 0, 20)
+ba1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+ba1.Font = Enum.Font.SourceSans
+ba1.Text = ""
+ba1.TextColor3 = Color3.fromRGB(250, 250, 250)
+ba1.TextSize = 30.000
+ba1.MouseButton1Down:connect(function()
+--on off 
+if ba1.Text == "" then --on
+ba1.Text = "X"
+_G.ba1 = true
 
 game:GetService('RunService').RenderStepped:connect(function()
-if _G.bouty then
-
-Click()
+if _G.ba1 then --script
 
 local lplayer = game:GetService('Players').LocalPlayer
  
@@ -180,116 +176,273 @@ local f = string.upper(asd[math.random(1,#asd)])
 return f
 end
 
-local target = unpack(GetPlayer(bountybox.Text)).Character
+local target = unpack(GetPlayer(name.Text)).Character
  
-game:GetService'Players'.LocalPlayer.Character.HumanoidRootPart.CFrame = target.Head.CFrame;coin.Location = target.Head.Position game["Run Service"].Heartbeat:wait()
+--game:GetService'Players'.LocalPlayer.Character.HumanoidRootPart.CFrame = target.HumanoidRootPart.CFrame
+
+local pos = target.HumanoidRootPart.CFrame --check pos
+if game.Players.LocalPlayer.Character.Humanoid.Health >= 5000 then                                
+                    local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                  if Distance < 300 then
+                  Click()
+                  end
+                  
+               game:GetService'Players'.LocalPlayer.Character.HumanoidRootPart.CFrame = target.HumanoidRootPart.CFrame
+                       
+                                   
+                                   if game.Players.LocalPlayer.Character.Humanoid.Health < 4000 then                                
+                   game:GetService'Players'.LocalPlayer.Character.HumanoidRootPart.CFrame = target.HumanoidRootPart.CFrame* CFrame.new(0, 10000, 0)
+                   end
+                   
+  for i,v in next, game:GetService('Players'):GetPlayers() do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+v.Character.HumanoidRootPart.Size = Vector3.new(30, 30, 30)
+v.Character.HumanoidRootPart.Transparency = 1
 
 end
+end
+end
+end
 end)
+elseif ba1.Text == "X" then --off
+ba1.Text = ""
+_G.ba1 = false
 for i,v in next, game:GetService('Players'):GetPlayers() do
 if v.Name ~= game:GetService('Players').LocalPlayer.Name then
-pcall(function()
-v.Character.HumanoidRootPart.Size = Vector3.new(20, 20, 20)
+v.Character.HumanoidRootPart.Size = Vector3.new(5,5,5)
 v.Character.HumanoidRootPart.Transparency = 1
 v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really black")
 v.Character.HumanoidRootPart.Material = "Neon"
 v.Character.HumanoidRootPart.CanCollide = false
-end)
 end
 end
-
+end
 end)
 
-bcheck4.Name = "bcheck4"
-bcheck4.Parent = barr2
-bcheck4.BackgroundColor3 = Color3.fromRGB(0, 255, 60)
-bcheck4.Position = UDim2.new(0.90662296, 0, 0.121392526, 0)
-bcheck4.Size = UDim2.new(0, 20, 0, 20)
-bcheck4.Font = Enum.Font.SourceSans
-bcheck4.Text = ""
-bcheck4.TextColor3 = Color3.fromRGB(0, 0, 0)
-bcheck4.TextSize = 18.000
-bcheck4.Visible = false
-cc4.Parent = bcheck4
-bcheck4.MouseButton1Down:connect(function()
-bcheck4.Visible = false
-bcheck3.Visible = true
-_G.bouty = false
+a2.Parent = main
+a2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+a2.Position = UDim2.new(0, 0, 0.6400000000, 0)
+a2.Size = UDim2.new(0, 200, 0, 27)
+a2.Font = Enum.Font.Ubuntu
+a2.Text = "   Auto Hunt Bounty"
+a2.TextColor3 = Color3.fromRGB(255, 255, 255)
+a2.TextSize = 14.000
+a2.TextWrapped = true
+a2.TextXAlignment = Enum.TextXAlignment.Left
+
+ba2.Name = "ba2"
+ba2.Parent = a2
+ba2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ba2.Position = UDim2.new(0.85000000, 0, 0.120000000, 0)
+ba2.Size = UDim2.new(0, 20, 0, 20)
+ba2.BorderColor3 = Color3.fromRGB(250, 250, 250)
+ba2.Font = Enum.Font.SourceSans
+ba2.Text = ""
+ba2.TextColor3 = Color3.fromRGB(250, 250, 250)
+ba2.TextSize = 30.000
+ba2.MouseButton1Down:connect(function()
+--on off 
+if ba2.Text == "" then --on
+ba2.Text = "X"
+_G.ba2 = true
 
 game:GetService('RunService').RenderStepped:connect(function()
-if _G.bouty then
+if _G.ba2 then --script
+
+
 
 end
 end)
-
-for i,v in next, game:GetService('Players'):GetPlayers() do
-if v.Name ~= game:GetService('Players').LocalPlayer.Name then
-pcall(function()
-v.Character.HumanoidRootPart.Size = Vector3.new(2, 2, 2)
-v.Character.HumanoidRootPart.Transparency = 1
-v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really black")
-v.Character.HumanoidRootPart.Material = "Neon"
-v.Character.HumanoidRootPart.CanCollide = false
-end)
+elseif ba2.Text == "X" then --off
+ba2.Text = ""
+_G.ba2 = false
 end
-end
-
 end)
 
---tp zone
+a3.Parent = main
+a3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+a3.Position = UDim2.new(0, 0, 0.7600000000, 0)
+a3.Size = UDim2.new(0, 200, 0, 27)
+a3.Font = Enum.Font.Ubuntu
+a3.Text = "   Speed"
+a3.TextColor3 = Color3.fromRGB(255, 255, 255)
+a3.TextSize = 14.000
+a3.TextWrapped = true
+a3.TextXAlignment = Enum.TextXAlignment.Left
 
-zone.Name = "zone"
-zone.Parent = barr1
-zone.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-zone.Position = UDim2.new(0.27631148, 0, 0.7704392526, 0)
-zone.Size = UDim2.new(0, 150, 0, 25)
-zone.Font = Enum.Font.SourceSans
-zone.Text = "On | Auto Tp Zone"
-zone.TextColor3 = Color3.fromRGB(0, 0, 0)
-zone.TextSize = 18.000
-UIload.Parent = zone
-zone.MouseButton1Down:connect(function()
-zone.Visible = false
-zone1.Visible = true
-_G.Zone = true
+ba3.Name = "ba3"
+ba3.Parent = a3
+ba3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ba3.Position = UDim2.new(0.85000000, 0, 0.120000000, 0)
+ba3.Size = UDim2.new(0, 20, 0, 20)
+ba3.BorderColor3 = Color3.fromRGB(250, 250, 250)
+ba3.Font = Enum.Font.SourceSans
+ba3.Text = ""
+ba3.TextColor3 = Color3.fromRGB(250, 250, 250)
+ba3.TextSize = 30.000
+ba3.MouseButton1Down:connect(function()
+--on off 
+if ba3.Text == "" then --on
+ba3.Text = "X"
+_G.ba3 = true
+elseif ba3.Text == "X" then --off
+ba3.Text = ""
+_G.ba3 = false
+end
+end)
 
+--speed
 game:GetService('RunService').RenderStepped:connect(function()
-if _G.Zone then
-if  game.Players.LocalPlayer.Character.Humanoid.Health < 4000 then
+if _G.ba3 then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,0,-14)
+end end)
 
-bcheck3.Visible = true
-bcheck4.Visible = false
 
-_G.bouty = false
-
+-- code check
 game:GetService('RunService').RenderStepped:connect(function()
-if _G.bouty then
+
+local lplayer = game:GetService('Players').LocalPlayer
+ 
+local yeeting = false
+function GetPlayer(String)
+local Found = {}
+local strl = String:lower()
+if strl == "all" then
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+table.insert(Found,v)
 end
-end)
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,100,0)
+elseif strl == "Random" then
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+if v.Name ~= lplayer.Name then
+table.insert(Found,v)
 end
+end 
+elseif strl == "me" then
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+if v.Name == lplayer.Name then
+table.insert(Found,v)
 end
-end)
+end 
+else
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+if v.Name:lower():sub(1, #String) == String:lower() then
+table.insert(Found,v)
+end
+end 
+end
+return Found 
+end
+function ahh(thing)
+local asd = {'yeet','gui','yeet gui'}
+local f = string.upper(asd[math.random(1,#asd)])
+return f
+end
+
+local target = unpack(GetPlayer(name.Text)).Character
+
+nameprl.Text = ("   Name : "..target.Name)
+healthprl.Text = ("   Health : "..target.Humanoid.Health)
 end)
 
-zone1.Visible = false
-zone1.Name = "zone1"
-zone1.Parent = barr1
-zone1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-zone1.Position = UDim2.new(0.27631148, 0, 0.7704392526, 0)
-zone1.Size = UDim2.new(0, 150, 0, 25)
-zone1.Font = Enum.Font.SourceSans
-zone1.Text = "Off | Auto Tp Zone"
-zone1.TextColor3 = Color3.fromRGB(0, 0, 0)
-zone1.TextSize = 18.000
-cc5.Parent = zone1
-zone1.MouseButton1Down:connect(function()
-zone1.Visible = false
-zone.Visible = true
-_G.Zone = false
+--fly
 
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Fly%201')))()
+
+game.Players.LocalPlayer.Name = 0000000000
+
+--esp
 game:GetService('RunService').RenderStepped:connect(function()
-if _G.Zone then
+for i,v in pairs(game.Players:GetChildren()) do
+            if not v.Character.Head:FindFirstChild("ESP") then
+                local BillboardGui = Instance.new("BillboardGui")
+                local TextLabel = Instance.new("TextLabel")
+                BillboardGui.Parent = v.Character.Head
+                BillboardGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+                BillboardGui.Active = true
+                BillboardGui.Name = "ESP"
+                BillboardGui.AlwaysOnTop = true
+                BillboardGui.LightInfluence = 1.000
+                BillboardGui.Size = UDim2.new(0, 100, 0, 50)
+                BillboardGui.StudsOffset = Vector3.new(0, 2.5, 0)
+                TextLabel.Parent = BillboardGui
+                TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+                TextLabel.BackgroundTransparency = 1.000
+                TextLabel.Size = UDim2.new(0, 100, 0, 50)
+                TextLabel.Font = Enum.Font.GothamBold
+                TextLabel.Text = v.Name
+                TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)              
+                TextLabel.TextSize = 14.000
+                TextLabel.TextStrokeTransparency = 0.000
+                
+            end
+        end end)
+        
+        tpprl.Parent = main
+tpprl.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+tpprl.Position = UDim2.new(0, 0, 0.8800000000, 0)
+tpprl.Size = UDim2.new(0, 200, 0, 27)
+tpprl.Font = Enum.Font.Ubuntu
+tpprl.Text = "Tp Player Can Reset"
+tpprl.TextColor3 = Color3.fromRGB(255, 255, 255)
+tpprl.TextSize = 14.000
+tpprl.TextWrapped = true
+tpprl.MouseButton1Down:connect(function()
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+_G.tpprl = true
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.tpprl then
+        local lplayer = game:GetService('Players').LocalPlayer
+ 
+local yeeting = false
+function GetPlayer(String)
+local Found = {}
+local strl = String:lower()
+if strl == "all" then
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+table.insert(Found,v)
+end
+elseif strl == "Random" then
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+if v.Name ~= lplayer.Name then
+table.insert(Found,v)
+end
+end 
+elseif strl == "me" then
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+if v.Name == lplayer.Name then
+table.insert(Found,v)
+end
+end 
+else
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+if v.Name:lower():sub(1, #String) == String:lower() then
+table.insert(Found,v)
+end
+end 
+end
+return Found 
+end
+function ahh(thing)
+local asd = {'yeet','gui','yeet gui'}
+local f = string.upper(asd[math.random(1,#asd)])
+return f
+end
+
+local target = unpack(GetPlayer(name.Text)).Character
+ 
+game:GetService'Players'.LocalPlayer.Character.HumanoidRootPart.CFrame = target.HumanoidRootPart.CFrame
 end
 end)
+wait(6)
+_G.tpprl = false
+      end)
+      
+      game:GetService('RunService').RenderStepped:connect(function()
+if game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then                
+               else
+    local args = {
+                      [1] = "Buso"
+                   }
+                   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+                end              
 end)
