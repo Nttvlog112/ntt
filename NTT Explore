@@ -181,7 +181,7 @@ save2.Text = "NTT HUB"
 save2.TextColor3 = Color3.fromRGB(255, 255, 255)
 save2.TextSize = 11.000
 save2.MouseButton1Click:Connect(function()
-code.Text = "loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/MH%20SCRIPT%20NT')))()"
+code.Text = "loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Loader20NTT201')))()"
 end)
 
 save3.Name = "save3"
@@ -234,6 +234,19 @@ save6.TextColor3 = Color3.fromRGB(255, 255, 255)
 save6.TextSize = 11.000
 save6.MouseButton1Click:Connect(function()
 code.Text = "loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/3')))()"
+end)
+
+save7.Name = "save7"
+save7.Parent = barsave
+save7.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+save7.Position = UDim2.new(0.34200000, 0, 0, 0)
+save7.Size = UDim2.new(0, 80, 0, 20)
+save7.Font = Enum.Font.Arial
+save7.Text = "SMZ HUB"
+save7.TextColor3 = Color3.fromRGB(255, 255, 255)
+save7.TextSize = 11.000
+save7.MouseButton1Click:Connect(function()
+code.Text = "loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/4')))()" 
 end)
 
 bartop.Name = "bartop"
@@ -387,7 +400,7 @@ end)
 antiban.Name = "antiban"
 antiban.Parent = barright
 antiban.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-antiban.Position = UDim2.new(0, 0, 0.200000000, 0)
+antiban.Position = UDim2.new(0, 0, 0.210000000, 0)
 antiban.Size = UDim2.new(0, 100, 0, 35)
 antiban.Font = Enum.Font.Arial
 antiban.Text = "Anti Ban"
@@ -416,7 +429,7 @@ end)
 dumpcode.Name = "dumpcode"
 dumpcode.Parent = barright
 dumpcode.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-dumpcode.Position = UDim2.new(0, 0, 0.400000000, 0)
+dumpcode.Position = UDim2.new(0, 0, 0.420000000, 0)
 dumpcode.Size = UDim2.new(0, 100, 0, 35)
 dumpcode.Font = Enum.Font.Arial
 dumpcode.Text = "Dump Code"
@@ -463,7 +476,13 @@ end
 if code.Text == "loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/3')))()" then
 rtx()
 end
-
+if code.Text == "loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/4')))()" then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Frerfgzz/free-script/main/SMZHUBv2BETA"))()
+end
+if code.Text == "loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Loader20NTT201')))()" then
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Loader%20NTT%201')))()
+end
+--load script
 loadstring(code.Text)()
 
 end)
