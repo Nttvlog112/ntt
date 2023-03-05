@@ -245,7 +245,7 @@ setting.Position = UDim2.new(0, 0, 0.710000000, 0)
 setting.Size = UDim2.new(0, 100, 0, 25)
 setting.Font = Enum.Font.Ubuntu
 setting.BorderColor3 = Color3.fromRGB(250, 250, 250)
-setting.Text = "   Setting Gui"
+setting.Text = "   Setting"
 setting.TextColor3 = Color3.fromRGB(255, 255, 255)
 setting.TextSize = 14.000
 setting.TextWrapped = true
@@ -502,11 +502,11 @@ function TP2(P1)
                     elseif Distance < 200 then
                         Speed = 5000
                     elseif Distance < 300 then
-                        Speed = 1030
+                        Speed = 500
                     elseif Distance < 500 then
-                        Speed = 725
+                        Speed = 200
                     elseif Distance < 1000 then
-                        Speed = 365
+                        Speed = 120
                     elseif Distance >= 2000 then
                         Speed = 100
                     end
@@ -986,14 +986,14 @@ end end)
 
 wait(5)
 _G.b6 = false
-wait(2)
-TP2(CFrame.new(970.369446, 142.653198, 1217.3667, 0.162079468, -4.85452638e-08, -0.986777723, 1.03357589e-08, 1, -4.74980872e-08, 0.986777723, -2.50063148e-09, 0.162079468))
-wait(6)
+
 _G.bf6 = true
+TP2(CFrame.new(970.369446, 142.653198, 1217.3667, 0.162079468, -4.85452638e-08, -0.986777723, 1.03357589e-08, 1, -4.74980872e-08, 0.986777723, -2.50063148e-09, 0.162079468))
 --farm
 game:GetService('RunService').RenderStepped:connect(function()
 if game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible == false then
 if _G.bf6 then --script
+
 local args = {
     [1] = "StartQuest",
     [2] = "Area2Quest",
