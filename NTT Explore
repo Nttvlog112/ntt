@@ -1,6 +1,7 @@
 local NTTGUI = Instance.new("ScreenGui")
 local main = Instance.new("Frame")
 local bartop = Instance.new("TextLabel")
+local hub = Instance.new("TextLabel")
 local open = Instance.new("TextButton")
 local close = Instance.new("TextButton")
 local barcode = Instance.new("ScrollingFrame")
@@ -18,6 +19,24 @@ local exit = Instance.new("TextButton")
 local im2 = Instance.new("ImageLabel")
 local darkdex = Instance.new("TextButton")
 local dumpcode = Instance.new("TextButton")
+local antiban = Instance.new("TextButton")
+local savecode = Instance.new("TextButton")
+local ntthub = Instance.new("TextButton")
+local barsave = Instance.new("ScrollingFrame")
+local barframe = Instance.new("Frame")
+--save
+local save1 = Instance.new("TextButton")
+local save2 = Instance.new("TextButton")
+local save3 = Instance.new("TextButton")
+local save4 = Instance.new("TextButton")
+local save5 = Instance.new("TextButton")
+local save6 = Instance.new("TextButton")
+local save7 = Instance.new("TextButton")
+local save8 = Instance.new("TextButton")
+local save9 = Instance.new("TextButton")
+local save10 = Instance.new("TextButton")
+
+--on explore
 local op = Instance.new("TextButton")
 local op1 = Instance.new("UICorner")
 
@@ -25,12 +44,94 @@ NTTGUI.Name = "NTTGUI"
 NTTGUI.Parent = game.CoreGui
 NTTGUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
+function rtx()
+local Lighting = game:GetService("Lighting")
+local StarterGui = game:GetService("StarterGui")
+local Bloom = Instance.new("BloomEffect")
+local Blur = Instance.new("BlurEffect")
+local ColorCor = Instance.new("ColorCorrectionEffect")
+local SunRays = Instance.new("SunRaysEffect")
+local Sky = Instance.new("Sky")
+local Atm = Instance.new("Atmosphere")
+local Gui = Instance.new("ScreenGui")
+local ShadowFrame = Instance.new("ImageLabel")
+
+for i, v in pairs(Lighting:GetChildren()) do
+	if v then
+		v:Destroy()
+	end
+end
+
+Bloom.Parent = Lighting
+Blur.Parent = Lighting
+ColorCor.Parent = Lighting
+SunRays.Parent = Lighting
+Sky.Parent = Lighting
+Atm.Parent = Lighting
+Gui.Parent = StarterGui
+ShadowFrame.Parent = Gui
+
+Bloom.Intensity = 0.05
+Bloom.Size = 17
+Bloom.Threshold = 0.1
+
+Blur.Size = 2
+
+ColorCor.Brightness = 0.2
+ColorCor.Contrast = 0.8
+ColorCor.Saturation = 0.2
+ColorCor.TintColor = Color3.fromRGB(255, 235, 203)
+
+SunRays.Intensity = 0.07
+SunRays.Spread = 0.728
+
+
+Sky.SunAngularSize = 21
+
+Lighting.Ambient = Color3.fromRGB(105,105,105)
+Lighting.Brightness = 0.4
+Lighting.ColorShift_Bottom = Color3.fromRGB(0,0,0)
+Lighting.ColorShift_Top = Color3.fromRGB(0,0,0)
+Lighting.EnvironmentDiffuseScale = 0.2
+Lighting.EnvironmentSpecularScale = 0.2
+Lighting.GlobalShadows = true
+Lighting.OutdoorAmbient = Color3.fromRGB(0,0,0)
+Lighting.ShadowSoftness = 0
+--day and night cycle
+
+local Time = 0.001
+local TimeChange = 0.001
+
+
+while wait(Time) do
+ game.Lighting.ClockTime = game.Lighting.ClockTime + TimeChange
+end
+
+
+Lighting.GeographicLatitude = 45
+Lighting.ExposureCompensation = 0.5
+
+Atm.Density = 0.364
+Atm.Offset = 0.556
+Atm.Color = Color3.fromRGB(199, 175, 166)
+Atm.Decay = Color3.fromRGB(44, 39, 33)
+Atm.Glare = 0.45
+Atm.Haze = 1.72
+
+ShadowFrame.AnchorPoint = Vector2.new(0.5,1)
+ShadowFrame.Position = UDim2.new(0.5,0,1,0)
+ShadowFrame.Size = UDim2.new(1,0,1.05,0)
+ShadowFrame.BackgroundTransparency = 1
+ShadowFrame.Image = "rbxassetid://4576475446"
+ShadowFrame.ImageTransparency = 0.7
+end
+
 _G.attach = false
 
 op.Name = "op"
 op.Parent = NTTGUI
 op.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-op.Position = UDim2.new(0.014000000, 0, 0.030085708, 0)
+op.Position = UDim2.new(0.013000000, 0, 0.030085708, 0)
 op.Size = UDim2.new(0, 40, 0, 40)
 op.Font = Enum.Font.Ubuntu
 op.Text = "X"
@@ -45,18 +146,115 @@ end)
 main.Name = "main"
 main.Parent = NTTGUI -- nằm trên khung ẩn
 main.BackgroundColor3 = Color3.fromRGB(0, 0, 0) --màu khung
-main.Position = UDim2.new(0.200126051, 0, 0.228999169, 0) -- vị trí đứng
+main.Position = UDim2.new(0.180126051, 0, 0.180999169, 0) -- vị trí đứng
 main.Size = UDim2.new(0, 640, 0, 280) -- kích cở
 main.Visible = true
+
+barsave.Name = "barsave"
+barsave.Parent = main
+barsave.BackgroundColor3 = Color3.fromRGB(20, 20, 20) --màu khung
+barsave.Size = UDim2.new(0, 640, 0, 21) -- kích cở
+barsave.Position = UDim2.new(0.00000000, 0, 0.085000000, 0) -- vị trí đứng
+barsave.CanvasSize = UDim2.new(0, 1500, 0, 0)
+barsave.ScrollBarThickness = 1
+
+save1.Name = "save1"
+save1.Parent = barsave
+save1.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+save1.Position = UDim2.new(0, 0, 0, 0)
+save1.Size = UDim2.new(0, 80, 0, 20)
+save1.Font = Enum.Font.Arial
+save1.Text = "Fly"
+save1.TextColor3 = Color3.fromRGB(255, 255, 255)
+save1.TextSize = 11.000
+save1.MouseButton1Click:Connect(function()
+code.Text = "loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/1')))()"
+end)
+
+save2.Name = "save2"
+save2.Parent = barsave
+save2.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+save2.Position = UDim2.new(0.05700000, 0, 0, 0)
+save2.Size = UDim2.new(0, 80, 0, 20)
+save2.Font = Enum.Font.Arial
+save2.Text = "NTT HUB"
+save2.TextColor3 = Color3.fromRGB(255, 255, 255)
+save2.TextSize = 11.000
+save2.MouseButton1Click:Connect(function()
+code.Text = "loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/MH%20SCRIPT%20NT')))()"
+end)
+
+save3.Name = "save3"
+save3.Parent = barsave
+save3.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+save3.Position = UDim2.new(0.11400000, 0, 0, 0)
+save3.Size = UDim2.new(0, 80, 0, 20)
+save3.Font = Enum.Font.Arial
+save3.Text = "Esp Fruit"
+save3.TextColor3 = Color3.fromRGB(255, 255, 255)
+save3.TextSize = 11.000
+save3.MouseButton1Click:Connect(function()
+code.Text = "for _,v in pairs (workspace:GetChildren()) do if v.Name:match('Fruit') then local BillboardGui = Instance.new("BillboardGui") local TextLabel = Instance.new("TextLabel") BillboardGui.Parent = v BillboardGui.AlwaysOnTop = true BillboardGui.LightInfluence = 1 BillboardGui.Size = UDim2.new(0, 25, 0, 25) BillboardGui.StudsOffset = Vector3.new(0, 2, 0) TextLabel.Parent = BillboardGui TextLabel.BackgroundColor3 = Color3.new(1, 1, 1) TextLabel.BackgroundTransparency = 1 TextLabel.Size = UDim2.new(2, 0, 2, 0) TextLabel.TextSize = 20.000 TextLabel.Text = v.Name TextLabel.TextColor3 = Color3.new(105, 0, 171) TextLabel.Font = "SourceSans" end end"
+end)
+
+save4.Name = "save4"
+save4.Parent = barsave
+save4.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+save4.Position = UDim2.new(0.17100000, 0, 0, 0)
+save4.Size = UDim2.new(0, 80, 0, 20)
+save4.Font = Enum.Font.Arial
+save4.Text = "Coppy Position"
+save4.TextColor3 = Color3.fromRGB(255, 255, 255)
+save4.TextSize = 11.000
+save4.MouseButton1Click:Connect(function()
+code.Text = "setclipboard(tostring(game.Players.LocalPlayer.Character.HumanoidRootPart.Position))"
+end)
+
+save5.Name = "save5"
+save5.Parent = barsave
+save5.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+save5.Position = UDim2.new(0.22800000, 0, 0, 0)
+save5.Size = UDim2.new(0, 80, 0, 20)
+save5.Font = Enum.Font.Arial
+save5.Text = "Tp Sever Vip"
+save5.TextColor3 = Color3.fromRGB(255, 255, 255)
+save5.TextSize = 11.000
+save5.MouseButton1Click:Connect(function()
+code.Text = "loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/2')))()"
+end)
+
+save6.Name = "save6"
+save6.Parent = barsave
+save6.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+save6.Position = UDim2.new(0.28500000, 0, 0, 0)
+save6.Size = UDim2.new(0, 80, 0, 20)
+save6.Font = Enum.Font.Arial
+save6.Text = "RTX"
+save6.TextColor3 = Color3.fromRGB(255, 255, 255)
+save6.TextSize = 11.000
+save6.MouseButton1Click:Connect(function()
+code.Text = "loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/3')))()"
+end)
 
 bartop.Name = "bartop"
 bartop.Parent = main -- nằm trên khung ẩn
 bartop.BackgroundColor3 = Color3.fromRGB(30,30,30) --màu khung
 bartop.Position = UDim2.new(0.00000000, 0, 0.000000000, 0) -- vị trí đứng
-bartop.Size = UDim2.new(0, 640, 0, 27) -- kích cở
+bartop.Size = UDim2.new(0, 640, 0, 20) -- kích cở
 bartop.Text = "NTT Explore - 1.10.60A"
 bartop.TextColor3 = Color3.fromRGB(254, 254, 254)
-bartop.TextSize = 8.000
+bartop.TextSize = 9.000
+
+hub.Name = "hub"
+hub.Parent = bartop -- nằm trên khung ẩn
+hub.BackgroundColor3 = Color3.fromRGB(30,30,30) --màu khung
+hub.BorderColor3 = Color3.fromRGB(30,30,30)
+hub.Size = UDim2.new(0, 100, 0, 20) -- kích cở
+hub.Font = Enum.Font.GothamBold
+hub.Text = " NTT"
+hub.TextColor3 = Color3.fromRGB(254, 254, 254)
+hub.TextSize = 15.000
+hub.TextXAlignment = Enum.TextXAlignment.Left
 
 mini.Name = "mini"
 mini.Parent = bartop
@@ -106,16 +304,24 @@ barcode.Parent = main
 barcode.Active = true
 barcode.BackgroundColor3 = Color3.fromRGB(25, 25, 25) --màu khung
 barcode.BorderSizePixel = 0
-barcode.Size = UDim2.new(0, 485, 0, 200) -- kích cở
-barcode.ScrollBarThickness = 0
-barcode.Position = UDim2.new(0.07000000, 0, 0.120000000, 0) -- vị trí đứng
+barcode.Size = UDim2.new(0, 485, 0, 188) -- kích cở
+barcode.ScrollBarThickness = 4
+barcode.Position = UDim2.new(0.07000000, 0, 0.170000000, 0) -- vị trí đứng
+
+
+barframe.Name = "barframe"
+barframe.Parent = barcode
+barframe.Active = true
+barframe.BackgroundColor3 = Color3.fromRGB(25, 25, 25) --màu khung
+barframe.Size = UDim2.new(0, 1085, 0, 188) -- kích cở
+barframe.BorderColor3 = Color3.fromRGB(25,25,25)
 
 code.Name = "code"
-code.Parent = barcode
+code.Parent = barframe
 code.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 code.BackgroundTransparency = 1.000
 code.Position = UDim2.new(0, 5, 0, 0)
-code.Size = UDim2.new(485, 0, 1, 0)
+code.Size = UDim2.new(485, 0, 5, 0)
 code.ZIndex = 3
 code.ClearTextOnFocus = false
 code.Font = Enum.Font.Code
@@ -130,8 +336,8 @@ code.TextYAlignment = Enum.TextYAlignment.Top
 barleft.Name = "barleft"
 barleft.Parent = main -- nằm trên khung ẩn
 barleft.BackgroundColor3 = Color3.fromRGB(30, 30, 30) --màu khung
-barleft.Position = UDim2.new(0.00000000, 0, 0.120000000, 0) -- vị trí đứng
-barleft.Size = UDim2.new(0, 37, 0, 200) -- kích cở
+barleft.Position = UDim2.new(0.00000000, 0, 0.170000000, 0) -- vị trí đứng
+barleft.Size = UDim2.new(0, 37, 0, 188) -- kích cở
 
 Lines.Name = "Lines"
 Lines.Parent = barleft
@@ -148,8 +354,8 @@ Lines.TextYAlignment = Enum.TextYAlignment.Top
 barright.Name = "barright"
 barright.Parent = main -- nằm trên khung ẩn
 barright.BackgroundColor3 = Color3.fromRGB(50,50, 50) --màu khung
-barright.Position = UDim2.new(0.84000000, 0, 0.120000000, 0) -- vị trí đứng
-barright.Size = UDim2.new(0, 100, 0, 200) -- kích cở
+barright.Position = UDim2.new(0.84000000, 0, 0.170000000, 0) -- vị trí đứng
+barright.Size = UDim2.new(0, 100, 0, 188) -- kích cở
 
 darkdex.Name = "darkdex"
 darkdex.Parent = barright
@@ -157,28 +363,60 @@ darkdex.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 darkdex.Position = UDim2.new(0, 0, 0, 0)
 darkdex.Size = UDim2.new(0, 100, 0, 35)
 darkdex.Font = Enum.Font.Arial
-darkdex.Text = "Dark Dex"
+darkdex.Text = "Dex Explore"
 darkdex.TextColor3 = Color3.fromRGB(255, 255, 255)
 darkdex.TextSize = 14.000
 darkdex.MouseButton1Click:Connect(function()
 if _G.attach == false then
 bartop.Text = "NTT Explore - 1.10.60A (Need you attach!)"
-wait(0.8)
+wait(1)
 bartop.Text = "NTT Explore - 1.10.60A"
 end
 
 if _G.attach == true then
-if darkdex.Text == "Dark Dex" then
-darkdex.Text = "Dark Dex." 
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Dark%20dex')))()
+if darkdex.Text == "Dex Explore" then
+darkdex.Text = "Dex Explore." 
+--dark dex
+--loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Dark%20dex')))()
+--while Dex
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Dex%20Explorer')))()
 end
+end
+end)
+
+antiban.Name = "antiban"
+antiban.Parent = barright
+antiban.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+antiban.Position = UDim2.new(0, 0, 0.200000000, 0)
+antiban.Size = UDim2.new(0, 100, 0, 35)
+antiban.Font = Enum.Font.Arial
+antiban.Text = "Anti Ban"
+antiban.TextColor3 = Color3.fromRGB(255, 255, 255)
+antiban.TextSize = 14.000
+antiban.MouseButton1Click:Connect(function()
+if _G.attach == false then
+bartop.Text = "NTT Explore - 1.10.60A (Need You Attach!)"
+wait(0.8)
+bartop.Text = "NTT Explore - 1.10.60A"
+end
+if _G.attach == true then
+bartop.Text = "NTT Explore - 1.10.60A (Checking Anti Ban...)"
+wait(1)
+bartop.Text = "NTT Explore - 1.10.60A (Hide Name Player)"
+game.Players.LocalPlayer.Name = 0000000000
+wait(1)
+bartop.Text = "NTT Explore - 1.10.60A (Anti Report Player)"
+wait(1)
+bartop.Text = "NTT Explore - 1.10.60A (Anti Ban Load Success!)"
+wait(0.5)
+bartop.Text = "NTT Explore - 1.10.60A"
 end
 end)
 
 dumpcode.Name = "dumpcode"
 dumpcode.Parent = barright
 dumpcode.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-dumpcode.Position = UDim2.new(0, 0, 0.200000000, 0)
+dumpcode.Position = UDim2.new(0, 0, 0.400000000, 0)
 dumpcode.Size = UDim2.new(0, 100, 0, 35)
 dumpcode.Font = Enum.Font.Arial
 dumpcode.Text = "Dump Code"
@@ -187,7 +425,7 @@ dumpcode.TextSize = 14.000
 dumpcode.MouseButton1Click:Connect(function()
 if _G.attach == false then
 bartop.Text = "NTT Explore - 1.10.60A (Need you attach!)"
-wait(0.8)
+wait(1)
 bartop.Text = "NTT Explore - 1.10.60A"
 end
 if _G.attach == true then
@@ -212,13 +450,28 @@ ex.Text = "Execute"
 ex.TextColor3 = Color3.fromRGB(255, 255, 255)
 ex.TextSize = 14.000
 ex.MouseButton1Click:Connect(function()
+
+--fly
+if code.Text == "loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/1')))()" then
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Fly%201')))()
+end
+--svv
+if code.Text == "loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/2')))()" then
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Svv')))()
+end
+--rtx
+if code.Text == "loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/3')))()" then
+rtx()
+end
+
 loadstring(code.Text)()
+
 end)
 
 clear.Name = "clear"
 clear.Parent = barb
 clear.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-clear.Position = UDim2.new(0.1650000, 0, 0, 0)
+clear.Position = UDim2.new(0.1600000, 0, 0, 0)
 clear.Size = UDim2.new(0, 92, 0, 35)
 clear.Font = Enum.Font.Arial
 clear.Text = "Clear"
@@ -226,6 +479,19 @@ clear.TextColor3 = Color3.fromRGB(255, 255, 255)
 clear.TextSize = 14.000
 clear.MouseButton1Click:Connect(function()
 code.Text = ""
+end)
+
+savecode.Name = "savecode"
+savecode.Parent = barb
+savecode.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+savecode.Position = UDim2.new(0.3200000, 0, 0, 0)
+savecode.Size = UDim2.new(0, 92, 0, 35)
+savecode.Font = Enum.Font.Arial
+savecode.Text = "Save"
+savecode.TextColor3 = Color3.fromRGB(255, 255, 255)
+savecode.TextSize = 14.000
+savecode.MouseButton1Click:Connect(function()
+setclipboard(""..code.Text)
 end)
 
 attach.Name = "attach"
@@ -256,5 +522,4 @@ _G.attach = true
 wait(0.5)
 bartop.Text = "NTT Explore - 1.10.60A"
 end
-
 end)
