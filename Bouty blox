@@ -190,8 +190,8 @@ if game.Players.LocalPlayer.Character.Humanoid.Health >= 5000 then
                game:GetService'Players'.LocalPlayer.Character.HumanoidRootPart.CFrame = target.HumanoidRootPart.CFrame
                        
                                    
-                                   if game.Players.LocalPlayer.Character.Humanoid.Health < 4000 then                                
-                   game:GetService'Players'.LocalPlayer.Character.HumanoidRootPart.CFrame = target.HumanoidRootPart.CFrame* CFrame.new(0, 10000, 0)
+                                   if game.Players.LocalPlayer.Character.Humanoid.Health < 3500 then                                
+                   Player.Character.HumanoidRootPart.CFrame = Player.Character.HumanoidRootPart.CFrame * CFrame.new(0,100,0)
                    end
                    
   for i,v in next, game:GetService('Players'):GetPlayers() do
@@ -446,3 +446,4 @@ if game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
                 end              
 end)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/trumpxl/superfastattack/main/ghevaysao"))()
