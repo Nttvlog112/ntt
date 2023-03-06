@@ -1,107 +1,197 @@
-
-
-
-local main = Instance.new("ScreenGui")
-local Frame = Instance.new("Frame")
-local up = Instance.new("TextButton")
-local down = Instance.new("TextButton")
-local onof = Instance.new("TextButton")
-local TextLabel = Instance.new("TextLabel")
-local plus = Instance.new("TextButton")
+local NTTGUI1 = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local bar = Instance.new("Frame")
+local mini = Instance.new("TextButton")
+local im1 = Instance.new("ImageLabel")
+local exit = Instance.new("TextButton")
+local im2 = Instance.new("ImageLabel")
+local max = Instance.new("TextButton")
+local im3 = Instance.new("ImageLabel")
+local bar1 = Instance.new("TextLabel")
+local namehub = Instance.new("TextLabel")
 local speed = Instance.new("TextLabel")
-local mine = Instance.new("TextButton")
+local onof = Instance.new("TextButton") --button fly
+local bar2 = Instance.new("TextLabel")
+local plus = Instance.new("TextButton") -- speed +
+local bar3 = Instance.new("TextLabel")
+local mine = Instance.new("TextButton") -- speed -
 
---Properties:
+local mainUI = Instance.new("UICorner")
+local bar1UI = Instance.new("UICorner")
+local mainUI = Instance.new("UICorner")
+local bar2UI = Instance.new("UICorner")
+local bar3UI = Instance.new("UICorner")
+local nameUI = Instance.new("UICorner")
+
+NTTGUI1.Name = "NTTGUI1"
+NTTGUI1.Parent = game.CoreGui
+NTTGUI1.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+bar.Name = "bar"
+bar.Parent = NTTGUI1 -- nằm trên khung ẩn
+bar.BackgroundColor3 = Color3.fromRGB(0, 0, 0) --màu khung
+bar.Position = UDim2.new(0.200126051, 0, 0.240999169, 0) -- vị trí đứng
+bar.Size = UDim2.new(0, 300, 0, 34) -- kích cở
+bar.BackgroundTransparency = 1.000
 
 main.Name = "main"
-main.Parent = game.CoreGui
-main.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+main.Parent = bar -- nằm trên khung ẩn
+main.BackgroundColor3 = Color3.fromRGB(0, 0, 0) --màu khung
+main.Position = UDim2.new(0, 0, 0, 0) -- vị trí đứng
+main.Size = UDim2.new(0, 300, 0, 150) -- kích cở
+mainUI.Parent = main
 
-Frame.Parent = main
-Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Frame.Position = UDim2.new(0.100320168, 0, 0.379746825, 0)
-Frame.Size = UDim2.new(0, 190, 0, 57)
-Frame.BackgroundTransparency = 1.000
+namehub.Name = "namehub"
+namehub.Parent = bar
+namehub.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+namehub.Position = UDim2.new(0, 0, 0, 0)
+namehub.Size = UDim2.new(0, 300, 0, 34)
+namehub.Font = Enum.Font.GothamBold
+namehub.Text = "   NTT | Fly"
+namehub.TextColor3 = Color3.fromRGB(255, 255, 255)
+namehub.TextSize = 12.000
+namehub.TextXAlignment = Enum.TextXAlignment.Left
+nameUI.Parent = namehub
 
---ẩn 
-up.Visible = false
-down.Visible = false
+mini.Name = "mini"
+mini.Parent = namehub
+mini.BackgroundColor3 = Color3.new(0.145098, 0.141176, 0.14902)
+mini.BorderSizePixel = 0
+mini.Position = UDim2.new(0.84000000, 0, 0.20000000, 0)
+mini.Size = UDim2.new(0, 19, 0, 19)
+mini.Font = Enum.Font.SourceSans
+mini.Text = ""
+mini.TextColor3 = Color3.new(0, 0, 0)
+mini.TextSize = 14
+mini.MouseButton1Down:connect(function()
+main.Visible = false
+max.Visible = true
+end)
 
-up.Name = "up"
-up.Parent = Frame
-up.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
-up.Size = UDim2.new(0, 44, 0, 28)
-up.Font = Enum.Font.SourceSans
-up.Text = "up"
-up.TextColor3 = Color3.fromRGB(0, 0, 0)
-up.TextSize = 14.000
+im1.Parent = mini
+im1.BackgroundColor3 = Color3.new(1, 1, 1)
+im1.BackgroundTransparency = 1
+im1.Position = UDim2.new(0, 5, 0, 5)
+im1.Size = UDim2.new(0, 9, 0, 9)
+im1.Image = "http://www.roblox.com/asset/?id=5597105827"
 
-down.Name = "down"
-down.Parent = Frame
-down.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
-down.Position = UDim2.new(0, 0, 0.491228074, 0)
-down.Size = UDim2.new(0, 44, 0, 28)
-down.Font = Enum.Font.SourceSans
-down.Text = "DOWN"
-down.TextColor3 = Color3.fromRGB(0, 0, 0)
-down.TextSize = 14.000
+max.Name = "max"
+max.Parent = namehub
+max.BackgroundColor3 = Color3.new(0.145098, 0.141176, 0.14902)
+max.BorderSizePixel = 0
+max.Position = UDim2.new(0.84000000, 0, 0.20000000, 0)
+max.Size = UDim2.new(0, 19, 0, 19)
+max.Font = Enum.Font.SourceSans
+max.Text = ""
+max.TextColor3 = Color3.new(0, 0, 0)
+max.TextSize = 14
+max.MouseButton1Down:connect(function()
+main.Visible = true
+max.Visible = false
+end)
 
-onof.Name = "onof"
-onof.Parent = Frame
-onof.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-onof.Position = UDim2.new(0.702823281, 0, 0.491228074, 0)
-onof.Size = UDim2.new(0, 56, 0, 28)
-onof.Font = Enum.Font.SourceSans
-onof.Text = "Fly"
-onof.TextColor3 = Color3.fromRGB(250, 250, 250)
-onof.TextSize = 16.000
+im3.Parent = max
+im3.BackgroundColor3 = Color3.new(1, 1, 1)
+im3.BackgroundTransparency = 1
+im3.Position = UDim2.new(0, 5, 0, 5)
+im3.Size = UDim2.new(0, 9, 0, 9)
+im3.Image = "http://www.roblox.com/asset/?id=5597108117"
 
-TextLabel.Parent = Frame
-TextLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.Position = UDim2.new(0.469327301, 0, 0, 0)
-TextLabel.Size = UDim2.new(0, 100, 0, 28)
-TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "NTT HUB"
-TextLabel.TextColor3 = Color3.fromRGB(250, 250, 250)
-TextLabel.TextScaled = true
-TextLabel.TextSize = 14.000
-TextLabel.TextWrapped = true
+exit.Name = "exit"
+exit.Parent = namehub
+exit.BackgroundColor3 = Color3.new(0.145098, 0.141176, 0.14902)
+exit.BorderSizePixel = 0
+exit.Position = UDim2.new(0.91000000, 0, 0.20000000, 0)
+exit.Size = UDim2.new(0, 19, 0, 19)
+exit.Font = Enum.Font.SourceSans
+exit.Text = ""
+exit.TextColor3 = Color3.new(0, 0, 0)
+exit.TextSize = 14
+exit.MouseButton1Down:connect(function()
+bar.Visible = false
+end)
 
-plus.Name = "plus"
-plus.Parent = Frame
-plus.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-plus.Position = UDim2.new(0.231578946, 0, 0, 0)
-plus.Size = UDim2.new(0, 45, 0, 28)
-plus.Font = Enum.Font.SourceSans
-plus.Text = "+"
-plus.TextColor3 = Color3.fromRGB(250, 250, 250)
-plus.TextScaled = true
-plus.TextSize = 14.000
-plus.TextWrapped = true
+im2.Parent = exit
+im2.BackgroundColor3 = Color3.new(1, 1, 1)
+im2.BackgroundTransparency = 1
+im2.Position = UDim2.new(0, 5, 0, 5)
+im2.Size = UDim2.new(0, 9, 0, 9)
+im2.Image = "http://www.roblox.com/asset/?id=5597086202"
+
+bar1.Name = "bar1"
+bar1.Parent = main -- nằm trên khung ẩn
+bar1.BackgroundColor3 = Color3.fromRGB(20, 20, 20) --màu khung
+bar1.Position = UDim2.new(0.00000000, 0, 0.230000000, 0) -- vị trí đứng
+bar1.Size = UDim2.new(0, 300, 0, 34) -- kích cở
+bar1.Text = "   Fly | Speed : "
+bar1.TextColor3 = Color3.fromRGB(255, 255, 255)
+bar1.TextXAlignment = Enum.TextXAlignment.Left
+bar1UI.Parent = bar1
 
 speed.Name = "speed"
-speed.Parent = Frame
-speed.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-speed.Position = UDim2.new(0.468421042, 0, 0.491228074, 0)
-speed.Size = UDim2.new(0, 44, 0, 28)
-speed.Font = Enum.Font.SourceSans
+speed.Parent = main -- nằm trên khung ẩn
+speed.BackgroundColor3 = Color3.fromRGB(20, 20, 20) --màu khung
+speed.Position = UDim2.new(0.00000000, 0, 0.230000000, 0) -- vị trí đứng
+speed.BackgroundTransparency = 1.000
+speed.Size = UDim2.new(0, 160, 0, 34) -- kích cở
 speed.Text = "1"
-speed.TextColor3 = Color3.fromRGB(250, 250, 250)
-speed.TextScaled = true
-speed.TextSize = 14.000
-speed.TextWrapped = true
+speed.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+onof.Name = "onof"
+onof.Parent = bar1
+onof.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+onof.Position = UDim2.new(0.85000000, 0, 0.22000000, 0)
+onof.Size = UDim2.new(0, 30, 0, 15)
+onof.Font = Enum.Font.GothamBold
+onof.BorderColor3 = Color3.fromRGB(20,20,20)
+onof.Text = "Fly"
+onof.TextColor3 = Color3.fromRGB(255, 255, 255)
+onof.TextSize = 12.000
+
+
+bar2.Name = "bar2"
+bar2.Parent = main -- nằm trên khung ẩn
+bar2.BackgroundColor3 = Color3.fromRGB(20, 20, 20) --màu khung
+bar2.Position = UDim2.new(0.00000000, 0, 0.460000000, 0) -- vị trí đứng
+bar2.Size = UDim2.new(0, 300, 0, 34) -- kích cở
+bar2.TextColor3 = Color3.fromRGB(255, 255, 255)
+bar2.Text = "   Speed : +"
+bar2.TextXAlignment = Enum.TextXAlignment.Left
+bar2UI.Parent = bar2
+
+plus.Name = "plus"
+plus.Parent = bar2
+plus.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+plus.Position = UDim2.new(0.85000000, 0, 0.22000000, 0)
+plus.Size = UDim2.new(0, 30, 0, 15)
+plus.Font = Enum.Font.GothamBold
+plus.BorderColor3 = Color3.fromRGB(20,20,20)
+plus.Text = "+"
+plus.TextColor3 = Color3.fromRGB(255, 255, 255)
+plus.TextSize = 12.000
+
+bar3.Name = "bar3"
+bar3.Parent = main -- nằm trên khung ẩn
+bar3.BackgroundColor3 = Color3.fromRGB(20, 20, 20) --màu khung
+bar3.Position = UDim2.new(0.00000000, 0, 0.690000000, 0) -- vị trí đứng
+bar3.Size = UDim2.new(0, 300, 0, 34) -- kích cở
+bar3.TextColor3 = Color3.fromRGB(255, 255, 255)
+bar3.Text = "   Speed : -"
+bar3.TextXAlignment = Enum.TextXAlignment.Left
+bar3UI.Parent = bar3
 
 mine.Name = "mine"
-mine.Parent = Frame
-mine.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-mine.Position = UDim2.new(0.231578946, 0, 0.491228074, 0)
-mine.Size = UDim2.new(0, 45, 0, 29)
-mine.Font = Enum.Font.SourceSans
+mine.Parent = bar3
+mine.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+mine.Position = UDim2.new(0.85000000, 0, 0.22000000, 0)
+mine.Size = UDim2.new(0, 30, 0, 15)
+mine.Font = Enum.Font.GothamBold
+mine.BorderColor3 = Color3.fromRGB(20,20,20)
 mine.Text = "-"
-mine.TextColor3 = Color3.fromRGB(250, 250, 250)
-mine.TextScaled = true
-mine.TextSize = 14.000
-mine.TextWrapped = true
+mine.TextColor3 = Color3.fromRGB(255, 255, 255)
+mine.TextSize = 12.000
+
+max.Visible = false
 
 speeds = 1
 
@@ -112,8 +202,10 @@ local hum = chr and chr:FindFirstChildWhichIsA("Humanoid")
 
 nowe = false
 
-Frame.Active = true -- main = gui
-Frame.Draggable = true
+bar.Active = true -- main = gui
+bar.Draggable = true
+
+
 
 onof.MouseButton1Down:connect(function()
 
@@ -242,28 +334,7 @@ onof.MouseButton1Down:connect(function()
 		tpwalking = false
 
 
-
-	
-
-
-
-
-
 end)
-
-
-up.MouseButton1Down:connect(function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,2,0)
-	
-end)
-
-
-down.MouseButton1Down:connect(function()
-
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-2,0)
-
-end)
-
 
 game:GetService("Players").LocalPlayer.CharacterAdded:Connect(function(char)
 	wait(0.7)
