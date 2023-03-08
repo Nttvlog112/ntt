@@ -1,3 +1,4 @@
+
 local NTTGUI = Instance.new("ScreenGui")
 local main = Instance.new("Frame")
 local bartop = Instance.new("TextLabel")
@@ -478,8 +479,9 @@ rtx()
 end
 --bounty
 if code.Text == "loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/4')))()" then
+if _G.buyscript then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Nttvlog112/ntt/main/Bouty%20blox"))()
-end
+end end
 if code.Text == "loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Loader20NTT201')))()" then
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Loader%20NTT%201')))()
 end
@@ -524,6 +526,15 @@ attach.Text = "Attach"
 attach.TextColor3 = Color3.fromRGB(255, 255, 255)
 attach.TextSize = 14.000
 attach.MouseButton1Click:Connect(function()
+
+if _G.buyscript == false then
+bartop.Text = "NTT Explore - 1.10.60A (You Dont Buy Script Cant Attach!)"
+wait(0.8)
+bartop.Text = "NTT Explore - 1.10.60A"
+end
+
+if _G.buyscript == true then
+
 if _G.attach == true then
 bartop.Text = "NTT Explore - 1.10.60A (Already Injected!)"
 wait(0.8)
@@ -541,5 +552,15 @@ bartop.Text = "NTT Explore - 1.10.60A (Ready!)"
 _G.attach = true
 wait(0.5)
 bartop.Text = "NTT Explore - 1.10.60A"
+
 end
+end
+
 end)
+
+--check buy
+
+for i,v in pairs(game.Players:GetChildren()) do
+if v.Name ~= "TAT_chanol" then 
+_G.buyscript = true
+end end
