@@ -1,0 +1,5 @@
+if game.Players.localPlayer.Name ~= "remudadahr" then
+_G.buyscript = true
+elseif game.Players.localPlayer.Name ~= "TAT_chanol" then
+_G.buyscript = true
+end
