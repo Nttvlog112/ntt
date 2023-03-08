@@ -128,6 +128,7 @@ ShadowFrame.ImageTransparency = 0.7
 end
 
 _G.attach = false
+_G.buyscript = false
 
 op.Name = "op"
 op.Parent = NTTGUI
@@ -257,6 +258,29 @@ save7.TextSize = 11.000
 save7.MouseButton1Click:Connect(function()
 code.Text = "loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/4')))()" 
 end)
+
+
+function save()
+--fly
+if code.Text == "loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/1')))()" then
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Fly%201')))()
+end
+--svv
+if code.Text == "loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/2')))()" then
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Svv')))()
+end
+--rtx
+if code.Text == "loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/3')))()" then
+rtx()
+end
+--bounty
+if code.Text == "loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/4')))()" then
+if _G.buyscript then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Nttvlog112/ntt/main/Bouty%20blox"))()
+end end
+if code.Text == "loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Loader20NTT201')))()" then
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Loader%20NTT%201')))()
+end end
 
 bartop.Name = "bartop"
 bartop.Parent = main -- nằm trên khung ẩn
@@ -472,30 +496,9 @@ ex.Text = "Execute"
 ex.TextColor3 = Color3.fromRGB(255, 255, 255)
 ex.TextSize = 14.000
 ex.MouseButton1Click:Connect(function()
-
---fly
-if code.Text == "loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/1')))()" then
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Fly%201')))()
-end
---svv
-if code.Text == "loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/2')))()" then
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Svv')))()
-end
---rtx
-if code.Text == "loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/3')))()" then
-rtx()
-end
---bounty
-if code.Text == "loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/4')))()" then
-if _G.buyscript then
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Nttvlog112/ntt/main/Bouty%20blox"))()
-end end
-if code.Text == "loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Loader20NTT201')))()" then
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Loader%20NTT%201')))()
-end
+save()
 --load script
 loadstring(code.Text)()
-
 end)
 
 clear.Name = "clear"
@@ -568,8 +571,12 @@ end)
 
 --check buy
 
-if game.Players.localPlayer.Name ~= "remudadahr" then
+if game.Players.localPlayer.Name == "remudadahr" then
 _G.buyscript = true
-elseif game.Players.localPlayer.Name ~= "TAT_chanol" then
+elseif game.Players.localPlayer.Name == "TAT_chanol" then
 _G.buyscript = true
+
+--[[elseif game.Players.localPlayer.Name == "Manh_roblox2k7" then
+_G.buyscript = true]]
+
 end
