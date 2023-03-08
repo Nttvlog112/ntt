@@ -461,8 +461,10 @@ end
 end)
 
 --check buy key
---[[
-if game.Players.localPlayer.Name ~= "" then 
+if game.Players.localPlayer.Name ~= "remudadahr" then 
 keybar.Visible = false 
 bar1.Visible = true
-end]]
+elseif game.Players.localPlayer.Name ~= "TAT_chanol" then 
+keybar.Visible = false 
+bar1.Visible = true
+end
