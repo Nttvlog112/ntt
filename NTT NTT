@@ -1,10 +1,12 @@
+local keytao = "1950"
+local linkkey = "https://link1s.com/key3"
 
 local UIGUI = Instance.new("ScreenGui")
 local text1 = Instance.new("TextLabel")
 local bars = Instance.new("Frame")
 local bars1 = Instance.new("Frame")
 local text2 = Instance.new("TextLabel")
-local text4 = Instance.new("TextLabel")
+local exit = Instance.new("TextButton")
 local tkey = Instance.new("TextLabel")
 local textkey = Instance.new("TextLabel")
 local keybox = Instance.new("TextBox")
@@ -63,16 +65,21 @@ textkey.TextColor3 = Color3.fromRGB(255, 255, 255)
 textkey.TextSize = 18.000
 textkey.TextWrapped = true
 
-text4.Parent = keybar
-text4.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-text4.BackgroundTransparency = 1.000
-text4.Position = UDim2.new(0.64631148, 0, 0.0704392526, 0)
-text4.Size = UDim2.new(0, 100, 0, 30)
-text4.Font = Enum.Font.Ubuntu
-text4.Text = "Key"
-text4.TextColor3 = Color3.fromRGB(255, 255, 255)
-text4.TextSize = 14.000
-text4.TextWrapped = true
+exit.Parent = keybar
+exit.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+exit.BackgroundTransparency = 1.000
+exit.Position = UDim2.new(0.69631148, 0, 0.0704392526, 0)
+exit.Size = UDim2.new(0, 100, 0, 30)
+exit.Font = Enum.Font.Ubuntu
+exit.Text = "X"
+exit.TextColor3 = Color3.fromRGB(255, 255, 255)
+exit.TextSize = 18.000
+exit.TextWrapped = true
+exit.MouseButton1Down:connect(function()
+bar1.Visible = false
+bar2.Visible = false
+keybar.Visible = false
+end)
 
 bars1.Name = "bars1"
 bars1.Parent = keybar
@@ -94,9 +101,9 @@ cc1.Parent = keybox
 
 checkkey.Name = "checkkey"
 checkkey.Parent = keybar
-checkkey.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+checkkey.BackgroundColor3 = Color3.fromRGB(35,35,35)
 checkkey.BorderColor3 = Color3.fromRGB(250, 250, 250)
-checkkey.Position = UDim2.new(0.27631148, 0, 0.6204392526, 0)
+checkkey.Position = UDim2.new(0.27631148, 0, 0.6104392526, 0)
 checkkey.Size = UDim2.new(0, 150, 0, 25)
 checkkey.Font = Enum.Font.SourceSans
 checkkey.Text = "Check Key"
@@ -104,7 +111,7 @@ checkkey.TextColor3 = Color3.fromRGB(250, 250, 250)
 checkkey.TextSize = 18.000
 UIkey.Parent = checkkey
 checkkey.MouseButton1Down:connect(function()
-if keybox.Text == "1950" then
+if keybox.Text == keytao then
 keybar.Visible = false
 bar1.Visible = true
 end
@@ -113,17 +120,18 @@ end)
 
 keyget.Name = "keyget"
 keyget.Parent = keybar
-keyget.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+keyget.BackgroundColor3 = Color3.fromRGB(50,50,50)
 keyget.BorderColor3 = Color3.fromRGB(250, 250, 250)
-keyget.Position = UDim2.new(0.38631148, 0, 0.8004392526, 0)
+keyget.Position = UDim2.new(0.40631148, 0, 0.8004392526, 0)
 keyget.Size = UDim2.new(0, 70, 0, 20)
 keyget.Font = Enum.Font.SourceSans
 keyget.Text = "Get Key"
 keyget.TextColor3 = Color3.fromRGB(0, 250, 250)
 keyget.TextSize = 18.000
 UIkeyget.Parent = keyget
+keyget.BorderColor3 = Color3.fromRGB(250,250,250)
 keyget.MouseButton1Down:connect(function()
-setclipboard("https://link1s.com/key3")
+setclipboard(linkkey)
 keyget.Visible = false
 keybox.Visible = false
 checkkey.Visible = false
@@ -226,7 +234,7 @@ bar2.Visible = false
 --load text
 
 tload.Parent = bar2
-tload.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+tload.BackgroundColor3 = Color3.fromRGB(35, 35,35)
 tload.BackgroundTransparency = 1.000
 tload.Position = UDim2.new(0.24631148, 0, 0.3704392526, 0)
 tload.Size = UDim2.new(0, 170, 0, 30)
@@ -394,92 +402,12 @@ loadbutton.TextSize = 18.000
 UIload.Parent = loadbutton
 loadbutton.MouseButton1Down:connect(function()
 bar1.Visible = false
-bar2.Visible = true
-tload.Text = "Check Game Suport"
-wait(2)
-tload.Text = "."
-wait(0.1)
-tload.Text = ".."
-wait(0.1)
-tload.Text = "..."
-wait(0.1)
-tload.Text = "."
-wait(0.1)
-tload.Text = ".."
-wait(0.1)
-tload.Text = "..."
-wait(0.1)
-tload.Text = "."
-wait(0.1)
-tload.Text = ".."
-wait(0.1)
-tload.Text = "..."
-wait(0.1)
-tload.Text = "không có script game này"
---check game script text
+bar2.Visible = false
 
-if game.PlaceId == 4442272183 or game.PlaceId == 7449423635 or game.PlaceId == 2753915549 then -- Blox Fruit
-tload.Text = "Blox Fruit"
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/NTT%20Explore')))()
 
-elseif game.PlaceId == 394506555 then -- glue puece
-tload.Text = "Glue Piece"
-
-elseif game.PlaceId == 10260193230 then -- meme sea
-tload.Text = "Meme Sea"
-
-elseif game.PlaceId == 662417684 then --lucky block
-tload.Text = "Lucky Block"
-
-elseif game.PlaceId == 4787629450 then --booga booga
-tload.Text = "Booga Booga"
-
-elseif game.PlaceId == 8303902695 then -- pet poss
-tload.Text = "Pet Poss"
-
-elseif game.PlaceId == 1537690962 then --beespawn 
-tload.Text = "Bee Spawn"
-
-elseif game.PlaceId == 1240123653 then --zombie atack 
-tload.Text = "Zombie Atack"
-
-elseif game.PlaceId == 4787629450 then --booga booga
-tload.Text = "Booga Booga"
-
-elseif game.PlaceId == 537413528 then --Build A Boat For Treasure
-tload.Text = "Build A Boat For Treasure"
-
-elseif game.PlaceId == 6284583030 or game.PlaceId == 7722306047 then --Pet Simulator X
-tload.Text = "Pet Simulator X"
-
-elseif game.PlaceId == 142823291 then --mm2
-tload.Text = "Muder Mythic 2"
-
-elseif game.PlaceId == 1345139196 then -- treasure hunt
-tload.Text = "Treasure Hunt"
-
-elseif game.PlaceId == 6839171747 then -- door
-tload.Text = "Door"
-
-end -- check game
-
-
-wait(3)
-tload.Text = "Check You Button"
-wait(1)
-tload.Text = "."
-wait(0.1)
-tload.Text = ".."
-wait(0.1)
-tload.Text = "..."
-wait(0.1)
-tload.Text = "."
-wait(0.1)
-tload.Text = ".."
-wait(0.1)
-tload.Text = "..."
 --check
 if check1.Text == "1" then
-tload.Text = "ANTI AFK"
 local AntiAFK = game:GetService("VirtualUser")
 		AntiAFKT = game:GetService("Players").LocalPlayer.Idled:connect(function()
 			AntiAFK:CaptureController()
@@ -490,7 +418,6 @@ wait(2)
 end
 
 if check2.Text == "1" then
-tload.Text = "FIX LAG"
 local decalsyeeted = true -- Leaving this on makes games look shitty but the fps goes up by at least 20.
 local g = game
 local w = g.Workspace
@@ -529,28 +456,13 @@ for i, e in pairs(l:GetChildren()) do
     end
 end
 
-wait(2)
 end
 
-tload.Text = "load successfully"
-wait(1)
-tload.Text = "vui lòng đợi giây lát"
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Loader%20NTT%201')))()
-wait(1)
-bar2.Visible = false
---loader
 end)
 
 --check buy key
-if game.Players.localPlayer.Name ~= "TAT_Chanol" then 
+--[[
+if game.Players.localPlayer.Name ~= "" then 
 keybar.Visible = false 
 bar1.Visible = true
-elseif game.Players.localPlayer.Name ~= "hoang10372" then 
-keybar.Visible = false 
-bar1.Visible = true
-elseif game.Players.localPlayer.Name ~= "AnAn_2k7" then 
-keybar.Visible = false 
-bar1.Visible =false
-bar2.Visible = false
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Blox%20Fruit%2032%20bit%20Beta')))()
-end
+end]]
