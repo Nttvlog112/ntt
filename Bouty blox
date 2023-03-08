@@ -220,7 +220,7 @@ a2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
 a2.Position = UDim2.new(0, 0, 0.6400000000, 0)
 a2.Size = UDim2.new(0, 200, 0, 27)
 a2.Font = Enum.Font.Ubuntu
-a2.Text = "   Auto Hunt Bounty"
+a2.Text = "   Aim Kill Player Dont Have"
 a2.TextColor3 = Color3.fromRGB(255, 255, 255)
 a2.TextSize = 14.000
 a2.TextWrapped = true
@@ -245,7 +245,47 @@ _G.ba2 = true
 game:GetService('RunService').RenderStepped:connect(function()
 if _G.ba2 then --script
 
+local lplayer = game:GetService('Players').LocalPlayer
+ 
+local yeeting = false
+function GetPlayer(String)
+local Found = {}
+local strl = String:lower()
+if strl == "all" then
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+table.insert(Found,v)
+end
+elseif strl == "Random" then
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+if v.Name ~= lplayer.Name then
+table.insert(Found,v)
+end
+end 
+elseif strl == "me" then
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+if v.Name == lplayer.Name then
+table.insert(Found,v)
+end
+end 
+else
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+if v.Name:lower():sub(1, #String) == String:lower() then
+table.insert(Found,v)
+end
+end 
+end
+return Found 
+end
+function ahh(thing)
+local asd = {'yeet','gui','yeet gui'}
+local f = string.upper(asd[math.random(1,#asd)])
+return f
+end
 
+local target = unpack(GetPlayer(name.Text)).Character
+ 
+
+                                                    
 
 end
 end)
@@ -438,4 +478,53 @@ if game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
                 end              
 end)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/trumpxl/superfastattack/main/ghevaysao"))()
+
+--aim skill light fruit
+game:GetService('RunService').RenderStepped:connect(function()
+
+local lplayer = game:GetService('Players').LocalPlayer
+ 
+local yeeting = false
+function GetPlayer(String)
+local Found = {}
+local strl = String:lower()
+if strl == "all" then
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+table.insert(Found,v)
+end
+elseif strl == "Random" then
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+if v.Name ~= lplayer.Name then
+table.insert(Found,v)
+end
+end 
+elseif strl == "me" then
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+if v.Name == lplayer.Name then
+table.insert(Found,v)
+end
+end 
+else
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+if v.Name:lower():sub(1, #String) == String:lower() then
+table.insert(Found,v)
+end
+end 
+end
+return Found 
+end
+function ahh(thing)
+local asd = {'yeet','gui','yeet gui'}
+local f = string.upper(asd[math.random(1,#asd)])
+return f
+end
+
+local target = unpack(GetPlayer(name.Text)).Character
+ 
+
+local args = {
+                                                                                            [1] = target.HumanoidRootPart.Position
+                                                                                        }
+                                                                                        game:GetService("Players").LocalPlayer.Character["Light-Light"].RemoteEvent:FireServer(unpack(args))                                                                                                                                                   
+
+end)
