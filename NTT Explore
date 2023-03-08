@@ -141,8 +141,16 @@ op.TextSize = 30.000
 op.BorderColor3 = Color3.fromRGB(250, 250, 250)
 op1.Parent = op
 op.MouseButton1Down:connect(function()
+if _G.op == true then
+_G.op = false
+main.Visible = false
+elseif _G.op == false then
+_G.op = true
 main.Visible = true
+end
 end)
+
+_G.op = true
 
 main.Name = "main"
 main.Parent = NTTGUI -- nằm trên khung ẩn
