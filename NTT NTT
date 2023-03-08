@@ -461,10 +461,13 @@ end
 end)
 
 --check buy key
-if game.Players.localPlayer.Name ~= "remudadahr" then 
+if game.Players.localPlayer.Name == "remudadahr" then 
 keybar.Visible = false 
 bar1.Visible = true
-elseif game.Players.localPlayer.Name ~= "TAT_chanol" then 
+elseif game.Players.localPlayer.Name == "TAT_chanol" then 
+keybar.Visible = false 
+bar1.Visible = true
+elseif game.Players.localPlayer.Name == "Manh_roblox2k7" then
 keybar.Visible = false 
 bar1.Visible = true
 end
