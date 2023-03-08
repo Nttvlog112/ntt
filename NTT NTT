@@ -1,6 +1,9 @@
 local keytao = "1950"
 local linkkey = "https://link1s.com/key3"
 
+_G.buyscript = false
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Buy%20script%20NTT')))()
+
 local UIGUI = Instance.new("ScreenGui")
 local text1 = Instance.new("TextLabel")
 local bars = Instance.new("Frame")
@@ -461,13 +464,7 @@ end
 end)
 
 --check buy key
-if game.Players.localPlayer.Name == "remudadahr" then 
-keybar.Visible = false 
-bar1.Visible = true
-elseif game.Players.localPlayer.Name == "TAT_chanol" then 
-keybar.Visible = false 
-bar1.Visible = true
-elseif game.Players.localPlayer.Name == "Manh_roblox2k7" then
+if _G.buyscript then 
 keybar.Visible = false 
 bar1.Visible = true
 end
