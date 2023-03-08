@@ -128,7 +128,6 @@ ShadowFrame.ImageTransparency = 0.7
 end
 
 _G.attach = false
-_G.buyscript = false
 
 op.Name = "op"
 op.Parent = NTTGUI
@@ -156,7 +155,7 @@ _G.op = true
 main.Name = "main"
 main.Parent = NTTGUI -- nằm trên khung ẩn
 main.BackgroundColor3 = Color3.fromRGB(0, 0, 0) --màu khung
-main.Position = UDim2.new(0.180126051, 0, 0.180999169, 0) -- vị trí đứng
+main.Position = UDim2.new(0.180126051, 0, 0.100999169, 0) -- vị trí đứng
 main.Size = UDim2.new(0, 640, 0, 280) -- kích cở
 main.Visible = true
 
@@ -568,15 +567,3 @@ end
 end
 
 end)
-
---check buy
-
-if game.Players.localPlayer.Name == "remudadahr" then
-_G.buyscript = true
-elseif game.Players.localPlayer.Name == "TAT_chanol" then
-_G.buyscript = true
-
---[[elseif game.Players.localPlayer.Name == "Manh_roblox2k7" then
-_G.buyscript = true]]
-
-end
