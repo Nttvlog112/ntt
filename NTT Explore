@@ -242,7 +242,7 @@ save7.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 save7.Position = UDim2.new(0.34200000, 0, 0, 0)
 save7.Size = UDim2.new(0, 80, 0, 20)
 save7.Font = Enum.Font.Arial
-save7.Text = "SMZ HUB"
+save7.Text = "Hunt Bounty"
 save7.TextColor3 = Color3.fromRGB(255, 255, 255)
 save7.TextSize = 11.000
 save7.MouseButton1Click:Connect(function()
@@ -476,8 +476,9 @@ end
 if code.Text == "loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/3')))()" then
 rtx()
 end
+--bounty
 if code.Text == "loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/4')))()" then
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Frerfgzz/free-script/main/SMZHUBv2BETA"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Nttvlog112/ntt/main/Bouty%20blox"))()
 end
 if code.Text == "loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Loader20NTT201')))()" then
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Loader%20NTT%201')))()
