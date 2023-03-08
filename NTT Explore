@@ -560,7 +560,8 @@ end)
 
 --check buy
 
-for i,v in pairs(game.Players:GetChildren()) do
-if v.Name ~= "TAT_chanol" then 
+if game.Players.localPlayer.Name ~= "remudadahr" then
 _G.buyscript = true
-end end
+elseif game.Players.localPlayer.Name ~= "TAT_chanol" then
+_G.buyscript = true
+end
