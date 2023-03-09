@@ -273,8 +273,8 @@ if code.Text == "loadstring(game:HttpGet(('https://raw.githubusercontent.com/Ntt
 rtx()
 end
 --bounty
-if code.Text == "loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/4')))()" then
 if _G.buyscript then
+if code.Text == "loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/4')))()" then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Nttvlog112/ntt/main/Bouty%20blox"))()
 end end
 if code.Text == "loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Loader20NTT201')))()" then
