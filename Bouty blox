@@ -479,7 +479,11 @@ if game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
                 end              
 end)
 
+
+
+
 --aim skill light fruit
+function aimskill()
 game:GetService('RunService').RenderStepped:connect(function()
 
 local lplayer = game:GetService('Players').LocalPlayer
@@ -527,4 +531,15 @@ local args = {
                                                                                         }
                                                                                         game:GetService("Players").LocalPlayer.Character["Light-Light"].RemoteEvent:FireServer(unpack(args))                                                                                                                                                   
 
-end)
+end) end
+
+aimskill()
+aimskill()
+aimskill()
+aimskill()
+aimskiil()
+aimskill()
+aimskill()
+aimskill()
+aimskill()
+aimskiil()
