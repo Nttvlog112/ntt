@@ -1,5 +1,5 @@
-local keytao = "1950"
-local linkkey = "https://link1s.com/key3"
+local keytao = "2020"
+local linkkey = "đéo có"
 
 _G.buyscript = false
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Buy%20script%20NTT')))()
