@@ -1,1 +1,1 @@
-_G.NTT = true _G.NTT1 = false _G.NTT2 = true _G.key = 'https://raw.githubusercontent.com/Nttvlog112/ntt/main/MH%20SCRIPT%20NT'  _G.load = loadstring(game:HttpGet((_G.key)))()  if _G.NTT then if _G.NTT1 == false then if _G.NTT2 then loadstring(_G.load)() end end end  
+_G.NTT = false _G.NTT1 = false _G.NTT2 = true _G.key = 'https://raw.githubusercontent.com/Nttvlog112/ntt/main/MH%20SCRIPT%20NT'  _G.load = loadstring(game:HttpGet((_G.key)))()  if _G.NTT then if _G.NTT1 == false then if _G.NTT2 then loadstring(_G.load)() end end end  
