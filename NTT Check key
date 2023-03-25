@@ -409,7 +409,7 @@ loadbutton.MouseButton1Down:connect(function()
 bar1.Visible = false
 bar2.Visible = false
 
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/NTT%20Explore')))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Loader%20NTT%201')))()
 
 --check
 if check1.Text == "1" then
@@ -484,7 +484,6 @@ _G.buyscript = true
 elseif keybuy.Text == "thaitructt6" then
 G.buyscript = true
 end
-
 
 
 --check buy key
