@@ -1295,7 +1295,7 @@ _G.bring1 = false
 for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
       if v.Name == "Ship Deckhand [Lv. 1250]" then --name mob
       local CFramebring = CFrame.new(1220.455810546875, 126.04237365722656, 33080.3125) or  CFrame.new(620.1790771484375, 126.0723876953125, 33022.390625)
-if (v.HumanoidRootPart.Position - CFramebring.Position).Magnitude <= 250 then
+if (v.HumanoidRootPart.Position - CFramebring.Position).Magnitude <= 300 then
 sethiddenproperty(game:GetService("Players").LocalPlayer,"SimulationRadius",math.huge)
 v.HumanoidRootPart.CFrame =  CFramebring
 v.Humanoid:ChangeState(14)
@@ -1306,11 +1306,11 @@ if v.Humanoid:FindFirstChild("Animator") then
                             v.Humanoid.Animator:Destroy()
                         end
                         sethiddenproperty(game:GetService("Players").LocalPlayer,"SimulationRadius",math.huge)                    
-                        end end 
+                        end end end
       for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
       if v.Name == "Ship Engineer [Lv. 1275]"  then --name mob
       local CFramebring = CFrame.new(930.0367431640625, 125.52970123291016, 33432.359375)
-if (v.HumanoidRootPart.Position - CFramebring.Position).Magnitude <= 250 then
+if (v.HumanoidRootPart.Position - CFramebring.Position).Magnitude <= 300 then
 sethiddenproperty(game:GetService("Players").LocalPlayer,"SimulationRadius",math.huge)
 v.HumanoidRootPart.CFrame =  CFramebring
 v.Humanoid:ChangeState(14)
@@ -1321,11 +1321,11 @@ if v.Humanoid:FindFirstChild("Animator") then
                             v.Humanoid.Animator:Destroy()
                         end
                         sethiddenproperty(game:GetService("Players").LocalPlayer,"SimulationRadius",math.huge)                    
-                        end end    
+                        end end    end
 for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
-      if v.Name == " "Ship Steward [Lv. 1300]" then --name mob
+      if v.Name == "Ship Steward [Lv. 1300]" then --name mob
       local CFramebring = CFrame.new(968.4664306640625, 40.78610610961914, 32981.1015625)
-if (v.HumanoidRootPart.Position - CFramebring.Position).Magnitude <= 250 then
+if (v.HumanoidRootPart.Position - CFramebring.Position).Magnitude <= 300 then
 sethiddenproperty(game:GetService("Players").LocalPlayer,"SimulationRadius",math.huge)
 v.HumanoidRootPart.CFrame =  CFramebring
 v.Humanoid:ChangeState(14)
@@ -1336,8 +1336,8 @@ if v.Humanoid:FindFirstChild("Animator") then
                             v.Humanoid.Animator:Destroy()
                         end
                         sethiddenproperty(game:GetService("Players").LocalPlayer,"SimulationRadius",math.huge)                    
-                        end end             
-end end end end wait(4) _G.bring2 = true end)    
+                        end end        end     
+ end end end wait(4) _G.bring2 = true end)    
 
                  
 m_f6.Parent = b_page1
