@@ -478,7 +478,12 @@ keybuy.TextWrapped = true
 keybuy.TextXAlignment = Enum.TextXAlignment.Left
 keybuy.Visible = false
 keybuy.Text = (""..game.Players.localPlayer.Name)
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Buy%20script%20NTT')))()
+
+if keybuy.Text == "TAT_chanol" then
+_G.buyscript = true
+elseif keybuy.Text == "thaitructt6" then
+G.buyscript = true
+end
 
 
 
