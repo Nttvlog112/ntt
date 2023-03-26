@@ -44,6 +44,22 @@ m_f5 = Instance.new("TextLabel")
 m_b5 = Instance.new("TextButton")
 m_f6 = Instance.new("TextLabel")
 m_b6 = Instance.new("TextButton")
+m_f7 = Instance.new("TextLabel")
+m_b7 = Instance.new("TextButton")
+m_f8 = Instance.new("TextLabel")
+m_b8 = Instance.new("TextButton")
+
+s_cp = Instance.new("TextLabel")
+s_f1 = Instance.new("TextLabel")
+s_b1 = Instance.new("TextButton")
+s_f2 = Instance.new("TextLabel")
+s_b2 = Instance.new("TextButton")
+s_f3 = Instance.new("TextLabel")
+s_b3 = Instance.new("TextButton")
+s_f4 = Instance.new("TextLabel")
+s_b4 = Instance.new("TextButton")
+s_f5 = Instance.new("TextLabel")
+s_b5 = Instance.new("TextButton")
 
 
 --------------------------------------------------------------------------
@@ -842,7 +858,7 @@ end
 _G.FastAttack = true --on
     
 
---farm
+-- // [ Frame ]
 m_f1.Parent = b_page1
 m_f1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
 m_f1.Position = UDim2.new(0, 0, 0.0300000000, 0)
@@ -1177,10 +1193,10 @@ end)
 _G.chest = true
 game:GetService('RunService').RenderStepped:connect(function()
 if _G.m_b4 then --script
-if _G.chest then
-_G.chest = false
 local humanoid = game.Players.LocalPlayer.Character.Humanoid 
 humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
+if _G.chest then
+_G.chest = false
 for i,v in pairs(game.Workspace:GetDescendants()) do
 if v.Name == "Chest1" or v.Name == "Chest2" or v.Name == "Chest3" then
 local Distance = (v.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
@@ -1201,7 +1217,7 @@ game:GetService("TweenService"):Create(
                         TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
                         {CFrame = v.CFrame }
                     ):Play()       
-                    end end end end end wait(1) _G.chest = true end)
+                    end end end end end wait(3) _G.chest = true end)
 
 m_f5.Parent = b_page1
 m_f5.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
@@ -1283,61 +1299,7 @@ game:GetService("TweenService"):Create(
                         {CFrame = v.HumanoidRootPart.CFrame* CFrame.new(0, 40, 0) }
                     ):Play()       
                     
-                    end end end end end)
-                    
-    --bring mob                                 
-   _G.bring1  = true _G.bringmob = true
-   game:GetService('RunService').RenderStepped:connect(function()
-if _G.m_b5 then             
-                if _G.bringmob then       --bring mob
-if _G.bring1 then
-_G.bring1 = false
-for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
-      if v.Name == "Ship Deckhand [Lv. 1250]" then --name mob
-      local CFramebring1 = CFrame.new(1220.455810546875, 126.04237365722656, 33080.3125) or  CFrame.new(620.1790771484375, 126.0723876953125, 33022.390625)
-if (v.HumanoidRootPart.Position - CFramebring1.Position).Magnitude <= 500 then
-sethiddenproperty(game:GetService("Players").LocalPlayer,"SimulationRadius",math.huge)
-v.HumanoidRootPart.CFrame =  CFramebring1
-v.Humanoid:ChangeState(14)
-      v.HumanoidRootPart.Size = Vector3.new(60, 60, 10)     --size hix box  
-      v.HumanoidRootPart.CanCollide = false                                                
-v.Head.CanCollide = false                                 
-if v.Humanoid:FindFirstChild("Animator") then
-                            v.Humanoid.Animator:Destroy()
-                        end
-                        sethiddenproperty(game:GetService("Players").LocalPlayer,"SimulationRadius",math.huge)                    
-                        end end end
-      for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
-      if v.Name == "Ship Engineer [Lv. 1275]"  then --name mob
-      local CFramebring2 = CFrame.new(930.0367431640625, 125.52970123291016, 33432.359375)
-if (v.HumanoidRootPart.Position - CFramebring2.Position).Magnitude <= 500 then
-sethiddenproperty(game:GetService("Players").LocalPlayer,"SimulationRadius",math.huge)
-v.HumanoidRootPart.CFrame =  CFramebring2
-v.Humanoid:ChangeState(14)
-      v.HumanoidRootPart.Size = Vector3.new(60, 60, 10)     --size hix box  
-      v.HumanoidRootPart.CanCollide = false                                                
-v.Head.CanCollide = false                                 
-if v.Humanoid:FindFirstChild("Animator") then
-                            v.Humanoid.Animator:Destroy()
-                        end
-                        sethiddenproperty(game:GetService("Players").LocalPlayer,"SimulationRadius",math.huge)                    
-                        end end    end
-for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
-      if v.Name == "Ship Steward [Lv. 1300]" then --name mob
-      local CFramebring3 = CFrame.new(968.4664306640625, 40.78610610961914, 32981.1015625)
-if (v.HumanoidRootPart.Position - CFramebring3.Position).Magnitude <= 500 then
-sethiddenproperty(game:GetService("Players").LocalPlayer,"SimulationRadius",math.huge)
-v.HumanoidRootPart.CFrame =  CFramebring3
-v.Humanoid:ChangeState(14)
-      v.HumanoidRootPart.Size = Vector3.new(60, 60, 10)     --size hix box  
-      v.HumanoidRootPart.CanCollide = false                                                
-v.Head.CanCollide = false                                 
-if v.Humanoid:FindFirstChild("Animator") then
-                            v.Humanoid.Animator:Destroy()
-                        end
-                        sethiddenproperty(game:GetService("Players").LocalPlayer,"SimulationRadius",math.huge)                    
-                        end end        end     
- end end end wait(4) _G.bring2 = true end)    
+                    end end end end end)                 
 
                  
 m_f6.Parent = b_page1
@@ -1381,9 +1343,288 @@ _G.m_b6 = false
 end
 end)
 
+m_f7.Parent = b_page1
+m_f7.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+m_f7.Position = UDim2.new(0, 0, 0.4500000000, 0)
+m_f7.Size = UDim2.new(0, 498, 0, 30)
+m_f7.BorderColor3 = Color3.fromRGB(250, 250, 250)
+m_f7.Font = Enum.Font.Ubuntu
+m_f7.Text = "   Auto Fartory"
+m_f7.TextColor3 = Color3.fromRGB(255, 255, 255)
+m_f7.TextSize = 14.000
+m_f7.TextWrapped = true
+m_f7.TextXAlignment = Enum.TextXAlignment.Left
+
+m_b7.Name = "m_b7"
+m_b7.Parent = m_f7
+m_b7.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+m_b7.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+m_b7.Size = UDim2.new(0, 20, 0, 20)
+m_b7.BorderColor3 = Color3.fromRGB(250, 250, 250)
+m_b7.Font = Enum.Font.SourceSans
+m_b7.Text = ""
+m_b7.TextColor3 = Color3.fromRGB(250, 250, 250)
+m_b7.TextSize = 30.000
+m_b7.MouseButton1Down:connect(function()
+--on off 
+if m_b7.Text == "" then --on
+m_b7.Text = "X"
+_G.m_b7 = true
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.m_b7 then --script
+   for i,v in pairs(game:GetService("Workspace").Map.Dressrosa.SmileFactory:GetChildren()) do                                                                               
+ if v.Name == "Core" then
+ if v.Humanoid.Health > 0  then
+ local humanoid = game.Players.LocalPlayer.Character.Humanoid 
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
+ click()
+ TP1(CFrame.new(407.5114440917969, 194.4268798828125, -412.55828857421875))
+ end end end end end)
+elseif m_b7.Text == "X" then --off
+m_b7.Text = ""
+_G.m_b7 = false
+end
+end)
+
 
 
 bartool()
+
+--// [ stat ]
+s_cp.Parent = b_page2
+s_cp.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+s_cp.Position = UDim2.new(0, 0, 0.0300000000, 0)
+s_cp.Size = UDim2.new(0, 498, 0, 30)
+s_cp.BorderColor3 = Color3.fromRGB(250, 250, 250)
+s_cp.Font = Enum.Font.Ubuntu
+s_cp.Text = "Point : ..."
+s_cp.TextColor3 = Color3.fromRGB(255, 255, 255)
+s_cp.TextSize = 14.000
+s_cp.TextWrapped = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+s_cp.Text = (" Point : "..game:GetService("Players")["LocalPlayer"].Data.Points.Value)
+end)
+
+s_f1.Parent = b_page2
+s_f1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+s_f1.Position = UDim2.new(0, 0, 0.1000000000, 0)
+s_f1.Size = UDim2.new(0, 498, 0, 30)
+s_f1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+s_f1.Font = Enum.Font.Ubuntu
+s_f1.Text = "   Mele"
+s_f1.TextColor3 = Color3.fromRGB(255, 255, 255)
+s_f1.TextSize = 14.000
+s_f1.TextWrapped = true
+s_f1.TextXAlignment = Enum.TextXAlignment.Left
+
+s_b1.Name = "s_b1"
+s_b1.Parent = s_f1
+s_b1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+s_b1.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+s_b1.Size = UDim2.new(0, 20, 0, 20)
+s_b1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+s_b1.Font = Enum.Font.SourceSans
+s_b1.Text = ""
+s_b1.TextColor3 = Color3.fromRGB(250, 250, 250)
+s_b1.TextSize = 30.000
+s_b1.MouseButton1Down:connect(function()
+--on off 
+if s_b1.Text == "" then --on
+s_b1.Text = "X"
+_G.s_b1 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.s_b1 then --script
+local args = {
+                                                    [1] = "AddPoint",
+                                                    [2] = "Melee",
+                                                    [3] = PointStats
+                                                }
+                                                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end
+end)
+elseif s_b1.Text == "X" then --off
+s_b1.Text = ""
+_G.s_b1 = false
+end
+end)
+
+s_f2.Parent = b_page2
+s_f2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+s_f2.Position = UDim2.new(0, 0, 0.1700000000, 0)
+s_f2.Size = UDim2.new(0, 498, 0, 30)
+s_f2.BorderColor3 = Color3.fromRGB(250, 250, 250)
+s_f2.Font = Enum.Font.Ubuntu
+s_f2.Text = "   Health"
+s_f2.TextColor3 = Color3.fromRGB(255, 255, 255)
+s_f2.TextSize = 14.000
+s_f2.TextWrapped = true
+s_f2.TextXAlignment = Enum.TextXAlignment.Left
+
+s_b2.Name = "s_b2"
+s_b2.Parent = s_f2
+s_b2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+s_b2.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+s_b2.Size = UDim2.new(0, 20, 0, 20)
+s_b2.BorderColor3 = Color3.fromRGB(250, 250, 250)
+s_b2.Font = Enum.Font.SourceSans
+s_b2.Text = ""
+s_b2.TextColor3 = Color3.fromRGB(250, 250, 250)
+s_b2.TextSize = 30.000
+s_b2.MouseButton1Down:connect(function()
+--on off 
+if s_b2.Text == "" then --on
+s_b2.Text = "X"
+_G.s_b2 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.s_b2 then --script
+local args = {
+                                                    [1] = "AddPoint",
+                                                    [2] = "Defense",
+                                                    [3] = PointStats
+                                                }
+                                                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end
+end)
+elseif s_b2.Text == "X" then --off
+s_b2.Text = ""
+_G.s_b2 = false
+end
+end)
+
+s_f3.Parent = b_page2
+s_f3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+s_f3.Position = UDim2.new(0, 0, 0.2400000000, 0)
+s_f3.Size = UDim2.new(0, 498, 0, 30)
+s_f3.BorderColor3 = Color3.fromRGB(250, 250, 250)
+s_f3.Font = Enum.Font.Ubuntu
+s_f3.Text = "   Sword"
+s_f3.TextColor3 = Color3.fromRGB(255, 255, 255)
+s_f3.TextSize = 14.000
+s_f3.TextWrapped = true
+s_f3.TextXAlignment = Enum.TextXAlignment.Left
+
+s_b3.Name = "s_b3"
+s_b3.Parent = s_f3
+s_b3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+s_b3.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+s_b3.Size = UDim2.new(0, 20, 0, 20)
+s_b3.BorderColor3 = Color3.fromRGB(250, 250, 250)
+s_b3.Font = Enum.Font.SourceSans
+s_b3.Text = ""
+s_b3.TextColor3 = Color3.fromRGB(250, 250, 250)
+s_b3.TextSize = 30.000
+s_b3.MouseButton1Down:connect(function()
+--on off 
+if s_b3.Text == "" then --on
+s_b3.Text = "X"
+_G.s_b3 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.s_b3 then --script
+local args = {
+                                                    [1] = "AddPoint",
+                                                    [2] = "Sword",
+                                                    [3] = PointStats
+                                                }
+                                                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end
+end)
+elseif s_b3.Text == "X" then --off
+s_b3.Text = ""
+_G.s_b3 = false
+end
+end)
+
+s_f4.Parent = b_page2
+s_f4.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+s_f4.Position = UDim2.new(0, 0, 0.3100000000, 0)
+s_f4.Size = UDim2.new(0, 498, 0, 30)
+s_f4.BorderColor3 = Color3.fromRGB(250, 250, 250)
+s_f4.Font = Enum.Font.Ubuntu
+s_f4.Text = "   Gun"
+s_f4.TextColor3 = Color3.fromRGB(255, 255, 255)
+s_f4.TextSize = 14.000
+s_f4.TextWrapped = true
+s_f4.TextXAlignment = Enum.TextXAlignment.Left
+
+s_b4.Name = "s_b4"
+s_b4.Parent = s_f4
+s_b4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+s_b4.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+s_b4.Size = UDim2.new(0, 20, 0, 20)
+s_b4.BorderColor3 = Color3.fromRGB(250, 250, 250)
+s_b4.Font = Enum.Font.SourceSans
+s_b4.Text = ""
+s_b4.TextColor3 = Color3.fromRGB(250, 250, 250)
+s_b4.TextSize = 30.000
+s_b4.MouseButton1Down:connect(function()
+--on off 
+if s_b4.Text == "" then --on
+s_b4.Text = "X"
+_G.s_b4 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.s_b4 then --script
+local args = {
+[1] = "AddPoint",
+                                                    [2] = "Gun",
+                                                    [3] = PointStats
+                                                }
+                                                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end
+end)
+elseif s_b4.Text == "X" then --off
+s_b4.Text = ""
+_G.s_b4 = false
+end
+end)
+
+s_f5.Parent = b_page2
+s_f5.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+s_f5.Position = UDim2.new(0, 0, 0.3800000000, 0)
+s_f5.Size = UDim2.new(0, 498, 0, 30)
+s_f5.BorderColor3 = Color3.fromRGB(250, 250, 250)
+s_f5.Font = Enum.Font.Ubuntu
+s_f5.Text = "   Fruit"
+s_f5.TextColor3 = Color3.fromRGB(255, 255, 255)
+s_f5.TextSize = 14.000
+s_f5.TextWrapped = true
+s_f5.TextXAlignment = Enum.TextXAlignment.Left
+
+s_b5.Name = "s_b5"
+s_b5.Parent = s_f5
+s_b5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+s_b5.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+s_b5.Size = UDim2.new(0, 20, 0, 20)
+s_b5.BorderColor3 = Color3.fromRGB(250, 250, 250)
+s_b5.Font = Enum.Font.SourceSans
+s_b5.Text = ""
+s_b5.TextColor3 = Color3.fromRGB(250, 250, 250)
+s_b5.TextSize = 30.000
+s_b5.MouseButton1Down:connect(function()
+--on off 
+if s_b5.Text == "" then --on
+s_b5.Text = "X"
+_G.s_b5 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.s_b5 then --script
+local args = {
+                                                    [1] = "AddPoint",
+                                                    [2] = "Demon Fruit",
+                                                    [3] = PointStats
+                                                }
+                                                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end
+end)
+elseif s_b5.Text == "X" then --off
+s_b5.Text = ""
+_G.s_b5 = false
+end
+end)
 
 
 
@@ -1393,7 +1634,8 @@ bartool()
 local function LDLMGWH_fake_script() --farm
 	local script = Instance.new('LocalScript', b_1)
 	script.Parent.MouseButton1Down:connect(function()
-		
+		b_page1.Visible = true
+		b_page2.Visible = false
     TextLabel.Text = "   NTT HUB | Farm"
 	end)
 end
@@ -1401,8 +1643,9 @@ coroutine.wrap(LDLMGWH_fake_script)()
 local function OJTG_fake_script() -- scripts.LocalScript 
 	local script = Instance.new('LocalScript', b_2)
 	script.Parent.MouseButton1Down:connect(function()   
-    TextLabel.Text = "   NTT HUB | Stat"
-    
+	b_page2.Visible = true
+	b_page1.Visible = false
+    TextLabel.Text = "   NTT HUB | Stat" 
 	end)
 end
     
