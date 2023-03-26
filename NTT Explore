@@ -569,23 +569,5 @@ end
 
 end)
 
-keybuy.Parent = bar1
-keybuy.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-keybuy.Position = UDim2.new(0, 0, 0.1700000000, 0)
-keybuy.Size = UDim2.new(0, 498, 0, 30)
-keybuy.BorderColor3 = Color3.fromRGB(250, 250, 250)
-keybuy.Font = Enum.Font.Ubuntu
-keybuy.Text = "   nameprl"
-keybuy.TextColor3 = Color3.fromRGB(255, 255, 255)
-keybuy.TextSize = 14.000
-keybuy.TextWrapped = true
-keybuy.TextXAlignment = Enum.TextXAlignment.Left
-keybuy.Visible = false
-keybuy.Text = (""..game.Players.localPlayer.Name)
-
-if keybuy.Text == "TAT_chanol" then
-_G.buyscript = true
-elseif keybuy.Text == "thaitructt6" then
 G.buyscript = true
-end
 
