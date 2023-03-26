@@ -1,6 +1,6 @@
 
-local keytao = "2020"
-local linkkey = "đéo có"
+local keytao = "2020" or "2023"
+local linkkey = "no key :D"
 
 _G.buyscript = false
 
