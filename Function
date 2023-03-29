@@ -1,0 +1,31 @@
+function TP1(P1)
+                    local Distance = (P1.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                    if Distance < 150 then
+                        Speed = 20000
+                    elseif Distance < 200 then
+                        Speed = 5000
+                    elseif Distance < 300 then
+                        Speed = 500
+                    elseif Distance < 500 then
+                        Speed = 150
+                    elseif Distance < 1000 then
+                        Speed = 100
+                    elseif Distance >= 1500 then
+                        Speed = 90
+                    end                                  
+                   local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Distance/Speed), {CFrame = P1 * CFrame.new(0,0,0) }) tween:Play()                    
+                end
+
+function TP2(P1)          
+                    local Distance = (P1.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                    if Distance >= 0 then
+                        Speed = 90
+                    end
+                    if (P1.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 2700 then
+                   local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Distance/Speed), {CFrame = P1 * CFrame.new(0,50,0) }) tween:Play()                    
+                end 
+              end
+                
+                function stoptp()
+                local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0), {CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame }) tween:Play()                    
+    end
