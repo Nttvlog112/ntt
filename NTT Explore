@@ -569,5 +569,5 @@ end
 
 end)
 
-G.buyscript = true
+_G.buyscript = true
 
