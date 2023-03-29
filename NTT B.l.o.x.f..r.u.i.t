@@ -1,7 +1,7 @@
 
 --NTT --blox fruit
 
-local ScreenGUI = Instance.new("ScreenGui")
+local NTTGUI = Instance.new("ScreenGui")
 
 --main
 local main = Instance.new("Frame")
@@ -14,23 +14,25 @@ local b_page2 = Instance.new("ScrollingFrame") --stat
 local b_page3 = Instance.new("ScrollingFrame") --raid
 local b_page4 = Instance.new("ScrollingFrame") --miss esp
 local b_page5 = Instance.new("ScrollingFrame") --shop
-local b_page6 = Instance.new("ScrollingFrame") --get item
-local b_page7 = Instance.new("ScrollingFrame") --teleport
-local b_page8 = Instance.new("ScrollingFrame") --setting
+local b_page6 = Instance.new("ScrollingFrame") --item - fruit
+local b_page7 = Instance.new("ScrollingFrame") --Comabt
+local b_page8 = Instance.new("ScrollingFrame") --teleport
+local b_page9 = Instance.new("ScrollingFrame") --setting
 
 --bar 
 local bar = Instance.new("Frame")
-local bar1 = Instance.new("Frame")
+local bar1 = Instance.new("ScrollingFrame")
 
 --button
-local b_1 = Instance.new("TextButton") --farm 
+local b_1 = Instance.new("TextButton") --main
 local b_2 = Instance.new("TextButton") --stat
 local b_3 = Instance.new("TextButton")--raid
-local b_4 = Instance.new("TextButton")--miss- esp
-local b_5 = Instance.new("TextButton")--shop
-local b_6 = Instance.new("TextButton")--get item
+local b_4 = Instance.new("TextButton")--miss- shop
+local b_5 = Instance.new("TextButton")--esp - fruit
+local b_6 = Instance.new("TextButton")-- Get item
+local b_8 = Instance.new("TextButton")--Comnat
 local b_7 = Instance.new("TextButton")--teleport
-local b_8 = Instance.new("TextButton")--setting
+local b_9 = Instance.new("TextButton")--setting
 
 -- // Name Player
 local prl = Instance.new("TextLabel")--Name Player
@@ -100,6 +102,7 @@ r_f4 = Instance.new("TextLabel")
 r_f5 = Instance.new("TextLabel")
 r_f6 = Instance.new("TextLabel")
 r_f7 = Instance.new("TextLabel")
+f_awaken = Instance.new("TextLabel")
 
 r_b1= Instance.new("TextButton")
 r_b2= Instance.new("TextButton")
@@ -108,11 +111,29 @@ r_b4= Instance.new("TextButton")
 r_b5= Instance.new("TextButton")
 r_b6= Instance.new("TextButton")
 r_b7 = Instance.new("TextButton")
+b_awaken = Instance.new("TextButton")
 
--- // miss - esp
-m_code= Instance.new("TextButton")
+-- // miss - Shop
+ms_code= Instance.new("TextButton")
 
+-- // esp - fruit
 
+ef_f1 = Instance.new("TextLabel")
+ef_f2 = Instance.new("TextLabel")
+ef_f3 = Instance.new("TextLabel")
+ef_f4 = Instance.new("TextLabel")
+ef_f4 = Instance.new("TextLabel")
+ef_f5 = Instance.new("TextLabel")
+ef_f6 = Instance.new("TextLabel")
+ef_f7= Instance.new("TextLabel")
+
+ef_b1= Instance.new("TextButton")
+ef_b2= Instance.new("TextButton")
+ef_b3= Instance.new("TextButton")
+ef_b4= Instance.new("TextButton")
+ef_b5= Instance.new("TextButton")
+ef_b6= Instance.new("TextButton")
+ef_b7= Instance.new("TextButton")
 
 -- // setting
 st_f1 = Instance.new("TextLabel")
@@ -127,16 +148,18 @@ st_b3= Instance.new("TextButton")
 st_b4= Instance.new("TextButton")
 st_b5= Instance.new("TextBox")
 
---------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------
 
 --main code frame button script
 
-ScreenGUI.Name = "ScreenGUI"
-ScreenGUI.Parent = game.CoreGui
-ScreenGUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+NTTGUI.Name = "NTTGUI"
+NTTGUI.Parent = game.CoreGui
+NTTGUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 main.Name = "main"
-main.Parent = ScreenGUI -- nằm trên khung ẩn
+main.Parent = NTTGUI -- nằm trên khung ẩn
 main.BackgroundColor3 = Color3.fromRGB(0, 0, 0) --màu khung
 main.Position = UDim2.new(0.180126051, 0, 0.228999169, 0) -- vị trí đứng
 main.Size = UDim2.new(0, 640, 0, 280) -- kích cở
@@ -145,16 +168,19 @@ main.Visible = false
 
 bar1.Name = "bar1"
 bar1.Parent = main
-bar1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-bar1.Position = UDim2.new(0, 0, 0.102285722, 0)
+bar1.Active = true
+bar1.BackgroundColor3 = Color3.fromRGB(5,5,5)
 bar1.Size = UDim2.new(0, 100, 0, 250)
+bar1.ScrollBarThickness = 0
 bar1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+bar1.Position = UDim2.new(0, 0, 0.102285722, 0)
+
 
 -- // Button
 b_1.Name = "b_1"
-b_1.Parent = main
+b_1.Parent = bar1
 b_1.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-b_1.Position = UDim2.new(0, 0, 0.110000000, 0)
+b_1.Position = UDim2.new(0, 0, 0.0000000, 0)
 b_1.Size = UDim2.new(0, 100, 0, 25)
 b_1.Font = Enum.Font.Ubuntu
 b_1.BorderColor3 = Color3.fromRGB(250, 250, 250)
@@ -165,9 +191,9 @@ b_1.TextWrapped = false
 b_1.TextXAlignment = Enum.TextXAlignment.Left
 
 b_2.Name = "b_2"
-b_2.Parent = main
+b_2.Parent = bar1
 b_2.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-b_2.Position = UDim2.new(0, 0, 0.210000000, 0)
+b_2.Position = UDim2.new(0, 0, 0.050000000, 0)
 b_2.Size = UDim2.new(0, 100, 0, 25)
 b_2.Font = Enum.Font.Ubuntu
 b_2.BorderColor3 = Color3.fromRGB(250, 250, 250)
@@ -178,9 +204,9 @@ b_2.TextWrapped = false
 b_2.TextXAlignment = Enum.TextXAlignment.Left
 
 b_3.Name = "b_3"
-b_3.Parent = main
+b_3.Parent = bar1
 b_3.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-b_3.Position = UDim2.new(0, 0, 0.310000000, 0)
+b_3.Position = UDim2.new(0, 0, 0.100000000, 0)
 b_3.Size = UDim2.new(0, 100, 0, 25)
 b_3.Font = Enum.Font.Ubuntu
 b_3.BorderColor3 = Color3.fromRGB(250, 250, 250)
@@ -191,69 +217,82 @@ b_3.TextWrapped = false
 b_3.TextXAlignment = Enum.TextXAlignment.Left
 
 b_4.Name = "b_4"
-b_4.Parent = main
+b_4.Parent = bar1
 b_4.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-b_4.Position = UDim2.new(0, 0, 0.410000000, 0)
+b_4.Position = UDim2.new(0, 0, 0.150000000, 0)
 b_4.Size = UDim2.new(0, 100, 0, 25)
 b_4.Font = Enum.Font.Ubuntu
 b_4.BorderColor3 = Color3.fromRGB(250, 250, 250)
-b_4.Text = "   Miss - Esp"
+b_4.Text = "   Miss - Shop"
 b_4.TextColor3 = Color3.fromRGB(255, 255, 255)
 b_4.TextSize = 14.000
 b_4.TextWrapped = false
 b_4.TextXAlignment = Enum.TextXAlignment.Left
 
 b_5.Name = "b_5"
-b_5.Parent = main
+b_5.Parent = bar1
 b_5.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-b_5.Position = UDim2.new(0, 0, 0.510000000, 0)
+b_5.Position = UDim2.new(0, 0, 0.200000000, 0)
 b_5.Size = UDim2.new(0, 100, 0, 25)
 b_5.Font = Enum.Font.Ubuntu
 b_5.BorderColor3 = Color3.fromRGB(250, 250, 250)
-b_5.Text = "   Shop"
+b_5.Text = "   Esp - Fruit"
 b_5.TextColor3 = Color3.fromRGB(255, 255, 255)
 b_5.TextSize = 14.000
 b_5.TextWrapped = false
 b_5.TextXAlignment = Enum.TextXAlignment.Left
 
 b_6.Name = "b_6"
-b_6.Parent = main
+b_6.Parent = bar1
 b_6.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-b_6.Position = UDim2.new(0, 0, 0.610000000, 0)
+b_6.Position = UDim2.new(0, 0, 0.250000000, 0)
 b_6.Size = UDim2.new(0, 100, 0, 25)
 b_6.Font = Enum.Font.Ubuntu
 b_6.BorderColor3 = Color3.fromRGB(250, 250, 250)
-b_6.Text = "   Item - Fruit"
+b_6.Text = "   Get Item"
 b_6.TextColor3 = Color3.fromRGB(255, 255, 255)
 b_6.TextSize = 14.000
 b_6.TextWrapped = false
 b_6.TextXAlignment = Enum.TextXAlignment.Left
 
 b_7.Name = "b_7"
-b_7.Parent = main
+b_7.Parent = bar1
 b_7.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-b_7.Position = UDim2.new(0, 0, 0.710000000, 0)
+b_7.Position = UDim2.new(0, 0, 0.300000000, 0)
 b_7.Size = UDim2.new(0, 100, 0, 25)
 b_7.Font = Enum.Font.Ubuntu
 b_7.BorderColor3 = Color3.fromRGB(250, 250, 250)
-b_7.Text = "   Teleport"
+b_7.Text = "   Combat"
 b_7.TextColor3 = Color3.fromRGB(255, 255, 255)
 b_7.TextSize = 14.000
 b_7.TextWrapped = false
 b_7.TextXAlignment = Enum.TextXAlignment.Left
 
 b_8.Name = "b_8"
-b_8.Parent = main
+b_8.Parent = bar1
 b_8.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-b_8.Position = UDim2.new(0, 0, 0.810000000, 0)
+b_8.Position = UDim2.new(0, 0, 0.350000000, 0)
 b_8.Size = UDim2.new(0, 100, 0, 25)
 b_8.Font = Enum.Font.Ubuntu
 b_8.BorderColor3 = Color3.fromRGB(250, 250, 250)
-b_8.Text = "   Setting"
+b_8.Text = "   Teleport"
 b_8.TextColor3 = Color3.fromRGB(255, 255, 255)
 b_8.TextSize = 14.000
 b_8.TextWrapped = false
 b_8.TextXAlignment = Enum.TextXAlignment.Left
+
+b_9.Name = "b_9"
+b_9.Parent = bar1
+b_9.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+b_9.Position = UDim2.new(0, 0, 0.400000000, 0)
+b_9.Size = UDim2.new(0, 100, 0, 25)
+b_9.Font = Enum.Font.Ubuntu
+b_9.BorderColor3 = Color3.fromRGB(250, 250, 250)
+b_9.Text = "   Setting"
+b_9.TextColor3 = Color3.fromRGB(255, 255, 255)
+b_9.TextSize = 14.000
+b_9.TextWrapped = false
+b_9.TextXAlignment = Enum.TextXAlignment.Left
 
 -- // Name Player
 
@@ -361,6 +400,17 @@ b_page8.ScrollBarThickness = 0
 b_page8.Position = UDim2.new(0.17631148, 0, 0.094285722, 0)
 b_page8.Visible = false     
 
+b_page9.Name = "b_page9" --raid
+b_page9.Parent = main
+b_page9.Active = true
+b_page9.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+b_page9.BackgroundTransparency = 1.000
+b_page9.BorderSizePixel = 0
+b_page9.Size = UDim2.new(0, 498, 0, 230)
+b_page9.ScrollBarThickness = 0
+b_page9.Position = UDim2.new(0.17631148, 0, 0.094285722, 0)
+b_page9.Visible = false     
+
 --bar
 
 bar.Name = "bar"
@@ -384,7 +434,7 @@ TextLabel.TextXAlignment = Enum.TextXAlignment.Left
 --đóng  mở
 
 exit.Name = "exit"
-exit.Parent = ScreenGUI
+exit.Parent = NTTGUI
 exit.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
 exit.Position = UDim2.new(0.15162201, 0, 0.083285708, 0)
 exit.Size = UDim2.new(0, 50, 0, 50)
@@ -397,10 +447,10 @@ exit.MouseButton1Down:connect(function()
 --on off 
 if exit.Text == "Open" then --on
 exit.Text = "Close"
-game.CoreGui.ScreenGUI.main.Visible = true
+main.Visible = true
 elseif exit.Text == "Close" then --off
 exit.Text = "Open"
-game.CoreGui.ScreenGUI.main.Visible = false
+main.Visible = false
 end
 end)
 
@@ -437,52 +487,56 @@ game:GetService'VirtualUser':CaptureController()
 end
 
 --use tool
+function tool(x)
+game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild(x))
+end
+
+
 function mele()
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild( "Sharkman Karate"))
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild( "Godhuman"))
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild( "Combat"))
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild( "Dragon Talon"))
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild( "Superhuman"))
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild( "Electric Claw"))
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild( "Death Step"))
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild( "Black Leg"))
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild( "Electro"))
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild( "Fishman Karate"))
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild( "Dragon Claw"))
+tool("Sharkman Karate")
+tool("Combat")
+tool("Dragon Talon")
+tool("Electric Claw")
+tool("Dragon Talon")
+tool("Superhuman")
+tool("Black Leg")
+tool("Electro")
+tool("Fishman Karate")
+tool("Dragon Claw")
 end
 function sword()
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild( "Katana"))
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild( "Dual Katana"))
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild( "Cutlass"))
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild( "Bisento"))
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild( "Koko"))
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild( "Pole (2nd Form"))
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild( "Saddi"))
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild( "Wando"))
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild( "Dual-Headed Blade"))
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild( "Longsword"))
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild( "Trident"))
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild( "Shark Saw"))
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild( "Triple Katana"))
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild( "Twin Hooks"))
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild( "Iron Mace"))
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild( "Wardens Sword"))
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild( "Soul Cane"))
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild( "Pipe"))
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild( "Jitte"))
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild( "Gravity Cane"))
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild( "Dragon Trident"))
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild( "Yama"))
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild( "Tushita"))
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild( "Shisui"))
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild( "Saber"))
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild( "Rengoku"))
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild( "Pole (1st Form"))
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild( "Midnight Blade"))
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild( "Cavander"))
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild( "Buddy Sword"))
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild( "True Triple Katana"))
-game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild( "Dark Blade"))
+tool("Katana")
+tool("Dual Katana")
+tool("Cutlass")
+tool("Bisento")
+tool("Koko")
+tool("Pole (2nd Form")
+tool("Pole (1nd Form")
+tool("Saddi")
+tool("Wando")
+tool("Dual-Headed Blade")
+tool("Longsword")
+tool("Trident")
+tool("Shark Saw")
+tool("Triple Katana")
+tool("Twin Hooks")
+tool("Iron Mace")
+tool("Wadents Sword")
+tool("Soul Cane")
+tool("Pipe")
+tool("Jitte")
+tool("Gravity Cane")
+tool("Dragon Trident")
+tool("Yama")
+tool("Shisui")
+tool("Tushita")
+tool("Saber")
+tool("Rengoku")
+tool("Midnight Blade")
+tool("Cavender")
+tool("Buddy Sword")
+tool("True Triple Katana")
+tool("Dark Blade")
 end
 function fruit()
 game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild( "game.Players.LocalPlayer.Data.DevilFruit.Value"))
@@ -1205,6 +1259,19 @@ stoptp()
 end
 end)
 
+-- // fartory
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.m_b7 then --script
+   for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do                                                             
+ if v.Name == "Core" then
+ if v.Humanoid.Health > 0  then
+ local humanoid = game.Players.LocalPlayer.Character.Humanoid 
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
+ click()
+ TP1(CFrame.new(407.5114440917969, 194.4268798828125, -412.55828857421875))
+ end end end end end)
+
+-- // auto farm lv
 _G.q1 = true
 game:GetService('RunService').RenderStepped:connect(function() --fix quest
       if _G.m_b2 then
@@ -1257,7 +1324,7 @@ if v.Humanoid:FindFirstChild("Animator") then
 game:GetService("TweenService"):Create(
                         game.Players.LocalPlayer.Character.HumanoidRootPart,
                         TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
-                        {CFrame = v.HumanoidRootPart.CFrame* CFrame.new(0, 40, 0) }
+                        {CFrame = v.HumanoidRootPart.CFrame* CFrame.new(0, st_b5.Text, 0) }
                     ):Play()                  
                                          
                       
@@ -1377,7 +1444,7 @@ if v.Humanoid:FindFirstChild("Animator") then
 game:GetService("TweenService"):Create(
                         game.Players.LocalPlayer.Character.HumanoidRootPart,
                         TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
-                        {CFrame = v.HumanoidRootPart.CFrame* CFrame.new(0, 40, 0) }
+                        {CFrame = v.HumanoidRootPart.CFrame* CFrame.new(0, st_b5.Text, 0) }
                     ):Play()       
                                       
                  end end end end
@@ -1463,7 +1530,7 @@ if v.Humanoid:FindFirstChild("Animator") then
 game:GetService("TweenService"):Create(
                         game.Players.LocalPlayer.Character.HumanoidRootPart,
                         TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
-                        {CFrame = v.HumanoidRootPart.CFrame* CFrame.new(0, 40, 0) }
+                        {CFrame = v.HumanoidRootPart.CFrame* CFrame.new(0, st_b5.Text, 0) }
                     ):Play()       
                     
                     end end end end end 
@@ -1583,7 +1650,7 @@ if v.Humanoid:FindFirstChild("Animator") then
 game:GetService("TweenService"):Create(
                         game.Players.LocalPlayer.Character.HumanoidRootPart,
                         TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
-                        {CFrame = v.HumanoidRootPart.CFrame* CFrame.new(0, 40, 0) }
+                        {CFrame = v.HumanoidRootPart.CFrame* CFrame.new(0, st_b5.Text, 0) }
                     ):Play()       
                     
                     end end end end end end)                 
@@ -1674,7 +1741,7 @@ if v.Humanoid:FindFirstChild("Animator") then
 game:GetService("TweenService"):Create(
                         game.Players.LocalPlayer.Character.HumanoidRootPart,
                         TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
-                        {CFrame = v.HumanoidRootPart.CFrame* CFrame.new(0, 40, 0) }
+                        {CFrame = v.HumanoidRootPart.CFrame* CFrame.new(0, st_b5.Text, 0) }
                     ):Play()       
                     
                     end end end end  
@@ -1716,18 +1783,6 @@ _G.m_b7 = false
 stoptp()
 end
 end)
--- // fartory
-game:GetService('RunService').RenderStepped:connect(function()
-if _G.m_b7 then --script
-   for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do                                                             
- if v.Name == "Core" then
- if v.Humanoid.Health > 0  then
- local humanoid = game.Players.LocalPlayer.Character.Humanoid 
-humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
- click()
- TP1(CFrame.new(407.5114440917969, 194.4268798828125, -412.55828857421875))
- end end end end end)
-
 
 bartool()
 
@@ -1742,10 +1797,10 @@ s_cp.Text = "Point : ..."
 s_cp.TextColor3 = Color3.fromRGB(255, 255, 255)
 s_cp.TextSize = 14.000
 s_cp.TextWrapped = true
-
+if game.PlaceId == 2753915549 or game.PlaceId == 4442272183 or game.PlaceId == 7449423635 then -- sea3
 game:GetService('RunService').RenderStepped:connect(function()
 s_cp.Text = (" Point : "..game:GetService("Players")["LocalPlayer"].Data.Points.Value)
-end)
+end) end
 
 s_f1.Parent = b_page2
 s_f1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
@@ -2157,9 +2212,50 @@ r_tp1.MouseButton1Down:connect(function()
 TP1(CFrame.new(-6440.0, 250.9, -4498.7))
 end)
 
+f_awaken.Parent = b_page3
+f_awaken.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+f_awaken.Position = UDim2.new(0, 0, 0.1700000000, 0)
+f_awaken.Size = UDim2.new(0, 498, 0, 30)
+f_awaken.BorderColor3 = Color3.fromRGB(250, 250, 250)
+f_awaken.Font = Enum.Font.Ubuntu
+f_awaken.Text = "   Auto Awaken"
+f_awaken.TextColor3 = Color3.fromRGB(255, 255, 255)
+f_awaken.TextSize = 14.000
+f_awaken.TextWrapped = true
+f_awaken.TextXAlignment = Enum.TextXAlignment.Left
+
+b_awaken.Name = "b_awaken"
+b_awaken.Parent = f_awaken
+b_awaken.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+b_awaken.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+b_awaken.Size = UDim2.new(0, 20, 0, 20)
+b_awaken.BorderColor3 = Color3.fromRGB(250, 250, 250)
+b_awaken.Font = Enum.Font.SourceSans
+b_awaken.Text = ""
+b_awaken.TextColor3 = Color3.fromRGB(250, 250, 250)
+b_awaken.TextSize = 30.000
+b_awaken.MouseButton1Down:connect(function()
+--on off 
+if b_awaken.Text == "" then --on
+b_awaken.Text = "X"
+_G.b_awaken = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.b_awaken then --script
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Awakener","Awaken")
+end
+end)
+elseif b_awaken.Text == "X" then --off
+b_awaken.Text = ""
+_G.b_awaken = false
+end
+end)
+
+
+
 r_f2.Parent = b_page3
 r_f2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-r_f2.Position = UDim2.new(0, 0, 0.1700000000, 0)
+r_f2.Position = UDim2.new(0, 0, 0.2400000000, 0)
 r_f2.Size = UDim2.new(0, 498, 0, 30)
 r_f2.BorderColor3 = Color3.fromRGB(250, 250, 250)
 r_f2.Font = Enum.Font.Ubuntu
@@ -2227,7 +2323,7 @@ end)
 
 r_f3.Parent = b_page3
 r_f3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-r_f3.Position = UDim2.new(0, 0, 0.2400000000, 0)
+r_f3.Position = UDim2.new(0, 0, 0.3100000000, 0)
 r_f3.Size = UDim2.new(0, 498, 0, 30)
 r_f3.BorderColor3 = Color3.fromRGB(250, 250, 250)
 r_f3.Font = Enum.Font.Ubuntu
@@ -2261,7 +2357,7 @@ end)
 
 r_f4.Parent = b_page3
 r_f4.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-r_f4.Position = UDim2.new(0, 0, 0.3100000000, 0)
+r_f4.Position = UDim2.new(0, 0, 0.3800000000, 0)
 r_f4.Size = UDim2.new(0, 498, 0, 30)
 r_f4.BorderColor3 = Color3.fromRGB(250, 250, 250)
 r_f4.Font = Enum.Font.Ubuntu
@@ -2295,6 +2391,7 @@ end)
 -- // farm raid
 game:GetService('RunService').RenderStepped:connect(function()
 if _G.r_b4 then --script
+   if game.Players.LocalPlayer.PlayerGui.Main.Timer.Visible == true then
 local humanoid = game.Players.LocalPlayer.Character.Humanoid 
 humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
                    
@@ -2330,16 +2427,17 @@ if v.Humanoid:FindFirstChild("Animator") then
 game:GetService("TweenService"):Create(
                         game.Players.LocalPlayer.Character.HumanoidRootPart,
                         TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
-                        {CFrame = v.HumanoidRootPart.CFrame* CFrame.new(0, 40, 0) }
+                        {CFrame = v.HumanoidRootPart.CFrame* CFrame.new(0, st_b5.Text, 0) }
                     ):Play()       
                                       
-                 end end end
+                 end end end end
 end
 end)
 
 -- // tp island
 game:GetService('RunService').RenderStepped:connect(function()
 if _G.r_b3 then --script
+if game.Players.LocalPlayer.PlayerGui.Main.Timer.Visible == true then
 local humanoid = game.Players.LocalPlayer.Character.Humanoid 
 humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
 if game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 5") then
@@ -2352,17 +2450,17 @@ elseif game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Is
 TP2(game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 2").CFrame)
 elseif game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 1") then
 TP2(game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 1").CFrame)
-end
+end end
 end
 end)
 
 r_f5.Parent = b_page3
 r_f5.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-r_f5.Position = UDim2.new(0, 0, 0.3800000000, 0)
+r_f5.Position = UDim2.new(0, 0, 0.4500000000, 0)
 r_f5.Size = UDim2.new(0, 498, 0, 30)
 r_f5.BorderColor3 = Color3.fromRGB(250, 250, 250)
 r_f5.Font = Enum.Font.Ubuntu
-r_f5.Text = "   Auto Kill Raid Beta"
+r_f5.Text = "   Auto Raid Farm V2"
 r_f5.TextColor3 = Color3.fromRGB(255, 255, 255)
 r_f5.TextSize = 14.000
 r_f5.TextWrapped = true
@@ -2383,39 +2481,45 @@ r_b5.MouseButton1Down:connect(function()
 if r_b5.Text == "" then --on
 r_b5.Text = "X"
 _G.r_b5 = true
-
-game:GetService('RunService').RenderStepped:connect(function()
-if _G.r_b5 then --script
-
-local dist = math.huge
-    local target = nil
-    for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-        if v.ClassName == "Model" then
-                    local magnitude = (v.HumanoidRootPart.Position - game:GetService("Players").LocalPlayer.Character.Head.Position).magnitude
-                    if magnitude < dist then
-                        dist = magnitude
-                        target = v.Name                  
-                        if v.Humanoid.Health > 0 then -- check health
-                        v.Humanoid.Health =  0
-                        print(target)
-                        v.HumanoidRootPart.Size = Vector3.new(80, 80, 80)
-    v.HumanoidRootPart.Transparency = 1
-    
-                    end end
-        end end
-
-end
-end)
 elseif r_b5.Text == "X" then --off
 r_b5.Text = ""
 _G.r_b5 = false
 end
 end)
 
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.r_b5 then --script
+   if game.Players.LocalPlayer.PlayerGui.Main.Timer.Visible == true then
+local humanoid = game.Players.LocalPlayer.Character.Humanoid 
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
+                   
+for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
+      if v.ClassName == "Model" then --name mob     
+     usetool()
+       if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 1500 then
+       if v.Humanoid.Health > 0  then
+       click() -- click          
+       v.Humanoid:ChangeState(14)
+      v.HumanoidRootPart.Size = Vector3.new(50, 50, 20)     --size hix box  
+  --bring                  
+         sethiddenproperty(game:GetService("Players").LocalPlayer,"SimulationRadius",math.huge)
+v.HumanoidRootPart.CFrame =  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-39,0) 
+v.Humanoid:ChangeState(14)
+      v.HumanoidRootPart.CanCollide = false                                                
+v.Head.CanCollide = false                                 
+if v.Humanoid:FindFirstChild("Animator") then
+                            v.Humanoid.Animator:Destroy()
+                        end
+                        sethiddenproperty(game:GetService("Players").LocalPlayer,"SimulationRadius",math.huge)                                        
+                                      
+                 end end end end end
+end
+end)
+
 r_tp2.Name = "r_tp2"
 r_tp2.Parent = b_page3
 r_tp2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-r_tp2.Position = UDim2.new(0.00000000, 0, 0.450000000, 0)
+r_tp2.Position = UDim2.new(0.00000000, 0, 0.520000000, 0)
 r_tp2.Size = UDim2.new(0, 498, 0, 30)
 r_tp2.BorderColor3 = Color3.fromRGB(250, 250, 250)
 r_tp2.Font = Enum.Font.Ubuntu
@@ -2428,7 +2532,7 @@ end)
 
 r_f6.Parent = b_page3
 r_f6.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-r_f6.Position = UDim2.new(0, 0, 0.5200000000, 0)
+r_f6.Position = UDim2.new(0, 0, 0.5900000000, 0)
 r_f6.Size = UDim2.new(0, 498, 0, 30)
 r_f6.BorderColor3 = Color3.fromRGB(250, 250, 250)
 r_f6.Font = Enum.Font.Ubuntu
@@ -2477,7 +2581,7 @@ end)
 
 r_f7.Parent = b_page3
 r_f7.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-r_f7.Position = UDim2.new(0, 0, 0.5900000000, 0)
+r_f7.Position = UDim2.new(0, 0, 0.6600000000, 0)
 r_f7.Size = UDim2.new(0, 498, 0, 30)
 r_f7.BorderColor3 = Color3.fromRGB(250, 250, 250)
 r_f7.Font = Enum.Font.Ubuntu
@@ -2515,7 +2619,7 @@ local Player = game:GetService('Players').LocalPlayer
       if v.Name == "Order [Lv. 1250] [Raid Boss]" then
       v.HumanoidRootPart.CanCollide = false
       v.HumanoidRootPart.Size = Vector3.new(60, 60, 10)
-      Player.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0, 40, 0)
+      Player.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0, st_b5.Text, 0)
       end
       end
       end
@@ -2538,17 +2642,17 @@ function code(x)
 game:GetService("ReplicatedStorage").Remotes.Redeem:InvokeServer(x)
 end
 
-m_code.Name = "m_code"
-m_code.Parent = b_page4
-m_code.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-m_code.Position = UDim2.new(0.00000000, 0, 0.030000000, 0)
-m_code.Size = UDim2.new(0, 498, 0, 30)
-m_code.BorderColor3 = Color3.fromRGB(250, 250, 250)
-m_code.Font = Enum.Font.Ubuntu
-m_code.Text = "Redeem All Code"
-m_code.TextColor3 = Color3.fromRGB(250, 250, 250)
-m_code.TextSize = 14.000
-m_code.MouseButton1Down:connect(function()
+ms_code.Name = "ms_code"
+ms_code.Parent = b_page4
+ms_code.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ms_code.Position = UDim2.new(0.00000000, 0, 0.030000000, 0)
+ms_code.Size = UDim2.new(0, 498, 0, 30)
+ms_code.BorderColor3 = Color3.fromRGB(250, 250, 250)
+ms_code.Font = Enum.Font.Ubuntu
+ms_code.Text = "Redeem All Code"
+ms_code.TextColor3 = Color3.fromRGB(250, 250, 250)
+ms_code.TextSize = 14.000
+ms_code.MouseButton1Down:connect(function()
 code("Sub2Fer999")
 code("kittgaming")
 code("NOOB_REFUND")
@@ -2574,12 +2678,629 @@ code("StrawHatMaine")
 code("Sub2OfficialNoobie")
 code("SUB2GAMERROBOT_EXP1")
 code("THEGREATACE")
+
+end)
+
+-- // esp - fruit
+ef_f1.Parent = b_page5
+ef_f1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+ef_f1.Position = UDim2.new(0, 0, 0.0300000000, 0)
+ef_f1.Size = UDim2.new(0, 498, 0, 30)
+ef_f1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+ef_f1.Font = Enum.Font.Ubuntu
+ef_f1.Text = "   Esp Player"
+ef_f1.TextColor3 = Color3.fromRGB(255, 255, 255)
+ef_f1.TextSize = 14.000
+ef_f1.TextWrapped = true
+ef_f1.TextXAlignment = Enum.TextXAlignment.Left
+
+ef_b1.Name = "ef_b1"
+ef_b1.Parent = ef_f1
+ef_b1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ef_b1.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+ef_b1.Size = UDim2.new(0, 20, 0, 20)
+ef_b1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+ef_b1.Font = Enum.Font.SourceSans
+ef_b1.Text = ""
+ef_b1.TextColor3 = Color3.fromRGB(250, 250, 250)
+ef_b1.TextSize = 30.000
+ef_b1.MouseButton1Down:connect(function()
+--on off 
+if ef_b1.Text == "" then --on
+ef_b1.Text = "X"
+_G.ef_b1 = true
+elseif ef_b1.Text == "X" then --off
+ef_b1.Text = ""
+_G.ef_b1 = false
+end
+end)
+spawn(function()
+    while task.wait() do
+        pcall(function()
+            if _G.ef_b1 then
+                for i,v in pairs(game.Players:GetChildren()) do
+                    if v.Name ~= game.Players.LocalPlayer.Name then
+                        if not v.Character.HumanoidRootPart:FindFirstChild("PlayerESP") then
+                            local BillboardGui = Instance.new("BillboardGui")
+                            local TextLabel = Instance.new("TextLabel")
+
+                            BillboardGui.Parent = v.Character.HumanoidRootPart
+                            BillboardGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+                            BillboardGui.Active = true
+                            BillboardGui.Name = "PlayerESP"
+                            BillboardGui.AlwaysOnTop = true
+                            BillboardGui.LightInfluence = 1.000
+                            BillboardGui.Size = UDim2.new(0, 200, 0, 50)
+                            BillboardGui.StudsOffset = Vector3.new(0, 2.5, 0)
+
+                            TextLabel.Parent = BillboardGui
+                            TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+                            TextLabel.BackgroundTransparency = 1.000
+                            TextLabel.Size = UDim2.new(0, 200, 0, 50)
+                            TextLabel.Font = Enum.Font.GothamBold
+                            TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+                            TextLabel.Text.Size = 35
+                            TextLabel.TextStrokeTransparency = 0.000
+                            TextLabel.TextWrapped = true
+                        end
+                        local Dis = math.floor((game.Players.LocalPlayer.Character.HumanoidRootPart.Position - v.Character.HumanoidRootPart.Position).Magnitude)
+                        v.Character.HumanoidRootPart:FindFirstChild("PlayerESP").TextLabel.Text = v.Name.."\n\n"..Dis.." M."
+                        if v.Team == game.Players.LocalPlayer.Team then
+                            v.Character.HumanoidRootPart:FindFirstChild("PlayerESP").TextLabel.TextStrokeColor3 = Color3.new(255,0,0)
+                        else
+                            v.Character.HumanoidRootPart:FindFirstChild("PlayerESP").TextLabel.TextStrokeColor3 = Color3.new(0,255,255)
+                        end
+                    end
+                end
+            else
+                for i,v in pairs(game.Players:GetChildren()) do
+                    if v.Name ~= game.Players.LocalPlayer.Name then
+                        if v.Character.HumanoidRootPart:FindFirstChild("PlayerESP") then
+                            v.Character.HumanoidRootPart.PlayerESP:Destroy()
+                        end
+                    end
+                end
+            end
+        end)
+    end
 end)
 
 
+ef_f2.Parent = b_page5
+ef_f2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+ef_f2.Position = UDim2.new(0, 0, 0.1000000000, 0)
+ef_f2.Size = UDim2.new(0, 498, 0, 30)
+ef_f2.BorderColor3 = Color3.fromRGB(250, 250, 250)
+ef_f2.Font = Enum.Font.Ubuntu
+ef_f2.Text = "   Esp Fruit"
+ef_f2.TextColor3 = Color3.fromRGB(255, 255, 255)
+ef_f2.TextSize = 14.000
+ef_f2.TextWrapped = true
+ef_f2.TextXAlignment = Enum.TextXAlignment.Left
+
+ef_b2.Name = "ef_b2"
+ef_b2.Parent = ef_f2
+ef_b2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ef_b2.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+ef_b2.Size = UDim2.new(0, 20, 0, 20)
+ef_b2.BorderColor3 = Color3.fromRGB(250, 250, 250)
+ef_b2.Font = Enum.Font.SourceSans
+ef_b2.Text = ""
+ef_b2.TextColor3 = Color3.fromRGB(250, 250, 250)
+ef_b2.TextSize = 30.000
+ef_b2.MouseButton1Down:connect(function()
+--on off 
+if ef_b2.Text == "" then --on
+ef_b2.Text = "X"
+_G.ef_b2 = true
+elseif ef_b2.Text == "X" then --off
+ef_b2.Text = ""
+_G.ef_b2 = false
+end
+end)
+spawn(function()
+    while task.wait() do
+        pcall(function()
+            if _G.ef_b2 then
+                for i,v in pairs(game.Workspace:GetChildren()) do
+                    if v:IsA("Tool") or v.Name == "Fruit" then
+                        if v:FindFirstChild("Handle") then
+                            if not v.Handle:FindFirstChild("FruitESP") then
+                                local BillboardGui = Instance.new("BillboardGui")
+                                local TextLabel = Instance.new("TextLabel")
+
+                                BillboardGui.Parent = v.Handle
+                                BillboardGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+                                BillboardGui.Active = true
+                                BillboardGui.Name = "FruitESP"
+                                BillboardGui.AlwaysOnTop = true
+                                BillboardGui.LightInfluence = 1.000
+                                BillboardGui.Size = UDim2.new(0, 200, 0, 50)
+                                BillboardGui.StudsOffset = Vector3.new(0, 2.5, 0)
+
+                                TextLabel.Parent = BillboardGui
+                                TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+                                TextLabel.BackgroundTransparency = 1.000
+                                TextLabel.Size = UDim2.new(0, 200, 0, 50)
+                                TextLabel.Font = Enum.Font.GothamBold
+                                TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+                                TextLabel.Text.Size = 35
+                                TextLabel.TextStrokeTransparency = 0.000
+                                TextLabel.TextWrapped = true
+                            end
+                            local Dis = math.floor((game.Players.LocalPlayer.Character.HumanoidRootPart.Position - v.Handle.Position).Magnitude)
+                            v.Handle.FruitESP.TextLabel.Text = v.Name.."\n"..Dis.." M."
+                        end
+                    end
+                end
+            else
+                for i,v in pairs(game.Workspace:GetChildren()) do
+                    if v:IsA("Tool") then
+                        if v:FindFirstChild("Handle") then
+                            if v.Handle:FindFirstChild("FruitESP") then
+                                v.Handle.FruitESP:Destroy()
+                            end
+                        end
+                    end
+                end
+            end
+        end)
+    end
+end)
+
+
+ef_f3.Parent = b_page5
+ef_f3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+ef_f3.Position = UDim2.new(0, 0, 0.1700000000, 0)
+ef_f3.Size = UDim2.new(0, 498, 0, 30)
+ef_f3.BorderColor3 = Color3.fromRGB(250, 250, 250)
+ef_f3.Font = Enum.Font.Ubuntu
+ef_f3.Text = "   Esp Chest"
+ef_f3.TextColor3 = Color3.fromRGB(255, 255, 255)
+ef_f3.TextSize = 14.000
+ef_f3.TextWrapped = true
+ef_f3.TextXAlignment = Enum.TextXAlignment.Left
+
+ef_b3.Name = "ef_b3"
+ef_b3.Parent = ef_f3
+ef_b3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ef_b3.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+ef_b3.Size = UDim2.new(0, 20, 0, 20)
+ef_b3.BorderColor3 = Color3.fromRGB(250, 250, 250)
+ef_b3.Font = Enum.Font.SourceSans
+ef_b3.Text = ""
+ef_b3.TextColor3 = Color3.fromRGB(250, 250, 250)
+ef_b3.TextSize = 30.000
+ef_b3.MouseButton1Down:connect(function()
+--on off 
+if ef_b3.Text == "" then --on
+ef_b3.Text = "X"
+_G.ef_b3 = true
+elseif ef_b3.Text == "X" then --off
+ef_b3.Text = ""
+_G.ef_b3 = false
+end
+end)
+
+spawn(function()
+    while task.wait() do
+        pcall(function()
+            if _G.ef_b3 then
+                for i,v in pairs(game.Workspace:GetChildren()) do
+                    if v.Name == "Chest1" or v.Name == "Chest2" or v.Name == "Chest3" then
+                        if not v:FindFirstChild("ChestESP") then
+                            local BillboardGui = Instance.new("BillboardGui")
+                            local TextLabel = Instance.new("TextLabel")
+
+                            BillboardGui.Parent = v
+                            BillboardGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+                            BillboardGui.Active = true
+                            BillboardGui.Name = "ChestESP"
+                            BillboardGui.AlwaysOnTop = true
+                            BillboardGui.LightInfluence = 1.000
+                            BillboardGui.Size = UDim2.new(0, 200, 0, 50)
+                            BillboardGui.StudsOffset = Vector3.new(0, 2.5, 0)
+
+                            TextLabel.Parent = BillboardGui
+                            TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+                            TextLabel.BackgroundTransparency = 1.000
+                            TextLabel.Size = UDim2.new(0, 200, 0, 50)
+                            TextLabel.Font = Enum.Font.GothamBold
+                            TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+                            TextLabel.Text.Size = 35
+                            TextLabel.TextStrokeTransparency = 0.000
+                            TextLabel.TextWrapped = true
+                        end
+                        local Dis = math.floor((game.Players.LocalPlayer.Character.HumanoidRootPart.Position - v.Position).Magnitude)
+                        v.ChestESP.TextLabel.Text = v.Name.."\n"..Dis.." M."
+                        if v.Name == "Chest1" then
+                            v:FindFirstChild("ChestESP").TextLabel.TextStrokeColor3 = Color3.new(160,160,160)
+                        elseif v.Name == "Chest2" then
+                            v:FindFirstChild("ChestESP").TextLabel.TextStrokeColor3 = Color3.new(255,255,0)
+                        elseif v.Name == "Chest3" then
+                            v:FindFirstChild("ChestESP").TextLabel.TextStrokeColor3 = Color3.new(0,255,255)
+                        end
+                    end
+                end
+            else
+                for i,v in pairs(game.Workspace:GetChildren()) do
+                    if v.Name == "Chest1" or v.Name == "Chest2" or v.Name == "Chest3" then
+                        if v:FindFirstChild("ChestESP") then
+                            v.ChestESP:Destroy()
+                        end
+                    end
+                end
+            end
+        end)
+    end
+end)
+
+
+ef_f4.Parent = b_page5
+ef_f4.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+ef_f4.Position = UDim2.new(0, 0, 0.2400000000, 0)
+ef_f4.Size = UDim2.new(0, 498, 0, 30)
+ef_f4.BorderColor3 = Color3.fromRGB(250, 250, 250)
+ef_f4.Font = Enum.Font.Ubuntu
+ef_f4.Text = "   Esp Flower"
+ef_f4.TextColor3 = Color3.fromRGB(255, 255, 255)
+ef_f4.TextSize = 14.000
+ef_f4.TextWrapped = true
+ef_f4.TextXAlignment = Enum.TextXAlignment.Left
+
+ef_b4.Name = "ef_b4"
+ef_b4.Parent = ef_f4
+ef_b4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ef_b4.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+ef_b4.Size = UDim2.new(0, 20, 0, 20)
+ef_b4.BorderColor3 = Color3.fromRGB(250, 250, 250)
+ef_b4.Font = Enum.Font.SourceSans
+ef_b4.Text = ""
+ef_b4.TextColor3 = Color3.fromRGB(250, 250, 250)
+ef_b4.TextSize = 30.000
+ef_b4.MouseButton1Down:connect(function()
+--on off 
+if ef_b4.Text == "" then --on
+ef_b4.Text = "X"
+_G.ef_f4 = true
+elseif ef_b4.Text == "X" then --off
+ef_b4.Text = ""
+_G.ef_b4 = false
+end
+end)
+
+ef_f5.Parent = b_page5
+ef_f5.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+ef_f5.Position = UDim2.new(0, 0, 0.3100000000, 0)
+ef_f5.Size = UDim2.new(0, 498, 0, 30)
+ef_f5.BorderColor3 = Color3.fromRGB(250, 250, 250)
+ef_f5.Font = Enum.Font.Ubuntu
+ef_f5.Text = "   Esp Island"
+ef_f5.TextColor3 = Color3.fromRGB(255, 255, 255)
+ef_f5.TextSize = 14.000
+ef_f5.TextWrapped = true
+ef_f5.TextXAlignment = Enum.TextXAlignment.Left
+
+ef_b5.Name = "ef_b5"
+ef_b5.Parent = ef_f5
+ef_b5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ef_b5.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+ef_b5.Size = UDim2.new(0, 20, 0, 20)
+ef_b5.BorderColor3 = Color3.fromRGB(250, 250, 250)
+ef_b5.Font = Enum.Font.SourceSans
+ef_b5.Text = ""
+ef_b5.TextColor3 = Color3.fromRGB(250, 250, 250)
+ef_b5.TextSize = 30.000
+ef_b5.MouseButton1Down:connect(function()
+--on off 
+if ef_b5.Text == "" then --on
+ef_b5.Text = "X"
+_G.ef_b5 = true
+elseif ef_b5.Text == "X" then --off
+ef_b5.Text = ""
+_G.ef_b5 = false
+end
+end)
+
+spawn(function()
+    while task.wait() do
+        pcall(function()
+            if _G.ef_b5 then
+                for i,v in pairs(game:GetService("Workspace")["_WorldOrigin"].Locations:GetChildren()) do
+                    if not v:FindFirstChild("IslandEsp") then
+                        local BillboardGui = Instance.new("BillboardGui")
+                        local TextLabel = Instance.new("TextLabel")
+
+                        BillboardGui.Parent = v
+                        BillboardGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+                        BillboardGui.Active = true
+                        BillboardGui.Name = "IslandEsp"
+                        BillboardGui.AlwaysOnTop = true
+                        BillboardGui.LightInfluence = 1.000
+                        BillboardGui.Size = UDim2.new(0, 200, 0, 50)
+                        BillboardGui.StudsOffset = Vector3.new(0, 2.5, 0)
+
+                        TextLabel.Parent = BillboardGui
+                        TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+                        TextLabel.BackgroundTransparency = 1.000
+                        TextLabel.Size = UDim2.new(0, 200, 0, 50)
+                        TextLabel.Font = Enum.Font.GothamBold
+                        TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+                        TextLabel.Text.Size = 35
+                        TextLabel.TextStrokeTransparency = 0.000
+                        TextLabel.TextWrapped = true
+                    end
+                    local Dis = math.floor((game.Players.LocalPlayer.Character.HumanoidRootPart.Position - v.Position).Magnitude / 10)
+                    v.IslandEsp.TextLabel.Text = v.Name.."\n".."["..Dis.."]"
+                end
+            else
+                for i,v in pairs (game:GetService("Workspace")["_WorldOrigin"].Locations:GetChildren()) do
+                    if v:FindFirstChild("IslandEsp") then
+                        v.IslandEsp:Destroy()
+                    end
+                end
+            end
+        end)
+    end
+end)
+
+ef_f6.Parent = b_page5
+ef_f6.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+ef_f6.Position = UDim2.new(0, 0, 0.3800000000, 0)
+ef_f6.Size = UDim2.new(0, 498, 0, 30)
+ef_f6.BorderColor3 = Color3.fromRGB(250, 250, 250)
+ef_f6.Font = Enum.Font.Ubuntu
+ef_f6.Text = "   Auto Teleport Fruit"
+ef_f6.TextColor3 = Color3.fromRGB(255, 255, 255)
+ef_f6.TextSize = 14.000
+ef_f6.TextWrapped = true
+ef_f6.TextXAlignment = Enum.TextXAlignment.Left
+
+ef_b6.Name = "ef_b6"
+ef_b6.Parent = ef_f6
+ef_b6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ef_b6.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+ef_b6.Size = UDim2.new(0, 20, 0, 20)
+ef_b6.BorderColor3 = Color3.fromRGB(250, 250, 250)
+ef_b6.Font = Enum.Font.SourceSans
+ef_b6.Text = ""
+ef_b6.TextColor3 = Color3.fromRGB(250, 250, 250)
+ef_b6.TextSize = 30.000
+ef_b6.MouseButton1Down:connect(function()
+--on off 
+if ef_b6.Text == "" then --on
+ef_b6.Text = "X"
+_G.ef_b6 = true
+elseif ef_b6.Text == "X" then --off
+ef_b6.Text = ""
+_G.ef_b6 = false
+end
+end)
+
+game:GetService('RunService').RenderStepped:connect(function()
+            if _G.ef_b6 then
+                for i,v in pairs(game.Workspace:GetDescendants()) do
+      if v.Name == "Fruit" then --name mob
+      local humanoid = game.Players.LocalPlayer.Character.Humanoid 
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
+                    local Distance = (v.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                    if Distance < 150 then
+                        Speed = 20000
+                    elseif Distance < 200 then
+                        Speed = 5000
+                    elseif Distance < 300 then
+                        Speed = 500
+                    elseif Distance < 500 then
+                        Speed = 200
+                    elseif Distance < 1000 then
+                        Speed = 120
+                    elseif Distance >= 2000 then
+                        Speed = 100
+                    end
+                    game:GetService("TweenService"):Create(
+                        game.Players.LocalPlayer.Character.HumanoidRootPart,
+                        TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
+                        {CFrame = v.CFrame}
+                    ):Play()
+                    if _G.Stop_Tween==true then
+                if _G.ef_b6 then
+                        game:GetService("TweenService"):Create(
+                        game.Players.LocalPlayer.Character.HumanoidRootPart,
+                        TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
+                            {CFrame = v.CFrame}
+                        ):Cancel()
+                    end
+                    end
+                    end
+                    end
+             end end)       
+                
+
+
+ef_f7.Parent = b_page5
+ef_f7.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+ef_f7.Position = UDim2.new(0, 0, 0.4500000000, 0)
+ef_f7.Size = UDim2.new(0, 498, 0, 30)
+ef_f7.BorderColor3 = Color3.fromRGB(250, 250, 250)
+ef_f7.Font = Enum.Font.Ubuntu
+ef_f7.Text = "   Auto Store Fruit"
+ef_f7.TextColor3 = Color3.fromRGB(255, 255, 255)
+ef_f7.TextSize = 14.000
+ef_f7.TextWrapped = true
+ef_f7.TextXAlignment = Enum.TextXAlignment.Left
+
+ef_b7.Name = "ef_b7"
+ef_b7.Parent = ef_f7
+ef_b7.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ef_b7.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+ef_b7.Size = UDim2.new(0, 20, 0, 20)
+ef_b7.BorderColor3 = Color3.fromRGB(250, 250, 250)
+ef_b7.Font = Enum.Font.SourceSans
+ef_b7.Text = ""
+ef_b7.TextColor3 = Color3.fromRGB(250, 250, 250)
+ef_b7.TextSize = 30.000
+ef_b7.MouseButton1Down:connect(function()
+--on off 
+if ef_b7.Text == "" then --on
+ef_b7.Text = "X"
+_G.ef_b7 = true
+elseif ef_b7.Text == "X" then --off
+ef_b7.Text = ""
+_G.ef_b7 = false
+end
+end)
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.ef_b7 then --script
+if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Bomb Fruit") or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Bomb Fruit") then
+                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Bomb-Bomb",game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Bomb Fruit"))
+                end
+                if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Spike Fruit") or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Spike Fruit") then
+                mele()
+                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Spike-Spike",game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Spike Fruit"))
+                end
+                if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Chop Fruit") or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Chop Fruit") then
+                mele()
+                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Chop-Chop",game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Chop Fruit"))
+                end
+                if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Spring Fruit") or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Spring Fruit") then
+                mele()
+                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Spring-Spring",game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Spring Fruit"))
+                end
+                if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Kilo Fruit") or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Kilo Fruit") then
+                mele()
+                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Kilo-Kilo",game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Kilo Fruit"))
+                end
+                if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Smoke Fruit") or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Smoke Fruit") then
+                mele()
+                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Smoke-Smoke",game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Smoke Fruit"))
+                end
+                if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Spin Fruit") or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Spin Fruit") then
+                mele()
+                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Spin-Spin",game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Spin Fruit"))
+                end
+                if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Flame Fruit") or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Flame Fruit") then
+                mele()
+                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Flame-Flame",game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Flame Fruit"))
+                end
+                if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Falcon Fruit") or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Bird: Falcon Fruit") then
+                mele()
+                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Bird-Bird: Falcon",game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Falcon Fruit"))
+                end
+                if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Ice Fruit") or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Ice Fruit") then
+                mele()
+                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Ice-Ice",game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Ice Fruit"))
+                end
+                if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Sand Fruit") or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Sand Fruit") then
+                mele()
+                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Sand-Sand",game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Sand Fruit"))
+                end
+                if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Dark Fruit") or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Dark Fruit") then
+                mele()
+                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Dark-Dark",game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Dark Fruit"))
+                end
+                if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Revive Fruit") or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Revive Fruit") then
+                mele()
+                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Revive-Revive",game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Revive Fruit"))
+                end
+                if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Revive Fruit") or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Revive Fruit") then
+                mele()
+                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Revive-Revive",game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Revive Fruit"))
+                end
+                if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Diamond Fruit") or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Diamond Fruit") then
+                mele()
+                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Diamond-Diamond",game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Diamond Fruit"))
+                end
+                if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Light Fruit") or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Light Fruit") then
+                mele()
+                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Light-Light",game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Light Fruit"))
+                end
+                if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Love Fruit") or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Love Fruit") then
+                mele()
+                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Love-Love",game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Love Fruit"))
+                end
+                if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Rubber Fruit") or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Rubber Fruit") then
+                mele()
+                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Rubber-Rubber",game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Rubber Fruit"))
+                end
+                if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Barrier Fruit") or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Barrier Fruit") then
+                mele()
+                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Barrier-Barrier",game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Barrier Fruit"))
+                end
+                if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Magma Fruit") or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Magma Fruit") then
+                mele()
+                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Magma-Magma",game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Magma Fruit"))
+                end
+                if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Quake Fruit") or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Quake Fruit") then
+                mele()
+                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Quake-Quake",game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Quake Fruit"))
+                end
+                if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Human: Buddha Fruit") or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Human: Buddha Fruit") then
+                mele()
+                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Human-Human: Buddha",game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Human: Buddha Fruit"))
+                end
+                if game:GetService("Players").LocalPlayer.Character:FindFirstChild("String Fruit") or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("String Fruit") then
+                mele()
+                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","String-String",game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("String Fruit"))
+                end
+                if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Bird: Phoenix Fruit") or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Bird: Phoenix Fruit") then
+                mele()
+                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Bird-Bird: Phoenix",game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Bird: Phoenix Fruit"))
+                end
+                if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Portal Fruit") or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Portal Fruit") then
+                mele()
+                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Portal-Portal",game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Portal Fruit"))
+                end
+                if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Rumble Fruit") or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Rumble Fruit") then
+                mele()
+                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Rumble-Rumble",game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Rumble Fruit"))
+                end
+                if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Paw Fruit") or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Paw Fruit") then
+                mele()
+                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Paw-Paw",game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Paw Fruit"))
+                end
+                if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Blizzard Fruit") or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Blizzard Fruit") then
+                mele()
+                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Blizzard-Blizzard",game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Blizzard Fruit"))
+                end
+                if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Gravity Fruit") or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Gravity Fruit") then
+                mele()
+                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Gravity-Gravity",game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Gravity Fruit"))
+                end
+                if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Dough Fruit") or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Dough Fruit") then
+                mele()
+                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Dough-Dough",game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Dough Fruit"))
+                end
+                if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Shadow Fruit") or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Shadow Fruit") then
+                mele()
+                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Shadow-Shadow",game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Shadow Fruit"))
+                end
+                if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Venom Fruit") or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Venom Fruit") then
+                mele()
+                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Venom-Venom",game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Venom Fruit"))
+                end
+                if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Control Fruit") or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Control Fruit") then
+                mele()
+                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Control-Control",game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Control Fruit"))
+                end
+                if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Spirit Fruit") or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Spirit Fruit") then
+                mele()
+                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Spirit-Spirit",game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Spirit Fruit"))
+                end
+                if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Dragon Fruit") or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Dragon Fruit") then
+                mele()
+                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Dragon-Dragon",game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Dragon Fruit"))
+                end
+                if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Leopard Fruit") or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Leopard Fruit") then
+                mele()
+                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Leopard-Leopard",game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Leopard Fruit"))
+                end
+end
+end)
+
 
 -- // Setting
-st_f1.Parent = b_page8
+st_f1.Parent = b_page9
 st_f1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
 st_f1.Position = UDim2.new(0, 0, 0.0300000000, 0)
 st_f1.Size = UDim2.new(0, 498, 0, 30)
@@ -2622,7 +3343,7 @@ _G.st_b1 = false
 end
 end)
 
-st_f2.Parent = b_page8
+st_f2.Parent = b_page9
 st_f2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
 st_f2.Position = UDim2.new(0, 0, 0.1000000000, 0)
 st_f2.Size = UDim2.new(0, 498, 0, 30)
@@ -2655,6 +3376,7 @@ _G.st_b2 = false
 end
 end)
 _G.st_b2 = true
+if game.PlaceId == 2753915549 or game.PlaceId == 4442272183 or game.PlaceId == 7449423635 then -- sea3
 game:GetService('RunService').RenderStepped:connect(function()
 if _G.st_b2 then --script
 if game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then                
@@ -2665,10 +3387,10 @@ if game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
                 end
 end
-end)
+end) end
 
 
-st_f3.Parent = b_page8
+st_f3.Parent = b_page9
 st_f3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
 st_f3.Position = UDim2.new(0, 0, 0.1700000000, 0)
 st_f3.Size = UDim2.new(0, 498, 0, 30)
@@ -2704,7 +3426,7 @@ end
 end)
 _G.FastAttack = true --on
 
-st_f4.Parent = b_page8
+st_f4.Parent = b_page9
 st_f4.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
 st_f4.Position = UDim2.new(0, 0, 0.2400000000, 0)
 st_f4.Size = UDim2.new(0, 498, 0, 30)
@@ -2740,6 +3462,38 @@ end
 end)
 _G.bringmob = true
 
+st_f5.Parent = b_page9
+st_f5.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+st_f5.Position = UDim2.new(0, 0, 0.3100000000, 0)
+st_f5.Size = UDim2.new(0, 498, 0, 30)
+st_f5.BorderColor3 = Color3.fromRGB(250, 250, 250)
+st_f5.Font = Enum.Font.Ubuntu
+st_f5.Text = "   Distance : "
+st_f5.TextColor3 = Color3.fromRGB(255, 255, 255)
+st_f5.TextSize = 14.000
+st_f5.TextWrapped = true
+st_f5.TextXAlignment = Enum.TextXAlignment.Left
+
+st_b5.Name = "st_b5"
+st_b5.Parent = st_f5
+st_b5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+st_b5.Position = UDim2.new(0.13200000, 0, 0, 0)
+st_b5.Size = UDim2.new(0, 30, 0, 30)
+st_b5.Font = Enum.Font.Ubuntu
+st_b5.BorderColor3 = Color3.fromRGB(250, 250, 250)
+st_b5.ClearTextOnFocus = false
+st_b5.Text = "40"
+st_b5.TextColor3 = Color3.fromRGB(250, 250, 250)
+st_b5.TextSize = 14.000
+
+game:GetService('RunService').RenderStepped:connect(function()
+if st_b5.Text > "50" then
+st_b5.Text = 50
+end
+if st_b5.Text == "" then
+st_b5.Text = 0
+end
+end)
 
 
 
@@ -2756,6 +3510,7 @@ local function LDLMGWH_fake_script() -- // Farm
 		b_page6.Visible = false
 		b_page7.Visible = false
 		b_page8.Visible = false
+		b_page9.Visible = false
     TextLabel.Text = "   NTT HUB | Farm"
 	end)
 end
@@ -2771,6 +3526,7 @@ local function OJTG_fake_script() -- scripts.LocalScript
 		b_page6.Visible = false
 		b_page7.Visible = false
 		b_page8.Visible = false
+		b_page9.Visible = false
     TextLabel.Text = "   NTT HUB | Stat" 
 	end)
 end
@@ -2787,11 +3543,12 @@ local function OJTG1_fake_script() -- scripts.LocalScript
 		b_page6.Visible = false
 		b_page7.Visible = false
 		b_page8.Visible = false
+		b_page9.Visible = false
     TextLabel.Text = "   NTT HUB | Raid" 
 	end)
 end
     
-coroutine.wrap(OJTG1_fake_script)() -- Miss - Esp
+coroutine.wrap(OJTG1_fake_script)() -- Miss - shop
 local function OJTG2_fake_script() -- scripts.LocalScript 
 	local script = Instance.new('LocalScript', b_4)
 	script.Parent.MouseButton1Down:connect(function()   
@@ -2803,11 +3560,12 @@ local function OJTG2_fake_script() -- scripts.LocalScript
 		b_page6.Visible = false
 		b_page7.Visible = false
 		b_page8.Visible = false
-    TextLabel.Text = "   NTT HUB | Miss - Esp" 
+		b_page9.Visible = false
+    TextLabel.Text = "   NTT HUB | Miss - Shop" 
 	end)
 end
 
-coroutine.wrap(OJTG2_fake_script)() -- // Shop
+coroutine.wrap(OJTG2_fake_script)() -- // esp - fruit
 local function OJTG3_fake_script() -- scripts.LocalScript 
 	local script = Instance.new('LocalScript', b_5)
 	script.Parent.MouseButton1Down:connect(function()   
@@ -2819,7 +3577,8 @@ local function OJTG3_fake_script() -- scripts.LocalScript
 		b_page6.Visible = false
 		b_page7.Visible = false
 		b_page8.Visible = false
-    TextLabel.Text = "   NTT HUB | Shop" 
+		b_page9.Visible = false
+    TextLabel.Text = "   NTT HUB | Esp - Fruit" 
 	end)
 end
 
@@ -2835,7 +3594,8 @@ local function OJTG4_fake_script() -- scripts.LocalScript
 		b_page6.Visible = true
 		b_page7.Visible = false
 		b_page8.Visible = false
-    TextLabel.Text = "   NTT HUB | Item - Fruit" 
+		b_page9.Visible = false
+    TextLabel.Text = "   NTT HUB | Get Item" 
 	end)
 end
 
@@ -2851,7 +3611,8 @@ local function OJTG5_fake_script() -- scripts.LocalScript
 		b_page6.Visible = false
 		b_page7.Visible = true
 		b_page8.Visible = false
-    TextLabel.Text = "   NTT HUB | Teleport" 
+		b_page9.Visible = false
+    TextLabel.Text = "   NTT HUB | Combat" 
 	end)
 end
 
@@ -2867,8 +3628,30 @@ local function OJTG6_fake_script() -- scripts.LocalScript
 		b_page6.Visible = false
 		b_page7.Visible = false
 		b_page8.Visible = true
+		b_page9.Visible = false
+    TextLabel.Text = "   NTT HUB | Teleport" 
+	end)
+end
+
+coroutine.wrap(OJTG6_fake_script)() -- Setting
+local function OJTG7_fake_script() -- scripts.LocalScript 
+	local script = Instance.new('LocalScript', b_9)
+	script.Parent.MouseButton1Down:connect(function()   
+	b_page1.Visible = false
+		b_page2.Visible = false
+		b_page3.Visible = false
+		b_page4.Visible = false
+		b_page5.Visible = false
+		b_page6.Visible = false
+		b_page7.Visible = false
+		b_page8.Visible = false
+		b_page9.Visible = true
     TextLabel.Text = "   NTT HUB | Setting" 
 	end)
 end
 
-coroutine.wrap(OJTG6_fake_script)()
+coroutine.wrap(OJTG7_fake_script)()
+
+if game.CoreGui.NTTGUI.exit == Visible then
+game.CoreGui.NTTGUI:Destroy()
+end
