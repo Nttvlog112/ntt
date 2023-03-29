@@ -51,8 +51,9 @@ local im3 = Instance.new("ImageLabel")
 
 --Properties:
 
-SimpleSpy2.Name = "SimpleSpy2"
-SimpleSpy2.ResetOnSpawn = false
+SimpleSpy2 = "SimpleSpy2"
+SimpleSpy2.Parent = game.CoreGui
+SimpleSpy2.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 main.Name = "main"
 main.Parent = SimpleSpy2 -- nằm trên khung ẩn
