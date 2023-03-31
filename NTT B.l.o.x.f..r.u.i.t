@@ -210,6 +210,9 @@ main.BackgroundColor3 = Color3.fromRGB(0, 0, 0) --màu khung
 main.Position = UDim2.new(0.180126051, 0, 0.228999169, 0) -- vị trí đứng
 main.Size = UDim2.new(0, 640, 0, 280) -- kích cở
 main.BorderColor3 = Color3.fromRGB(250, 250, 250)
+
+main.Active = true
+main.Draggable = true
 main.Visible = false
 
 bar1.Name = "bar1"
