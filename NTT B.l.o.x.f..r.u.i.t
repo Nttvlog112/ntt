@@ -1,5 +1,4 @@
 
---NTT --blox fruit
 
 --game.CoreGui.NTTGUI:Destroy()
 
@@ -24,6 +23,7 @@ local b_page9 = Instance.new("ScrollingFrame") --setting
 --bar 
 local bar = Instance.new("Frame")
 local bar1 = Instance.new("ScrollingFrame")
+bar_1 = Instance.new("Frame")
 
 --button
 local b_1 = Instance.new("TextButton") --main
@@ -341,6 +341,12 @@ b_9.TextWrapped = false
 b_9.TextXAlignment = Enum.TextXAlignment.Left
 
 -- // Name Player
+
+bar_1.Name = "bar_1"
+bar_1.Parent = main
+bar_1.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+bar_1.Position = UDim2.new(0, 0, 0.910000000, 0)
+bar_1.Size = UDim2.new(0, 100, 0, 25)
 
 prl.Name = "prl"
 prl.Parent = main
@@ -2216,6 +2222,7 @@ _G.r_b3 = true
 elseif r_b3.Text == "X" then --off
 r_b3.Text = ""
 _G.r_b3 = false
+stoptp()
 end
 end)
 
@@ -2352,15 +2359,10 @@ end
 end)
 
 game:GetService('RunService').RenderStepped:connect(function()
-if _G.r_b5 then --script
-   if game.Players.LocalPlayer.PlayerGui.Main.Timer.Visible == true then
-local humanoid = game.Players.LocalPlayer.Character.Humanoid 
-humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
-                   
+if _G.r_b5 then --script             
 for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
       if v.ClassName == "Model" then --name mob     
-     usetool()
-       if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 1500 then
+       if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 700 then
         v.Humanoid.Health = 0
        v.Humanoid:ChangeState(14)
       v.HumanoidRootPart.Size = Vector3.new(50, 50, 20)     --size hix box  
@@ -2375,7 +2377,7 @@ if v.Humanoid:FindFirstChild("Animator") then
                         end
                         sethiddenproperty(game:GetService("Players").LocalPlayer,"SimulationRadius",math.huge)                                        
                                       
-                 end end end end
+                 end end end 
 end
 end)
 
@@ -3187,7 +3189,7 @@ ms_slec.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 ms_slec.Size = UDim2.new(0, 120, 0, 30)
 ms_slec.BorderColor3 = Color3.fromRGB(250, 250, 250)
 ms_slec.Font = Enum.Font.SourceSans
-ms_slec.Text = "Mele : Select"
+ms_slec.Text = "Mele : Select Buy"
 ms_slec.TextColor3 = Color3.fromRGB(250, 250, 250)
 ms_slec.TextSize = 18.000
 ms_slec.MouseButton1Down:connect(function()
@@ -3212,8 +3214,46 @@ _G.ms_b1 = true
 
 game:GetService('RunService').RenderStepped:connect(function()
 if _G.ms_b1 then --script
+if ms_slec.Text == "Black Leg" then
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyBlackLeg")
+end
 
+if ms_slec.Text == "Electro" then
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyElectro")
+end
 
+if ms_slec.Text == "Fishman Karate" then
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyFishmanKarate")
+end
+
+if ms_slec.Text == "Dragon Claw" then
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","DragonClaw","1")
+                            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","DragonClaw","2")
+end
+
+if ms_slec.Text == "Death Step" then
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDeathStep")
+end
+
+if ms_slec.Text == "Electric Claw" then
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyElecteicClaw")
+end
+
+if ms_slec.Text == "Sharkman Karate" then
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySharkmanKarate")
+end
+
+if ms_slec.Text == "Dragon Talon" then
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDragonTalon")
+end
+
+if ms_slec.Text == "Super Human" then
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySuperhuman")
+end
+
+if ms_slec.Text == "God Human" then
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyGodhuman")
+end
 
 end
 end)
@@ -3272,7 +3312,7 @@ ms_mele3.Text = "Fishman Karate"
 ms_mele3.TextColor3 = Color3.fromRGB(250, 250, 250)
 ms_mele3.TextSize = 15.000
 ms_mele3.MouseButton1Down:connect(function()
-ms_slec.Text = "Tool : Sword"
+ms_slec.Text = "Fishman Karate"
 ms_melebar.Visible = false
 end)
 
@@ -3287,7 +3327,7 @@ ms_mele4.Text = "Dragon Claw"
 ms_mele4.TextColor3 = Color3.fromRGB(250, 250, 250)
 ms_mele4.TextSize = 15.000
 ms_mele4.MouseButton1Down:connect(function()
-ms_slec.Text = "Tool : Sword"
+ms_slec.Text = "Dragon Claw"
 ms_melebar.Visible = false
 end)
 
@@ -3302,7 +3342,7 @@ ms_mele5.Text = "Death Step"
 ms_mele5.TextColor3 = Color3.fromRGB(250, 250, 250)
 ms_mele5.TextSize = 15.000
 ms_mele5.MouseButton1Down:connect(function()
-ms_slec.Text = "Tool : Sword"
+ms_slec.Text = "Death Step"
 ms_melebar.Visible = false
 end)
 
@@ -3317,7 +3357,7 @@ ms_mele6.Text = "Electric Claw"
 ms_mele6.TextColor3 = Color3.fromRGB(250, 250, 250)
 ms_mele6.TextSize = 15.000
 ms_mele6.MouseButton1Down:connect(function()
-ms_slec.Text = "Tool : Sword"
+ms_slec.Text = "Electeic Claw"
 ms_melebar.Visible = false
 end)
 
@@ -3332,7 +3372,7 @@ ms_mele7.Text = "Sharkman Karate"
 ms_mele7.TextColor3 = Color3.fromRGB(250, 250, 250)
 ms_mele7.TextSize = 15.000
 ms_mele7.MouseButton1Down:connect(function()
-ms_slec.Text = "Tool : Sword"
+ms_slec.Text = "Sharkman Karate"
 ms_melebar.Visible = false
 end)
 
@@ -3347,7 +3387,7 @@ ms_mele8.Text = "Dragon Talon"
 ms_mele8.TextColor3 = Color3.fromRGB(250, 250, 250)
 ms_mele8.TextSize = 15.000
 ms_mele8.MouseButton1Down:connect(function()
-ms_slec.Text = "Tool : Sword"
+ms_slec.Text = "Dragon Talon"
 ms_melebar.Visible = false
 end)
 
@@ -3362,7 +3402,7 @@ ms_mele9.Text = "Super Human"
 ms_mele9.TextColor3 = Color3.fromRGB(250, 250, 250)
 ms_mele9.TextSize = 15.000
 ms_mele9.MouseButton1Down:connect(function()
-ms_slec.Text = "Tool : Sword"
+ms_slec.Text = "Super Human"
 ms_melebar.Visible = false
 end)
 
@@ -3377,9 +3417,226 @@ ms_mele10.Text = "God Human"
 ms_mele10.TextColor3 = Color3.fromRGB(250, 250, 250)
 ms_mele10.TextSize = 15.000
 ms_mele10.MouseButton1Down:connect(function()
-ms_slec.Text = "Tool : Sword"
+ms_slec.Text = "God Human"
 ms_melebar.Visible = false
 end)
+
+ms_f2.Parent = b_page4
+ms_f2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+ms_f2.Position = UDim2.new(0, 0, 0.1700000000, 0)
+ms_f2.Size = UDim2.new(0, 498, 0, 30)
+ms_f2.BorderColor3 = Color3.fromRGB(250, 250, 250)
+ms_f2.Font = Enum.Font.Ubuntu
+ms_f2.Text = "   Auto Buy All Gun - Sword"
+ms_f2.TextColor3 = Color3.fromRGB(255, 255, 255)
+ms_f2.TextSize = 14.000
+ms_f2.TextWrapped = true
+ms_f2.TextXAlignment = Enum.TextXAlignment.Left
+
+ms_b2.Name = "ms_b2"
+ms_b2.Parent = ms_f2
+ms_b2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ms_b2.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+ms_b2.Size = UDim2.new(0, 20, 0, 20)
+ms_b2.BorderColor3 = Color3.fromRGB(250, 250, 250)
+ms_b2.Font = Enum.Font.SourceSans
+ms_b2.Text = ""
+ms_b2.TextColor3 = Color3.fromRGB(250, 250, 250)
+ms_b2.TextSize = 30.000
+ms_b2.MouseButton1Down:connect(function()
+--on off 
+if ms_b2.Text == "" then --on
+ms_b2.Text = "X"
+_G.ms_b2 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.ms_b2 then --script
+
+
+
+end
+end)
+elseif ms_b2.Text == "X" then --off
+ms_b2.Text = ""
+_G.ms_b2 = false
+end
+end)
+
+ms_f3.Parent = b_page4
+ms_f3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+ms_f3.Position = UDim2.new(0, 0, 0.2400000000, 0)
+ms_f3.Size = UDim2.new(0, 498, 0, 30)
+ms_f3.BorderColor3 = Color3.fromRGB(250, 250, 250)
+ms_f3.Font = Enum.Font.Ubuntu
+ms_f3.Text = "   Auto Random"
+ms_f3.TextColor3 = Color3.fromRGB(255, 255, 255)
+ms_f3.TextSize = 14.000
+ms_f3.TextWrapped = true
+ms_f3.TextXAlignment = Enum.TextXAlignment.Left
+
+ms_b3.Name = "ms_b3"
+ms_b3.Parent = ms_f3
+ms_b3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ms_b3.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+ms_b3.Size = UDim2.new(0, 20, 0, 20)
+ms_b3.BorderColor3 = Color3.fromRGB(250, 250, 250)
+ms_b3.Font = Enum.Font.SourceSans
+ms_b3.Text = ""
+ms_b3.TextColor3 = Color3.fromRGB(250, 250, 250)
+ms_b3.TextSize = 30.000
+ms_b3.MouseButton1Down:connect(function()
+--on off 
+if ms_b3.Text == "" then --on
+ms_b3.Text = "X"
+_G.ms_b3 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.ms_b3 then --script
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Cousin","Buy")
+end
+end)
+elseif ms_b3.Text == "X" then --off
+ms_b3.Text = ""
+_G.ms_b3 = false
+end
+end)
+
+ms_f4.Parent = b_page4
+ms_f4.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+ms_f4.Position = UDim2.new(0, 0, 0.3100000000, 0)
+ms_f4.Size = UDim2.new(0, 498, 0, 30)
+ms_f4.BorderColor3 = Color3.fromRGB(250, 250, 250)
+ms_f4.Font = Enum.Font.Ubuntu
+ms_f4.Text = "   Auto Random Bone"
+ms_f4.TextColor3 = Color3.fromRGB(255, 255, 255)
+ms_f4.TextSize = 14.000
+ms_f4.TextWrapped = true
+ms_f4.TextXAlignment = Enum.TextXAlignment.Left
+
+ms_b4.Name = "ms_b4"
+ms_b4.Parent = ms_f4
+ms_b4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ms_b4.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+ms_b4.Size = UDim2.new(0, 20, 0, 20)
+ms_b4.BorderColor3 = Color3.fromRGB(250, 250, 250)
+ms_b4.Font = Enum.Font.SourceSans
+ms_b4.Text = ""
+ms_b4.TextColor3 = Color3.fromRGB(250, 250, 250)
+ms_b4.TextSize = 30.000
+ms_b4.MouseButton1Down:connect(function()
+--on off 
+if ms_b4.Text == "" then --on
+ms_b4.Text = "X"
+_G.ms_b4 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.ms_b4 then --script
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Bones","Buy",1,1)
+end
+end)
+elseif ms_b4.Text == "X" then --off
+ms_b4.Text = ""
+_G.ms_b4 = false
+end
+end)
+
+ms_f5.Parent = b_page4
+ms_f5.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+ms_f5.Position = UDim2.new(0, 0, 0.3800000000, 0)
+ms_f5.Size = UDim2.new(0, 498, 0, 30)
+ms_f5.BorderColor3 = Color3.fromRGB(250, 250, 250)
+ms_f5.Font = Enum.Font.Ubuntu
+ms_f5.Text = "   Auto Buy Sword Legend"
+ms_f5.TextColor3 = Color3.fromRGB(255, 255, 255)
+ms_f5.TextSize = 14.000
+ms_f5.TextWrapped = true
+ms_f5.TextXAlignment = Enum.TextXAlignment.Left
+
+ms_b5.Name = "ms_b5"
+ms_b5.Parent = ms_f5
+ms_b5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ms_b5.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+ms_b5.Size = UDim2.new(0, 20, 0, 20)
+ms_b5.BorderColor3 = Color3.fromRGB(250, 250, 250)
+ms_b5.Font = Enum.Font.SourceSans
+ms_b5.Text = ""
+ms_b5.TextColor3 = Color3.fromRGB(250, 250, 250)
+ms_b5.TextSize = 30.000
+ms_b5.MouseButton1Down:connect(function()
+--on off 
+if ms_b5.Text == "" then --on
+ms_b5.Text = "X"
+_G.ms_b5 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.ms_b5 then --script
+local args = {
+                   [1] = "LegendarySwordDealer",
+                   [2] = "1"
+                }
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+local args = {
+                   [1] = "LegendarySwordDealer",
+                   [2] = "2"
+                }
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+local args = {
+                   [1] = "LegendarySwordDealer",
+                   [2] = "3"                                
+                }
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end
+end)
+elseif ms_b5.Text == "X" then --off
+ms_b5.Text = ""
+_G.ms_b5 = false
+end
+end)
+
+ms_f6.Parent = b_page4
+ms_f6.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+ms_f6.Position = UDim2.new(0, 0, 0.4500000000, 0)
+ms_f6.Size = UDim2.new(0, 498, 0, 30)
+ms_f6.BorderColor3 = Color3.fromRGB(250, 250, 250)
+ms_f6.Font = Enum.Font.Ubuntu
+ms_f6.Text = "   Auto Buy Haki Color"
+ms_f6.TextColor3 = Color3.fromRGB(255, 255, 255)
+ms_f6.TextSize = 14.000
+ms_f6.TextWrapped = true
+ms_f6.TextXAlignment = Enum.TextXAlignment.Left
+
+ms_b6.Name = "ms_b6"
+ms_b6.Parent = ms_f6
+ms_b6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ms_b6.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+ms_b6.Size = UDim2.new(0, 20, 0, 20)
+ms_b6.BorderColor3 = Color3.fromRGB(250, 250, 250)
+ms_b6.Font = Enum.Font.SourceSans
+ms_b6.Text = ""
+ms_b6.TextColor3 = Color3.fromRGB(250, 250, 250)
+ms_b6.TextSize = 30.000
+ms_b6.MouseButton1Down:connect(function()
+--on off 
+if ms_b6.Text == "" then --on
+ms_b6.Text = "X"
+_G.ms_b6 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.ms_b6 then --script
+local args = {
+                  [1] = "ColorsDealer",
+                  [2] = "2"
+            }
+           game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end
+end)
+elseif ms_b6.Text == "X" then --off
+ms_b6.Text = ""
+_G.ms_b6 = false
+end
+end)
+
+
 
 -- // mob - item
 
