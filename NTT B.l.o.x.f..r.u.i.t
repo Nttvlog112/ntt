@@ -187,12 +187,14 @@ st_f2 = Instance.new("TextLabel")
 st_f3 = Instance.new("TextLabel")
 st_f4 = Instance.new("TextLabel")
 st_f5 = Instance.new("TextLabel")
+st_f6 = Instance.new("TextLabel")
 
 st_b1= Instance.new("TextButton")
 st_b2= Instance.new("TextButton")
 st_b3= Instance.new("TextButton")
 st_b4= Instance.new("TextButton")
 st_b5= Instance.new("TextButton")
+st_b6= Instance.new("TextButton")
 
 
 
@@ -208,7 +210,7 @@ screen.Name = "screen"--
 screen.Parent = NTTGUI
 screen.Active = true
 screen.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-screen.Size = UDim2.new(0, 908, 0, 1200)
+screen.Size = UDim2.new(0, 998, 0, 900)
 screen.Visible = false               
 
 main.Name = "main"
@@ -2686,7 +2688,7 @@ spawn(function()
             if _G.ef_b2 then
             
                 for _,v in pairs (workspace:GetChildren()) do
-                    if v.Name == "Fruit" then
+                    if v.Name:Match("Fruit") then
                         if not v:FindFirstChild("FruitESP") then
                             local BillboardGui = Instance.new("BillboardGui")
                             local TextLabel = Instance.new("TextLabel")
