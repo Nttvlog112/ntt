@@ -51,7 +51,7 @@ m_tbar = Instance.new("Frame")
 m_t1 = Instance.new("TextButton")
 m_t2 = Instance.new("TextButton")
 m_t3 = Instance.new("TextButton")
-
+screen = Instance.new("Frame")
 m_f1 = Instance.new("TextLabel")
 m_b1 = Instance.new("TextButton")
 m_f2 = Instance.new("TextLabel")
@@ -203,6 +203,13 @@ st_b5= Instance.new("TextButton")
 NTTGUI.Name = "NTTGUI"
 NTTGUI.Parent = game.CoreGui
 NTTGUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+screen.Name = "screen"--
+screen.Parent = NTTGUI
+screen.Active = true
+screen.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+screen.Size = UDim2.new(0, 908, 0, 1200)
+screen.Visible = false               
 
 main.Name = "main"
 main.Parent = NTTGUI -- nằm trên khung ẩn
@@ -1609,7 +1616,7 @@ humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
                     elseif Distance >= 2000 then
                         Speed = 100
                     end
-                    if (v.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 1700 then
+             
                     game:GetService("TweenService"):Create(
                         game.Players.LocalPlayer.Character.HumanoidRootPart,
                         TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),                      
@@ -1623,12 +1630,16 @@ humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
                             {CFrame = v.CFrame}
                         ):Cancel()
                         local humanoid = game.Players.LocalPlayer.Character.Humanoid 
-humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
-                    end
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump                
                     end
                     end
                     end
           end   end end) end end)  
+
+
+
+
+
 
 bartool()
 
@@ -2426,7 +2437,14 @@ if r_b6.Text == "" then --on
 r_b6.Text = "X"
 _G.r_b6 = true
 
-game:GetService('RunService').RenderStepped:connect(function()
+elseif r_b6.Text == "X" then --off
+r_b6.Text = ""
+_G.r_b6 = false
+end
+end)
+spawn(function()
+    while task.wait(1) do
+        pcall(function()
 if _G.r_b6 then --script
 
 if not game.Players.LocalPlayer.Backpack:FindFirstChild("Microchip") then
@@ -2441,11 +2459,7 @@ end
 
 end
 end)
-elseif r_b6.Text == "X" then --off
-r_b6.Text = ""
-_G.r_b6 = false
-end
-end)
+end end)
 
 r_f7.Parent = b_page3
 r_f7.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
@@ -2671,7 +2685,7 @@ spawn(function()
         pcall(function()
             if _G.ef_b2 then
             
-                for i,v in pairs(game.Workspace:GetChildren()) do
+                for _,v in pairs (workspace:GetChildren()) do
                     if v.Name == "Fruit" then
                         if not v:FindFirstChild("FruitESP") then
                             local BillboardGui = Instance.new("BillboardGui")
@@ -2702,7 +2716,7 @@ spawn(function()
                 end
                 
             else 
-                for i,v in pairs(game.Workspace:GetChildren()) do
+                for _,v in pairs (workspace:GetChildren()) do
                     if v.Name == "Fruit" then
                         if v:FindFirstChild("FruitESP") then
                             v.FruitESP:Destroy()
@@ -4135,6 +4149,39 @@ st_b5.Text = "-20"
 end
 end)
 
+st_f6.Parent = b_page9
+st_f6.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+st_f6.Position = UDim2.new(0, 0, 0.3800000000, 0)
+st_f6.Size = UDim2.new(0, 498, 0, 30)
+st_f6.BorderColor3 = Color3.fromRGB(250, 250, 250)
+st_f6.Font = Enum.Font.Ubuntu
+st_f6.Text = "   Black Screen"
+st_f6.TextColor3 = Color3.fromRGB(255, 255, 255)
+st_f6.TextSize = 14.000
+st_f6.TextWrapped = true
+st_f6.TextXAlignment = Enum.TextXAlignment.Left
+
+st_b6.Name = "st_b6"
+st_b6.Parent = st_f6
+st_b6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+st_b6.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+st_b6.Size = UDim2.new(0, 20, 0, 20)
+st_b6.BorderColor3 = Color3.fromRGB(250, 250, 250)
+st_b6.Font = Enum.Font.SourceSans
+st_b6.Text = ""
+st_b6.TextColor3 = Color3.fromRGB(250, 250, 250)
+st_b6.TextSize = 30.000
+st_b6.MouseButton1Down:connect(function()
+--on off 
+if st_b6.Text == "" then --on
+st_b6.Text = "X"
+screen.Visible = true
+elseif st_b6.Text == "X" then --off
+st_b6.Text = ""
+screen.Visible = false
+end
+end)
+
 -- // function Button
 
 local function LDLMGWH_fake_script() -- // Farm
@@ -4295,4 +4342,4 @@ if game:GetService("ReplicatedStorage").Effect.Container:FindFirstChild("Death")
 end
 if game:GetService("ReplicatedStorage").Effect.Container:FindFirstChild("Respawn") then
 	game:GetService("ReplicatedStorage").Effect.Container.Respawn:Destroy()
-end 
+end  
