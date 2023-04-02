@@ -4316,14 +4316,14 @@ c_bdistan.Position = UDim2.new(0.13200000, 0, 0, 0)
 c_bdistan.Size = UDim2.new(0, 30, 0, 30)
 c_bdistan.Font = Enum.Font.Ubuntu
 c_bdistan.BackgroundTransparency = 1.000
-c_bdistan.Text = "10"
+c_bdistan.Text = "5"
 c_bdistan.TextColor3 = Color3.fromRGB(250, 250, 250)
 c_bdistan.TextSize = 14.000
 c_bdistan.MouseButton1Down:connect(function()
-if c_bdistan.Text == "10" then
+if c_bdistan.Text == "5" then
 c_bdistan.Text = "20"
 else
-c_bdistan.Text = "10"
+c_bdistan.Text = "5"
 end
 end)
 
@@ -4580,7 +4580,7 @@ local Players = game:GetService("Players")
                   Speed = 120
            end
            mele()
-           if (v.Character.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <=  500 then
+           if (v.Character.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <=  300 then
        --  if v.Data.Level.Value >= 1900 then
          local humanoid = game.Players.LocalPlayer.Character.Humanoid 
 humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump                  
