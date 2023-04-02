@@ -184,6 +184,8 @@ c_tb = Instance.new("TextBox")
 c_name = Instance.new("TextLabel")
 c_name1 = Instance.new("TextLabel")
 c_health = Instance.new("TextLabel")
+c_fdistan= Instance.new("TextLabel")
+c_bdistan = Instance.new("TextButton")
 
 c_f1 = Instance.new("TextLabel")
 c_f2 = Instance.new("TextLabel")
@@ -4295,10 +4297,39 @@ game:GetService("TweenService"):Create(
 end
 end)
 
+c_fdistan.Parent = b_page7
+c_fdistan.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+c_fdistan.Position = UDim2.new(0, 0, 0.3800000000, 0)
+c_fdistan.Size = UDim2.new(0, 498, 0, 30)
+c_fdistan.BorderColor3 = Color3.fromRGB(250, 250, 250)
+c_fdistan.Font = Enum.Font.Ubuntu
+c_fdistan.Text = "   Distance : "
+c_fdistan.TextColor3 = Color3.fromRGB(255, 255, 255)
+c_fdistan.TextSize = 14.000
+c_fdistan.TextWrapped = true
+c_fdistan.TextXAlignment = Enum.TextXAlignment.Left
+
+c_bdistan.Name = "c_bdistan"
+c_bdistan.Parent = c_fdistan
+c_bdistan.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+c_bdistan.Position = UDim2.new(0.13200000, 0, 0, 0)
+c_bdistan.Size = UDim2.new(0, 30, 0, 30)
+c_bdistan.Font = Enum.Font.Ubuntu
+c_bdistan.BackgroundTransparency = 1.000
+c_bdistan.Text = "10"
+c_bdistan.TextColor3 = Color3.fromRGB(250, 250, 250)
+c_bdistan.TextSize = 14.000
+c_bdistan.MouseButton1Down:connect(function()
+if c_bdistan.Text == "10" then
+c_bdistan.Text = "20"
+else
+c_bdistan.Text = "10"
+end
+end)
 
 c_f3.Parent = b_page7
 c_f3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-c_f3.Position = UDim2.new(0, 0, 0.3800000000, 0)
+c_f3.Position = UDim2.new(0, 0, 0.4500000000, 0)
 c_f3.Size = UDim2.new(0, 498, 0, 30)
 c_f3.BorderColor3 = Color3.fromRGB(250, 250, 250)
 c_f3.Font = Enum.Font.Ubuntu
@@ -4323,11 +4354,30 @@ c_b3.MouseButton1Down:connect(function()
 if c_b3.Text == "" then --on
 c_b3.Text = "X"
 _G.c_b3 = true
+for i,v in next, game:GetService('Players'):GetPlayers() do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+v.Character.HumanoidRootPart.Size = Vector3.new(40,40,40)
+v.Character.HumanoidRootPart.Transparency = 1
+v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really black")
+v.Character.HumanoidRootPart.Material = "Neon"
+v.Character.HumanoidRootPart.CanCollide = false
+end
+end
 elseif c_b3.Text == "X" then --off
 c_b3.Text = ""
 _G.c_b3 = false
+for i,v in next, game:GetService('Players'):GetPlayers() do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+v.Character.HumanoidRootPart.Size = Vector3.new(5, 5, 5)
+v.Character.HumanoidRootPart.Transparency = 1
+v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really black")
+v.Character.HumanoidRootPart.Material = "Neon"
+v.Character.HumanoidRootPart.CanCollide = false
+end
+end
 end
 end)
+
 -- // kill palyer mele
 game:GetService('RunService').RenderStepped:connect(function()
 if _G.c_b3 then --script
@@ -4389,13 +4439,12 @@ humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
                        mele()
                        game.Players.LocalPlayer.Character.Humanoid.Sit = false
                        if game.Players.LocalPlayer.Character.Humanoid.Health >= 4000 then         
-                   target.HumanoidRootPart.Size = Vector3.new(55, 55, 55)
-                   target.HumanoidRootPart.CanCollide = false                  
+                   
 target.HumanoidRootPart.Transparency = 1
 game:GetService("TweenService"):Create(
                         game.Players.LocalPlayer.Character.HumanoidRootPart,
                         TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
-                        {CFrame = target.HumanoidRootPart.CFrame* CFrame.new(0, 20, 0) }
+                        {CFrame = target.HumanoidRootPart.CFrame* CFrame.new(0, c_bdistan.Text, 0) }
                     ):Play()       
                     end 
                     if game.Players.LocalPlayer.Character.Humanoid.Health < 4000 then
@@ -4460,7 +4509,7 @@ click()
 
 c_f4.Parent = b_page7
 c_f4.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-c_f4.Position = UDim2.new(0, 0, 0.4500000000, 0)
+c_f4.Position = UDim2.new(0, 0, 0.5200000000, 0)
 c_f4.Size = UDim2.new(0, 498, 0, 30)
 c_f4.BorderColor3 = Color3.fromRGB(250, 250, 250)
 c_f4.Font = Enum.Font.Ubuntu
@@ -4485,9 +4534,27 @@ c_b4.MouseButton1Down:connect(function()
 if c_b4.Text == "" then --on
 c_b4.Text = "X"
 _G.c_b4 = true
+for i,v in next, game:GetService('Players'):GetPlayers() do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+v.Character.HumanoidRootPart.Size = Vector3.new(40,40,40)
+v.Character.HumanoidRootPart.Transparency = 1
+v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really black")
+v.Character.HumanoidRootPart.Material = "Neon"
+v.Character.HumanoidRootPart.CanCollide = false
+end
+end
 elseif c_b4.Text == "X" then --off
 c_b4.Text = ""
 _G.c_b4 = false
+for i,v in next, game:GetService('Players'):GetPlayers() do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+v.Character.HumanoidRootPart.Size = Vector3.new(5, 5, 5)
+v.Character.HumanoidRootPart.Transparency = 1
+v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really black")
+v.Character.HumanoidRootPart.Material = "Neon"
+v.Character.HumanoidRootPart.CanCollide = false
+end
+end
 end
 end)
 
@@ -4513,8 +4580,8 @@ local Players = game:GetService("Players")
                   Speed = 120
            end
            mele()
-           if (v.Character.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <=  5000 then
-         if v.Data.Level.Value >= 1900 then
+           if (v.Character.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <=  500 then
+       --  if v.Data.Level.Value >= 1900 then
          local humanoid = game.Players.LocalPlayer.Character.Humanoid 
 humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump                  
                       
@@ -4525,7 +4592,7 @@ v.Character.HumanoidRootPart.Transparency = 1
 game:GetService("TweenService"):Create(
                         game.Players.LocalPlayer.Character.HumanoidRootPart,
                         TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
-                        {CFrame = v.Character.HumanoidRootPart.CFrame* CFrame.new(0, 20, 0) }
+                        {CFrame = v.Character.HumanoidRootPart.CFrame* CFrame.new(0, c_bdistan.Text, 0) }
                     ):Play()       
                     end 
                     if game.Players.LocalPlayer.Character.Humanoid.Health < 4000 then
@@ -4534,7 +4601,7 @@ game:GetService("TweenService"):Create(
                         TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
                         {CFrame = v.Character.HumanoidRootPart.CFrame* CFrame.new(0, 2000, 0) }
                     ):Play()       
-                    end end
+                    end 
                     end end end 
 end end)
                     
