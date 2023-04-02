@@ -32,8 +32,8 @@ local b_3 = Instance.new("TextButton")--raid
 local b_4 = Instance.new("TextButton")--miss- shop
 local b_5 = Instance.new("TextButton")--esp - fruit
 local b_6 = Instance.new("TextButton")-- Mob - item
-local b_8 = Instance.new("TextButton")--Comnat
-local b_7 = Instance.new("TextButton")--teleport
+local b_7 = Instance.new("TextButton")--Comnat
+local b_8 = Instance.new("TextButton")--teleport
 local b_9 = Instance.new("TextButton")--setting
 
 -- // Name Player
@@ -179,7 +179,20 @@ mi_b2= Instance.new("TextButton")
 mi_b3= Instance.new("TextButton")
 mi_b4= Instance.new("TextButton")
 
--- // miss shop
+-- // combat
+c_tb = Instance.new("TextBox")
+c_name = Instance.new("TextLabel")
+c_name1 = Instance.new("TextLabel")
+c_health = Instance.new("TextLabel")
+
+c_f1 = Instance.new("TextLabel")
+c_f2 = Instance.new("TextLabel")
+c_f3 = Instance.new("TextLabel")
+c_f4 = Instance.new("TextLabel")
+c_b1 = Instance.new("TextButton")
+c_b2 = Instance.new("TextButton")
+c_b3 = Instance.new("TextButton")
+c_b4 = Instance.new("TextButton")
 
 -- // setting
 st_f1 = Instance.new("TextLabel")
@@ -3951,7 +3964,599 @@ game:GetService("TweenService"):Create(
 end end)                 
 
 
+-- // combat
 
+c_name.Parent = b_page7
+c_name.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+c_name.Position = UDim2.new(0, 0, 0.0300000000, 0)
+c_name.Size = UDim2.new(0, 498, 0, 30)
+c_name.BorderColor3 = Color3.fromRGB(250, 250, 250)
+c_name.Font = Enum.Font.Ubuntu
+c_name.Text = "   ..Name Player"
+c_name.TextColor3 = Color3.fromRGB(255, 255, 255)
+c_name.TextSize = 14.000
+c_name.TextWrapped = true
+c_name.TextXAlignment = Enum.TextXAlignment.Left
+
+c_health.Parent = b_page7
+c_health.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+c_health.Position = UDim2.new(0, 0, 0.1000000000, 0)
+c_health.Size = UDim2.new(0, 498, 0, 30)
+c_health.BorderColor3 = Color3.fromRGB(250, 250, 250)
+c_health.Font = Enum.Font.Ubuntu
+c_health.Text = "   ..Health Player"
+c_health.TextColor3 = Color3.fromRGB(255, 255, 255)
+c_health.TextSize = 14.000
+c_health.TextWrapped = true
+c_health.TextXAlignment = Enum.TextXAlignment.Left
+
+c_tb.Parent = b_page7
+c_tb.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+c_tb.Position = UDim2.new(0, 0, 0.1700000000, 0)
+c_tb.Size = UDim2.new(0, 498, 0, 30)
+c_tb.Font = Enum.Font.Ubuntu
+c_tb.Text = "Vui lòng nhập tên Người Chơi"
+c_tb.TextColor3 = Color3.fromRGB(0,0,0)
+c_tb.TextSize = 14.000
+c_tb.TextWrapped = true
+
+-- // code check player
+game:GetService('RunService').RenderStepped:connect(function()
+
+local lplayer = game:GetService('Players').LocalPlayer
+ 
+local yeeting = false
+function GetPlayer(String)
+local Found = {}
+local strl = String:lower()
+if strl == "all" then
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+table.insert(Found,v)
+end
+elseif strl == "Random" then
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+if v.Name ~= lplayer.Name then
+table.insert(Found,v)
+end
+end 
+elseif strl == "me" then
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+if v.Name == lplayer.Name then
+table.insert(Found,v)
+end
+end 
+else
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+if v.Name:lower():sub(1, #String) == String:lower() then
+table.insert(Found,v)
+end
+end 
+end
+return Found 
+end
+function ahh(thing)
+local asd = {'yeet','gui','yeet gui'}
+local f = string.upper(asd[math.random(1,#asd)])
+return f
+end
+local target = unpack(GetPlayer(c_tb.Text)).Character
+c_name.Text = ("   Name : "..target.Name)
+c_health.Text = ("   Health : "..target.Humanoid.Health)
+end)
+
+
+--// aim gun
+
+
+c_f1.Parent = b_page7
+c_f1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+c_f1.Position = UDim2.new(0, 0, 0.2400000000, 0)
+c_f1.Size = UDim2.new(0, 498, 0, 30)
+c_f1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+c_f1.Font = Enum.Font.Ubuntu
+c_f1.Text = "   Aim Bot Gun"
+c_f1.TextColor3 = Color3.fromRGB(255, 255, 255)
+c_f1.TextSize = 14.000
+c_f1.TextWrapped = true
+c_f1.TextXAlignment = Enum.TextXAlignment.Left
+
+c_b1.Name = "c_b1"
+c_b1.Parent = c_f1
+c_b1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+c_b1.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+c_b1.Size = UDim2.new(0, 20, 0, 20)
+c_b1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+c_b1.Font = Enum.Font.SourceSans
+c_b1.Text = ""
+c_b1.TextColor3 = Color3.fromRGB(250, 250, 250)
+c_b1.TextSize = 30.000
+c_b1.MouseButton1Down:connect(function()
+--on off 
+if c_b1.Text == "" then --on
+c_b1.Text = "X"
+_G.c_b1 = true
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.c_b1 then --script
+
+local lplayer = game:GetService('Players').LocalPlayer
+ 
+local yeeting = false
+function GetPlayer(String)
+local Found = {}
+local strl = String:lower()
+if strl == "all" then
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+table.insert(Found,v)
+end
+elseif strl == "Random" then
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+if v.Name ~= lplayer.Name then
+table.insert(Found,v)
+end
+end 
+elseif strl == "me" then
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+if v.Name == lplayer.Name then
+table.insert(Found,v)
+end
+end 
+else
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+if v.Name:lower():sub(1, #String) == String:lower() then
+table.insert(Found,v)
+end
+end 
+end
+return Found 
+end
+function ahh(thing)
+local asd = {'yeet','gui','yeet gui'}
+local f = string.upper(asd[math.random(1,#asd)])
+return f
+end
+local target = unpack(GetPlayer(c_tb.Text)).Character
+if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Serpent Bow") then
+local args = {
+    [1] = target.HumanoidRootPart.Position,
+    [2] = target.HumanoidRootPart
+}
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Serpent Bow").RemoteFunctionShoot:InvokeServer(unpack(args))
+end
+if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Kabucha") then
+local args = {
+    [1] = target.HumanoidRootPart.Position,
+    [2] = target.HumanoidRootPart
+}
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Kabucha").RemoteFunctionShoot:InvokeServer(unpack(args))
+end
+if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Acidum Rifle") then
+local args = {
+    [1] = target.HumanoidRootPart.Position,
+    [2] = target.HumanoidRootPart
+}
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Acidum Rifle").RemoteFunctionShoot:InvokeServer(unpack(args))
+end
+for i,v in next, game:GetService('Players'):GetPlayers() do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+v.Character.HumanoidRootPart.Size = Vector3.new(10, 10, 10)
+v.Character.HumanoidRootPart.Transparency = 1
+v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really black")
+v.Character.HumanoidRootPart.Material = "Neon"
+v.Character.HumanoidRootPart.CanCollide = false
+end
+end
+
+end
+end)
+elseif c_b1.Text == "X" then --off
+c_b1.Text = ""
+_G.c_b1 = false
+for i,v in next, game:GetService('Players'):GetPlayers() do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+v.Character.HumanoidRootPart.Size = Vector3.new(5, 5, 5)
+v.Character.HumanoidRootPart.Transparency = 1
+v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really black")
+v.Character.HumanoidRootPart.Material = "Neon"
+v.Character.HumanoidRootPart.CanCollide = false
+end
+end
+
+end
+end)
+
+c_f2.Parent = b_page7
+c_f2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+c_f2.Position = UDim2.new(0, 0, 0.3100000000, 0)
+c_f2.Size = UDim2.new(0, 498, 0, 30)
+c_f2.BorderColor3 = Color3.fromRGB(250, 250, 250)
+c_f2.Font = Enum.Font.Ubuntu
+c_f2.Text = "   Kill Player | Gun"
+c_f2.TextColor3 = Color3.fromRGB(255, 255, 255)
+c_f2.TextSize = 14.000
+c_f2.TextWrapped = true
+c_f2.TextXAlignment = Enum.TextXAlignment.Left
+
+c_b2.Name = "c_b2"
+c_b2.Parent = c_f2
+c_b2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+c_b2.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+c_b2.Size = UDim2.new(0, 20, 0, 20)
+c_b2.BorderColor3 = Color3.fromRGB(250, 250, 250)
+c_b2.Font = Enum.Font.SourceSans
+c_b2.Text = ""
+c_b2.TextColor3 = Color3.fromRGB(250, 250, 250)
+c_b2.TextSize = 30.000
+c_b2.MouseButton1Down:connect(function()
+--on off 
+if c_b2.Text == "" then --on
+c_b2.Text = "X"
+_G.c_b2 = true
+elseif c_b2.Text == "X" then --off
+c_b2.Text = ""
+_G.c_b2 = false
+end
+end)
+
+-- // kill player gun
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.c_b2 then --script
+
+local lplayer = game:GetService('Players').LocalPlayer
+ 
+local yeeting = false
+function GetPlayer(String)
+local Found = {}
+local strl = String:lower()
+if strl == "all" then
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+table.insert(Found,v)
+end
+elseif strl == "Random" then
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+if v.Name ~= lplayer.Name then
+table.insert(Found,v)
+end
+end 
+elseif strl == "me" then
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+if v.Name == lplayer.Name then
+table.insert(Found,v)
+end
+end 
+else
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+if v.Name:lower():sub(1, #String) == String:lower() then
+table.insert(Found,v)
+end
+end 
+end
+return Found 
+end
+function ahh(thing)
+local asd = {'yeet','gui','yeet gui'}
+local f = string.upper(asd[math.random(1,#asd)])
+return f
+end
+local target = unpack(GetPlayer(c_tb.Text)).Character
+if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Serpent Bow") then
+local args = {
+    [1] = target.HumanoidRootPart.Position,
+    [2] = target.HumanoidRootPart
+}
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Serpent Bow").RemoteFunctionShoot:InvokeServer(unpack(args))
+end
+if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Kabucha") then
+local args = {
+    [1] = target.HumanoidRootPart.Position,
+    [2] = target.HumanoidRootPart
+}
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Kabucha").RemoteFunctionShoot:InvokeServer(unpack(args))
+end
+if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Acidum Rifle") then
+local args = {
+    [1] = target.HumanoidRootPart.Position,
+    [2] = target.HumanoidRootPart
+}
+
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Acidum Rifle").RemoteFunctionShoot:InvokeServer(unpack(args))
+end
+
+local humanoid = game.Players.LocalPlayer.Character.Humanoid 
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
+         
+      local pos = target.HumanoidRootPart --check pos
+                    local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                  if Distance < 500 then
+                  Speed = 250
+                  elseif Distance < 200 then
+                  Speed = 7000000
+                  elseif Distance < 150 then
+                  Speed = 2000000
+                  elseif Distance < 1000 then
+                        Speed = 400        
+    elseif Distance >= 1500 then
+                  Speed = 120
+           end
+                       tool("Serpent Bow")       
+tool("Kabucha")
+tool("Acidum Rifle")   
+game:GetService("TweenService"):Create(
+                        game.Players.LocalPlayer.Character.HumanoidRootPart,
+                        TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
+                        {CFrame = target.HumanoidRootPart.CFrame* CFrame.new(0, 80, 0) }
+                    ):Play()       
+
+end
+end)
+
+
+c_f3.Parent = b_page7
+c_f3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+c_f3.Position = UDim2.new(0, 0, 0.3800000000, 0)
+c_f3.Size = UDim2.new(0, 498, 0, 30)
+c_f3.BorderColor3 = Color3.fromRGB(250, 250, 250)
+c_f3.Font = Enum.Font.Ubuntu
+c_f3.Text = "   Kill Player | Mele"
+c_f3.TextColor3 = Color3.fromRGB(255, 255, 255)
+c_f3.TextSize = 14.000
+c_f3.TextWrapped = true
+c_f3.TextXAlignment = Enum.TextXAlignment.Left
+
+c_b3.Name = "c_b3"
+c_b3.Parent = c_f3
+c_b3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+c_b3.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+c_b3.Size = UDim2.new(0, 20, 0, 20)
+c_b3.BorderColor3 = Color3.fromRGB(250, 250, 250)
+c_b3.Font = Enum.Font.SourceSans
+c_b3.Text = ""
+c_b3.TextColor3 = Color3.fromRGB(250, 250, 250)
+c_b3.TextSize = 30.000
+c_b3.MouseButton1Down:connect(function()
+--on off 
+if c_b3.Text == "" then --on
+c_b3.Text = "X"
+_G.c_b3 = true
+elseif c_b3.Text == "X" then --off
+c_b3.Text = ""
+_G.c_b3 = false
+end
+end)
+-- // kill palyer mele
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.c_b3 then --script
+
+local lplayer = game:GetService('Players').LocalPlayer
+ 
+local yeeting = false
+function GetPlayer(String)
+local Found = {}
+local strl = String:lower()
+if strl == "all" then
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+table.insert(Found,v)
+end
+elseif strl == "Random" then
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+if v.Name ~= lplayer.Name then
+table.insert(Found,v)
+end
+end 
+elseif strl == "me" then
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+if v.Name == lplayer.Name then
+table.insert(Found,v)
+end
+end 
+else
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+if v.Name:lower():sub(1, #String) == String:lower() then
+table.insert(Found,v)
+end
+end 
+end
+return Found 
+end
+function ahh(thing)
+local asd = {'yeet','gui','yeet gui'}
+local f = string.upper(asd[math.random(1,#asd)])
+return f
+end
+local target = unpack(GetPlayer(c_tb.Text)).Character
+
+local humanoid = game.Players.LocalPlayer.Character.Humanoid 
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
+
+      local pos = target.HumanoidRootPart --check pos
+                    local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                  if Distance < 500 then
+                  Speed = 250
+                  elseif Distance < 200 then
+                  Speed = 7000000
+                  elseif Distance < 150 then
+                  Speed = 2000000
+                  elseif Distance < 1000 then
+                        Speed = 400        
+    elseif Distance >= 1500 then
+                  Speed = 120
+           end
+                       mele()
+                       game.Players.LocalPlayer.Character.Humanoid.Sit = false
+                       if game.Players.LocalPlayer.Character.Humanoid.Health >= 4000 then         
+                   target.HumanoidRootPart.Size = Vector3.new(55, 55, 55)
+                   target.HumanoidRootPart.CanCollide = false                  
+target.HumanoidRootPart.Transparency = 1
+game:GetService("TweenService"):Create(
+                        game.Players.LocalPlayer.Character.HumanoidRootPart,
+                        TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
+                        {CFrame = target.HumanoidRootPart.CFrame* CFrame.new(0, 20, 0) }
+                    ):Play()       
+                    end 
+                    if game.Players.LocalPlayer.Character.Humanoid.Health < 4000 then
+game:GetService("TweenService"):Create(
+                        game.Players.LocalPlayer.Character.HumanoidRootPart,
+                        TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
+                        {CFrame = target.HumanoidRootPart.CFrame* CFrame.new(0, 2000, 0) }
+                    ):Play()       
+                    end end end)
+                    
+                    -- // check click                 
+         spawn(function()
+    while task.wait() do
+        pcall(function()
+            if _G.c_b3 then           
+            local lplayer = game:GetService('Players').LocalPlayer
+ 
+local yeeting = false
+function GetPlayer(String)
+local Found = {}
+local strl = String:lower()
+if strl == "all" then
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+table.insert(Found,v)
+end
+elseif strl == "Random" then
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+if v.Name ~= lplayer.Name then
+table.insert(Found,v)
+end
+end 
+elseif strl == "me" then
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+if v.Name == lplayer.Name then
+table.insert(Found,v)
+end
+end 
+else
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+if v.Name:lower():sub(1, #String) == String:lower() then
+table.insert(Found,v)
+end
+end 
+end
+return Found 
+end
+function ahh(thing)
+local asd = {'yeet','gui','yeet gui'}
+local f = string.upper(asd[math.random(1,#asd)])
+return f
+end
+if game.Players.LocalPlayer.Character.Humanoid.Health > 4000 then
+local target = unpack(GetPlayer(c_tb.Text)).Character
+if target.Humanoid.Health > 4000 then
+click()
+end
+if target.Humanoid.Health < 3500 then
+wait(1) 
+click()
+      end      end
+            end end) end end)
+
+c_f4.Parent = b_page7
+c_f4.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+c_f4.Position = UDim2.new(0, 0, 0.4500000000, 0)
+c_f4.Size = UDim2.new(0, 498, 0, 30)
+c_f4.BorderColor3 = Color3.fromRGB(250, 250, 250)
+c_f4.Font = Enum.Font.Ubuntu
+c_f4.Text = "   Auto Bounty"
+c_f4.TextColor3 = Color3.fromRGB(255, 255, 255)
+c_f4.TextSize = 14.000
+c_f4.TextWrapped = true
+c_f4.TextXAlignment = Enum.TextXAlignment.Left
+
+c_b4.Name = "c_b4"
+c_b4.Parent = c_f4
+c_b4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+c_b4.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+c_b4.Size = UDim2.new(0, 20, 0, 20)
+c_b4.BorderColor3 = Color3.fromRGB(250, 250, 250)
+c_b4.Font = Enum.Font.SourceSans
+c_b4.Text = ""
+c_b4.TextColor3 = Color3.fromRGB(250, 250, 250)
+c_b4.TextSize = 30.000
+c_b4.MouseButton1Down:connect(function()
+--on off 
+if c_b4.Text == "" then --on
+c_b4.Text = "X"
+_G.c_b4 = true
+elseif c_b4.Text == "X" then --off
+c_b4.Text = ""
+_G.c_b4 = false
+end
+end)
+
+--// auto bounty
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.c_b4 then --script
+
+local Players = game:GetService("Players")	
+		    for i, v in pairs(Players:GetPlayers()) do
+		        if v.Name ~= game.Players.LocalPlayer.Name then
+		local pos = v.Character.HumanoidRootPart--check pos
+                    local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                  if Distance < 500 then
+                  Speed = 250
+                  elseif Distance < 200 then
+                  Speed = 7000000
+                  elseif Distance < 150 then
+                  Speed = 2000000
+                  elseif Distance < 1000 then
+                        Speed = 400        
+    elseif Distance >= 1500 then
+                  Speed = 120
+           end
+           mele()
+           if (v.Character.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <=  5000 then
+         if v.Data.Level.Value >= 1900 then
+         local humanoid = game.Players.LocalPlayer.Character.Humanoid 
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump                  
+                      
+                       if game.Players.LocalPlayer.Character.Humanoid.Health >= 4000 then         
+                   v.Character.HumanoidRootPart.Size = Vector3.new(55, 55, 55)
+                   v.Character.HumanoidRootPart.CanCollide = false                  
+v.Character.HumanoidRootPart.Transparency = 1
+game:GetService("TweenService"):Create(
+                        game.Players.LocalPlayer.Character.HumanoidRootPart,
+                        TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
+                        {CFrame = v.Character.HumanoidRootPart.CFrame* CFrame.new(0, 20, 0) }
+                    ):Play()       
+                    end 
+                    if game.Players.LocalPlayer.Character.Humanoid.Health < 4000 then
+game:GetService("TweenService"):Create(
+                        game.Players.LocalPlayer.Character.HumanoidRootPart,
+                        TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
+                        {CFrame = v.Character.HumanoidRootPart.CFrame* CFrame.new(0, 2000, 0) }
+                    ):Play()       
+                    end end
+                    end end end 
+end end)
+                    
+          spawn(function()
+    while task.wait() do
+        pcall(function()        
+            if _G.c_b4 then                     
+            local Players = game:GetService("Players")	
+		    for i, v in pairs(Players:GetPlayers()) do
+		        if v.Name ~= game.Players.LocalPlayer.Name then
+        if (v.Character.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <=  400 then
+  if game.Players.LocalPlayer.Character.Humanoid.Health > 4000 then     
+ if v.Character.Humanoid.Health > 4000 then
+click()
+end
+if v.Character.Humanoid.Health < 3500 then
+wait(1) 
+click()
+      end 
+      end end end end
+      end end) end end)
+           
 
 
 -- // Setting
@@ -4344,4 +4949,4 @@ if game:GetService("ReplicatedStorage").Effect.Container:FindFirstChild("Death")
 end
 if game:GetService("ReplicatedStorage").Effect.Container:FindFirstChild("Respawn") then
 	game:GetService("ReplicatedStorage").Effect.Container.Respawn:Destroy()
-end  
+end   
