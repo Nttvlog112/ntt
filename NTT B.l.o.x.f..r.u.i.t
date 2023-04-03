@@ -1571,9 +1571,43 @@ stoptp()
 end
 end)
 
+m_f6.Parent = b_page1
+m_f6.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+m_f6.Position = UDim2.new(0, 0, 0.2400000000, 0)
+m_f6.Size = UDim2.new(0, 498, 0, 30)
+m_f6.BorderColor3 = Color3.fromRGB(250, 250, 250)
+m_f6.Font = Enum.Font.Ubuntu
+m_f6.Text = "   Auto Fartory"
+m_f6.TextColor3 = Color3.fromRGB(255, 255, 255)
+m_f6.TextSize = 14.000
+m_f6.TextWrapped = true
+m_f6.TextXAlignment = Enum.TextXAlignment.Left
+
+m_b6.Name = "m_b6"
+m_b6.Parent = m_f6
+m_b6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+m_b6.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+m_b6.Size = UDim2.new(0, 20, 0, 20)
+m_b6.BorderColor3 = Color3.fromRGB(250, 250, 250)
+m_b6.Font = Enum.Font.SourceSans
+m_b6.Text = ""
+m_b6.TextColor3 = Color3.fromRGB(250, 250, 250)
+m_b6.TextSize = 30.000
+m_b6.MouseButton1Down:connect(function()
+--on off 
+if m_b6.Text == "" then --on
+m_b6.Text = "X"
+_G.m_b6 = true
+elseif m_b6.Text == "X" then --off
+m_b6.Text = ""
+_G.m_b6 = false
+stoptp()
+end
+end)
+
 m_f4.Parent = b_page1
 m_f4.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-m_f4.Position = UDim2.new(0, 0, 0.2400000000, 0)
+m_f4.Position = UDim2.new(0, 0, 0.3100000000, 0)
 m_f4.Size = UDim2.new(0, 498, 0, 30)
 m_f4.BorderColor3 = Color3.fromRGB(250, 250, 250)
 m_f4.Font = Enum.Font.Ubuntu
@@ -1606,7 +1640,9 @@ end
 end)
 
 -- // farm masteryFrut
-game:GetService('RunService').RenderStepped:connect(function()
+spawn(function()
+    while task.wait() do
+        pcall(function()
  if _G.m_b4 then
  CheckQuest() 
  
@@ -1634,8 +1670,7 @@ for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
            end
        
        if v.Humanoid.Health > 0 then -- check health
-       
-       click() -- click          
+           
        v.Humanoid:ChangeState(14)
       v.HumanoidRootPart.Size = Vector3.new(50, 50, 10)     --size hix box  
       v.HumanoidRootPart.CanCollide = false                                                
@@ -1651,7 +1686,7 @@ game:GetService("TweenService"):Create(
                     ):Play()                  
                  
  end end end 
-  end end)
+  end end) end end)
         
    spawn(function()
     while task.wait() do
@@ -1660,43 +1695,102 @@ game:GetService("TweenService"):Create(
         CheckQuest()
         for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
       if v.Name == Ms then --name mob
-        if   (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 100 then
-                    if v.Humanoid.Health > 5000 then -- check health                  
-                    mele()  wait(2) click()
-                    end
-                    if v.Humanoid.Health < 5000 then -- check health
+      
+        if m_b7.Text == "1000" then
+        if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 60 then
+                    if v.Humanoid.Health >= 1000 then -- check health                  
+                    mele()  wait(.5) click()
+                    v.HumanoidRootPart.Size = Vector3.new(50, 50, 10)     --size hix box  
+                    else
+                    v.HumanoidRootPart.Size = Vector3.new(5, 5, 5)     --size hix box  
                     fruit() 
                     Skill()
-                    end end end end end end) end end)
+      end   end
+end           
+      if m_b7.Text == "2000" then
+      if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 60 then
+                    if v.Humanoid.Health >= 2000 then -- check health                  
+                    mele()  wait(.5) click()
+                    
+                    v.HumanoidRootPart.Size = Vector3.new(50, 50, 10)     --size hix box  
+                    else
+                    v.HumanoidRootPart.Size = Vector3.new(5, 5, 5)     --size hix box  
+                    fruit() 
+                    Skill()
+      end     end      
+end   
+      if m_b7.Text == "3000" then
+      if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 60 then
+                    if v.Humanoid.Health >= 3000 then -- check health                  
+                    mele()  wait(.5) click()
+                   
+                    v.HumanoidRootPart.Size = Vector3.new(50, 50, 10)     --size hix box  
+                    else
+                    v.HumanoidRootPart.Size = Vector3.new(5, 5, 5)     --size hix box  
+                    fruit() 
+                    Skill()
+      end     end   
+end      
+      if m_b7.Text == "4000" then
+      if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 60 then
+                    if v.Humanoid.Health >= 4000 then -- check health                  
+                    mele()  wait(.5) click()
+                    v.HumanoidRootPart.Size = Vector3.new(50, 50, 10)     --size hix box  
+                    else
+                    v.HumanoidRootPart.Size = Vector3.new(5, 5, 5)     --size hix box  
+                    fruit() 
+                    Skill()
+      end     end         
+      end
+      if m_b7.Text == "5000" then
+      if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 60 then
+                    if v.Humanoid.Health >= 5000 then -- check health                  
+                    mele()  wait(.5) click()
+                    v.HumanoidRootPart.Size = Vector3.new(50, 50, 10)     --size hix box  
+                    else
+                    v.HumanoidRootPart.Size = Vector3.new(5, 5, 5)     --size hix box  
+                    fruit() 
+                    Skill()
+      end              end end
+      if m_b7.Text == "6000" then
+      if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 60 then
+                    if v.Humanoid.Health >= 6000 then -- check health                  
+                    mele()  wait(.5) click()
+                    v.HumanoidRootPart.Size = Vector3.new(50, 50, 10)     --size hix box  
+                    else
+                    v.HumanoidRootPart.Size = Vector3.new(5, 5, 5)     --size hix box  
+                    fruit() 
+                    Skill()
+      end     end         end
+      if m_b7.Text == "7000" then
+      if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 60 then
+                    if v.Humanoid.Health >= 7000 then -- check health                  
+                    mele()  wait(.5) click()
+                    v.HumanoidRootPart.Size = Vector3.new(50, 50, 10)     --size hix box  
+                    else
+                    v.HumanoidRootPart.Size = Vector3.new(5, 5, 5)     --size hix box  
+                    fruit() 
+                    Skill()
+      end       end       end
+      if m_b7.Text == "8000" then
+      if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 60 then
+                    if v.Humanoid.Health >= 8000 then -- check health                  
+                    mele()  wait(1) click()
+                    v.HumanoidRootPart.Size = Vector3.new(50, 50, 10)     --size hix box  
+                    else
+                    v.HumanoidRootPart.Size = Vector3.new(5, 5, 5)     --size hix box  
+                    fruit() 
+                    Skill()
+      end     end     end
+    
+                    end end end end) end end)
         
         
-    --[[
-Bring Mob
-spawn(function()
-    while task.wait(4) do
-        pcall(function()
-        if _G.m_b4 then
-if _G.bringmob then       
-CheckQuest()
-for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
-      if v.Name == Ms then --name mob
-if (v.HumanoidRootPart.Position - CFrameBring.Position).Magnitude <= 850 then
-sethiddenproperty(game:GetService("Players").LocalPlayer,"SimulationRadius",math.huge)
-v.HumanoidRootPart.CFrame =  CFrameBring
-v.Humanoid:ChangeState(14)
-      v.HumanoidRootPart.Size = Vector3.new(60, 60, 10)     --size hix box  
-      v.HumanoidRootPart.CanCollide = false                                                
-v.Head.CanCollide = false                                 
-if v.Humanoid:FindFirstChild("Animator") then
-                            v.Humanoid.Animator:Destroy()
-                        end
-                        sethiddenproperty(game:GetService("Players").LocalPlayer,"SimulationRadius",math.huge)                    
-                        end end end end end end) end  end) 
-]]
+   
 
 m_f5.Parent = b_page1
 m_f5.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-m_f5.Position = UDim2.new(0, 0, 0.3100000000, 0)
+m_f5.Position = UDim2.new(0, 0, 0.3800000000, 0)
 m_f5.Size = UDim2.new(0, 498, 0, 30)
 m_f5.BorderColor3 = Color3.fromRGB(250, 250, 250)
 m_f5.Font = Enum.Font.Ubuntu
@@ -1728,44 +1822,103 @@ stoptp()
 end
 end)
 
-m_f6.Parent = b_page1
-m_f6.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-m_f6.Position = UDim2.new(0, 0, 0.3800000000, 0)
-m_f6.Size = UDim2.new(0, 498, 0, 30)
-m_f6.BorderColor3 = Color3.fromRGB(250, 250, 250)
-m_f6.Font = Enum.Font.Ubuntu
-m_f6.Text = "   Auto Fartory"
-m_f6.TextColor3 = Color3.fromRGB(255, 255, 255)
-m_f6.TextSize = 14.000
-m_f6.TextWrapped = true
-m_f6.TextXAlignment = Enum.TextXAlignment.Left
 
-m_b6.Name = "m_b6"
-m_b6.Parent = m_f6
-m_b6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-m_b6.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-m_b6.Size = UDim2.new(0, 20, 0, 20)
-m_b6.BorderColor3 = Color3.fromRGB(250, 250, 250)
-m_b6.Font = Enum.Font.SourceSans
-m_b6.Text = ""
-m_b6.TextColor3 = Color3.fromRGB(250, 250, 250)
-m_b6.TextSize = 30.000
-m_b6.MouseButton1Down:connect(function()
---on off 
-if m_b6.Text == "" then --on
-m_b6.Text = "X"
-_G.m_b6 = true
-elseif m_b6.Text == "X" then --off
-m_b6.Text = ""
-_G.m_b6 = false
-stoptp()
+m_f7.Parent = b_page1
+m_f7.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+m_f7.Position = UDim2.new(0, 0, 0.4500000000, 0)
+m_f7.Size = UDim2.new(0, 498, 0, 30)
+m_f7.BorderColor3 = Color3.fromRGB(250, 250, 250)
+m_f7.Font = Enum.Font.Ubuntu
+m_f7.Text = "   Health Mob : "
+m_f7.TextColor3 = Color3.fromRGB(255, 255, 255)
+m_f7.TextSize = 14.000
+m_f7.TextWrapped = true
+m_f7.TextXAlignment = Enum.TextXAlignment.Left
+
+m_b7.Name = "m_b7"
+m_b7.Parent = m_f7
+m_b7.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+m_b7.Position = UDim2.new(0.16000000, 0, 0, 0)
+m_b7.Size = UDim2.new(0, 30, 0, 30)
+m_b7.Font = Enum.Font.Ubuntu
+m_b7.BackgroundTransparency = 1.000
+m_b7.Text = "6000"
+m_b7.TextColor3 = Color3.fromRGB(250, 250, 250)
+m_b7.TextSize = 14.000
+m_b7.MouseButton1Down:connect(function()
+if m_b7.Text == "8000" then
+m_b7.Text = "1000"
+else 
+m_b7.Text = m_b7.Text + 1000
 end
 end)
 
+m_f8.Parent = b_page1
+m_f8.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+m_f8.Position = UDim2.new(0, 0, 0.5200000000, 0)
+m_f8.Size = UDim2.new(0, 498, 0, 30)
+m_f8.BorderColor3 = Color3.fromRGB(250, 250, 250)
+m_f8.Font = Enum.Font.Ubuntu
+m_f8.Text = "   Auto Farm Chest"
+m_f8.TextColor3 = Color3.fromRGB(255, 255, 255)
+m_f8.TextSize = 14.000
+m_f8.TextWrapped = true
+m_f8.TextXAlignment = Enum.TextXAlignment.Left
 
+m_b8.Name = "m_b8"
+m_b8.Parent = m_f8
+m_b8.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+m_b8.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+m_b8.Size = UDim2.new(0, 20, 0, 20)
+m_b8.BorderColor3 = Color3.fromRGB(250, 250, 250)
+m_b8.Font = Enum.Font.SourceSans
+m_b8.Text = ""
+m_b8.TextColor3 = Color3.fromRGB(250, 250, 250)
+m_b8.TextSize = 30.000
+m_b8.MouseButton1Down:connect(function()
+--on off 
+if m_b8.Text == "" then --on
+m_b8.Text = "X"
+_G.m_b8 = true
+elseif m_b8.Text == "X" then --off
+m_b8.Text = ""
+_G.m_b8 = false
+end
+end)
 
+--// tp chest
+function TPchest(P1)          
+                    local Distance = (P1.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+               if Distance >= 0 then
+                        Speed = 1200000
+                    end
+                    
+                   local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Distance/Speed), {CFrame = P1  }) tween:Play()                                    
+              end
+              
+       game:GetService('RunService').RenderStepped:connect(function()       
+    if   _G.m_b8 then
+    
+      if game:GetService("Workspace"):FindFirstChild("Chest3") then
+     TPchest( game:GetService("Workspace"):FindFirstChild("Chest3").CFrame)
+     end
+     if game:GetService("Workspace"):FindFirstChild("Chest2") then
+     TPchest( game:GetService("Workspace"):FindFirstChild("Chest2").CFrame)
+     end
+     if game:GetService("Workspace"):FindFirstChild("Chest1") then
+TPchest( game:GetService("Workspace"):FindFirstChild("Chest1").CFrame)
+end
+end end)
 
-
+spawn(function()
+    while task.wait(5) do
+        pcall(function()
+            if _G.m_b8 then
+            game.Players.LocalPlayer.Character.Humanoid.Health = 0
+            wait(5)
+            
+            end end) end end)
+            
 
 
 
@@ -3105,7 +3258,7 @@ spawn(function()
                     elseif Distance < 1000 then
                         Speed = 120
                     elseif Distance >= 2000 then
-                        Speed = 100
+                        Speed = 120
                     end
                     game:GetService("TweenService"):Create(
                         game.Players.LocalPlayer.Character.HumanoidRootPart,
@@ -4623,7 +4776,7 @@ c_f4.Position = UDim2.new(0, 0, 0.5200000000, 0)
 c_f4.Size = UDim2.new(0, 498, 0, 30)
 c_f4.BorderColor3 = Color3.fromRGB(250, 250, 250)
 c_f4.Font = Enum.Font.Ubuntu
-c_f4.Text = "   Kill Player / Teleport Bypass | Mele"
+c_f4.Text = "   Teleport Player"
 c_f4.TextColor3 = Color3.fromRGB(255, 255, 255)
 c_f4.TextSize = 14.000
 c_f4.TextWrapped = true
@@ -4644,27 +4797,9 @@ c_b4.MouseButton1Down:connect(function()
 if c_b4.Text == "" then --on
 c_b4.Text = "X"
 _G.c_b4 = true
-for i,v in next, game:GetService('Players'):GetPlayers() do
-if v.Name ~= game:GetService('Players').LocalPlayer.Name then
-v.Character.HumanoidRootPart.Size = Vector3.new(40,40,40)
-v.Character.HumanoidRootPart.Transparency = 1
-v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really black")
-v.Character.HumanoidRootPart.Material = "Neon"
-v.Character.HumanoidRootPart.CanCollide = false
-end
-end
 elseif c_b4.Text == "X" then --off
 c_b4.Text = ""
 _G.c_b4 = false
-for i,v in next, game:GetService('Players'):GetPlayers() do
-if v.Name ~= game:GetService('Players').LocalPlayer.Name then
-v.Character.HumanoidRootPart.Size = Vector3.new(5, 5, 5)
-v.Character.HumanoidRootPart.Transparency = 1
-v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really black")
-v.Character.HumanoidRootPart.Material = "Neon"
-v.Character.HumanoidRootPart.CanCollide = false
-end
-end
 end
 end)
 
@@ -4921,7 +5056,7 @@ st_b7.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
 st_b7.Size = UDim2.new(0, 20, 0, 20)
 st_b7.BorderColor3 = Color3.fromRGB(250, 250, 250)
 st_b7.Font = Enum.Font.SourceSans
-st_b7.Text = ""
+st_b7.Text = "X"
 st_b7.TextColor3 = Color3.fromRGB(250, 250, 250)
 st_b7.TextSize = 30.000
 st_b7.MouseButton1Down:connect(function()
@@ -4934,6 +5069,7 @@ st_b7.Text = ""
 _G.st_b7 = false
 end
 end)
+_G.st_b7 = true
 
 st_f8.Parent = b_page9
 st_f8.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
@@ -4954,7 +5090,7 @@ st_b8.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
 st_b8.Size = UDim2.new(0, 20, 0, 20)
 st_b8.BorderColor3 = Color3.fromRGB(250, 250, 250)
 st_b8.Font = Enum.Font.SourceSans
-st_b8.Text = ""
+st_b8.Text = "X"
 st_b8.TextColor3 = Color3.fromRGB(250, 250, 250)
 st_b8.TextSize = 30.000
 st_b8.MouseButton1Down:connect(function()
@@ -4967,6 +5103,7 @@ st_b8.Text = ""
 _G.st_b8 = false
 end
 end)
+_G.st_b8 = true
 
 st_f9.Parent = b_page9
 st_f9.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
@@ -4987,7 +5124,7 @@ st_b9.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
 st_b9.Size = UDim2.new(0, 20, 0, 20)
 st_b9.BorderColor3 = Color3.fromRGB(250, 250, 250)
 st_b9.Font = Enum.Font.SourceSans
-st_b9.Text = ""
+st_b9.Text = "X"
 st_b9.TextColor3 = Color3.fromRGB(250, 250, 250)
 st_b9.TextSize = 30.000
 st_b9.MouseButton1Down:connect(function()
@@ -5000,6 +5137,7 @@ st_b9.Text = ""
 _G.st_b9 = false
 end
 end)
+_G.st_b9 = true
 
 st_f10.Parent = b_page9
 st_f10.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
@@ -5020,7 +5158,7 @@ st_b10.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
 st_b10.Size = UDim2.new(0, 20, 0, 20)
 st_b10.BorderColor3 = Color3.fromRGB(250, 250, 250)
 st_b10.Font = Enum.Font.SourceSans
-st_b10.Text = ""
+st_b10.Text = "X"
 st_b10.TextColor3 = Color3.fromRGB(250, 250, 250)
 st_b10.TextSize = 30.000
 st_b10.MouseButton1Down:connect(function()
@@ -5033,7 +5171,7 @@ st_b10.Text = ""
 _G.st_b10 = false
 end
 end)
-
+_G.st_b10 = true
 
 st_f11.Parent = b_page9
 st_f11.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
@@ -5054,7 +5192,7 @@ st_b11.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
 st_b11.Size = UDim2.new(0, 20, 0, 20)
 st_b11.BorderColor3 = Color3.fromRGB(250, 250, 250)
 st_b11.Font = Enum.Font.SourceSans
-st_b11.Text = ""
+st_b11.Text = "X"
 st_b11.TextColor3 = Color3.fromRGB(250, 250, 250)
 st_b11.TextSize = 30.000
 st_b11.MouseButton1Down:connect(function()
@@ -5067,7 +5205,7 @@ st_b11.Text = ""
 _G.st_b11 = false
 end
 end)
-
+_G.st_b11 = true
 
 
 -- // function Button
