@@ -21,6 +21,9 @@ bar_4=Instance.new("Frame")
 t_1 =Instance.new("TextLabel")
 t_2 =Instance.new("TextLabel")
 
+tt_name=Instance.new("TextLabel")
+tt_1=Instance.new("TextLabel")
+
 key_t=Instance.new("TextLabel")
 key_tb =Instance.new("TextBox")
 key_b =Instance.new("TextButton")
@@ -80,7 +83,7 @@ bar_1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 bar_1.Position = UDim2.new(0.000000000, 0, 0.180000000, 0)
 bar_1.Size = UDim2.new(0, 120, 0, 160)
 bar_1.Font = Enum.Font.Ubuntu
-bar_1.Text = "Script NTT HUB Suport 32 bit / Pe      Thank you for use script"
+bar_1.Text = "Script NTT HUB Suport 32 bit / Pe"
 bar_1.TextColor3 = Color3.fromRGB(255, 255, 255)
 bar_1.TextSize = 14.000
 bar_1.TextWrapped = true
@@ -100,6 +103,30 @@ bar_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 bar_3.Position = UDim2.new(0.755000000, 0, 0.180000000, 0)
 bar_3.Size = UDim2.new(0, 120, 0, 160)
 UIbar3.Parent = bar_3
+
+tt_name.Name = "tt_name"
+tt_name.Parent = bar_1
+tt_name.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+tt_name.Size = UDim2.new(0, 120, 0, 30)
+tt_name.Position = UDim2.new(0, 0, 0.150000000, 0)
+tt_name.BackgroundTransparency = 1
+tt_name.Font = Enum.Font.Ubuntu
+tt_name.Text = "Thông Báo"
+tt_name.TextColor3 = Color3.fromRGB(255, 255, 255)
+tt_name.TextSize = 14.000
+tt_name.TextWrapped = true
+
+tt_1.Name = "tt_1"
+tt_1.Parent = bar_1
+tt_1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+tt_1.Size = UDim2.new(0, 120, 0, 30)
+tt_1.Position = UDim2.new(0, 0, 0.270000000, 0)
+tt_1.BackgroundTransparency = 1
+tt_1.Font = Enum.Font.Ubuntu
+tt_1.Text = "Link get key sẻ có vào lúc 21.00h nha"
+tt_1.TextColor3 = Color3.fromRGB(255, 255, 255)
+tt_1.TextSize = 14.000
+tt_1.TextWrapped = true
 
 t_1.Name = "t_1"
 t_1.Parent = bar_3
