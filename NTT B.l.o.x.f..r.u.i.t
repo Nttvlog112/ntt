@@ -1610,9 +1610,9 @@ game:GetService('RunService').RenderStepped:connect(function()
  if _G.m_b4 then
  CheckQuest() 
  
-game.Players.LocalPlayer.Character.Animate.Disabled = false
           local humanoid = game.Players.LocalPlayer.Character.Humanoid 
 humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
+game.Players.LocalPlayer.Character.Animate.Disabled = false
 game.Players.LocalPlayer.Character.Humanoid.Sit = false
              
 TP1(CFrameMob)
@@ -1649,17 +1649,29 @@ game:GetService("TweenService"):Create(
                         TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
                         {CFrame = v.HumanoidRootPart.CFrame* CFrame.new(0, st_b5.Text, 0) }
                     ):Play()                  
-                    if v.Humanoid.Health > 3000 then -- check health
-                    mele() click()
-                    end
-                    if v.Humanoid.Health <= 3000 then -- check health
-                    fruit() 
-                    Skill()
-                    end
- end end
+                 
+ end end end 
   end end)
         
-    -- Bring Mob
+   spawn(function()
+    while task.wait() do
+        pcall(function()
+        if _G.m_b4 then     
+        CheckQuest()
+        for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
+      if v.Name == Ms then --name mob
+        if   (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 100 then
+                    if v.Humanoid.Health > 5000 then -- check health                  
+                    mele()  wait(2) click()
+                    end
+                    if v.Humanoid.Health < 5000 then -- check health
+                    fruit() 
+                    Skill()
+                    end end end end end end) end end)
+        
+        
+    --[[
+Bring Mob
 spawn(function()
     while task.wait(4) do
         pcall(function()
@@ -1680,7 +1692,7 @@ if v.Humanoid:FindFirstChild("Animator") then
                         end
                         sethiddenproperty(game:GetService("Players").LocalPlayer,"SimulationRadius",math.huge)                    
                         end end end end end end) end  end) 
-
+]]
 
 m_f5.Parent = b_page1
 m_f5.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
@@ -3081,12 +3093,6 @@ spawn(function()
             if _G.ef_b6 then
                 for i,v in pairs(game.Workspace:GetDescendants()) do
       if v.Name == "Fruit" then --name mob
-      local humanoid = game.Players.LocalPlayer.Character.Humanoid 
-humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
-local humanoid = game.Players.LocalPlayer.Character.Humanoid 
-humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
-local humanoid = game.Players.LocalPlayer.Character.Humanoid 
-humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
                     local Distance = (v.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
                     if Distance < 150 then
                         Speed = 20000
@@ -3113,14 +3119,17 @@ humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
                         TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
                             {CFrame = v.CFrame}
                         ):Cancel()
-                        local humanoid = game.Players.LocalPlayer.Character.Humanoid 
-humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
+                        
                     end
                     end
                     end
                     end
              end end) end end)  
-                
+                game:GetService("RunService").RenderStepped:Connect(function()
+if _G.ef_b6 then
+      local humanoid = game.Players.LocalPlayer.Character.Humanoid 
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
+end end)
 
 
 ef_f7.Parent = b_page5
@@ -4614,7 +4623,7 @@ c_f4.Position = UDim2.new(0, 0, 0.5200000000, 0)
 c_f4.Size = UDim2.new(0, 498, 0, 30)
 c_f4.BorderColor3 = Color3.fromRGB(250, 250, 250)
 c_f4.Font = Enum.Font.Ubuntu
-c_f4.Text = "   Tp Player"   
+c_f4.Text = "   Kill Player / Teleport Bypass | Mele"
 c_f4.TextColor3 = Color3.fromRGB(255, 255, 255)
 c_f4.TextSize = 14.000
 c_f4.TextWrapped = true
