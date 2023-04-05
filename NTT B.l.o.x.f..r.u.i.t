@@ -169,11 +169,13 @@ ef_b6= Instance.new("TextButton")
 ef_b7= Instance.new("TextButton")
 
 -- // mob - item
+mi_fc = Instance.new("TextLabel")
 mi_f1 = Instance.new("TextLabel")
 mi_f2 = Instance.new("TextLabel")
 mi_f3 = Instance.new("TextLabel")
 mi_f4 = Instance.new("TextLabel")
 
+mi_bc= Instance.new("TextButton")
 mi_b1= Instance.new("TextButton")
 mi_b2= Instance.new("TextButton")
 mi_b3= Instance.new("TextButton")
@@ -613,6 +615,7 @@ tool("Electric Claw")
 tool("Dragon Talon")
 tool("Superhuman")
 tool("Black Leg")
+tool("Dearh Step")
 tool("Electro")
 tool("Fishman Karate")
 tool("Dragon Claw")
@@ -654,6 +657,38 @@ end
 function fruit()
 tool("Ice-Ice")
 tool("Light-Light")
+tool("Kilo-Kilo")
+tool("Spin-Spin")
+tool("Chop-Chop")
+tool("Spring-Spring")
+tool("Bomb-Bomb")
+tool("Smoke-Smoke")
+tool("Spike-Spike")
+tool("Flame-Flame")
+tool("Falcon-Falcon")
+tool("Sand-Sand")
+tool("Dark-Dark")
+tool("Revive-Revive")
+tool("Diamond-Diamond")
+tool("Rubber-Rubber")
+tool("Barrier-Barrier")
+tool("Magma-Magma")
+tool("Quake-Quake")
+tool("Buddha-Buddha")
+tool("Love-Love")
+tool("Spider-Spider")
+tool("Phoenix-Phoenix")
+tool("Protal-Protal")
+tool("Rumble-Rumble")
+tool("Paw-Paw")
+tool("Blizzard-Blizzard")
+tool("Gravity-Gravity")
+tool("Dough-Dough")
+tool("Shadow-Shadow")
+tool("Venom-Venom")
+tool("Control-Control")
+tool("Spirit-Spirit")
+tool("Dragon-Dragon")
 end
 
 
@@ -1702,7 +1737,7 @@ game:GetService("TweenService"):Create(
                     mele()  wait(.5) click()
                     v.HumanoidRootPart.Size = Vector3.new(50, 50, 10)     --size hix box  
                     else
-                    v.HumanoidRootPart.Size = Vector3.new(5, 5, 5)     --size hix box  
+                    v.HumanoidRootPart.Size = Vector3.new(2,2,2)     --size hix box  
                     fruit() 
                     Skill()
       end   end
@@ -1714,7 +1749,7 @@ end
                     
                     v.HumanoidRootPart.Size = Vector3.new(50, 50, 10)     --size hix box  
                     else
-                    v.HumanoidRootPart.Size = Vector3.new(5, 5, 5)     --size hix box  
+                    v.HumanoidRootPart.Size = Vector3.new(2,2,2)     --size hix box  
                     fruit() 
                     Skill()
       end     end      
@@ -1726,7 +1761,7 @@ end
                    
                     v.HumanoidRootPart.Size = Vector3.new(50, 50, 10)     --size hix box  
                     else
-                    v.HumanoidRootPart.Size = Vector3.new(5, 5, 5)     --size hix box  
+                    v.HumanoidRootPart.Size = Vector3.new(2,2,2)     --size hix box  
                     fruit() 
                     Skill()
       end     end   
@@ -1737,7 +1772,7 @@ end
                     mele()  wait(.5) click()
                     v.HumanoidRootPart.Size = Vector3.new(50, 50, 10)     --size hix box  
                     else
-                    v.HumanoidRootPart.Size = Vector3.new(5, 5, 5)     --size hix box  
+                    v.HumanoidRootPart.Size = Vector3.new(2,2,2)     --size hix box  
                     fruit() 
                     Skill()
       end     end         
@@ -1748,7 +1783,7 @@ end
                     mele()  wait(.5) click()
                     v.HumanoidRootPart.Size = Vector3.new(50, 50, 10)     --size hix box  
                     else
-                    v.HumanoidRootPart.Size = Vector3.new(5, 5, 5)     --size hix box  
+                    v.HumanoidRootPart.Size = Vector3.new(2,2,2)     --size hix box  
                     fruit() 
                     Skill()
       end              end end
@@ -1758,7 +1793,7 @@ end
                     mele()  wait(.5) click()
                     v.HumanoidRootPart.Size = Vector3.new(50, 50, 10)     --size hix box  
                     else
-                    v.HumanoidRootPart.Size = Vector3.new(5, 5, 5)     --size hix box  
+                    v.HumanoidRootPart.Size = Vector3.new(2,2,2)     --size hix box  
                     fruit() 
                     Skill()
       end     end         end
@@ -1899,14 +1934,14 @@ function TPchest(P1)
        game:GetService('RunService').RenderStepped:connect(function()       
     if   _G.m_b8 then
     
-      if game:GetService("Workspace"):FindFirstChild("Chest3") then
-     TPchest( game:GetService("Workspace"):FindFirstChild("Chest3").CFrame)
-     end
-     if game:GetService("Workspace"):FindFirstChild("Chest2") then
+      if game:GetService("Workspace"):FindFirstChild("Chest2") then
      TPchest( game:GetService("Workspace"):FindFirstChild("Chest2").CFrame)
      end
      if game:GetService("Workspace"):FindFirstChild("Chest1") then
-TPchest( game:GetService("Workspace"):FindFirstChild("Chest1").CFrame)
+     TPchest( game:GetService("Workspace"):FindFirstChild("Chest1").CFrame)
+     end
+     if game:GetService("Workspace"):FindFirstChild("Chest3") then
+TPchest( game:GetService("Workspace"):FindFirstChild("Chest3").CFrame)
 end
 end end)
 
@@ -3937,9 +3972,109 @@ melebar()
 
 -- // mob - item
 
+mi_fc.Parent = b_page6
+mi_fc.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+mi_fc.Position = UDim2.new(0, 0, 0.0300000000, 0)
+mi_fc.Size = UDim2.new(0, 498, 0, 30)
+mi_fc.BorderColor3 = Color3.fromRGB(250, 250, 250)
+mi_fc.Font = Enum.Font.Ubuntu
+mi_fc.Text = "   Auto Key râu đen - cup"
+mi_fc.TextColor3 = Color3.fromRGB(255, 255, 255)
+mi_fc.TextSize = 14.000
+mi_fc.TextWrapped = true
+mi_fc.TextXAlignment = Enum.TextXAlignment.Left
+
+mi_bc.Name = "mi_bc"
+mi_bc.Parent = mi_fc
+mi_bc.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+mi_bc.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+mi_bc.Size = UDim2.new(0, 20, 0, 20)
+mi_bc.BorderColor3 = Color3.fromRGB(250, 250, 250)
+mi_bc.Font = Enum.Font.SourceSans
+mi_bc.Text = ""
+mi_bc.TextColor3 = Color3.fromRGB(250, 250, 250)
+mi_bc.TextSize = 30.000
+mi_bc.MouseButton1Down:connect(function()
+--on off 
+if mi_bc.Text == "" then --on
+mi_bc.Text = "X"
+_G.mi_bc = true
+elseif mi_bc.Text == "X" then --off
+mi_bc.Text = ""
+_G.mi_bc = false
+end
+end)
+
+if game.PlaceId == 2753915549 then -- sea1
+mi_fc.Text = "   Sea 1 Can't Find Fist of Darkness - God'd Chalice"
+end
+if game.PlaceId == 4442272183 then -- sea2
+mi_fc.Text = "   Auto Find Fist of Darkness"
+end
+if game.PlaceId == 7449423635 then -- sea3
+mi_fc.Text = "   Auto God's Chalice"
+end
+
+if game.PlaceId == 4442272183 then -- sea2
+
+game:GetService('RunService').RenderStepped:connect(function()       
+     if _G.mi_bc then
+    if not game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Fist of Darkness") then 
+      if game:GetService("Workspace"):FindFirstChild("Chest2") then
+     TPchest( game:GetService("Workspace"):FindFirstChild("Chest2").CFrame)
+     end
+     if game:GetService("Workspace"):FindFirstChild("Chest1") then
+     TPchest( game:GetService("Workspace"):FindFirstChild("Chest1").CFrame)
+     end
+     if game:GetService("Workspace"):FindFirstChild("Chest3") then
+TPchest( game:GetService("Workspace"):FindFirstChild("Chest3").CFrame)
+end 
+end end end) end
+
+if game.PlaceId == 4442272183 then -- sea2
+spawn(function()
+    while task.wait(5) do
+        pcall(function()
+            if _G.mi_bc then
+         if not   game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Fist of Darkness") then
+            game.Players.LocalPlayer.Character.Humanoid.Health = 0
+            end
+            wait(5)
+            
+           end end) end end) 
+end
+           
+if game.PlaceId == 7449423635 then -- sea3
+game:GetService('RunService').RenderStepped:connect(function()           
+     if _G.mi_bc then
+    if not game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("God's Chalice") then 
+      if game:GetService("Workspace"):FindFirstChild("Chest2") then
+     TPchest( game:GetService("Workspace"):FindFirstChild("Chest2").CFrame)
+     end
+     if game:GetService("Workspace"):FindFirstChild("Chest1") then
+     TPchest( game:GetService("Workspace"):FindFirstChild("Chest1").CFrame)
+     end
+     if game:GetService("Workspace"):FindFirstChild("Chest3") then
+TPchest( game:GetService("Workspace"):FindFirstChild("Chest3").CFrame)
+end
+end end  end) end
+
+if game.PlaceId == 7449423635 then -- sea3
+spawn(function()
+    while task.wait(5) do
+        pcall(function()
+            if _G.mi_bc then
+         if not   game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("God's Chalice") then
+            game.Players.LocalPlayer.Character.Humanoid.Health = 0
+            end
+            wait(5)
+            
+           end end) end end) end
+
+
 mi_f1.Parent = b_page6
 mi_f1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-mi_f1.Position = UDim2.new(0, 0, 0.0300000000, 0)
+mi_f1.Position = UDim2.new(0, 0, 0.1000000000, 0)
 mi_f1.Size = UDim2.new(0, 498, 0, 30)
 mi_f1.BorderColor3 = Color3.fromRGB(250, 250, 250)
 mi_f1.Font = Enum.Font.Ubuntu
@@ -4023,7 +4158,7 @@ game:GetService("TweenService"):Create(
 
 mi_f2.Parent = b_page6
 mi_f2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-mi_f2.Position = UDim2.new(0, 0, 0.1000000000, 0)
+mi_f2.Position = UDim2.new(0, 0, 0.1700000000, 0)
 mi_f2.Size = UDim2.new(0, 498, 0, 30)
 mi_f2.BorderColor3 = Color3.fromRGB(250, 250, 250)
 mi_f2.Font = Enum.Font.Ubuntu
@@ -4139,7 +4274,7 @@ if v.Humanoid:FindFirstChild("Animator") then
                  
 mi_f3.Parent = b_page6
 mi_f3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-mi_f3.Position = UDim2.new(0, 0, 0.1700000000, 0)
+mi_f3.Position = UDim2.new(0, 0, 0.2400000000, 0)
 mi_f3.Size = UDim2.new(0, 498, 0, 30)
 mi_f3.BorderColor3 = Color3.fromRGB(250, 250, 250)
 mi_f3.Font = Enum.Font.Ubuntu
