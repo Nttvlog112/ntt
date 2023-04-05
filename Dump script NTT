@@ -62,9 +62,7 @@ main.Size = UDim2.new(0, 462, 0, 280) -- kích cở
 main.BackgroundTransparency = 1
 main.Visible = true
 
-main.Active = true
-main.Draggable = true
-main.Visible = false
+
 
 Background.Name = "Background"
 Background.Parent = main
