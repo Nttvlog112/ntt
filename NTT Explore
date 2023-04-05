@@ -191,7 +191,7 @@ save2.Text = "NTT HUB"
 save2.TextColor3 = Color3.fromRGB(255, 255, 255)
 save2.TextSize = 11.000
 save2.MouseButton1Click:Connect(function()
-code.Text = "loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Loader20NTT201')))()"
+code.Text = "loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/NTT%20key%20ui')))()"
 end)
 
 save3.Name = "save3"
@@ -278,9 +278,7 @@ if _G.buyscript then
 if code.Text == "loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/4')))()" then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Nttvlog112/ntt/main/Bouty%20blox"))()
 end end
-if code.Text == "loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Loader20NTT201')))()" then
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Loader%20NTT%201')))()
-end end
+ end
 
 bartop.Name = "bartop"
 bartop.Parent = main -- nằm trên khung ẩn
