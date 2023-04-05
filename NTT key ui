@@ -1,7 +1,8 @@
 
 -- // key script and link get key
-_G.key = "2029"
-_G.linkkey = ""
+_G.key = "10246"
+_G.linkkey = "https://link1s.com/Emc5ifJb"
+_G.tt = "Key Reset"
 
 local UIGUI = Instance.new("ScreenGui")
 main= Instance.new("Frame")
@@ -123,7 +124,7 @@ tt_1.Size = UDim2.new(0, 120, 0, 30)
 tt_1.Position = UDim2.new(0, 0, 0.270000000, 0)
 tt_1.BackgroundTransparency = 1
 tt_1.Font = Enum.Font.Ubuntu
-tt_1.Text = "Link get key sẻ có vào lúc 21.00h nha"
+tt_1.Text = _G.tt
 tt_1.TextColor3 = Color3.fromRGB(255, 255, 255)
 tt_1.TextSize = 14.000
 tt_1.TextWrapped = true
