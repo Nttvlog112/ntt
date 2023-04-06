@@ -36,6 +36,7 @@ local b_7 = Instance.new("TextButton")--Comnat
 local b_8 = Instance.new("TextButton")--teleport
 local b_9 = Instance.new("TextButton")--setting
 
+
 -- // Name Player
 local prl = Instance.new("TextLabel")--Name Player
 
@@ -174,12 +175,20 @@ mi_f1 = Instance.new("TextLabel")
 mi_f2 = Instance.new("TextLabel")
 mi_f3 = Instance.new("TextLabel")
 mi_f4 = Instance.new("TextLabel")
+mi_f5 = Instance.new("TextLabel")
+mi_f6 = Instance.new("TextLabel")
+mi_f7 = Instance.new("TextLabel")
+mi_f8 = Instance.new("TextLabel")
 
 mi_bc= Instance.new("TextButton")
 mi_b1= Instance.new("TextButton")
 mi_b2= Instance.new("TextButton")
 mi_b3= Instance.new("TextButton")
 mi_b4= Instance.new("TextButton")
+mi_b5= Instance.new("TextButton")
+mi_b6= Instance.new("TextButton")
+mi_b7= Instance.new("TextButton")
+mi_b8= Instance.new("TextButton")
 
 -- // combat
 c_tb = Instance.new("TextBox")
@@ -194,11 +203,14 @@ c_f2 = Instance.new("TextLabel")
 c_f3 = Instance.new("TextLabel")
 c_f4 = Instance.new("TextLabel")
 c_f5 = Instance.new("TextLabel")
+c_f6 = Instance.new("TextLabel")
+
 c_b1 = Instance.new("TextButton")
 c_b2 = Instance.new("TextButton")
 c_b3 = Instance.new("TextButton")
 c_b4 = Instance.new("TextButton")
 c_b5= Instance.new("TextButton")
+c_b6= Instance.new("TextButton")
 
 -- // setting
 st_f1 = Instance.new("TextLabel")
@@ -1256,14 +1268,131 @@ elseif MyLevel == 1900 or MyLevel <= 1924 then --Jungle Pirate [Lv. 1900]
                                             CFrameMob = CFrame.new(-9567.6455078125, 205.01329040527344, 6041.50439453125)
                                             CFrameBring = CFrame.new(-9628.9521484375, 172.44805908203125, 6135.67529296875) or CFrame.new(-9355.6806640625, 172.44805908203125, 6128.958984375)
                                             
-  elseif MyLevel == 2050 or MyLevel >= 2400 then --m_b3
+  elseif MyLevel == 2050 or MyLevel <= 2074 then --m_b3
                                             Ms = "Posessed Mummy [Lv. 2050]" --name mob
                                             NameQuest = "HauntedQuest2" --name get quest
                                             LevelQuest = 2        -- lv quest
                                             NameMon = "Haunted Castle Quest Giver 2"    --name npc
                                             CFrameQuest = CFrame.new(-9515.3583984375, 172.44805908203125, 6077.98193359375)
                                             CFrameMob = CFrame.new(-9683.0595703125, 30.237384796142578, 6359.37890625)
-                                            CFrameBring = CFrame.new(-9592.609375, 6.502960681915283, 6304.86767578125)                                             
+                                            CFrameBring = CFrame.new(-9592.609375, 6.502960681915283, 6304.86767578125)          
+
+                      elseif MyLevel == 2075 or MyLevel <= 2099 then --m_b3
+                                            Ms = "Peanut Scout [Lv. 2075]" --name mob
+                                            NameQuest = "NutsIslandQuest" --name get quest
+                                            LevelQuest = 1        -- lv quest
+                                            NameMon = "Peanut Quest Giver"    --name npc
+                                            CFrameQuest = CFrame.new(-2103.4658203125, 38.44702911376953, -10192.3759765625)
+                                            CFrameMob = CFrame.new(-1938.1060791015625, 92.89632415771484, -10194.41015625)
+                                            CFrameBring = CFrame.new(-1981.99462890625, 38.44697189331055, -10212.177734375)          
+                                            
+     elseif MyLevel == 2100 or MyLevel <= 2124 then --m_b3
+                                            Ms = "Peanut President [Lv. 2100]" --name mob
+                                            NameQuest = "NutsIslandQuest" --name get quest
+                                            LevelQuest = 2       -- lv quest
+                                            NameMon = "Peanut Quest Giver"    --name npc
+                                            CFrameQuest = CFrame.new(-2103.4658203125, 38.44702911376953, -10192.3759765625)
+                                            CFrameMob = CFrame.new(-1955.168701171875, 80.96415710449219, -10534.24609375)
+                                            CFrameBring = CFrame.new(-1981.7294921875, 38.44706344604492, -10583.0283203125)             
+
+        elseif MyLevel == 2125 or MyLevel <= 2149 then --m_b3
+                                            Ms = "Ice Cream Chef [Lv. 2125]" --name mob
+                                            NameQuest = "IceCreamIslandQuest" --name get quest
+                                            LevelQuest = 1        -- lv quest
+                                            NameMon = "Ice Cream Quest Giver"    --name npc
+                                            CFrameQuest = CFrame.new(-819.2644653320312, 66.16277313232422, -10965.35546875)
+                                            CFrameMob = CFrame.new(-875.36962890625, 118.58836364746094, -11034.2578125)
+                                            CFrameBring = CFrame.new(-966.6111450195312, 66.16276550292969, -11046.341796875)
+                                            
+     elseif MyLevel == 2150 or MyLevel <= 2199 then --m_b3
+                                            Ms = "Ice Cream Commander [Lv. 2150]" --name mob
+                                            NameQuest = "IceCreamIslandQuest" --name get quest
+                                            LevelQuest = 2       -- lv quest
+                                            NameMon = "Ice Cream Quest Giver"    --name npc
+                                            CFrameQuest = CFrame.new(-819.2644653320312, 66.16277313232422, -10965.35546875)
+                                            CFrameMob = CFrame.new(-697.4462280273438, 173.2466278076172, -11212.94140625)
+                                            CFrameBring = CFrame.new(-638.2747192382812, 66.16278076171875, -11293.0546875)       
+
+                     elseif MyLevel == 2200 or MyLevel <= 2224 then --m_b3
+                                            Ms = "Cookie Crafter [Lv. 2200]"
+                                            NameQuest = "CakeQuest1" --name get quest
+                                            LevelQuest = 1        -- lv quest
+                                            NameMon = "Cake Quest Giver"    --name npc
+                                            CFrameQuest = CFrame.new(-2020.8443603515625, 38.141448974609375, -12029.701171875)
+                                            CFrameMob = CFrame.new(-2289.203369140625, 92.37846374511719, -12041.884765625)
+                                            CFrameBring = CFrame.new(-2367.436279296875, 38.14149856567383, -12120.3876953125)
+                                            
+     elseif MyLevel == 2225 or MyLevel <= 2249  then --m_b3
+                                            Ms = "Cake Guard [Lv. 2225]"
+                                            NameQuest = "CakeQuest2" --name get quest
+                                            LevelQuest = 1      -- lv quest
+                                            NameMon = "Cake Quest Giver 2"    --name npc
+                                            CFrameQuest = CFrame.new(-1930.0250244140625, 38.14136505126953, -12839.5126953125)
+                                            CFrameMob = CFrame.new(-1770.3917236328125, 81.48420715332031, -12207.4453125)
+                                            CFrameBring = CFrame.new(-1550.4625244140625, 38.14139175415039, -12253.3388671875)     
+
+        elseif MyLevel == 2250 or MyLevel <= 2299  then --m_b3
+                                            Ms = "Cake Guard [Lv. 2225]"
+                                            NameQuest = "CakeQuest2" --name get quest
+                                            LevelQuest = 2       -- lv quest
+                                            NameMon = "Cake Quest Giver 2"    --name npc
+                                            CFrameQuest = CFrame.new(-1930.0250244140625, 38.14136505126953, -12839.5126953125)
+                                            CFrameMob = CFrame.new(-2313.727294921875, 106.16911315917969, -12928.9609375)
+                                            CFrameBring = CFrame.new(-2277.978271484375, 53.741302490234375, -12882.1669921875)
+                                            
+     elseif MyLevel == 2300 or MyLevel <= 2324 then --m_b3
+                                            Ms = "Cocoa Warrior [Lv. 2300]"
+                                            NameQuest = "ChocQuest1" --name get quest
+                                            LevelQuest = 1        -- lv quest
+                                            NameMon = "Chocolate Quest Giver 1"    --name npc
+                                            CFrameQuest = CFrame.new(232.68365478515625, 25.07747459411621, -12198.4609375)
+                                            CFrameMob = CFrame.new(141.66293334960938, 68.89732360839844, -12254.884765625)
+                                            CFrameBring = CFrame.new(-59.606964111328125, 25.077518463134766, -12293.5009765625)
+                                            
+     elseif MyLevel == 2325 or MyLevel <= 2349 then --m_b3
+                                            Ms = "Chocolate Bar Battler [Lv. 2325]"
+                                            NameQuest = "ChocQuest1" --name get quest
+                                            LevelQuest = 2       -- lv quest
+                                            NameMon = "Chocolate Quest Giver 1"    --name npc
+                                            CFrameQuest = CFrame.new(232.68365478515625, 25.07747459411621, -12198.4609375)
+                                            CFrameMob = CFrame.new(601.5966186523438, 74.49623107910156, -12581.8505859375)
+                                            CFrameBring = CFrame.new(645.4754638671875, 25.077503204345703, -12556.8251953125)
+                                            
+         elseif MyLevel == 2350 or MyLevel <= 2374 then --m_b3
+                                            Ms = "Sweet Thief [Lv. 2350]"
+                                            NameQuest = "ChocQuest2" --name get quest
+                                            LevelQuest = 1        -- lv quest
+                                            NameMon = "Chocolate Quest Giver 2"  --name npc
+                                            CFrameQuest = CFrame.new(149.07852172851562, 25.136638641357422, -12773.7724609375)
+                                            CFrameMob = CFrame.new(-98.89625549316406, 141.48594665527344, -12260.88671875)
+                                            CFrameBring = CFrame.new(-62.194541931152344, 25.07767105102539, -12263.3408203125)
+                                            
+     elseif MyLevel == 2375 or MyLevel <= 2399  then --m_b3
+                                            Ms = "Chocolate Bar Battler [Lv. 2325]"
+                                            NameQuest = "ChocQuest2" --name get quest
+                                            LevelQuest = 2       -- lv quest
+                                            NameMon = "Chocolate Quest Giver 2"   --name npc
+                                            CFrameQuest = CFrame.new(149.07852172851562, 25.136638641357422, -12773.7724609375)
+                                            CFrameMob = CFrame.new(722.8572387695312, 66.84835052490234, -12589.693359375)
+                                            CFrameBring = CFrame.new(758.705322265625, 25.077476501464844, -12648.5390625)               
+
+            elseif MyLevel == 2400 or MyLevel <= 2424 then --m_b3
+                                            Ms = "Candy Pirate [Lv. 2400]"
+                                            NameQuest = "CandyQuest1" --name get quest
+                                            LevelQuest = 1        -- lv quest
+                                            NameMon = "Candy Cane Quest Giver"  --name npc
+                                            CFrameQuest = CFrame.new(-1147.3931884765625, 14.45048999786377, -14445.3056640625)
+                                            CFrameMob = CFrame.new(-1409.4703369140625, 70.9400405883789, -14846.0751953125)
+                                            CFrameBring = CFrame.new(-1331.5687255859375, 15.250885009765625, -14735.1865234375)
+                                            
+     elseif MyLevel == 2425 or MyLevel >= 9999  then --m_b3
+                                            Ms = "Snow Demon [Lv. 2425]"
+                                            NameQuest = "CandyQuest1" --name get quest
+                                            LevelQuest = 2       -- lv quest
+                                            NameMon = "Candy Cane Quest Giver"   --name npc
+                                            CFrameQuest = CFrame.new(-1147.3931884765625, 14.45048999786377, -14445.3056640625)
+                                            CFrameMob = CFrame.new(-846.505126953125, 114.67166900634766, -14408.7978515625)
+                                            CFrameBring = CFrame.new(-860.7842407226562, 15.250883102416992, -14339.814453125)        
 end end                                                                                                        
                 end
 
@@ -1409,17 +1538,6 @@ stoptp()
 end
 end)
 
--- // fartory
-game:GetService('RunService').RenderStepped:connect(function()
-if _G.m_b5 then --script
-   for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do                                                             
- if v.Name == "Core" then
- if v.Humanoid.Health > 0  then
- local humanoid = game.Players.LocalPlayer.Character.Humanoid 
-humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
- click()
- TP1(CFrame.new(407.5114440917969, 194.4268798828125, -412.55828857421875))
- end end end end end)
 
 -- // auto farm lv
 _G.q1 = true
@@ -1640,6 +1758,19 @@ stoptp()
 end
 end)
 
+-- // fartory
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.m_b6 then --script
+   for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do                                                             
+ if v.Name == "Core" then
+ if v.Humanoid.Health > 0  then
+ local humanoid = game.Players.LocalPlayer.Character.Humanoid 
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
+ click()
+ TP1(CFrame.new(407.5114440917969, 194.4268798828125, -412.55828857421875))
+ end end end end end)
+
+
 m_f4.Parent = b_page1
 m_f4.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
 m_f4.Position = UDim2.new(0, 0, 0.3100000000, 0)
@@ -1707,7 +1838,7 @@ for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
        if v.Humanoid.Health > 0 then -- check health
            
        v.Humanoid:ChangeState(14)
-      v.HumanoidRootPart.Size = Vector3.new(50, 50, 10)     --size hix box  
+      
       v.HumanoidRootPart.CanCollide = false                                                
 v.Head.CanCollide = false                                 
 if v.Humanoid:FindFirstChild("Animator") then
@@ -1734,10 +1865,11 @@ game:GetService("TweenService"):Create(
         if m_b7.Text == "1000" then
         if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 60 then
                     if v.Humanoid.Health >= 1000 then -- check health                  
-                    mele()  wait(.5) click()
+                    mele()  click()
                     v.HumanoidRootPart.Size = Vector3.new(50, 50, 10)     --size hix box  
                     else
-                    v.HumanoidRootPart.Size = Vector3.new(2,2,2)     --size hix box  
+                    v.HumanoidRootPart.Size = Vector3.new(0.1,0.1,0.1)     --size hix box  
+                    click()
                     fruit() 
                     Skill()
       end   end
@@ -1745,11 +1877,12 @@ end
       if m_b7.Text == "2000" then
       if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 60 then
                     if v.Humanoid.Health >= 2000 then -- check health                  
-                    mele()  wait(.5) click()
+                    mele()  click()
                     
                     v.HumanoidRootPart.Size = Vector3.new(50, 50, 10)     --size hix box  
                     else
-                    v.HumanoidRootPart.Size = Vector3.new(2,2,2)     --size hix box  
+                    v.HumanoidRootPart.Size = Vector3.new(0.1,0.1,0.1)     --size hix box  
+                    click()
                     fruit() 
                     Skill()
       end     end      
@@ -1757,11 +1890,12 @@ end
       if m_b7.Text == "3000" then
       if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 60 then
                     if v.Humanoid.Health >= 3000 then -- check health                  
-                    mele()  wait(.5) click()
+                    mele()  click()
                    
                     v.HumanoidRootPart.Size = Vector3.new(50, 50, 10)     --size hix box  
                     else
-                    v.HumanoidRootPart.Size = Vector3.new(2,2,2)     --size hix box  
+                    v.HumanoidRootPart.Size = Vector3.new(0.1,0.1,0.1)     --size hix box  
+                    click()
                     fruit() 
                     Skill()
       end     end   
@@ -1769,10 +1903,11 @@ end
       if m_b7.Text == "4000" then
       if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 60 then
                     if v.Humanoid.Health >= 4000 then -- check health                  
-                    mele()  wait(.5) click()
+                    mele()  click()
                     v.HumanoidRootPart.Size = Vector3.new(50, 50, 10)     --size hix box  
                     else
-                    v.HumanoidRootPart.Size = Vector3.new(2,2,2)     --size hix box  
+                    v.HumanoidRootPart.Size = Vector3.new(0.1,0.1,0.1)     --size hix box  
+                    click()
                     fruit() 
                     Skill()
       end     end         
@@ -1780,43 +1915,14 @@ end
       if m_b7.Text == "5000" then
       if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 60 then
                     if v.Humanoid.Health >= 5000 then -- check health                  
-                    mele()  wait(.5) click()
+                    mele()  click()
                     v.HumanoidRootPart.Size = Vector3.new(50, 50, 10)     --size hix box  
                     else
-                    v.HumanoidRootPart.Size = Vector3.new(2,2,2)     --size hix box  
+                    v.HumanoidRootPart.Size = Vector3.new(0.1,0.1,0.1)     --size hix box  
+                    click()
                     fruit() 
                     Skill()
-      end              end end
-      if m_b7.Text == "6000" then
-      if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 60 then
-                    if v.Humanoid.Health >= 6000 then -- check health                  
-                    mele()  wait(.5) click()
-                    v.HumanoidRootPart.Size = Vector3.new(50, 50, 10)     --size hix box  
-                    else
-                    v.HumanoidRootPart.Size = Vector3.new(2,2,2)     --size hix box  
-                    fruit() 
-                    Skill()
-      end     end         end
-      if m_b7.Text == "7000" then
-      if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 60 then
-                    if v.Humanoid.Health >= 7000 then -- check health                  
-                    mele()  wait(.5) click()
-                    v.HumanoidRootPart.Size = Vector3.new(50, 50, 10)     --size hix box  
-                    else
-                    v.HumanoidRootPart.Size = Vector3.new(5, 5, 5)     --size hix box  
-                    fruit() 
-                    Skill()
-      end       end       end
-      if m_b7.Text == "8000" then
-      if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 60 then
-                    if v.Humanoid.Health >= 8000 then -- check health                  
-                    mele()  wait(1) click()
-                    v.HumanoidRootPart.Size = Vector3.new(50, 50, 10)     --size hix box  
-                    else
-                    v.HumanoidRootPart.Size = Vector3.new(5, 5, 5)     --size hix box  
-                    fruit() 
-                    Skill()
-      end     end     end
+      end              end end   
     
                     end end end end) end end)
         
@@ -1877,11 +1983,11 @@ m_b7.Position = UDim2.new(0.16000000, 0, 0, 0)
 m_b7.Size = UDim2.new(0, 30, 0, 30)
 m_b7.Font = Enum.Font.Ubuntu
 m_b7.BackgroundTransparency = 1.000
-m_b7.Text = "6000"
+m_b7.Text = "5000"
 m_b7.TextColor3 = Color3.fromRGB(250, 250, 250)
 m_b7.TextSize = 14.000
 m_b7.MouseButton1Down:connect(function()
-if m_b7.Text == "8000" then
+if m_b7.Text == "5000" then
 m_b7.Text = "1000"
 else 
 m_b7.Text = m_b7.Text + 1000
@@ -1946,7 +2052,7 @@ end
 end end)
 
 spawn(function()
-    while task.wait(5) do
+    while task.wait(3.5) do
         pcall(function()
             if _G.m_b8 then
             game.Players.LocalPlayer.Character.Humanoid.Health = 0
@@ -3002,45 +3108,47 @@ spawn(function()
         pcall(function()
             if _G.ef_b2 then
             
-                for _,v in pairs (workspace:GetChildren()) do
-                    if v.Name:Match("Fruit") then
-                        if not v:FindFirstChild("FruitESP") then
-                            local BillboardGui = Instance.new("BillboardGui")
-                            local TextLabel = Instance.new("TextLabel")
+                for i,v in pairs(game.Workspace:GetChildren()) do
+                    if v:IsA("Tool") or v.Name == "Fruit" then
+                        if v:FindFirstChild("Handle") then
+                            if not v.Handle:FindFirstChild("FruitESP") then
+                                local BillboardGui = Instance.new("BillboardGui")
+                                local TextLabel = Instance.new("TextLabel")
 
-                            BillboardGui.Parent = v
-                            BillboardGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-                            BillboardGui.Active = true
-                            BillboardGui.Name = "FruitESP"
-                            BillboardGui.AlwaysOnTop = true
-                            BillboardGui.LightInfluence = 1.000
-                            BillboardGui.Size = UDim2.new(0, 200, 0, 50)
-                            BillboardGui.StudsOffset = Vector3.new(0, 2.5, 0)
+                                BillboardGui.Parent = v.Handle
+                                BillboardGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+                                BillboardGui.Active = true
+                                BillboardGui.Name = "FruitESP"
+                                BillboardGui.AlwaysOnTop = true
+                                BillboardGui.LightInfluence = 1.000
+                                BillboardGui.Size = UDim2.new(0, 200, 0, 50)
+                                BillboardGui.StudsOffset = Vector3.new(0, 2.5, 0)
 
-                            TextLabel.Parent = BillboardGui
-                            TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-                            TextLabel.BackgroundTransparency = 1.000
-                            TextLabel.Size = UDim2.new(0, 200, 0, 50)
-                            TextLabel.Font = Enum.Font.GothamBold
-                            TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-                            TextLabel.Text.Size = 35
-                            TextLabel.TextStrokeTransparency = 0.000
-                            TextLabel.TextWrapped = true
-                        end
-                        local Dis = math.floor((game.Players.LocalPlayer.Character.HumanoidRootPart.Position - v.Position).Magnitude)
-                        v.FruitESP.TextLabel.Text = v.Name.."\n"..Dis.." M."                      
-                       end              
-                end
-                
-            else 
-                for _,v in pairs (workspace:GetChildren()) do
-                    if v.Name == "Fruit" then
-                        if v:FindFirstChild("FruitESP") then
-                            v.FruitESP:Destroy()
+                                TextLabel.Parent = BillboardGui
+                                TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+                                TextLabel.BackgroundTransparency = 1.000
+                                TextLabel.Size = UDim2.new(0, 200, 0, 50)
+                                TextLabel.Font = Enum.Font.GothamBold
+                                TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+                                TextLabel.Text.Size = 35
+                                TextLabel.TextStrokeTransparency = 0.000
+                                TextLabel.TextWrapped = true
+                            end
+                            local Dis = math.floor((game.Players.LocalPlayer.Character.HumanoidRootPart.Position - v.Handle.Position).Magnitude)
+                            v.Handle.FruitESP.TextLabel.Text = v.Name.."\n"..Dis.." M."
                         end
                     end
                 end
-                
+            else
+                for i,v in pairs(game.Workspace:GetChildren()) do
+                    if v:IsA("Tool") then
+                        if v:FindFirstChild("Handle") then
+                            if v.Handle:FindFirstChild("FruitESP") then
+                                v.Handle.FruitESP:Destroy()
+                            end
+                        end
+                    end
+                    end
             end
         end)
     end
@@ -3280,7 +3388,7 @@ spawn(function()
         pcall(function()
             if _G.ef_b6 then
                 for i,v in pairs(game.Workspace:GetDescendants()) do
-      if v.Name == "Fruit" then --name mob
+      if v.Name == 'Fruit' then --name mob
                     local Distance = (v.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
                     if Distance < 150 then
                         Speed = 20000
@@ -4033,7 +4141,7 @@ end end end) end
 
 if game.PlaceId == 4442272183 then -- sea2
 spawn(function()
-    while task.wait(5) do
+    while task.wait(3.5) do
         pcall(function()
             if _G.mi_bc then
          if not   game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Fist of Darkness") then
@@ -4061,7 +4169,7 @@ end end  end) end
 
 if game.PlaceId == 7449423635 then -- sea3
 spawn(function()
-    while task.wait(5) do
+    while task.wait(3.5) do
         pcall(function()
             if _G.mi_bc then
          if not   game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("God's Chalice") then
@@ -4363,6 +4471,88 @@ game:GetService("TweenService"):Create(
                     end end end end  
 end end)                 
 
+mi_f4.Parent = b_page6
+mi_f4.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+mi_f4.Position = UDim2.new(0, 0, 0.3100000000, 0)
+mi_f4.Size = UDim2.new(0, 498, 0, 30)
+mi_f4.BorderColor3 = Color3.fromRGB(250, 250, 250)
+mi_f4.Font = Enum.Font.Ubuntu
+mi_f4.Text = "   Auto Rengoku"
+mi_f4.TextColor3 = Color3.fromRGB(255, 255, 255)
+mi_f4.TextSize = 14.000
+mi_f4.TextWrapped = true
+mi_f4.TextXAlignment = Enum.TextXAlignment.Left
+
+mi_b4.Name = "mi_b4"
+mi_b4.Parent = mi_f4
+mi_b4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+mi_b4.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+mi_b4.Size = UDim2.new(0, 20, 0, 20)
+mi_b4.BorderColor3 = Color3.fromRGB(250, 250, 250)
+mi_b4.Font = Enum.Font.SourceSans
+mi_b4.Text = ""
+mi_b4.TextColor3 = Color3.fromRGB(250, 250, 250)
+mi_b4.TextSize = 30.000
+mi_b4.MouseButton1Down:connect(function()
+--on off 
+if mi_b4.Text == "" then --on
+mi_b4.Text = "X"
+_G.mi_b4 = true
+elseif mi_b4.Text == "X" then --off
+mi_b4.Text = ""
+_G.mi_b4 = false
+end
+end)
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.mi_b4 then --script
+
+
+
+end
+end)
+
+mi_f5.Parent = b_page6
+mi_f5.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+mi_f5.Position = UDim2.new(0, 0, 0.3800000000, 0)
+mi_f5.Size = UDim2.new(0, 498, 0, 30)
+mi_f5.BorderColor3 = Color3.fromRGB(250, 250, 250)
+mi_f5.Font = Enum.Font.Ubuntu
+mi_f5.Text = "   Auto Yama"
+mi_f5.TextColor3 = Color3.fromRGB(255, 255, 255)
+mi_f5.TextSize = 14.000
+mi_f5.TextWrapped = true
+mi_f5.TextXAlignment = Enum.TextXAlignment.Left
+
+mi_b5.Name = "mi_b5"
+mi_b5.Parent = mi_f5
+mi_b5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+mi_b5.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+mi_b5.Size = UDim2.new(0, 20, 0, 20)
+mi_b5.BorderColor3 = Color3.fromRGB(250, 250, 250)
+mi_b5.Font = Enum.Font.SourceSans
+mi_b5.Text = ""
+mi_b5.TextColor3 = Color3.fromRGB(250, 250, 250)
+mi_b5.TextSize = 30.000
+mi_b5.MouseButton1Down:connect(function()
+--on off 
+if mi_b5.Text == "" then --on
+mi_b5.Text = "X"
+_G.mi_b5 = true
+elseif mi_b5.Text == "X" then --off
+mi_b5.Text = ""
+_G.mi_b5 = false
+end
+end)
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.mi_b5 then --script
+
+
+
+end
+end)
+
 
 -- // combat
 
@@ -4573,7 +4763,7 @@ c_f2.Position = UDim2.new(0, 0, 0.3100000000, 0)
 c_f2.Size = UDim2.new(0, 498, 0, 30)
 c_f2.BorderColor3 = Color3.fromRGB(250, 250, 250)
 c_f2.Font = Enum.Font.Ubuntu
-c_f2.Text = "   Kill Player | Gun"
+c_f2.Text = "   Aim Skill Fruit"
 c_f2.TextColor3 = Color3.fromRGB(255, 255, 255)
 c_f2.TextSize = 14.000
 c_f2.TextWrapped = true
@@ -4600,7 +4790,7 @@ _G.c_b2 = false
 end
 end)
 
--- // kill player gun
+-- // aim skill fruit
 
 game:GetService('RunService').RenderStepped:connect(function()
 if _G.c_b2 then --script
@@ -4642,55 +4832,177 @@ local f = string.upper(asd[math.random(1,#asd)])
 return f
 end
 local target = unpack(GetPlayer(c_tb.Text)).Character
-if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Serpent Bow") then
-local args = {
-    [1] = target.HumanoidRootPart.Position,
-    [2] = target.HumanoidRootPart
-}
 
-game:GetService("Players").LocalPlayer.Character:FindFirstChild("Serpent Bow").RemoteFunctionShoot:InvokeServer(unpack(args))
-end
-if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Kabucha") then
-local args = {
-    [1] = target.HumanoidRootPart.Position,
-    [2] = target.HumanoidRootPart
-}
 
-game:GetService("Players").LocalPlayer.Character:FindFirstChild("Kabucha").RemoteFunctionShoot:InvokeServer(unpack(args))
-end
-if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Acidum Rifle") then
-local args = {
-    [1] = target.HumanoidRootPart.Position,
-    [2] = target.HumanoidRootPart
-}
-
-game:GetService("Players").LocalPlayer.Character:FindFirstChild("Acidum Rifle").RemoteFunctionShoot:InvokeServer(unpack(args))
+if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Venom-Venom") then
+local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
+game:GetService("Players").LocalPlayer.Character["Venom-Venom"].RemoteEvent:FireServer(unpack(args))                              
 end
 
-local humanoid = game.Players.LocalPlayer.Character.Humanoid 
-humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
-         
-      local pos = target.HumanoidRootPart --check pos
-                    local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
-                  if Distance < 500 then
-                  Speed = 250
-                  elseif Distance < 200 then
-                  Speed = 7000000
-                  elseif Distance < 150 then
-                  Speed = 2000000
-                  elseif Distance < 1000 then
-                        Speed = 400        
-    elseif Distance >= 1500 then
-                  Speed = 120
-           end
-                       tool("Serpent Bow")       
-tool("Kabucha")
-tool("Acidum Rifle")   
-game:GetService("TweenService"):Create(
-                        game.Players.LocalPlayer.Character.HumanoidRootPart,
-                        TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
-                        {CFrame = target.HumanoidRootPart.CFrame* CFrame.new(0, 80, 0) }
-                    ):Play()       
+if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Bomb-Bomb") then
+local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
+game:GetService("Players").LocalPlayer.Character["Bomb-Bomb"].RemoteEvent:FireServer(unpack(args))                              
+end
+
+if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Spring-Spring") then
+local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
+game:GetService("Players").LocalPlayer.Character["Spring-Spring"].RemoteEvent:FireServer(unpack(args))                              
+end
+
+if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Kilo-Kilo") then
+local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
+game:GetService("Players").LocalPlayer.Character["Kilo-Kilo"].RemoteEvent:FireServer(unpack(args))                              
+end
+
+if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Chop-Chop") then
+local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
+game:GetService("Players").LocalPlayer.Character["Chop-Chop"].RemoteEvent:FireServer(unpack(args))                              
+end
+
+if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Spike-Spike") then
+local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
+game:GetService("Players").LocalPlayer.Character["Spike-Spike"].RemoteEvent:FireServer(unpack(args))                              
+end
+
+if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Smoke-Smoke") then
+local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
+game:GetService("Players").LocalPlayer.Character["Smoke-Smoke"].RemoteEvent:FireServer(unpack(args))                              
+end
+
+if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Flame-Flame") then
+local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
+game:GetService("Players").LocalPlayer.Character["Flame-Flame"].RemoteEvent:FireServer(unpack(args))                              
+end
+
+if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Falcon-Falcon") then
+local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
+game:GetService("Players").LocalPlayer.Character["Falcon-Falcon"].RemoteEvent:FireServer(unpack(args))                              
+end
+
+if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Sand-Sand") then
+local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
+game:GetService("Players").LocalPlayer.Character["Sand-Sand"].RemoteEvent:FireServer(unpack(args))                              
+end
+
+if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Dark-Dark") then
+local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
+game:GetService("Players").LocalPlayer.Character["Dark-Dark"].RemoteEvent:FireServer(unpack(args))                              
+end
+
+if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Ice-Ice") then
+local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
+game:GetService("Players").LocalPlayer.Character["Ice-Ice"].RemoteEvent:FireServer(unpack(args))                              
+end
+
+if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Light-Light") then
+local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
+game:GetService("Players").LocalPlayer.Character["Light-Light"].RemoteEvent:FireServer(unpack(args))                              
+end
+
+if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Revive-Revive") then
+local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
+game:GetService("Players").LocalPlayer.Character["Revive-Revive"].RemoteEvent:FireServer(unpack(args))                              
+end
+
+if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Diamond-Diamond") then
+local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
+game:GetService("Players").LocalPlayer.Character["Diamond-Diamond"].RemoteEvent:FireServer(unpack(args))                              
+end
+
+if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Rubber-Rubber") then
+local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
+game:GetService("Players").LocalPlayer.Character["Rubber-Rubber"].RemoteEvent:FireServer(unpack(args))                              
+end
+
+if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Barrier-Barrier") then
+local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
+game:GetService("Players").LocalPlayer.Character["Barrier-Barrier"].RemoteEvent:FireServer(unpack(args))                              
+end
+
+if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Magma-Magma") then
+local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
+game:GetService("Players").LocalPlayer.Character["Magma-Magma"].RemoteEvent:FireServer(unpack(args))                              
+end
+
+if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Quake-Quake") then
+local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
+game:GetService("Players").LocalPlayer.Character["Quake-Quake"].RemoteEvent:FireServer(unpack(args))                              
+end
+
+if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Buddha-Buddha") then
+local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
+game:GetService("Players").LocalPlayer.Character["Buddha-Buddha"].RemoteEvent:FireServer(unpack(args))                              
+end
+
+if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Love-Love") then
+local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
+game:GetService("Players").LocalPlayer.Character["Love-Love"].RemoteEvent:FireServer(unpack(args))                              
+end
+
+if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Spider-Spider") then
+local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
+game:GetService("Players").LocalPlayer.Character["Spider-Spider"].RemoteEvent:FireServer(unpack(args))                              
+end
+
+if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Phoenix-Phoenix") then
+local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
+game:GetService("Players").LocalPlayer.Character["Phoenix-Phoenix"].RemoteEvent:FireServer(unpack(args))                              
+end
+
+if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Protal-Protal") then
+local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
+game:GetService("Players").LocalPlayer.Character["Protal-Protal"].RemoteEvent:FireServer(unpack(args))                              
+end
+
+if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Rumble-Rumble") then
+local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
+game:GetService("Players").LocalPlayer.Character["Rumble-Rumble"].RemoteEvent:FireServer(unpack(args))                              
+end
+
+if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Paw-Paw") then
+local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
+game:GetService("Players").LocalPlayer.Character["Paw-Paw"].RemoteEvent:FireServer(unpack(args))                              
+end
+
+if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Blizzard-Blizzard") then
+local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
+game:GetService("Players").LocalPlayer.Character["Blizzard-Blizzard"].RemoteEvent:FireServer(unpack(args))                              
+end
+
+if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Gravity-Gravity") then
+local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
+game:GetService("Players").LocalPlayer.Character["Gravity-Gravity"].RemoteEvent:FireServer(unpack(args))                              
+end
+
+if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Dough-Dough") then
+local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
+game:GetService("Players").LocalPlayer.Character["Dough-Dough"].RemoteEvent:FireServer(unpack(args))                              
+end
+
+if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Shadow-Shadow") then
+local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
+game:GetService("Players").LocalPlayer.Character["Shadow-Shadow"].RemoteEvent:FireServer(unpack(args))                              
+end
+
+if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Control-Control") then
+local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
+game:GetService("Players").LocalPlayer.Character["Control-Control"].RemoteEvent:FireServer(unpack(args))                              
+end
+
+if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Dragon-Dragon") then
+local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
+game:GetService("Players").LocalPlayer.Character["Dragon-Dragon"].RemoteEvent:FireServer(unpack(args))                              
+end
+
+if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Spirit-Spirit") then
+local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
+game:GetService("Players").LocalPlayer.Character["Spirit-Spirit"].RemoteEvent:FireServer(unpack(args))                              
+end
+
+if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Leopard-Leopard") then
+local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
+game:GetService("Players").LocalPlayer.Character["Leopard-Leopard"].RemoteEvent:FireServer(unpack(args))                              
+end
 
 end
 end)
@@ -4719,9 +5031,9 @@ c_bdistan.TextColor3 = Color3.fromRGB(250, 250, 250)
 c_bdistan.TextSize = 14.000
 c_bdistan.MouseButton1Down:connect(function()
 if c_bdistan.Text == "5" then
-c_bdistan.Text = "20"
+c_bdistan.Text = "0"
 else
-c_bdistan.Text = "5"
+c_bdistan.Text = c_bdistan.Text + 1
 end
 end)
 
@@ -5124,18 +5436,14 @@ st_b5.Position = UDim2.new(0.13200000, 0, 0, 0)
 st_b5.Size = UDim2.new(0, 30, 0, 30)
 st_b5.Font = Enum.Font.Ubuntu
 st_b5.BackgroundTransparency = 1.000
-st_b5.Text = "40"
+st_b5.Text = "30"
 st_b5.TextColor3 = Color3.fromRGB(250, 250, 250)
 st_b5.TextSize = 14.000
 st_b5.MouseButton1Down:connect(function()
-if st_b5.Text == "20" then
-st_b5.Text = "40"
-end
-if st_b5.Text == "-20" then
-st_b5.Text = "20"
-end
-if st_b5.Text =="40" then
-st_b5.Text = "-20"
+if st_b5.Text == "50" then
+st_b5.Text = "0"
+else
+st_b5.Text = st_b5.Text + 10
 end
 end)
 
@@ -5498,9 +5806,17 @@ end
 
 coroutine.wrap(OJTG7_fake_script)()
 
+game:GetService('RunService').RenderStepped:connect(function()
 if game:GetService("ReplicatedStorage").Effect.Container:FindFirstChild("Death") then
 	game:GetService("ReplicatedStorage").Effect.Container.Death:Destroy()
 end
 if game:GetService("ReplicatedStorage").Effect.Container:FindFirstChild("Respawn") then
 	game:GetService("ReplicatedStorage").Effect.Container.Respawn:Destroy()
-end   
+end   end)
+game.Players.LocalPlayer.PlayerGui.Main.Version.Text = "NTT HUB"
+
+_G.ifnjump = true
+game.GetService("UseInputService").JumpRequest:connect(function()
+if _G.ifnjump then
+game.GetService"Players".LocalPlayer.Character:FindFirsChilOfClass'Humanoid':ChangeState("Jumping") end end)
+
