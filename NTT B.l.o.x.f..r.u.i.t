@@ -1081,7 +1081,7 @@ end end
                                             Ms = "Arctic Warrior [Lv. 1350]" --name mob
                                             NameQuest = "FrostQuest" --name get quest
                                             LevelQuest = 1         -- lv quest
-                                            NameMon = "Frost Quest Give"    --name npc
+                                            NameMon = "Frost Quest Giver"    --name npc
                                             CFrameQuest = CFrame.new(5667.05908203125, 28.51487159729004, -6484.171875)
                                             CFrameMob = CFrame.new(5993.02587890625, 58.28438186645508, -6174.68896484375)
                                             CFrameBring = CFrame.new(6118.96240234375, 28.71002769470215, -6218.337890625)
@@ -1609,7 +1609,7 @@ if _G.getquest then
  for i,v in pairs(game.Workspace.NPCs:GetDescendants()) do
       if v.Name == NameMon then
       
-local pos = v.Head --check pos
+local pos =  v.Head--check pos
                     local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
                   if Distance <=10 then
                   wait(5.3)           
