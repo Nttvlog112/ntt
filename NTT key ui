@@ -1,7 +1,7 @@
 
 -- // key script and link get key
-_G.key = "10246"
-_G.linkkey = "https://link1s.com/Emc5ifJb"
+_G.key = "1302"
+_G.linkkey = "https://link1s.com/amvo"
 _G.tt = "Key Reset"
 
 local UIGUI = Instance.new("ScreenGui")
