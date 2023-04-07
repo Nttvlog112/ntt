@@ -2748,17 +2748,96 @@ if _G.r_b3 then --script
 if game.Players.LocalPlayer.PlayerGui.Main.Timer.Visible == true then
 local humanoid = game.Players.LocalPlayer.Character.Humanoid 
 humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
-if game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 5") then
-TP2(game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 5").CFrame)
-elseif game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 4") then
-TP2(game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 4").CFrame)
-elseif game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 3") then
-TP2(game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 3").CFrame)
-elseif game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 2") then
-TP2(game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 2").CFrame)
-elseif game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 1") then
-TP2(game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 1").CFrame)
-end end
+
+if game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 1") then
+for i,v in pairs(game.Workspace._WorldOrigin.Locations:GetDescendants()) do
+if v.Name == "Island 1" then
+local pos = v.CFrame --check pos
+                    local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                  if Distance >= 0 then
+                  Speed = 140
+                  
+           end
+        if   (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 2000 then
+        game:GetService("TweenService"):Create(
+                        game.Players.LocalPlayer.Character.HumanoidRootPart,
+                        TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
+                        {CFrame =v.CFrame* CFrame.new(0, 50, 0) }
+                    ):Play()       
+                                 end end end end
+                  
+      if game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 2") then
+for i,v in pairs(game.Workspace._WorldOrigin.Locations:GetDescendants()) do
+if v.Name == "Island 2" then
+local pos = v.CFrame --check pos
+                    local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                  if Distance >= 0 then
+                  Speed = 140
+                  
+           end
+        if   (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 2000 then
+        game:GetService("TweenService"):Create(
+                        game.Players.LocalPlayer.Character.HumanoidRootPart,
+                        TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
+                        {CFrame =v.CFrame* CFrame.new(0, 50, 0) }
+                    ):Play()       
+                                 end end end end         
+                                 
+       if game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 3") then
+for i,v in pairs(game.Workspace._WorldOrigin.Locations:GetDescendants()) do
+if v.Name == "Island 3" then
+local pos = v.CFrame --check pos
+                    local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                  if Distance >=0 then
+                  Speed = 140
+                  
+           end
+                 
+        if   (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 2000 then
+        game:GetService("TweenService"):Create(
+                        game.Players.LocalPlayer.Character.HumanoidRootPart,
+                        TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
+                        {CFrame =v.CFrame* CFrame.new(0, 50, 0) }
+                    ):Play()       
+                                 end end end end         
+
+      if game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 4") then
+for i,v in pairs(game.Workspace._WorldOrigin.Locations:GetDescendants()) do
+if v.Name == "Island 4" then
+local pos = v.CFrame --check pos
+                    local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                  if Distance >= 0 then
+                  Speed = 140
+                  
+           end
+                  
+           
+        if   (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 2000 then
+        game:GetService("TweenService"):Create(
+                        game.Players.LocalPlayer.Character.HumanoidRootPart,
+                        TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
+                        {CFrame =v.CFrame* CFrame.new(0, 50, 0) }
+                    ):Play()       
+                                 end end end end        
+
+   if game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Island 5") then
+for i,v in pairs(game.Workspace._WorldOrigin.Locations:GetDescendants()) do
+if v.Name == "Island 5" then
+local pos = v.CFrame --check pos
+                    local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude                 
+                  if Distance >= 0 then
+                  Speed = 140
+                  
+           end
+        if   (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 2000 then
+        game:GetService("TweenService"):Create(
+                        game.Players.LocalPlayer.Character.HumanoidRootPart,
+                        TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
+                        {CFrame =v.CFrame* CFrame.new(0, 50, 0) }
+                    ):Play()       
+                                 end end end end
+     end                            
+                                        
 end
 end)
 
@@ -3380,6 +3459,7 @@ _G.ef_b6 = true
 elseif ef_b6.Text == "X" then --off
 ef_b6.Text = ""
 _G.ef_b6 = false
+stoptp()
 end
 end)
 
@@ -3675,7 +3755,7 @@ game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDeathStep")
 end
 
 if ms_slec.Text == "Electric Claw" then
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyElecteicClaw")
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyElectricClaw")
 end
 
 if ms_slec.Text == "Sharkman Karate" then
@@ -3796,7 +3876,7 @@ ms_mele6.Text = "Electric Claw"
 ms_mele6.TextColor3 = Color3.fromRGB(250, 250, 250)
 ms_mele6.TextSize = 15.000
 ms_mele6.MouseButton1Down:connect(function()
-ms_slec.Text = "Electeic Claw"
+ms_slec.Text = "Electric Claw"
 ms_melebar.Visible = false
 end)
 
@@ -4477,7 +4557,7 @@ mi_f4.Position = UDim2.new(0, 0, 0.3100000000, 0)
 mi_f4.Size = UDim2.new(0, 498, 0, 30)
 mi_f4.BorderColor3 = Color3.fromRGB(250, 250, 250)
 mi_f4.Font = Enum.Font.Ubuntu
-mi_f4.Text = "   Auto Rengoku"
+mi_f4.Text = "   Auto Sword Rengoku"
 mi_f4.TextColor3 = Color3.fromRGB(255, 255, 255)
 mi_f4.TextSize = 14.000
 mi_f4.TextWrapped = true
@@ -4518,7 +4598,7 @@ mi_f5.Position = UDim2.new(0, 0, 0.3800000000, 0)
 mi_f5.Size = UDim2.new(0, 498, 0, 30)
 mi_f5.BorderColor3 = Color3.fromRGB(250, 250, 250)
 mi_f5.Font = Enum.Font.Ubuntu
-mi_f5.Text = "   Auto Yama"
+mi_f5.Text = "   Auto Buddy Sword"
 mi_f5.TextColor3 = Color3.fromRGB(255, 255, 255)
 mi_f5.TextSize = 14.000
 mi_f5.TextWrapped = true
@@ -4592,7 +4672,8 @@ c_tb.TextWrapped = true
 
 -- // code check player
 game:GetService('RunService').RenderStepped:connect(function()
-
+if c_tb.Text == "Vui lòng nhập tên Người Chơi" then
+else
 local lplayer = game:GetService('Players').LocalPlayer
  
 local yeeting = false
@@ -4632,7 +4713,7 @@ end
 local target = unpack(GetPlayer(c_tb.Text)).Character
 c_name.Text = ("   Name : "..target.Name)
 c_health.Text = ("   Health : "..target.Humanoid.Health)
-end)
+end end)
 
 
 --// aim gun
@@ -4833,6 +4914,10 @@ return f
 end
 local target = unpack(GetPlayer(c_tb.Text)).Character
 
+if c_name.Text == "" then
+click()
+else
+end
 
 if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Venom-Venom") then
 local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
@@ -5815,8 +5900,9 @@ if game:GetService("ReplicatedStorage").Effect.Container:FindFirstChild("Respawn
 end   end)
 game.Players.LocalPlayer.PlayerGui.Main.Version.Text = "NTT HUB"
 
-_G.ifnjump = true
-game.GetService("UseInputService").JumpRequest:connect(function()
-if _G.ifnjump then
-game.GetService"Players".LocalPlayer.Character:FindFirsChilOfClass'Humanoid':ChangeState("Jumping") end end)
-
+local InfiniteJumpEnabled = true
+game:GetService("UserInputService").JumpRequest:connect(function()
+	if InfiniteJumpEnabled then
+		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+	end
+end)
