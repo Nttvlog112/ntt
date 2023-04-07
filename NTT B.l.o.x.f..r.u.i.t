@@ -1579,8 +1579,7 @@ for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
            end
        
        if v.Humanoid.Health > 0 then -- check health
-       usetool()
-       click() -- click          
+       usetool()    
        v.Humanoid:ChangeState(14)
       v.HumanoidRootPart.Size = Vector3.new(50, 50, 10)     --size hix box  
       v.HumanoidRootPart.CanCollide = false                                                
@@ -1598,6 +1597,13 @@ game:GetService("TweenService"):Create(
                       
  end end end end           
   end end)
+  
+  game:GetService('RunService').RenderStepped:connect(function()
+if  _G.m_b2 then
+  click() -- click        
+end end)
+
+  
  _G.getquest = true
 game:GetService('RunService').RenderStepped:connect(function() -- get quest
 if _G.getquest then
@@ -4207,7 +4213,10 @@ if game.PlaceId == 4442272183 then -- sea2
 
 game:GetService('RunService').RenderStepped:connect(function()       
      if _G.mi_bc then
-    if not game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Fist of Darkness") then 
+    if game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Fist of Darkness") then 
+    _G.mi_bc = false
+    mi_bc.Text = ""
+    elseif not game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Fist of Darkness") then 
       if game:GetService("Workspace"):FindFirstChild("Chest2") then
      TPchest( game:GetService("Workspace"):FindFirstChild("Chest2").CFrame)
      end
@@ -4223,8 +4232,8 @@ if game.PlaceId == 4442272183 then -- sea2
 spawn(function()
     while task.wait(3.5) do
         pcall(function()
+        if not game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Fist of Darkness") then
             if _G.mi_bc then
-         if not   game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Fist of Darkness") then
             game.Players.LocalPlayer.Character.Humanoid.Health = 0
             end
             wait(5)
@@ -4235,7 +4244,10 @@ end
 if game.PlaceId == 7449423635 then -- sea3
 game:GetService('RunService').RenderStepped:connect(function()           
      if _G.mi_bc then
-    if not game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("God's Chalice") then 
+    if game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("God's Chalice") then 
+    _G.mi_bc = false
+    mi_bc.Text = ""
+    elseif not game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("God's Chalice") then 
       if game:GetService("Workspace"):FindFirstChild("Chest2") then
      TPchest( game:GetService("Workspace"):FindFirstChild("Chest2").CFrame)
      end
@@ -4251,8 +4263,8 @@ if game.PlaceId == 7449423635 then -- sea3
 spawn(function()
     while task.wait(3.5) do
         pcall(function()
+        if not   game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("God's Chalice") then
             if _G.mi_bc then
-         if not   game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("God's Chalice") then
             game.Players.LocalPlayer.Character.Humanoid.Health = 0
             end
             wait(5)
