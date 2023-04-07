@@ -160,6 +160,7 @@ ef_f4 = Instance.new("TextLabel")
 ef_f5 = Instance.new("TextLabel")
 ef_f6 = Instance.new("TextLabel")
 ef_f7= Instance.new("TextLabel")
+ef_f8= Instance.new("TextLabel")
 
 ef_b1= Instance.new("TextButton")
 ef_b2= Instance.new("TextButton")
@@ -168,6 +169,7 @@ ef_b4= Instance.new("TextButton")
 ef_b5= Instance.new("TextButton")
 ef_b6= Instance.new("TextButton")
 ef_b7= Instance.new("TextButton")
+ef_b8= Instance.new("TextButton")
 
 -- // mob - item
 mi_fc = Instance.new("TextLabel")
@@ -236,6 +238,19 @@ st_b8= Instance.new("TextButton")
 st_b9= Instance.new("TextButton")
 st_b10= Instance.new("TextButton")
 st_b11= Instance.new("TextButton")
+
+--// tp
+t_f1 = Instance.new("TextLabel")
+t_f2 = Instance.new("TextLabel")
+t_f3 = Instance.new("TextLabel")
+t_f4 = Instance.new("TextLabel")
+t_f5 = Instance.new("TextLabel")
+
+t_b1= Instance.new("TextButton")
+t_b2= Instance.new("TextButton")
+t_b3= Instance.new("TextButton")
+t_b4= Instance.new("TextButton")
+t_b5= Instance.new("TextButton")
 
 
 -------------------------------------------------------------------------------
@@ -590,6 +605,11 @@ game:GetService'VirtualUser':CaptureController()
         game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
 end
 
+function jump()
+local humanoid = game.Players.LocalPlayer.Character.Humanoid 
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
+end
+
 function Skill()
 if _G.st_b7 then
 game:GetService("VirtualInputManager"):SendKeyEvent(true,"Z",false,game)
@@ -701,6 +721,7 @@ tool("Venom-Venom")
 tool("Control-Control")
 tool("Spirit-Spirit")
 tool("Dragon-Dragon")
+tool("Leopard-Leopard")
 end
 
 
@@ -727,12 +748,16 @@ function TP1(P1)
                 
                 function TP2(P1)          
                     local Distance = (P1.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
-                    if Distance >= 0 then
-                        Speed = 90
+                  if Distance < 200 then
+                        Speed = 400
+  elseif Distance < 500 then
+                        Speed = 300
+              elseif Distance < 1000 then
+                        Speed = 150
+   elseif Distance >= 1500 then
+                        Speed = 120
                     end
-                    if (P1.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 2700 then
-                   local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Distance/Speed), {CFrame = P1 * CFrame.new(0,50,0) }) tween:Play()                    
-                end 
+                   local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Distance/Speed), {CFrame = P1 }) tween:Play()                                    
               end
                 
                 function stoptp()
@@ -1302,7 +1327,7 @@ elseif MyLevel == 1900 or MyLevel <= 1924 then --Jungle Pirate [Lv. 1900]
                                             NameMon = "Ice Cream Quest Giver"    --name npc
                                             CFrameQuest = CFrame.new(-819.2644653320312, 66.16277313232422, -10965.35546875)
                                             CFrameMob = CFrame.new(-875.36962890625, 118.58836364746094, -11034.2578125)
-                                            CFrameBring = CFrame.new(-966.6111450195312, 66.16276550292969, -11046.341796875)
+                                            CFrameBring = CFrame.new(-966.6ef_b8450195312, 66.16276550292969, -11046.341796875)
                                             
      elseif MyLevel == 2150 or MyLevel <= 2199 then --m_b3
                                             Ms = "Ice Cream Commander [Lv. 2150]" --name mob
@@ -1313,7 +1338,7 @@ elseif MyLevel == 1900 or MyLevel <= 1924 then --Jungle Pirate [Lv. 1900]
                                             CFrameMob = CFrame.new(-697.4462280273438, 173.2466278076172, -11212.94140625)
                                             CFrameBring = CFrame.new(-638.2747192382812, 66.16278076171875, -11293.0546875)       
 
-                     elseif MyLevel == 2200 or MyLevel <= 2224 then --m_b3
+                     elseif MyLevel == 2200 or MyLevel <= ef_f84 then --m_b3
                                             Ms = "Cookie Crafter [Lv. 2200]"
                                             NameQuest = "CakeQuest1" --name get quest
                                             LevelQuest = 1        -- lv quest
@@ -1322,8 +1347,8 @@ elseif MyLevel == 1900 or MyLevel <= 1924 then --Jungle Pirate [Lv. 1900]
                                             CFrameMob = CFrame.new(-2289.203369140625, 92.37846374511719, -12041.884765625)
                                             CFrameBring = CFrame.new(-2367.436279296875, 38.14149856567383, -12120.3876953125)
                                             
-     elseif MyLevel == 2225 or MyLevel <= 2249  then --m_b3
-                                            Ms = "Cake Guard [Lv. 2225]"
+     elseif MyLevel == ef_f85 or MyLevel <= 2249  then --m_b3
+                                            Ms = "Cake Guard [Lv. ef_f85]"
                                             NameQuest = "CakeQuest2" --name get quest
                                             LevelQuest = 1      -- lv quest
                                             NameMon = "Cake Quest Giver 2"    --name npc
@@ -1332,7 +1357,7 @@ elseif MyLevel == 1900 or MyLevel <= 1924 then --Jungle Pirate [Lv. 1900]
                                             CFrameBring = CFrame.new(-1550.4625244140625, 38.14139175415039, -12253.3388671875)     
 
         elseif MyLevel == 2250 or MyLevel <= 2299  then --m_b3
-                                            Ms = "Cake Guard [Lv. 2225]"
+                                            Ms = "Cake Guard [Lv. ef_f85]"
                                             NameQuest = "CakeQuest2" --name get quest
                                             LevelQuest = 2       -- lv quest
                                             NameMon = "Cake Quest Giver 2"    --name npc
@@ -1347,7 +1372,7 @@ elseif MyLevel == 1900 or MyLevel <= 1924 then --Jungle Pirate [Lv. 1900]
                                             NameMon = "Chocolate Quest Giver 1"    --name npc
                                             CFrameQuest = CFrame.new(232.68365478515625, 25.07747459411621, -12198.4609375)
                                             CFrameMob = CFrame.new(141.66293334960938, 68.89732360839844, -12254.884765625)
-                                            CFrameBring = CFrame.new(-59.606964111328125, 25.077518463134766, -12293.5009765625)
+                                            CFrameBring = CFrame.new(-59.606964ef_b8328125, 25.077518463134766, -12293.5009765625)
                                             
      elseif MyLevel == 2325 or MyLevel <= 2349 then --m_b3
                                             Ms = "Chocolate Bar Battler [Lv. 2325]"
@@ -1374,7 +1399,7 @@ elseif MyLevel == 1900 or MyLevel <= 1924 then --Jungle Pirate [Lv. 1900]
                                             NameMon = "Chocolate Quest Giver 2"   --name npc
                                             CFrameQuest = CFrame.new(149.07852172851562, 25.136638641357422, -12773.7724609375)
                                             CFrameMob = CFrame.new(722.8572387695312, 66.84835052490234, -12589.693359375)
-                                            CFrameBring = CFrame.new(758.705322265625, 25.077476501464844, -12648.5390625)               
+                                            CFrameBring = CFrame.new(758.7053ef_f865625, 25.077476501464844, -12648.5390625)               
 
             elseif MyLevel == 2400 or MyLevel <= 2424 then --m_b3
                                             Ms = "Candy Pirate [Lv. 2400]"
@@ -1677,13 +1702,15 @@ m_b3.MouseButton1Down:connect(function()
 if m_b3.Text == "" then --on
 m_b3.Text = "X"
 _G.m_b3 = true
+elseif m_b3.Text == "X" then --off
+m_b3.Text = ""
+_G.m_b3 = false
+stoptp()
+end
+end)
 
 game:GetService('RunService').RenderStepped:connect(function()
 if _G.m_b3 then --script
-
-                   local humanoid = game.Players.LocalPlayer.Character.Humanoid 
-humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
-                   
 for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
       if v.ClassName == "Model" then --name mob
       local pos = v.HumanoidRootPart --check pos
@@ -1703,7 +1730,8 @@ for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
        if v.Humanoid.Health > 0 then -- check health
      usetool()
        if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 1200 then
-       
+       if v.Humanoid.Health > 0 then 
+       jump()
        click() -- click          
        v.Humanoid:ChangeState(14)
       v.HumanoidRootPart.Size = Vector3.new(50, 50, 10)     --size hix box  
@@ -1719,16 +1747,15 @@ game:GetService("TweenService"):Create(
                         {CFrame = v.HumanoidRootPart.CFrame* CFrame.new(0, st_b5.Text, 0) }
                     ):Play()       
                                       
-                 end end end end
+                 end end end end end
 
 end
 end)
-elseif m_b3.Text == "X" then --off
-m_b3.Text = ""
-_G.m_b3 = false
-stoptp()
-end
-end)
+
+game:GetService('RunService').RenderStepped:connect(function()
+if  _G.m_b3 then
+  click() -- click        
+end end)
 
 m_f6.Parent = b_page1
 m_f6.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
@@ -2882,6 +2909,7 @@ end)
 
 game:GetService('RunService').RenderStepped:connect(function()
 if _G.r_b5 then --script             
+if game.Players.LocalPlayer.PlayerGui.Main.Timer.Visible == true then
 for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
       if v.ClassName == "Model" then --name mob     
        if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 700 then
@@ -2899,7 +2927,7 @@ if v.Humanoid:FindFirstChild("Animator") then
                         end
                         sethiddenproperty(game:GetService("Players").LocalPlayer,"SimulationRadius",math.huge)                                        
                                       
-                 end end end 
+                 end end end end
 end
 end)
 
@@ -3224,6 +3252,26 @@ spawn(function()
                         end
                     end
                 end
+                for _,v in pairs (workspace:GetChildren()) do
+		if v.Name:match('Fruit') then
+			local BillboardGui = Instance.new("BillboardGui")
+        	local TextLabel = Instance.new("TextLabel")
+	        BillboardGui.Parent = v
+	        BillboardGui.AlwaysOnTop = true
+	        BillboardGui.LightInfluence = 1
+	        BillboardGui.Size = UDim2.new(0, 25, 0, 25)
+	        BillboardGui.StudsOffset = Vector3.new(0, 2, 0)
+	        TextLabel.Parent = BillboardGui
+	        TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+	        TextLabel.BackgroundTransparency = 1
+	        TextLabel.Size = UDim2.new(2, 0, 2, 0)
+	        TextLabel.TextSize = 20.000
+	        TextLabel.Text = v.Name
+	        TextLabel.TextColor3 = Color3.new(250, 250, 250)
+			TextLabel.Font = "SourceSans"
+        end
+    end
+
             else
                 for i,v in pairs(game.Workspace:GetChildren()) do
                     if v:IsA("Tool") then
@@ -3441,7 +3489,7 @@ ef_f6.Position = UDim2.new(0, 0, 0.3800000000, 0)
 ef_f6.Size = UDim2.new(0, 498, 0, 30)
 ef_f6.BorderColor3 = Color3.fromRGB(250, 250, 250)
 ef_f6.Font = Enum.Font.Ubuntu
-ef_f6.Text = "   Auto Teleport Fruit"
+ef_f6.Text = "   Auto Teleport Fruit Drop"
 ef_f6.TextColor3 = Color3.fromRGB(255, 255, 255)
 ef_f6.TextSize = 14.000
 ef_f6.TextWrapped = true
@@ -3470,9 +3518,163 @@ end
 end)
 
 spawn(function()
-    while task.wait(0.5) do
+    while task.wait() do
         pcall(function()
             if _G.ef_b6 then
+                if game:GetService("Workspace"):FindFirstChild("Bomb Fruit") then jump()
+TP2(game:GetService("Workspace")["Bomb Fruit"]:FindFirstChild("Fruit").CFrame)
+end
+if game:GetService("Workspace"):FindFirstChild("Kilo Fruit") then jump()
+TP2(game:GetService("Workspace")["Kilo Fruit"]:FindFirstChild("Fruit").CFrame)
+end
+if game:GetService("Workspace"):FindFirstChild("Spring Fruit") then jump()
+TP2(game:GetService("Workspace")["Spring Fruit"]:FindFirstChild("Fruit").CFrame)
+end
+if game:GetService("Workspace"):FindFirstChild("Chop Fruit") then jump()
+TP2(game:GetService("Workspace")["Chop Fruit"]:FindFirstChild("Fruit").CFrame)
+end
+if game:GetService("Workspace"):FindFirstChild("Spin Fruit") then jump()
+TP2(game:GetService("Workspace")["Spin Fruit"]:FindFirstChild("Fruit").CFrame)
+end
+if game:GetService("Workspace"):FindFirstChild("Smoke Fruit") then jump()
+TP2(game:GetService("Workspace")["Smoke Fruit"]:FindFirstChild("Fruit").CFrame)
+end
+if game:GetService("Workspace"):FindFirstChild("Spike Fruit") then jump()
+TP2(game:GetService("Workspace")["Spike Fruit"]:FindFirstChild("Fruit").CFrame)
+end
+if game:GetService("Workspace"):FindFirstChild("Flame Fruit") then jump()
+TP2(game:GetService("Workspace")["Flame Fruit"]:FindFirstChild("Fruit").CFrame)
+end
+if game:GetService("Workspace"):FindFirstChild("Falcon Fruit") then jump()
+TP2(game:GetService("Workspace")["Falcon Fruit"]:FindFirstChild("Fruit").CFrame)
+end
+if game:GetService("Workspace"):FindFirstChild("Sand Fruit") then jump()
+TP2(game:GetService("Workspace")["Sand Fruit"]:FindFirstChild("Fruit").CFrame)
+end
+if game:GetService("Workspace"):FindFirstChild("Dark Fruit") then jump()
+TP2(game:GetService("Workspace")["Dark Fruit"]:FindFirstChild("Fruit").CFrame)
+end
+if game:GetService("Workspace"):FindFirstChild("Revive Fruit") then jump()
+TP2(game:GetService("Workspace")["Revive Fruit"]:FindFirstChild("Fruit").CFrame)
+end
+if game:GetService("Workspace"):FindFirstChild("Diamond Fruit") then jump()
+TP2(game:GetService("Workspace")["Diamond Fruit"]:FindFirstChild("Fruit").CFrame)
+end
+if game:GetService("Workspace"):FindFirstChild("Ice Fruit") then jump()
+TP2(game:GetService("Workspace")["Ice Fruit"]:FindFirstChild("Fruit").CFrame)
+end
+if game:GetService("Workspace"):FindFirstChild("Light Fruit") then jump()
+TP2(game:GetService("Workspace")["Light Fruit"]:FindFirstChild("Fruit").CFrame)
+end
+if game:GetService("Workspace"):FindFirstChild("Quake Fruit") then jump()
+TP2(game:GetService("Workspace")["Quake Fruit"]:FindFirstChild("Fruit").CFrame)
+end
+if game:GetService("Workspace"):FindFirstChild("Rubber Fruit") then jump()
+TP2(game:GetService("Workspace")["Rubber Fruit"]:FindFirstChild("Fruit").CFrame)
+end
+if game:GetService("Workspace"):FindFirstChild("Magma Fruit") then jump()
+TP2(game:GetService("Workspace")["Magma Fruit"]:FindFirstChild("Fruit").CFrame)
+end
+if game:GetService("Workspace"):FindFirstChild("Barrier Fruit") then jump()
+TP2(game:GetService("Workspace")["Barrier Fruit"]:FindFirstChild("Fruit").CFrame)
+end
+if game:GetService("Workspace"):FindFirstChild("Buddha Fruit") then jump()
+TP2(game:GetService("Workspace")["Buddha Fruit"]:FindFirstChild("Fruit").CFrame)
+end
+if game:GetService("Workspace"):FindFirstChild("Love Fruit") then jump()
+TP2(game:GetService("Workspace")["Love Fruit"]:FindFirstChild("Fruit").CFrame)
+end
+if game:GetService("Workspace"):FindFirstChild("Spider Fruit") then jump()
+TP2(game:GetService("Workspace")["Spider Fruit"]:FindFirstChild("Fruit").CFrame)
+end
+if game:GetService("Workspace"):FindFirstChild("Phoenix Fruit") then jump()
+TP2(game:GetService("Workspace")["Phoenix Fruit"]:FindFirstChild("Fruit").CFrame)
+end
+if game:GetService("Workspace"):FindFirstChild("Protal Fruit") then jump()
+TP2(game:GetService("Workspace")["Protal Fruit"]:FindFirstChild("Fruit").CFrame)
+end
+if game:GetService("Workspace"):FindFirstChild("Rumble Fruit") then jump()
+TP2(game:GetService("Workspace")["Rumble Fruit"]:FindFirstChild("Fruit").CFrame)
+end
+if game:GetService("Workspace"):FindFirstChild("Paw Fruit") then jump()
+TP2(game:GetService("Workspace")["Paw Fruit"]:FindFirstChild("Fruit").CFrame)
+end
+if game:GetService("Workspace"):FindFirstChild("Blizzard Fruit") then jump()
+TP2(game:GetService("Workspace")["Blizzard Fruit"]:FindFirstChild("Fruit").CFrame)
+end
+if game:GetService("Workspace"):FindFirstChild("Gravity Fruit") then jump()
+TP2(game:GetService("Workspace")["Gravity Fruit"]:FindFirstChild("Fruit").CFrame)
+end
+if game:GetService("Workspace"):FindFirstChild("Dough Fruit") then jump()
+TP2(game:GetService("Workspace")["Dough Fruit"]:FindFirstChild("Fruit").CFrame)
+end
+if game:GetService("Workspace"):FindFirstChild("Shadow Fruit") then jump()
+TP2(game:GetService("Workspace")["Shadow Fruit"]:FindFirstChild("Fruit").CFrame)
+end
+if game:GetService("Workspace"):FindFirstChild("Venom Fruit") then jump()
+TP2(game:GetService("Workspace")["Venom Fruit"]:FindFirstChild("Fruit").CFrame)
+end
+if game:GetService("Workspace"):FindFirstChild("Control Fruit") then jump()
+TP2(game:GetService("Workspace")["Control Fruit"]:FindFirstChild("Fruit").CFrame)
+end
+if game:GetService("Workspace"):FindFirstChild("Spirit Fruit") then jump()
+TP2(game:GetService("Workspace")["Spirit Fruit"]:FindFirstChild("Fruit").CFrame)
+end
+if game:GetService("Workspace"):FindFirstChild("Dragon Fruit") then jump()
+TP2(game:GetService("Workspace")["Dragon Fruit"]:FindFirstChild("Fruit").CFrame)
+end
+if game:GetService("Workspace"):FindFirstChild("Leopard Fruit") then jump()
+TP2(game:GetService("Workspace")["Leopard Fruit"]:FindFirstChild("Fruit").CFrame)
+end
+if game:GetService("Workspace"):FindFirstChild("Fruit") then jump()
+for i,v in pairs(game.Workspace:GetDescendants()) do
+      if v.Name == "Fruit" then --name mob
+local Distance = (v.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude               
+   if Distance >= 0 then
+                        Speed = 120
+                    end
+                   local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Distance/Speed), {CFrame = v.CFrame }) tween:Play()                                    
+end  end end
+
+             end end) end end)  
+              
+ ef_f8.Parent = b_page5
+ef_f8.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+ef_f8.Position = UDim2.new(0, 0, 0.4500000000, 0)
+ef_f8.Size = UDim2.new(0, 498, 0, 30)
+ef_f8.BorderColor3 = Color3.fromRGB(250, 250, 250)
+ef_f8.Font = Enum.Font.Ubuntu
+ef_f8.Text = "   Auto Teleport Frut Spawn"
+ef_f8.TextColor3 = Color3.fromRGB(255, 255, 255)
+ef_f8.TextSize = 14.000
+ef_f8.TextWrapped = true
+ef_f8.TextXAlignment = Enum.TextXAlignment.Left
+
+ef_b8.Name = "ef_b8"
+ef_b8.Parent = ef_f8
+ef_b8.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ef_b8.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+ef_b8.Size = UDim2.new(0, 20, 0, 20)
+ef_b8.BorderColor3 = Color3.fromRGB(250, 250, 250)
+ef_b8.Font = Enum.Font.SourceSans
+ef_b8.Text = ""
+ef_b8.TextColor3 = Color3.fromRGB(250, 250, 250)
+ef_b8.TextSize = 30.000
+ef_b8.MouseButton1Down:connect(function()
+--on off 
+if ef_b8.Text == "" then --on
+ef_b8.Text = "X"
+_G.ef_b8 = true
+elseif ef_b8.Text == "X" then --off
+ef_b8.Text = ""
+_G.ef_b8 = false
+stoptp()
+end
+end)
+spawn(function()
+    while task.wait(0.5) do
+        pcall(function()
+            if _G.ef_b8 then
                 for i,v in pairs(game.Workspace:GetDescendants()) do
       if v.Name == 'Fruit' then --name mob
                     local Distance = (v.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
@@ -3495,7 +3697,7 @@ spawn(function()
                         {CFrame = v.CFrame}
                     ):Play()
                     if _G.Stop_Tween==true then
-                if _G.ef_b6 then
+                if _G.ef_b8 then
                         game:GetService("TweenService"):Create(
                         game.Players.LocalPlayer.Character.HumanoidRootPart,
                         TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
@@ -3508,15 +3710,14 @@ spawn(function()
                     end
              end end) end end)  
                 game:GetService("RunService").RenderStepped:Connect(function()
-if _G.ef_b6 then
+if _G.ef_b8 then
       local humanoid = game.Players.LocalPlayer.Character.Humanoid 
 humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
 end end)
 
-
 ef_f7.Parent = b_page5
 ef_f7.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-ef_f7.Position = UDim2.new(0, 0, 0.4500000000, 0)
+ef_f7.Position = UDim2.new(0, 0, 0.5200000000, 0)
 ef_f7.Size = UDim2.new(0, 498, 0, 30)
 ef_f7.BorderColor3 = Color3.fromRGB(250, 250, 250)
 ef_f7.Font = Enum.Font.Ubuntu
@@ -5347,6 +5548,38 @@ _G.c_b4 = false
 end
 end)
 
+--// tp
+t_f4.Parent = b_page8
+t_f4.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+t_f4.Position = UDim2.new(0, 0, 0.2400000000, 0)
+t_f4.Size = UDim2.new(0, 498, 0, 30)
+t_f4.BorderColor3 = Color3.fromRGB(250, 250, 250)
+t_f4.Font = Enum.Font.Ubuntu
+t_f4.Text = "   Teleport Sever Hop'"
+t_f4.TextColor3 = Color3.fromRGB(255, 255, 255)
+t_f4.TextSize = 14.000
+t_f4.TextWrapped = true
+t_f4.TextXAlignment = Enum.TextXAlignment.Left
+
+t_b4.Name = "t_b3"
+t_b4.Parent = t_f3
+t_b4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+t_b4.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+t_b4.Size = UDim2.new(0, 20, 0, 20)
+t_b4.BorderColor3 = Color3.fromRGB(250, 250, 250)
+t_b4.Font = Enum.Font.SourceSans
+t_b4.Text = ""
+t_b4.TextColor3 = Color3.fromRGB(250, 250, 250)
+t_b4.TextSize = 30.000
+t_b4.MouseButton1Down:connect(function()
+--on off 
+if t_b4.Text == "" then --on
+t_b4.Text = "X"
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Svv')))()
+elseif t_b4.Text == "X" then --off
+t_b4.Text = ""
+end
+end)
 
            
 
