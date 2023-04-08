@@ -1,8 +1,8 @@
 
 -- // key script and link get key
-_G.key = "1302"
-_G.linkkey = "https://link1s.com/amvo"
-_G.tt = "Key Reset"
+_G.key = "3028"
+_G.linkkey = "https://link1s.com/gVkOdZw"
+_G.tt = "Key sẻ đỏi vào lúc 00h mỗi ngày"
 
 local UIGUI = Instance.new("ScreenGui")
 main= Instance.new("Frame")
