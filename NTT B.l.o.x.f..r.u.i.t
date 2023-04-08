@@ -1327,7 +1327,7 @@ elseif MyLevel == 1900 or MyLevel <= 1924 then --Jungle Pirate [Lv. 1900]
                                             NameMon = "Ice Cream Quest Giver"    --name npc
                                             CFrameQuest = CFrame.new(-819.2644653320312, 66.16277313232422, -10965.35546875)
                                             CFrameMob = CFrame.new(-875.36962890625, 118.58836364746094, -11034.2578125)
-                                            CFrameBring = CFrame.new(-966.6ef_b8450195312, 66.16276550292969, -11046.341796875)
+                                            CFrameBring = CFrame.new(-966.68450195312, 66.16276550292969, -11046.341796875)
                                             
      elseif MyLevel == 2150 or MyLevel <= 2199 then --m_b3
                                             Ms = "Ice Cream Commander [Lv. 2150]" --name mob
@@ -5575,7 +5575,9 @@ t_b4.MouseButton1Down:connect(function()
 --on off 
 if t_b4.Text == "" then --on
 t_b4.Text = "X"
+
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Svv')))()
+
 elseif t_b4.Text == "X" then --off
 t_b4.Text = ""
 end
@@ -6150,4 +6152,4 @@ game:GetService("UserInputService").JumpRequest:connect(function()
 	if InfiniteJumpEnabled then
 		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
 	end
-end)
+end) 
