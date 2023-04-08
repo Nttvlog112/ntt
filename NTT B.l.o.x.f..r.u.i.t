@@ -1372,7 +1372,7 @@ elseif MyLevel == 1900 or MyLevel <= 1924 then --Jungle Pirate [Lv. 1900]
                                             NameMon = "Chocolate Quest Giver 1"    --name npc
                                             CFrameQuest = CFrame.new(232.68365478515625, 25.07747459411621, -12198.4609375)
                                             CFrameMob = CFrame.new(141.66293334960938, 68.89732360839844, -12254.884765625)
-                                            CFrameBring = CFrame.new(-59.606964ef_b8328125, 25.077518463134766, -12293.5009765625)
+                                            CFrameBring = CFrame.new(-59.606964328125, 25.077518463134766, -12293.5009765625)
                                             
      elseif MyLevel == 2325 or MyLevel <= 2349 then --m_b3
                                             Ms = "Chocolate Bar Battler [Lv. 2325]"
@@ -1399,7 +1399,7 @@ elseif MyLevel == 1900 or MyLevel <= 1924 then --Jungle Pirate [Lv. 1900]
                                             NameMon = "Chocolate Quest Giver 2"   --name npc
                                             CFrameQuest = CFrame.new(149.07852172851562, 25.136638641357422, -12773.7724609375)
                                             CFrameMob = CFrame.new(722.8572387695312, 66.84835052490234, -12589.693359375)
-                                            CFrameBring = CFrame.new(758.7053ef_f865625, 25.077476501464844, -12648.5390625)               
+                                            CFrameBring = CFrame.new(758.705865625, 25.077476501464844, -12648.5390625)               
 
             elseif MyLevel == 2400 or MyLevel <= 2424 then --m_b3
                                             Ms = "Candy Pirate [Lv. 2400]"
@@ -5555,14 +5555,14 @@ t_f4.Position = UDim2.new(0, 0, 0.2400000000, 0)
 t_f4.Size = UDim2.new(0, 498, 0, 30)
 t_f4.BorderColor3 = Color3.fromRGB(250, 250, 250)
 t_f4.Font = Enum.Font.Ubuntu
-t_f4.Text = "   Teleport Sever Hop'"
+t_f4.Text = "   Teleport Sever Hop"
 t_f4.TextColor3 = Color3.fromRGB(255, 255, 255)
 t_f4.TextSize = 14.000
 t_f4.TextWrapped = true
 t_f4.TextXAlignment = Enum.TextXAlignment.Left
 
-t_b4.Name = "t_b3"
-t_b4.Parent = t_f3
+t_b4.Name = "t_b4"
+t_b4.Parent = t_f4
 t_b4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 t_b4.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
 t_b4.Size = UDim2.new(0, 20, 0, 20)
