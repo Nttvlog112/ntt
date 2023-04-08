@@ -241,6 +241,23 @@ st_b10= Instance.new("TextButton")
 st_b11= Instance.new("TextButton")
 
 --// tp
+t_tbar=Instance.new("ScrollingFrame")
+t_i1= Instance.new("TextButton")
+t_i2= Instance.new("TextButton")
+t_i3= Instance.new("TextButton")
+t_i4= Instance.new("TextButton")
+t_i5= Instance.new("TextButton")
+t_i6= Instance.new("TextButton")
+t_i7= Instance.new("TextButton")
+t_i8= Instance.new("TextButton")
+t_i9= Instance.new("TextButton")
+t_i10= Instance.new("TextButton")
+t_i11= Instance.new("TextButton")
+t_i12= Instance.new("TextButton")
+t_i13= Instance.new("TextButton")
+t_i14= Instance.new("TextButton")
+t_i15= Instance.new("TextButton")
+
 t_f1 = Instance.new("TextLabel")
 t_f2 = Instance.new("TextLabel")
 t_f3 = Instance.new("TextLabel")
@@ -1340,7 +1357,7 @@ elseif MyLevel == 1900 or MyLevel <= 1924 then --Jungle Pirate [Lv. 1900]
                                             CFrameMob = CFrame.new(-697.4462280273438, 173.2466278076172, -11212.94140625)
                                             CFrameBring = CFrame.new(-638.2747192382812, 66.16278076171875, -11293.0546875)       
 
-                     elseif MyLevel == 2200 or MyLevel <= ef_f84 then --m_b3
+                     elseif MyLevel == 2200 or MyLevel <= 2224 then --m_b3
                                             Ms = "Cookie Crafter [Lv. 2200]"
                                             NameQuest = "CakeQuest1" --name get quest
                                             LevelQuest = 1        -- lv quest
@@ -1349,7 +1366,7 @@ elseif MyLevel == 1900 or MyLevel <= 1924 then --Jungle Pirate [Lv. 1900]
                                             CFrameMob = CFrame.new(-2289.203369140625, 92.37846374511719, -12041.884765625)
                                             CFrameBring = CFrame.new(-2367.436279296875, 38.14149856567383, -12120.3876953125)
                                             
-     elseif MyLevel == ef_f85 or MyLevel <= 2249  then --m_b3
+     elseif MyLevel == 2225 or MyLevel <= 2249  then --m_b3
                                             Ms = "Cake Guard [Lv. ef_f85]"
                                             NameQuest = "CakeQuest2" --name get quest
                                             LevelQuest = 1      -- lv quest
@@ -4599,7 +4616,7 @@ if _G.mi_b2 then --script
 if game.PlaceId == 7449423635 then -- sea3
 
 TP1(CFrame.new(182.0901641845703, 126.93514251708984, -12772.8330078125))
-if game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible == true then   
+
 local humanoid = game.Players.LocalPlayer.Character.Humanoid 
 humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
 for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
@@ -4621,6 +4638,7 @@ for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
        if v.Humanoid.Health > 0 then -- check health
      usetool()
      click() -- click          
+     jump()
        v.Humanoid:ChangeState(14)
       v.HumanoidRootPart.Size = Vector3.new(50, 50, 10)     --size hix box  
       v.HumanoidRootPart.CanCollide = false                                                
@@ -4635,7 +4653,7 @@ game:GetService("TweenService"):Create(
                         {CFrame = v.HumanoidRootPart.CFrame* CFrame.new(0, st_b5.Text, 0) }
                     ):Play()       
                     
-                    end end end end end 
+                    end end end end 
 if game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible == false then           
 -- Kịch bản được tạo bởi : NTT
 
@@ -4657,7 +4675,6 @@ if _G.bringmob then       --bring mob
 if _G.bring1 then
 _G.bring1 = false
 local CFrameBring1 = CFrame.new(72.30462646484375, 25.137104034423828, -12924.6328125)
-  if game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible == true then                
 for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
       if v.Name == "Candy Rebel [Lv. 2375]" then --name mob
 if (v.HumanoidRootPart.Position - CFrameBring1.Position).Magnitude <= 250 then
@@ -4671,7 +4688,7 @@ if v.Humanoid:FindFirstChild("Animator") then
                             v.Humanoid.Animator:Destroy()
                         end
                         sethiddenproperty(game:GetService("Players").LocalPlayer,"SimulationRadius",math.huge)                    
-                        end end end end end end end wait(4) _G.bring1 = true end)
+                        end end end end end end wait(4) _G.bring1 = true end)
  
 
 
