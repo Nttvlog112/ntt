@@ -45,6 +45,7 @@ local pos_1 = Instance.new("TextLabel")
 
 --on off
 local exit = Instance.new("TextButton") 
+local uiexit = Instance.new("UICorner")
 
 -- // farm
 -- // t = tool
@@ -562,6 +563,7 @@ exit.Text = "Open"
 exit.TextColor3 = Color3.fromRGB(250, 255, 250)
 exit.TextSize = 20.000
 exit.BorderColor3 = Color3.fromRGB(250, 250, 250)
+uiexit.Parent = exit
 exit.MouseButton1Down:connect(function()
 --on off 
 if exit.Text == "Open" then --on
@@ -1799,6 +1801,7 @@ if _G.m_b6 then --script
  if v.Humanoid.Health > 0  then
  local humanoid = game.Players.LocalPlayer.Character.Humanoid 
 humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
+mele()
  click()
  TP1(CFrame.new(407.5114440917969, 194.4268798828125, -412.55828857421875))
  end end end end end)
