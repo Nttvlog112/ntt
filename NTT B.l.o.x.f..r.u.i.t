@@ -241,7 +241,9 @@ st_b10= Instance.new("TextButton")
 st_b11= Instance.new("TextButton")
 
 --// tp
-t_tbar=Instance.new("ScrollingFrame")
+-- // island
+t_ibar=Instance.new("ScrollingFrame")
+t_itp = Instance.new("TextButton")
 t_i1= Instance.new("TextButton")
 t_i2= Instance.new("TextButton")
 t_i3= Instance.new("TextButton")
@@ -263,12 +265,14 @@ t_f2 = Instance.new("TextLabel")
 t_f3 = Instance.new("TextLabel")
 t_f4 = Instance.new("TextLabel")
 t_f5 = Instance.new("TextLabel")
+t_f6 = Instance.new("TextLabel")
 
 t_b1= Instance.new("TextButton")
 t_b2= Instance.new("TextButton")
 t_b3= Instance.new("TextButton")
 t_b4= Instance.new("TextButton")
 t_b5= Instance.new("TextButton")
+t_b6= Instance.new("TextButton")
 
 
 -------------------------------------------------------------------------------
@@ -575,7 +579,7 @@ exit.Parent = NTTGUI
 exit.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
 exit.Position = UDim2.new(0.15162201, 0, 0.083285708, 0)
 exit.Size = UDim2.new(0, 50, 0, 50)
-exit.Font = Enum.Font.Ubuntu
+exit.Font = Enum.Font.ArialBold
 exit.Text = "Open"
 exit.TextColor3 = Color3.fromRGB(250, 255, 250)
 exit.TextSize = 20.000
@@ -756,11 +760,11 @@ function TP1(P1)
                     elseif Distance < 300 then
                         Speed = 500
                     elseif Distance < 500 then
-                        Speed = 150
+                        Speed = 200
                     elseif Distance < 1000 then
-                        Speed = 100
+                        Speed = 140
                     elseif Distance >= 1500 then
-                        Speed = 90
+                        Speed = 120
                     end                                  
                    local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Distance/Speed), {CFrame = P1 * CFrame.new(0,0,0) }) tween:Play()                    
                 end
@@ -1357,7 +1361,7 @@ elseif MyLevel == 1900 or MyLevel <= 1924 then --Jungle Pirate [Lv. 1900]
                                             CFrameMob = CFrame.new(-697.4462280273438, 173.2466278076172, -11212.94140625)
                                             CFrameBring = CFrame.new(-638.2747192382812, 66.16278076171875, -11293.0546875)       
 
-                     elseif MyLevel == 2200 or MyLevel <= 2224 then --m_b3
+                     elseif MyLevel == 2200 or MyLevel <= t_f24 then --m_b3
                                             Ms = "Cookie Crafter [Lv. 2200]"
                                             NameQuest = "CakeQuest1" --name get quest
                                             LevelQuest = 1        -- lv quest
@@ -1366,7 +1370,7 @@ elseif MyLevel == 1900 or MyLevel <= 1924 then --Jungle Pirate [Lv. 1900]
                                             CFrameMob = CFrame.new(-2289.203369140625, 92.37846374511719, -12041.884765625)
                                             CFrameBring = CFrame.new(-2367.436279296875, 38.14149856567383, -12120.3876953125)
                                             
-     elseif MyLevel == 2225 or MyLevel <= 2249  then --m_b3
+     elseif MyLevel == t_f25 or MyLevel <= 2249  then --m_b3
                                             Ms = "Cake Guard [Lv. ef_f85]"
                                             NameQuest = "CakeQuest2" --name get quest
                                             LevelQuest = 1      -- lv quest
@@ -2716,85 +2720,6 @@ stoptp()
 end
 end)
 
-r_f4.Parent = b_page3
-r_f4.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-r_f4.Position = UDim2.new(0, 0, 0.3800000000, 0)
-r_f4.Size = UDim2.new(0, 498, 0, 30)
-r_f4.BorderColor3 = Color3.fromRGB(250, 250, 250)
-r_f4.Font = Enum.Font.Ubuntu
-r_f4.Text = "   Auto Raid Farm"
-r_f4.TextColor3 = Color3.fromRGB(255, 255, 255)
-r_f4.TextSize = 14.000
-r_f4.TextWrapped = true
-r_f4.TextXAlignment = Enum.TextXAlignment.Left
-
-r_b4.Name = "r_b4"
-r_b4.Parent = r_f4
-r_b4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-r_b4.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-r_b4.Size = UDim2.new(0, 20, 0, 20)
-r_b4.BorderColor3 = Color3.fromRGB(250, 250, 250)
-r_b4.Font = Enum.Font.SourceSans
-r_b4.Text = ""
-r_b4.TextColor3 = Color3.fromRGB(250, 250, 250)
-r_b4.TextSize = 30.000
-r_b4.MouseButton1Down:connect(function()
---on off 
-if r_b4.Text == "" then --on
-r_b4.Text = "X"
-_G.r_b4 = true
-elseif r_b4.Text == "X" then --off
-r_b4.Text = ""
-_G.r_b4 = false
-end
-end)
-
--- // farm raid
-game:GetService('RunService').RenderStepped:connect(function()
-if _G.r_b4 then --script
-   if game.Players.LocalPlayer.PlayerGui.Main.Timer.Visible == true then
-local humanoid = game.Players.LocalPlayer.Character.Humanoid 
-humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
-                   
-for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
-      if v.ClassName == "Model" then --name mob
-      local pos = v.HumanoidRootPart --check pos
-                    local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
-                  if Distance < 500 then
-                  Speed = 725
-                  elseif Distance < 200 then
-                  Speed = 7000
-                  elseif Distance < 150 then
-                  Speed = 200000
-                  elseif Distance < 1000 then
-                        Speed = 400        
-    elseif Distance >= 1500 then
-                  Speed = 100
-           end
-            
-       
-     usetool()
-       if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 1200 then
-       if v.Humanoid.Health > 0  then
-       click() -- click          
-       v.Humanoid:ChangeState(14)
-      v.HumanoidRootPart.Size = Vector3.new(50, 50, 10)     --size hix box  
-      v.HumanoidRootPart.CanCollide = false                                                
-v.Head.CanCollide = false                                 
-if v.Humanoid:FindFirstChild("Animator") then
-                            v.Humanoid.Animator:Destroy()
-                        end
-                        
-game:GetService("TweenService"):Create(
-                        game.Players.LocalPlayer.Character.HumanoidRootPart,
-                        TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
-                        {CFrame = v.HumanoidRootPart.CFrame* CFrame.new(0, st_b5.Text, 0) }
-                    ):Play()       
-                                      
-                 end end end end end
-end
-end)
-
 -- // tp island
 game:GetService('RunService').RenderStepped:connect(function()
 if _G.r_b3 then --script
@@ -2893,6 +2818,87 @@ local pos = v.CFrame --check pos
                                         
 end
 end)
+
+
+r_f4.Parent = b_page3
+r_f4.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+r_f4.Position = UDim2.new(0, 0, 0.3800000000, 0)
+r_f4.Size = UDim2.new(0, 498, 0, 30)
+r_f4.BorderColor3 = Color3.fromRGB(250, 250, 250)
+r_f4.Font = Enum.Font.Ubuntu
+r_f4.Text = "   Auto Raid Farm"
+r_f4.TextColor3 = Color3.fromRGB(255, 255, 255)
+r_f4.TextSize = 14.000
+r_f4.TextWrapped = true
+r_f4.TextXAlignment = Enum.TextXAlignment.Left
+
+r_b4.Name = "r_b4"
+r_b4.Parent = r_f4
+r_b4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+r_b4.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+r_b4.Size = UDim2.new(0, 20, 0, 20)
+r_b4.BorderColor3 = Color3.fromRGB(250, 250, 250)
+r_b4.Font = Enum.Font.SourceSans
+r_b4.Text = ""
+r_b4.TextColor3 = Color3.fromRGB(250, 250, 250)
+r_b4.TextSize = 30.000
+r_b4.MouseButton1Down:connect(function()
+--on off 
+if r_b4.Text == "" then --on
+r_b4.Text = "X"
+_G.r_b4 = true
+elseif r_b4.Text == "X" then --off
+r_b4.Text = ""
+_G.r_b4 = false
+end
+end)
+
+-- // farm raid
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.r_b4 then --script
+   if game.Players.LocalPlayer.PlayerGui.Main.Timer.Visible == true then
+local humanoid = game.Players.LocalPlayer.Character.Humanoid 
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
+                   
+for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
+      if v.ClassName == "Model" then --name mob
+      local pos = v.HumanoidRootPart --check pos
+                    local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                  if Distance < 500 then
+                  Speed = 725
+                  elseif Distance < 200 then
+                  Speed = 7000
+                  elseif Distance < 150 then
+                  Speed = 200000
+                  elseif Distance < 1000 then
+                        Speed = 400        
+    elseif Distance >= 1500 then
+                  Speed = 100
+           end
+            
+       
+     usetool()
+       if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 1200 then
+       if v.Humanoid.Health > 0  then
+       click() -- click          
+       v.Humanoid:ChangeState(14)
+      v.HumanoidRootPart.Size = Vector3.new(50, 50, 10)     --size hix box  
+      v.HumanoidRootPart.CanCollide = false                                                
+v.Head.CanCollide = false                                 
+if v.Humanoid:FindFirstChild("Animator") then
+                            v.Humanoid.Animator:Destroy()
+                        end
+                        
+game:GetService("TweenService"):Create(
+                        game.Players.LocalPlayer.Character.HumanoidRootPart,
+                        TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
+                        {CFrame = v.HumanoidRootPart.CFrame* CFrame.new(0, st_b5.Text, 0) }
+                    ):Play()       
+                                      
+                 end end end end end
+end
+end)
+
 
 r_f5.Parent = b_page3
 r_f5.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
@@ -5569,13 +5575,376 @@ end
 end)
 
 --// tp
+t_f1.Parent = b_page8
+t_f1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+t_f1.Position = UDim2.new(0, 0, 0.0300000000, 0)
+t_f1.Size = UDim2.new(0, 498, 0, 30)
+t_f1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+t_f1.Font = Enum.Font.Ubuntu
+t_f1.Text = "  "
+t_f1.TextColor3 = Color3.fromRGB(255, 255, 255)
+t_f1.TextSize = 14.000
+t_f1.TextWrapped = true
+t_f1.TextXAlignment = Enum.TextXAlignment.Left
+
+t_b1.Name = "t_b1"
+t_b1.Parent = t_f1
+t_b1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+t_b1.Size = UDim2.new(0, 160, 0, 30)
+t_b1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+t_b1.Font = Enum.Font.SourceSans
+t_b1.Text = "Island : Select"
+t_b1.TextColor3 = Color3.fromRGB(250, 250, 250)
+t_b1.TextSize = 18.000
+t_b1.MouseButton1Down:connect(function()
+t_ibar.Visible = true
+end)
+
+t_itp.Name = "t_itp"
+t_itp.Parent = t_f1
+t_itp.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+t_itp.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+t_itp.Size = UDim2.new(0, 20, 0, 20)
+t_itp.BorderColor3 = Color3.fromRGB(250, 250, 250)
+t_itp.Font = Enum.Font.SourceSans
+t_itp.Text = ""
+t_itp.TextColor3 = Color3.fromRGB(250, 250, 250)
+t_itp.TextSize = 30.000
+t_itp.MouseButton1Down:connect(function()
+--on off 
+if t_itp.Text == "" then --on
+t_itp.Text = "X"
+_G.t_itp = true
+else
+_G.t_itp = false
+t_itp.Text = ""
+stoptp()
+end end)
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.t_itp then --script
+if t_b1.Text == "Island : KingDom of Rose" then
+TP1(CFrame.new(82.9490662, 18.0710983, 2834.98779))
+end
+if t_b1.Text == "Island : Café" then
+TP1(CFrame.new(-385.250916, 73.0458984, 297.388397))
+end
+if t_b1.Text == "Island : Green Zone" then
+TP1(CFrame.new(-2372.14697, 72.9919434, -3166.51416))
+end
+if t_b1.Text == "Island : Hot and Cold" then
+TP1(CFrame.new(-6026.96484, 14.7461271, -5071.96338))
+end
+if t_b1.Text == "Island : Dark Arena" then
+TP1(game.Workspace["_WorldOrigin"].Locations["Dark Arena"].CFrame)
+end
+if t_b1.Text == "Island : Snow Moutain" then
+TP1(CFrame.new(1384.68298, 453.569031, -4990.09766))
+end
+if t_b1.Text == "Island : Cursed Ship" then
+TP1(CFrame.new(902.059143, 124.752518, 33071.8125))
+end
+if t_b1.Text == "Island : Ice Castle" then
+TP1(CFrame.new(5400.40381, 28.21698, -6236.99219))
+end
+if t_b1.Text == "Island : Graveyard" then
+TP1(CFrame.new(-5595.85107421875, 48.82343673706055, -651.7311401367188))
+end
+if t_b1.Text == "Island : Fogotten" then
+TP1(CFrame.new(-3043.31543, 238.881271, -10191.5791))
+end
+jump()
+
+end end)
+
+
+function ibar()
+
+t_ibar.Name = "t_ibar"
+t_ibar.Parent = b_page8
+t_ibar.Active = true
+t_ibar.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+t_ibar.BorderColor3 = Color3.fromRGB(250, 250, 250)
+t_ibar.Position = UDim2.new(0, 0, 0.1000000000, 0)
+t_ibar.Size = UDim2.new(0, 150, 0, 140)
+t_ibar.BorderSizePixel = 1
+t_ibar.Visible = false
+
+t_i1.Name = "t_i1" 
+t_i1.Parent = t_ibar
+t_i1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+t_i1.Position = UDim2.new(0.00000000, 0, 0.000000000, 0)
+t_i1.Size = UDim2.new(0, 140, 0, 20)
+t_i1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+t_i1.Font = Enum.Font.SourceSans
+t_i1.TextColor3 = Color3.fromRGB(250, 250, 250)
+t_i1.TextSize = 14.000
+
+t_i2.Name = "t_i2" 
+t_i2.Parent = t_ibar
+t_i2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+t_i2.Position = UDim2.new(0.00000000, 0, 0.050000000, 0)
+t_i2.Size = UDim2.new(0, 140, 0, 20)
+t_i2.BorderColor3 = Color3.fromRGB(250, 250, 250)
+t_i2.Font = Enum.Font.SourceSans
+t_i2.TextColor3 = Color3.fromRGB(250, 250, 250)
+t_i2.TextSize = 14.000
+
+t_i3.Name = "t_i3"
+t_i3.Parent = t_ibar
+t_i3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+t_i3.Position = UDim2.new(0.00000000, 0, 0.100000000, 0)
+t_i3.Size = UDim2.new(0, 140, 0, 20)
+t_i3.BorderColor3 = Color3.fromRGB(250, 250, 250)
+t_i3.Font = Enum.Font.SourceSans
+t_i3.TextColor3 = Color3.fromRGB(250, 250, 250)
+t_i3.TextSize = 14.000
+
+t_i4.Name = "t_i4"
+t_i4.Parent = t_ibar
+t_i4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+t_i4.Position = UDim2.new(0.00000000, 0, 0.150000000, 0)
+t_i4.Size = UDim2.new(0, 140, 0, 20)
+t_i4.BorderColor3 = Color3.fromRGB(250, 250, 250)
+t_i4.Font = Enum.Font.SourceSans
+t_i4.TextColor3 = Color3.fromRGB(250, 250, 250)
+t_i4.TextSize = 14.000
+
+t_i5.Name = "t_i5"
+t_i5.Parent = t_ibar
+t_i5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+t_i5.Position = UDim2.new(0.00000000, 0, 0.200000000, 0)
+t_i5.Size = UDim2.new(0, 140, 0, 20)
+t_i5.BorderColor3 = Color3.fromRGB(250, 250, 250)
+t_i5.Font = Enum.Font.SourceSans
+t_i5.TextColor3 = Color3.fromRGB(250, 250, 250)
+t_i5.TextSize = 14.000
+
+t_i6.Name = "t_i6"
+t_i6.Parent = t_ibar
+t_i6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+t_i6.Position = UDim2.new(0.00000000, 0, 0.250000000, 0)
+t_i6.Size = UDim2.new(0, 140, 0, 20)
+t_i6.BorderColor3 = Color3.fromRGB(250, 250, 250)
+t_i6.Font = Enum.Font.SourceSans
+t_i6.TextColor3 = Color3.fromRGB(250, 250, 250)
+t_i6.TextSize = 14.000
+
+t_i7.Name = "t_i7"
+t_i7.Parent = t_ibar
+t_i7.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+t_i7.Position = UDim2.new(0.00000000, 0, 0.300000000, 0)
+t_i7.Size = UDim2.new(0, 140, 0, 20)
+t_i7.BorderColor3 = Color3.fromRGB(250, 250, 250)
+t_i7.Font = Enum.Font.SourceSans
+t_i7.TextColor3 = Color3.fromRGB(250, 250, 250)
+t_i7.TextSize = 14.000
+
+t_i8.Name = "t_i8"
+t_i8.Parent = t_ibar
+t_i8.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+t_i8.Position = UDim2.new(0.00000000, 0, 0.350000000, 0)
+t_i8.Size = UDim2.new(0, 140, 0, 20)
+t_i8.BorderColor3 = Color3.fromRGB(250, 250, 250)
+t_i8.Font = Enum.Font.SourceSans
+t_i8.TextColor3 = Color3.fromRGB(250, 250, 250)
+t_i8.TextSize = 14.000
+
+t_i9.Name = "t_i9"
+t_i9.Parent = t_ibar
+t_i9.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+t_i9.Position = UDim2.new(0.00000000, 0, 0.400000000, 0)
+t_i9.Size = UDim2.new(0, 140, 0, 20)
+t_i9.BorderColor3 = Color3.fromRGB(250, 250, 250)
+t_i9.Font = Enum.Font.SourceSans
+t_i9.TextColor3 = Color3.fromRGB(250, 250, 250)
+t_i9.TextSize = 14.000
+
+t_i10.Name = "t_i10"
+t_i10.Parent = t_ibar
+t_i10.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+t_i10.Position = UDim2.new(0.00000000, 0, 0.450000000, 0)
+t_i10.Size = UDim2.new(0, 140, 0, 20)
+t_i10.BorderColor3 = Color3.fromRGB(250, 250, 250)
+t_i10.Font = Enum.Font.SourceSans
+t_i10.TextColor3 = Color3.fromRGB(250, 250, 250)
+t_i10.TextSize = 14.000
+
+--end bar core
+end
+
+--code check sea tp
+if game.PlaceId == 2753915549 then -- sea1
+t_i1.Text = "t_b2"
+t_i2.Text = "t_b2"
+t_i3.Text = "t_b2"
+t_i4.Text = "t_b2"
+t_i5.Text = "t_b2"
+t_i6.Text = "t_b2"
+t_i7.Text = "t_b2"
+t_i8.Text = "t_b2"
+t_i9.Text = "t_b2"
+t_i10.Text = "t_b2"
+
+elseif game.PlaceId == 4442272183 then -- sea2
+t_i1.Text = "KingDom of Rose"
+t_i2.Text = "Café"
+t_i3.Text = "Green Zone"
+t_i4.Text = "Hot and Cold"
+t_i5.Text = "Snow Moutain"
+t_i6.Text = "Dark Arena"
+t_i7.Text = "Cursed Ship"
+t_i8.Text = "Ice Castle"
+t_i9.Text = "Graveyard"
+t_i10.Text = "Fogotten"
+
+t_i1.MouseButton1Down:connect(function()
+t_ibar.Visible = false
+t_b1.Text = "Island : KingDom of Rose"
+end)
+t_i2.MouseButton1Down:connect(function()
+t_ibar.Visible = false
+t_b1.Text = "Island : Café"
+end)
+t_i3.MouseButton1Down:connect(function()
+t_ibar.Visible = false
+t_b1.Text = "Island : Green Zone"
+end)
+t_i4.MouseButton1Down:connect(function()
+t_ibar.Visible = false
+t_b1.Text = "Island : Hot and Cold"
+end)
+t_i5.MouseButton1Down:connect(function()
+t_ibar.Visible = false
+t_b1.Text = "Island : Snow Moutain"
+end)
+t_i6.MouseButton1Down:connect(function()
+t_ibar.Visible = false
+t_b1.Text = "Island : Dark Arena"
+end)
+t_i7.MouseButton1Down:connect(function()
+t_ibar.Visible = false
+t_b1.Text = "Island : Cursed Ship"
+end)
+t_i8.MouseButton1Down:connect(function()
+t_ibar.Visible = false
+t_b1.Text = "Island : Ice Castle"
+end)
+t_i9.MouseButton1Down:connect(function()
+t_ibar.Visible = false
+t_b10.Text = "Island : Graveyard"
+end)
+t_i10.MouseButton1Down:connect(function()
+t_ibar.Visible = false
+t_b1.Text = "Island : Fogotten"
+end)
+
+elseif game.PlaceId == 7449423635 then -- sea3
+t_i1.Text = "t_b2"
+t_i2.Text = "t_b2"
+t_i3.Text = "t_b2"
+t_i4.Text = "t_b2"
+t_i5.Text = "t_b2"
+t_i6.Text = "t_b2"
+t_i7.Text = "t_b2"
+t_i8.Text = "t_b2"
+t_i9.Text = "t_b2"
+t_i10.Text = "t_b2"
+
+end
+
+t_f2.Parent = b_page8
+t_f2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+t_f2.Position = UDim2.new(0, 0, 0.1000000000, 0)
+t_f2.Size = UDim2.new(0, 498, 0, 30)
+t_f2.BorderColor3 = Color3.fromRGB(250, 250, 250)
+t_f2.Font = Enum.Font.Ubuntu
+t_f2.Text = "   Auto Teleport Sea1"
+t_f2.TextColor3 = Color3.fromRGB(255, 255, 255)
+t_f2.TextSize = 14.000
+t_f2.TextWrapped = true
+t_f2.TextXAlignment = Enum.TextXAlignment.Left
+
+t_b2.Name = "t_b2"
+t_b2.Parent = t_f2
+t_b2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+t_b2.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+t_b2.Size = UDim2.new(0, 20, 0, 20)
+t_b2.BorderColor3 = Color3.fromRGB(250, 250, 250)
+t_b2.Font = Enum.Font.SourceSans
+t_b2.Text = ""
+t_b2.TextColor3 = Color3.fromRGB(250, 250, 250)
+t_b2.TextSize = 30.000
+t_b2.MouseButton1Down:connect(function()
+--on off 
+if t_b2.Text == "" then --on
+t_b2.Text = "X"
+_G.t_b2 = true
+elseif t_b2.Text == "X" then --off
+t_b2.Text = ""
+_G.t_b2 = false
+end
+end)
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.t_b2 then --script
+
+local args = {
+                                            [1] = "TravelMain" -- OLD WORLD to NEW WORLD
+                                        }
+                                        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+
+end
+end)
+
+t_f3.Parent = b_page8
+t_f3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+t_f3.Position = UDim2.new(0, 0, 0.1700000000, 0)
+t_f3.Size = UDim2.new(0, 498, 0, 30)
+t_f3.BorderColor3 = Color3.fromRGB(250, 250, 250)
+t_f3.Font = Enum.Font.Ubuntu
+t_f3.Text = "   Auto Teleport Sea 2"
+t_f3.TextColor3 = Color3.fromRGB(255, 255, 255)
+t_f3.TextSize = 14.000
+t_f3.TextWrapped = true
+t_f3.TextXAlignment = Enum.TextXAlignment.Left
+
+t_b3.Name = "t_b3"
+t_b3.Parent = t_f3
+t_b3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+t_b3.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+t_b3.Size = UDim2.new(0, 20, 0, 20)
+t_b3.BorderColor3 = Color3.fromRGB(250, 250, 250)
+t_b3.Font = Enum.Font.SourceSans
+t_b3.Text = ""
+t_b3.TextColor3 = Color3.fromRGB(250, 250, 250)
+t_b3.TextSize = 30.000
+t_b3.MouseButton1Down:connect(function()
+--on off 
+if t_b3.Text == "" then --on
+t_b3.Text = "X"
+_G.t_b3 = true
+elseif t_b3.Text == "X" then --off
+t_b3.Text = ""
+_G.t_b3 = false
+end
+end)
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.t_b3 then --script
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelDressrosa")
+
+end
+end)
+
 t_f4.Parent = b_page8
 t_f4.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
 t_f4.Position = UDim2.new(0, 0, 0.2400000000, 0)
 t_f4.Size = UDim2.new(0, 498, 0, 30)
 t_f4.BorderColor3 = Color3.fromRGB(250, 250, 250)
 t_f4.Font = Enum.Font.Ubuntu
-t_f4.Text = "   Teleport Sever Hop"
+t_f4.Text = "   Auto Teleport Sea 3"
 t_f4.TextColor3 = Color3.fromRGB(255, 255, 255)
 t_f4.TextSize = 14.000
 t_f4.TextWrapped = true
@@ -5595,16 +5964,89 @@ t_b4.MouseButton1Down:connect(function()
 --on off 
 if t_b4.Text == "" then --on
 t_b4.Text = "X"
-
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Svv')))()
-
+_G.t_b4 = true
 elseif t_b4.Text == "X" then --off
 t_b4.Text = ""
+_G.t_b4 = false
+end
+end)
+
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.t_b4 then --script
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelZou")
+
+end
+end)
+t_f5.Parent = b_page8
+t_f5.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+t_f5.Position = UDim2.new(0, 0, 0.3100000000, 0)
+t_f5.Size = UDim2.new(0, 498, 0, 30)
+t_f5.BorderColor3 = Color3.fromRGB(250, 250, 250)
+t_f5.Font = Enum.Font.Ubuntu
+t_f5.Text = "   Teleport Sever Hop"
+t_f5.TextColor3 = Color3.fromRGB(255, 255, 255)
+t_f5.TextSize = 14.000
+t_f5.TextWrapped = true
+t_f5.TextXAlignment = Enum.TextXAlignment.Left
+
+t_b5.Name = "t_b5"
+t_b5.Parent = t_f5
+t_b5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+t_b5.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+t_b5.Size = UDim2.new(0, 20, 0, 20)
+t_b5.BorderColor3 = Color3.fromRGB(250, 250, 250)
+t_b5.Font = Enum.Font.SourceSans
+t_b5.Text = ""
+t_b5.TextColor3 = Color3.fromRGB(250, 250, 250)
+t_b5.TextSize = 30.000
+t_b5.MouseButton1Down:connect(function()
+--on off 
+if t_b5.Text == "" then --on
+t_b5.Text = "X"
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Svv')))()
+elseif t_b5.Text == "X" then --off
+t_b5.Text = ""
+end
+end)
+
+t_f6.Parent = b_page8
+t_f6.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+t_f6.Position = UDim2.new(0, 0, 0.3800000000, 0)
+t_f6.Size = UDim2.new(0, 498, 0, 30)
+t_f6.BorderColor3 = Color3.fromRGB(250, 250, 250)
+t_f6.Font = Enum.Font.Ubuntu
+t_f6.Text = "   Rejon"
+t_f6.TextColor3 = Color3.fromRGB(255, 255, 255)
+t_f6.TextSize = 14.000
+t_f6.TextWrapped = true
+t_f6.TextXAlignment = Enum.TextXAlignment.Left
+
+t_b6.Name = "t_b6"
+t_b6.Parent = t_f6
+t_b6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+t_b6.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+t_b6.Size = UDim2.new(0, 20, 0, 20)
+t_b6.BorderColor3 = Color3.fromRGB(250, 250, 250)
+t_b6.Font = Enum.Font.SourceSans
+t_b6.Text = ""
+t_b6.TextColor3 = Color3.fromRGB(250, 250, 250)
+t_b6.TextSize = 30.000
+t_b6.MouseButton1Down:connect(function()
+--on off 
+if t_b6.Text == "" then --on
+t_b6.Text = "X"
+_G.t_b6 = true
+game:GetService("TeleportService"):Teleport(game.PlaceId)
+elseif t_b6.Text == "X" then --off
+t_b6.Text = ""
+_G.t_b6 = false
 end
 end)
 
            
-
+ibar()
 
 -- // Setting
 st_f1.Parent = b_page9
