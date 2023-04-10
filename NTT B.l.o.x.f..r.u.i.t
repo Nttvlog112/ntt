@@ -4565,12 +4565,12 @@ game:GetService("TweenService"):Create(
                     
                     end end end end end end)                 
 spawn(function()
-    while task.wait(4) do       
+    while task.wait(2) do       
             pcall(function()          
             if _G.mi_b1 then
             if _G.bringmob then       
                 for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
-                    if v.Name == "Ship Deckhand [Lv. 1250]" or v.Name == "Ship Engineer [Lv. 1275]" or v.Name == "Ship Steward [Lv. 1300]" or v.Name == "Ship Officer [Lv. 1325]" and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 600 then        
+                    if v.Name == "Ship Deckhand [Lv. 1250]" or v.Name == "Ship Engineer [Lv. 1275]" or v.Name == "Ship Steward [Lv. 1300]" or v.Name == "Ship Officer [Lv. 1325]" and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 800 then        
 if   st_b5.Text == "0" then                        
  v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
  elseif st_b5.Text == "10" then
@@ -4676,12 +4676,12 @@ game:GetService("TweenService"):Create(
 end end)                 
 
 spawn(function()
-    while task.wait(4) do       
+    while task.wait(2) do       
             pcall(function()          
             if _G.mi_b3 then
             if _G.bringmob then       
                 for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
-                    if v.Name == "Candy Rebel [Lv. 2375]" or v.Name == "Sweet Thief [Lv. 2350]" or v.Name == "Chocolate Bar Battler [Lv. 2325]" or v.Name == "Cocoa Warrior [Lv. 2300]" and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 600 then        
+                    if v.Name == "Candy Rebel [Lv. 2375]" or v.Name == "Sweet Thief [Lv. 2350]" or v.Name == "Chocolate Bar Battler [Lv. 2325]" or v.Name == "Cocoa Warrior [Lv. 2300]" and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 800 then        
 if   st_b5.Text == "0" then                        
  v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
  elseif st_b5.Text == "10" then
@@ -4763,7 +4763,7 @@ TP1(CFrame.new(-9717.5400390625, 65.93158721923828, 6041.43310546875))
 local humanoid = game.Players.LocalPlayer.Character.Humanoid 
 humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
 for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
-      if v.Name == "Posessed Mummy [Lv. 2050]" or v.Name == "Demonic Soul [Lv. 2025]" then --name mob
+      if v.Name == "Posessed Mummy [Lv. 2050]" or v.Name == "Demonic Soul [Lv. 2025]" or v.Name == "Living Zombie [Lv. 2000]" or v.Name =="Reborn Skeleton [Lv. 1975]" then --name mob
       local pos = v.HumanoidRootPart --check pos
                     local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
                   if Distance < 500 then
@@ -4797,6 +4797,39 @@ game:GetService("TweenService"):Create(
                     
                     end end end end  
 end end)                 
+
+spawn(function()
+    while task.wait(3) do       
+            pcall(function()          
+            if _G.mi_b1 then
+            if _G.bringmob then       
+                for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
+                    if v.Name == "Posessed Mummy [Lv. 2050]" or v.Name == "Demonic Soul [Lv. 2025]" or v.Name == "Living Zombie [Lv. 2000]" or v.Name =="Reborn Skeleton [Lv. 1975]" and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 800 then        
+if   st_b5.Text == "0" then                        
+ v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+ elseif st_b5.Text == "10" then
+ v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-9.5,0)
+ elseif st_b5.Text == "20" then
+ v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-19.5,0)
+ elseif st_b5.Text == "30" then
+ v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-29.5,0)
+ elseif st_b5.Text == "40" then
+ v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-39.5,0)
+ elseif st_b5.Text == "50" then
+ v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-49.5,0)
+ end                       
+  v.Humanoid.JumpPower = 0                          
+  v.Humanoid.WalkSpeed = 0                           
+v.HumanoidRootPart.Size = Vector3.new(60,60,10)                  
+ v.HumanoidRootPart.Transparency = 1                        
+ v.HumanoidRootPart.CanCollide = false                           
+ v.Head.CanCollide = false                           
+ v.Humanoid:ChangeState(11)                           
+ v.Humanoid:ChangeState(14)                       
+  setscriptable(game.Players.LocalPlayer,"SimulationRadius",true)                          
+  sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius",math.huge)                    
+    end end end end end) end end)           
+
 
 mi_f4.Parent = b_page6
 mi_f4.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
@@ -5983,14 +6016,14 @@ end)
 _G.bringmob = true
   
    spawn(function()
-    while task.wait(4) do       
+    while task.wait(2) do       
             pcall(function()
             CheckQuest()
             if _G.m_b2 then
             if _G.bringmob then       
             if game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible == true then                 
                 for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
-                    if v.Name == Ms  and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 600 then                           
+                    if v.Name == Ms  and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 800 then                           
 if   st_b5.Text == "0" then                        
  v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
  elseif st_b5.Text == "10" then
