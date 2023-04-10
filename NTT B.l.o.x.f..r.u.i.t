@@ -4639,7 +4639,7 @@ TP1(CFrame.new(182.0901641845703, 126.93514251708984, -12772.8330078125))
 local humanoid = game.Players.LocalPlayer.Character.Humanoid 
 humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
 for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
-      if if v.Name == "Candy Rebel [Lv. 2375]" or v.Name == "Sweet Thief [Lv. 2350]" or v.Name == "Chocolate Bar Battler [Lv. 2325]" v.Name == "Cocoa Warrior [Lv. 2300]"  then --name mob
+      if v.Name == "Candy Rebel [Lv. 2375]" or v.Name == "Sweet Thief [Lv. 2350]" or v.Name == "Chocolate Bar Battler [Lv. 2325]" v.Name == "Cocoa Warrior [Lv. 2300]"  then --name mob
       local pos = v.HumanoidRootPart --check pos
                     local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
                   if Distance < 500 then
