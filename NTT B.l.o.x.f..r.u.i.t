@@ -5327,7 +5327,18 @@ if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Leopard-Leop
 local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
 game:GetService("Players").LocalPlayer.Character["Leopard-Leopard"].RemoteEvent:FireServer(unpack(args))                              
 end
-
+local args = {
+                                               [1] = target.HumanoidRootPart.Position
+                                                }
+                                                game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = {
+                                                    [1] = target.HumanoidRootPart.Position
+                                                }
+                                                game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))         
+         local args = {
+                                                    [1] = target.HumanoidRootPart.Position
+                                                }
+                                                game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))                           
 end
 end)
 
@@ -5653,6 +5664,7 @@ end
 if t_b1.Text == "Island : Fogotten" then
 TP1(CFrame.new(-3043.31543, 238.881271, -10191.5791))
 end
+
 jump()
 
 end end)
@@ -6017,7 +6029,7 @@ t_f6.Position = UDim2.new(0, 0, 0.3800000000, 0)
 t_f6.Size = UDim2.new(0, 498, 0, 30)
 t_f6.BorderColor3 = Color3.fromRGB(250, 250, 250)
 t_f6.Font = Enum.Font.Ubuntu
-t_f6.Text = "   Rejon"
+t_f6.Text = "   Rejon Sever"
 t_f6.TextColor3 = Color3.fromRGB(255, 255, 255)
 t_f6.TextSize = 14.000
 t_f6.TextWrapped = true
@@ -6230,7 +6242,7 @@ st_b5.Position = UDim2.new(0.13200000, 0, 0, 0)
 st_b5.Size = UDim2.new(0, 30, 0, 30)
 st_b5.Font = Enum.Font.Ubuntu
 st_b5.BackgroundTransparency = 1.000
-st_b5.Text = "30"
+st_b5.Text = "50"
 st_b5.TextColor3 = Color3.fromRGB(250, 250, 250)
 st_b5.TextSize = 14.000
 st_b5.MouseButton1Down:connect(function()
