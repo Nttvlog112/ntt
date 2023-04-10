@@ -4639,7 +4639,7 @@ TP1(CFrame.new(182.0901641845703, 126.93514251708984, -12772.8330078125))
 local humanoid = game.Players.LocalPlayer.Character.Humanoid 
 humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
 for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
-      if v.Name == "Candy Rebel [Lv. 2375]" or v.Name == "Sweet Thief [Lv. 2350]" or v.Name == "Chocolate Bar Battler [Lv. 2325]" v.Name == "Cocoa Warrior [Lv. 2300]"  then --name mob
+      if v.Name == "Candy Rebel [Lv. 2375]" or v.Name == "Sweet Thief [Lv. 2350]" or v.Name == "Chocolate Bar Battler [Lv. 2325]" or v.Name == "Cocoa Warrior [Lv. 2300]"  then --name mob
       local pos = v.HumanoidRootPart --check pos
                     local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
                   if Distance < 500 then
@@ -4681,7 +4681,7 @@ spawn(function()
             if _G.mi_b3 then
             if _G.bringmob then       
                 for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
-                    if v.Name == "Candy Rebel [Lv. 2375]" or v.Name == "Sweet Thief [Lv. 2350]" or v.Name == "Chocolate Bar Battler [Lv. 2325]" v.Name == "Cocoa Warrior [Lv. 2300]" and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 600 then        
+                    if v.Name == "Candy Rebel [Lv. 2375]" or v.Name == "Sweet Thief [Lv. 2350]" or v.Name == "Chocolate Bar Battler [Lv. 2325]" or v.Name == "Cocoa Warrior [Lv. 2300]" and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 600 then        
 if   st_b5.Text == "0" then                        
  v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
  elseif st_b5.Text == "10" then
@@ -5981,17 +5981,16 @@ _G.bringmob = false
 end
 end)
 _G.bringmob = true
-
-
-                        
+  
    spawn(function()
     while task.wait(4) do       
             pcall(function()
             CheckQuest()
             if _G.m_b2 then
             if _G.bringmob then       
+            if game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible == true then                 
                 for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
-                    if v.Name == Ms  and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 600 then        
+                    if v.Name == Ms  and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 600 then                           
 if   st_b5.Text == "0" then                        
  v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
  elseif st_b5.Text == "10" then
@@ -6015,7 +6014,7 @@ v.HumanoidRootPart.Size = Vector3.new(60,60,10)
  v.Humanoid:ChangeState(14)                       
   setscriptable(game.Players.LocalPlayer,"SimulationRadius",true)                          
   sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius",math.huge)                    
-    end end end end end) end end)           
+    end end end end end end) end end)           
         
 
 st_f5.Parent = b_page9
