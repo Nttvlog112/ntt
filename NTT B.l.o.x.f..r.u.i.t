@@ -4910,9 +4910,6 @@ c_tb.TextSize = 14.000
 c_tb.TextWrapped = true
 
 -- // code check player
-game:GetService('RunService').RenderStepped:connect(function()
-if c_tb.Text == "Vui lòng nhập tên Người Chơi" then
-else
 local lplayer = game:GetService('Players').LocalPlayer
  
 local yeeting = false
@@ -4949,6 +4946,10 @@ local asd = {'yeet','gui','yeet gui'}
 local f = string.upper(asd[math.random(1,#asd)])
 return f
 end
+
+game:GetService('RunService').RenderStepped:connect(function()
+if c_tb.Text == "Vui lòng nhập tên Người Chơi" then
+else
 local target = unpack(GetPlayer(c_tb.Text)).Character
 c_name.Text = ("   Name : "..target.Name)
 c_health.Text = ("   Health : "..target.Humanoid.Health)
@@ -4987,43 +4988,6 @@ c_b1.Text = "X"
 _G.c_b1 = true
 game:GetService('RunService').RenderStepped:connect(function()
 if _G.c_b1 then --script
-
-local lplayer = game:GetService('Players').LocalPlayer
- 
-local yeeting = false
-function GetPlayer(String)
-local Found = {}
-local strl = String:lower()
-if strl == "all" then
-for i,v in pairs(game:GetService("Players"):GetPlayers()) do
-table.insert(Found,v)
-end
-elseif strl == "Random" then
-for i,v in pairs(game:GetService("Players"):GetPlayers()) do
-if v.Name ~= lplayer.Name then
-table.insert(Found,v)
-end
-end 
-elseif strl == "me" then
-for i,v in pairs(game:GetService("Players"):GetPlayers()) do
-if v.Name == lplayer.Name then
-table.insert(Found,v)
-end
-end 
-else
-for i,v in pairs(game:GetService("Players"):GetPlayers()) do
-if v.Name:lower():sub(1, #String) == String:lower() then
-table.insert(Found,v)
-end
-end 
-end
-return Found 
-end
-function ahh(thing)
-local asd = {'yeet','gui','yeet gui'}
-local f = string.upper(asd[math.random(1,#asd)])
-return f
-end
 local target = unpack(GetPlayer(c_tb.Text)).Character
 if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Serpent Bow") then
 local args = {
@@ -5083,7 +5047,7 @@ c_f2.Position = UDim2.new(0, 0, 0.3100000000, 0)
 c_f2.Size = UDim2.new(0, 498, 0, 30)
 c_f2.BorderColor3 = Color3.fromRGB(250, 250, 250)
 c_f2.Font = Enum.Font.Ubuntu
-c_f2.Text = "   Aim Skill Fruit"
+c_f2.Text = "   Aim Skill"
 c_f2.TextColor3 = Color3.fromRGB(255, 255, 255)
 c_f2.TextSize = 14.000
 c_f2.TextWrapped = true
@@ -5110,235 +5074,152 @@ _G.c_b2 = false
 end
 end)
 
--- // aim skill fruit
+-- // aim skill
 
 game:GetService('RunService').RenderStepped:connect(function()
 if _G.c_b2 then --script
-
-local lplayer = game:GetService('Players').LocalPlayer
- 
-local yeeting = false
-function GetPlayer(String)
-local Found = {}
-local strl = String:lower()
-if strl == "all" then
-for i,v in pairs(game:GetService("Players"):GetPlayers()) do
-table.insert(Found,v)
-end
-elseif strl == "Random" then
-for i,v in pairs(game:GetService("Players"):GetPlayers()) do
-if v.Name ~= lplayer.Name then
-table.insert(Found,v)
-end
-end 
-elseif strl == "me" then
-for i,v in pairs(game:GetService("Players"):GetPlayers()) do
-if v.Name == lplayer.Name then
-table.insert(Found,v)
-end
-end 
-else
-for i,v in pairs(game:GetService("Players"):GetPlayers()) do
-if v.Name:lower():sub(1, #String) == String:lower() then
-table.insert(Found,v)
-end
-end 
-end
-return Found 
-end
-function ahh(thing)
-local asd = {'yeet','gui','yeet gui'}
-local f = string.upper(asd[math.random(1,#asd)])
-return f
-end
 local target = unpack(GetPlayer(c_tb.Text)).Character
-
-if c_name.Text == "" then
-click()
-else
-end
-
-if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Venom-Venom") then
-local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
-game:GetService("Players").LocalPlayer.Character["Venom-Venom"].RemoteEvent:FireServer(unpack(args))                              
-end
-
-if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Bomb-Bomb") then
-local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
-game:GetService("Players").LocalPlayer.Character["Bomb-Bomb"].RemoteEvent:FireServer(unpack(args))                              
-end
-
-if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Spring-Spring") then
-local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
-game:GetService("Players").LocalPlayer.Character["Spring-Spring"].RemoteEvent:FireServer(unpack(args))                              
-end
-
-if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Kilo-Kilo") then
-local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
-game:GetService("Players").LocalPlayer.Character["Kilo-Kilo"].RemoteEvent:FireServer(unpack(args))                              
-end
-
-if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Chop-Chop") then
-local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
-game:GetService("Players").LocalPlayer.Character["Chop-Chop"].RemoteEvent:FireServer(unpack(args))                              
-end
-
-if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Spike-Spike") then
-local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
-game:GetService("Players").LocalPlayer.Character["Spike-Spike"].RemoteEvent:FireServer(unpack(args))                              
-end
-
-if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Smoke-Smoke") then
-local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
-game:GetService("Players").LocalPlayer.Character["Smoke-Smoke"].RemoteEvent:FireServer(unpack(args))                              
-end
-
-if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Flame-Flame") then
-local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
-game:GetService("Players").LocalPlayer.Character["Flame-Flame"].RemoteEvent:FireServer(unpack(args))                              
-end
-
-if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Falcon-Falcon") then
-local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
-game:GetService("Players").LocalPlayer.Character["Falcon-Falcon"].RemoteEvent:FireServer(unpack(args))                              
-end
-
-if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Sand-Sand") then
-local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
-game:GetService("Players").LocalPlayer.Character["Sand-Sand"].RemoteEvent:FireServer(unpack(args))                              
-end
-
-if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Dark-Dark") then
-local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
-game:GetService("Players").LocalPlayer.Character["Dark-Dark"].RemoteEvent:FireServer(unpack(args))                              
-end
-
-if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Ice-Ice") then
-local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
-game:GetService("Players").LocalPlayer.Character["Ice-Ice"].RemoteEvent:FireServer(unpack(args))                              
-end
-
-if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Light-Light") then
-local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
-game:GetService("Players").LocalPlayer.Character["Light-Light"].RemoteEvent:FireServer(unpack(args))                              
-end
-
-if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Revive-Revive") then
-local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
-game:GetService("Players").LocalPlayer.Character["Revive-Revive"].RemoteEvent:FireServer(unpack(args))                              
-end
-
-if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Diamond-Diamond") then
-local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
-game:GetService("Players").LocalPlayer.Character["Diamond-Diamond"].RemoteEvent:FireServer(unpack(args))                              
-end
-
-if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Rubber-Rubber") then
-local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
-game:GetService("Players").LocalPlayer.Character["Rubber-Rubber"].RemoteEvent:FireServer(unpack(args))                              
-end
-
-if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Barrier-Barrier") then
-local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
-game:GetService("Players").LocalPlayer.Character["Barrier-Barrier"].RemoteEvent:FireServer(unpack(args))                              
-end
-
-if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Magma-Magma") then
-local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
-game:GetService("Players").LocalPlayer.Character["Magma-Magma"].RemoteEvent:FireServer(unpack(args))                              
-end
-
-if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Quake-Quake") then
-local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
-game:GetService("Players").LocalPlayer.Character["Quake-Quake"].RemoteEvent:FireServer(unpack(args))                              
-end
-
-if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Buddha-Buddha") then
-local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
-game:GetService("Players").LocalPlayer.Character["Buddha-Buddha"].RemoteEvent:FireServer(unpack(args))                              
-end
-
-if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Love-Love") then
-local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
-game:GetService("Players").LocalPlayer.Character["Love-Love"].RemoteEvent:FireServer(unpack(args))                              
-end
-
-if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Spider-Spider") then
-local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
-game:GetService("Players").LocalPlayer.Character["Spider-Spider"].RemoteEvent:FireServer(unpack(args))                              
-end
-
-if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Phoenix-Phoenix") then
-local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
-game:GetService("Players").LocalPlayer.Character["Phoenix-Phoenix"].RemoteEvent:FireServer(unpack(args))                              
-end
-
-if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Protal-Protal") then
-local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
-game:GetService("Players").LocalPlayer.Character["Protal-Protal"].RemoteEvent:FireServer(unpack(args))                              
-end
-
-if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Rumble-Rumble") then
-local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
-game:GetService("Players").LocalPlayer.Character["Rumble-Rumble"].RemoteEvent:FireServer(unpack(args))                              
-end
-
-if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Paw-Paw") then
-local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
-game:GetService("Players").LocalPlayer.Character["Paw-Paw"].RemoteEvent:FireServer(unpack(args))                              
-end
-
-if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Blizzard-Blizzard") then
-local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
-game:GetService("Players").LocalPlayer.Character["Blizzard-Blizzard"].RemoteEvent:FireServer(unpack(args))                              
-end
-
-if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Gravity-Gravity") then
-local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
-game:GetService("Players").LocalPlayer.Character["Gravity-Gravity"].RemoteEvent:FireServer(unpack(args))                              
-end
-
-if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Dough-Dough") then
-local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
-game:GetService("Players").LocalPlayer.Character["Dough-Dough"].RemoteEvent:FireServer(unpack(args))                              
-end
-
-if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Shadow-Shadow") then
-local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
-game:GetService("Players").LocalPlayer.Character["Shadow-Shadow"].RemoteEvent:FireServer(unpack(args))                              
-end
-
-if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Control-Control") then
-local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
-game:GetService("Players").LocalPlayer.Character["Control-Control"].RemoteEvent:FireServer(unpack(args))                              
-end
-
-if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Dragon-Dragon") then
-local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
-game:GetService("Players").LocalPlayer.Character["Dragon-Dragon"].RemoteEvent:FireServer(unpack(args))                              
-end
-
-if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Spirit-Spirit") then
-local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
-game:GetService("Players").LocalPlayer.Character["Spirit-Spirit"].RemoteEvent:FireServer(unpack(args))                              
-end
-
-if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Leopard-Leopard") then
-local args = {       [1] = target.HumanoidRootPart.Position    }                                                                                        
-game:GetService("Players").LocalPlayer.Character["Leopard-Leopard"].RemoteEvent:FireServer(unpack(args))                              
-end
-local args = {
-                                               [1] = target.HumanoidRootPart.Position
-                                                }
-                                                game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
-   local args = {
-                                                    [1] = target.HumanoidRootPart.Position
-                                                }
-                                                game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))         
-         local args = {
-                                                    [1] = target.HumanoidRootPart.Position
-                                                }
-                                                game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))                           
+local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   local args = { [1] = target.HumanoidRootPart.Position }
+   game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
+   
 end
 end)
 
