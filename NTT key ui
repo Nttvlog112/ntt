@@ -2,7 +2,7 @@
 -- // key script and link get key
 _G.key = "10291"
 _G.linkkey = "https://link1s.com/zowH"
-_G.tt = "Key sẻ đỏi vào lúc 19 - 00h mỗi ngày"
+_G.tt = "Key sẻ đỏi vào lúc 20h - 00h mỗi ngày"
 
 local UIGUI = Instance.new("ScreenGui")
 main= Instance.new("Frame")
@@ -239,19 +239,6 @@ load_t1.TextColor3 = Color3.fromRGB(250, 255, 250)
 load_t1.TextSize = 14.000
 load_t1.TextXAlignment = Enum.TextXAlignment.Left
 
-load_t2.Name = "load_t2"
-load_t2.Parent = bar_4
-load_t2.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
-load_t2.Position = UDim2.new(0.2, 0, 0.550000000, 0)
-load_t2.BackgroundTransparency = 1
-load_t2.Size = UDim2.new(0, 150, 0, 25)
-load_t2.Font = Enum.Font.Ubuntu
-load_t2.Text = "             Anti AFK"
-load_t2.BorderColor3 = Color3.fromRGB(0,0,0)
-load_t2.TextColor3 = Color3.fromRGB(250, 255, 250)
-load_t2.TextSize = 14.000
-load_t2.TextXAlignment = Enum.TextXAlignment.Left
-
 load_b1.Name = "load_b1"
 load_b1.Parent = load_t1
 load_b1.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
@@ -269,6 +256,19 @@ load_b1.Text = ""
 end
 end)
 
+load_t2.Name = "load_t2"
+load_t2.Parent = bar_4
+load_t2.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+load_t2.Position = UDim2.new(0.2, 0, 0.550000000, 0)
+load_t2.BackgroundTransparency = 1
+load_t2.Size = UDim2.new(0, 150, 0, 25)
+load_t2.Font = Enum.Font.Ubuntu
+load_t2.Text = "             Anti AFK"
+load_t2.BorderColor3 = Color3.fromRGB(0,0,0)
+load_t2.TextColor3 = Color3.fromRGB(250, 255, 250)
+load_t2.TextSize = 14.000
+load_t2.TextXAlignment = Enum.TextXAlignment.Left
+
 load_b2.Name = "load_b2"
 load_b2.Parent = load_t2
 load_b2.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
@@ -279,7 +279,7 @@ load_b2.TextColor3 = Color3.fromRGB(250, 255, 250)
 load_b2.TextSize = 20.000
 load_b2.BorderColor3 = Color3.fromRGB(250, 250, 250)
 load_b2.MouseButton1Down:connect(function()
-if load.b2 == "" then
+if load.b2.Text == "" then
 load_b2.Text = "X"
 else
 load_b2.Text = ""
@@ -298,7 +298,55 @@ load_l.TextColor3 = Color3.fromRGB(255, 255, 255)
 load_l.BorderColor3 = Color3.fromRGB(250, 250, 250)
 load_l.TextSize = 14.000
 load_l.MouseButton1Down:connect(function()
-game.CoreGui.UIGUI:Destroy()
+if load_b2.Text == "X" then -- anti afk
+local vu = game:GetService("VirtualUser")
+                                    game:GetService("Players").LocalPlayer.Idled:connect(function()
+                                        vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+                                        wait(1)
+                                        vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+                                    end) end
+                                    
+    if load_b1.Text == "X" then  -- fix lag
+local decalsyeeted = true -- Leaving this on makes games look shitty but the fps goes up by at least 20.
+local g = game
+local w = g.Workspace
+local l = g.Lighting
+local t = w.Terrain
+t.WaterWaveSize = 0
+t.WaterWaveSpeed = 0
+t.WaterReflectance = 0
+t.WaterTransparency = 0
+l.GlobalShadows = false
+l.FogEnd = 9e9
+l.Brightness = 0
+settings().Rendering.QualityLevel = "Level01"
+for i, v in pairs(g:GetDescendants()) do
+    if v:IsA("Part") or v:IsA("Union") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+        v.Material = "Plastic"
+        v.Reflectance = 0
+    elseif v:IsA("Decal") or v:IsA("Texture") and decalsyeeted then
+        v.Transparency = 1
+    elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+        v.Lifetime = NumberRange.new(0)
+    elseif v:IsA("Explosion") then
+        v.BlastPressure = 1
+        v.BlastRadius = 1
+    elseif v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") then
+        v.Enabled = false
+    elseif v:IsA("MeshPart") then
+        v.Material = "Plastic"
+        v.Reflectance = 0
+        v.TextureID = 10385902758728957
+    end
+end
+for i, e in pairs(l:GetChildren()) do
+    if e:IsA("BlurEffect") or e:IsA("SunRaysEffect") or e:IsA("ColorCorrectionEffect") or e:IsA("BloomEffect") or e:IsA("DepthOfFieldEffect") then
+        e.Enabled = false
+    end
+end
+end                                
+
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Loader%20NTT%201')))()
+game.CoreGui.UIGUI:Destroy()
 end)
 
