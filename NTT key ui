@@ -1,7 +1,7 @@
 
 -- // key script and link get key
-_G.key = "10291"
-_G.linkkey = "https://link1s.com/zowH"
+_G.key = "catcute"
+_G.linkkey = "https://web1s.co/NTTNT"
 _G.tt = "Key sẻ đỏi vào lúc 20h - 00h mỗi ngày"
 
 local UIGUI = Instance.new("ScreenGui")
