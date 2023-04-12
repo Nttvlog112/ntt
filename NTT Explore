@@ -473,7 +473,7 @@ wait(1)
 bartop.Text = "NTT Explore - 1.10.60A"
 end
 if _G.attach == true then
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Dex%20script%20NTT')))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Dump%20script%20NTT')))()
 end
 end)
 
