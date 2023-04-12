@@ -5449,6 +5449,9 @@ _G.t_itp = false
 t_itp.Text = ""
 stoptp()
 end end)
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.t_itp then --script
 -- // sea 1
 if t_b1.Text == "Island : Pirate" then
 TP1(CFrame(911.204833984375, 16.859853744506836, 1434.654296875))
@@ -5503,8 +5506,6 @@ TP1(CFrame.new(5094.6826171875, 3.874617576599121, 757.0112915039062))
 end
 
 -- // sea 2
-game:GetService('RunService').RenderStepped:connect(function()
-if _G.t_itp then --script
 if t_b1.Text == "Island : KingDom of Rose" then
 TP1(CFrame.new(82.9490662, 18.0710983, 2834.98779))
 end
