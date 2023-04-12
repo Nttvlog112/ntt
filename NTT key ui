@@ -279,7 +279,7 @@ load_b2.TextColor3 = Color3.fromRGB(250, 255, 250)
 load_b2.TextSize = 20.000
 load_b2.BorderColor3 = Color3.fromRGB(250, 250, 250)
 load_b2.MouseButton1Down:connect(function()
-if load.b2.Text == "" then
+if load_b2.Text == "" then
 load_b2.Text = "X"
 else
 load_b2.Text = ""
