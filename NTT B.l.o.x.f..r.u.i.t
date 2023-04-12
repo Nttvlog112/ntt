@@ -70,8 +70,10 @@ m_f7 = Instance.new("TextLabel")
 m_b7 = Instance.new("TextButton")
 m_f8 = Instance.new("TextLabel")
 m_f9 = Instance.new("TextLabel")
+m_f10 = Instance.new("TextLabel")
 m_b8 = Instance.new("TextButton")
 m_b9= Instance.new("TextButton")
+m_b10= Instance.new("TextButton")
 
 --// stat
 s_cp = Instance.new("TextLabel")
@@ -202,8 +204,6 @@ mi_b8= Instance.new("TextButton")
 -- // combat
 c_tb = Instance.new("TextBox")
 c_name = Instance.new("TextLabel")
-c_name1 = Instance.new("TextLabel")
-c_health = Instance.new("TextLabel")
 c_fdistan= Instance.new("TextLabel")
 c_bdistan = Instance.new("TextButton")
 
@@ -220,6 +220,8 @@ c_b3 = Instance.new("TextButton")
 c_b4 = Instance.new("TextButton")
 c_b5= Instance.new("TextButton")
 c_b6= Instance.new("TextButton")
+
+c_get= Instance.new("TextButton")
 
 -- // setting
 st_f1 = Instance.new("TextLabel")
@@ -267,6 +269,9 @@ t_i14= Instance.new("TextButton")
 t_i15= Instance.new("TextButton")
 t_i16= Instance.new("TextButton")
 t_i17= Instance.new("TextButton")
+
+t_t1 = Instance.new("TextLabel")
+t_t2 = Instance.new("TextLabel")
 
 t_f1 = Instance.new("TextLabel")
 t_f2 = Instance.new("TextLabel")
@@ -392,7 +397,7 @@ b_6.Position = UDim2.new(0, 0, 0.250000000, 0)
 b_6.Size = UDim2.new(0, 100, 0, 25)
 b_6.Font = Enum.Font.Ubuntu
 b_6.BorderColor3 = Color3.fromRGB(250, 250, 250)
-b_6.Text = "   Mob - Item"
+b_6.Text = "   Get Item"
 b_6.TextColor3 = Color3.fromRGB(255, 255, 255)
 b_6.TextSize = 14.000
 b_6.TextWrapped = false
@@ -1369,7 +1374,7 @@ elseif MyLevel == 1900 or MyLevel <= 1924 then --Jungle Pirate [Lv. 1900]
                                             CFrameMob = CFrame.new(-697.4462280273438, 173.2466278076172, -11212.94140625)
                                             CFrameBring = CFrame.new(-638.2747192382812, 66.16278076171875, -11293.0546875)       
 
-                     elseif MyLevel == 2200 or MyLevel <= t_f24 then --m_b3
+                     elseif MyLevel == 2200 or MyLevel <= m_f104 then --m_b3
                                             Ms = "Cookie Crafter [Lv. 2200]"
                                             NameQuest = "CakeQuest1" --name get quest
                                             LevelQuest = 1        -- lv quest
@@ -1378,7 +1383,7 @@ elseif MyLevel == 1900 or MyLevel <= 1924 then --Jungle Pirate [Lv. 1900]
                                             CFrameMob = CFrame.new(-2289.203369140625, 92.37846374511719, -12041.884765625)
                                             CFrameBring = CFrame.new(-2367.436279296875, 38.14149856567383, -12120.3876953125)
                                             
-     elseif MyLevel == t_f25 or MyLevel <= 2249  then --m_b3
+     elseif MyLevel == m_f105 or MyLevel <= 2249  then --m_b3
                                             Ms = "Cake Guard [Lv. ef_f85]"
                                             NameQuest = "CakeQuest2" --name get quest
                                             LevelQuest = 1      -- lv quest
@@ -1656,7 +1661,14 @@ game:GetService("TweenService"):Create(
   
   game:GetService('RunService').RenderStepped:connect(function()
 if  _G.m_b2 then
+CheckQuest()
+if game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible == true then
+for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
+      if v.Name == Ms then --name mob
+      local pos = v.HumanoidRootPart --check pos
+      if (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 65 then
   click() -- click        
+  end end end end
 end end)
 
   
@@ -1685,10 +1697,126 @@ game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
 end
            end  end end end end end wait(5.5) _G.getquest = true end)       
            
+ m_f10.Parent = b_page1
+m_f10.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+m_f10.Position = UDim2.new(0, 0, 0.1700000000, 0)
+m_f10.Size = UDim2.new(0, 498, 0, 30)
+m_f10.BorderColor3 = Color3.fromRGB(250, 250, 250)
+m_f10.Font = Enum.Font.Ubuntu
+m_f10.Text = "   Auto Farm Level Fast 1 - 275"
+m_f10.TextColor3 = Color3.fromRGB(255, 255, 255)
+m_f10.TextSize = 14.000
+m_f10.TextWrapped = true
+m_f10.TextXAlignment = Enum.TextXAlignment.Left
+
+m_b10.Name = "m_b10"
+m_b10.Parent = m_f10
+m_b10.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+m_b10.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+m_b10.Size = UDim2.new(0, 20, 0, 20)
+m_b10.BorderColor3 = Color3.fromRGB(250, 250, 250)
+m_b10.Font = Enum.Font.SourceSans
+m_b10.Text = ""
+m_b10.TextColor3 = Color3.fromRGB(250, 250, 250)
+m_b10.TextSize = 30.000
+m_b10.MouseButton1Down:connect(function()
+--on off 
+if m_b10.Text == "" then --on
+m_b10.Text = "X"
+_G.m_b10 = true
+elseif m_b10.Text == "X" then --off
+m_b10.Text = ""
+_G.m_b10 = false
+end
+end)
+    
+    game:GetService('RunService').RenderStepped:connect(function()
+if _G.m_b10 then --script
+
+local pos = CFrame.new(-7686.40673828125, 5600.93701171875, -441.3550109863281) --check pos
+                    local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                  if Distance >= 3000 then                
+if game.Players.LocalPlayer.Character.Humanoid.Health > 0 then
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+elseif game.Players.LocalPlayer.Character.Humanoid.Health == 0 then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-7686.40673828125, 5600.93701171875, -441.3550109863281)
+end end
+
+
+TP1(CFrame.new(-7686.40673828125, 5600.93701171875, -441.3550109863281))
+local humanoid = game.Players.LocalPlayer.Character.Humanoid 
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
+for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
+      if v.Name == "Shanda [Lv. 475]" then --name mob
+      local pos = v.HumanoidRootPart --check pos
+                    local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                  if Distance < 500 then
+                  Speed = 725
+                  elseif Distance < 200 then
+                  Speed = 7000
+                  elseif Distance < 150 then
+                  Speed = 200000
+                  elseif Distance < 1000 then
+                        Speed = 400        
+    elseif Distance >= 1500 then
+                  Speed = 100
+           end
+            
+       if v.Humanoid.Health > 0 then -- check health
+     usetool()
+     click() -- click          
+       v.Humanoid:ChangeState(14)
+      v.HumanoidRootPart.Size = Vector3.new(50, 50, 10)     --size hix box  
+      v.HumanoidRootPart.CanCollide = false                                                
+v.Head.CanCollide = false                                 
+if v.Humanoid:FindFirstChild("Animator") then
+                            v.Humanoid.Animator:Destroy()
+                        end
+                        
+game:GetService("TweenService"):Create(
+                        game.Players.LocalPlayer.Character.HumanoidRootPart,
+                        TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
+                        {CFrame = v.HumanoidRootPart.CFrame* CFrame.new(0, st_b5.Text, 0) }
+                    ):Play()       
+                    
+                    end end end end end)                
+ 
+spawn(function()
+    while task.wait(_G.time) do       
+            pcall(function()          
+            if _G.m_b10 then
+            if _G.bringmob then       
+                for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
+                    if v.Name == "Shanda [Lv. 475]" and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= _G.distance then        
+if   st_b5.Text == "0" then                        
+ v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+ elseif st_b5.Text == "10" then
+ v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-9.5,0)
+ elseif st_b5.Text == "20" then
+ v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-19.5,0)
+ elseif st_b5.Text == "30" then
+ v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-29.5,0)
+ elseif st_b5.Text == "40" then
+ v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-39.5,0)
+ elseif st_b5.Text == "50" then
+ v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-49.5,0)
+ end                       
+  v.Humanoid.JumpPower = 0                          
+  v.Humanoid.WalkSpeed = 0                           
+v.HumanoidRootPart.Size = Vector3.new(60,60,10)                  
+ v.HumanoidRootPart.Transparency = 1                        
+ v.HumanoidRootPart.CanCollide = false                           
+ v.Head.CanCollide = false                           
+ v.Humanoid:ChangeState(11)                           
+ v.Humanoid:ChangeState(14)                       
+  setscriptable(game.Players.LocalPlayer,"SimulationRadius",true)                          
+  sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius",math.huge)                    
+    end end end end end) end end)           
+
 
 m_f3.Parent = b_page1
 m_f3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-m_f3.Position = UDim2.new(0, 0, 0.1700000000, 0)
+m_f3.Position = UDim2.new(0, 0, 0.2400000000, 0)
 m_f3.Size = UDim2.new(0, 498, 0, 30)
 m_f3.BorderColor3 = Color3.fromRGB(250, 250, 250)
 m_f3.Font = Enum.Font.Ubuntu
@@ -1770,7 +1898,7 @@ end end)
 
 m_f6.Parent = b_page1
 m_f6.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-m_f6.Position = UDim2.new(0, 0, 0.2400000000, 0)
+m_f6.Position = UDim2.new(0, 0, 0.3100000000, 0)
 m_f6.Size = UDim2.new(0, 498, 0, 30)
 m_f6.BorderColor3 = Color3.fromRGB(250, 250, 250)
 m_f6.Font = Enum.Font.Ubuntu
@@ -1821,7 +1949,7 @@ mele()
 
 m_f4.Parent = b_page1
 m_f4.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-m_f4.Position = UDim2.new(0, 0, 0.3100000000, 0)
+m_f4.Position = UDim2.new(0, 0, 0.3800000000, 0)
 m_f4.Size = UDim2.new(0, 498, 0, 30)
 m_f4.BorderColor3 = Color3.fromRGB(250, 250, 250)
 m_f4.Font = Enum.Font.Ubuntu
@@ -1979,7 +2107,7 @@ end
 
 m_f5.Parent = b_page1
 m_f5.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-m_f5.Position = UDim2.new(0, 0, 0.3800000000, 0)
+m_f5.Position = UDim2.new(0, 0, 0.4500000000, 0)
 m_f5.Size = UDim2.new(0, 498, 0, 30)
 m_f5.BorderColor3 = Color3.fromRGB(250, 250, 250)
 m_f5.Font = Enum.Font.Ubuntu
@@ -2014,7 +2142,7 @@ end)
 
 m_f7.Parent = b_page1
 m_f7.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-m_f7.Position = UDim2.new(0, 0, 0.4500000000, 0)
+m_f7.Position = UDim2.new(0, 0, 0.5200000000, 0)
 m_f7.Size = UDim2.new(0, 498, 0, 30)
 m_f7.BorderColor3 = Color3.fromRGB(250, 250, 250)
 m_f7.Font = Enum.Font.Ubuntu
@@ -2044,7 +2172,7 @@ end)
 
 m_f8.Parent = b_page1
 m_f8.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-m_f8.Position = UDim2.new(0, 0, 0.5200000000, 0)
+m_f8.Position = UDim2.new(0, 0, 0.5900000000, 0)
 m_f8.Size = UDim2.new(0, 498, 0, 30)
 m_f8.BorderColor3 = Color3.fromRGB(250, 250, 250)
 m_f8.Font = Enum.Font.Ubuntu
@@ -2111,7 +2239,7 @@ spawn(function()
             
 m_f9.Parent = b_page1
 m_f9.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-m_f9.Position = UDim2.new(0, 0, 0.5900000000, 0)
+m_f9.Position = UDim2.new(0, 0, 0.6600000000, 0)
 m_f9.Size = UDim2.new(0, 498, 0, 30)
 m_f9.BorderColor3 = Color3.fromRGB(250, 250, 250)
 m_f9.Font = Enum.Font.Ubuntu
@@ -2728,7 +2856,7 @@ if _G.r_b2 then --script
         if game.PlaceId == 4442272183 then
             fireclickdetector(Workspace.Map.CircleIsland.RaidSummon2.Button.Main.ClickDetector)
         elseif game.PlaceId == 7449423635 then
-            fireclickdetector(Workspace.Map["Boat Castle"].RaidSummon2.Button.Main.ClickDetector)
+            fireclickdetector(Workspace.Map["MarineStart"].RaidSummon2.Button.Main.ClickDetector)
         end
     end end
 
@@ -4520,15 +4648,15 @@ end)
 
 spawn(function()
     while task.wait() do
-        if _G.ms_b8 then
-            pcall(function()
-                if not nelzkie then
+        
+            pcall(function()    
+            if _G.ms_b8 then
                     game:GetService("Workspace").Map["WaterBase-Plane"].Size = Vector3.new(1000,112,1000)
                 else
                     game:GetService("Workspace").Map["WaterBase-Plane"].Size = Vector3.new(1000,80,1000)
                 end
-            end)
-        end
+            
+        end)
     end
 end)
 
@@ -4838,7 +4966,7 @@ end end)
 spawn(function()
     while task.wait(_G.time) do       
             pcall(function()          
-            if _G.mi_b3 then
+            if _G.mi_b2 then
             if _G.bringmob then       
                 for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
                     if v.Name == "Candy Rebel [Lv. 2375]" or v.Name == "Sweet Thief [Lv. 2350]" or v.Name == "Chocolate Bar Battler [Lv. 2325]" or v.Name == "Cocoa Warrior [Lv. 2300]" and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= _G.distance then        
@@ -4961,7 +5089,7 @@ end end)
 spawn(function()
     while task.wait(_G.time) do       
             pcall(function()          
-            if _G.mi_b1 then
+            if _G.mi_b3 then
             if _G.bringmob then       
                 for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
                     if v.Name == "Posessed Mummy [Lv. 2050]" or v.Name == "Demonic Soul [Lv. 2025]" or v.Name == "Living Zombie [Lv. 2000]" or v.Name =="Reborn Skeleton [Lv. 1975]" and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= _G.distance then        
@@ -5088,21 +5216,9 @@ c_name.TextSize = 14.000
 c_name.TextWrapped = true
 c_name.TextXAlignment = Enum.TextXAlignment.Left
 
-c_health.Parent = b_page7
-c_health.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-c_health.Position = UDim2.new(0, 0, 0.1000000000, 0)
-c_health.Size = UDim2.new(0, 498, 0, 30)
-c_health.BorderColor3 = Color3.fromRGB(250, 250, 250)
-c_health.Font = Enum.Font.Ubuntu
-c_health.Text = "   ..Health Player"
-c_health.TextColor3 = Color3.fromRGB(255, 255, 255)
-c_health.TextSize = 14.000
-c_health.TextWrapped = true
-c_health.TextXAlignment = Enum.TextXAlignment.Left
-
 c_tb.Parent = b_page7
 c_tb.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
-c_tb.Position = UDim2.new(0, 0, 0.1700000000, 0)
+c_tb.Position = UDim2.new(0, 0, 0.1000000000, 0)
 c_tb.Size = UDim2.new(0, 498, 0, 30)
 c_tb.Font = Enum.Font.Ubuntu
 c_tb.Text = "Vui lòng nhập tên Người Chơi"
@@ -5153,9 +5269,25 @@ if c_tb.Text == "Vui lòng nhập tên Người Chơi" then
 else
 local target = unpack(GetPlayer(c_tb.Text)).Character
 c_name.Text = ("   Name : "..target.Name)
-c_health.Text = ("   Health : "..target.Humanoid.Health)
 end end)
 
+
+c_get.Parent = b_page7
+c_get.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+c_get.Position = UDim2.new(0, 0, 0.1700000000, 0)
+c_get.Size = UDim2.new(0, 498, 0, 30)
+c_get.BorderColor3 = Color3.fromRGB(250, 250, 250)
+c_get.Font = Enum.Font.Ubuntu
+c_get.Text = "Click Get Quest Hunt Player"
+c_get.TextColor3 = Color3.fromRGB(255, 255, 255)
+c_get.TextSize = 14.000
+c_get.TextWrapped = true
+c_get.MouseButton1Down:connect(function()
+local args = {
+    [1] = "PlayerHunter"
+}
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
 
 --// aim gun
 
@@ -5498,9 +5630,20 @@ game:GetService("TweenService"):Create(
                     end end)
 
 --// tp
+t_t1.Parent = b_page8
+t_t1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+t_t1.Position = UDim2.new(0, 0, 0.0300000000, 0)
+t_t1.Size = UDim2.new(0, 498, 0, 30)
+t_t1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+t_t1.Font = Enum.Font.Ubuntu
+t_t1.Text = "Teleport Island"
+t_t1.TextColor3 = Color3.fromRGB(255, 255, 255)
+t_t1.TextSize = 14.000
+t_t1.TextWrapped = true
+
 t_f1.Parent = b_page8
 t_f1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-t_f1.Position = UDim2.new(0, 0, 0.0300000000, 0)
+t_f1.Position = UDim2.new(0, 0, 0.1000000000, 0)
 t_f1.Size = UDim2.new(0, 498, 0, 30)
 t_f1.BorderColor3 = Color3.fromRGB(250, 250, 250)
 t_f1.Font = Enum.Font.Ubuntu
@@ -5643,7 +5786,7 @@ t_ibar.Parent = b_page8
 t_ibar.Active = true
 t_ibar.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 t_ibar.BorderColor3 = Color3.fromRGB(250, 250, 250)
-t_ibar.Position = UDim2.new(0, 0, 0.1000000000, 0)
+t_ibar.Position = UDim2.new(0, 0, 0.1700000000, 0)
 t_ibar.Size = UDim2.new(0, 150, 0, 140)
 t_ibar.BorderSizePixel = 1
 t_ibar.Visible = false
@@ -5984,9 +6127,20 @@ t_i10.Text = "t_b2"
 
 end
 
+t_t2.Parent = b_page8
+t_t2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+t_t2.Position = UDim2.new(0, 0, 0.1700000000, 0)
+t_t2.Size = UDim2.new(0, 498, 0, 30)
+t_t2.BorderColor3 = Color3.fromRGB(250, 250, 250)
+t_t2.Font = Enum.Font.Ubuntu
+t_t2.Text = "Teleport Sea - Sever"
+t_t2.TextColor3 = Color3.fromRGB(255, 255, 255)
+t_t2.TextSize = 14.000
+t_t2.TextWrapped = true
+
 t_f2.Parent = b_page8
 t_f2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-t_f2.Position = UDim2.new(0, 0, 0.1700000000, 0)
+t_f2.Position = UDim2.new(0, 0, 0.2400000000, 0)
 t_f2.Size = UDim2.new(0, 498, 0, 30)
 t_f2.BorderColor3 = Color3.fromRGB(250, 250, 250)
 t_f2.Font = Enum.Font.Ubuntu
@@ -6030,7 +6184,7 @@ end)
 
 t_f3.Parent = b_page8
 t_f3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-t_f3.Position = UDim2.new(0, 0, 0.2400000000, 0)
+t_f3.Position = UDim2.new(0, 0, 0.3100000000, 0)
 t_f3.Size = UDim2.new(0, 498, 0, 30)
 t_f3.BorderColor3 = Color3.fromRGB(250, 250, 250)
 t_f3.Font = Enum.Font.Ubuntu
@@ -6071,7 +6225,7 @@ end)
 
 t_f4.Parent = b_page8
 t_f4.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-t_f4.Position = UDim2.new(0, 0, 0.3100000000, 0)
+t_f4.Position = UDim2.new(0, 0, 0.3800000000, 0)
 t_f4.Size = UDim2.new(0, 498, 0, 30)
 t_f4.BorderColor3 = Color3.fromRGB(250, 250, 250)
 t_f4.Font = Enum.Font.Ubuntu
@@ -6112,7 +6266,7 @@ end
 end)
 t_f5.Parent = b_page8
 t_f5.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-t_f5.Position = UDim2.new(0, 0, 0.3800000000, 0)
+t_f5.Position = UDim2.new(0, 0, 0.4500000000, 0)
 t_f5.Size = UDim2.new(0, 498, 0, 30)
 t_f5.BorderColor3 = Color3.fromRGB(250, 250, 250)
 t_f5.Font = Enum.Font.Ubuntu
@@ -6144,7 +6298,7 @@ end)
 
 t_f6.Parent = b_page8
 t_f6.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-t_f6.Position = UDim2.new(0, 0, 0.4500000000, 0)
+t_f6.Position = UDim2.new(0, 0, 0.5200000000, 0)
 t_f6.Size = UDim2.new(0, 498, 0, 30)
 t_f6.BorderColor3 = Color3.fromRGB(250, 250, 250)
 t_f6.Font = Enum.Font.Ubuntu
@@ -6711,7 +6865,7 @@ local function OJTG4_fake_script() -- scripts.LocalScript
 		b_page7.Visible = false
 		b_page8.Visible = false
 		b_page9.Visible = false
-    TextLabel.Text = "   NTT HUB | Mob - Item" 
+    TextLabel.Text = "   NTT HUB | Get Item" 
 	end)
 end
 
