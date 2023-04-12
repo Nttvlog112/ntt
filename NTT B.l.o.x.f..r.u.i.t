@@ -5495,9 +5495,6 @@ game:GetService('RunService').RenderStepped:connect(function()
 if _G.c_b3 then --script
 local target = unpack(GetPlayer(c_tb.Text)).Character
 
-local humanoid = game.Players.LocalPlayer.Character.Humanoid 
-humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
-
       local pos = target.HumanoidRootPart --check pos
                     local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
                   if Distance < 500 then
@@ -5511,9 +5508,13 @@ humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
     elseif Distance >= 1500 then
                   Speed = 120
            end
-                       mele()
-                       game.Players.LocalPlayer.Character.Humanoid.Sit = false
-                       
+                       mele()                   
+local args = {
+    [1] = "EnablePvp"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+
                    
 target.HumanoidRootPart.Transparency = 1
 game:GetService("TweenService"):Create(
@@ -5521,24 +5522,8 @@ game:GetService("TweenService"):Create(
                         TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
                         {CFrame = target.HumanoidRootPart.CFrame* CFrame.new(2, c_bdistan.Text, 0) }
                     ):Play()       
-                    
-                                          end end)
-                    
-                    -- // check click                 
-         spawn(function()
-    while task.wait() do
-        pcall(function()
-            if _G.c_b3 then           
-local target = unpack(GetPlayer(c_tb.Text)).Character
-if game.Players.LocalPlayer.Character.Humanoid.Health > 4000 then
-if target.Humanoid.Health > 4000 then
-click()
-end
-if target.Humanoid.Health < 3500 then
-wait(0.7) 
-click()
-      end      end
-            end end) end end)
+                    click()
+                                          end end)                                    
 
 c_f4.Parent = b_page7
 c_f4.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
