@@ -5483,28 +5483,10 @@ c_b3.MouseButton1Down:connect(function()
 if c_b3.Text == "" then --on
 c_b3.Text = "X"
 _G.c_b3 = true
-for i,v in next, game:GetService('Players'):GetPlayers() do
-if v.Name ~= game:GetService('Players').LocalPlayer.Name then
-v.Character.HumanoidRootPart.Size = Vector3.new(40,40,40)
-v.Character.HumanoidRootPart.Transparency = 1
-v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really black")
-v.Character.HumanoidRootPart.Material = "Neon"
-v.Character.HumanoidRootPart.CanCollide = false
-end
-end
 elseif c_b3.Text == "X" then --off
 c_b3.Text = ""
 _G.c_b3 = false
 stoptp()
-for i,v in next, game:GetService('Players'):GetPlayers() do
-if v.Name ~= game:GetService('Players').LocalPlayer.Name then
-v.Character.HumanoidRootPart.Size = Vector3.new(5, 5, 5)
-v.Character.HumanoidRootPart.Transparency = 1
-v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really black")
-v.Character.HumanoidRootPart.Material = "Neon"
-v.Character.HumanoidRootPart.CanCollide = false
-end
-end
 end
 end)
 
@@ -5531,7 +5513,7 @@ humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
            end
                        mele()
                        game.Players.LocalPlayer.Character.Humanoid.Sit = false
-                       if game.Players.LocalPlayer.Character.Humanoid.Health >= 4000 then         
+                       
                    
 target.HumanoidRootPart.Transparency = 1
 game:GetService("TweenService"):Create(
@@ -5539,14 +5521,8 @@ game:GetService("TweenService"):Create(
                         TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
                         {CFrame = target.HumanoidRootPart.CFrame* CFrame.new(2, c_bdistan.Text, 0) }
                     ):Play()       
-                    end 
-                    if game.Players.LocalPlayer.Character.Humanoid.Health < 4000 then
-game:GetService("TweenService"):Create(
-                        game.Players.LocalPlayer.Character.HumanoidRootPart,
-                        TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
-                        {CFrame = target.HumanoidRootPart.CFrame* CFrame.new(0, 2000, 0) }
-                    ):Play()       
-                    end end end)
+                    
+                                          end end)
                     
                     -- // check click                 
          spawn(function()
@@ -5625,7 +5601,7 @@ target.HumanoidRootPart.Transparency = 1
 game:GetService("TweenService"):Create(
                         game.Players.LocalPlayer.Character.HumanoidRootPart,
                         TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
-                        {CFrame = target.HumanoidRootPart.CFrame* CFrame.new(2, 70, 0) }
+                        {CFrame = target.HumanoidRootPart.CFrame* CFrame.new(2, 30, 0) }
                     ):Play()       
                     end end)
 
