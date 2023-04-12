@@ -69,7 +69,9 @@ m_b6 = Instance.new("TextButton")
 m_f7 = Instance.new("TextLabel")
 m_b7 = Instance.new("TextButton")
 m_f8 = Instance.new("TextLabel")
+m_f9 = Instance.new("TextLabel")
 m_b8 = Instance.new("TextButton")
+m_b9= Instance.new("TextButton")
 
 --// stat
 s_cp = Instance.new("TextLabel")
@@ -259,6 +261,8 @@ t_i12= Instance.new("TextButton")
 t_i13= Instance.new("TextButton")
 t_i14= Instance.new("TextButton")
 t_i15= Instance.new("TextButton")
+t_i16= Instance.new("TextButton")
+t_i17= Instance.new("TextButton")
 
 t_f1 = Instance.new("TextLabel")
 t_f2 = Instance.new("TextLabel")
@@ -2100,9 +2104,73 @@ spawn(function()
             
             end end) end end)
             
+            
+m_f9.Parent = b_page1
+m_f9.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+m_f9.Position = UDim2.new(0, 0, 0.5900000000, 0)
+m_f9.Size = UDim2.new(0, 498, 0, 30)
+m_f9.BorderColor3 = Color3.fromRGB(250, 250, 250)
+m_f9.Font = Enum.Font.Ubuntu
+m_f9.Text = "   Auto Kill Sea Beast | Beta"
+m_f9.TextColor3 = Color3.fromRGB(255, 255, 255)
+m_f9.TextSize = 14.000
+m_f9.TextWrapped = true
+m_f9.TextXAlignment = Enum.TextXAlignment.Left
 
+m_b9.Name = "m_b9"
+m_b9.Parent = m_f9
+m_b9.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+m_b9.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+m_b9.Size = UDim2.new(0, 20, 0, 20)
+m_b9.BorderColor3 = Color3.fromRGB(250, 250, 250)
+m_b9.Font = Enum.Font.SourceSans
+m_b9.Text = ""
+m_b9.TextColor3 = Color3.fromRGB(250, 250, 250)
+m_b9.TextSize = 30.000
+m_b9.MouseButton1Down:connect(function()
+--on off 
+if m_b9.Text == "" then --on
+m_b9.Text = "X"
+_G.m_b9 = true
+elseif m_b9.Text == "X" then --off
+m_b9.Text = ""
+_G.m_b9 = false
+end
+end)
 
+-- // auto kill sea beat
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.m_b9 then --script
+for i,v in pairs(game.Workspace.SeaBeasts:GetChildren()) do
+  if v:FindFirstChild("HumanoidRootPart") then
+  jump()
+  game.Players.LocalPlayer.Character.Animate.Disabled = false
+game.Players.LocalPlayer.Character.Humanoid.Sit = false
+     local Distance = (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+               if Distance <200 then
+                        Speed = 120000
+                  elseif Distance > 1500 then
+                        Speed = 100
+                    end                    
+                   local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Distance/Speed), {CFrame = v.HumanoidRootPart.CFrame  }) tween:Play()                                                           
+end end end end)
 
+spawn(function() -- skill auto
+    while task.wait(0) do       
+            pcall(function()
+            if _G.b9 then
+            for i,v in pairs(game.Workspace.SeaBeasts:GetChildren()) do
+  if v:FindFirstChild("HumanoidRootPart") then
+ if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 300 then
+ mele()
+   Skill()
+   wait(1)
+   fruit()
+   Skill()
+   wait(1)
+   sword()
+   Skill()
+end end end end end) end end)         
 
 bartool()
 
@@ -4565,12 +4633,12 @@ game:GetService("TweenService"):Create(
                     
                     end end end end end end)                 
 spawn(function()
-    while task.wait(2) do       
+    while task.wait(_G.time) do       
             pcall(function()          
             if _G.mi_b1 then
             if _G.bringmob then       
                 for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
-                    if v.Name == "Ship Deckhand [Lv. 1250]" or v.Name == "Ship Engineer [Lv. 1275]" or v.Name == "Ship Steward [Lv. 1300]" or v.Name == "Ship Officer [Lv. 1325]" and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 800 then        
+                    if v.Name == "Ship Deckhand [Lv. 1250]" or v.Name == "Ship Engineer [Lv. 1275]" or v.Name == "Ship Steward [Lv. 1300]" or v.Name == "Ship Officer [Lv. 1325]" and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= _G.distance then        
 if   st_b5.Text == "0" then                        
  v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
  elseif st_b5.Text == "10" then
@@ -4676,12 +4744,12 @@ game:GetService("TweenService"):Create(
 end end)                 
 
 spawn(function()
-    while task.wait(2) do       
+    while task.wait(_G.time) do       
             pcall(function()          
             if _G.mi_b3 then
             if _G.bringmob then       
                 for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
-                    if v.Name == "Candy Rebel [Lv. 2375]" or v.Name == "Sweet Thief [Lv. 2350]" or v.Name == "Chocolate Bar Battler [Lv. 2325]" or v.Name == "Cocoa Warrior [Lv. 2300]" and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 800 then        
+                    if v.Name == "Candy Rebel [Lv. 2375]" or v.Name == "Sweet Thief [Lv. 2350]" or v.Name == "Chocolate Bar Battler [Lv. 2325]" or v.Name == "Cocoa Warrior [Lv. 2300]" and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= _G.distance then        
 if   st_b5.Text == "0" then                        
  v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
  elseif st_b5.Text == "10" then
@@ -4799,12 +4867,12 @@ game:GetService("TweenService"):Create(
 end end)                 
 
 spawn(function()
-    while task.wait(3) do       
+    while task.wait(_G.time) do       
             pcall(function()          
             if _G.mi_b1 then
             if _G.bringmob then       
                 for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
-                    if v.Name == "Posessed Mummy [Lv. 2050]" or v.Name == "Demonic Soul [Lv. 2025]" or v.Name == "Living Zombie [Lv. 2000]" or v.Name =="Reborn Skeleton [Lv. 1975]" and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 800 then        
+                    if v.Name == "Posessed Mummy [Lv. 2050]" or v.Name == "Demonic Soul [Lv. 2025]" or v.Name == "Living Zombie [Lv. 2000]" or v.Name =="Reborn Skeleton [Lv. 1975]" and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= _G.distance then        
 if   st_b5.Text == "0" then                        
  v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
  elseif st_b5.Text == "10" then
@@ -5218,43 +5286,6 @@ end)
 -- // kill palyer mele
 game:GetService('RunService').RenderStepped:connect(function()
 if _G.c_b3 then --script
-
-local lplayer = game:GetService('Players').LocalPlayer
- 
-local yeeting = false
-function GetPlayer(String)
-local Found = {}
-local strl = String:lower()
-if strl == "all" then
-for i,v in pairs(game:GetService("Players"):GetPlayers()) do
-table.insert(Found,v)
-end
-elseif strl == "Random" then
-for i,v in pairs(game:GetService("Players"):GetPlayers()) do
-if v.Name ~= lplayer.Name then
-table.insert(Found,v)
-end
-end 
-elseif strl == "me" then
-for i,v in pairs(game:GetService("Players"):GetPlayers()) do
-if v.Name == lplayer.Name then
-table.insert(Found,v)
-end
-end 
-else
-for i,v in pairs(game:GetService("Players"):GetPlayers()) do
-if v.Name:lower():sub(1, #String) == String:lower() then
-table.insert(Found,v)
-end
-end 
-end
-return Found 
-end
-function ahh(thing)
-local asd = {'yeet','gui','yeet gui'}
-local f = string.upper(asd[math.random(1,#asd)])
-return f
-end
 local target = unpack(GetPlayer(c_tb.Text)).Character
 
 local humanoid = game.Players.LocalPlayer.Character.Humanoid 
@@ -5297,42 +5328,6 @@ game:GetService("TweenService"):Create(
     while task.wait() do
         pcall(function()
             if _G.c_b3 then           
-            local lplayer = game:GetService('Players').LocalPlayer
- 
-local yeeting = false
-function GetPlayer(String)
-local Found = {}
-local strl = String:lower()
-if strl == "all" then
-for i,v in pairs(game:GetService("Players"):GetPlayers()) do
-table.insert(Found,v)
-end
-elseif strl == "Random" then
-for i,v in pairs(game:GetService("Players"):GetPlayers()) do
-if v.Name ~= lplayer.Name then
-table.insert(Found,v)
-end
-end 
-elseif strl == "me" then
-for i,v in pairs(game:GetService("Players"):GetPlayers()) do
-if v.Name == lplayer.Name then
-table.insert(Found,v)
-end
-end 
-else
-for i,v in pairs(game:GetService("Players"):GetPlayers()) do
-if v.Name:lower():sub(1, #String) == String:lower() then
-table.insert(Found,v)
-end
-end 
-end
-return Found 
-end
-function ahh(thing)
-local asd = {'yeet','gui','yeet gui'}
-local f = string.upper(asd[math.random(1,#asd)])
-return f
-end
 local target = unpack(GetPlayer(c_tb.Text)).Character
 if game.Players.LocalPlayer.Character.Humanoid.Health > 4000 then
 if target.Humanoid.Health > 4000 then
@@ -5376,6 +5371,37 @@ c_b4.Text = ""
 _G.c_b4 = false
 end
 end)
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.c_b4 then --script
+local target = unpack(GetPlayer(c_tb.Text)).Character
+
+local humanoid = game.Players.LocalPlayer.Character.Humanoid 
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
+
+      local pos = target.HumanoidRootPart --check pos
+                    local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                  if Distance < 500 then
+                  Speed = 250
+                  elseif Distance < 200 then
+                  Speed = 7000000
+                  elseif Distance < 150 then
+                  Speed = 2000000
+                  elseif Distance < 1000 then
+                        Speed = 400        
+    elseif Distance >= 1500 then
+                  Speed = 120
+           end
+                       
+                       game.Players.LocalPlayer.Character.Humanoid.Sit = false
+                                     
+target.HumanoidRootPart.Transparency = 1
+game:GetService("TweenService"):Create(
+                        game.Players.LocalPlayer.Character.HumanoidRootPart,
+                        TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
+                        {CFrame = target.HumanoidRootPart.CFrame* CFrame.new(2, 70, 0) }
+                    ):Play()       
+                    end end)
 
 --// tp
 t_f1.Parent = b_page8
@@ -5423,7 +5449,60 @@ _G.t_itp = false
 t_itp.Text = ""
 stoptp()
 end end)
+-- // sea 1
+if t_b1.Text == "Island : Pirate" then
+TP1(CFrame(911.204833984375, 16.859853744506836, 1434.654296875))
+end
+if t_b1.Text == "Island : Marine" then
+TP1(CFrame.new(-2550.04736328125, 7.189321994781494, 2098.4150390625))
+end
+if t_b1.Text == "Island : Middle Town" then
+TP1(CFrame.new(911.204833984375, 16.859853744506836, 1434.654296875))
+end
+if t_b1.Text == "Island : Jungle" then
+TP1(CFrame.new(-1448.1146240234375, 62.19519805908203, -27.23407554626465))
+end
+if t_b1.Text == "Island : Pirate Village" then
+TP1(CFrame.new(-1209.8165283203125, 45.095272064208984, 3837.919921875))
+end
+if t_b1.Text == "Island : Desert" then
+TP1(CFrame.new(945.1871948242188, 21.262969970703125, 4371.1669921875))
+end
+if t_b1.Text == "Island : Frozen Village" then
+TP1(CFrame.new(1354.03125, 87.61601257324219, -1279.161376953125))
+end
+if t_b1.Text == "Island : Marine Ford" then
+TP1(CFrame.new(-4992.20068359375, 20.995275497436523, 4256.27587890625))
+end
+if t_b1.Text == "Island : Colosseum" then
+TP1(CFrame.new(-1496.818359375, 7.732581615447998, -2965.4716796875))
+end
+if t_b1.Text == "Island : Sky 1" then
+TP1(CFrame.new(-4786.751953125, 718.0031127929688, -2598.79833984375))
+end
+if t_b1.Text == "Island : Sky 2" then
+TP1(CFrame.new(-4654.681640625, 872.8856811523438, -1759.0703125))
+end
+if t_b1.Text == "Island : Sky 3" then
+TP1(CFrame.new(-7897.3271484375, 5545.92041015625, -417.4539794921875))
+end
+if t_b1.Text == "Island : Magma Village" then
+TP1(CFrame.new(-5277.63037109375, 8.933917045593262, 8430.501953125))
+end
+if t_b1.Text == "Island : Fountain City" then
+TP1(CFrame.new(5091.90673828125, 4.844532489776611, 4098.86279296875))
+end
+if t_b1.Text == "Island : UndeyWater City" then
+TP1(CFrame.new(61162.7890625, 5.420156955718994, 1815.3089599609375))
+end
+if t_b1.Text == "Island : Whirl Pool" then
+TP1(CFrame.new(3899.9140625, 11.870972633361816, -1941.1820068359375))
+end
+if t_b1.Text == "Island : Prison" then
+TP1(CFrame.new(5094.6826171875, 3.874617576599121, 757.0112915039062))
+end
 
+-- // sea 2
 game:GetService('RunService').RenderStepped:connect(function()
 if _G.t_itp then --script
 if t_b1.Text == "Island : KingDom of Rose" then
@@ -5574,21 +5653,167 @@ t_i10.Font = Enum.Font.SourceSans
 t_i10.TextColor3 = Color3.fromRGB(250, 250, 250)
 t_i10.TextSize = 14.000
 
+t_i11.Name = "t_i11"
+t_i11.Parent = t_ibar
+t_i11.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+t_i11.Position = UDim2.new(0.00000000, 0, 0.500000000, 0)
+t_i11.Size = UDim2.new(0, 140, 0, 20)
+t_i11.BorderColor3 = Color3.fromRGB(250, 250, 250)
+t_i11.Font = Enum.Font.SourceSans
+t_i11.TextColor3 = Color3.fromRGB(250, 250, 250)
+t_i11.TextSize = 14.000
+
+t_i12.Name = "t_i12"
+t_i12.Parent = t_ibar
+t_i12.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+t_i12.Position = UDim2.new(0.00000000, 0, 0.550000000, 0)
+t_i12.Size = UDim2.new(0, 140, 0, 20)
+t_i12.BorderColor3 = Color3.fromRGB(250, 250, 250)
+t_i12.Font = Enum.Font.SourceSans
+t_i12.TextColor3 = Color3.fromRGB(250, 250, 250)
+t_i12.TextSize = 14.000
+
+t_i13.Name = "t_i13"
+t_i13.Parent = t_ibar
+t_i13.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+t_i13.Position = UDim2.new(0.00000000, 0, 0.600000000, 0)
+t_i13.Size = UDim2.new(0, 140, 0, 20)
+t_i13.BorderColor3 = Color3.fromRGB(250, 250, 250)
+t_i13.Font = Enum.Font.SourceSans
+t_i13.TextColor3 = Color3.fromRGB(250, 250, 250)
+t_i13.TextSize = 14.000
+
+t_i14.Name = "t_i14"
+t_i14.Parent = t_ibar
+t_i14.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+t_i14.Position = UDim2.new(0.00000000, 0, 0.650000000, 0)
+t_i14.Size = UDim2.new(0, 140, 0, 20)
+t_i14.BorderColor3 = Color3.fromRGB(250, 250, 250)
+t_i14.Font = Enum.Font.SourceSans
+t_i14.TextColor3 = Color3.fromRGB(250, 250, 250)
+t_i14.TextSize = 14.000
+
+t_i15.Name = "t_i15"
+t_i15.Parent = t_ibar
+t_i15.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+t_i15.Position = UDim2.new(0.00000000, 0, 0.700000000, 0)
+t_i15.Size = UDim2.new(0, 140, 0, 20)
+t_i15.BorderColor3 = Color3.fromRGB(250, 250, 250)
+t_i15.Font = Enum.Font.SourceSans
+t_i15.TextColor3 = Color3.fromRGB(250, 250, 250)
+t_i15.TextSize = 14.000
+
+t_i16.Name = "t_i16"
+t_i16.Parent = t_ibar
+t_i16.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+t_i16.Position = UDim2.new(0.00000000, 0, 0.750000000, 0)
+t_i16.Size = UDim2.new(0, 140, 0, 20)
+t_i16.BorderColor3 = Color3.fromRGB(250, 250, 250)
+t_i16.Font = Enum.Font.SourceSans
+t_i16.TextColor3 = Color3.fromRGB(250, 250, 250)
+t_i16.TextSize = 14.000
+
+t_i17.Name = "t_i17"
+t_i17.Parent = t_ibar
+t_i17.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+t_i17.Position = UDim2.new(0.00000000, 0, 0.800000000, 0)
+t_i17.Size = UDim2.new(0, 140, 0, 20)
+t_i17.BorderColor3 = Color3.fromRGB(250, 250, 250)
+t_i17.Font = Enum.Font.SourceSans
+t_i17.TextColor3 = Color3.fromRGB(250, 250, 250)
+t_i17.TextSize = 14.000
+
 --end bar core
 end
 
 --code check sea tp
 if game.PlaceId == 2753915549 then -- sea1
-t_i1.Text = "t_b2"
-t_i2.Text = "t_b2"
-t_i3.Text = "t_b2"
-t_i4.Text = "t_b2"
-t_i5.Text = "t_b2"
-t_i6.Text = "t_b2"
-t_i7.Text = "t_b2"
-t_i8.Text = "t_b2"
-t_i9.Text = "t_b2"
-t_i10.Text = "t_b2"
+t_i1.Text = "Pirate Start"
+t_i2.Text = "Marine Start"
+t_i3.Text = "Middle Town"
+t_i4.Text = "Jungle"
+t_i5.Text = "Pirate Village"
+t_i6.Text = "Desert"
+t_i7.Text = "Frozen Village"
+t_i8.Text = "Marine Ford"
+t_i9.Text = "Colosseum"
+t_i10.Text = "Sky 1"
+t_i11.Text = "Sky 2"
+t_i12.Text = "Sky 3"
+t_i13.Text = "Magma Village"
+t_i14.Text = "Fountain City"
+t_i15.Text = "UndeyWater City"
+t_i16.Text = "Whilr Pool"
+t_i17.Text = "Prison"
+
+t_i1.MouseButton1Down:connect(function()
+t_ibar.Visible = false
+t_b1.Text = "Island : Pirate Start"
+end)
+t_i2.MouseButton1Down:connect(function()
+t_ibar.Visible = false
+t_b1.Text = "Island : Marine Start"
+end)
+t_i3.MouseButton1Down:connect(function()
+t_ibar.Visible = false
+t_b1.Text = "Island : Middle Town"
+end)
+t_i4.MouseButton1Down:connect(function()
+t_ibar.Visible = false
+t_b1.Text = "Island : Jungle"
+end)
+t_i5.MouseButton1Down:connect(function()
+t_ibar.Visible = false
+t_b1.Text = "Island : Pirate Village"
+end)
+t_i6.MouseButton1Down:connect(function()
+t_ibar.Visible = false
+t_b1.Text = "Island : Desert"
+end)
+t_i7.MouseButton1Down:connect(function()
+t_ibar.Visible = false
+t_b1.Text = "Island : Frozen Village"
+end)
+t_i8.MouseButton1Down:connect(function()
+t_ibar.Visible = false
+t_b1.Text = "Island : Marine Ford"
+end)
+t_i9.MouseButton1Down:connect(function()
+t_ibar.Visible = false
+t_b1.Text = "Island : Colosseum"
+end)
+t_i10.MouseButton1Down:connect(function()
+t_ibar.Visible = false
+t_b1.Text = "Island : Sky 1"
+end)
+t_i11.MouseButton1Down:connect(function()
+t_ibar.Visible = false
+t_b1.Text = "Island : Sky 2"
+end)
+t_i12.MouseButton1Down:connect(function()
+t_ibar.Visible = false
+t_b1.Text = "Island : Sky3"
+end)
+t_i13.MouseButton1Down:connect(function()
+t_ibar.Visible = false
+t_b1.Text = "Island : Magma Village"
+end)
+t_i14.MouseButton1Down:connect(function()
+t_ibar.Visible = false
+t_b1.Text = "Island : Fountain City"
+end)
+t_i15.MouseButton1Down:connect(function()
+t_ibar.Visible = false
+t_b1.Text = "Island : UndeyWater City"
+end)
+t_i16.MouseButton1Down:connect(function()
+t_ibar.Visible = false
+t_b1.Text = "Island : Whirl Pool"
+end)
+t_i17.MouseButton1Down:connect(function()
+t_ibar.Visible = false
+t_b1.Text = "Island : Prison"
+end)
 
 elseif game.PlaceId == 4442272183 then -- sea2
 t_i1.Text = "KingDom of Rose"
@@ -5601,6 +5826,13 @@ t_i7.Text = "Cursed Ship"
 t_i8.Text = "Ice Castle"
 t_i9.Text = "Graveyard"
 t_i10.Text = "Fogotten"
+t_i11.Visible = false
+t_i12.Visible = false
+t_i14.Visible = false
+t_i13.Visible = false
+t_i15.Visible = false
+t_i16.Visible = false
+t_i17.Visible = false
 
 t_i1.MouseButton1Down:connect(function()
 t_ibar.Visible = false
@@ -5659,7 +5891,7 @@ end
 
 t_f2.Parent = b_page8
 t_f2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-t_f2.Position = UDim2.new(0, 0, 0.1000000000, 0)
+t_f2.Position = UDim2.new(0, 0, 0.1700000000, 0)
 t_f2.Size = UDim2.new(0, 498, 0, 30)
 t_f2.BorderColor3 = Color3.fromRGB(250, 250, 250)
 t_f2.Font = Enum.Font.Ubuntu
@@ -5703,7 +5935,7 @@ end)
 
 t_f3.Parent = b_page8
 t_f3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-t_f3.Position = UDim2.new(0, 0, 0.1700000000, 0)
+t_f3.Position = UDim2.new(0, 0, 0.2400000000, 0)
 t_f3.Size = UDim2.new(0, 498, 0, 30)
 t_f3.BorderColor3 = Color3.fromRGB(250, 250, 250)
 t_f3.Font = Enum.Font.Ubuntu
@@ -5744,7 +5976,7 @@ end)
 
 t_f4.Parent = b_page8
 t_f4.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-t_f4.Position = UDim2.new(0, 0, 0.2400000000, 0)
+t_f4.Position = UDim2.new(0, 0, 0.3100000000, 0)
 t_f4.Size = UDim2.new(0, 498, 0, 30)
 t_f4.BorderColor3 = Color3.fromRGB(250, 250, 250)
 t_f4.Font = Enum.Font.Ubuntu
@@ -5785,7 +6017,7 @@ end
 end)
 t_f5.Parent = b_page8
 t_f5.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-t_f5.Position = UDim2.new(0, 0, 0.3100000000, 0)
+t_f5.Position = UDim2.new(0, 0, 0.3800000000, 0)
 t_f5.Size = UDim2.new(0, 498, 0, 30)
 t_f5.BorderColor3 = Color3.fromRGB(250, 250, 250)
 t_f5.Font = Enum.Font.Ubuntu
@@ -5817,7 +6049,7 @@ end)
 
 t_f6.Parent = b_page8
 t_f6.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-t_f6.Position = UDim2.new(0, 0, 0.3800000000, 0)
+t_f6.Position = UDim2.new(0, 0, 0.4500000000, 0)
 t_f6.Size = UDim2.new(0, 498, 0, 30)
 t_f6.BorderColor3 = Color3.fromRGB(250, 250, 250)
 t_f6.Font = Enum.Font.Ubuntu
@@ -6014,16 +6246,18 @@ _G.bringmob = false
 end
 end)
 _G.bringmob = true
+  _G.time = 2
+  _G.distance = 400
   
    spawn(function()
-    while task.wait(2) do       
+    while task.wait(_G.time) do       
             pcall(function()
             CheckQuest()
             if _G.m_b2 then
             if _G.bringmob then       
             if game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible == true then                 
                 for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
-                    if v.Name == Ms  and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 800 then                           
+                    if v.Name == Ms  and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= _G.distance then                           
 if   st_b5.Text == "0" then                        
  v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
  elseif st_b5.Text == "10" then
@@ -6069,7 +6303,7 @@ st_b5.Position = UDim2.new(0.13200000, 0, 0, 0)
 st_b5.Size = UDim2.new(0, 30, 0, 30)
 st_b5.Font = Enum.Font.Ubuntu
 st_b5.BackgroundTransparency = 1.000
-st_b5.Text = "50"
+st_b5.Text = "40"
 st_b5.TextColor3 = Color3.fromRGB(250, 250, 250)
 st_b5.TextSize = 14.000
 st_b5.MouseButton1Down:connect(function()
