@@ -144,6 +144,8 @@ ms_f4 = Instance.new("TextLabel")
 ms_f5 = Instance.new("TextLabel")
 ms_f6 = Instance.new("TextLabel")
 ms_f7= Instance.new("TextLabel")
+ms_f8= Instance.new("TextLabel")
+ms_f9= Instance.new("TextLabel")
 
 ms_b1= Instance.new("TextButton")
 ms_b2= Instance.new("TextButton")
@@ -152,6 +154,8 @@ ms_b4= Instance.new("TextButton")
 ms_b5= Instance.new("TextButton")
 ms_b6= Instance.new("TextButton")
 ms_b7= Instance.new("TextButton")
+ms_b8= Instance.new("TextButton")
+ms_b9= Instance.new("TextButton")
 
 -- // esp - fruit
 
@@ -4440,6 +4444,94 @@ _G.ms_b6 = false
 end
 end)
 
+ms_f7.Parent = b_page4
+ms_f7.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+ms_f7.Position = UDim2.new(0, 0, 0.5200000000, 0)
+ms_f7.Size = UDim2.new(0, 498, 0, 30)
+ms_f7.BorderColor3 = Color3.fromRGB(250, 250, 250)
+ms_f7.Font = Enum.Font.Ubuntu
+ms_f7.Text = "   Auto Buy All Skill"
+ms_f7.TextColor3 = Color3.fromRGB(255, 255, 255)
+ms_f7.TextSize = 14.000
+ms_f7.TextWrapped = true
+ms_f7.TextXAlignment = Enum.TextXAlignment.Left
+
+ms_b7.Name = "ms_b7"
+ms_b7.Parent = ms_f7
+ms_b7.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ms_b7.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+ms_b7.Size = UDim2.new(0, 20, 0, 20)
+ms_b7.BorderColor3 = Color3.fromRGB(250, 250, 250)
+ms_b7.Font = Enum.Font.SourceSans
+ms_b7.Text = ""
+ms_b7.TextColor3 = Color3.fromRGB(250, 250, 250)
+ms_b7.TextSize = 30.000
+ms_b7.MouseButton1Down:connect(function()
+--on off 
+if ms_b7.Text == "" then --on
+ms_b7.Text = "X"
+_G.ms_b7 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.ms_b7 then --script
+
+
+
+end
+end)
+elseif ms_b7.Text == "X" then --off
+ms_b7.Text = ""
+_G.ms_b7 = false
+end
+end)
+
+ms_f8.Parent = b_page4
+ms_f8.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+ms_f8.Position = UDim2.new(0, 0, 0.5900000000, 0)
+ms_f8.Size = UDim2.new(0, 498, 0, 30)
+ms_f8.BorderColor3 = Color3.fromRGB(250, 250, 250)
+ms_f8.Font = Enum.Font.Ubuntu
+ms_f8.Text = "   Walk On Water"
+ms_f8.TextColor3 = Color3.fromRGB(255, 255, 255)
+ms_f8.TextSize = 14.000
+ms_f8.TextWrapped = true
+ms_f8.TextXAlignment = Enum.TextXAlignment.Left
+
+ms_b8.Name = "ms_b8"
+ms_b8.Parent = ms_f8
+ms_b8.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ms_b8.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+ms_b8.Size = UDim2.new(0, 20, 0, 20)
+ms_b8.BorderColor3 = Color3.fromRGB(250, 250, 250)
+ms_b8.Font = Enum.Font.SourceSans
+ms_b8.Text = ""
+ms_b8.TextColor3 = Color3.fromRGB(250, 250, 250)
+ms_b8.TextSize = 30.000
+ms_b8.MouseButton1Down:connect(function()
+--on off 
+if ms_b8.Text == "" then --on
+ms_b8.Text = "X"
+_G.ms_b8 = true
+elseif ms_b8.Text == "X" then --off
+ms_b8.Text = ""
+_G.ms_b8 = false
+end
+end)
+
+spawn(function()
+    while task.wait() do
+        if _G.ms_b8 then
+            pcall(function()
+                if not nelzkie then
+                    game:GetService("Workspace").Map["WaterBase-Plane"].Size = Vector3.new(1000,112,1000)
+                else
+                    game:GetService("Workspace").Map["WaterBase-Plane"].Size = Vector3.new(1000,80,1000)
+                end
+            end)
+        end
+    end
+end)
+
 melebar()
 
 -- // mob - item
@@ -5271,6 +5363,7 @@ end
 elseif c_b3.Text == "X" then --off
 c_b3.Text = ""
 _G.c_b3 = false
+stoptp()
 for i,v in next, game:GetService('Players'):GetPlayers() do
 if v.Name ~= game:GetService('Players').LocalPlayer.Name then
 v.Character.HumanoidRootPart.Size = Vector3.new(5, 5, 5)
@@ -5369,6 +5462,7 @@ _G.c_b4 = true
 elseif c_b4.Text == "X" then --off
 c_b4.Text = ""
 _G.c_b4 = false
+stoptp()
 end
 end)
 
@@ -5453,10 +5547,10 @@ end end)
 game:GetService('RunService').RenderStepped:connect(function()
 if _G.t_itp then --script
 -- // sea 1
-if t_b1.Text == "Island : Pirate" then
+if t_b1.Text == "Island : Pirate Start" then
 TP1(CFrame(911.204833984375, 16.859853744506836, 1434.654296875))
 end
-if t_b1.Text == "Island : Marine" then
+if t_b1.Text == "Island : Marine Start" then
 TP1(CFrame.new(-2550.04736328125, 7.189321994781494, 2098.4150390625))
 end
 if t_b1.Text == "Island : Middle Town" then
