@@ -5445,7 +5445,7 @@ c_bdistan.Position = UDim2.new(0.13200000, 0, 0, 0)
 c_bdistan.Size = UDim2.new(0, 30, 0, 30)
 c_bdistan.Font = Enum.Font.Ubuntu
 c_bdistan.BackgroundTransparency = 1.000
-c_bdistan.Text = "5"
+c_bdistan.Text = "0"
 c_bdistan.TextColor3 = Color3.fromRGB(250, 250, 250)
 c_bdistan.TextSize = 14.000
 c_bdistan.MouseButton1Down:connect(function()
@@ -5495,13 +5495,19 @@ game:GetService('RunService').RenderStepped:connect(function()
 if _G.c_b3 then --script
 local target = unpack(GetPlayer(c_tb.Text)).Character
                        mele()                   
+
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = target.HumanoidRootPart.CFrame* CFrame.new(2, c_bdistan.Text, 0)
+                    click()
+                                          end end)                                    
+spawn(function()
+    while task.wait(1) do       
+            pcall(function()          
+            if _G.c_b3 then
 local args = {
     [1] = "EnablePvp"
 }
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = target.HumanoidRootPart.CFrame* CFrame.new(2, c_bdistan.Text, 0)
-                    click()
-                                          end end)                                    
+end end) end end)
 
 c_f4.Parent = b_page7
 c_f4.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
