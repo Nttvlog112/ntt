@@ -298,6 +298,7 @@ load_l.TextColor3 = Color3.fromRGB(255, 255, 255)
 load_l.BorderColor3 = Color3.fromRGB(250, 250, 250)
 load_l.TextSize = 14.000
 load_l.MouseButton1Down:connect(function()
+game.CoreGui.UIGUI:Destroy()
 if load_b2.Text == "X" then -- anti afk
 local vu = game:GetService("VirtualUser")
                                     game:GetService("Players").LocalPlayer.Idled:connect(function()
