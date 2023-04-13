@@ -5494,10 +5494,37 @@ end)
 game:GetService('RunService').RenderStepped:connect(function()
 if _G.c_b3 then --script
 local target = unpack(GetPlayer(c_tb.Text)).Character
+local pos = target.HumanoidRootPart --check pos
+if (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 250 then
                        mele()                   
 
    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = target.HumanoidRootPart.CFrame* CFrame.new(2, c_bdistan.Text, 0)
                     click()
+                    else
+                    jump()
+                    local pos = target.HumanoidRootPart --check pos
+                    local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                  if Distance < 500 then
+                  Speed = 250
+                  elseif Distance < 200 then
+                  Speed = 7000000
+                  elseif Distance < 150 then
+                  Speed = 2000000
+                  elseif Distance < 1000 then
+                        Speed = 400        
+    elseif Distance >= 1500 then
+                  Speed = 120
+           end
+                       
+                       game.Players.LocalPlayer.Character.Humanoid.Sit = false
+                                     
+target.HumanoidRootPart.Transparency = 1
+game:GetService("TweenService"):Create(
+                        game.Players.LocalPlayer.Character.HumanoidRootPart,
+                        TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
+                        {CFrame = target.HumanoidRootPart.CFrame* CFrame.new(2, 30, 0) }
+                    ):Play()       
+                    end
                                           end end)                                    
 spawn(function()
     while task.wait(1) do       
