@@ -196,6 +196,7 @@ mi_f5 = Instance.new("TextLabel")
 mi_f6 = Instance.new("TextLabel")
 mi_f7 = Instance.new("TextLabel")
 mi_f8 = Instance.new("TextLabel")
+mi_f9 = Instance.new("TextLabel")
 
 mi_bc= Instance.new("TextButton")
 mi_b1= Instance.new("TextButton")
@@ -206,6 +207,7 @@ mi_b5= Instance.new("TextButton")
 mi_b6= Instance.new("TextButton")
 mi_b7= Instance.new("TextButton")
 mi_b8= Instance.new("TextButton")
+mi_b9= Instance.new("TextButton")
 
 -- // combat
 c_tb = Instance.new("TextBox")
@@ -4743,18 +4745,72 @@ end
 end)
 
 spawn(function()
-    while task.wait() do
-        
+    while task.wait() do    
             pcall(function()    
             if _G.ms_b8 then
                     game:GetService("Workspace").Map["WaterBase-Plane"].Size = Vector3.new(1000,112,1000)
                 else
                     game:GetService("Workspace").Map["WaterBase-Plane"].Size = Vector3.new(1000,80,1000)
-                end
-            
+                end         
         end)
     end
 end)
+
+ms_f9.Parent = b_page4
+ms_f9.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+ms_f9.Position = UDim2.new(0, 0, 0.6600000000, 0)
+ms_f9.Size = UDim2.new(0, 498, 0, 30)
+ms_f9.BorderColor3 = Color3.fromRGB(250, 250, 250)
+ms_f9.Font = Enum.Font.Ubuntu
+ms_f9.Text = "   Mink V4"
+ms_f9.TextColor3 = Color3.fromRGB(255, 255, 255)
+ms_f9.TextSize = 14.000
+ms_f9.TextWrapped = true
+ms_f9.TextXAlignment = Enum.TextXAlignment.Left
+
+ms_b9.Name = "ms_b9"
+ms_b9.Parent = ms_f9
+ms_b9.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ms_b9.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+ms_b9.Size = UDim2.new(0, 20, 0, 20)
+ms_b9.BorderColor3 = Color3.fromRGB(250, 250, 250)
+ms_b9.Font = Enum.Font.SourceSans
+ms_b9.Text = ""
+ms_b9.TextColor3 = Color3.fromRGB(250, 250, 250)
+ms_b9.TextSize = 30.000
+ms_b9.MouseButton1Down:connect(function()
+--on off 
+if ms_b9.Text == "" then --on
+ms_b9.Text = "X"
+_G.ms_b9 = true
+sk1.Visible = true
+elseif ms_b9.Text == "X" then --off
+ms_b9.Text = ""
+_G.ms_b9 = false
+sk1.Visible = false
+end
+end)
+
+sk1 = Instance.new("TextButton")
+sk1.Name = "sk1"
+sk1.Parent = NTTGUI
+sk1.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+sk1.BorderSizePixel = 0
+sk1.Position = UDim2.new(0.85162201, 0, 0.383285708, 0)
+sk1.Size = UDim2.new(0, 40, 0, 40)
+sk1.Font = Enum.Font.Ubuntu
+sk1.Text = ""
+sk1.TextColor3 = Color3.fromRGB(250, 255, 250)
+sk1.TextSize = 20.000
+sk1.BackgroundTransparency = 1.000
+sk1.MouseButton1Down:connect(function()
+
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart 
+local location = pl.CFrame * CFrame.new(0,5,-50)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid 
+pl.CFrame = location
+end)
+sk1.Visible = false
 
 melebar()
 
@@ -5351,7 +5407,7 @@ c_level.TextXAlignment = Enum.TextXAlignment.Left
 
 c_health.Parent = c_cbar
 c_health.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-c_health.Position = UDim2.new(0.38, 0, 0, 0)
+c_health.Position = UDim2.new(0.40, 0, 0, 0)
 c_health.Size = UDim2.new(0, 498, 0, 30)
 c_health.BorderColor3 = Color3.fromRGB(250, 250, 250)
 c_health.Font = Enum.Font.Ubuntu
@@ -5455,7 +5511,7 @@ c_f3.Position = UDim2.new(0, 0, 0.3800000000, 0)
 c_f3.Size = UDim2.new(0, 498, 0, 30)
 c_f3.BorderColor3 = Color3.fromRGB(250, 250, 250)
 c_f3.Font = Enum.Font.Ubuntu
-c_f3.Text = "   Kill Player | Mele"
+c_f3.Text = "   Kill Player"
 c_f3.TextColor3 = Color3.fromRGB(255, 255, 255)
 c_f3.TextSize = 14.000
 c_f3.TextWrapped = true
@@ -5492,7 +5548,7 @@ if _G.c_b3 then --script
 local target = unpack(GetPlayer(c_tb.Text)).Character
 local pos = target.HumanoidRootPart --check pos
 if (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 250 then
-                       mele()  jump()
+                       usetool()  jump()
 _G.FastAttack = false          
 target.HumanoidRootPart.Size = Vector3.new(40, 40, 40)
 target.HumanoidRootPart.Transparency = 1
