@@ -1868,7 +1868,7 @@ for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
             
        if v.Humanoid.Health > 0 then -- check health
      usetool()
-       if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 1200 then
+       if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 500 then
        if v.Humanoid.Health > 0 then 
        jump()
        click() -- click          
@@ -1887,7 +1887,7 @@ game:GetService("TweenService"):Create(
                     ):Play()       
                                       
                  end end end end end
-
+             
 end
 end)
 
@@ -5428,7 +5428,7 @@ end)
 
 c_fdistan.Parent = b_page7
 c_fdistan.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-c_fdistan.Position = UDim2.new(0, 0, 0.3800000000, 0)
+c_fdistan.Position = UDim2.new(0, 0, 0.4500000000, 0)
 c_fdistan.Size = UDim2.new(0, 498, 0, 30)
 c_fdistan.BorderColor3 = Color3.fromRGB(250, 250, 250)
 c_fdistan.Font = Enum.Font.Ubuntu
@@ -5445,20 +5445,20 @@ c_bdistan.Position = UDim2.new(0.13200000, 0, 0, 0)
 c_bdistan.Size = UDim2.new(0, 30, 0, 30)
 c_bdistan.Font = Enum.Font.Ubuntu
 c_bdistan.BackgroundTransparency = 1.000
-c_bdistan.Text = "0"
+c_bdistan.Text = "30"
 c_bdistan.TextColor3 = Color3.fromRGB(250, 250, 250)
 c_bdistan.TextSize = 14.000
 c_bdistan.MouseButton1Down:connect(function()
-if c_bdistan.Text == "5" then
+if c_bdistan.Text == "30" then
 c_bdistan.Text = "0"
 else
-c_bdistan.Text = c_bdistan.Text + 1
+c_bdistan.Text = c_bdistan.Text + 10
 end
 end)
 
 c_f3.Parent = b_page7
 c_f3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-c_f3.Position = UDim2.new(0, 0, 0.4500000000, 0)
+c_f3.Position = UDim2.new(0, 0, 0.3800000000, 0)
 c_f3.Size = UDim2.new(0, 498, 0, 30)
 c_f3.BorderColor3 = Color3.fromRGB(250, 250, 250)
 c_f3.Font = Enum.Font.Ubuntu
@@ -5501,6 +5501,7 @@ if (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position)
    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = target.HumanoidRootPart.CFrame* CFrame.new(2, c_bdistan.Text, 0)
                     click()
                     else
+     if        (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 2000 then       
                     jump()
                     local pos = target.HumanoidRootPart --check pos
                     local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
@@ -5523,8 +5524,11 @@ game:GetService("TweenService"):Create(
                         game.Players.LocalPlayer.Character.HumanoidRootPart,
                         TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
                         {CFrame = target.HumanoidRootPart.CFrame* CFrame.new(2, 30, 0) }
-                    ):Play()       
-                    end
+                    ):Play()  
+else
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = target.HumanoidRootPart.CFrame
+                   end end
                                           end end)                                    
 spawn(function()
     while task.wait(1) do       
