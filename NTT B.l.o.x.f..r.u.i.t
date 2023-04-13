@@ -460,10 +460,11 @@ prl.BorderColor3 = Color3.fromRGB(250, 250, 250)
 prl.Text = "   #nameprl"
 prl.TextColor3 = Color3.fromRGB(255, 255, 255)
 prl.TextSize = 14.000
-prl.TextWrapped = false
+
 prl.TextXAlignment = Enum.TextXAlignment.Left
 prl. Text = ("   #"..game.Players.localPlayer.DisplayName)
-
+prl.Active = false
+prl.Draggable = true
 
 -- // Page
 b_page1.Name = "b_page1"--farm
@@ -5051,7 +5052,7 @@ TP1(CFrame.new(-9717.5400390625, 65.93158721923828, 6041.43310546875))
 local humanoid = game.Players.LocalPlayer.Character.Humanoid 
 humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
 for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
-      if v.Name == "Posessed Mummy [Lv. 2050]" or v.Name == "Demonic Soul [Lv. 2025]" or v.Name == "Living Zombie [Lv. 2000]" or v.Name =="Reborn Skeleton [Lv. 1975]" then --name mob
+      if v.Name == "Posessed Mummy [Lv. 2050]" or v.Name == "Demonic Soul [Lv. 2025]" or v.Name == "Living Zombie [Lv. 2000]" then --name mob
       local pos = v.HumanoidRootPart --check pos
                     local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
                   if Distance < 500 then
@@ -5092,7 +5093,7 @@ spawn(function()
             if _G.mi_b3 then
             if _G.bringmob then       
                 for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
-                    if v.Name == "Posessed Mummy [Lv. 2050]" or v.Name == "Demonic Soul [Lv. 2025]" or v.Name == "Living Zombie [Lv. 2000]" or v.Name =="Reborn Skeleton [Lv. 1975]" and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= _G.distance then        
+                    if v.Name == "Posessed Mummy [Lv. 2050]" or v.Name == "Demonic Soul [Lv. 2025]" or v.Name == "Living Zombie [Lv. 2000]" and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= _G.distance then        
 if   st_b5.Text == "0" then                        
  v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
  elseif st_b5.Text == "10" then
@@ -5445,7 +5446,7 @@ c_bdistan.Position = UDim2.new(0.13200000, 0, 0, 0)
 c_bdistan.Size = UDim2.new(0, 30, 0, 30)
 c_bdistan.Font = Enum.Font.Ubuntu
 c_bdistan.BackgroundTransparency = 1.000
-c_bdistan.Text = "30"
+c_bdistan.Text = "10"
 c_bdistan.TextColor3 = Color3.fromRGB(250, 250, 250)
 c_bdistan.TextSize = 14.000
 c_bdistan.MouseButton1Down:connect(function()
@@ -6545,7 +6546,7 @@ st_f6.Position = UDim2.new(0, 0, 0.3800000000, 0)
 st_f6.Size = UDim2.new(0, 498, 0, 30)
 st_f6.BorderColor3 = Color3.fromRGB(250, 250, 250)
 st_f6.Font = Enum.Font.Ubuntu
-st_f6.Text = "   Black Screen"
+st_f6.Text = "   Auto Rejoin"
 st_f6.TextColor3 = Color3.fromRGB(255, 255, 255)
 st_f6.TextSize = 14.000
 st_f6.TextWrapped = true
@@ -6558,17 +6559,26 @@ st_b6.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
 st_b6.Size = UDim2.new(0, 20, 0, 20)
 st_b6.BorderColor3 = Color3.fromRGB(250, 250, 250)
 st_b6.Font = Enum.Font.SourceSans
-st_b6.Text = ""
+st_b6.Text = "X"
 st_b6.TextColor3 = Color3.fromRGB(250, 250, 250)
 st_b6.TextSize = 30.000
 st_b6.MouseButton1Down:connect(function()
 --on off 
 if st_b6.Text == "" then --on
 st_b6.Text = "X"
-screen.Visible = true
 elseif st_b6.Text == "X" then --off
 st_b6.Text = ""
-screen.Visible = false
+spawn(function()
+    while task.wait() do
+        if st_b6.Text == "X" then --off
+            game:GetService("CoreGui").RobloxPromptGui.promptOverlay.ChildAdded:Connect(function(child)
+                if child.Name == 'ErrorPrompt' and child:FindFirstChild('MessageArea') and child.MessageArea:FindFirstChild("ErrorFrame") then
+                    game:GetService("TeleportService"):Teleport(game.PlaceId)
+                end
+            end)         
+       end
+    end
+end)
 end
 end)
 
