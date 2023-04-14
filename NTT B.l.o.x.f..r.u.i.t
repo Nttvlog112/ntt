@@ -144,6 +144,9 @@ ms_mele10= Instance.new("TextButton")
 
 ms_code= Instance.new("TextButton")
 
+ms_t1= Instance.new("TextLabel")
+ms_t2= Instance.new("TextLabel")
+
 ms_f1 = Instance.new("TextLabel")
 ms_f2 = Instance.new("TextLabel")
 ms_f3 = Instance.new("TextLabel")
@@ -154,6 +157,7 @@ ms_f6 = Instance.new("TextLabel")
 ms_f7= Instance.new("TextLabel")
 ms_f8= Instance.new("TextLabel")
 ms_f9= Instance.new("TextLabel")
+ms_f10= Instance.new("TextLabel")
 
 ms_b1= Instance.new("TextButton")
 ms_b2= Instance.new("TextButton")
@@ -164,8 +168,11 @@ ms_b6= Instance.new("TextButton")
 ms_b7= Instance.new("TextButton")
 ms_b8= Instance.new("TextButton")
 ms_b9= Instance.new("TextButton")
+ms_b10= Instance.new("TextButton")
 
 -- // esp - fruit
+ef_t1 = Instance.new("TextLabel")
+ef_t2 = Instance.new("TextLabel")
 
 ef_f1 = Instance.new("TextLabel")
 ef_f2 = Instance.new("TextLabel")
@@ -3361,54 +3368,21 @@ end)
 
 barcore()
 
--- // miss esp
-function code(x)
-game:GetService("ReplicatedStorage").Remotes.Redeem:InvokeServer(x)
-end
-
-ms_code.Name = "ms_code"
-ms_code.Parent = b_page4
-ms_code.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-ms_code.Position = UDim2.new(0.00000000, 0, 0.030000000, 0)
-ms_code.Size = UDim2.new(0, 498, 0, 30)
-ms_code.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ms_code.Font = Enum.Font.Ubuntu
-ms_code.Text = "Redeem All Code"
-ms_code.TextColor3 = Color3.fromRGB(250, 250, 250)
-ms_code.TextSize = 14.000
-ms_code.MouseButton1Down:connect(function()
-code("Sub2Fer999")
-code("kittgaming")
-code("NOOB_REFUND")
-code("SUB2GAMERROBOT_RESET1")
-code("TY_FOR_WATCHING")
-code("GAMER_ROBOT_1M")
-code("ADMINGIVEAWAY")
-code("SUBGAMERROBOT_RESET")
-code("GAMERROBOT_YT")
-code("BIGNEWS")
-code("FUDD10")
-code("fudd10_v2")
-code("Bluxxy")
-code("Starcodeheo")
-code("JCWK")
-code("Magicbus")
-code("TantaiGaming")
-code("Axiore")
-code("Sub2Daigrock")
-code("Sub2UncleKizaru")
-code("SUB2NOOBMASTER123")
-code("StrawHatMaine")
-code("Sub2OfficialNoobie")
-code("SUB2GAMERROBOT_EXP1")
-code("THEGREATACE")
-
-end)
-
 -- // esp - fruit
+ef_t1.Parent = b_page5
+ef_t1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+ef_t1.Position = UDim2.new(0, 0, 0.0300000000, 0)
+ef_t1.Size = UDim2.new(0, 498, 0, 30)
+ef_t1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+ef_t1.Font = Enum.Font.Ubuntu
+ef_t1.Text = "Esp"
+ef_t1.TextColor3 = Color3.fromRGB(255, 255, 255)
+ef_t1.TextSize = 14.000
+ef_t1.TextWrapped = true
+
 ef_f1.Parent = b_page5
 ef_f1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-ef_f1.Position = UDim2.new(0, 0, 0.0300000000, 0)
+ef_f1.Position = UDim2.new(0, 0, 0.1000000000, 0)
 ef_f1.Size = UDim2.new(0, 498, 0, 30)
 ef_f1.BorderColor3 = Color3.fromRGB(250, 250, 250)
 ef_f1.Font = Enum.Font.Ubuntu
@@ -3492,7 +3466,7 @@ end)
 
 ef_f2.Parent = b_page5
 ef_f2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-ef_f2.Position = UDim2.new(0, 0, 0.1000000000, 0)
+ef_f2.Position = UDim2.new(0, 0, 0.1700000000, 0)
 ef_f2.Size = UDim2.new(0, 498, 0, 30)
 ef_f2.BorderColor3 = Color3.fromRGB(250, 250, 250)
 ef_f2.Font = Enum.Font.Ubuntu
@@ -3597,7 +3571,7 @@ end)
 
 ef_f3.Parent = b_page5
 ef_f3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-ef_f3.Position = UDim2.new(0, 0, 0.1700000000, 0)
+ef_f3.Position = UDim2.new(0, 0, 0.2400000000, 0)
 ef_f3.Size = UDim2.new(0, 498, 0, 30)
 ef_f3.BorderColor3 = Color3.fromRGB(250, 250, 250)
 ef_f3.Font = Enum.Font.Ubuntu
@@ -3684,7 +3658,7 @@ end)
 
 ef_f4.Parent = b_page5
 ef_f4.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-ef_f4.Position = UDim2.new(0, 0, 0.2400000000, 0)
+ef_f4.Position = UDim2.new(0, 0, 0.3100000000, 0)
 ef_f4.Size = UDim2.new(0, 498, 0, 30)
 ef_f4.BorderColor3 = Color3.fromRGB(250, 250, 250)
 ef_f4.Font = Enum.Font.Ubuntu
@@ -3717,7 +3691,7 @@ end)
 
 ef_f5.Parent = b_page5
 ef_f5.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-ef_f5.Position = UDim2.new(0, 0, 0.3100000000, 0)
+ef_f5.Position = UDim2.new(0, 0, 0.3800000000, 0)
 ef_f5.Size = UDim2.new(0, 498, 0, 30)
 ef_f5.BorderColor3 = Color3.fromRGB(250, 250, 250)
 ef_f5.Font = Enum.Font.Ubuntu
@@ -3790,9 +3764,20 @@ spawn(function()
     end
 end)
 
+ef_t2.Parent = b_page5
+ef_t2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+ef_t2.Position = UDim2.new(0, 0, 0.4500000000, 0)
+ef_t2.Size = UDim2.new(0, 498, 0, 30)
+ef_t2.BorderColor3 = Color3.fromRGB(250, 250, 250)
+ef_t2.Font = Enum.Font.Ubuntu
+ef_t2.Text = "Fruit"
+ef_t2.TextColor3 = Color3.fromRGB(255, 255, 255)
+ef_t2.TextSize = 14.000
+ef_t2.TextWrapped = true
+
 ef_f6.Parent = b_page5
 ef_f6.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-ef_f6.Position = UDim2.new(0, 0, 0.3800000000, 0)
+ef_f6.Position = UDim2.new(0, 0, 0.5200000000, 0)
 ef_f6.Size = UDim2.new(0, 498, 0, 30)
 ef_f6.BorderColor3 = Color3.fromRGB(250, 250, 250)
 ef_f6.Font = Enum.Font.Ubuntu
@@ -3947,7 +3932,7 @@ end  end end
               
  ef_f8.Parent = b_page5
 ef_f8.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-ef_f8.Position = UDim2.new(0, 0, 0.4500000000, 0)
+ef_f8.Position = UDim2.new(0, 0, 0.5900000000, 0)
 ef_f8.Size = UDim2.new(0, 498, 0, 30)
 ef_f8.BorderColor3 = Color3.fromRGB(250, 250, 250)
 ef_f8.Font = Enum.Font.Ubuntu
@@ -4024,7 +4009,7 @@ end end)
 
 ef_f7.Parent = b_page5
 ef_f7.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-ef_f7.Position = UDim2.new(0, 0, 0.5200000000, 0)
+ef_f7.Position = UDim2.new(0, 0, 0.6600000000, 0)
 ef_f7.Size = UDim2.new(0, 498, 0, 30)
 ef_f7.BorderColor3 = Color3.fromRGB(250, 250, 250)
 ef_f7.Font = Enum.Font.Ubuntu
@@ -4204,6 +4189,21 @@ end
 end)
 
 --// miss shop
+function code(x)
+game:GetService("ReplicatedStorage").Remotes.Redeem:InvokeServer(x)
+end
+
+ms_t1.Parent = b_page4
+ms_t1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+ms_t1.Position = UDim2.new(0, 0, 0.0300000000, 0)
+ms_t1.Size = UDim2.new(0, 498, 0, 30)
+ms_t1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+ms_t1.Font = Enum.Font.Ubuntu
+ms_t1.Text = "Shop"
+ms_t1.TextColor3 = Color3.fromRGB(255, 255, 255)
+ms_t1.TextSize = 14.000
+ms_t1.TextWrapped = true
+
 ms_f1.Parent = b_page4
 ms_f1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
 ms_f1.Position = UDim2.new(0, 0, 0.1000000000, 0)
@@ -4300,7 +4300,7 @@ function melebar()
 ms_melebar.Name = "ms_melebar"
 ms_melebar.Parent = b_page4
 ms_melebar.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-ms_melebar.Position = UDim2.new(0, 0, 0.1550000000, 0)
+ms_melebar.Position = UDim2.new(0, 0, 0.0850000000, 0)
 ms_melebar.Size = UDim2.new(0, 120, 0, 140)
 ms_melebar.BorderColor3 = Color3.fromRGB(250, 250, 250)
 ms_melebar.Visible = false
@@ -4485,9 +4485,23 @@ _G.ms_b2 = true
 
 game:GetService('RunService').RenderStepped:connect(function()
 if _G.ms_b2 then --script
-
-
-
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyItem","Swordsman Hat")
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyItem","Cutlass")
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyItem","Katana")
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyItem","Duel Katana")
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyItem","Iron Mace")
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyItem","Triple Katana")
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyItem","Pipe")
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyItem","Dual-Headed Blade")
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyItem","Soul Cane")
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyItem","Bisento")
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyItem","Slingshot")
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyItem","Musket")
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyItem","Flintlock")
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyItem","Refined Flintlock")
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyItem","Cannon")
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Slingshot","1")
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Slingshot","2")
 end
 end)
 elseif ms_b2.Text == "X" then --off
@@ -4676,7 +4690,7 @@ ms_f7.Position = UDim2.new(0, 0, 0.5200000000, 0)
 ms_f7.Size = UDim2.new(0, 498, 0, 30)
 ms_f7.BorderColor3 = Color3.fromRGB(250, 250, 250)
 ms_f7.Font = Enum.Font.Ubuntu
-ms_f7.Text = "   Auto Buy All Skill"
+ms_f7.Text = "   Auto Buy : Air Jump, Aura, Flash Step, Observation"
 ms_f7.TextColor3 = Color3.fromRGB(255, 255, 255)
 ms_f7.TextSize = 14.000
 ms_f7.TextWrapped = true
@@ -4700,9 +4714,10 @@ _G.ms_b7 = true
 
 game:GetService('RunService').RenderStepped:connect(function()
 if _G.ms_b7 then --script
-
-
-
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("KenTalk","Buy")
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyHaki","Buso")
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyHaki","Geppo")
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyHaki","Soru")
 end
 end)
 elseif ms_b7.Text == "X" then --off
@@ -4711,9 +4726,59 @@ _G.ms_b7 = false
 end
 end)
 
+ms_t2.Parent = b_page4
+ms_t2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+ms_t2.Position = UDim2.new(0, 0, 0.5900000000, 0)
+ms_t2.Size = UDim2.new(0, 498, 0, 30)
+ms_t2.BorderColor3 = Color3.fromRGB(250, 250, 250)
+ms_t2.Font = Enum.Font.Ubuntu
+ms_t2.Text = "Miss"
+ms_t2.TextColor3 = Color3.fromRGB(255, 255, 255)
+ms_t2.TextSize = 14.000
+ms_t2.TextWrapped = true
+
+ms_code.Name = "ms_code"
+ms_code.Parent = b_page4
+ms_code.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ms_code.Position = UDim2.new(0.00000000, 0, 0.660000000, 0)
+ms_code.Size = UDim2.new(0, 498, 0, 30)
+ms_code.BorderColor3 = Color3.fromRGB(250, 250, 250)
+ms_code.Font = Enum.Font.Ubuntu
+ms_code.Text = "Click Redeem All Code"
+ms_code.TextColor3 = Color3.fromRGB(250, 250, 250)
+ms_code.TextSize = 14.000
+ms_code.MouseButton1Down:connect(function()
+code("Sub2Fer999")
+code("kittgaming")
+code("NOOB_REFUND")
+code("SUB2GAMERROBOT_RESET1")
+code("TY_FOR_WATCHING")
+code("GAMER_ROBOT_1M")
+code("ADMINGIVEAWAY")
+code("SUBGAMERROBOT_RESET")
+code("GAMERROBOT_YT")
+code("BIGNEWS")
+code("FUDD10")
+code("fudd10_v2")
+code("Bluxxy")
+code("Starcodeheo")
+code("JCWK")
+code("Magicbus")
+code("TantaiGaming")
+code("Axiore")
+code("Sub2Daigrock")
+code("Sub2UncleKizaru")
+code("SUB2NOOBMASTER123")
+code("StrawHatMaine")
+code("Sub2OfficialNoobie")
+code("SUB2GAMERROBOT_EXP1")
+code("THEGREATACE")
+
+end)
+
 ms_f8.Parent = b_page4
 ms_f8.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-ms_f8.Position = UDim2.new(0, 0, 0.5900000000, 0)
+ms_f8.Position = UDim2.new(0, 0, 0.7300000000, 0)
 ms_f8.Size = UDim2.new(0, 498, 0, 30)
 ms_f8.BorderColor3 = Color3.fromRGB(250, 250, 250)
 ms_f8.Font = Enum.Font.Ubuntu
@@ -4758,7 +4823,7 @@ end)
 
 ms_f9.Parent = b_page4
 ms_f9.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-ms_f9.Position = UDim2.new(0, 0, 0.6600000000, 0)
+ms_f9.Position = UDim2.new(0, 0, 0.8000000000, 0)
 ms_f9.Size = UDim2.new(0, 498, 0, 30)
 ms_f9.BorderColor3 = Color3.fromRGB(250, 250, 250)
 ms_f9.Font = Enum.Font.Ubuntu
@@ -4791,6 +4856,7 @@ sk1.Visible = false
 end
 end)
 
+
 sk1 = Instance.new("TextButton")
 sk1.Name = "sk1"
 sk1.Parent = NTTGUI
@@ -4805,12 +4871,43 @@ sk1.TextSize = 20.000
 sk1.BackgroundTransparency = 1.000
 sk1.MouseButton1Down:connect(function()
 
-local pl = game.Players.LocalPlayer.Character.HumanoidRootPart 
-local location = pl.CFrame * CFrame.new(0,5,-50)
-local humanoid = game.Players.LocalPlayer.Character.Humanoid 
-pl.CFrame = location
+local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0.2), {CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame *CFrame.new(0,5,-50)}) tween:Play()       
 end)
 sk1.Visible = false
+
+ms_f10.Parent = b_page4
+ms_f10.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+ms_f10.Position = UDim2.new(0, 0, 0.8800000000, 0)
+ms_f10.Size = UDim2.new(0, 498, 0, 30)
+ms_f10.BorderColor3 = Color3.fromRGB(250, 250, 250)
+ms_f10.Font = Enum.Font.Ubuntu
+ms_f10.Text = "   Ifn Jump"
+ms_f10.TextColor3 = Color3.fromRGB(255, 255, 255)
+ms_f10.TextSize = 14.000
+ms_f10.TextWrapped = true
+ms_f10.TextXAlignment = Enum.TextXAlignment.Left
+
+ms_b10.Name = "ms_b10"
+ms_b10.Parent = ms_f10
+ms_b10.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ms_b10.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+ms_b10.Size = UDim2.new(0, 20, 0, 20)
+ms_b10.BorderColor3 = Color3.fromRGB(250, 250, 250)
+ms_b10.Font = Enum.Font.SourceSans
+ms_b10.Text = ""
+ms_b10.TextColor3 = Color3.fromRGB(250, 250, 250)
+ms_b10.TextSize = 30.000
+ms_b10.MouseButton1Down:connect(function()
+--on off 
+if ms_b10.Text == "" then --on
+ms_b10.Text = "X"
+_G.ifnjump = true
+elseif ms_b10.Text == "X" then --off
+ms_b10.Text = ""
+_G.ifnjump = false
+end
+end)
+
 
 melebar()
 
@@ -7144,9 +7241,9 @@ if game:GetService("ReplicatedStorage").Effect.Container:FindFirstChild("Respawn
 end   end)
 game.Players.LocalPlayer.PlayerGui.Main.Version.Text = "NTT HUB"
 
-local InfiniteJumpEnabled = true
+_G.ifnjump = false
 game:GetService("UserInputService").JumpRequest:connect(function()
-	if InfiniteJumpEnabled then
+	if _G.ifnjump then
 		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
 	end
 end) 
