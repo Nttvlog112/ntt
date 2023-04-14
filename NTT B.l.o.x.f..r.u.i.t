@@ -4877,7 +4877,7 @@ sk1.TextSize = 20.000
 sk1.BackgroundTransparency = 1.000
 sk1.MouseButton1Down:connect(function()
 
-local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0.2), {CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame *CFrame.new(0,0,-50)}) tween:Play()       
+local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0.2), {CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame *CFrame.new(0,0,-80)}) tween:Play()       
 end)
 sk1.Visible = false
 
