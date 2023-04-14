@@ -1400,7 +1400,7 @@ elseif MyLevel == 1900 or MyLevel <= 1924 then --Jungle Pirate [Lv. 1900]
                                             CFrameMob = CFrame.new(-697.4462280273438, 173.2466278076172, -11212.94140625)
                                             CFrameBring = CFrame.new(-638.2747192382812, 66.16278076171875, -11293.0546875)       
 
-                     elseif MyLevel == 2200 or MyLevel <= m_f104 then --m_b3
+                     elseif MyLevel == 2200 or MyLevel <= 2224 then --m_b3
                                             Ms = "Cookie Crafter [Lv. 2200]"
                                             NameQuest = "CakeQuest1" --name get quest
                                             LevelQuest = 1        -- lv quest
@@ -1409,8 +1409,8 @@ elseif MyLevel == 1900 or MyLevel <= 1924 then --Jungle Pirate [Lv. 1900]
                                             CFrameMob = CFrame.new(-2289.203369140625, 92.37846374511719, -12041.884765625)
                                             CFrameBring = CFrame.new(-2367.436279296875, 38.14149856567383, -12120.3876953125)
                                             
-     elseif MyLevel == m_f105 or MyLevel <= 2249  then --m_b3
-                                            Ms = "Cake Guard [Lv. ef_f85]"
+     elseif MyLevel == 2225 or MyLevel <= 2249  then --m_b3
+                                            Ms = "Cake Guard [Lv. 2225]"
                                             NameQuest = "CakeQuest2" --name get quest
                                             LevelQuest = 1      -- lv quest
                                             NameMon = "Cake Quest Giver 2"    --name npc
@@ -1419,7 +1419,7 @@ elseif MyLevel == 1900 or MyLevel <= 1924 then --Jungle Pirate [Lv. 1900]
                                             CFrameBring = CFrame.new(-1550.4625244140625, 38.14139175415039, -12253.3388671875)     
 
         elseif MyLevel == 2250 or MyLevel <= 2299  then --m_b3
-                                            Ms = "Cake Guard [Lv. ef_f85]"
+                                            Ms = "Cake Guard [Lv. 2250]"
                                             NameQuest = "CakeQuest2" --name get quest
                                             LevelQuest = 2       -- lv quest
                                             NameMon = "Cake Quest Giver 2"    --name npc
@@ -4579,7 +4579,13 @@ _G.ms_b4 = true
 
 game:GetService('RunService').RenderStepped:connect(function()
 if _G.ms_b4 then --script
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Bones","Buy",1,1)
+local args = {
+    [1] = "Bones",
+    [2] = "Buy",
+    [3] = 1,
+    [4] = 1
+}
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
 end
 end)
 elseif ms_b4.Text == "X" then --off
@@ -4871,7 +4877,7 @@ sk1.TextSize = 20.000
 sk1.BackgroundTransparency = 1.000
 sk1.MouseButton1Down:connect(function()
 
-local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0.2), {CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame *CFrame.new(0,5,-50)}) tween:Play()       
+local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0.2), {CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame *CFrame.new(0,0,-50)}) tween:Play()       
 end)
 sk1.Visible = false
 
@@ -5633,9 +5639,6 @@ elseif c_b3.Text == "X" then --off
 c_b3.Text = ""
 _G.c_b3 = false
 stoptp()
-if st_b3.Text == "X" then
-_G.FastAttack = true
-end
 end
 end)
 
@@ -5645,8 +5648,7 @@ if _G.c_b3 then --script
 local target = unpack(GetPlayer(c_tb.Text)).Character
 local pos = target.HumanoidRootPart --check pos
 if (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 250 then
-                       usetool()  jump()
-_G.FastAttack = false          
+                       usetool() 
 target.HumanoidRootPart.Size = Vector3.new(40, 40, 40)
 target.HumanoidRootPart.Transparency = 1
 target.HumanoidRootPart.BrickColor = BrickColor.new("Really black")
@@ -6892,6 +6894,7 @@ spawn(function()
        end
     end
 end)
+
 end
 end)
 
