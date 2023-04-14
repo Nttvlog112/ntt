@@ -4947,9 +4947,11 @@ _G.ms_b11 = true
 game:GetService('RunService').RenderStepped:connect(function()
 if _G.ms_b11 then --script
 
-for i,v in pairs(game:GetService("Players"):GetPlayers()) do
-if v.Name ~= lplayer.Name then
-if (v.Character.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 60 then                           
+local Players = game:GetService("Players")	
+		    for i, v in pairs(Players:GetPlayers()) do
+		        if v.Name ~= game.Players.LocalPlayer.Name then
+        if (v.Character.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <=  80 then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame * CFrame.new(0,0,90)
 end end end
 end
 end)
