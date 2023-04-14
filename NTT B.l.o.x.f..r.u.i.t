@@ -158,6 +158,7 @@ ms_f7= Instance.new("TextLabel")
 ms_f8= Instance.new("TextLabel")
 ms_f9= Instance.new("TextLabel")
 ms_f10= Instance.new("TextLabel")
+ms_f11= Instance.new("TextLabel")
 
 ms_b1= Instance.new("TextButton")
 ms_b2= Instance.new("TextButton")
@@ -169,6 +170,7 @@ ms_b7= Instance.new("TextButton")
 ms_b8= Instance.new("TextButton")
 ms_b9= Instance.new("TextButton")
 ms_b10= Instance.new("TextButton")
+ms_b11= Instance.new("TextButton")
 
 -- // esp - fruit
 ef_t1 = Instance.new("TextLabel")
@@ -4911,6 +4913,49 @@ _G.ifnjump = true
 elseif ms_b10.Text == "X" then --off
 ms_b10.Text = ""
 _G.ifnjump = false
+end
+end)
+
+ms_f11.Parent = b_page4
+ms_f11.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+ms_f11.Position = UDim2.new(0, 0, 0.9500000000, 0)
+ms_f11.Size = UDim2.new(0, 498, 0, 30)
+ms_f11.BorderColor3 = Color3.fromRGB(250, 250, 250)
+ms_f11.Font = Enum.Font.Ubuntu
+ms_f11.Text = "   Auto Né Tránh"
+ms_f11.TextColor3 = Color3.fromRGB(255, 255, 255)
+ms_f11.TextSize = 14.000
+ms_f11.TextWrapped = true
+ms_f11.TextXAlignment = Enum.TextXAlignment.Left
+
+ms_b11.Name = "ms_b11"
+ms_b11.Parent = ms_f11
+ms_b11.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ms_b11.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+ms_b11.Size = UDim2.new(0, 20, 0, 20)
+ms_b11.BorderColor3 = Color3.fromRGB(250, 250, 250)
+ms_b11.Font = Enum.Font.SourceSans
+ms_b11.Text = ""
+ms_b11.TextColor3 = Color3.fromRGB(250, 250, 250)
+ms_b11.TextSize = 30.000
+ms_b11.MouseButton1Down:connect(function()
+--on off 
+if ms_b11.Text == "" then --on
+ms_b11.Text = "X"
+_G.ms_b11 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.ms_b11 then --script
+
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+if v.Name ~= lplayer.Name then
+if (v.Character.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 60 then                           
+end end end
+end
+end)
+elseif ms_b11.Text == "X" then --off
+ms_b11.Text = ""
+_G.ms_b11 = false
 end
 end)
 
