@@ -812,14 +812,9 @@ function TP1(P1)
                 
                 function TP2(P1)          
                     local Distance = (P1.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
-                  if Distance < 200 then
-                        Speed = 400
-  elseif Distance < 500 then
-                        Speed = 300
-              elseif Distance < 1000 then
-                        Speed = 150
-   elseif Distance >= 1500 then
-                        Speed = 120
+                  if Distance >= 0 then
+                        Speed = 100
+  
                     end
                    local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Distance/Speed), {CFrame = P1 }) tween:Play()                                    
               end
@@ -1457,7 +1452,7 @@ elseif MyLevel == 1900 or MyLevel <= 1924 then --Jungle Pirate [Lv. 1900]
                                             CFrameBring = CFrame.new(-62.194541931152344, 25.07767105102539, -12263.3408203125)
                                             
      elseif MyLevel == 2375 or MyLevel <= 2399  then --m_b3
-                                            Ms = "Chocolate Bar Battler [Lv. 2325]"
+                                            Ms = "Candy Rebel [Lv. 2375]"
                                             NameQuest = "ChocQuest2" --name get quest
                                             LevelQuest = 2       -- lv quest
                                             NameMon = "Chocolate Quest Giver 2"   --name npc
@@ -1533,7 +1528,7 @@ m_b1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 m_b1.Size = UDim2.new(0, 80, 0, 30)
 m_b1.BorderColor3 = Color3.fromRGB(250, 250, 250)
 m_b1.Font = Enum.Font.SourceSans
-m_b1.Text = "Tool : Select"
+m_b1.Text = "Tool : Mele"
 m_b1.TextColor3 = Color3.fromRGB(250, 250, 250)
 m_b1.TextSize = 18.000
 m_b1.MouseButton1Down:connect(function()
@@ -4946,13 +4941,13 @@ _G.ms_b11 = true
 
 game:GetService('RunService').RenderStepped:connect(function()
 if _G.ms_b11 then --script
-
 local Players = game:GetService("Players")	
 		    for i, v in pairs(Players:GetPlayers()) do
 		        if v.Name ~= game.Players.LocalPlayer.Name then
         if (v.Character.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <=  100 then
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame * CFrame.new(0,0,-101)
-end end end
+        if game.Players.LocalPlayer.Character.Humanoid.Health >  game.Players.LocalPlayer.Character.Humanoid.MaxHealth / 3.5 then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame * CFrame.new(0,0,101)   
+end end end end
 end
 end)
 elseif ms_b11.Text == "X" then --off
@@ -4961,6 +4956,12 @@ _G.ms_b11 = false
 end
 end)
 
+spawn(function()
+    while task.wait(0.1) do
+        pcall(function()
+        if game.Players.LocalPlayer.Character.Humanoid.Health <  game.Players.LocalPlayer.Character.Humanoid.MaxHealth / 3.5 then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame  = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame* CFrame.new(0,1000,0)
+     end end) end end)
 
 melebar()
 
@@ -5503,6 +5504,178 @@ if _G.mi_b5 then --script
 end
 end)
 
+mi_f6.Parent = b_page6
+mi_f6.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+mi_f6.Position = UDim2.new(0, 0, 0.1000000000, 0)
+mi_f6.Size = UDim2.new(0, 498, 0, 30)
+mi_f6.BorderColor3 = Color3.fromRGB(250, 250, 250)
+mi_f6.Font = Enum.Font.Ubuntu
+mi_f6.Text = "   Auto Katakuri"
+mi_f6.TextColor3 = Color3.fromRGB(255, 255, 255)
+mi_f6.TextSize = 14.000
+mi_f6.TextWrapped = true
+mi_f6.TextXAlignment = Enum.TextXAlignment.Left
+
+if game.PlaceId == 7449423635 then -- sea3
+spawn(function()
+    while task.wait() do
+        pcall(function()
+            if string.len(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner")) == 88 then
+                mi_f6.Text = ("Auto Katakuri | Mob Killed Cake : "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,41))
+            elseif string.len(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner")) == 87 then
+                mi_f6.Text = ("Auto Katakuri | Mob Killed Cake : "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,40))
+            elseif string.len(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner")) == 86 then
+                mi_f6.Text = ("Auto Katakuri | Mob Killed Cake : "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,39))
+            else
+                mi_f6.Text = ("Auto Katakuri | Cake Prince Spawned!")
+            end
+        end)
+    end
+end)
+end
+
+mi_b6.Name = "mi_b6"
+mi_b6.Parent = mi_f6
+mi_b6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+mi_b6.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+mi_b6.Size = UDim2.new(0, 20, 0, 20)
+mi_b6.BorderColor3 = Color3.fromRGB(250, 250, 250)
+mi_b6.Font = Enum.Font.SourceSans
+mi_b6.Text = ""
+mi_b6.TextColor3 = Color3.fromRGB(250, 250, 250)
+mi_b6.TextSize = 30.000
+mi_b6.MouseButton1Down:connect(function()
+--on off 
+if mi_b6.Text == "" then --on
+mi_b6.Text = "X"
+_G.mi_b6 = true
+elseif mi_b6.Text == "X" then --off
+mi_b6.Text = ""
+_G.mi_b6 = false
+end
+end)
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.mi_b6 then --script
+  if mi_f6.Text == "Auto Katakuri | Cake Prince Spawned!" then
+  
+jump()
+if game:GetService("Workspace").Map.CakeLoaf.BigMirror.Other.Transparency == 0 and (CFrame.new(-1990.672607421875, 4532.99951171875, -14973.6748046875).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude >= 2000 then
+                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2151.82153, 149.315704, -12404.9053)
+                    end  
+for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
+if v.Name == "Cake Prince [Lv. 2300] [Raid Boss]" then
+local pos = v.HumanoidRootPart --check pos
+                    local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                  if Distance < 500 then
+                  Speed = 725
+                  elseif Distance < 200 then
+                  Speed = 7000
+                  elseif Distance < 150 then
+                  Speed = 200000
+                  elseif Distance < 1000 then
+                        Speed = 400        
+    elseif Distance >= 1500 then
+                  Speed = 100
+           end
+            
+       if v.Humanoid.Health > 0 then -- check health
+     usetool()
+     click() -- click          
+       v.Humanoid:ChangeState(14)
+      v.HumanoidRootPart.Size = Vector3.new(50, 50, 10)     --size hix box  
+      v.HumanoidRootPart.CanCollide = false                                                
+v.Head.CanCollide = false                                 
+
+game:GetService("TweenService"):Create(
+                        game.Players.LocalPlayer.Character.HumanoidRootPart,
+                        TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
+                        {CFrame = v.HumanoidRootPart.CFrame* CFrame.new(0, st_b5.Text, 0) }
+                    ):Play()       
+
+end end end
+
+else
+
+jump()
+if not game:GetService("Workspace").Enemies:FindFirstChild(v)  then
+TP1(CFrame.new(-2094.290771484375, 148.5541229248047, -12238.0126953125))
+end 
+game.ReplicatedStorage.Remotes.CommF_:InvokeServer("CakePrinceSpawner")
+for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
+if v.Name == "Cookie Crafter [Lv. 2200]" or v.Name == "Cake Guard [Lv. 2225]" or v.Name == "Baking Staff [Lv. 2250]" or v.Name == "Head Baker [Lv. 2275]"  then --name mob
+
+      local pos = v.HumanoidRootPart --check pos
+                    local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                  if Distance < 500 then
+                  Speed = 725
+                  elseif Distance < 200 then
+                  Speed = 7000
+                  elseif Distance < 150 then
+                  Speed = 200000
+                  elseif Distance < 1000 then
+                        Speed = 400        
+    elseif Distance >= 1500 then
+                  Speed = 100
+           end
+            
+       if v.Humanoid.Health > 0 then -- check health
+     usetool()
+     click() -- click          
+       v.Humanoid:ChangeState(14)
+      v.HumanoidRootPart.Size = Vector3.new(50, 50, 10)     --size hix box  
+      v.HumanoidRootPart.CanCollide = false                                                
+v.Head.CanCollide = false                                 
+if v.Humanoid:FindFirstChild("Animator") then
+                            v.Humanoid.Animator:Destroy()
+                        end
+                        
+game:GetService("TweenService"):Create(
+                        game.Players.LocalPlayer.Character.HumanoidRootPart,
+                        TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
+                        {CFrame = v.HumanoidRootPart.CFrame* CFrame.new(0, st_b5.Text, 0) }
+                    ):Play()       
+                    
+                    end end end end end end)                
+
+ 
+spawn(function()
+    while task.wait(_G.time) do       
+            pcall(function()          
+            if _G.mi_b6 then
+            if _G.bringmob then       
+                for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
+                    if v.Name == "Cookie Crafter [Lv. 2200]" or v.Name == "Cake Guard [Lv. 2225]" or v.Name == "Baking Staff [Lv. 2250]" or v.Name == "Head Baker [Lv. 2275]" and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= _G.distance then        
+if   st_b5.Text == "0" then                        
+ v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+ elseif st_b5.Text == "10" then
+ v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-9.5,0)
+ elseif st_b5.Text == "20" then
+ v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-19.5,0)
+ elseif st_b5.Text == "30" then
+ v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-29.5,0)
+ elseif st_b5.Text == "40" then
+ v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-39.5,0)
+ elseif st_b5.Text == "50" then
+ v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-49.5,0)
+ end                       
+  v.Humanoid.JumpPower = 0                          
+  v.Humanoid.WalkSpeed = 0                           
+v.HumanoidRootPart.Size = Vector3.new(60,60,10)                  
+ v.HumanoidRootPart.Transparency = 1                        
+ v.HumanoidRootPart.CanCollide = false                           
+ v.Head.CanCollide = false                           
+ v.Humanoid:ChangeState(11)                           
+ v.Humanoid:ChangeState(14)                       
+  setscriptable(game.Players.LocalPlayer,"SimulationRadius",true)                          
+  sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius",math.huge)                    
+    end end end end end) end end)       
+
+if game.PlaceId == 7449423635 then -- sea3
+mi_f6.Visible = true
+else
+mi_f6.Visible = false
+end
 
 -- // combat
 
