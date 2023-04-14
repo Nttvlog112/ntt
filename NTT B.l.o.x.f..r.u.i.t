@@ -4950,8 +4950,8 @@ if _G.ms_b11 then --script
 local Players = game:GetService("Players")	
 		    for i, v in pairs(Players:GetPlayers()) do
 		        if v.Name ~= game.Players.LocalPlayer.Name then
-        if (v.Character.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <=  80 then
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame * CFrame.new(0,0,90)
+        if (v.Character.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <=  100 then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame * CFrame.new(0,0,-101)
 end end end
 end
 end)
