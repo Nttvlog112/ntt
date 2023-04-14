@@ -737,6 +737,7 @@ tool("Wadents Sword")
 tool("Soul Cane")
 tool("Pipe")
 tool("Jitte")
+tool("Spikey Trident")
 tool("Gravity Cane")
 tool("Dragon Trident")
 tool("Yama")
@@ -2316,7 +2317,6 @@ spawn(function() -- skill auto
             if _G.b9 then
             for i,v in pairs(game.Workspace.SeaBeasts:GetChildren()) do
   if v:FindFirstChild("HumanoidRootPart") then
- if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 300 then
  mele()
    Skill()
    wait(1)
@@ -2325,7 +2325,7 @@ spawn(function() -- skill auto
    wait(1)
    sword()
    Skill()
-end end end end end) end end)         
+end end end end) end end)         
 
 bartool()
 
@@ -4944,9 +4944,9 @@ if _G.ms_b11 then --script
 local Players = game:GetService("Players")	
 		    for i, v in pairs(Players:GetPlayers()) do
 		        if v.Name ~= game.Players.LocalPlayer.Name then
-        if (v.Character.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <=  100 then
+        if (v.Character.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <=  150 then
         if game.Players.LocalPlayer.Character.Humanoid.Health >  game.Players.LocalPlayer.Character.Humanoid.MaxHealth / 3.5 then
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame * CFrame.new(0,0,101)   
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame * CFrame.new(0,0,152)   
 end end end end
 end
 end)
@@ -5594,13 +5594,14 @@ game:GetService("TweenService"):Create(
                     ):Play()       
 
 end end end
+end end end)
 
-else
-
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.mi_b6 then --script
+  if not game:GetService("Workspace").Enemies:FindFirstChild("Cake Prince [Lv. 2300] [Raid Boss]") then
 jump()
-if not game:GetService("Workspace").Enemies:FindFirstChild(v)  then
 TP1(CFrame.new(-2094.290771484375, 148.5541229248047, -12238.0126953125))
-end 
+
 game.ReplicatedStorage.Remotes.CommF_:InvokeServer("CakePrinceSpawner")
 for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
 if v.Name == "Cookie Crafter [Lv. 2200]" or v.Name == "Cake Guard [Lv. 2225]" or v.Name == "Baking Staff [Lv. 2250]" or v.Name == "Head Baker [Lv. 2275]"  then --name mob
