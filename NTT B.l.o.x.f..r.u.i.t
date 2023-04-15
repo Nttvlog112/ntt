@@ -5171,7 +5171,7 @@ mi_f1.Position = UDim2.new(0, 0, 0.1000000000, 0)
 mi_f1.Size = UDim2.new(0, 498, 0, 30)
 mi_f1.BorderColor3 = Color3.fromRGB(250, 250, 250)
 mi_f1.Font = Enum.Font.Ubuntu
-mi_f1.Text = "   Auto Get All Item Sword - Gun Boss"
+mi_f1.Text = "   Auto Get All Item Boss"
 mi_f1.TextColor3 = Color3.fromRGB(255, 255, 255)
 mi_f1.TextSize = 14.000
 mi_f1.TextWrapped = true
@@ -5370,10 +5370,11 @@ end)
 --Sea 1
 if game.PlaceId == 2753915549 then -- sea1
 mi_f2.Text = "   Auto Saber | Not have"
-mi_f3.Text = "   Auto Pole | Not have"
+mi_f3.Visible = false
 mi_f4.Visible = false
 mi_f5.Visible = false
 mi_f6.Visible = false
+
 end
 if game.PlaceId == 4442272183 then -- sea2
 mi_f2.Text = "   Auto Ectoplasm"
@@ -5394,12 +5395,13 @@ if game.PlaceId == 2753915549 then -- sea1
 
 game:GetService('RunService').RenderStepped:connect(function()
 if _G.mi_b1 then --script
+
 click()
 if _G.item1 == false then
-TP1(CFrame.new(-5769.76513671875, 82.67086029052734, 8727.9091796875))
+TP1(CFrame.new(-4999.19970703125, 89.38157653808594, 4350.54541015625))
 jump()
 for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
-if v.Name == "Magma Admiral [Lv. 350] [Boss]" then
+if v.Name == "Vice Admiral [Lv. 130] [Boss]" then
 local pos = v.HumanoidRootPart --check pos
                     local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
                   if Distance < 500 then
@@ -5414,6 +5416,60 @@ end end end
 
 if _G.item1 == true then
 if _G.item2 == false then
+TP1(CFrame.new(5189.96533203125, 56.140533447265625, 830.3954467773438))
+jump()
+for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
+if v.Name == "Chief Warden [Lv. 230] [Boss]" then
+local pos = v.HumanoidRootPart --check pos
+                    local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                  if Distance < 500 then
+                  Speed = 300
+                  elseif Distance >= 500 then
+                  Speed = 120
+                  end
+v.HumanoidRootPart.Size = Vector3.new(50, 50, 10)     --size hix box  
+v.HumanoidRootPart.CanCollide = false           
+ game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart,TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),{CFrame = v.HumanoidRootPart.CFrame* CFrame.new(0, st_b5.Text, 0) } ):Play()       
+end end end end
+
+if _G.item2 == true then
+if _G.item3== false then
+TP1(CFrame.new(5189.96533203125, 56.140533447265625, 830.3954467773438))
+jump()
+for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
+if v.Name == "Swan [Lv. 240] [Boss]" then
+local pos = v.HumanoidRootPart --check pos
+                    local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                  if Distance < 500 then
+                  Speed = 300
+                  elseif Distance >= 500 then
+                  Speed = 120
+                  end
+v.HumanoidRootPart.Size = Vector3.new(50, 50, 10)     --size hix box  
+v.HumanoidRootPart.CanCollide = false           
+ game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart,TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),{CFrame = v.HumanoidRootPart.CFrame* CFrame.new(0, st_b5.Text, 0) } ):Play()       
+end end end end
+
+if _G.item3 == true then
+if _G.item4== false then
+TP1(CFrame.new(-5769.76513671875, 82.67086029052734, 8727.9091796875))
+jump()
+for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
+if v.Name == "Magma Admiral [Lv. 350] [Boss]" then
+local pos = v.HumanoidRootPart --check pos
+                    local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                  if Distance < 500 then
+                  Speed = 300
+                  elseif Distance >= 500 then
+                  Speed = 120
+                  end
+v.HumanoidRootPart.Size = Vector3.new(50, 50, 10)     --size hix box  
+v.HumanoidRootPart.CanCollide = false           
+ game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart,TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),{CFrame = v.HumanoidRootPart.CFrame* CFrame.new(0, st_b5.Text, 0) } ):Play()       
+end end end end
+
+if _G.item4 == true then
+if _G.item5 == false then
 TP1(CFrame.new(61348.73046875, 31.338871002197266, 1171.451416015625))
 jump()
 for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
@@ -5430,8 +5486,8 @@ v.HumanoidRootPart.CanCollide = false
  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart,TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),{CFrame = v.HumanoidRootPart.CFrame* CFrame.new(0, st_b5.Text, 0) } ):Play()       
 end end end end
 
-if _G.item2 == true then
-if _G.item3 == false then
+if _G.item5 == true then
+if _G.item6 == false then
 TP1(CFrame.new(-8030.970703125, 5578.28173828125, -604.7830200195312))
 jump()
 for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
@@ -5448,8 +5504,8 @@ v.HumanoidRootPart.CanCollide = false
  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart,TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),{CFrame = v.HumanoidRootPart.CFrame* CFrame.new(0, st_b5.Text, 0) } ):Play()       
 end end end end
 
-if _G.item3== true then
-if _G.item4 == false then
+if _G.item6== true then
+if _G.item7== false then
 TP1(CFrame.new(-8012.76806640625, 5662.9443359375, -2306.806640625))
 jump()
 for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
@@ -5466,7 +5522,26 @@ v.HumanoidRootPart.CanCollide = false
  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart,TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),{CFrame = v.HumanoidRootPart.CFrame* CFrame.new(0, st_b5.Text, 0) } ):Play()       
 end end end end
 
+if _G.item7== true then
+if _G.item8== false then
+TP1(CFrame.new(6184.37548828125, 59.863372802734375, 3862.398193359375))
+jump()
+for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
+if v.Name == "Cyborg 675] [Boss]" then
+local pos = v.HumanoidRootPart --check pos
+                    local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                  if Distance < 500 then
+                  Speed = 300
+                  elseif Distance >= 500 then
+                  Speed = 120
+                  end
+v.HumanoidRootPart.Size = Vector3.new(50, 50, 10)     --size hix box  
+v.HumanoidRootPart.CanCollide = false           
+ game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart,TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),{CFrame = v.HumanoidRootPart.CFrame* CFrame.new(0, st_b5.Text, 0) } ):Play()       
+end end end end
+
 end end)
+
 
 -- //check item boss
 
@@ -5474,21 +5549,37 @@ _G.item1= false
 _G.item2=false
 _G.item3=false
 _G.item4= false
+_G.item5= false
+_G.item6=false
+_G.item7=false
+_G.item8= false
 
 game:GetService('RunService').RenderStepped:connect(function()
 for i, v in pairs(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("getInventoryWeapons")) do
-    if v.Name == "Refined Flinlock" then
-    _G.item1 = true
+ if v.Name == "Coat" then
+ _G.item1= true
+ end
+ if v.Name == "Wardens Sword" thrn
+ _G.item2 = true
+ end
+ if v.Name == "Pink Coat" then
+ _G.item3= true 
+ end
+   if v.Name == "Refined Musket" then
+    _G.item4= true
     end
     if v.Name == "Trident" then
-    _G.item2 = true
+    _G.item5= true
     end
     if v.Name == "Bazzoka" then
-    _G.item3 = true
+    _G.item6= true
     end
     if v.Name == "Pole (1nd Form" then
-    _G.item4 = true
+    _G.item7 = true
     end  
+    if v.Name == "Cool Shades" then
+    _G.item8= true
+    end
 end end)
 
 end -- sea 1
