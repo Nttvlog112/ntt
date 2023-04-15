@@ -2577,7 +2577,7 @@ end)
 
 s_t1.Parent = b_page2
 s_t1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-s_t1.Position = UDim2.new(0, 0, 0.4500000000, 0)
+s_t1.Position = UDim2.new(0, 0, 0.5200000000, 0)
 s_t1.Size = UDim2.new(0, 498, 0, 30)
 s_t1.BorderColor3 = Color3.fromRGB(250, 250, 250)
 s_t1.Font = Enum.Font.Ubuntu
@@ -5691,7 +5691,9 @@ end end end)
 game:GetService('RunService').RenderStepped:connect(function()
 if _G.mi_b6 then --script
   if not game:GetService("Workspace").Enemies:FindFirstChild("Cake Prince [Lv. 2300] [Raid Boss]") then
-
+if game:GetService("Workspace").Map.CakeLoaf.BigMirror.Other.Transparency == 0 and (CFrame.new(-1990.672607421875, 4532.99951171875, -14973.6748046875).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude >= 2000 then
+                        Tween(CFrame.new(-2151.82153, 149.315704, -12404.9053))
+                    end
 TP1(CFrame.new(-2094.290771484375, 148.5541229248047, -12238.0126953125))
 
 local humanoid = game.Players.LocalPlayer.Character.Humanoid 
