@@ -432,7 +432,7 @@ b_6.Position = UDim2.new(0, 0, 0.250000000, 0)
 b_6.Size = UDim2.new(0, 100, 0, 25)
 b_6.Font = Enum.Font.Ubuntu
 b_6.BorderColor3 = Color3.fromRGB(250, 250, 250)
-b_6.Text = "   Get Item"
+b_6.Text = "   Mob - Get Item"
 b_6.TextColor3 = Color3.fromRGB(255, 255, 255)
 b_6.TextSize = 14.000
 b_6.TextWrapped = false
@@ -2581,7 +2581,7 @@ s_t1.Position = UDim2.new(0, 0, 0.5200000000, 0)
 s_t1.Size = UDim2.new(0, 498, 0, 30)
 s_t1.BorderColor3 = Color3.fromRGB(250, 250, 250)
 s_t1.Font = Enum.Font.Ubuntu
-s_t1.Text = "Start"
+s_t1.Text = "Data Player"
 s_t1.TextColor3 = Color3.fromRGB(255, 255, 255)
 s_t1.TextSize = 14.000
 s_t1.TextWrapped = true
@@ -5171,7 +5171,7 @@ mi_f1.Position = UDim2.new(0, 0, 0.1000000000, 0)
 mi_f1.Size = UDim2.new(0, 498, 0, 30)
 mi_f1.BorderColor3 = Color3.fromRGB(250, 250, 250)
 mi_f1.Font = Enum.Font.Ubuntu
-mi_f1.Text = "   Auto Farm Ectoplasm"
+mi_f1.Text = "   Auto Get All Item Sword - Gun Boss | Chưa có đâu baby à:))"
 mi_f1.TextColor3 = Color3.fromRGB(255, 255, 255)
 mi_f1.TextSize = 14.000
 mi_f1.TextWrapped = true
@@ -5197,10 +5197,206 @@ _G.mi_b1 = false
 stoptp()
 end
 end)
+
+mi_f2.Parent = b_page6
+mi_f2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+mi_f2.Position = UDim2.new(0, 0, 0.1700000000, 0)
+mi_f2.Size = UDim2.new(0, 498, 0, 30)
+mi_f2.BorderColor3 = Color3.fromRGB(250, 250, 250)
+mi_f2.Font = Enum.Font.Ubuntu
+mi_f2.Text = "   Auto"
+mi_f2.TextColor3 = Color3.fromRGB(255, 255, 255)
+mi_f2.TextSize = 14.000
+mi_f2.TextWrapped = true
+mi_f2.TextXAlignment = Enum.TextXAlignment.Left
+
+mi_b2.Name = "mi_b2"
+mi_b2.Parent = mi_f2
+mi_b2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+mi_b2.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+mi_b2.Size = UDim2.new(0, 20, 0, 20)
+mi_b2.BorderColor3 = Color3.fromRGB(250, 250, 250)
+mi_b2.Font = Enum.Font.SourceSans
+mi_b2.Text = ""
+mi_b2.TextColor3 = Color3.fromRGB(250, 250, 250)
+mi_b2.TextSize = 30.000
+mi_b2.MouseButton1Down:connect(function()
+--on off 
+if mi_b2.Text == "" then --on
+mi_b2.Text = "X"
+_G.mi_b2 = true
+elseif mi_b2.Text == "X" then --off
+mi_b2.Text = ""
+_G.mi_b2 = false
+stoptp()
+end
+end)
+
+mi_f3.Parent = b_page6
+mi_f3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+mi_f3.Position = UDim2.new(0, 0, 0.2400000000, 0)
+mi_f3.Size = UDim2.new(0, 498, 0, 30)
+mi_f3.BorderColor3 = Color3.fromRGB(250, 250, 250)
+mi_f3.Font = Enum.Font.Ubuntu
+mi_f3.Text = "   Auto"
+mi_f3.TextColor3 = Color3.fromRGB(255, 255, 255)
+mi_f3.TextSize = 14.000
+mi_f3.TextWrapped = true
+mi_f3.TextXAlignment = Enum.TextXAlignment.Left
+
+mi_b3.Name = "mi_b3"
+mi_b3.Parent = mi_f3
+mi_b3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+mi_b3.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+mi_b3.Size = UDim2.new(0, 20, 0, 20)
+mi_b3.BorderColor3 = Color3.fromRGB(250, 250, 250)
+mi_b3.Font = Enum.Font.SourceSans
+mi_b3.Text = ""
+mi_b3.TextColor3 = Color3.fromRGB(250, 250, 250)
+mi_b3.TextSize = 30.000
+mi_b3.MouseButton1Down:connect(function()
+--on off 
+if mi_b3.Text == "" then --on
+mi_b3.Text = "X"
+_G.mi_b3 = true
+elseif mi_b3.Text == "X" then --off
+mi_b3.Text = ""
+_G.mi_b3 = false
+stoptp()
+end
+end)
+
+mi_f4.Parent = b_page6
+mi_f4.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+mi_f4.Position = UDim2.new(0, 0, 0.3100000000, 0)
+mi_f4.Size = UDim2.new(0, 498, 0, 30)
+mi_f4.BorderColor3 = Color3.fromRGB(250, 250, 250)
+mi_f4.Font = Enum.Font.Ubuntu
+mi_f4.Text = "   Auto"
+mi_f4.TextColor3 = Color3.fromRGB(255, 255, 255)
+mi_f4.TextSize = 14.000
+mi_f4.TextWrapped = true
+mi_f4.TextXAlignment = Enum.TextXAlignment.Left
+
+mi_b4.Name = "mi_b4"
+mi_b4.Parent = mi_f4
+mi_b4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+mi_b4.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+mi_b4.Size = UDim2.new(0, 20, 0, 20)
+mi_b4.BorderColor3 = Color3.fromRGB(250, 250, 250)
+mi_b4.Font = Enum.Font.SourceSans
+mi_b4.Text = ""
+mi_b4.TextColor3 = Color3.fromRGB(250, 250, 250)
+mi_b4.TextSize = 30.000
+mi_b4.MouseButton1Down:connect(function()
+--on off 
+if mi_b4.Text == "" then --on
+mi_b4.Text = "X"
+_G.mi_b4 = true
+elseif mi_b4.Text == "X" then --off
+mi_b4.Text = ""
+_G.mi_b4 = false
+end
+end)
+
+mi_f5.Parent = b_page6
+mi_f5.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+mi_f5.Position = UDim2.new(0, 0, 0.3800000000, 0)
+mi_f5.Size = UDim2.new(0, 498, 0, 30)
+mi_f5.BorderColor3 = Color3.fromRGB(250, 250, 250)
+mi_f5.Font = Enum.Font.Ubuntu
+mi_f5.Text = "   Auto"
+mi_f5.TextColor3 = Color3.fromRGB(255, 255, 255)
+mi_f5.TextSize = 14.000
+mi_f5.TextWrapped = true
+mi_f5.TextXAlignment = Enum.TextXAlignment.Left
+
+mi_b5.Name = "mi_b5"
+mi_b5.Parent = mi_f5
+mi_b5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+mi_b5.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+mi_b5.Size = UDim2.new(0, 20, 0, 20)
+mi_b5.BorderColor3 = Color3.fromRGB(250, 250, 250)
+mi_b5.Font = Enum.Font.SourceSans
+mi_b5.Text = ""
+mi_b5.TextColor3 = Color3.fromRGB(250, 250, 250)
+mi_b5.TextSize = 30.000
+mi_b5.MouseButton1Down:connect(function()
+--on off 
+if mi_b5.Text == "" then --on
+mi_b5.Text = "X"
+_G.mi_b5 = true
+elseif mi_b5.Text == "X" then --off
+mi_b5.Text = ""
+_G.mi_b5 = false
+end
+end)
+
+mi_f6.Parent = b_page6
+mi_f6.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+mi_f6.Position = UDim2.new(0, 0, 0.4500000000, 0)
+mi_f6.Size = UDim2.new(0, 498, 0, 30)
+mi_f6.BorderColor3 = Color3.fromRGB(250, 250, 250)
+mi_f6.Font = Enum.Font.Ubuntu
+mi_f6.Text = "   Auto"
+mi_f6.TextColor3 = Color3.fromRGB(255, 255, 255)
+mi_f6.TextSize = 14.000
+mi_f6.TextWrapped = true
+mi_f6.TextXAlignment = Enum.TextXAlignment.Left
+
+mi_b6.Name = "mi_b6"
+mi_b6.Parent = mi_f6
+mi_b6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+mi_b6.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+mi_b6.Size = UDim2.new(0, 20, 0, 20)
+mi_b6.BorderColor3 = Color3.fromRGB(250, 250, 250)
+mi_b6.Font = Enum.Font.SourceSans
+mi_b6.Text = ""
+mi_b6.TextColor3 = Color3.fromRGB(250, 250, 250)
+mi_b6.TextSize = 30.000
+mi_b6.MouseButton1Down:connect(function()
+--on off 
+if mi_b6.Text == "" then --on
+mi_b6.Text = "X"
+_G.mi_b6 = true
+elseif mi_b6.Text == "X" then --off
+mi_b6.Text = ""
+_G.mi_b6 = false
+end
+end)
+
+
+-- // code Get item all sea
+--Sea 1
+if game.PlaceId == 2753915549 then -- sea1
+mi_f2.Text = "   Auto Saber | Not have"
+mi_f3.Text = "   Auto Pole | Not have"
+mi_f4.Visible = false
+mi_f5.Visible = false
+mi_f6.Visible = false
+end
+if game.PlaceId == 4442272183 then -- sea2
+mi_f2.Text = "   Auto Ectoplasm"
+mi_f3.Text = "   Auto Sharkman Karate | Not have"
+mi_f4.Text = "   Auto Death Step | Not have"
+mi_f5.Text = "   Auto Rengoku | Not have"
+mi_f6.Visible = false
+end
+if game.PlaceId == 7449423635 then -- sea3
+mi_f2.Text = "   Auto Katakuri"
+mi_f3.Text = "   Auto Bone"
+mi_f4.Text = "   Auto Conjured Cocoa"
+mi_f5.Text = "   Auto Yama | Not have"
+mi_f6.Visible = false
+end
+
+
+--Code item sea 2
+if game.PlaceId == 4442272183 then -- sea2
+
  --ectoplasm
 game:GetService('RunService').RenderStepped:connect(function()
-if _G.mi_b1 then --script
-if game.PlaceId == 4442272183 then -- sea2
+if _G.mi_b2 then --script
 local pos = CFrame.new(931.3291015625, 126.3013916015625, 33132.6015625) --check pos
                     local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
                   if Distance >= 5000 then                
@@ -5246,11 +5442,12 @@ game:GetService("TweenService"):Create(
                         {CFrame = v.HumanoidRootPart.CFrame* CFrame.new(0, st_b5.Text, 0) }
                     ):Play()       
                     
-                    end end end end end end)                 
+                    end end end end end)            
+     
 spawn(function()
     while task.wait(_G.time) do       
             pcall(function()          
-            if _G.mi_b1 then
+            if _G.mi_b2 then
             if _G.bringmob then       
                 for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
                     if v.Name == "Ship Deckhand [Lv. 1250]" or v.Name == "Ship Engineer [Lv. 1275]" or v.Name == "Ship Steward [Lv. 1300]" or v.Name == "Ship Officer [Lv. 1325]" and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= _G.distance then        
@@ -5279,377 +5476,31 @@ v.HumanoidRootPart.Size = Vector3.new(60,60,10)
   sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius",math.huge)                    
     end end end end end) end end)           
 
-mi_f2.Parent = b_page6
-mi_f2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-mi_f2.Position = UDim2.new(0, 0, 0.1700000000, 0)
-mi_f2.Size = UDim2.new(0, 498, 0, 30)
-mi_f2.BorderColor3 = Color3.fromRGB(250, 250, 250)
-mi_f2.Font = Enum.Font.Ubuntu
-mi_f2.Text = "   Auto Farm Conjured Cocoa"
-mi_f2.TextColor3 = Color3.fromRGB(255, 255, 255)
-mi_f2.TextSize = 14.000
-mi_f2.TextWrapped = true
-mi_f2.TextXAlignment = Enum.TextXAlignment.Left
 
-mi_b2.Name = "mi_b2"
-mi_b2.Parent = mi_f2
-mi_b2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-mi_b2.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-mi_b2.Size = UDim2.new(0, 20, 0, 20)
-mi_b2.BorderColor3 = Color3.fromRGB(250, 250, 250)
-mi_b2.Font = Enum.Font.SourceSans
-mi_b2.Text = ""
-mi_b2.TextColor3 = Color3.fromRGB(250, 250, 250)
-mi_b2.TextSize = 30.000
-mi_b2.MouseButton1Down:connect(function()
---on off 
-if mi_b2.Text == "" then --on
-mi_b2.Text = "X"
-_G.mi_b2 = true
-elseif mi_b2.Text == "X" then --off
-mi_b2.Text = ""
-_G.mi_b2 = false
-stoptp()
-end
-end)
+end -- sea 2
 
-game:GetService('RunService').RenderStepped:connect(function()
-if _G.mi_b2 then --script
+-- code item sea 3
 if game.PlaceId == 7449423635 then -- sea3
-
-TP1(CFrame.new(182.0901641845703, 126.93514251708984, -12772.8330078125))
-
-local humanoid = game.Players.LocalPlayer.Character.Humanoid 
-humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
-for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
-      if v.Name == "Candy Rebel [Lv. 2375]" or v.Name == "Sweet Thief [Lv. 2350]" or v.Name == "Chocolate Bar Battler [Lv. 2325]" or v.Name == "Cocoa Warrior [Lv. 2300]"  then --name mob
-      local pos = v.HumanoidRootPart --check pos
-                    local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
-                  if Distance < 500 then
-                  Speed = 725
-                  elseif Distance < 200 then
-                  Speed = 7000
-                  elseif Distance < 150 then
-                  Speed = 200000
-                  elseif Distance < 1000 then
-                        Speed = 400        
-    elseif Distance >= 1500 then
-                  Speed = 100
-           end
-            
-       if v.Humanoid.Health > 0 then -- check health
-     usetool()
-     click() -- click          
-     jump()
-       v.Humanoid:ChangeState(14)
-      v.HumanoidRootPart.Size = Vector3.new(50, 50, 10)     --size hix box  
-      v.HumanoidRootPart.CanCollide = false                                                
-v.Head.CanCollide = false                                 
-if v.Humanoid:FindFirstChild("Animator") then
-                            v.Humanoid.Animator:Destroy()
-                        end
-                        
-game:GetService("TweenService"):Create(
-                        game.Players.LocalPlayer.Character.HumanoidRootPart,
-                        TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
-                        {CFrame = v.HumanoidRootPart.CFrame* CFrame.new(0, st_b5.Text, 0) }
-                    ):Play()       
-                    
-                    end end end end 
-end end)                 
-
-spawn(function()
-    while task.wait(_G.time) do       
-            pcall(function()          
-            if _G.mi_b2 then
-            if _G.bringmob then       
-                for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
-                    if v.Name == "Candy Rebel [Lv. 2375]" or v.Name == "Sweet Thief [Lv. 2350]" or v.Name == "Chocolate Bar Battler [Lv. 2325]" or v.Name == "Cocoa Warrior [Lv. 2300]" and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= _G.distance then        
-if   st_b5.Text == "0" then                        
- v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
- elseif st_b5.Text == "10" then
- v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-9.5,0)
- elseif st_b5.Text == "20" then
- v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-19.5,0)
- elseif st_b5.Text == "30" then
- v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-29.5,0)
- elseif st_b5.Text == "40" then
- v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-39.5,0)
- elseif st_b5.Text == "50" then
- v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-49.5,0)
- end                       
-  v.Humanoid.JumpPower = 0                          
-  v.Humanoid.WalkSpeed = 0                           
-v.HumanoidRootPart.Size = Vector3.new(60,60,10)                  
- v.HumanoidRootPart.Transparency = 1                        
- v.HumanoidRootPart.CanCollide = false                           
- v.Head.CanCollide = false                           
- v.Humanoid:ChangeState(11)                           
- v.Humanoid:ChangeState(14)                       
-  setscriptable(game.Players.LocalPlayer,"SimulationRadius",true)                          
-  sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius",math.huge)                    
-    end end end end end) end end)           
-                 
-mi_f3.Parent = b_page6
-mi_f3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-mi_f3.Position = UDim2.new(0, 0, 0.2400000000, 0)
-mi_f3.Size = UDim2.new(0, 498, 0, 30)
-mi_f3.BorderColor3 = Color3.fromRGB(250, 250, 250)
-mi_f3.Font = Enum.Font.Ubuntu
-mi_f3.Text = "   Auto Farm Bone"
-mi_f3.TextColor3 = Color3.fromRGB(255, 255, 255)
-mi_f3.TextSize = 14.000
-mi_f3.TextWrapped = true
-mi_f3.TextXAlignment = Enum.TextXAlignment.Left
-
-mi_b3.Name = "mi_b3"
-mi_b3.Parent = mi_f3
-mi_b3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-mi_b3.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-mi_b3.Size = UDim2.new(0, 20, 0, 20)
-mi_b3.BorderColor3 = Color3.fromRGB(250, 250, 250)
-mi_b3.Font = Enum.Font.SourceSans
-mi_b3.Text = ""
-mi_b3.TextColor3 = Color3.fromRGB(250, 250, 250)
-mi_b3.TextSize = 30.000
-mi_b3.MouseButton1Down:connect(function()
---on off 
-if mi_b3.Text == "" then --on
-mi_b3.Text = "X"
-_G.mi_b3 = true
-elseif mi_b3.Text == "X" then --off
-mi_b3.Text = ""
-_G.mi_b3 = false
-stoptp()
-end
-end)
-game:GetService('RunService').RenderStepped:connect(function()
-if _G.mi_b3 then --script
-if game.PlaceId == 7449423635 then -- sea3
-local args = {
-    [1] = "gravestoneEvent",
-    [2] = 1
-}
-
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-
-local pos = CFrame.new(-9521.0400390625, 148.39825439453125, 5995.53564453125) --check pos
-                    local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
-                  if Distance >= 5000 then                                       
-if game.Players.LocalPlayer.Character.Humanoid.Health > 0 then
-game.Players.LocalPlayer.Character.Humanoid.Health = 0
-elseif game.Players.LocalPlayer.Character.Humanoid.Health == 0 then
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-9521.0400390625, 148.39825439453125, 5995.53564453125)
-end end
-
-TP1(CFrame.new(-9717.5400390625, 65.93158721923828, 6041.43310546875))
-local humanoid = game.Players.LocalPlayer.Character.Humanoid 
-humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
-for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
-      if v.Name == "Posessed Mummy [Lv. 2050]" or v.Name == "Demonic Soul [Lv. 2025]" or v.Name == "Living Zombie [Lv. 2000]" then --name mob
-      local pos = v.HumanoidRootPart --check pos
-                    local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
-                  if Distance < 500 then
-                  Speed = 725
-                  elseif Distance < 200 then
-                  Speed = 7000
-                  elseif Distance < 150 then
-                  Speed = 200000
-                  elseif Distance < 1000 then
-                        Speed = 400        
-    elseif Distance >= 1500 then
-                  Speed = 100
-           end
-            
-       if v.Humanoid.Health > 0 then -- check health
-     usetool()
-     click() -- click          
-       v.Humanoid:ChangeState(14)
-      v.HumanoidRootPart.Size = Vector3.new(50, 50, 10)     --size hix box  
-      v.HumanoidRootPart.CanCollide = false                                                
-v.Head.CanCollide = false                                 
-if v.Humanoid:FindFirstChild("Animator") then
-                            v.Humanoid.Animator:Destroy()
-                        end
-                        
-game:GetService("TweenService"):Create(
-                        game.Players.LocalPlayer.Character.HumanoidRootPart,
-                        TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
-                        {CFrame = v.HumanoidRootPart.CFrame* CFrame.new(0, st_b5.Text, 0) }
-                    ):Play()       
-                    
-                    end end end end  
-end end)                 
-
-spawn(function()
-    while task.wait(_G.time) do       
-            pcall(function()          
-            if _G.mi_b3 then
-            if _G.bringmob then       
-                for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
-                    if v.Name == "Posessed Mummy [Lv. 2050]" or v.Name == "Demonic Soul [Lv. 2025]" or v.Name == "Living Zombie [Lv. 2000]" and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= _G.distance then        
-if   st_b5.Text == "0" then                        
- v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
- elseif st_b5.Text == "10" then
- v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-9.5,0)
- elseif st_b5.Text == "20" then
- v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-19.5,0)
- elseif st_b5.Text == "30" then
- v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-29.5,0)
- elseif st_b5.Text == "40" then
- v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-39.5,0)
- elseif st_b5.Text == "50" then
- v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-49.5,0)
- end                       
-  v.Humanoid.JumpPower = 0                          
-  v.Humanoid.WalkSpeed = 0                           
-v.HumanoidRootPart.Size = Vector3.new(60,60,10)                  
- v.HumanoidRootPart.Transparency = 1                        
- v.HumanoidRootPart.CanCollide = false                           
- v.Head.CanCollide = false                           
- v.Humanoid:ChangeState(11)                           
- v.Humanoid:ChangeState(14)                       
-  setscriptable(game.Players.LocalPlayer,"SimulationRadius",true)                          
-  sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius",math.huge)                    
-    end end end end end) end end)           
-
-
-mi_f4.Parent = b_page6
-mi_f4.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-mi_f4.Position = UDim2.new(0, 0, 0.3100000000, 0)
-mi_f4.Size = UDim2.new(0, 498, 0, 30)
-mi_f4.BorderColor3 = Color3.fromRGB(250, 250, 250)
-mi_f4.Font = Enum.Font.Ubuntu
-mi_f4.Text = "   Auto Sword Rengoku"
-mi_f4.TextColor3 = Color3.fromRGB(255, 255, 255)
-mi_f4.TextSize = 14.000
-mi_f4.TextWrapped = true
-mi_f4.TextXAlignment = Enum.TextXAlignment.Left
-
-mi_b4.Name = "mi_b4"
-mi_b4.Parent = mi_f4
-mi_b4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-mi_b4.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-mi_b4.Size = UDim2.new(0, 20, 0, 20)
-mi_b4.BorderColor3 = Color3.fromRGB(250, 250, 250)
-mi_b4.Font = Enum.Font.SourceSans
-mi_b4.Text = ""
-mi_b4.TextColor3 = Color3.fromRGB(250, 250, 250)
-mi_b4.TextSize = 30.000
-mi_b4.MouseButton1Down:connect(function()
---on off 
-if mi_b4.Text == "" then --on
-mi_b4.Text = "X"
-_G.mi_b4 = true
-elseif mi_b4.Text == "X" then --off
-mi_b4.Text = ""
-_G.mi_b4 = false
-end
-end)
-
-game:GetService('RunService').RenderStepped:connect(function()
-if _G.mi_b4 then --script
-
-
-
-end
-end)
-
-mi_f5.Parent = b_page6
-mi_f5.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-mi_f5.Position = UDim2.new(0, 0, 0.3800000000, 0)
-mi_f5.Size = UDim2.new(0, 498, 0, 30)
-mi_f5.BorderColor3 = Color3.fromRGB(250, 250, 250)
-mi_f5.Font = Enum.Font.Ubuntu
-mi_f5.Text = "   Auto Buddy Sword"
-mi_f5.TextColor3 = Color3.fromRGB(255, 255, 255)
-mi_f5.TextSize = 14.000
-mi_f5.TextWrapped = true
-mi_f5.TextXAlignment = Enum.TextXAlignment.Left
-
-mi_b5.Name = "mi_b5"
-mi_b5.Parent = mi_f5
-mi_b5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-mi_b5.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-mi_b5.Size = UDim2.new(0, 20, 0, 20)
-mi_b5.BorderColor3 = Color3.fromRGB(250, 250, 250)
-mi_b5.Font = Enum.Font.SourceSans
-mi_b5.Text = ""
-mi_b5.TextColor3 = Color3.fromRGB(250, 250, 250)
-mi_b5.TextSize = 30.000
-mi_b5.MouseButton1Down:connect(function()
---on off 
-if mi_b5.Text == "" then --on
-mi_b5.Text = "X"
-_G.mi_b5 = true
-elseif mi_b5.Text == "X" then --off
-mi_b5.Text = ""
-_G.mi_b5 = false
-end
-end)
-
-game:GetService('RunService').RenderStepped:connect(function()
-if _G.mi_b5 then --script
-
-
-
-end
-end)
-
-mi_f6.Parent = b_page6
-mi_f6.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-mi_f6.Position = UDim2.new(0, 0, 0.1000000000, 0)
-mi_f6.Size = UDim2.new(0, 498, 0, 30)
-mi_f6.BorderColor3 = Color3.fromRGB(250, 250, 250)
-mi_f6.Font = Enum.Font.Ubuntu
-mi_f6.Text = "   Auto Katakuri"
-mi_f6.TextColor3 = Color3.fromRGB(255, 255, 255)
-mi_f6.TextSize = 14.000
-mi_f6.TextWrapped = true
-mi_f6.TextXAlignment = Enum.TextXAlignment.Left
-
-if game.PlaceId == 7449423635 then -- sea3
+--katakuri 
 spawn(function()
     while task.wait() do
         pcall(function()
             if string.len(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner")) == 88 then
-                mi_f6.Text = ("Auto Katakuri | Mob Killed Cake : "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,41))
+                mi_f2.Text = ("   Auto Katakuri | Mob Killed Cake : "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,41))
             elseif string.len(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner")) == 87 then
-                mi_f6.Text = ("Auto Katakuri | Mob Killed Cake : "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,40))
+                mi_f2.Text = ("   Auto Katakuri | Mob Killed Cake : "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,40))
             elseif string.len(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner")) == 86 then
-                mi_f6.Text = ("Auto Katakuri | Mob Killed Cake : "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,39))
+                mi_f2.Text = ("   Auto Katakuri | Mob Killed Cake : "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,39))
             else
-                mi_f6.Text = ("Auto Katakuri | Cake Prince Spawned!")
+                mi_f2.Text = ("   Auto Katakuri | Cake Prince Spawned")
             end
         end)
     end
 end)
-end
-
-mi_b6.Name = "mi_b6"
-mi_b6.Parent = mi_f6
-mi_b6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-mi_b6.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-mi_b6.Size = UDim2.new(0, 20, 0, 20)
-mi_b6.BorderColor3 = Color3.fromRGB(250, 250, 250)
-mi_b6.Font = Enum.Font.SourceSans
-mi_b6.Text = ""
-mi_b6.TextColor3 = Color3.fromRGB(250, 250, 250)
-mi_b6.TextSize = 30.000
-mi_b6.MouseButton1Down:connect(function()
---on off 
-if mi_b6.Text == "" then --on
-mi_b6.Text = "X"
-_G.mi_b6 = true
-elseif mi_b6.Text == "X" then --off
-mi_b6.Text = ""
-_G.mi_b6 = false
-end
-end)
 
 game:GetService('RunService').RenderStepped:connect(function()
-if _G.mi_b6 then --script
-  if mi_f6.Text == "Auto Katakuri | Cake Prince Spawned!" then
+if _G.mi_b2 then --script
+  if mi_f2.Text == "   Auto Katakuri | Cake Prince Spawned" then
   
 jump()
 if game:GetService("Workspace").Map.CakeLoaf.BigMirror.Other.Transparency == 0 and (CFrame.new(-1990.672607421875, 4532.99951171875, -14973.6748046875).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude >= 2000 then
@@ -5689,7 +5540,7 @@ end end end
 end end end)
 
 game:GetService('RunService').RenderStepped:connect(function()
-if _G.mi_b6 then --script
+if _G.mi_b2 then --script
   if not game:GetService("Workspace").Enemies:FindFirstChild("Cake Prince [Lv. 2300] [Raid Boss]") then
 if game:GetService("Workspace").Map.CakeLoaf.BigMirror.Other.Transparency == 0 and (CFrame.new(-1990.672607421875, 4532.99951171875, -14973.6748046875).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude >= 2000 then
                         Tween(CFrame.new(-2151.82153, 149.315704, -12404.9053))
@@ -5737,7 +5588,7 @@ game:GetService("TweenService"):Create(
 spawn(function()
     while task.wait(_G.time) do       
             pcall(function()          
-            if _G.mi_b6 then
+            if _G.mi_b2 then
             if _G.bringmob then       
                 for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
                     if v.Name == "Cookie Crafter [Lv. 2200]" or v.Name == "Cake Guard [Lv. 2225]" or v.Name == "Baking Staff [Lv. 2250]" or v.Name == "Head Baker [Lv. 2275]" and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= _G.distance then        
@@ -5766,11 +5617,168 @@ v.HumanoidRootPart.Size = Vector3.new(60,60,10)
   sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius",math.huge)                    
     end end end end end) end end)       
 
-if game.PlaceId == 7449423635 then -- sea3
-mi_f6.Visible = true
-else
-mi_f6.Visible = false
-end
+--Bone
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.mi_b3 then --script
+local pos = CFrame.new(-9521.0400390625, 148.39825439453125, 5995.53564453125) --check pos
+                    local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                  if Distance >= 5000 then                                       
+if game.Players.LocalPlayer.Character.Humanoid.Health > 0 then
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+elseif game.Players.LocalPlayer.Character.Humanoid.Health == 0 then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-9521.0400390625, 148.39825439453125, 5995.53564453125)
+end end
+
+TP1(CFrame.new(-9717.5400390625, 65.93158721923828, 6041.43310546875))
+local humanoid = game.Players.LocalPlayer.Character.Humanoid 
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
+for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
+      if v.Name == "Posessed Mummy [Lv. 2050]" or v.Name == "Demonic Soul [Lv. 2025]" or v.Name == "Living Zombie [Lv. 2000]" then --name mob
+      local pos = v.HumanoidRootPart --check pos
+                    local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                  if Distance < 500 then
+                  Speed = 725
+                  elseif Distance < 200 then
+                  Speed = 7000
+                  elseif Distance < 150 then
+                  Speed = 200000
+                  elseif Distance < 1000 then
+                        Speed = 400        
+    elseif Distance >= 1500 then
+                  Speed = 100
+           end
+            
+       if v.Humanoid.Health > 0 then -- check health
+     usetool()
+     click() -- click          
+       v.Humanoid:ChangeState(14)
+      v.HumanoidRootPart.Size = Vector3.new(50, 50, 10)     --size hix box  
+      v.HumanoidRootPart.CanCollide = false                                                
+v.Head.CanCollide = false                                 
+if v.Humanoid:FindFirstChild("Animator") then
+                            v.Humanoid.Animator:Destroy()
+                        end
+                        
+game:GetService("TweenService"):Create(
+                        game.Players.LocalPlayer.Character.HumanoidRootPart,
+                        TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
+                        {CFrame = v.HumanoidRootPart.CFrame* CFrame.new(0, st_b5.Text, 0) }
+                    ):Play()       
+                    
+                    end end end 
+end end)                 
+
+spawn(function()
+    while task.wait(_G.time) do       
+            pcall(function()          
+            if _G.mi_b3 then
+            if _G.bringmob then       
+                for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
+                    if v.Name == "Posessed Mummy [Lv. 2050]" or v.Name == "Demonic Soul [Lv. 2025]" or v.Name == "Living Zombie [Lv. 2000]" and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= _G.distance then        
+if   st_b5.Text == "0" then                        
+ v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+ elseif st_b5.Text == "10" then
+ v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-9.5,0)
+ elseif st_b5.Text == "20" then
+ v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-19.5,0)
+ elseif st_b5.Text == "30" then
+ v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-29.5,0)
+ elseif st_b5.Text == "40" then
+ v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-39.5,0)
+ elseif st_b5.Text == "50" then
+ v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-49.5,0)
+ end                       
+  v.Humanoid.JumpPower = 0                          
+  v.Humanoid.WalkSpeed = 0                           
+v.HumanoidRootPart.Size = Vector3.new(60,60,10)                  
+ v.HumanoidRootPart.Transparency = 1                        
+ v.HumanoidRootPart.CanCollide = false                           
+ v.Head.CanCollide = false                           
+ v.Humanoid:ChangeState(11)                           
+ v.Humanoid:ChangeState(14)                       
+  setscriptable(game.Players.LocalPlayer,"SimulationRadius",true)                          
+  sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius",math.huge)                    
+    end end end end end) end end)           
+
+-- cocoa
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.mi_b4 then --script
+
+TP1(CFrame.new(182.0901641845703, 126.93514251708984, -12772.8330078125))
+
+local humanoid = game.Players.LocalPlayer.Character.Humanoid 
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
+for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
+      if v.Name == "Candy Rebel [Lv. 2375]" or v.Name == "Sweet Thief [Lv. 2350]" or v.Name == "Chocolate Bar Battler [Lv. 2325]" or v.Name == "Cocoa Warrior [Lv. 2300]"  then --name mob
+      local pos = v.HumanoidRootPart --check pos
+                    local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                  if Distance < 500 then
+                  Speed = 725
+                  elseif Distance < 200 then
+                  Speed = 7000
+                  elseif Distance < 150 then
+                  Speed = 200000
+                  elseif Distance < 1000 then
+                        Speed = 400        
+    elseif Distance >= 1500 then
+                  Speed = 100
+           end
+            
+       if v.Humanoid.Health > 0 then -- check health
+     usetool()
+     click() -- click          
+     jump()
+       v.Humanoid:ChangeState(14)
+      v.HumanoidRootPart.Size = Vector3.new(50, 50, 10)     --size hix box  
+      v.HumanoidRootPart.CanCollide = false                                                
+v.Head.CanCollide = false                                 
+if v.Humanoid:FindFirstChild("Animator") then
+                            v.Humanoid.Animator:Destroy()
+                        end
+                        
+game:GetService("TweenService"):Create(
+                        game.Players.LocalPlayer.Character.HumanoidRootPart,
+                        TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
+                        {CFrame = v.HumanoidRootPart.CFrame* CFrame.new(0, st_b5.Text, 0) }
+                    ):Play()       
+                    
+                    end end end
+end end)                 
+
+spawn(function()
+    while task.wait(_G.time) do       
+            pcall(function()          
+            if _G.mi_b4 then
+            if _G.bringmob then       
+                for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
+                    if v.Name == "Candy Rebel [Lv. 2375]" or v.Name == "Sweet Thief [Lv. 2350]" or v.Name == "Chocolate Bar Battler [Lv. 2325]" or v.Name == "Cocoa Warrior [Lv. 2300]" and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= _G.distance then        
+if   st_b5.Text == "0" then                        
+ v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+ elseif st_b5.Text == "10" then
+ v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-9.5,0)
+ elseif st_b5.Text == "20" then
+ v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-19.5,0)
+ elseif st_b5.Text == "30" then
+ v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-29.5,0)
+ elseif st_b5.Text == "40" then
+ v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-39.5,0)
+ elseif st_b5.Text == "50" then
+ v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-49.5,0)
+ end                       
+  v.Humanoid.JumpPower = 0                          
+  v.Humanoid.WalkSpeed = 0                           
+v.HumanoidRootPart.Size = Vector3.new(60,60,10)                  
+ v.HumanoidRootPart.Transparency = 1                        
+ v.HumanoidRootPart.CanCollide = false                           
+ v.Head.CanCollide = false                           
+ v.Humanoid:ChangeState(11)                           
+ v.Humanoid:ChangeState(14)                       
+  setscriptable(game.Players.LocalPlayer,"SimulationRadius",true)                          
+  sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius",math.huge)                    
+    end end end end end) end end)           
+                 
+
+end -- sea 3
 
 -- // combat
 
@@ -5957,25 +5965,18 @@ stoptp()
 end
 end)
 
--- // kill palyer mele
-game:GetService('RunService').RenderStepped:connect(function()
-if _G.c_b3 then --script
-local target = unpack(GetPlayer(c_tb.Text)).Character
-local pos = target.HumanoidRootPart --check pos
-if (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 250 then
-                       usetool() 
-target.HumanoidRootPart.Size = Vector3.new(40, 40, 40)
+-- // kill palyer mele                 
+spawn(function()
+    while task.wait() do       
+            pcall(function()          
+            if _G.c_b3 then
+            local target = unpack(GetPlayer(c_tb.Text)).Character
+                      
+            local pos = target.HumanoidRootPart --check pos                                
+         if (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 1500 then   
+            target.HumanoidRootPart.Size = Vector3.new(40, 40, 40)
 target.HumanoidRootPart.Transparency = 1
-target.HumanoidRootPart.BrickColor = BrickColor.new("Really black")
-target.HumanoidRootPart.Material = "Neon"
-target.HumanoidRootPart.CanCollide = false
-   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = target.HumanoidRootPart.CFrame
-                    click()
-                    else
-     if        (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 2000 then       
-                    jump()
-                    local pos = target.HumanoidRootPart --check pos
-                    local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
                   if Distance < 500 then
                   Speed = 250
                   elseif Distance < 200 then
@@ -5987,21 +5988,49 @@ target.HumanoidRootPart.CanCollide = false
     elseif Distance >= 1500 then
                   Speed = 120
            end
-                       
-                       game.Players.LocalPlayer.Character.Humanoid.Sit = false
-                                     
-target.HumanoidRootPart.Transparency = 1
+usetool()
 game:GetService("TweenService"):Create(
                         game.Players.LocalPlayer.Character.HumanoidRootPart,
                         TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
-                        {CFrame = target.HumanoidRootPart.CFrame* CFrame.new(2, 30, 0) }
+                        {CFrame = target.HumanoidRootPart.CFrame* CFrame.new(-30, 0, 0) }
                     ):Play()  
-else
-game.Players.LocalPlayer.Character.Humanoid.Health = 0
-     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = target.HumanoidRootPart.CFrame
-                   end end
-                                          end end)                                    
+                    wait(2)
+            game:GetService("TweenService"):Create(
+                        game.Players.LocalPlayer.Character.HumanoidRootPart,
+                        TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
+                        {CFrame = target.HumanoidRootPart.CFrame* CFrame.new(30, 0, 0) }
+                    ):Play()          
+                    wait(2)
+                    game:GetService("TweenService"):Create(
+                        game.Players.LocalPlayer.Character.HumanoidRootPart,
+                        TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
+                        {CFrame = target.HumanoidRootPart.CFrame* CFrame.new(0, 0, 30) }
+                    ):Play()  
+                    wait(2)
+                    game:GetService("TweenService"):Create(
+                        game.Players.LocalPlayer.Character.HumanoidRootPart,
+                        TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
+                        {CFrame = target.HumanoidRootPart.CFrame* CFrame.new(0, 0, -30) }
+                    ):Play()                             
+            else
+            game.Players.LocalPlayer.Character.Humanoid.Health = 0
+     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = target.HumanoidRootPart.CFrame           
+     
+     end
+            end end) end end)
+       
 spawn(function()
+    while task.wait() do       
+            pcall(function()          
+            if _G.c_b3 then
+local target = unpack(GetPlayer(c_tb.Text)).Character
+local pos = target.HumanoidRootPart --check pos
+if (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 150 then
+click()
+end
+end end) end end)
+     
+    spawn(function()
     while task.wait(1) do       
             pcall(function()          
             if _G.c_b3 then
@@ -6009,7 +6038,9 @@ local args = {
     [1] = "EnablePvp"
 }
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-end end) end end)
+end end) end end)        
+            
+
 
 
 c_f4.Parent = b_page7
@@ -7493,7 +7524,7 @@ local function OJTG4_fake_script() -- scripts.LocalScript
 		b_page7.Visible = false
 		b_page8.Visible = false
 		b_page9.Visible = false
-    TextLabel.Text = "   NTT HUB | Get Item" 
+    TextLabel.Text = "   NTT HUB | Mob - Get Item" 
 	end)
 end
 
@@ -7564,4 +7595,4 @@ game:GetService("UserInputService").JumpRequest:connect(function()
 	if _G.ifnjump then
 		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
 	end
-end) 
+end)  
