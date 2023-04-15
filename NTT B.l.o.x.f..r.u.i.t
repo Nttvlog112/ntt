@@ -76,6 +76,7 @@ m_b9= Instance.new("TextButton")
 m_b10= Instance.new("TextButton")
 
 --// stat
+s_t1 = Instance.new("TextLabel")
 s_cp = Instance.new("TextLabel")
 s_f1 = Instance.new("TextLabel")
 s_b1 = Instance.new("TextButton")
@@ -87,6 +88,13 @@ s_f4 = Instance.new("TextLabel")
 s_b4 = Instance.new("TextButton")
 s_f5 = Instance.new("TextLabel")
 s_b5 = Instance.new("TextButton")
+
+s_name = Instance.new("TextLabel")
+s_race = Instance.new("TextLabel")
+s_level = Instance.new("TextLabel")
+s_beli = Instance.new("TextLabel")
+s_fag = Instance.new("TextLabel")
+
 
 -- // raid
 r_t1 = Instance.new("TextLabel")
@@ -1890,7 +1898,7 @@ for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
                   Speed = 100
            end
             
-       if v.Humanoid.Health > 0 then -- check health
+  
      usetool()
        if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 500 then
        if v.Humanoid.Health > 0 then 
@@ -1910,7 +1918,7 @@ game:GetService("TweenService"):Create(
                         {CFrame = v.HumanoidRootPart.CFrame* CFrame.new(0, st_b5.Text, 0) }
                     ):Play()       
                                       
-                 end end end end end
+                 end end end end 
              
 end
 end)
@@ -2311,12 +2319,14 @@ game.Players.LocalPlayer.Character.Humanoid.Sit = false
                    local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Distance/Speed), {CFrame = v.HumanoidRootPart.CFrame  }) tween:Play()                                                           
 end end end end)
 
+
 spawn(function() -- skill auto
-    while task.wait(0) do       
+    while task.wait() do       
             pcall(function()
-            if _G.b9 then
+            if _G.m_b9 then
             for i,v in pairs(game.Workspace.SeaBeasts:GetChildren()) do
   if v:FindFirstChild("HumanoidRootPart") then
+if  (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 200 then
  mele()
    Skill()
    wait(1)
@@ -2325,7 +2335,7 @@ spawn(function() -- skill auto
    wait(1)
    sword()
    Skill()
-end end end end) end end)         
+end end end end end) end end)         
 
 bartool()
 
@@ -2564,6 +2574,87 @@ s_b5.Text = ""
 _G.s_b5 = false
 end
 end)
+
+s_t1.Parent = b_page2
+s_t1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+s_t1.Position = UDim2.new(0, 0, 0.4500000000, 0)
+s_t1.Size = UDim2.new(0, 498, 0, 30)
+s_t1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+s_t1.Font = Enum.Font.Ubuntu
+s_t1.Text = "Start"
+s_t1.TextColor3 = Color3.fromRGB(255, 255, 255)
+s_t1.TextSize = 14.000
+s_t1.TextWrapped = true
+
+s_name.Parent = b_page2
+s_name.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+s_name.Position = UDim2.new(0, 0, 0.5900000000, 0)
+s_name.Size = UDim2.new(0, 498, 0, 30)
+s_name.BorderColor3 = Color3.fromRGB(250, 250, 250)
+s_name.Font = Enum.Font.Ubuntu
+s_name.Text = "Name"
+s_name.TextColor3 = Color3.fromRGB(255, 255, 255)
+s_name.TextSize = 14.000
+s_name.TextWrapped = true
+s_name.TextXAlignment = Enum.TextXAlignment.Left
+
+s_race.Parent = b_page2
+s_race.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+s_race.Position = UDim2.new(0, 0, 0.6600000000, 0)
+s_race.Size = UDim2.new(0, 498, 0, 30)
+s_race.BorderColor3 = Color3.fromRGB(250, 250, 250)
+s_race.Font = Enum.Font.Ubuntu
+s_race.Text = "Race"
+s_race.TextColor3 = Color3.fromRGB(255, 255, 255)
+s_race.TextSize = 14.000
+s_race.TextWrapped = true
+s_race.TextXAlignment = Enum.TextXAlignment.Left
+
+s_level.Parent = b_page2
+s_level.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+s_level.Position = UDim2.new(0, 0, 0.7300000000, 0)
+s_level.Size = UDim2.new(0, 498, 0, 30)
+s_level.BorderColor3 = Color3.fromRGB(250, 250, 250)
+s_level.Font = Enum.Font.Ubuntu
+s_level.Text = "Beli"
+s_level.TextColor3 = Color3.fromRGB(255, 255, 255)
+s_level.TextSize = 14.000
+s_level.TextWrapped = true
+s_level.TextXAlignment = Enum.TextXAlignment.Left
+
+s_beli.Parent = b_page2
+s_beli.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+s_beli.Position = UDim2.new(0, 0, 0.8000000000, 0)
+s_beli.Size = UDim2.new(0, 498, 0, 30)
+s_beli.BorderColor3 = Color3.fromRGB(250, 250, 250)
+s_beli.Font = Enum.Font.Ubuntu
+s_beli.Text = "Level"
+s_beli.TextColor3 = Color3.fromRGB(255, 255, 255)
+s_beli.TextSize = 14.000
+s_beli.TextWrapped = true
+s_beli.TextXAlignment = Enum.TextXAlignment.Left
+
+s_fag.Parent = b_page2
+s_fag.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+s_fag.Position = UDim2.new(0, 0, 0.8700000000, 0)
+s_fag.Size = UDim2.new(0, 498, 0, 30)
+s_fag.BorderColor3 = Color3.fromRGB(250, 250, 250)
+s_fag.Font = Enum.Font.Ubuntu
+s_fag.Text = "Fragments"
+s_fag.TextColor3 = Color3.fromRGB(255, 255, 255)
+s_fag.TextSize = 14.000
+s_fag.TextWrapped = true
+s_fag.TextXAlignment = Enum.TextXAlignment.Left
+
+game:GetService('RunService').RenderStepped:connect(function()
+if game.PlaceId == 2753915549 or game.PlaceId == 4442272183 or game.PlaceId == 7449423635 then -- sea3
+s_name.Text = ("   Name : "..game.Players.localPlayer.DisplayName)
+s_race.Text = ("   Race : "..game:GetService("Players")["LocalPlayer"].Data.Race.Value)
+s_level.Text = ("   Level : "..game.Players.LocalPlayer.Data.Level.Value)
+s_beli.Text = ("   Beli : " ..game:GetService("Players")["LocalPlayer"].Data.Beli.Value)
+s_fag.Text = ("   Fragments : "..game:GetService("Players")["LocalPlayer"].Data.Fragments.Value)
+end end)
+
 
 -- // raid
 r_t1.Parent = b_page3
@@ -4959,9 +5050,10 @@ end)
 spawn(function()
     while task.wait(0.1) do
         pcall(function()
+    if    _G.ms_b11 then --script
         if game.Players.LocalPlayer.Character.Humanoid.Health <  game.Players.LocalPlayer.Character.Humanoid.MaxHealth / 3.5 then
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame  = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame* CFrame.new(0,1000,0)
-     end end) end end)
+     end end end) end end)
 
 melebar()
 
@@ -5599,13 +5691,13 @@ end end end)
 game:GetService('RunService').RenderStepped:connect(function()
 if _G.mi_b6 then --script
   if not game:GetService("Workspace").Enemies:FindFirstChild("Cake Prince [Lv. 2300] [Raid Boss]") then
-jump()
+
 TP1(CFrame.new(-2094.290771484375, 148.5541229248047, -12238.0126953125))
 
-game.ReplicatedStorage.Remotes.CommF_:InvokeServer("CakePrinceSpawner")
+local humanoid = game.Players.LocalPlayer.Character.Humanoid 
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
 for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
-if v.Name == "Cookie Crafter [Lv. 2200]" or v.Name == "Cake Guard [Lv. 2225]" or v.Name == "Baking Staff [Lv. 2250]" or v.Name == "Head Baker [Lv. 2275]"  then --name mob
-
+      if v.Name == "Cookie Crafter [Lv. 2200]" or v.Name == "Cake Guard [Lv. 2225]" or v.Name == "Baking Staff [Lv. 2250]" or v.Name == "Head Baker [Lv. 2275]"  then --name mob
       local pos = v.HumanoidRootPart --check pos
                     local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
                   if Distance < 500 then
@@ -5623,6 +5715,7 @@ if v.Name == "Cookie Crafter [Lv. 2200]" or v.Name == "Cake Guard [Lv. 2225]" or
        if v.Humanoid.Health > 0 then -- check health
      usetool()
      click() -- click          
+     jump()
        v.Humanoid:ChangeState(14)
       v.HumanoidRootPart.Size = Vector3.new(50, 50, 10)     --size hix box  
       v.HumanoidRootPart.CanCollide = false                                                
@@ -5637,9 +5730,8 @@ game:GetService("TweenService"):Create(
                         {CFrame = v.HumanoidRootPart.CFrame* CFrame.new(0, st_b5.Text, 0) }
                     ):Play()       
                     
-                    end end end end end end)                
-
- 
+                    end end end end  end end)
+                    
 spawn(function()
     while task.wait(_G.time) do       
             pcall(function()          
