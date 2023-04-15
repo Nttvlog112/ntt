@@ -5559,7 +5559,7 @@ for i, v in pairs(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServ
  if v.Name == "Coat" then
  _G.item1= true
  end
- if v.Name == "Wardens Sword" thrn
+ if v.Name == "Wardens Sword" then
  _G.item2 = true
  end
  if v.Name == "Pink Coat" then
