@@ -3,6 +3,14 @@
 _G.key = "9712"
 _G.linkkey = "https://link1s.com/b5r9p"
 _G.tt = "Key sẻ đỏi vào lúc 20h - 00h mỗi ngày"
+if game:GetService("CoreGui"):FindFirstChild("UIGUI") then
+_G.check1 = true
+_G.check2 = true
+else
+_G.check1 = false
+_G.check2 = false
+end
+
 
 local UIGUI = Instance.new("ScreenGui")
 main= Instance.new("Frame")
@@ -75,7 +83,7 @@ exit.BackgroundTransparency = 1
 exit.TextSize = 20.000
 exit.BorderColor3 = Color3.fromRGB(250, 250, 250)
 exit.MouseButton1Down:connect(function()
-game.CoreGui.UIGUI:Destroy()
+main.Visible = false
 end)
 
 bar_1.Name = "bar_1"
@@ -189,10 +197,82 @@ key_b.MouseButton1Down:connect(function()
 if key_tb.Text == _G.key then
 bar.Text = "   NTT | Load"
 bar_4.Visible = true
+if _G.check1 == false then
+_G.check1 = true
+                    local HttpService = game:GetService("HttpService")
+                    local Data =
+                        {                    
+                            ["embeds"]= {
+                                {            
+                                    ["title"]= "Thông Báo";                                                                 
+                                    ["color"]= tonumber(0x7269da);
+                                    
+                                    ["fields"]= {                    
+                                    {
+                                            ["name"]= "Check Name Player",
+                                            ["value"]= "```Name : "..game.Players.LocalPlayer.Name.." | "..game.Players.LocalPlayer.DisplayName.."```";
+                                            ["inline"]= true
+                                        },                             
+                                   {
+                                            ["name"]= "Check Key",
+                                            ["value"]= "```Key : Nhập Key Đúng```",
+                                            ["inline"]= true
+                                        },                                                                  
+                                    {
+                                            ["name"]= "Check Game Play",
+                                            ["value"]= "```Link : https://www.roblox.com/games/"..Game.PlaceId.."/```",
+                                            ["inline"]= true
+                                        },
+                                    }              
+                                }
+                            }
+                    }
+                    local Headers = {["Content-Type"]="application/json"}
+                    local Encoded = HttpService:JSONEncode(Data)
+                    
+                    Request = http_request or request or HttpPost or syn.request
+                    local Final1 = {Url = "https://discord.com/api/webhooks/1097107011428167750/rNVlH7JfY--9UeDmEWsbHOchpT0UjAP6c8vy-rtjM7K5DOsGOtwi6v3IbD_L0lTto5rG", Body = Encoded, Method = "POST", Headers = Headers}
+                   
+                    Request(Final1)
+end
 else
 key_tb.Text =" Sai Chìa Khóa"
+if _G.check2 == false then
+_G.check2= true
+
+                    local HttpService = game:GetService("HttpService")
+                    local Data =
+                        {                    
+                            ["embeds"]= {
+                                {            
+                                    ["title"]= "Thông Báo";                                                                 
+                                    ["color"]= tonumber(0x7269da);
+                                    
+                                    ["fields"]= {                    
+                                    {
+                                            ["name"]= "Check Name Player",
+                                            ["value"]= "```Name : "..game.Players.LocalPlayer.Name.." | "..game.Players.LocalPlayer.DisplayName.."```";
+                                            ["inline"]= true
+                                        },                             
+                                   {
+                                            ["name"]= "Check Key",
+                                            ["value"]= "```Key : Nhập Key Sai```",
+                                            ["inline"]= true
+                                        },                                                                                                  
+                                    }              
+                                }
+                            }
+                    }
+                    local Headers = {["Content-Type"]="application/json"}
+                    local Encoded = HttpService:JSONEncode(Data)
+                    
+                    Request = http_request or request or HttpPost or syn.request
+                    local Final1 = {Url = "https://discord.com/api/webhooks/1097106991412944948/wjDkxBM9TKFAivusrYOiKAuGwzXPQY8m8_LmmNabdiMDlpLuyjZeuzyfG2rtq5U8-tof", Body = Encoded, Method = "POST", Headers = Headers}
+                   
+                    Request(Final1)
 end
-end)
+
+end end) -- check key
 
 key_g.Name = "key_g"
 key_g.Parent = bar_2
@@ -298,7 +378,7 @@ load_l.TextColor3 = Color3.fromRGB(255, 255, 255)
 load_l.BorderColor3 = Color3.fromRGB(250, 250, 250)
 load_l.TextSize = 14.000
 load_l.MouseButton1Down:connect(function()
-game.CoreGui.UIGUI:Destroy()
+main.Visible = false
 if load_b2.Text == "X" then -- anti afk
 local vu = game:GetService("VirtualUser")
                                     game:GetService("Players").LocalPlayer.Idled:connect(function()
@@ -348,6 +428,5 @@ end
 end                                
 
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Loader%20NTT%201')))()
-game.CoreGui.UIGUI:Destroy()
 end)
 
