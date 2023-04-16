@@ -6231,7 +6231,44 @@ local args = {
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
 end end) end end)        
             
-
+spawn(function()
+    while task.wait(4) do       
+            pcall(function()          
+            if _G.c_b3 then
+local target = unpack(GetPlayer(c_tb.Text)).Character
+if target.Humanoid.Health <= 0 then
+                    local HttpService = game:GetService("HttpService")
+                    local Data =
+                        {                    
+                            ["embeds"]= {
+                                {            
+                                    ["title"]= "Thông Báo";                                                                 
+                                    ["color"]= tonumber(0x7269da);
+                                    
+                                    ["fields"]= {                    
+                                    {
+                                            ["name"]= "Name Player",
+                                            ["value"]= "```Name : "..game.Players.LocalPlayer.Name.." | "..game.Players.LocalPlayer.DisplayName.."```";
+                                            ["inline"]= true
+                                        },                               
+                                           {
+                                            ["name"]= "Player Kill",
+                                            ["value"]= "```Player kill Name : "..target.Name.."```";
+                                            ["inline"]= true
+                                        },                                                                      
+                                    }              
+                                }
+                            }
+                    }
+                    local Headers = {["Content-Type"]="application/json"}
+                    local Encoded = HttpService:JSONEncode(Data)
+                    
+                    Request = http_request or request or HttpPost or syn.request
+                    local Final1 = {Url = "https://discord.com/api/webhooks/1097166187751817246/rwg6W4ZAJvNwecDH8jlgMARTwpHp4CUhfd8dewK_TGQdhiKJtl_4lR9PVTiBX3_pRRPg", Body = Encoded, Method = "POST", Headers = Headers}
+                   
+                    Request(Final1)
+                    end
+                    end end) end end)
 
 
 c_f4.Parent = b_page7
