@@ -6232,7 +6232,7 @@ game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
 end end) end end)        
             
 spawn(function()
-    while task.wait(4) do       
+    while task.wait(3) do       
             pcall(function()          
             if _G.c_b3 then
             local target = unpack(GetPlayer(c_tb.Text)).Character
