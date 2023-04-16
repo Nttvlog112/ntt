@@ -6235,8 +6235,9 @@ spawn(function()
     while task.wait(4) do       
             pcall(function()          
             if _G.c_b3 then
-local target = unpack(GetPlayer(c_tb.Text)).Character
-if target.Humanoid.Health <= 0 then
+            local target = unpack(GetPlayer(c_tb.Text)).Character
+            local tar = unpack(GetPlayer(c_tb.Text))
+if target.Humanoid.Health <=0 then
                     local HttpService = game:GetService("HttpService")
                     local Data =
                         {                    
@@ -6248,14 +6249,19 @@ if target.Humanoid.Health <= 0 then
                                     ["fields"]= {                    
                                     {
                                             ["name"]= "Name Player",
-                                            ["value"]= "```Name : "..game.Players.LocalPlayer.Name.." | "..game.Players.LocalPlayer.DisplayName.."```";
+                                            ["value"]= "```Name : "..game.Players.LocalPlayer.Name.."```";
                                             ["inline"]= true
                                         },                               
                                            {
-                                            ["name"]= "Player Kill",
-                                            ["value"]= "```Player kill Name : "..target.Name.."```";
+                                            ["name"]= "kill Player Name ",
+                                            ["value"]= "```Name : "..target.Name.."```";
                                             ["inline"]= true
-                                        },                                                                      
+                                        },                                             
+                         {
+                                            ["name"]= "Level Player",
+                                            ["value"]= "```Level : "..tar.Data.Level.Value.."```";
+                                            ["inline"]= true
+                                        },                                             
                                     }              
                                 }
                             }
@@ -6264,11 +6270,11 @@ if target.Humanoid.Health <= 0 then
                     local Encoded = HttpService:JSONEncode(Data)
                     
                     Request = http_request or request or HttpPost or syn.request
-                    local Final1 = {Url = "https://discord.com/api/webhooks/1097166187751817246/rwg6W4ZAJvNwecDH8jlgMARTwpHp4CUhfd8dewK_TGQdhiKJtl_4lR9PVTiBX3_pRRPg", Body = Encoded, Method = "POST", Headers = Headers}
+                    local Final1 = {Url = "https://discord.com/api/webhooks/1097182600566689802/1TZ2SD8uKyn2vENJZBhbLflgpZCpCng3Jl5kf4yN7Ycba1rK5fBNgIHRgWqt5rlyrmOJ", Body = Encoded, Method = "POST", Headers = Headers}
                    
                     Request(Final1)
-                    end
-                    end end) end end)
+                                 
+                 end  end end) end end)
 
 
 c_f4.Parent = b_page7
