@@ -5035,9 +5035,9 @@ if _G.ms_b11 then --script
 local Players = game:GetService("Players")	
 		    for i, v in pairs(Players:GetPlayers()) do
 		        if v.Name ~= game.Players.LocalPlayer.Name then
-        if (v.Character.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <=  150 then
+        if (v.Character.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <=  180 then
         if game.Players.LocalPlayer.Character.Humanoid.Health >  game.Players.LocalPlayer.Character.Humanoid.MaxHealth / 3.5 then
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame * CFrame.new(0,0,152)   
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame * CFrame.new(0,0,-182)   
 end end end end
 end
 end)
@@ -6171,14 +6171,12 @@ spawn(function()
 target.HumanoidRootPart.Transparency = 1
 local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
                   if Distance < 500 then
-                  Speed = 250
+                  Speed = 400
                   elseif Distance < 200 then
                   Speed = 7000000
                   elseif Distance < 150 then
-                  Speed = 2000000
-                  elseif Distance < 1000 then
-                        Speed = 400        
-    elseif Distance >= 1500 then
+                  Speed = 2000000                      
+    elseif Distance >= 500 then
                   Speed = 120
            end
 usetool()
@@ -6187,19 +6185,19 @@ game:GetService("TweenService"):Create(
                         TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
                         {CFrame = target.HumanoidRootPart.CFrame* CFrame.new(-30, 0, 0) }
                     ):Play()  
-                    wait(2)
+                    wait(1.5)
             game:GetService("TweenService"):Create(
                         game.Players.LocalPlayer.Character.HumanoidRootPart,
                         TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
                         {CFrame = target.HumanoidRootPart.CFrame* CFrame.new(30, 0, 0) }
                     ):Play()          
-                    wait(2)
+                    wait(1.5)
                     game:GetService("TweenService"):Create(
                         game.Players.LocalPlayer.Character.HumanoidRootPart,
                         TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
                         {CFrame = target.HumanoidRootPart.CFrame* CFrame.new(0, 0, 30) }
                     ):Play()  
-                    wait(2)
+                    wait(1.5)
                     game:GetService("TweenService"):Create(
                         game.Players.LocalPlayer.Character.HumanoidRootPart,
                         TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
