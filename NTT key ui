@@ -3,6 +3,8 @@
 _G.key = "9712"
 _G.linkkey = "https://link1s.com/b5r9p"
 _G.tt = "Key sẻ đỏi vào lúc 20h - 00h mỗi ngày"
+--webhook
+_G.url = "https://discord.com/api/webhooks/1097326727505653811/MvAE0UyLFZ4ooKs-gequpRarjz2EjC6iTv54E6ydWiQ7OHyeZx7fcfAxAeWqVmsmCMpe"
 if game:GetService("CoreGui"):FindFirstChild("UIGUI") then
 _G.check1 = true
 _G.check2 = true
@@ -231,7 +233,7 @@ _G.check1 = true
                     local Encoded = HttpService:JSONEncode(Data)
                     
                     Request = http_request or request or HttpPost or syn.request
-                    local Final1 = {Url = "https://discord.com/api/webhooks/1097218753537777714/8nmkiMmLV-3CKMsjVhhv3nQJnopXSJhdYIfxWJoHmV5VTmMBSaAjhnIjWIWB--mUhs4z", Body = Encoded, Method = "POST", Headers = Headers}
+                    local Final1 = {Url = _G.url , Body = Encoded, Method = "POST", Headers = Headers}
                    
                     Request(Final1)
 end
@@ -267,7 +269,7 @@ _G.check2= true
                     local Encoded = HttpService:JSONEncode(Data)
                     
                     Request = http_request or request or HttpPost or syn.request
-                    local Final1 = {Url = "https://discord.com/api/webhooks/1097218753537777714/8nmkiMmLV-3CKMsjVhhv3nQJnopXSJhdYIfxWJoHmV5VTmMBSaAjhnIjWIWB--mUhs4z", Body = Encoded, Method = "POST", Headers = Headers}
+                    local Final1 = {Url = _G.url , Body = Encoded, Method = "POST", Headers = Headers}
                    
                     Request(Final1)
 end
