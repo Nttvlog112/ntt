@@ -6259,7 +6259,7 @@ wait(4)
                                         },              
                                            {
                                             ["name"]= "kill Player Name ",
-                                            ["value"]= "```Name : "..game.Players.LocalPlayer.Name.."```";
+                                            ["value"]= "```Name : "..target.Name.."```";
                                             ["inline"]= true
                                         },                                             
                          {
