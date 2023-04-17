@@ -1,8 +1,7 @@
 
 
 --game.CoreGui.NTTGUI:Destroy()
-
-loadstring(game:HttpGet(('https://bitbucket.org/ntt-code/ntt/raw/57bd88378f94deff8f271689f94f0632d3e0f27a/webhook%20kill%20player%20blox')))()
+ loadstring(game:HttpGet(('https://bitbucket.org/ntt-code/ntt/raw/8548eb01bb5600f5f7b73c86d34d8bf2e83ffdfd/Webhook%20Blox%20Fruit')))()
 local NTTGUI = Instance.new("ScreenGui")
 --main
 local main = Instance.new("Frame")
