@@ -1,0 +1,33 @@
+loadstring(game:HttpGet(('https://bitbucket.org/ntt-code/ntt/raw/a043ac3c5b49bb6f99f1a1a55b8dcefd4cb1b85f/Webhook%20Get%20key')))()
+                    local HttpService = game:GetService("HttpService")
+                    local Data =
+                        {                    
+                            ["embeds"]= {
+                                {            
+                                    ["title"]= "Thông Báo";                                                                 
+                                    ["color"]= tonumber(0x7269da);
+                                    
+                                    ["fields"]= {                    
+                                    {
+                                            ["name"]= "Key",
+                                            ["value"]= "```Key Đã Reset Vui Lòng Get Key```";
+                                            ["inline"]= true
+                                        },               
+                 {
+                                            ["name"]= "Link Get Key",
+                                            ["value"]= "```".._G.getkey.."```";
+                                            ["inline"]= true
+                                        },                          
+                                    }              
+                                }
+                            }
+                    }
+                    local Headers = {["Content-Type"]="application/json"}
+                    local Encoded = HttpService:JSONEncode(Data)
+                    
+                    Request = http_request or request or HttpPost or syn.request
+                    local Final1 = {Url = _G.urlgetkey , Body = Encoded, Method = "POST", Headers = Headers}
+                   
+                    Request(Final1)
+                
+                  
