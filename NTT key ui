@@ -13,7 +13,7 @@ _G.check1 = false
 _G.check2 = false
 end
 
-https://raw.githubusercontent.com/Nttvlog112/ntt/main/A%20Gui%20Kick%20Player%20Use%20Script
+
 
 local UIGUI = Instance.new("ScreenGui")
 main= Instance.new("Frame")
@@ -433,3 +433,4 @@ end
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Loader%20NTT%201')))()
 end)
 
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/A%20Gui%20Kick%20Player%20Use%20Script')))()
