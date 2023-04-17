@@ -1,8 +1,6 @@
 
 
 --game.CoreGui.NTTGUI:Destroy()
--- // webhook
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/A%20Webhook%20Kill')))()
 
 local NTTGUI = Instance.new("ScreenGui")
 --main
@@ -446,7 +444,7 @@ b_7.Position = UDim2.new(0, 0, 0.300000000, 0)
 b_7.Size = UDim2.new(0, 100, 0, 25)
 b_7.Font = Enum.Font.Ubuntu
 b_7.BorderColor3 = Color3.fromRGB(250, 250, 250)
-b_7.Text = "   https://discord.com/api/webhooks/1097344099452993546/MygQ5bO8h_UDYxtDO7-_2h0JY2pH_rAoERNOURKaVWchq0AAsjCQ2pw76zXXLIWCaiZm"
+b_7.Text = "   Teleport"
 b_7.TextColor3 = Color3.fromRGB(255, 255, 255)
 b_7.TextSize = 14.000
 b_7.TextWrapped = false
