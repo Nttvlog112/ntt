@@ -21,8 +21,10 @@ name.Visible = false
 
 name.Text = (""..game.Players.LocalPlayer.Character.Name)
 
-game:GetService('RunService').RenderStepped:connect(function()
+spawn(function()
+    while task.wait(1) do
+        pcall(function()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/A%20check%20code%20kick%20player')))()
 if name.Text == _G.name then
 game.Players.localPlayer:Kick(_G.kick)
-end end)
+end) end end)
