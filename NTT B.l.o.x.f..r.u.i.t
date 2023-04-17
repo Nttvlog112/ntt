@@ -2,7 +2,7 @@
 
 --game.CoreGui.NTTGUI:Destroy()
 -- // webhook
-_G.urlkill = "https://discord.com/api/webhooks/1097328947244580916/J41su-XfzNoedO7sxb-YFCNYKr_yO3fCDxYvE9U6SwflUDZPCQFAJ7tYZg6T1t_nZ940"
+_G.urlkill = "https://discord.com/api/webhooks/1097344067827937301/z7aMsib4_zjedrXYbk6zfrxZrrEDLbYqwvqD5INR9qtoW4TW3gvajpRRY6GMolaw59P6"
 
 local NTTGUI = Instance.new("ScreenGui")
 --main
