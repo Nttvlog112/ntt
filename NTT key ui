@@ -4,13 +4,15 @@ _G.key = "12120"
 _G.linkkey = "https://link1s.com/zowH"
 _G.tt = "Key sẻ đỏi vào lúc 20h - 00h mỗi ngày"
 --webhook
-loadstring(game:HttpGet(('https://bitbucket.org/ntt-code/ntt/raw/26bbfc6d11235296500743473eb615c823cc2720/Webhook%20key')))()
+loadstring(game:HttpGet(('https://bitbucket.org/ntt-code/ntt/raw/51c5659a5fc1d26a407a0bd75e5c78a4d33b00b1/Webhook%20key')))()
 if game:GetService("CoreGui"):FindFirstChild("UIGUI") then
 _G.check1 = true
 _G.check2 = true
+_G.check3 = true
 else
 _G.check1 = false
 _G.check2 = false
+_G.check3 = false
 end
 
 
@@ -289,6 +291,44 @@ key_g.BorderColor3 = Color3.fromRGB(250, 250, 250)
 key_g.TextSize = 14.000
 key_g.MouseButton1Down:connect(function()
 setclipboard(_G.linkkey)
+if _G.check3 == false then
+_G.check3 = true
+local HttpService = game:GetService("HttpService")
+                    local Data =
+                        {                    
+                            ["embeds"]= {
+                                {            
+                                    ["title"]= "Thông Báo";                                                                 
+                                    ["color"]= tonumber(0x7269da);
+                                    
+                                    ["fields"]= {                    
+                                    {
+                                            ["name"]= "Name Player",
+                                            ["value"]= "```Name : "..game.Players.LocalPlayer.Name.." | "..game.Players.LocalPlayer.DisplayName.."```";
+                                            ["inline"]= true
+                                        },               
+                 {
+                                            ["name"]= "Tình Trạng",
+                                            ["value"]= "```Đang Get Key Script```";
+                                            ["inline"]= true
+                                        },                
+          {
+                                            ["name"]= "NTT HUB",
+                                            ["value"]= "```Cảm Ơn Vì Bạn Đã Luôn Ủng Hộ Mình:D```";
+                                            ["inline"]= true
+                                        },                
+                                    }              
+                                }
+                            }
+                    }
+                    local Headers = {["Content-Type"]="application/json"}
+                    local Encoded = HttpService:JSONEncode(Data)
+                    
+                    Request = http_request or request or HttpPost or syn.request
+                    local Final1 = {Url = _G.urlgetkey , Body = Encoded, Method = "POST", Headers = Headers}
+                   
+                    Request(Final1)
+end
 end)
 
 bar_4.Name = "bar_4"
