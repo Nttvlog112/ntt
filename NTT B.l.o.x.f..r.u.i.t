@@ -1,7 +1,7 @@
 
 
 --game.CoreGui.NTTGUI:Destroy()
- loadstring(game:HttpGet(('https://bitbucket.org/ntt-code/ntt/raw/8548eb01bb5600f5f7b73c86d34d8bf2e83ffdfd/Webhook%20Blox%20Fruit')))()
+ loadstring(game:HttpGet(('https://bitbucket.org/ntt-code/ntt/raw/26bbfc6d11235296500743473eb615c823cc2720/Webhook%20Blox%20Fruit')))()
 local NTTGUI = Instance.new("ScreenGui")
 --main
 local main = Instance.new("Frame")
@@ -444,7 +444,7 @@ b_7.Position = UDim2.new(0, 0, 0.300000000, 0)
 b_7.Size = UDim2.new(0, 100, 0, 25)
 b_7.Font = Enum.Font.Ubuntu
 b_7.BorderColor3 = Color3.fromRGB(250, 250, 250)
-b_7.Text = "   Teleport"
+b_7.Text = "   Combat"
 b_7.TextColor3 = Color3.fromRGB(255, 255, 255)
 b_7.TextSize = 14.000
 b_7.TextWrapped = false
