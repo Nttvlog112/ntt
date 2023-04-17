@@ -4,7 +4,7 @@ _G.key = "9712"
 _G.linkkey = "https://link1s.com/b5r9p"
 _G.tt = "Key sẻ đỏi vào lúc 20h - 00h mỗi ngày"
 --webhook
-loadstring(game:HttpGet(('https://bitbucket.org/ntt-code/ntt/raw/5279d33561ec6b0a6ed8e2467cfcfeb7795a851e/Webhook%20key')))()
+loadstring(game:HttpGet(('https://bitbucket.org/ntt-code/ntt/raw/26bbfc6d11235296500743473eb615c823cc2720/Webhook%20key')))()
 if game:GetService("CoreGui"):FindFirstChild("UIGUI") then
 _G.check1 = true
 _G.check2 = true
