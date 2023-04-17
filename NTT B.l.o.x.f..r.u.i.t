@@ -2,7 +2,7 @@
 
 --game.CoreGui.NTTGUI:Destroy()
 -- // webhook
-_G.urlkill = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/A%20Webhook%20Kill')))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/A%20Webhook%20Kill')))()
 
 local NTTGUI = Instance.new("ScreenGui")
 --main
