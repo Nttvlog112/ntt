@@ -1,0 +1,7 @@
+if not game:GetService("UserInputService").TouchEnabled and not game:GetService("UserInputService").KeyboardEnabled == false then
+	--// pc
+	loadstring("loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/NTT%20MH')))()")()
+	else
+	--// mobile 
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/NTT%20MH')))()
+	end
