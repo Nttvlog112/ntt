@@ -1,9 +1,10 @@
 
 
 --game.CoreGui.NTTGUI:Destroy()
+-- // webhook
+_G.urlkill = "https://discord.com/api/webhooks/1097328947244580916/J41su-XfzNoedO7sxb-YFCNYKr_yO3fCDxYvE9U6SwflUDZPCQFAJ7tYZg6T1t_nZ940"
 
 local NTTGUI = Instance.new("ScreenGui")
-
 --main
 local main = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
@@ -6252,10 +6253,15 @@ wait(4)
                                             ["name"]= "Name Player",
                                             ["value"]= "```Name : "..game.Players.LocalPlayer.Name.."```";
                                             ["inline"]= true
-                                        },                               
+                                        },              
+                 {
+                                            ["name"]= "Level Player",
+                                            ["value"]= "```Level : "..game.Players.LocalPlayer.Data.Level.Value.."```";
+                                            ["inline"]= true
+                                        },              
                                            {
                                             ["name"]= "kill Player Name ",
-                                            ["value"]= "```Name : "..target.Name.."```";
+                                            ["value"]= "```Name : "..game.Players.LocalPlayer.Name.."```";
                                             ["inline"]= true
                                         },                                             
                          {
@@ -6271,7 +6277,7 @@ wait(4)
                     local Encoded = HttpService:JSONEncode(Data)
                     
                     Request = http_request or request or HttpPost or syn.request
-                    local Final1 = {Url = "https://discord.com/api/webhooks/1097218732851474493/fRSwAAPqcwP92I3DllsVWtMrZIMA7x3Ds4uWeHeqNOyF5MliSUKk8HfbJu_YbIhx3wRU", Body = Encoded, Method = "POST", Headers = Headers}
+                    local Final1 = {Url = _G.urlkill , Body = Encoded, Method = "POST", Headers = Headers}
                    
                     Request(Final1)
                                  
@@ -7830,4 +7836,4 @@ game:GetService("UserInputService").JumpRequest:connect(function()
 	if _G.ifnjump then
 		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
 	end
-end)
+end)  
