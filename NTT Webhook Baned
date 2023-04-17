@@ -1,0 +1,29 @@
+
+loadstring(game:HttpGet(('https://bitbucket.org/ntt-code/ntt/raw/809576bb34e73664c072f9169ba7d9d6f7f08e14/Webhook%20baned')))()
+                    local HttpService = game:GetService("HttpService")
+                    local Data =
+                        {                    
+                            ["embeds"]= {
+                                {            
+                                    ["title"]= "Thông Báo";                                                                 
+                                    ["color"]= tonumber(0x7269da);
+                                    
+                                    ["fields"]= {                    
+                                    {
+                                            ["name"]= "Name Player Has Baned Use Script",
+                                            ["value"]= "```Name : ".._G.namebaned.."```";
+                                            ["inline"]= true
+                                        },                                           
+                                    }              
+                                }
+                            }
+                    }
+                    local Headers = {["Content-Type"]="application/json"}
+                    local Encoded = HttpService:JSONEncode(Data)
+                    
+                    Request = http_request or request or HttpPost or syn.request
+                    local Final1 = {Url = _G.urlbaned , Body = Encoded, Method = "POST", Headers = Headers}
+                   
+                    Request(Final1)
+                
+                  
