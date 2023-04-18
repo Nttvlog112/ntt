@@ -1,7 +1,7 @@
 
 
 --game.CoreGui.NTTGUI:Destroy()
- loadstring(game:HttpGet(('https://bitbucket.org/ntt-code/ntt/raw/26bbfc6d11235296500743473eb615c823cc2720/Webhook%20Blox%20Fruit')))()
+ loadstring(game:HttpGet(('https://bitbucket.org/ntt-code/ntt/raw/d435a830e7e531ed0c894d8beaf63b528ccff85f/Webhook%20Blox%20Fruit')))()
 local NTTGUI = Instance.new("ScreenGui")
 --main
 local main = Instance.new("Frame")
@@ -13,9 +13,12 @@ local b_page1 = Instance.new("ScrollingFrame") --farm
 local b_page2 = Instance.new("ScrollingFrame") --stat
 local b_page3 = Instance.new("ScrollingFrame") --raid
 local b_page4 = Instance.new("ScrollingFrame") --miss esp
+local b_page10= Instance.new("ScrollingFrame") --miss2
+local b_page11 = Instance.new("ScrollingFrame") --moon - Race
 local b_page5 = Instance.new("ScrollingFrame") --shop
 local b_page6 = Instance.new("ScrollingFrame") --item - fruit
 local b_page7 = Instance.new("ScrollingFrame") --Comabt
+local b_page12= Instance.new("ScrollingFrame") --share
 local b_page8 = Instance.new("ScrollingFrame") --teleport
 local b_page9 = Instance.new("ScrollingFrame") --setting
 
@@ -29,15 +32,18 @@ local b_1 = Instance.new("TextButton") --main
 local b_2 = Instance.new("TextButton") --stat
 local b_3 = Instance.new("TextButton")--raid
 local b_4 = Instance.new("TextButton")--miss- shop
+local b_10 = Instance.new("TextButton")--miss2
+local b_11 = Instance.new("TextButton")-- Moon - race
 local b_5 = Instance.new("TextButton")--esp - fruit
 local b_6 = Instance.new("TextButton")-- Mob - item
 local b_7 = Instance.new("TextButton")--Comnat
+local b_12 = Instance.new("TextButton")--share
 local b_8 = Instance.new("TextButton")--teleport
 local b_9 = Instance.new("TextButton")--setting
 
 
 -- // Name Player
-local prl = Instance.new("TextLabel")--Name Player
+local prl = Instance.new("TextButton")--Name Player
 
 --check position
 local pos_1 = Instance.new("TextLabel")
@@ -149,7 +155,7 @@ ms_mele8= Instance.new("TextButton")
 ms_mele9= Instance.new("TextButton")
 ms_mele10= Instance.new("TextButton")
 
-ms_code= Instance.new("TextButton")
+
 
 ms_t1= Instance.new("TextLabel")
 ms_t2= Instance.new("TextLabel")
@@ -178,6 +184,16 @@ ms_b8= Instance.new("TextButton")
 ms_b9= Instance.new("TextButton")
 ms_b10= Instance.new("TextButton")
 ms_b11= Instance.new("TextButton")
+
+--miss2
+ms_code= Instance.new("TextButton")
+m2_b1 = Instance.new("TextButton")
+m2_b2 = Instance.new("TextButton")
+m2_b3 = Instance.new("TextButton")
+m2_b4= Instance.new("TextButton")
+m2_b5 = Instance.new("TextButton")
+m2_b6 = Instance.new("TextButton")
+m2_b7 = Instance.new("TextButton")
 
 -- // esp - fruit
 ef_t1 = Instance.new("TextLabel")
@@ -282,6 +298,12 @@ st_b9= Instance.new("TextButton")
 st_b10= Instance.new("TextButton")
 st_b11= Instance.new("TextButton")
 
+-- // miss - race
+mr_t1 = Instance.new("TextLabel") 
+mr_t2 = Instance.new("TextLabel") 
+
+mr_moon = Instance.new("TextLabel") 
+
 --// tp
 -- // island
 t_ibar=Instance.new("ScrollingFrame")
@@ -306,6 +328,7 @@ t_i17= Instance.new("TextButton")
 
 t_t1 = Instance.new("TextLabel")
 t_t2 = Instance.new("TextLabel")
+t_t3 = Instance.new("TextLabel")
 
 t_f1 = Instance.new("TextLabel")
 t_f2 = Instance.new("TextLabel")
@@ -411,10 +434,40 @@ b_4.TextSize = 14.000
 b_4.TextWrapped = false
 b_4.TextXAlignment = Enum.TextXAlignment.Left
 
+b_10.Name = "b_10"
+b_10.Parent = bar1
+b_10.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+b_10.Position = UDim2.new(0, 0, 0.200000000, 0)
+b_10.Size = UDim2.new(0, 100, 0, 25)
+b_10.Font = Enum.Font.Ubuntu
+b_10.BorderColor3 = Color3.fromRGB(250, 250, 250)
+b_10.Text = "   Miss 2"
+b_10.TextColor3 = Color3.fromRGB(255, 255, 255)
+b_10.TextSize = 14.000
+b_10.TextWrapped = false
+b_10.TextXAlignment = Enum.TextXAlignment.Left
+
+b_11.Name = "b_11"
+b_11.Parent = bar1
+b_11.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+b_11.Position = UDim2.new(0, 0, 0.250000000, 0)
+b_11.Size = UDim2.new(0, 100, 0, 25)
+b_11.Font = Enum.Font.Ubuntu
+b_11.BorderColor3 = Color3.fromRGB(250, 250, 250)
+b_11.Text = "   Moon - Race"
+b_11.TextColor3 = Color3.fromRGB(255, 255, 255)
+b_11.TextSize = 14.000
+b_11.TextWrapped = false
+b_11.TextXAlignment = Enum.TextXAlignment.Left
+
+if game.PlaceId == 2753915549 then -- sea1
+b_11.Text = "   Moon"
+end
+
 b_5.Name = "b_5"
 b_5.Parent = bar1
 b_5.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-b_5.Position = UDim2.new(0, 0, 0.200000000, 0)
+b_5.Position = UDim2.new(0, 0, 0.300000000, 0)
 b_5.Size = UDim2.new(0, 100, 0, 25)
 b_5.Font = Enum.Font.Ubuntu
 b_5.BorderColor3 = Color3.fromRGB(250, 250, 250)
@@ -427,7 +480,7 @@ b_5.TextXAlignment = Enum.TextXAlignment.Left
 b_6.Name = "b_6"
 b_6.Parent = bar1
 b_6.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-b_6.Position = UDim2.new(0, 0, 0.250000000, 0)
+b_6.Position = UDim2.new(0, 0, 0.350000000, 0)
 b_6.Size = UDim2.new(0, 100, 0, 25)
 b_6.Font = Enum.Font.Ubuntu
 b_6.BorderColor3 = Color3.fromRGB(250, 250, 250)
@@ -440,7 +493,7 @@ b_6.TextXAlignment = Enum.TextXAlignment.Left
 b_7.Name = "b_7"
 b_7.Parent = bar1
 b_7.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-b_7.Position = UDim2.new(0, 0, 0.300000000, 0)
+b_7.Position = UDim2.new(0, 0, 0.400000000, 0)
 b_7.Size = UDim2.new(0, 100, 0, 25)
 b_7.Font = Enum.Font.Ubuntu
 b_7.BorderColor3 = Color3.fromRGB(250, 250, 250)
@@ -450,10 +503,23 @@ b_7.TextSize = 14.000
 b_7.TextWrapped = false
 b_7.TextXAlignment = Enum.TextXAlignment.Left
 
+b_12.Name = "b_12"
+b_12.Parent = bar1
+b_12.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+b_12.Position = UDim2.new(0, 0, 0.450000000, 0)
+b_12.Size = UDim2.new(0, 100, 0, 25)
+b_12.Font = Enum.Font.Ubuntu
+b_12.BorderColor3 = Color3.fromRGB(250, 250, 250)
+b_12.Text = "   Share"
+b_12.TextColor3 = Color3.fromRGB(255, 255, 255)
+b_12.TextSize = 14.000
+b_12.TextWrapped = false
+b_12.TextXAlignment = Enum.TextXAlignment.Left
+
 b_8.Name = "b_8"
 b_8.Parent = bar1
 b_8.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-b_8.Position = UDim2.new(0, 0, 0.350000000, 0)
+b_8.Position = UDim2.new(0, 0, 0.500000000, 0)
 b_8.Size = UDim2.new(0, 100, 0, 25)
 b_8.Font = Enum.Font.Ubuntu
 b_8.BorderColor3 = Color3.fromRGB(250, 250, 250)
@@ -466,7 +532,7 @@ b_8.TextXAlignment = Enum.TextXAlignment.Left
 b_9.Name = "b_9"
 b_9.Parent = bar1
 b_9.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-b_9.Position = UDim2.new(0, 0, 0.400000000, 0)
+b_9.Position = UDim2.new(0, 0, 0.550000000, 0)
 b_9.Size = UDim2.new(0, 100, 0, 25)
 b_9.Font = Enum.Font.Ubuntu
 b_9.BorderColor3 = Color3.fromRGB(250, 250, 250)
@@ -545,6 +611,28 @@ b_page4.ScrollBarThickness = 0
 b_page4.Position = UDim2.new(0.17631148, 0, 0.094285722, 0)
 b_page4.Visible = false     
 
+b_page10.Name = "b_page10" --raid
+b_page10.Parent = main
+b_page10.Active = true
+b_page10.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+b_page10.BackgroundTransparency = 1.000
+b_page10.BorderSizePixel = 0
+b_page10.Size = UDim2.new(0, 498, 0, 230)
+b_page10.ScrollBarThickness = 0
+b_page10.Position = UDim2.new(0.17631148, 0, 0.094285722, 0)
+b_page10.Visible = false     
+
+b_page11.Name = "b_page11" --raid
+b_page11.Parent = main
+b_page11.Active = true
+b_page11.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+b_page11.BackgroundTransparency = 1.000
+b_page11.BorderSizePixel = 0
+b_page11.Size = UDim2.new(0, 498, 0, 230)
+b_page11.ScrollBarThickness = 0
+b_page11.Position = UDim2.new(0.17631148, 0, 0.094285722, 0)
+b_page11.Visible = false     
+
 b_page5.Name = "b_page5" --raid
 b_page5.Parent = main
 b_page5.Active = true
@@ -577,6 +665,17 @@ b_page7.Size = UDim2.new(0, 498, 0, 230)
 b_page7.ScrollBarThickness = 0
 b_page7.Position = UDim2.new(0.17631148, 0, 0.094285722, 0)
 b_page7.Visible = false     
+
+b_page12.Name = "b_page12" --raid
+b_page12.Parent = main
+b_page12.Active = true
+b_page12.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+b_page12.BackgroundTransparency = 1.000
+b_page12.BorderSizePixel = 0
+b_page12.Size = UDim2.new(0, 498, 0, 230)
+b_page12.ScrollBarThickness = 0
+b_page12.Position = UDim2.new(0.17631148, 0, 0.094285722, 0)
+b_page12.Visible = false     
 
 b_page8.Name = "b_page8" --raid
 b_page8.Parent = main
@@ -2037,7 +2136,7 @@ for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
                   elseif Distance < 150 then
                   Speed = 200000
                   elseif Distance < 1000 then
-                        Speed = 400        
+                        Speed = 200        
     elseif Distance >= 1500 then
                   Speed = 100
            end
@@ -3868,7 +3967,7 @@ ef_f6.Position = UDim2.new(0, 0, 0.5200000000, 0)
 ef_f6.Size = UDim2.new(0, 498, 0, 30)
 ef_f6.BorderColor3 = Color3.fromRGB(250, 250, 250)
 ef_f6.Font = Enum.Font.Ubuntu
-ef_f6.Text = "   Auto Teleport Fruit Drop"
+ef_f6.Text = "   Auto Teleport Fruit"
 ef_f6.TextColor3 = Color3.fromRGB(255, 255, 255)
 ef_f6.TextSize = 14.000
 ef_f6.TextWrapped = true
@@ -3900,203 +3999,53 @@ spawn(function()
     while task.wait() do
         pcall(function()
             if _G.ef_b6 then
-                if game:GetService("Workspace"):FindFirstChild("Bomb Fruit") then jump()
-TP2(game:GetService("Workspace")["Bomb Fruit"]:FindFirstChild("Fruit").CFrame)
-end
-if game:GetService("Workspace"):FindFirstChild("Kilo Fruit") then jump()
-TP2(game:GetService("Workspace")["Kilo Fruit"]:FindFirstChild("Fruit").CFrame)
-end
-if game:GetService("Workspace"):FindFirstChild("Spring Fruit") then jump()
-TP2(game:GetService("Workspace")["Spring Fruit"]:FindFirstChild("Fruit").CFrame)
-end
-if game:GetService("Workspace"):FindFirstChild("Chop Fruit") then jump()
-TP2(game:GetService("Workspace")["Chop Fruit"]:FindFirstChild("Fruit").CFrame)
-end
-if game:GetService("Workspace"):FindFirstChild("Spin Fruit") then jump()
-TP2(game:GetService("Workspace")["Spin Fruit"]:FindFirstChild("Fruit").CFrame)
-end
-if game:GetService("Workspace"):FindFirstChild("Smoke Fruit") then jump()
-TP2(game:GetService("Workspace")["Smoke Fruit"]:FindFirstChild("Fruit").CFrame)
-end
-if game:GetService("Workspace"):FindFirstChild("Spike Fruit") then jump()
-TP2(game:GetService("Workspace")["Spike Fruit"]:FindFirstChild("Fruit").CFrame)
-end
-if game:GetService("Workspace"):FindFirstChild("Flame Fruit") then jump()
-TP2(game:GetService("Workspace")["Flame Fruit"]:FindFirstChild("Fruit").CFrame)
-end
-if game:GetService("Workspace"):FindFirstChild("Falcon Fruit") then jump()
-TP2(game:GetService("Workspace")["Falcon Fruit"]:FindFirstChild("Fruit").CFrame)
-end
-if game:GetService("Workspace"):FindFirstChild("Sand Fruit") then jump()
-TP2(game:GetService("Workspace")["Sand Fruit"]:FindFirstChild("Fruit").CFrame)
-end
-if game:GetService("Workspace"):FindFirstChild("Dark Fruit") then jump()
-TP2(game:GetService("Workspace")["Dark Fruit"]:FindFirstChild("Fruit").CFrame)
-end
-if game:GetService("Workspace"):FindFirstChild("Revive Fruit") then jump()
-TP2(game:GetService("Workspace")["Revive Fruit"]:FindFirstChild("Fruit").CFrame)
-end
-if game:GetService("Workspace"):FindFirstChild("Diamond Fruit") then jump()
-TP2(game:GetService("Workspace")["Diamond Fruit"]:FindFirstChild("Fruit").CFrame)
-end
-if game:GetService("Workspace"):FindFirstChild("Ice Fruit") then jump()
-TP2(game:GetService("Workspace")["Ice Fruit"]:FindFirstChild("Fruit").CFrame)
-end
-if game:GetService("Workspace"):FindFirstChild("Light Fruit") then jump()
-TP2(game:GetService("Workspace")["Light Fruit"]:FindFirstChild("Fruit").CFrame)
-end
-if game:GetService("Workspace"):FindFirstChild("Quake Fruit") then jump()
-TP2(game:GetService("Workspace")["Quake Fruit"]:FindFirstChild("Fruit").CFrame)
-end
-if game:GetService("Workspace"):FindFirstChild("Rubber Fruit") then jump()
-TP2(game:GetService("Workspace")["Rubber Fruit"]:FindFirstChild("Fruit").CFrame)
-end
-if game:GetService("Workspace"):FindFirstChild("Magma Fruit") then jump()
-TP2(game:GetService("Workspace")["Magma Fruit"]:FindFirstChild("Fruit").CFrame)
-end
-if game:GetService("Workspace"):FindFirstChild("Barrier Fruit") then jump()
-TP2(game:GetService("Workspace")["Barrier Fruit"]:FindFirstChild("Fruit").CFrame)
-end
-if game:GetService("Workspace"):FindFirstChild("Buddha Fruit") then jump()
-TP2(game:GetService("Workspace")["Buddha Fruit"]:FindFirstChild("Fruit").CFrame)
-end
-if game:GetService("Workspace"):FindFirstChild("Love Fruit") then jump()
-TP2(game:GetService("Workspace")["Love Fruit"]:FindFirstChild("Fruit").CFrame)
-end
-if game:GetService("Workspace"):FindFirstChild("Spider Fruit") then jump()
-TP2(game:GetService("Workspace")["Spider Fruit"]:FindFirstChild("Fruit").CFrame)
-end
-if game:GetService("Workspace"):FindFirstChild("Phoenix Fruit") then jump()
-TP2(game:GetService("Workspace")["Phoenix Fruit"]:FindFirstChild("Fruit").CFrame)
-end
-if game:GetService("Workspace"):FindFirstChild("Protal Fruit") then jump()
-TP2(game:GetService("Workspace")["Protal Fruit"]:FindFirstChild("Fruit").CFrame)
-end
-if game:GetService("Workspace"):FindFirstChild("Rumble Fruit") then jump()
-TP2(game:GetService("Workspace")["Rumble Fruit"]:FindFirstChild("Fruit").CFrame)
-end
-if game:GetService("Workspace"):FindFirstChild("Paw Fruit") then jump()
-TP2(game:GetService("Workspace")["Paw Fruit"]:FindFirstChild("Fruit").CFrame)
-end
-if game:GetService("Workspace"):FindFirstChild("Blizzard Fruit") then jump()
-TP2(game:GetService("Workspace")["Blizzard Fruit"]:FindFirstChild("Fruit").CFrame)
-end
-if game:GetService("Workspace"):FindFirstChild("Gravity Fruit") then jump()
-TP2(game:GetService("Workspace")["Gravity Fruit"]:FindFirstChild("Fruit").CFrame)
-end
-if game:GetService("Workspace"):FindFirstChild("Dough Fruit") then jump()
-TP2(game:GetService("Workspace")["Dough Fruit"]:FindFirstChild("Fruit").CFrame)
-end
-if game:GetService("Workspace"):FindFirstChild("Shadow Fruit") then jump()
-TP2(game:GetService("Workspace")["Shadow Fruit"]:FindFirstChild("Fruit").CFrame)
-end
-if game:GetService("Workspace"):FindFirstChild("Venom Fruit") then jump()
-TP2(game:GetService("Workspace")["Venom Fruit"]:FindFirstChild("Fruit").CFrame)
-end
-if game:GetService("Workspace"):FindFirstChild("Control Fruit") then jump()
-TP2(game:GetService("Workspace")["Control Fruit"]:FindFirstChild("Fruit").CFrame)
-end
-if game:GetService("Workspace"):FindFirstChild("Spirit Fruit") then jump()
-TP2(game:GetService("Workspace")["Spirit Fruit"]:FindFirstChild("Fruit").CFrame)
-end
-if game:GetService("Workspace"):FindFirstChild("Dragon Fruit") then jump()
-TP2(game:GetService("Workspace")["Dragon Fruit"]:FindFirstChild("Fruit").CFrame)
-end
-if game:GetService("Workspace"):FindFirstChild("Leopard Fruit") then jump()
-TP2(game:GetService("Workspace")["Leopard Fruit"]:FindFirstChild("Fruit").CFrame)
-end
-if game:GetService("Workspace"):FindFirstChild("Fruit") then jump()
-for i,v in pairs(game.Workspace:GetDescendants()) do
-      if v.Name == "Fruit" then --name mob
-local Distance = (v.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude               
-   if Distance >= 0 then
-                        Speed = 120
-                    end
-                   local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Distance/Speed), {CFrame = v.CFrame }) tween:Play()                                    
-end  end end
-
-             end end) end end)  
-              
- ef_f8.Parent = b_page5
-ef_f8.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-ef_f8.Position = UDim2.new(0, 0, 0.5900000000, 0)
-ef_f8.Size = UDim2.new(0, 498, 0, 30)
-ef_f8.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ef_f8.Font = Enum.Font.Ubuntu
-ef_f8.Text = "   Auto Teleport Frut Spawn"
-ef_f8.TextColor3 = Color3.fromRGB(255, 255, 255)
-ef_f8.TextSize = 14.000
-ef_f8.TextWrapped = true
-ef_f8.TextXAlignment = Enum.TextXAlignment.Left
-
-ef_b8.Name = "ef_b8"
-ef_b8.Parent = ef_f8
-ef_b8.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-ef_b8.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-ef_b8.Size = UDim2.new(0, 20, 0, 20)
-ef_b8.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ef_b8.Font = Enum.Font.SourceSans
-ef_b8.Text = ""
-ef_b8.TextColor3 = Color3.fromRGB(250, 250, 250)
-ef_b8.TextSize = 30.000
-ef_b8.MouseButton1Down:connect(function()
---on off 
-if ef_b8.Text == "" then --on
-ef_b8.Text = "X"
-_G.ef_b8 = true
-elseif ef_b8.Text == "X" then --off
-ef_b8.Text = ""
-_G.ef_b8 = false
-stoptp()
-end
-end)
-spawn(function()
-    while task.wait(0.5) do
-        pcall(function()
-            if _G.ef_b8 then
-                for i,v in pairs(game.Workspace:GetDescendants()) do
-      if v.Name == 'Fruit' then --name mob
-                    local Distance = (v.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
-                    if Distance < 150 then
-                        Speed = 20000
-                    elseif Distance < 200 then
-                        Speed = 5000
-                    elseif Distance < 300 then
-                        Speed = 500
-                    elseif Distance < 500 then
-                        Speed = 200
-                    elseif Distance < 1000 then
-                        Speed = 120
-                    elseif Distance >= 2000 then
-                        Speed = 120
-                    end
-                    game:GetService("TweenService"):Create(
+                for i,v in pairs(game.Workspace:GetChildren()) do
+             if string.find(v.Name, "Fruit") then
+             local pos = v.Handle --check pos
+             if (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 2000 then
+                    local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                  if Distance < 500 then
+                  Speed = 750
+                  elseif Distance < 200 then
+                  Speed = 7000
+                  elseif Distance < 150 then
+                  Speed = 200
+                  elseif Distance < 1000 then
+                        Speed = 200        
+    elseif Distance >= 1500 then
+                  Speed = 100
+           end                                  
+          
+           jump()
+           game:GetService("TweenService"):Create(
                         game.Players.LocalPlayer.Character.HumanoidRootPart,
                         TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
-                        {CFrame = v.CFrame}
-                    ):Play()
-                    if _G.Stop_Tween==true then
-                if _G.ef_b8 then
-                        game:GetService("TweenService"):Create(
+                        {CFrame =v.Handle.CFrame}
+                    ):Play()    
+end end end 
+     for i,v in pairs(game.Workspace:GetChildren()) do
+             if string.find(v.Name, "Fruit") then
+             local pos = v.Handle --check pos
+             if (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude > 2000 then
+             local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                  if Distance >= 0 then
+                  Speed = 9999999
+                  end
+if game.Players.LocalPlayer.Character.Humanoid.Health > 0 then
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+end
+game:GetService("TweenService"):Create(
                         game.Players.LocalPlayer.Character.HumanoidRootPart,
                         TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
-                            {CFrame = v.CFrame}
-                        ):Cancel()
-                        
-                    end
-                    end
-                    end
-                    end
-             end end) end end)  
-                game:GetService("RunService").RenderStepped:Connect(function()
-if _G.ef_b8 then
-      local humanoid = game.Players.LocalPlayer.Character.Humanoid 
-humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
-end end)
+                        {CFrame =v.Handle.CFrame * CFrame.new(0,20,0)}
+                    ):Play()     
+end  end end                                                             
+                                        
+             end end) end end)               
 
 ef_f7.Parent = b_page5
 ef_f7.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-ef_f7.Position = UDim2.new(0, 0, 0.6600000000, 0)
+ef_f7.Position = UDim2.new(0, 0, 0.5900000000, 0)
 ef_f7.Size = UDim2.new(0, 498, 0, 30)
 ef_f7.BorderColor3 = Color3.fromRGB(250, 250, 250)
 ef_f7.Font = Enum.Font.Ubuntu
@@ -4127,7 +4076,9 @@ _G.ef_b7 = false
 end
 end)
 
-game:GetService('RunService').RenderStepped:connect(function()
+spawn(function()
+    while task.wait(1) do
+        pcall(function()
 if _G.ef_b7 then --script
 if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Bomb Fruit") or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Bomb Fruit") then
                     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Bomb-Bomb",game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Bomb Fruit"))
@@ -4272,8 +4223,7 @@ if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Bomb Fruit")
                 mele()
                     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Leopard-Leopard",game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Leopard Fruit"))
                 end
-end
-end)
+end end) end end)
 
 --// miss shop
 function code(x)
@@ -4830,48 +4780,9 @@ ms_t2.TextColor3 = Color3.fromRGB(255, 255, 255)
 ms_t2.TextSize = 14.000
 ms_t2.TextWrapped = true
 
-ms_code.Name = "ms_code"
-ms_code.Parent = b_page4
-ms_code.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-ms_code.Position = UDim2.new(0.00000000, 0, 0.660000000, 0)
-ms_code.Size = UDim2.new(0, 498, 0, 30)
-ms_code.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ms_code.Font = Enum.Font.Ubuntu
-ms_code.Text = "Click Redeem All Code"
-ms_code.TextColor3 = Color3.fromRGB(250, 250, 250)
-ms_code.TextSize = 14.000
-ms_code.MouseButton1Down:connect(function()
-code("Sub2Fer999")
-code("kittgaming")
-code("NOOB_REFUND")
-code("SUB2GAMERROBOT_RESET1")
-code("TY_FOR_WATCHING")
-code("GAMER_ROBOT_1M")
-code("ADMINGIVEAWAY")
-code("SUBGAMERROBOT_RESET")
-code("GAMERROBOT_YT")
-code("BIGNEWS")
-code("FUDD10")
-code("fudd10_v2")
-code("Bluxxy")
-code("Starcodeheo")
-code("JCWK")
-code("Magicbus")
-code("TantaiGaming")
-code("Axiore")
-code("Sub2Daigrock")
-code("Sub2UncleKizaru")
-code("SUB2NOOBMASTER123")
-code("StrawHatMaine")
-code("Sub2OfficialNoobie")
-code("SUB2GAMERROBOT_EXP1")
-code("THEGREATACE")
-
-end)
-
 ms_f8.Parent = b_page4
 ms_f8.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-ms_f8.Position = UDim2.new(0, 0, 0.7300000000, 0)
+ms_f8.Position = UDim2.new(0, 0, 0.6600000000, 0)
 ms_f8.Size = UDim2.new(0, 498, 0, 30)
 ms_f8.BorderColor3 = Color3.fromRGB(250, 250, 250)
 ms_f8.Font = Enum.Font.Ubuntu
@@ -4916,7 +4827,7 @@ end)
 
 ms_f9.Parent = b_page4
 ms_f9.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-ms_f9.Position = UDim2.new(0, 0, 0.8000000000, 0)
+ms_f9.Position = UDim2.new(0, 0, 0.7300000000, 0)
 ms_f9.Size = UDim2.new(0, 498, 0, 30)
 ms_f9.BorderColor3 = Color3.fromRGB(250, 250, 250)
 ms_f9.Font = Enum.Font.Ubuntu
@@ -4970,7 +4881,7 @@ sk1.Visible = false
 
 ms_f10.Parent = b_page4
 ms_f10.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-ms_f10.Position = UDim2.new(0, 0, 0.8800000000, 0)
+ms_f10.Position = UDim2.new(0, 0, 0.8000000000, 0)
 ms_f10.Size = UDim2.new(0, 498, 0, 30)
 ms_f10.BorderColor3 = Color3.fromRGB(250, 250, 250)
 ms_f10.Font = Enum.Font.Ubuntu
@@ -5003,7 +4914,7 @@ end)
 
 ms_f11.Parent = b_page4
 ms_f11.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-ms_f11.Position = UDim2.new(0, 0, 0.9500000000, 0)
+ms_f11.Position = UDim2.new(0, 0, 0.8800000000, 0)
 ms_f11.Size = UDim2.new(0, 498, 0, 30)
 ms_f11.BorderColor3 = Color3.fromRGB(250, 250, 250)
 ms_f11.Font = Enum.Font.Ubuntu
@@ -5108,6 +5019,34 @@ game:GetService('RunService').RenderStepped:connect(function()
     if game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Fist of Darkness") then 
     _G.mi_bc = false
     mi_bc.Text = ""
+    
+                local HttpService = game:GetService("HttpService")
+                    local Data =
+                        {                    
+                            ["embeds"]= {
+                                {            
+                                    ["title"]= "Thông Báo";                                                                 
+                                    ["color"]= tonumber(0x7269da);
+                                    
+                                    ["fields"]= {                    
+                                    {
+                                            ["name"]= "Name Player Have Fist of Darkness",
+                                            ["value"]= "```Name : "..game.Players.LocalPlayer.Name.." | "..game.Players.LocalPlayer.DisplayName.."```";
+                                            ["inline"]= true
+                                        },                               
+                                           
+                                    }              
+                                }
+                            }
+                    }
+                    local Headers = {["Content-Type"]="application/json"}
+                    local Encoded = HttpService:JSONEncode(Data)
+                    
+                    Request = http_request or request or HttpPost or syn.request
+                    local Final1 = {Url = _G.urlkeycup , Body = Encoded, Method = "POST", Headers = Headers}
+                   
+                    Request(Final1)
+                                 
     elseif not game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Fist of Darkness") then 
       if game:GetService("Workspace"):FindFirstChild("Chest2") then
      TPchest( game:GetService("Workspace"):FindFirstChild("Chest2").CFrame)
@@ -5139,6 +5078,34 @@ game:GetService('RunService').RenderStepped:connect(function()
     if game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("God's Chalice") then 
     _G.mi_bc = false
     mi_bc.Text = ""
+    
+                local HttpService = game:GetService("HttpService")
+                    local Data =
+                        {                    
+                            ["embeds"]= {
+                                {            
+                                    ["title"]= "Thông Báo";                                                                 
+                                    ["color"]= tonumber(0x7269da);
+                                    
+                                    ["fields"]= {                    
+                                    {
+                                            ["name"]= "Name Player Have God's Chalice",
+                                            ["value"]= "```Name : "..game.Players.LocalPlayer.Name.." | "..game.Players.LocalPlayer.DisplayName.."```";
+                                            ["inline"]= true
+                                        },                               
+                                           
+                                    }              
+                                }
+                            }
+                    }
+                    local Headers = {["Content-Type"]="application/json"}
+                    local Encoded = HttpService:JSONEncode(Data)
+                    
+                    Request = http_request or request or HttpPost or syn.request
+                    local Final1 = {Url = _G.urlkeycup , Body = Encoded, Method = "POST", Headers = Headers}
+                   
+                    Request(Final1)
+                                 
     elseif not game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("God's Chalice") then 
       if game:GetService("Workspace"):FindFirstChild("Chest2") then
      TPchest( game:GetService("Workspace"):FindFirstChild("Chest2").CFrame)
@@ -6179,29 +6146,38 @@ local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRoot
                   Speed = 120
            end
 usetool()
+if _G.c_b3 then
 game:GetService("TweenService"):Create(
                         game.Players.LocalPlayer.Character.HumanoidRootPart,
                         TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
                         {CFrame = target.HumanoidRootPart.CFrame* CFrame.new(-30, 0, 0) }
                     ):Play()  
-                    wait(1.5)
+                    end
+                    wait(.5)
+                    if _G.c_b3 then
             game:GetService("TweenService"):Create(
                         game.Players.LocalPlayer.Character.HumanoidRootPart,
                         TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
                         {CFrame = target.HumanoidRootPart.CFrame* CFrame.new(30, 0, 0) }
                     ):Play()          
-                    wait(1.5)
+                    end
+                    wait(.5)
+                    if _G.c_b3 then
                     game:GetService("TweenService"):Create(
                         game.Players.LocalPlayer.Character.HumanoidRootPart,
                         TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
                         {CFrame = target.HumanoidRootPart.CFrame* CFrame.new(0, 0, 30) }
                     ):Play()  
-                    wait(1.5)
+                    end
+                    wait(.5)
+                    if _G.c_b3 then
                     game:GetService("TweenService"):Create(
                         game.Players.LocalPlayer.Character.HumanoidRootPart,
                         TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
                         {CFrame = target.HumanoidRootPart.CFrame* CFrame.new(0, 0, -30) }
-                    ):Play()                             
+                    ):Play()                
+end           
+wait(.5)  
             else
             game.Players.LocalPlayer.Character.Humanoid.Health = 0
      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = target.HumanoidRootPart.CFrame           
@@ -6217,6 +6193,7 @@ local target = unpack(GetPlayer(c_tb.Text)).Character
 local pos = target.HumanoidRootPart --check pos
 if (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 150 then
 click()
+usetool()
 end
 end end) end end)
      
@@ -6999,7 +6976,7 @@ t_t2.Position = UDim2.new(0, 0, 0.1700000000, 0)
 t_t2.Size = UDim2.new(0, 498, 0, 30)
 t_t2.BorderColor3 = Color3.fromRGB(250, 250, 250)
 t_t2.Font = Enum.Font.Ubuntu
-t_t2.Text = "Teleport Sea - Sever"
+t_t2.Text = "Teleport Sea"
 t_t2.TextColor3 = Color3.fromRGB(255, 255, 255)
 t_t2.TextSize = 14.000
 t_t2.TextWrapped = true
@@ -7130,9 +7107,21 @@ game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelZou")
 
 end
 end)
+
+t_t3.Parent = b_page8
+t_t3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+t_t3.Position = UDim2.new(0, 0, 0.4500000000, 0)
+t_t3.Size = UDim2.new(0, 498, 0, 30)
+t_t3.BorderColor3 = Color3.fromRGB(250, 250, 250)
+t_t3.Font = Enum.Font.Ubuntu
+t_t3.Text = "Sever"
+t_t3.TextColor3 = Color3.fromRGB(255, 255, 255)
+t_t3.TextSize = 14.000
+t_t3.TextWrapped = true
+
 t_f5.Parent = b_page8
 t_f5.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-t_f5.Position = UDim2.new(0, 0, 0.4500000000, 0)
+t_f5.Position = UDim2.new(0, 0, 0.5900000000, 0)
 t_f5.Size = UDim2.new(0, 498, 0, 30)
 t_f5.BorderColor3 = Color3.fromRGB(250, 250, 250)
 t_f5.Font = Enum.Font.Ubuntu
@@ -7665,6 +7654,201 @@ end)
 _G.st_b11 = true
 
 
+-- // moon - race
+mr_t1.Parent = b_page11
+mr_t1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+mr_t1.Position = UDim2.new(0, 0, 0.0300000000, 0)
+mr_t1.Size = UDim2.new(0, 498, 0, 30)
+mr_t1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+mr_t1.Font = Enum.Font.Ubuntu
+mr_t1.Text = "Check Moon"
+mr_t1.TextColor3 = Color3.fromRGB(255, 255, 255)
+mr_t1.TextSize = 14.000
+mr_t1.TextWrapped = true
+
+mr_cmoon = Instance.new("TextLabel")
+mr_cmoon.Parent = b_page11
+mr_cmoon.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+mr_cmoon.Position = UDim2.new(0, 0, 0.1700000000, 0)
+mr_cmoon.Size = UDim2.new(0, 498, 0, 30)
+mr_cmoon.BorderColor3 = Color3.fromRGB(250, 250, 250)
+mr_cmoon.Font = Enum.Font.Ubuntu
+mr_cmoon.Text = "cmoon"
+mr_cmoon.TextColor3 = Color3.fromRGB(255, 255, 255)
+mr_cmoon.TextSize = 14.000
+mr_cmoon.TextWrapped = true
+mr_cmoon.Visible = false
+
+mr_moon.Parent = b_page11
+mr_moon.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+mr_moon.Position = UDim2.new(0, 0, 0.1000000000, 0)
+mr_moon.Size = UDim2.new(0, 498, 0, 30)
+mr_moon.BorderColor3 = Color3.fromRGB(250, 250, 250)
+mr_moon.Font = Enum.Font.Ubuntu
+mr_moon.Text = "   Not Full Moon"
+mr_moon.TextColor3 = Color3.fromRGB(255, 255, 255)
+mr_moon.TextSize = 14.000
+mr_moon.TextWrapped = true
+mr_moon.TextXAlignment = Enum.TextXAlignment.Left
+
+game:GetService('RunService').RenderStepped:connect(function()
+mr_cmoon.Text = (""..game:GetService("Lighting").FantasySky.MoonTextureId)
+    end) 
+    
+   game:GetService('RunService').RenderStepped:connect(function()
+ if mr_cmoon == "http://www.roblox.com/asset/?id=9709149431" then
+ mr_moon.Text = "   Full Moon"
+ else
+ mr_moon.Text = "   Not Full Moon"
+ end end)
+   
+-- // miss 2
+   ms_code.Name = "ms_code"
+ms_code.Parent = b_page10
+ms_code.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ms_code.Position = UDim2.new(0.00000000, 0, 0.030000000, 0)
+ms_code.Size = UDim2.new(0, 498, 0, 30)
+ms_code.BorderColor3 = Color3.fromRGB(250, 250, 250)
+ms_code.Font = Enum.Font.Ubuntu
+ms_code.Text = "   Click Redeem All Code"
+ms_code.TextColor3 = Color3.fromRGB(250, 250, 250)
+ms_code.TextSize = 14.000
+ms_code.TextXAlignment = Enum.TextXAlignment.Left
+ms_code.MouseButton1Down:connect(function()
+code("Sub2Fer999")
+code("kittgaming")
+code("NOOB_REFUND")
+code("SUB2GAMERROBOT_RESET1")
+code("TY_FOR_WATCHING")
+code("GAMER_ROBOT_1M")
+code("ADMINGIVEAWAY")
+code("SUBGAMERROBOT_RESET")
+code("GAMERROBOT_YT")
+code("BIGNEWS")
+code("FUDD10")
+code("fudd10_v2")
+code("Bluxxy")
+code("Starcodeheo")
+code("JCWK")
+code("Magicbus")
+code("TantaiGaming")
+code("Axiore")
+code("Sub2Daigrock")
+code("Sub2UncleKizaru")
+code("SUB2NOOBMASTER123")
+code("StrawHatMaine")
+code("Sub2OfficialNoobie")
+code("SUB2GAMERROBOT_EXP1")
+code("THEGREATACE")
+
+end)
+
+m2_b1.Parent = b_page10
+m2_b1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+m2_b1.Position = UDim2.new(0, 0, 0.1000000000, 0)
+m2_b1.Size = UDim2.new(0, 498, 0, 30)
+m2_b1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+m2_b1.Font = Enum.Font.Ubuntu
+m2_b1.Text = "   Jonl Pirate"
+m2_b1.TextColor3 = Color3.fromRGB(255, 255, 255)
+m2_b1.TextSize = 14.000
+m2_b1.TextWrapped = true
+m2_b1.TextXAlignment = Enum.TextXAlignment.Left
+m2_b1.MouseButton1Down:connect(function()
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetTeam","Pirates") 
+end)
+
+m2_b2.Parent = b_page10
+m2_b2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+m2_b2.Position = UDim2.new(0, 0, 0.1700000000, 0)
+m2_b2.Size = UDim2.new(0, 498, 0, 30)
+m2_b2.BorderColor3 = Color3.fromRGB(250, 250, 250)
+m2_b2.Font = Enum.Font.Ubuntu
+m2_b2.Text = "   Jonl Marine"
+m2_b2.TextColor3 = Color3.fromRGB(255, 255, 255)
+m2_b2.TextSize = 14.000
+m2_b2.TextWrapped = true
+m2_b2.TextXAlignment = Enum.TextXAlignment.Left
+m2_b2.MouseButton1Down:connect(function()
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetTeam","Marines") 
+end)
+
+m2_b3.Parent = b_page10
+m2_b3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+m2_b3.Position = UDim2.new(0, 0, 0.2400000000, 0)
+m2_b3.Size = UDim2.new(0, 498, 0, 30)
+m2_b3.BorderColor3 = Color3.fromRGB(250, 250, 250)
+m2_b3.Font = Enum.Font.Ubuntu
+m2_b3.Text = "   Open Shop"
+m2_b3.TextColor3 = Color3.fromRGB(255, 255, 255)
+m2_b3.TextSize = 14.000
+m2_b3.TextWrapped = true
+m2_b3.TextXAlignment = Enum.TextXAlignment.Left
+m2_b3.MouseButton1Down:connect(function()
+game:GetService("Players").LocalPlayer.PlayerGui.Main.FruitShop.Visible = true
+end)
+
+m2_b4.Parent = b_page10
+m2_b4.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+m2_b4.Position = UDim2.new(0, 0, 0.3100000000, 0)
+m2_b4.Size = UDim2.new(0, 498, 0, 30)
+m2_b4.BorderColor3 = Color3.fromRGB(250, 250, 250)
+m2_b4.Font = Enum.Font.Ubuntu
+m2_b4.Text = "   Open Title"
+m2_b4.TextColor3 = Color3.fromRGB(255, 255, 255)
+m2_b4.TextSize = 14.000
+m2_b4.TextWrapped = true
+m2_b4.TextXAlignment = Enum.TextXAlignment.Left
+m2_b4.MouseButton1Down:connect(function()
+game.Players.localPlayer.PlayerGui.Main.Titles.Visible = true
+end)
+
+m2_b5.Parent = b_page10
+m2_b5.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+m2_b5.Position = UDim2.new(0, 0, 0.3800000000, 0)
+m2_b5.Size = UDim2.new(0, 498, 0, 30)
+m2_b5.BorderColor3 = Color3.fromRGB(250, 250, 250)
+m2_b5.Font = Enum.Font.Ubuntu
+m2_b5.Text = "   Open Color Haki"
+m2_b5.TextColor3 = Color3.fromRGB(255, 255, 255)
+m2_b5.TextSize = 14.000
+m2_b5.TextWrapped = true
+m2_b5.TextXAlignment = Enum.TextXAlignment.Left
+m2_b5.MouseButton1Down:connect(function()
+game.Players.localPlayer.PlayerGui.Main.Colors.Visible = true
+end)
+
+m2_b6.Parent = b_page10
+m2_b6.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+m2_b6.Position = UDim2.new(0, 0, 0.4500000000, 0)
+m2_b6.Size = UDim2.new(0, 498, 0, 30)
+m2_b6.BorderColor3 = Color3.fromRGB(250, 250, 250)
+m2_b6.Font = Enum.Font.Ubuntu
+m2_b6.Text = "   Open Awakening"
+m2_b6.TextColor3 = Color3.fromRGB(255, 255, 255)
+m2_b6.TextSize = 14.000
+m2_b6.TextWrapped = true
+m2_b6.TextXAlignment = Enum.TextXAlignment.Left
+m2_b6.MouseButton1Down:connect(function()
+
+end)
+
+m2_b7.Parent = b_page10
+m2_b7.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+m2_b7.Position = UDim2.new(0, 0, 0.5200000000, 0)
+m2_b7.Size = UDim2.new(0, 498, 0, 30)
+m2_b7.BorderColor3 = Color3.fromRGB(250, 250, 250)
+m2_b7.Font = Enum.Font.Ubuntu
+m2_b7.Text = "   Oppen Fly Gui"
+m2_b7.TextColor3 = Color3.fromRGB(255, 255, 255)
+m2_b7.TextSize = 14.000
+m2_b7.TextWrapped = true
+m2_b7.TextXAlignment = Enum.TextXAlignment.Left
+m2_b7.MouseButton1Down:connect(function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Fly%201')))()
+end)
+
+
 -- // function Button
 
 local function LDLMGWH_fake_script() -- // Farm
@@ -7679,6 +7863,9 @@ local function LDLMGWH_fake_script() -- // Farm
 		b_page7.Visible = false
 		b_page8.Visible = false
 		b_page9.Visible = false
+		b_page10.Visible = false
+		b_page11.Visible = false
+		b_page12.Visible = false
     TextLabel.Text = "   NTT HUB | Farm"
 	end)
 end
@@ -7695,6 +7882,9 @@ local function OJTG_fake_script() -- scripts.LocalScript
 		b_page7.Visible = false
 		b_page8.Visible = false
 		b_page9.Visible = false
+		b_page10.Visible = false
+		b_page11.Visible = false
+		b_page12.Visible = false
     TextLabel.Text = "   NTT HUB | Stat" 
 	end)
 end
@@ -7712,6 +7902,9 @@ local function OJTG1_fake_script() -- scripts.LocalScript
 		b_page7.Visible = false
 		b_page8.Visible = false
 		b_page9.Visible = false
+		b_page10.Visible = false
+		b_page11.Visible = false
+		b_page12.Visible = false
     TextLabel.Text = "   NTT HUB | Raid" 
 	end)
 end
@@ -7729,6 +7922,9 @@ local function OJTG2_fake_script() -- scripts.LocalScript
 		b_page7.Visible = false
 		b_page8.Visible = false
 		b_page9.Visible = false
+		b_page10.Visible = false
+		b_page11.Visible = false
+		b_page12.Visible = false
     TextLabel.Text = "   NTT HUB | Miss - Shop" 
 	end)
 end
@@ -7746,6 +7942,9 @@ local function OJTG3_fake_script() -- scripts.LocalScript
 		b_page7.Visible = false
 		b_page8.Visible = false
 		b_page9.Visible = false
+		b_page10.Visible = false
+		b_page11.Visible = false
+		b_page12.Visible = false
     TextLabel.Text = "   NTT HUB | Esp - Fruit" 
 	end)
 end
@@ -7763,6 +7962,9 @@ local function OJTG4_fake_script() -- scripts.LocalScript
 		b_page7.Visible = false
 		b_page8.Visible = false
 		b_page9.Visible = false
+		b_page10.Visible = false
+		b_page11.Visible = false
+		b_page12.Visible = false
     TextLabel.Text = "   NTT HUB | Mob - Get Item" 
 	end)
 end
@@ -7780,6 +7982,9 @@ local function OJTG5_fake_script() -- scripts.LocalScript
 		b_page7.Visible = true
 		b_page8.Visible = false
 		b_page9.Visible = false
+		b_page10.Visible = false
+		b_page11.Visible = false
+		b_page12.Visible = false
     TextLabel.Text = "   NTT HUB | Combat" 
 	end)
 end
@@ -7797,6 +8002,9 @@ local function OJTG6_fake_script() -- scripts.LocalScript
 		b_page7.Visible = false
 		b_page8.Visible = true
 		b_page9.Visible = false
+		b_page10.Visible = false
+		b_page11.Visible = false
+		b_page12.Visible = false
     TextLabel.Text = "   NTT HUB | Teleport" 
 	end)
 end
@@ -7814,11 +8022,76 @@ local function OJTG7_fake_script() -- scripts.LocalScript
 		b_page7.Visible = false
 		b_page8.Visible = false
 		b_page9.Visible = true
+		b_page10.Visible = false
+		b_page11.Visible = false
+		b_page12.Visible = false
     TextLabel.Text = "   NTT HUB | Setting" 
 	end)
 end
 
-coroutine.wrap(OJTG7_fake_script)()
+coroutine.wrap(OJTG7_fake_script)() -- Setting
+local function OJTG8_fake_script() -- scripts.LocalScript 
+	local script = Instance.new('LocalScript', b_10)
+	script.Parent.MouseButton1Down:connect(function()   
+	b_page1.Visible = false
+		b_page2.Visible = false
+		b_page3.Visible = false
+		b_page4.Visible = false
+		b_page5.Visible = false
+		b_page6.Visible = false
+		b_page7.Visible = false
+		b_page8.Visible = false
+		b_page9.Visible = false
+		b_page10.Visible = true
+		b_page11.Visible = false
+		b_page12.Visible = false
+    TextLabel.Text = "   NTT HUB | Miss 2" 
+	end)
+end
+coroutine.wrap(OJTG8_fake_script)() -- Setting
+local function OJTG9_fake_script() -- scripts.LocalScript 
+	local script = Instance.new('LocalScript', b_11)
+	script.Parent.MouseButton1Down:connect(function()   
+	b_page1.Visible = false
+		b_page2.Visible = false
+		b_page3.Visible = false
+		b_page4.Visible = false
+		b_page5.Visible = false
+		b_page6.Visible = false
+		b_page7.Visible = false
+		b_page8.Visible = false
+		b_page9.Visible = false
+		b_page10.Visible = false
+		b_page11.Visible = true
+		b_page12.Visible = false
+    TextLabel.Text = "   NTT HUB | Moon - Race" 
+    if game.PlaceId == 2753915549 then -- sea1
+    TextLabel.Text = "   NTT HUB | Moon"
+    end
+	end)
+end
+
+coroutine.wrap(OJTG9_fake_script)() -- Setting
+local function OJTG10_fake_script() -- scripts.LocalScript 
+	local script = Instance.new('LocalScript', b_12)
+	script.Parent.MouseButton1Down:connect(function()   
+	b_page1.Visible = false
+		b_page2.Visible = false
+		b_page3.Visible = false
+		b_page4.Visible = false
+		b_page5.Visible = false
+		b_page6.Visible = false
+		b_page7.Visible = false
+		b_page8.Visible = false
+		b_page9.Visible = false
+		b_page10.Visible = false
+		b_page11.Visible = false
+		b_page12.Visible = true
+    TextLabel.Text = "   NTT HUB | Share" 
+	end)
+end
+
+coroutine.wrap(OJTG10_fake_script)() -- Setting
 
 game:GetService('RunService').RenderStepped:connect(function()
 if game:GetService("ReplicatedStorage").Effect.Container:FindFirstChild("Death") then
