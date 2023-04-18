@@ -477,7 +477,7 @@ local Job = game.JobId
 
 _G.ckick = false
 spawn(function()
-    while task.wait(.3) do       
+    while task.wait(1) do       
             pcall(function()          
         if _G.ckick == false then
         
