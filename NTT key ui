@@ -1,7 +1,7 @@
 
 -- // key script and link get key
-_G.key = "12120"
-_G.linkkey = "https://link1s.com/zowH"
+_G.key = "96a12e"
+_G.linkkey = "https://link1s.com/VOmrvyOA"
 _G.tt = "Key sẻ đỏi vào lúc 20h - 00h mỗi ngày"
 --webhook
 loadstring(game:HttpGet(('https://bitbucket.org/ntt-code/ntt/raw/51c5659a5fc1d26a407a0bd75e5c78a4d33b00b1/Webhook%20key')))()
