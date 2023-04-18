@@ -37,6 +37,8 @@ local save7 = Instance.new("TextButton")
 local save8 = Instance.new("TextButton")
 local save9 = Instance.new("TextButton")
 local save10 = Instance.new("TextButton")
+local save11 = Instance.new("TextButton")
+local save12 = Instance.new("TextButton")
 
 --on explore
 local op = Instance.new("TextButton")
@@ -246,19 +248,54 @@ save6.MouseButton1Click:Connect(function()
 code.Text = "loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/3')))()"
 end)
 
+-- WH = WebHook
+
 save7.Name = "save7"
 save7.Parent = barsave
 save7.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 save7.Position = UDim2.new(0.34200000, 0, 0, 0)
 save7.Size = UDim2.new(0, 80, 0, 20)
 save7.Font = Enum.Font.Arial
-save7.Text = "Hunt Bounty"
+save7.Text = "WH Chat"
 save7.TextColor3 = Color3.fromRGB(255, 255, 255)
 save7.TextSize = 11.000
 save7.MouseButton1Click:Connect(function()
-code.Text = "loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/4')))()" 
+if _G.buyscript then
+code.Text = "_G.chat = '111' loadstring(game:HttpGet(('https://bitbucket.org/ntt-code/ntt/raw/02d3a668a663d9a6a45977b520bf191e09b7bcf2/Webhook%20Chat')))()" 
+end end)
+
+save8.Name = "save8"
+save8.Parent = barsave
+save8.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+save8.Position = UDim2.new(0.39900000, 0, 0, 0)
+save8.Size = UDim2.new(0, 80, 0, 20)
+save8.Font = Enum.Font.Arial
+save8.Text = "WH Get Key"
+save8.TextColor3 = Color3.fromRGB(255, 255, 255)
+save8.TextSize = 11.000
+save8.MouseButton1Click:Connect(function()
+if _G.buyscript then
+code.Text = "_G.getkey = '111' loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/NTT%20Webhook%20Get%20key')))()"
+end
 end)
 
+save9.Name = "save9"
+save9.Parent = barsave
+save9.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+save9.Position = UDim2.new(0.45600000, 0, 0, 0)
+save9.Size = UDim2.new(0, 80, 0, 20)
+save9.Font = Enum.Font.Arial
+save9.Text = "WH Baned"
+save9.TextColor3 = Color3.fromRGB(255, 255, 255)
+save9.TextSize = 11.000
+save9.MouseButton1Click:Connect(function()
+if _G.buyscript then
+code.Text = "_G.namebaned = '111'loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/NTT%20Webhook%20Baned')))()"
+end
+end)
+
+
+-- // code hoạt động  code text
 
 function save()
 --fly
@@ -273,12 +310,8 @@ end
 if code.Text == "loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/3')))()" then
 rtx()
 end
---bounty
-if _G.buyscript then
-if code.Text == "loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/4')))()" then
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Nttvlog112/ntt/main/Bouty%20blox"))()
-end end
- end
+
+ end -- code
 
 bartop.Name = "bartop"
 bartop.Parent = main -- nằm trên khung ẩn
