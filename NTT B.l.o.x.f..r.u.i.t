@@ -4037,7 +4037,7 @@ end
 game:GetService("TweenService"):Create(
                         game.Players.LocalPlayer.Character.HumanoidRootPart,
                         TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
-                        {CFrame =v.Handle.CFrame * CFrame.new(0,20,0)}
+                        {CFrame =v.Handle.CFrame * CFrame.new(50,20,0)}
                     ):Play()     
 end  end end                                                             
                                         
