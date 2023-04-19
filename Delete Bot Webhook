@@ -1,0 +1,6 @@
+Function Delete()
+_G.Delete = "https://discord.com/api/webhooks/1094158537275473930/Hofa0_4t_jhZ66BqVOh4ocVJb6LcejUWBwYFzATPtocaYkT74Muf4vgBaLJCWCJL3jn2"
+end
+while wait() do
+Delete()
+end
