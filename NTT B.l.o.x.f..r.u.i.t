@@ -4057,11 +4057,38 @@ _G.ef_b8 = false
 end
 end)
 
-game:GetService('RunService').RenderStepped:connect(function()
-if _G.ef_b8 then --script
-for i,v in pairs(game.Workspace:GetChildren()) do
+spawn(function()
+    while task.wait() do
+        pcall(function()
+            if _G.ef_b8 then
+                for i,v in pairs(game.Workspace:GetChildren()) do
              if string.find(v.Name, "Fruit") then
              local pos = v.Handle --check pos
+             if (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 2000 then
+                    local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                  if Distance < 500 then
+                  Speed = 750
+                  elseif Distance < 200 then
+                  Speed = 7000
+                  elseif Distance < 150 then
+                  Speed = 200
+                  elseif Distance < 1000 then
+                        Speed = 200        
+    elseif Distance >= 1500 then
+                  Speed = 100
+           end                                  
+          
+           jump()
+           game:GetService("TweenService"):Create(
+                        game.Players.LocalPlayer.Character.HumanoidRootPart,
+                        TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
+                        {CFrame =v.Handle.CFrame}
+                    ):Play()    
+end end end 
+     for i,v in pairs(game.Workspace:GetChildren()) do
+             if string.find(v.Name, "Fruit") then
+             local pos = v.Handle --check pos
+             if (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude > 2000 then
              local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
                   if Distance >= 0 then
                   Speed = 9999999
@@ -4072,11 +4099,11 @@ end
 game:GetService("TweenService"):Create(
                         game.Players.LocalPlayer.Character.HumanoidRootPart,
                         TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
-                        {CFrame =v.Handle.CFrame}
+                        {CFrame =v.Handle.CFrame * CFrame.new(0,20,0)}
                     ):Play()     
-end  end                                  
-end
-end)
+end  end end                                                             
+                                        
+             end end) end end)               
 
 game:GetService('RunService').RenderStepped:connect(function()
 if _G.ef_b8 then --script
