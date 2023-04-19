@@ -483,6 +483,7 @@ spawn(function()
         
             game:GetService("CoreGui").RobloxPromptGui.promptOverlay.ChildAdded:Connect(function(child)
                 if child.Name == 'ErrorPrompt' and child:FindFirstChild('MessageArea') and child.MessageArea:FindFirstChild("ErrorFrame") then
+wait(3)--chrck time kicked
                      _G.ckick = true
                 local HttpService = game:GetService("HttpService")
                     local Data =
