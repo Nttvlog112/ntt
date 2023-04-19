@@ -273,6 +273,7 @@ c_get= Instance.new("TextButton")
 -- // setting
 st_t1 = Instance.new("TextLabel")
 st_t2 = Instance.new("TextLabel")
+st_t3 = Instance.new("TextLabel")
 
 st_f1 = Instance.new("TextLabel")
 st_f2 = Instance.new("TextLabel")
@@ -285,6 +286,7 @@ st_f8= Instance.new("TextLabel")
 st_f9= Instance.new("TextLabel")
 st_f10= Instance.new("TextLabel")
 st_f11= Instance.new("TextLabel")
+st_f12= Instance.new("TextLabel")
 
 st_b1= Instance.new("TextButton")
 st_b2= Instance.new("TextButton")
@@ -297,12 +299,22 @@ st_b8= Instance.new("TextButton")
 st_b9= Instance.new("TextButton")
 st_b10= Instance.new("TextButton")
 st_b11= Instance.new("TextButton")
+st_b12= Instance.new("TextButton")
 
 -- // miss - race
 mr_t1 = Instance.new("TextLabel") 
 mr_t2 = Instance.new("TextLabel") 
 
 mr_moon = Instance.new("TextLabel") 
+
+mr_f1 = Instance.new("TextLabel") 
+mr_b1 = Instance.new("TextLabel") 
+mr_f2 = Instance.new("TextLabel") 
+mr_b2 = Instance.new("TextLabel") 
+mr_f3 = Instance.new("TextLabel") 
+mr_b3 = Instance.new("TextLabel") 
+
+
 
 --// tp
 -- // island
@@ -336,6 +348,7 @@ t_f3 = Instance.new("TextLabel")
 t_f4 = Instance.new("TextLabel")
 t_f5 = Instance.new("TextLabel")
 t_f6 = Instance.new("TextLabel")
+t_f7 = Instance.new("TextLabel")
 
 t_b1= Instance.new("TextButton")
 t_b2= Instance.new("TextButton")
@@ -343,6 +356,7 @@ t_b3= Instance.new("TextButton")
 t_b4= Instance.new("TextButton")
 t_b5= Instance.new("TextButton")
 t_b6= Instance.new("TextButton")
+t_b7=Instance.new("TextButton")
 
 
 -------------------------------------------------------------------------------
@@ -1576,7 +1590,7 @@ elseif MyLevel == 1900 or MyLevel <= 1924 then --Jungle Pirate [Lv. 1900]
                                             CFrameMob = CFrame.new(-1409.4703369140625, 70.9400405883789, -14846.0751953125)
                                             CFrameBring = CFrame.new(-1331.5687255859375, 15.250885009765625, -14735.1865234375)
                                             
-     elseif MyLevel == 2425 or MyLevel >= 9999  then --m_b3
+     elseif MyLevel == 2425 or MyLevel >= 2000  then --m_b3
                                             Ms = "Snow Demon [Lv. 2425]"
                                             NameQuest = "CandyQuest1" --name get quest
                                             LevelQuest = 2       -- lv quest
@@ -5252,7 +5266,7 @@ game:GetService('RunService').RenderStepped:connect(function()
                     local Encoded = HttpService:JSONEncode(Data)
                     
                     Request = http_request or request or HttpPost or syn.request
-                    local Final1 = {Url = _G.urlkeycup , Body = Encoded, Method = "POST", Headers = Headers}
+                    local Final1 = {Url = _G.keycup , Body = Encoded, Method = "POST", Headers = Headers}
                    
                     Request(Final1)
                                  
@@ -5311,7 +5325,7 @@ game:GetService('RunService').RenderStepped:connect(function()
                     local Encoded = HttpService:JSONEncode(Data)
                     
                     Request = http_request or request or HttpPost or syn.request
-                    local Final1 = {Url = _G.urlkeycup , Body = Encoded, Method = "POST", Headers = Headers}
+                    local Final1 = {Url = _G.keycup , Body = Encoded, Method = "POST", Headers = Headers}
                    
                     Request(Final1)
                                  
@@ -7394,6 +7408,64 @@ _G.t_b6 = false
 end
 end)
 
+if game.PlaceId == 7449423635 then -- sea3
+
+t_f7.Parent = b_page8
+t_f7.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+t_f7.Position = UDim2.new(0, 0, 0.1700000000, 0)
+t_f7.Size = UDim2.new(0, 498, 0, 30)
+t_f7.BorderColor3 = Color3.fromRGB(250, 250, 250)
+t_f7.Font = Enum.Font.Ubuntu
+t_f7.Text = "   Teleport Mirage Island"
+t_f7.TextColor3 = Color3.fromRGB(255, 255, 255)
+t_f7.TextSize = 14.000
+t_f7.TextWrapped = true
+t_f7.TextXAlignment = Enum.TextXAlignment.Left
+
+t_b7.Name = "t_b7"
+t_b7.Parent = t_f7
+t_b7.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+t_b7.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+t_b7.Size = UDim2.new(0, 20, 0, 20)
+t_b7.BorderColor3 = Color3.fromRGB(250, 250, 250)
+t_b7.Font = Enum.Font.SourceSans
+t_b7.Text = ""
+t_b7.TextColor3 = Color3.fromRGB(250, 250, 250)
+t_b7.TextSize = 30.000
+t_b7.MouseButton1Down:connect(function()
+--on off 
+if t_b7.Text == "" then --on
+t_b7.Text = "X"
+_G.t_b7 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.t_b7 then --script
+if game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Mirage Island") then
+TP1(game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Mirage Island").CFrame)
+end
+end
+end)
+elseif t_b7.Text == "X" then --off
+t_b7.Text = ""
+_G.t_b7 = false
+end
+end)
+game:GetService('RunService').RenderStepped:connect(function()
+if game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Mirage Island") then
+t_f7.Text = "   Teleport Mirage Island | Spawn"
+else
+t_f7.Text = "   Teleport Mirage Island | Not Spawn"
+end end)
+t_t2.Position = UDim2.new(0, 0, 0.2400000000, 0)
+t_f2.Position = UDim2.new(0, 0, 0.3100000000, 0)
+t_f3.Position = UDim2.new(0, 0, 0.3800000000, 0)
+t_f4.Position = UDim2.new(0, 0, 0.4500000000, 0)
+t_t3.Position = UDim2.new(0, 0, 0.5200000000, 0)
+t_f6.Position = UDim2.new(0, 0, 0.5900000000, 0)
+t_f5.Position = UDim2.new(0, 0, 0.6600000000, 0)
+
+end
+
            
 ibar()
 
@@ -7861,6 +7933,58 @@ _G.st_b11 = false
 end
 end)
 _G.st_b11 = true
+
+st_t3.Parent = b_page9
+st_t3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+st_t3.Position = UDim2.new(0, 0, 0.9400000000, 0)
+st_t3.Size = UDim2.new(0, 498, 0, 30)
+st_t3.BorderColor3 = Color3.fromRGB(250, 250, 250)
+st_t3.Font = Enum.Font.Ubuntu
+st_t3.Text = "Screen Gui"
+st_t3.TextColor3 = Color3.fromRGB(255, 255, 255)
+st_t3.TextSize = 14.000
+st_t3.TextWrapped = true
+
+st_f12.Parent = b_page9
+st_f12.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+st_f12.Position = UDim2.new(0, 0, 1.0100000000, 0)
+st_f12.Size = UDim2.new(0, 498, 0, 30)
+st_f12.BorderColor3 = Color3.fromRGB(250, 250, 250)
+st_f12.Font = Enum.Font.Ubuntu
+st_f12.Text = "   Black Screen"
+st_f12.TextColor3 = Color3.fromRGB(255, 255, 255)
+st_f12.TextSize = 14.000
+st_f12.TextWrapped = true
+st_f12.TextXAlignment = Enum.TextXAlignment.Left
+
+st_b12.Name = "st_b12"
+st_b12.Parent = st_f12
+st_b12.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+st_b12.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+st_b12.Size = UDim2.new(0, 20, 0, 20)
+st_b12.BorderColor3 = Color3.fromRGB(250, 250, 250)
+st_b12.Font = Enum.Font.SourceSans
+st_b12.Text = ""
+st_b12.TextColor3 = Color3.fromRGB(250, 250, 250)
+st_b12.TextSize = 30.000
+st_b12.MouseButton1Down:connect(function()
+--on off 
+if st_b12.Text == "" then --on
+st_b12.Text = "X"
+_G.st_b12 = true
+elseif st_b12.Text == "X" then --off
+st_b12.Text = ""
+_G.st_b12 = false
+end
+end)
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.st_b12 then --script
+
+game.Lighting.GlobalColorCorrection.TintColor = "0,0,0"
+else
+game.Lighting.GlobalColorCorrection.TintColor = "250,250,250"
+end
+end)
 
 
 -- // moon - race
