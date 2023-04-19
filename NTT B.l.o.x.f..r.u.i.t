@@ -7990,7 +7990,6 @@ sk1.Visible = false
 end
 end)
 
-
 sk1 = Instance.new("TextButton")
 sk1.Name = "sk1"
 sk1.Parent = NTTGUI
@@ -8011,9 +8010,48 @@ sk1.Visible = false
 sk1.Active = false
 sk1.Draggable = false
 
+buff_f5.Parent = b_page13
+buff_f5.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+buff_f5.Position = UDim2.new(0, 0, 0.2400000000, 0)
+buff_f5.Size = UDim2.new(0, 498, 0, 30)
+buff_f5.BorderColor3 = Color3.fromRGB(250, 250, 250)
+buff_f5.Font = Enum.Font.Ubuntu
+buff_f5.Text = "   Mink V3"
+buff_f5.TextColor3 = Color3.fromRGB(255, 255, 255)
+buff_f5.TextSize = 14.000
+buff_f5.TextWrapped = true
+buff_f5.TextXAlignment = Enum.TextXAlignment.Left
+
+buff_b5.Name = "buff_b5"
+buff_b5.Parent = buff_f5
+buff_b5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+buff_b5.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+buff_b5.Size = UDim2.new(0, 20, 0, 20)
+buff_b5.BorderColor3 = Color3.fromRGB(250, 250, 250)
+buff_b5.Font = Enum.Font.SourceSans
+buff_b5.Text = ""
+buff_b5.TextColor3 = Color3.fromRGB(250, 250, 250)
+buff_b5.TextSize = 30.000
+buff_b5.MouseButton1Down:connect(function()
+--on off 
+if buff_b5.Text == "" then --on
+buff_b5.Text = "X"
+_G.buff_b5 = true
+elseif buff_b5.Text == "X" then --off
+buff_b5.Text = ""
+_G.buff_b5 = false
+end
+end)
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.buff_b5 then --script
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 120
+end
+end)
+
 buff_f3.Parent = b_page13
 buff_f3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-buff_f3.Position = UDim2.new(0, 0, 0.2400000000, 0)
+buff_f3.Position = UDim2.new(0, 0, 0.3100000000, 0)
 buff_f3.Size = UDim2.new(0, 498, 0, 30)
 buff_f3.BorderColor3 = Color3.fromRGB(250, 250, 250)
 buff_f3.Font = Enum.Font.Ubuntu
@@ -8041,9 +8079,9 @@ _G.buff_b3 = true
 
 game:GetService('RunService').RenderStepped:connect(function()
 if _G.buff_b3 then --script
-game.Players.LocalPlayer.Character.Humanoid.JumpPower = 60
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = 80
 else
-game.Players.LocalPlayer.Character.Humanoid.JumpPower = 25
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = 35
 end
 end)
 elseif buff_b3.Text == "X" then --off
@@ -8055,7 +8093,7 @@ end)
 
 buff_f4.Parent = b_page13
 buff_f4.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-buff_f4.Position = UDim2.new(0, 0, 0.3100000000, 0)
+buff_f4.Position = UDim2.new(0, 0, 0.3800000000, 0)
 buff_f4.Size = UDim2.new(0, 498, 0, 30)
 buff_f4.BorderColor3 = Color3.fromRGB(250, 250, 250)
 buff_f4.Font = Enum.Font.Ubuntu
