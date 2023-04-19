@@ -183,7 +183,7 @@ key_tb.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
 key_tb.Position = UDim2.new(0.2, 0, 0.360000000, 0)
 key_tb.Size = UDim2.new(0, 150, 0, 25)
 key_tb.Font = Enum.Font.Ubuntu
-key_tb.Text = "Nhập Chìa Khóa"
+key_tb.Text = "96a12e"
 key_tb.BorderColor3 = Color3.fromRGB(0,0,0)
 key_tb.TextSize = 14.000
 
