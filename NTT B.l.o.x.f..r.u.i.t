@@ -13,12 +13,14 @@ local b_page1 = Instance.new("ScrollingFrame") --farm
 local b_page2 = Instance.new("ScrollingFrame") --stat
 local b_page3 = Instance.new("ScrollingFrame") --raid
 local b_page4 = Instance.new("ScrollingFrame") --miss esp
-local b_page10= Instance.new("ScrollingFrame") --miss2
+local b_page10= Instance.new("ScrollingFrame") --miss
+local b_page14= Instance.new("ScrollingFrame") --Buff
 local b_page11 = Instance.new("ScrollingFrame") --moon - Race
 local b_page5 = Instance.new("ScrollingFrame") --shop
 local b_page6 = Instance.new("ScrollingFrame") --item - fruit
 local b_page7 = Instance.new("ScrollingFrame") --Comabt
 local b_page12= Instance.new("ScrollingFrame") --share
+local b_page13= Instance.new("ScrollingFrame") --share
 local b_page8 = Instance.new("ScrollingFrame") --teleport
 local b_page9 = Instance.new("ScrollingFrame") --setting
 
@@ -31,11 +33,13 @@ bar_1 = Instance.new("Frame")
 local b_1 = Instance.new("TextButton") --main
 local b_2 = Instance.new("TextButton") --stat
 local b_3 = Instance.new("TextButton")--raid
-local b_4 = Instance.new("TextButton")--miss- shop
-local b_10 = Instance.new("TextButton")--miss2
+local b_4 = Instance.new("TextButton")--shop
+local b_10 = Instance.new("TextButton")--miss
+local b_13= Instance.new("TextButton")--buff
 local b_11 = Instance.new("TextButton")-- Moon - race
 local b_5 = Instance.new("TextButton")--esp - fruit
-local b_6 = Instance.new("TextButton")-- Mob - item
+local b_6 = Instance.new("TextButton")-- item
+local b_14 = Instance.new("TextButton")-- Mob
 local b_7 = Instance.new("TextButton")--Comnat
 local b_12 = Instance.new("TextButton")--share
 local b_8 = Instance.new("TextButton")--teleport
@@ -142,58 +146,58 @@ r_b7 = Instance.new("TextButton")
 b_awaken = Instance.new("TextButton")
 
 -- // miss - Shop
-local ms_melebar= Instance.new("ScrollingFrame")
-ms_slec = Instance.new("TextButton")
-ms_mele1= Instance.new("TextButton")
-ms_mele2= Instance.new("TextButton")
-ms_mele3= Instance.new("TextButton")
-ms_mele4= Instance.new("TextButton")
-ms_mele5= Instance.new("TextButton")
-ms_mele6= Instance.new("TextButton")
-ms_mele7= Instance.new("TextButton")
-ms_mele8= Instance.new("TextButton")
-ms_mele9= Instance.new("TextButton")
-ms_mele10= Instance.new("TextButton")
+local shop_melebar= Instance.new("ScrollingFrame")
+shop_slec = Instance.new("TextButton")
+shop_mele1= Instance.new("TextButton")
+shop_mele2= Instance.new("TextButton")
+shop_mele3= Instance.new("TextButton")
+shop_mele4= Instance.new("TextButton")
+shop_mele5= Instance.new("TextButton")
+shop_mele6= Instance.new("TextButton")
+shop_mele7= Instance.new("TextButton")
+shop_mele8= Instance.new("TextButton")
+shop_mele9= Instance.new("TextButton")
+shop_mele10= Instance.new("TextButton")
 
 
 
-ms_t1= Instance.new("TextLabel")
-ms_t2= Instance.new("TextLabel")
+shop_t1= Instance.new("TextLabel")
+shop_t2= Instance.new("TextLabel")
 
-ms_f1 = Instance.new("TextLabel")
-ms_f2 = Instance.new("TextLabel")
-ms_f3 = Instance.new("TextLabel")
-ms_f4 = Instance.new("TextLabel")
-ms_f4 = Instance.new("TextLabel")
-ms_f5 = Instance.new("TextLabel")
-ms_f6 = Instance.new("TextLabel")
-ms_f7= Instance.new("TextLabel")
-ms_f8= Instance.new("TextLabel")
-ms_f9= Instance.new("TextLabel")
-ms_f10= Instance.new("TextLabel")
-ms_f11= Instance.new("TextLabel")
+shop_f1 = Instance.new("TextLabel")
+shop_f2 = Instance.new("TextLabel")
+shop_f3 = Instance.new("TextLabel")
+shop_f4 = Instance.new("TextLabel")
+shop_f4 = Instance.new("TextLabel")
+shop_f5 = Instance.new("TextLabel")
+shop_f6 = Instance.new("TextLabel")
+shop_f7= Instance.new("TextLabel")
+shop_f8= Instance.new("TextLabel")
+shop_f9= Instance.new("TextLabel")
+shop_f10= Instance.new("TextLabel")
+shop_f11= Instance.new("TextLabel")
 
-ms_b1= Instance.new("TextButton")
-ms_b2= Instance.new("TextButton")
-ms_b3= Instance.new("TextButton")
-ms_b4= Instance.new("TextButton")
-ms_b5= Instance.new("TextButton")
-ms_b6= Instance.new("TextButton")
-ms_b7= Instance.new("TextButton")
-ms_b8= Instance.new("TextButton")
-ms_b9= Instance.new("TextButton")
-ms_b10= Instance.new("TextButton")
-ms_b11= Instance.new("TextButton")
+shop_b1= Instance.new("TextButton")
+shop_b2= Instance.new("TextButton")
+shop_b3= Instance.new("TextButton")
+shop_b4= Instance.new("TextButton")
+shop_b5= Instance.new("TextButton")
+shop_b6= Instance.new("TextButton")
+shop_b7= Instance.new("TextButton")
+shop_b8= Instance.new("TextButton")
+shop_b9= Instance.new("TextButton")
+shop_b10= Instance.new("TextButton")
+shop_b11= Instance.new("TextButton")
 
 --miss2
-ms_code= Instance.new("TextButton")
-m2_b1 = Instance.new("TextButton")
-m2_b2 = Instance.new("TextButton")
-m2_b3 = Instance.new("TextButton")
-m2_b4= Instance.new("TextButton")
-m2_b5 = Instance.new("TextButton")
-m2_b6 = Instance.new("TextButton")
-m2_b7 = Instance.new("TextButton")
+miss_code= Instance.new("TextButton")
+miss_b1 = Instance.new("TextButton")
+miss_b2 = Instance.new("TextButton")
+miss_b3 = Instance.new("TextButton")
+miss_b4= Instance.new("TextButton")
+miss_b5 = Instance.new("TextButton")
+miss_b6 = Instance.new("TextButton")
+miss_b7 = Instance.new("TextButton")
 
 -- // esp - fruit
 ef_t1 = Instance.new("TextLabel")
@@ -218,7 +222,7 @@ ef_b6= Instance.new("TextButton")
 ef_b7= Instance.new("TextButton")
 ef_b8= Instance.new("TextButton")
 
--- // mob - item
+-- // item
 mi_fc = Instance.new("TextLabel")
 mi_f1 = Instance.new("TextLabel")
 mi_f2 = Instance.new("TextLabel")
@@ -314,7 +318,21 @@ mr_b2 = Instance.new("TextLabel")
 mr_f3 = Instance.new("TextLabel") 
 mr_b3 = Instance.new("TextLabel") 
 
+-- // buff
+buff_t1 = Instance.new("TextLabel") 
 
+buff_f1 = Instance.new("TextLabel") 
+buff_b1 = Instance.new("TextButton") 
+buff_f2= Instance.new("TextLabel") 
+buff_b2= Instance.new("TextButton") 
+buff_f3= Instance.new("TextLabel") 
+buff_b3= Instance.new("TextButton") 
+buff_f4= Instance.new("TextLabel") 
+buff_b4= Instance.new("TextButton") 
+buff_f5 = Instance.new("TextLabel") 
+buff_b5= Instance.new("TextButton") 
+buff_f6= Instance.new("TextLabel") 
+buff_b6= Instance.new("TextButton") 
 
 --// tp
 -- // island
@@ -358,6 +376,14 @@ t_b5= Instance.new("TextButton")
 t_b6= Instance.new("TextButton")
 t_b7=Instance.new("TextButton")
 
+-- // mob
+mob_t1 = Instance.new("TextLabel")
+mob_f1 = Instance.new("TextLabel")
+mob_b1 = Instance.new("TextButton")
+mob_f2 = Instance.new("TextLabel")
+mob_b2 = Instance.new("TextButton")
+mob_f3= Instance.new("TextLabel")
+mob_b3= Instance.new("TextButton")
 
 -------------------------------------------------------------------------------
 
@@ -442,7 +468,7 @@ b_4.Position = UDim2.new(0, 0, 0.150000000, 0)
 b_4.Size = UDim2.new(0, 100, 0, 25)
 b_4.Font = Enum.Font.Ubuntu
 b_4.BorderColor3 = Color3.fromRGB(250, 250, 250)
-b_4.Text = "   Miss - Shop"
+b_4.Text = "   Shop"
 b_4.TextColor3 = Color3.fromRGB(255, 255, 255)
 b_4.TextSize = 14.000
 b_4.TextWrapped = false
@@ -455,16 +481,29 @@ b_10.Position = UDim2.new(0, 0, 0.200000000, 0)
 b_10.Size = UDim2.new(0, 100, 0, 25)
 b_10.Font = Enum.Font.Ubuntu
 b_10.BorderColor3 = Color3.fromRGB(250, 250, 250)
-b_10.Text = "   Miss 2"
+b_10.Text = "   Miss"
 b_10.TextColor3 = Color3.fromRGB(255, 255, 255)
 b_10.TextSize = 14.000
 b_10.TextWrapped = false
 b_10.TextXAlignment = Enum.TextXAlignment.Left
 
+b_13.Name = "b_13"
+b_13.Parent = bar1
+b_13.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+b_13.Position = UDim2.new(0, 0, 0.250000000, 0)
+b_13.Size = UDim2.new(0, 100, 0, 25)
+b_13.Font = Enum.Font.Ubuntu
+b_13.BorderColor3 = Color3.fromRGB(250, 250, 250)
+b_13.Text = "   Buff"
+b_13.TextColor3 = Color3.fromRGB(255, 255, 255)
+b_13.TextSize = 14.000
+b_13.TextWrapped = false
+b_13.TextXAlignment = Enum.TextXAlignment.Left
+
 b_11.Name = "b_11"
 b_11.Parent = bar1
 b_11.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-b_11.Position = UDim2.new(0, 0, 0.250000000, 0)
+b_11.Position = UDim2.new(0, 0, 0.300000000, 0)
 b_11.Size = UDim2.new(0, 100, 0, 25)
 b_11.Font = Enum.Font.Ubuntu
 b_11.BorderColor3 = Color3.fromRGB(250, 250, 250)
@@ -481,7 +520,7 @@ end
 b_5.Name = "b_5"
 b_5.Parent = bar1
 b_5.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-b_5.Position = UDim2.new(0, 0, 0.300000000, 0)
+b_5.Position = UDim2.new(0, 0, 0.350000000, 0)
 b_5.Size = UDim2.new(0, 100, 0, 25)
 b_5.Font = Enum.Font.Ubuntu
 b_5.BorderColor3 = Color3.fromRGB(250, 250, 250)
@@ -494,20 +533,34 @@ b_5.TextXAlignment = Enum.TextXAlignment.Left
 b_6.Name = "b_6"
 b_6.Parent = bar1
 b_6.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-b_6.Position = UDim2.new(0, 0, 0.350000000, 0)
+b_6.Position = UDim2.new(0, 0, 0.400000000, 0)
 b_6.Size = UDim2.new(0, 100, 0, 25)
 b_6.Font = Enum.Font.Ubuntu
 b_6.BorderColor3 = Color3.fromRGB(250, 250, 250)
-b_6.Text = "   Mob - Get Item"
+b_6.Text = "   Get Item"
 b_6.TextColor3 = Color3.fromRGB(255, 255, 255)
 b_6.TextSize = 14.000
 b_6.TextWrapped = false
 b_6.TextXAlignment = Enum.TextXAlignment.Left
 
+b_14.Name = "b_14"
+b_14.Parent = bar1
+b_14.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+b_14.Position = UDim2.new(0, 0, 0.450000000, 0)
+b_14.Size = UDim2.new(0, 100, 0, 25)
+b_14.Font = Enum.Font.Ubuntu
+b_14.BorderColor3 = Color3.fromRGB(250, 250, 250)
+b_14.Text = "   Mob"
+b_14.TextColor3 = Color3.fromRGB(255, 255, 255)
+b_14.TextSize = 14.000
+b_14.TextWrapped = false
+b_14.TextXAlignment = Enum.TextXAlignment.Left
+
+
 b_7.Name = "b_7"
 b_7.Parent = bar1
 b_7.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-b_7.Position = UDim2.new(0, 0, 0.400000000, 0)
+b_7.Position = UDim2.new(0, 0, 0.500000000, 0)
 b_7.Size = UDim2.new(0, 100, 0, 25)
 b_7.Font = Enum.Font.Ubuntu
 b_7.BorderColor3 = Color3.fromRGB(250, 250, 250)
@@ -520,7 +573,7 @@ b_7.TextXAlignment = Enum.TextXAlignment.Left
 b_12.Name = "b_12"
 b_12.Parent = bar1
 b_12.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-b_12.Position = UDim2.new(0, 0, 0.450000000, 0)
+b_12.Position = UDim2.new(0, 0, 0.550000000, 0)
 b_12.Size = UDim2.new(0, 100, 0, 25)
 b_12.Font = Enum.Font.Ubuntu
 b_12.BorderColor3 = Color3.fromRGB(250, 250, 250)
@@ -533,7 +586,7 @@ b_12.TextXAlignment = Enum.TextXAlignment.Left
 b_8.Name = "b_8"
 b_8.Parent = bar1
 b_8.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-b_8.Position = UDim2.new(0, 0, 0.500000000, 0)
+b_8.Position = UDim2.new(0, 0, 0.600000000, 0)
 b_8.Size = UDim2.new(0, 100, 0, 25)
 b_8.Font = Enum.Font.Ubuntu
 b_8.BorderColor3 = Color3.fromRGB(250, 250, 250)
@@ -546,7 +599,7 @@ b_8.TextXAlignment = Enum.TextXAlignment.Left
 b_9.Name = "b_9"
 b_9.Parent = bar1
 b_9.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-b_9.Position = UDim2.new(0, 0, 0.550000000, 0)
+b_9.Position = UDim2.new(0, 0, 0.650000000, 0)
 b_9.Size = UDim2.new(0, 100, 0, 25)
 b_9.Font = Enum.Font.Ubuntu
 b_9.BorderColor3 = Color3.fromRGB(250, 250, 250)
@@ -647,6 +700,17 @@ b_page11.ScrollBarThickness = 0
 b_page11.Position = UDim2.new(0.17631148, 0, 0.094285722, 0)
 b_page11.Visible = false     
 
+b_page14.Name = "b_page14" --raid
+b_page14.Parent = main
+b_page14.Active = true
+b_page14.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+b_page14.BackgroundTransparency = 1.000
+b_page14.BorderSizePixel = 0
+b_page14.Size = UDim2.new(0, 498, 0, 230)
+b_page14.ScrollBarThickness = 0
+b_page14.Position = UDim2.new(0.17631148, 0, 0.094285722, 0)
+b_page14.Visible = false     
+
 b_page5.Name = "b_page5" --raid
 b_page5.Parent = main
 b_page5.Active = true
@@ -712,6 +776,17 @@ b_page9.Size = UDim2.new(0, 498, 0, 230)
 b_page9.ScrollBarThickness = 0
 b_page9.Position = UDim2.new(0.17631148, 0, 0.094285722, 0)
 b_page9.Visible = false     
+
+b_page13.Name = "b_page13" --raid
+b_page13.Parent = main
+b_page13.Active = true
+b_page13.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+b_page13.BackgroundTransparency = 1.000
+b_page13.BorderSizePixel = 0
+b_page13.Size = UDim2.new(0, 498, 0, 230)
+b_page13.ScrollBarThickness = 0
+b_page13.Position = UDim2.new(0.17631148, 0, 0.094285722, 0)
+b_page13.Visible = false     
 
 --bar
 
@@ -957,7 +1032,7 @@ function TP1(P1)
                                     local MyLevel = game.Players.LocalPlayer.Data.Level.Value
                            if game.PlaceId == 2753915549 then -- sea1
                                         if MyLevel == 1 or MyLevel <= 9 then --Bandit
-                                            Ms = "Bandit [Lv. 5]"
+                                            NameMob = "Bandit [Lv. 5]"
                                             NameQuest = "BanditQuest1"
                                             LevelQuest = 1
                                             NameMon = "Bandit Quest Giver"
@@ -966,7 +1041,7 @@ function TP1(P1)
                                             CFrameBring = CFrame.new(1192.048583984375, 16.7034969329834, 1611.431884765625)
                                             
                                             elseif MyLevel == 10 or MyLevel <= 14 then --monkey
-                                            Ms = "Monkey [Lv. 14]"
+                                            NameMob = "Monkey [Lv. 14]"
                                             NameQuest = "JungleQuest"
                                             LevelQuest = 1
                                             NameMon = "Adventurer"
@@ -975,7 +1050,7 @@ function TP1(P1)
                                             CFrameBring = CFrame.new(-1633.2825927734375, 15.852092742919922, 96.47166442871094)
                                             
                                             elseif MyLevel == 15 or MyLevel <= 29 then --Gozila
-                                            Ms = "Gorilla [Lv. 20]"
+                                            NameMob = "Gorilla [Lv. 20]"
                                             NameQuest = "JungleQuest"
                                             LevelQuest = 2
                                             NameMon = "Adventurer"
@@ -984,7 +1059,7 @@ function TP1(P1)
                                             CFrameBring = CFrame.new(-1241.55078125, 6.27936315536499, -517.3883666992188)
                                             
                                             elseif MyLevel == 30 or MyLevel <= 39 then --pirate
-                                            Ms = "Pirate [Lv. 35]"
+                                            NameMob = "Pirate [Lv. 35]"
                                             NameQuest = "BuggyQuest1"
                                             LevelQuest = 1
                                             NameMon = "Pirate Adventurer"
@@ -993,7 +1068,7 @@ function TP1(P1)
                                             CFrameBring = CFrame.new(-1179.3768310546875, 5.095293998718262, 3921.2919921875)
                                             
                                             elseif MyLevel == 40 or MyLevel <= 59 then --brute
-                                            Ms = "Brute [Lv. 45]"
+                                            NameMob = "Brute [Lv. 45]"
                                             NameQuest = "BuggyQuest1"
                                             LevelQuest = 2
                                             NameMon = "Pirate Adventurer"
@@ -1002,7 +1077,7 @@ function TP1(P1)
                                             CFrameBring = CFrame.new(-1098.1475830078125, 14.809873580932617, 4337.5419921875)
                                             
                                             elseif MyLevel == 60 or MyLevel <= 74 then --Desert Bandit
-                                            Ms = "Desert Bandit [Lv. 60]" --name mob
+                                            NameMob = "Desert Bandit [Lv. 60]" --name mob
                                             NameQuest = "DesertQuest" --name get quest
                                             LevelQuest = 1         -- lv quest
                                             NameMon = "Desert Adventurer"    --name npc
@@ -1011,7 +1086,7 @@ function TP1(P1)
                                             CFrameBring = CFrame.new(922.7894897460938, 6.44875955581665, 4481.28125)
                                             
       elseif MyLevel == 75 or MyLevel <= 89 then --Desert Officre
-                                            Ms = "Desert Officer [Lv. 70]" --name mob
+                                            NameMob = "Desert Officer [Lv. 70]" --name mob
                                             NameQuest = "DesertQuest" --name get quest
                                             LevelQuest = 2        -- lv quest
                                             NameMon = "Desert Adventurer"    --name npc
@@ -1020,7 +1095,7 @@ function TP1(P1)
                                             CFrameBring = CFrame.new(1613.4285888671875, 1.6109551191329956, 4360.02294921875)
 
     elseif MyLevel == 90 or MyLevel <= 99 then --Snow Bandit
-                                            Ms = "Snow Bandit [Lv. 90]" --name mob
+                                            NameMob = "Snow Bandit [Lv. 90]" --name mob
                                             NameQuest = "SnowQuest" --name get quest
                                             LevelQuest = 1         -- lv quest
                                             NameMon = "Villager"    --name npc
@@ -1029,7 +1104,7 @@ function TP1(P1)
                                             CFrameBring = CFrame.new(1386.5888671875, 87.27276611328125, -1379.3212890625)
                                             
       elseif MyLevel == 100 or MyLevel <= 119 then --Snowman
-                                            Ms = "Snowman [Lv. 100]" --name mob
+                                            NameMob = "Snowman [Lv. 100]" --name mob
                                             NameQuest = "SnowQuest" --name get quest
                                             LevelQuest = 2        -- lv quest
                                             NameMon = "Villager"    --name npc
@@ -1038,7 +1113,7 @@ function TP1(P1)
                               CFrameBring = CFrame.new(1150.3426513671875, 106.23611450195312, -1516.80078125)
 
   elseif MyLevel == 120 or MyLevel <= 149 then --Chief Petty Officer
-                                            Ms = "Chief Petty Officer [Lv. 120]" --name mob
+                                            NameMob = "Chief Petty Officer [Lv. 120]" --name mob
                                             NameQuest = "MarineQuest2" --name get quest
                                             LevelQuest = 1         -- lv quest
                                             NameMon = "Marine"    --name npc
@@ -1047,7 +1122,7 @@ function TP1(P1)
                                             CFrameBring = CFrame.new(-4867.0634765625, 20.65203285217285, 4359.71337890625) or CFrame.new(-4675.14697265625, 20.652034759521484, 4477.3232421875)
                                             
                                             elseif MyLevel == 150 or MyLevel <= 174 then --Sky Bandit [Lv. 150]
-                                            Ms = "Sky Bandit [Lv. 150]" --name mob
+                                            NameMob = "Sky Bandit [Lv. 150]" --name mob
                                             NameQuest = "SkyQuest" --name get quest
                                             LevelQuest = 1         -- lv quest
                                             NameMon = "Sky Adventurer"    --name npc
@@ -1056,7 +1131,7 @@ function TP1(P1)
                                             CFrameBring = CFrame.new(-5003.708984375, 278.0669860839844, -2866.371826171875)
                                             
                                             elseif MyLevel == 175 or MyLevel <= 189 then --Dark Master [Lv. 175]
-                                            Ms = "Dark Master [Lv. 175]" --name mob
+                                            NameMob = "Dark Master [Lv. 175]" --name mob
                                             NameQuest = "SkyQuest" --name get quest
                                             LevelQuest = 2         -- lv quest
                                             NameMon = "Sky Adventurer"    --name npc
@@ -1065,7 +1140,7 @@ function TP1(P1)
      CFrameBring = CFrame.new(-5258.681640625, 388.6519470214844, -2278.768310546875)
                                        
                elseif MyLevel == 190 or MyLevel <= 209 then --m_b3
-                                            Ms = "Prisoner [Lv. 190]" --name mob
+                                            NameMob = "Prisoner [Lv. 190]" --name mob
                                             NameQuest = "PrisonerQuest" --name get quest
                                             LevelQuest = 1         -- lv quest
                                             NameMon = "Jail Keeper"    --name npc
@@ -1074,7 +1149,7 @@ function TP1(P1)
                                             CFrameBring = CFrame.new(5166.82177734375, 1.798761248588562, 457.5108337402344)
    
   elseif MyLevel == 210 or MyLevel <= 249 then --m_b3
-                                            Ms = "Dangerous Prisoner [Lv. 210]" --name mob
+                                            NameMob = "Dangerous Prisoner [Lv. 210]" --name mob
                                             NameQuest = "PrisonerQuest" --name get quest
                                             LevelQuest = 2         -- lv quest
                                             NameMon = "Jail Keeper"    --name npc
@@ -1083,7 +1158,7 @@ function TP1(P1)
                                                          CFrameBring = CFrame.new(5609.08935546875, 1.6338006258010864, 659.2885131835938)     
                                        
    elseif MyLevel == 250 or MyLevel <= 299 then --Toga Warrior [Lv. 225]
-                                            Ms = "Toga Warrior [Lv. 250]" --name mob
+                                            NameMob = "Toga Warrior [Lv. 250]" --name mob
                                             NameQuest = "ColosseumQuest" --name get quest
                                             LevelQuest = 1         -- lv quest
                                             NameMon = "Colosseum Quest Giver"    --name npc
@@ -1092,7 +1167,7 @@ function TP1(P1)
                                       CFrameBring = CFrame.new(-1909.5372314453125, 7.289072513580322, -2760.071044921875)
                
   elseif MyLevel == 300 or MyLevel <= 324 then --Military Soldier [Lv. 300]
-                                            Ms = "Military Soldier [Lv. 300]" --name mob
+                                            NameMob = "Military Soldier [Lv. 300]" --name mob
                                             NameQuest = "MagmaQuest" --name get quest
                                             LevelQuest = 1         -- lv quest
                                             NameMon = "The Mayor"    --name npc
@@ -1101,7 +1176,7 @@ function TP1(P1)
                                             CFrameBring = CFrame.new(-5377.1494140625, 8.990673065185547, 8493.80859375)
    
   elseif MyLevel == 325 or MyLevel <= 449 then --Military Spy [Lv. 325]
-                                            Ms = "Military Spy [Lv. 325]" --name mob
+                                            NameMob = "Military Spy [Lv. 325]" --name mob
                                             NameQuest = "MagmaQuest" --name get quest
                                             LevelQuest = 2       -- lv quest
                                             NameMon = "The Mayor"    --name npc
@@ -1110,7 +1185,7 @@ function TP1(P1)
   CFrameBring = CFrame.new(-5849.50927734375, 77.23063659667969, 8823.505859375)
 
  elseif MyLevel == 450 or MyLevel <= 474 then --God's Guard [Lv. 450]
-                                            Ms = "God's Guard [Lv. 450]" --name mob
+                                            NameMob = "God's Guard [Lv. 450]" --name mob
                                             NameQuest = "SkyExp1Quest" --name get quest
                                             LevelQuest = 1         -- lv quest
                                             NameMon = "Mole"    --name npc
@@ -1119,7 +1194,7 @@ function TP1(P1)
                                             CFrameBring = CFrame.new(-4740.54541015625, 845.2769775390625, -1903.8253173828125)
    
   elseif MyLevel == 475 or MyLevel <= 524 then --Shanda [Lv. 475]
-                                            Ms = "Shanda [Lv. 475]" --name mob
+                                            NameMob = "Shanda [Lv. 475]" --name mob
                                             NameQuest = "SkyExp1Quest" --name get quest
                                             LevelQuest = 2         -- lv quest
                                             NameMon = "Mole"    --name npc
@@ -1128,7 +1203,7 @@ function TP1(P1)
               CFrameBring = CFrame.new(-7651.97216796875, 5545.49169921875, -519.1795043945312)
 
      elseif MyLevel == 525 or MyLevel <= 549 then --Royal Squad [Lv. 525]
-                                            Ms = "Royal Squad [Lv. 525]" --name mob
+                                            NameMob = "Royal Squad [Lv. 525]" --name mob
                                             NameQuest = "SkyExp2Quest" --name get quest
                                             LevelQuest = 1         -- lv quest
                                             NameMon = "Gan Fall Adventurer"    --name npc
@@ -1137,7 +1212,7 @@ function TP1(P1)
                                             CFrameBring = CFrame.new(-7690.3349609375, 5606.876953125, -1456.149658203125)
    
   elseif MyLevel == 550 or MyLevel <= 624 then --Royal Soldier [Lv. 550]
-                                            Ms = "Royal Soldier [Lv. 550]" --name mob
+                                            NameMob = "Royal Soldier [Lv. 550]" --name mob
                                             NameQuest = "SkyExp2Quest" --name get quest
                                             LevelQuest = 2        -- lv quest
                                             NameMon = "Gan Fall Adventurer"    --name npc
@@ -1146,7 +1221,7 @@ function TP1(P1)
        CFrameBring = CFrame.new(-7838.7861328125, 5606.876953125, -1820.982666015625)
 
       elseif MyLevel == 625 or MyLevel <= 649 then --Galley Pirate [Lv. 625]
-                                            Ms = "Galley Pirate [Lv. 625]" --name mob
+                                            NameMob = "Galley Pirate [Lv. 625]" --name mob
                                             NameQuest = "FountainQuest" --name get quest
                                             LevelQuest = 1         -- lv quest
                                             NameMon = "Freezeburg Quest Giver"    --name npc
@@ -1155,7 +1230,7 @@ function TP1(P1)
                                             CFrameBring = CFrame.new(5576.9287109375, 38.501129150390625, 3942.519287109375)
    
   elseif MyLevel == 650 or MyLevel >= 675 then --Galley Captain [Lv. 650]
-                                            Ms = "Galley Captain [Lv. 650]" --name mob
+                                            NameMob = "Galley Captain [Lv. 650]" --name mob
                                             NameQuest = "FountainQuest" --name get quest
                                             LevelQuest = 2        -- lv quest
                                             NameMon = "Freezeburg Quest Giver"    --name npc
@@ -1166,7 +1241,7 @@ end end
 
     if game.PlaceId == 4442272183 then -- sea2                                                                                 
  if MyLevel == 700 or MyLevel <= 724 then --Raider [Lv. 700]
-                                            Ms = "Raider [Lv. 700]" --name mob
+                                            NameMob = "Raider [Lv. 700]" --name mob
                                             NameQuest = "Area1Quest" --name get quest
                                             LevelQuest = 1         -- lv quest
                                             NameMon = "Area 1 Quest Giver"    --name npc
@@ -1175,7 +1250,7 @@ end end
                                             CFrameMob = CFrame.new(-477.41650390625, 99.85147857666016, 2325.179443359375)
                                             
                                             elseif MyLevel == 725 or MyLevel <= 774 then --Mercenary [Lv. 725]"
-                                            Ms = "Mercenary [Lv. 725]" --name mob
+                                            NameMob = "Mercenary [Lv. 725]" --name mob
                                             NameQuest = "Area1Quest" --name get quest
                                             LevelQuest = 2        -- lv quest
                                             NameMon = "Area 1 Quest Giver"    --name npc
@@ -1184,7 +1259,7 @@ end end
                                             CFrameBring = CFrame.new(-933.7117919921875, 73.30294036865234, 1704.3751220703125) or CFrame.new(-1089.43212890625, 73.30294036865234, 1176.912353515625) 
                                             
                                             elseif MyLevel == 775 or MyLevel <= 874 then --Swan Pirate [Lv. 775]
-                                            Ms = "Swan Pirate [Lv. 775]" --name mob
+                                            NameMob = "Swan Pirate [Lv. 775]" --name mob
                                             NameQuest = "Area2Quest" --name get quest
                                             LevelQuest = 1         -- lv quest
                                             NameMon = "Area 2 Quest Giver"    --name npc
@@ -1193,7 +1268,7 @@ end end
                                             CFrameBring = CFrame.new(929.234130859375, 73.30294036865234, 1210.5303955078125)
                                                                                                             
   elseif MyLevel == 875 or MyLevel <= 899 then --Marine Lieutenant [Lv. 875]
-                                            Ms = "Marine Lieutenant [Lv. 875]" --name mob
+                                            NameMob = "Marine Lieutenant [Lv. 875]" --name mob
                                             NameQuest = "MarineQuest3" --name get quest
                                             LevelQuest = 1      -- lv quest
                                             NameMon = "Marine Quest Giver"    --name npc
@@ -1202,7 +1277,7 @@ end end
                                             CFrameBring = CFrame.new(-2843.622314453125, 73.30936431884766, -2990.433349609375)                                           
 
       elseif MyLevel == 900 or MyLevel <= 949 then --Marine Captain [Lv. 900]
-                                            Ms = "Marine Captain [Lv. 900]" --name mob
+                                            NameMob = "Marine Captain [Lv. 900]" --name mob
                                             NameQuest = "MarineQuest3" --name get quest
                                             LevelQuest = 2         -- lv quest
                                             NameMon = "Marine Quest Giver"    --name npc
@@ -1211,7 +1286,7 @@ end end
                                             CFrameBring = CFrame.new(-1955.32568359375, 73.30936431884766, -3273.25341796875)   
                                             
                                             elseif MyLevel == 950 or MyLevel <= 974 then --Zombie [Lv. 950]
-                                            Ms = "Zombie [Lv. 950]" --name mob
+                                            NameMob = "Zombie [Lv. 950]" --name mob
                                             NameQuest = "ZombieQuest" --name get quest
                                             LevelQuest = 1         -- lv quest
                                             NameMon = "Graveyard Quest Giver"    --name npc
@@ -1220,7 +1295,7 @@ end end
                                             CFrameBring = CFrame.new(-5677.216796875, 48.82343673706055, -696.4016723632812)
                                             
   elseif MyLevel == 975 or MyLevel <= 999 then --Vampire [Lv. 975]
-                                            Ms = "Vampire [Lv. 975]" --name mob
+                                            NameMob = "Vampire [Lv. 975]" --name mob
                                             NameQuest = "ZombieQuest" --name get quest
                                             LevelQuest = 2        -- lv quest
                                             NameMon = "Graveyard Quest Giver"    --name npc
@@ -1229,7 +1304,7 @@ end end
                                             CFrameBring = CFrame.new(-6050.15869140625, 6.745943546295166, -1314.393328125)                
 
                              elseif MyLevel == 1000 or MyLevel <= 1049 then --Snow Trooper [Lv. 1000]
-                                            Ms = "Snow Trooper [Lv. 1000]" --name mob
+                                            NameMob = "Snow Trooper [Lv. 1000]" --name mob
                                             NameQuest = "SnowMountainQuest" --name get quest
                                             LevelQuest = 1         -- lv quest
                                             NameMon = "Snow Quest Giver"    --name npc
@@ -1238,7 +1313,7 @@ end end
                                             CFrameBring = CFrame.new(604.3399047851562, 401.7651672363281, -5566.1025390625)
                                             
   elseif MyLevel == 1050 or MyLevel <= 1099 then --Winter Warrior [Lv. 1050]
-                                            Ms = "Winter Warrior [Lv. 1050]" --name mob
+                                            NameMob = "Winter Warrior [Lv. 1050]" --name mob
                                             NameQuest = "SnowMountainQuest" --name get quest
                                             LevelQuest = 2        -- lv quest
                                             NameMon = "Snow Quest Giver"    --name npc
@@ -1247,7 +1322,7 @@ end end
                                             CFrameBring = CFrame.new(1316.513916015625, 429.7651062011719, -5313.61572265625)   
 
                                           elseif MyLevel == 1100 or MyLevel <= 1124 then --Lab Subordinate [Lv. 1100]
-                                            Ms = "Lab Subordinate [Lv. 1100]" --name mob
+                                            NameMob = "Lab Subordinate [Lv. 1100]" --name mob
                                             NameQuest = "IceSideQuest" --name get quest
                                             LevelQuest = 1         -- lv quest
                                             NameMon = "Ice Quest Giver"    --name npc
@@ -1256,7 +1331,7 @@ end end
                                             CFrameBring = CFrame.new(-5737.90966796875, 16.295000076293945, -4500.74365234375)
                                             
   elseif MyLevel == 1125 or MyLevel <= 1174 then --Horned Warrior [Lv. 1125]
-                                            Ms = "Horned Warrior [Lv. 1125]" --name mob
+                                            NameMob = "Horned Warrior [Lv. 1125]" --name mob
                                             NameQuest = "IceSideQuest" --name get quest
                                             LevelQuest = 2        -- lv quest
                                             NameMon = "Ice Quest Giver"    --name npc
@@ -1265,7 +1340,7 @@ end end
                                             CFrameBring = CFrame.new(-6466.91748046875, 16.29500389099121, -5705.90283203125)           
 
                 elseif MyLevel == 1175 or MyLevel <= 1199 then --Magma Ninja [Lv. 1175]
-                                            Ms = "Magma Ninja [Lv. 1175]" --name mob
+                                            NameMob = "Magma Ninja [Lv. 1175]" --name mob
                                             NameQuest = "FireSideQuest" --name& get quest
                                             LevelQuest = 1         -- lv quest
                                             NameMon = "Fire Quest Giver"    --name npc
@@ -1274,7 +1349,7 @@ end end
                                             CFrameBring = CFrame.new(-5720.39404296875, 16.295000076293945, -5812.42138671875) or CFrame.new(-5185.24169921875, 16.295122146606445, -6091.33935546875)                       
                                             
   elseif MyLevel == 1200 or MyLevel <= 1349 then --Lava Pirate [Lv. 1200]
-                                            Ms = "Lava Pirate [Lv. 1200]" --name mob
+                                            NameMob = "Lava Pirate [Lv. 1200]" --name mob
                                             NameQuest = "FireSideQuest" --name get quest
                                             LevelQuest = 2        -- lv quest
                                             NameMon = "Fire Quest Giver"    --name npc
@@ -1283,7 +1358,7 @@ end end
                                             CFrameBring = CFrame.new(-5289.73193359375, 16.295000076293945, -4558.72412109375)    
 
                      elseif MyLevel == 1350 or MyLevel <= 1374 then --Arctic Warrior [Lv. 1350]
-                                            Ms = "Arctic Warrior [Lv. 1350]" --name mob
+                                            NameMob = "Arctic Warrior [Lv. 1350]" --name mob
                                             NameQuest = "FrostQuest" --name get quest
                                             LevelQuest = 1         -- lv quest
                                             NameMon = "Frost Quest Giver"    --name npc
@@ -1292,7 +1367,7 @@ end end
                                             CFrameBring = CFrame.new(6118.96240234375, 28.71002769470215, -6218.337890625)
                                             
   elseif MyLevel == 1375 or MyLevel <= 1424 then --Snow Lurker [Lv. 1375]
-                                            Ms = "Snow Lurker [Lv. 1375]" --name mob
+                                            NameMob = "Snow Lurker [Lv. 1375]" --name mob
                                             NameQuest = "FrostQuest" --name get quest
                                             LevelQuest = 2        -- lv quest
                                             NameMon = "Frost Quest Giver"    --name npc
@@ -1301,7 +1376,7 @@ end end
                                             CFrameBring = CFrame.new(5601.07373046875, 28.939659118652344, -6723.14306640625)     
 
                            elseif MyLevel == 1425 or MyLevel <= 1449 then --Sea Soldier [Lv. 1425]
-                                            Ms = "Sea Soldier [Lv. 1425]" --name mob
+                                            NameMob = "Sea Soldier [Lv. 1425]" --name mob
                                             NameQuest = "ForgottenQuest" --name get quest
                                             LevelQuest = 1         -- lv quest
                                             NameMon = "Forgotten Quest Giver"    --name npc
@@ -1310,7 +1385,7 @@ end end
                                             CFrameBring = CFrame.new(-3368.539794921875, 27.295886993408203, -9782.5263671875)
                                             
   elseif MyLevel == 1450 or MyLevel >= 1474 then --Water Fighter [Lv. 1450]
-                                            Ms = "Water Fighter [Lv. 1450]" --name mob
+                                            NameMob = "Water Fighter [Lv. 1450]" --name mob
                                             NameQuest = "ForgottenQuest" --name get quest
                                             LevelQuest = 2        -- lv quest
                                             NameMon = "Forgotten Quest Giver"    --name npc
@@ -1321,7 +1396,7 @@ end end
                                             
                    if game.PlaceId == 7449423635 then -- sea3    
 if MyLevel == 1500 or MyLevel <= 1524 then --Pirate Millionaire [Lv. 1500]
-                                            Ms = "Pirate Millionaire [Lv. 1500]" --name mob
+                                            NameMob = "Pirate Millionaire [Lv. 1500]" --name mob
                                             NameQuest = "PiratePortQuest" --name get quest
                                             LevelQuest = 1         -- lv quest
                                             NameMon = "Pirate Port Quest Giver"    --name npc
@@ -1330,7 +1405,7 @@ if MyLevel == 1500 or MyLevel <= 1524 then --Pirate Millionaire [Lv. 1500]
                                             CFrameBring = CFrame.new(-565.9216918945312, 44.15378952026367, 5530.4326171875) 
                                             
   elseif MyLevel == 1525 or MyLevel <= 1574 then --Pistol Billionaire [Lv. 1525] 
-                                            Ms = "Pistol Billionaire [Lv. 1525]" --name mob
+                                            NameMob = "Pistol Billionaire [Lv. 1525]" --name mob
                                             NameQuest = "PiratePortQuest" --name get quest
                                             LevelQuest = 2        -- lv quest
                                             NameMon = "Pirate Port Quest Giver"    --name npc
@@ -1339,7 +1414,7 @@ if MyLevel == 1500 or MyLevel <= 1524 then --Pirate Millionaire [Lv. 1500]
                                             CFrameBring = CFrame.new(-5.446301460266113, 74.13822937011719, 6129.6318359375)       
                                             
                                             elseif MyLevel == 1575 or MyLevel <= 1599 then --m_b3
-                                            Ms = "Dragon Crew Warrior [Lv. 1575]" --name mob
+                                            NameMob = "Dragon Crew Warrior [Lv. 1575]" --name mob
                                             NameQuest = "AmazonQuest1" --name get quest
                                             LevelQuest = 1         -- lv quest
                                             NameMon = "Amazon Area 1 Quest Giver"    --name npc
@@ -1348,7 +1423,7 @@ if MyLevel == 1500 or MyLevel <= 1524 then --Pirate Millionaire [Lv. 1500]
                                             CFrameBring = CFrame.new(6491.39453125, 51.83952331542969, -979.994384765625)
                                             
   elseif MyLevel == 1600 or MyLevel <= 1624 then --m_b3
-                                            Ms = "m_b31" --name mob
+                                            NameMob = "m_b31" --name mob
                                             NameQuest = "AmazonQuest1" --name get quest
                                             LevelQuest = 2        -- lv quest
                                             NameMon = "Amazon Area 1 Quest Giver"    --name npc
@@ -1357,7 +1432,7 @@ if MyLevel == 1500 or MyLevel <= 1524 then --Pirate Millionaire [Lv. 1500]
                                             CFrameBring = CFrame.new(6630.39697265625, 378.73773193359375, 262.2434387207031)                                             
 
                 elseif MyLevel == 1625 or MyLevel <= 1649 then --m_b3
-                                            Ms = "Female Islander [Lv. 1625]" --name mob
+                                            NameMob = "Female Islander [Lv. 1625]" --name mob
                                             NameQuest = "AmazonQuest2" --name get quest
                                             LevelQuest = 1         -- lv quest
                                             NameMon = "Amazon Area 2 Quest Giver"    --name npc
@@ -1366,7 +1441,7 @@ if MyLevel == 1500 or MyLevel <= 1524 then --Pirate Millionaire [Lv. 1500]
                                             CFrameBring = CFrame.new(4746.7080078125, 730.677001953125, 692.0280151367188)
                                             
   elseif MyLevel == 1650 or MyLevel <= 1699 then --Giant Islander [Lv. 1650]
-                                            Ms = "Giant Islander [Lv. 1650]" --name mob
+                                            NameMob = "Giant Islander [Lv. 1650]" --name mob
                                             NameQuest = "AmazonQuest2" --name get quest
                                             LevelQuest = 2        -- lv quest
                                             NameMon = "Amazon Area 2 Quest Giver"    --name npc
@@ -1375,7 +1450,7 @@ if MyLevel == 1500 or MyLevel <= 1524 then --Pirate Millionaire [Lv. 1500]
                                             CFrameBring = CFrame.new(4763.189453125, 590.780029296875, -36.859249114990234)          
 
              elseif MyLevel == 1700 or MyLevel <= 1724 then --Marine Commodore [Lv. 1700]
-                                            Ms = "Marine Commodore [Lv. 1700]" --name mob
+                                            NameMob = "Marine Commodore [Lv. 1700]" --name mob
                                             NameQuest = "MarineTreeIsland" --name get quest
                                             LevelQuest = 1         -- lv quest
                                             NameMon = "Marine Tree Quest Giver"    --name npc
@@ -1384,7 +1459,7 @@ if MyLevel == 1500 or MyLevel <= 1524 then --Pirate Millionaire [Lv. 1500]
                                             CFrameBring = CFrame.new(2339.177001953125, 73.4631576538086, -7515.31396484375)
                                             
   elseif MyLevel == 1725 or MyLevel <= 1774 then --Marine Rear Admiral [Lv. 1725]
-                                            Ms = "Marine Rear Admiral [Lv. 1725]" --name mob
+                                            NameMob = "Marine Rear Admiral [Lv. 1725]" --name mob
                                             NameQuest = "MarineTreeIsland" --name get quest
                                             LevelQuest = 2        -- lv quest
                                             NameMon = "Marine Tree Quest Giver"    --name npc
@@ -1393,7 +1468,7 @@ if MyLevel == 1500 or MyLevel <= 1524 then --Pirate Millionaire [Lv. 1500]
                                             CFrameBring = CFrame.new(3670.998046875, 160.86729431152344, -7010.044921875)                
 
              elseif MyLevel == 1775 or MyLevel <= 1799 then --Fishman Raider [Lv. 1775]
-                                            Ms = "Fishman Raider [Lv. 1775]" --name mob
+                                            NameMob = "Fishman Raider [Lv. 1775]" --name mob
                                             NameQuest = "DeepForestIsland3" --name get quest
                                             LevelQuest = 1         -- lv quest
                                             NameMon = "Turtle Adventure Quest Giver"    --name npc
@@ -1402,7 +1477,7 @@ if MyLevel == 1500 or MyLevel <= 1524 then --Pirate Millionaire [Lv. 1500]
                                             CFrameBring = CFrame.new(-10686.943359375, 332.1058654785156, -8476.6474609375) or CFrame.new(-10408.716796875, 332.1058654785156, -8357.494140625)
                                             
   elseif MyLevel == 1800 or MyLevel <= 1824 then --Fishman Captain [Lv. 1800]
-                                            Ms = "Fishman Captain [Lv. 1800]" --name mob
+                                            NameMob = "Fishman Captain [Lv. 1800]" --name mob
                                             NameQuest = "DeepForestIsland3" --name get quest
                                             LevelQuest = 2        -- lv quest
                                             NameMon = "Turtle Adventure Quest Giver"    --name npc
@@ -1411,7 +1486,7 @@ if MyLevel == 1500 or MyLevel <= 1524 then --Pirate Millionaire [Lv. 1500]
                                             CFrameBring = CFrame.new(-10957.3740234375, 332.1058654785156, -8808.9951171875)   or CFrame.new(-11094.2783203125, 332.0664367675781, -9118.0009765625)              
 
                                              elseif MyLevel == 1825 or MyLevel <= 1849 then --Forest Pirate [Lv. 1825]
-                                            Ms = "Forest Pirate [Lv. 1825]" --name mob
+                                            NameMob = "Forest Pirate [Lv. 1825]" --name mob
                                             NameQuest = "DeepForestIsland" --name get quest
                                             LevelQuest = 1         -- lv quest
                                             NameMon = "Deep Forest Quest Giver"    --name npc
@@ -1420,7 +1495,7 @@ if MyLevel == 1500 or MyLevel <= 1524 then --Pirate Millionaire [Lv. 1500]
                                             CFrameBring = CFrame.new(-13482.9677734375, 332.72137451171875, -7868.55712890625)
                                             
   elseif MyLevel == 1850 or MyLevel <= 1899 then --Mythological Pirate [Lv. 1850]
-                                            Ms = "Mythological Pirate [Lv. 1850]" --name mob
+                                            NameMob = "Mythological Pirate [Lv. 1850]" --name mob
                                             NameQuest = "DeepForestIsland" --name get quest
                                             LevelQuest = 2        -- lv quest
                                             NameMon = "Deep Forest Quest Giver"    --name npc
@@ -1429,7 +1504,7 @@ if MyLevel == 1500 or MyLevel <= 1524 then --Pirate Millionaire [Lv. 1500]
                                             CFrameBring = CFrame.new(-13658.9287109375, 470.13092041015625, -6991.89794921875)    or CFrame.new(  -13249.5517578125, 520.3683471679688, -6797.69970703125)                                   
 
 elseif MyLevel == 1900 or MyLevel <= 1924 then --Jungle Pirate [Lv. 1900]
-                                            Ms = "Jungle Pirate [Lv. 1900]" --name mob
+                                            NameMob = "Jungle Pirate [Lv. 1900]" --name mob
                                             NameQuest = "DeepForestIsland2" --name get quest
                                             LevelQuest = 1         -- lv quest
                                             NameMon = "Deep Forest Area 2 Quest Giver"    --name npc
@@ -1438,7 +1513,7 @@ elseif MyLevel == 1900 or MyLevel <= 1924 then --Jungle Pirate [Lv. 1900]
                                             CFrameBring = CFrame.new(-11803.9326171875, 332.0815124511719, -10570.623046875) or CFrame.new(-12265.771484375, 332.0815124511719, -10488.734375)
                                             
   elseif MyLevel == 1925 or MyLevel <= 1974 then --Jungle Pirate [Lv. 1900]
-                                            Ms = "Jungle Pirate [Lv. 1900]" --name mob
+                                            NameMob = "Jungle Pirate [Lv. 1900]" --name mob
                                             NameQuest = "DeepForestIsland2" --name get quest
                                             LevelQuest = 2        -- lv quest
                                             NameMon = "Deep Forest Area 2 Quest Giver"    --name npc
@@ -1447,7 +1522,7 @@ elseif MyLevel == 1900 or MyLevel <= 1924 then --Jungle Pirate [Lv. 1900]
                                             CFrameBring = CFrame.new(-13365.779296875, 391.8888854980469, -9815.4404296875)          
 
                                    elseif MyLevel == 1975 or MyLevel <= 1999 then --Reborn Skeleton [Lv. 1975]
-                                            Ms = "Reborn Skeleton [Lv. 1975]" --name mob
+                                            NameMob = "Reborn Skeleton [Lv. 1975]" --name mob
                                             NameQuest = "HauntedQuest1" --name get quest
                                             LevelQuest = 1         -- lv quest
                                             NameMon = "Haunted Castle Quest Giver 1"    --name npc
@@ -1456,7 +1531,7 @@ elseif MyLevel == 1900 or MyLevel <= 1924 then --Jungle Pirate [Lv. 1900]
                                             CFrameBring = CFrame.new(-8753.0634765625, 142.44805908203125, 6054.65185546875)
                                             
   elseif MyLevel == 2000 or MyLevel <= 2024 then --Living Zombie [Lv. 2000]
-                                            Ms = "Living Zombie [Lv. 2000]" --name mob
+                                            NameMob = "Living Zombie [Lv. 2000]" --name mob
                                             NameQuest = "HauntedQuest1" --name get quest
                                             LevelQuest = 2        -- lv quest
                                             NameMon = "Haunted Castle Quest Giver 1"    --name npc
@@ -1465,7 +1540,7 @@ elseif MyLevel == 1900 or MyLevel <= 1924 then --Jungle Pirate [Lv. 1900]
                                             CFrameBring = CFrame.new(-10151.8662109375, 138.96990966796875, 5999.3056640625)                     
 
                         elseif MyLevel == 2025 or MyLevel <= 2049 then --Demonic Soul [Lv. 2025]
-                                            Ms = "Demonic Soul [Lv. 2025]" --name mob
+                                            NameMob = "Demonic Soul [Lv. 2025]" --name mob
                                             NameQuest = "HauntedQuest2" --name get quest
                                             LevelQuest = 1         -- lv quest
                                             NameMon = "Haunted Castle Quest Giver 2"    --name npc
@@ -1474,7 +1549,7 @@ elseif MyLevel == 1900 or MyLevel <= 1924 then --Jungle Pirate [Lv. 1900]
                                             CFrameBring = CFrame.new(-9628.9521484375, 172.44805908203125, 6135.67529296875) or CFrame.new(-9355.6806640625, 172.44805908203125, 6128.958984375)
                                             
   elseif MyLevel == 2050 or MyLevel <= 2074 then --m_b3
-                                            Ms = "Posessed Mummy [Lv. 2050]" --name mob
+                                            NameMob = "Posessed Mummy [Lv. 2050]" --name mob
                                             NameQuest = "HauntedQuest2" --name get quest
                                             LevelQuest = 2        -- lv quest
                                             NameMon = "Haunted Castle Quest Giver 2"    --name npc
@@ -1483,7 +1558,7 @@ elseif MyLevel == 1900 or MyLevel <= 1924 then --Jungle Pirate [Lv. 1900]
                                             CFrameBring = CFrame.new(-9592.609375, 6.502960681915283, 6304.86767578125)          
 
                       elseif MyLevel == 2075 or MyLevel <= 2099 then --m_b3
-                                            Ms = "Peanut Scout [Lv. 2075]" --name mob
+                                            NameMob = "Peanut Scout [Lv. 2075]" --name mob
                                             NameQuest = "NutsIslandQuest" --name get quest
                                             LevelQuest = 1        -- lv quest
                                             NameMon = "Peanut Quest Giver"    --name npc
@@ -1492,7 +1567,7 @@ elseif MyLevel == 1900 or MyLevel <= 1924 then --Jungle Pirate [Lv. 1900]
                                             CFrameBring = CFrame.new(-1981.99462890625, 38.44697189331055, -10212.177734375)          
                                             
      elseif MyLevel == 2100 or MyLevel <= 2124 then --m_b3
-                                            Ms = "Peanut President [Lv. 2100]" --name mob
+                                            NameMob = "Peanut President [Lv. 2100]" --name mob
                                             NameQuest = "NutsIslandQuest" --name get quest
                                             LevelQuest = 2       -- lv quest
                                             NameMon = "Peanut Quest Giver"    --name npc
@@ -1501,7 +1576,7 @@ elseif MyLevel == 1900 or MyLevel <= 1924 then --Jungle Pirate [Lv. 1900]
                                             CFrameBring = CFrame.new(-1981.7294921875, 38.44706344604492, -10583.0283203125)             
 
         elseif MyLevel == 2125 or MyLevel <= 2149 then --m_b3
-                                            Ms = "Ice Cream Chef [Lv. 2125]" --name mob
+                                            NameMob = "Ice Cream Chef [Lv. 2125]" --name mob
                                             NameQuest = "IceCreamIslandQuest" --name get quest
                                             LevelQuest = 1        -- lv quest
                                             NameMon = "Ice Cream Quest Giver"    --name npc
@@ -1510,7 +1585,7 @@ elseif MyLevel == 1900 or MyLevel <= 1924 then --Jungle Pirate [Lv. 1900]
                                             CFrameBring = CFrame.new(-966.68450195312, 66.16276550292969, -11046.341796875)
                                             
      elseif MyLevel == 2150 or MyLevel <= 2199 then --m_b3
-                                            Ms = "Ice Cream Commander [Lv. 2150]" --name mob
+                                            NameMob = "Ice Cream Commander [Lv. 2150]" --name mob
                                             NameQuest = "IceCreamIslandQuest" --name get quest
                                             LevelQuest = 2       -- lv quest
                                             NameMon = "Ice Cream Quest Giver"    --name npc
@@ -1519,7 +1594,7 @@ elseif MyLevel == 1900 or MyLevel <= 1924 then --Jungle Pirate [Lv. 1900]
                                             CFrameBring = CFrame.new(-638.2747192382812, 66.16278076171875, -11293.0546875)       
 
                      elseif MyLevel == 2200 or MyLevel <= 2224 then --m_b3
-                                            Ms = "Cookie Crafter [Lv. 2200]"
+                                            NameMob = "Cookie Crafter [Lv. 2200]"
                                             NameQuest = "CakeQuest1" --name get quest
                                             LevelQuest = 1        -- lv quest
                                             NameMon = "Cake Quest Giver"    --name npc
@@ -1528,7 +1603,7 @@ elseif MyLevel == 1900 or MyLevel <= 1924 then --Jungle Pirate [Lv. 1900]
                                             CFrameBring = CFrame.new(-2367.436279296875, 38.14149856567383, -12120.3876953125)
                                             
      elseif MyLevel == 2225 or MyLevel <= 2249  then --m_b3
-                                            Ms = "Cake Guard [Lv. 2225]"
+                                            NameMob = "Cake Guard [Lv. 2225]"
                                             NameQuest = "CakeQuest2" --name get quest
                                             LevelQuest = 1      -- lv quest
                                             NameMon = "Cake Quest Giver 2"    --name npc
@@ -1537,7 +1612,7 @@ elseif MyLevel == 1900 or MyLevel <= 1924 then --Jungle Pirate [Lv. 1900]
                                             CFrameBring = CFrame.new(-1550.4625244140625, 38.14139175415039, -12253.3388671875)     
 
         elseif MyLevel == 2250 or MyLevel <= 2299  then --m_b3
-                                            Ms = "Cake Guard [Lv. 2250]"
+                                            NameMob = "Cake Guard [Lv. 2250]"
                                             NameQuest = "CakeQuest2" --name get quest
                                             LevelQuest = 2       -- lv quest
                                             NameMon = "Cake Quest Giver 2"    --name npc
@@ -1546,7 +1621,7 @@ elseif MyLevel == 1900 or MyLevel <= 1924 then --Jungle Pirate [Lv. 1900]
                                             CFrameBring = CFrame.new(-2277.978271484375, 53.741302490234375, -12882.1669921875)
                                             
      elseif MyLevel == 2300 or MyLevel <= 2324 then --m_b3
-                                            Ms = "Cocoa Warrior [Lv. 2300]"
+                                            NameMob = "Cocoa Warrior [Lv. 2300]"
                                             NameQuest = "ChocQuest1" --name get quest
                                             LevelQuest = 1        -- lv quest
                                             NameMon = "Chocolate Quest Giver 1"    --name npc
@@ -1555,7 +1630,7 @@ elseif MyLevel == 1900 or MyLevel <= 1924 then --Jungle Pirate [Lv. 1900]
                                             CFrameBring = CFrame.new(-59.606964328125, 25.077518463134766, -12293.5009765625)
                                             
      elseif MyLevel == 2325 or MyLevel <= 2349 then --m_b3
-                                            Ms = "Chocolate Bar Battler [Lv. 2325]"
+                                            NameMob = "Chocolate Bar Battler [Lv. 2325]"
                                             NameQuest = "ChocQuest1" --name get quest
                                             LevelQuest = 2       -- lv quest
                                             NameMon = "Chocolate Quest Giver 1"    --name npc
@@ -1564,7 +1639,7 @@ elseif MyLevel == 1900 or MyLevel <= 1924 then --Jungle Pirate [Lv. 1900]
                                             CFrameBring = CFrame.new(645.4754638671875, 25.077503204345703, -12556.8251953125)
                                             
          elseif MyLevel == 2350 or MyLevel <= 2374 then --m_b3
-                                            Ms = "Sweet Thief [Lv. 2350]"
+                                            NameMob = "Sweet Thief [Lv. 2350]"
                                             NameQuest = "ChocQuest2" --name get quest
                                             LevelQuest = 1        -- lv quest
                                             NameMon = "Chocolate Quest Giver 2"  --name npc
@@ -1573,7 +1648,7 @@ elseif MyLevel == 1900 or MyLevel <= 1924 then --Jungle Pirate [Lv. 1900]
                                             CFrameBring = CFrame.new(-62.194541931152344, 25.07767105102539, -12263.3408203125)
                                             
      elseif MyLevel == 2375 or MyLevel <= 2399  then --m_b3
-                                            Ms = "Candy Rebel [Lv. 2375]"
+                                            NameMob = "Candy Rebel [Lv. 2375]"
                                             NameQuest = "ChocQuest2" --name get quest
                                             LevelQuest = 2       -- lv quest
                                             NameMon = "Chocolate Quest Giver 2"   --name npc
@@ -1582,7 +1657,7 @@ elseif MyLevel == 1900 or MyLevel <= 1924 then --Jungle Pirate [Lv. 1900]
                                             CFrameBring = CFrame.new(758.705865625, 25.077476501464844, -12648.5390625)               
 
             elseif MyLevel == 2400 or MyLevel <= 2424 then --m_b3
-                                            Ms = "Candy Pirate [Lv. 2400]"
+                                            NameMob = "Candy Pirate [Lv. 2400]"
                                             NameQuest = "CandyQuest1" --name get quest
                                             LevelQuest = 1        -- lv quest
                                             NameMon = "Candy Cane Quest Giver"  --name npc
@@ -1591,7 +1666,7 @@ elseif MyLevel == 1900 or MyLevel <= 1924 then --Jungle Pirate [Lv. 1900]
                                             CFrameBring = CFrame.new(-1331.5687255859375, 15.250885009765625, -14735.1865234375)
                                             
      elseif MyLevel == 2425 or MyLevel >= 2000  then --m_b3
-                                            Ms = "Snow Demon [Lv. 2425]"
+                                            NameMob = "Snow Demon [Lv. 2425]"
                                             NameQuest = "CandyQuest1" --name get quest
                                             LevelQuest = 2       -- lv quest
                                             NameMon = "Candy Cane Quest Giver"   --name npc
@@ -1745,15 +1820,16 @@ end)
 
 
 -- // auto farm lv
-_G.q1 = true
-game:GetService('RunService').RenderStepped:connect(function() --fix quest
+
+spawn(function() -- fix erol quest
+    while task.wait() do       
+            pcall(function()
       if _G.m_b2 then
-if _G.q1 then
-_G.q1 = false
+   if   game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible == true then
 wait(140)
+if _G.m_b2 then
 game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible = false
-_G.q1 = true
-end end end)
+ end end end end) end end)
           
                 _G.bring2 = true
    game:GetService('RunService').RenderStepped:connect(function()
@@ -1768,7 +1844,7 @@ if game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible == true then
 TP1(CFrameMob)
       
 for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
-      if v.Name == Ms then --name mob
+      if v.Name == NameMob then --name mob
       local pos = v.HumanoidRootPart --check pos
                     local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
                   if Distance < 500 then
@@ -1808,7 +1884,7 @@ if  _G.m_b2 then
 CheckQuest()
 if game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible == true then
 for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
-      if v.Name == Ms then --name mob
+      if v.Name == NameMob then --name mob
       local pos = v.HumanoidRootPart --check pos
       if (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 65 then
   click() -- click        
@@ -1841,130 +1917,13 @@ game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
 end
            end  end end end end end wait(5.5) _G.getquest = true end)       
            
- m_f10.Parent = b_page1
-m_f10.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-m_f10.Position = UDim2.new(0, 0, 0.1700000000, 0)
-m_f10.Size = UDim2.new(0, 498, 0, 30)
-m_f10.BorderColor3 = Color3.fromRGB(250, 250, 250)
-m_f10.Font = Enum.Font.Ubuntu
-m_f10.Text = "   Auto Farm Level Fast 1 - 275"
-m_f10.TextColor3 = Color3.fromRGB(255, 255, 255)
-m_f10.TextSize = 14.000
-m_f10.TextWrapped = true
-m_f10.TextXAlignment = Enum.TextXAlignment.Left
-
-m_b10.Name = "m_b10"
-m_b10.Parent = m_f10
-m_b10.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-m_b10.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-m_b10.Size = UDim2.new(0, 20, 0, 20)
-m_b10.BorderColor3 = Color3.fromRGB(250, 250, 250)
-m_b10.Font = Enum.Font.SourceSans
-m_b10.Text = ""
-m_b10.TextColor3 = Color3.fromRGB(250, 250, 250)
-m_b10.TextSize = 30.000
-m_b10.MouseButton1Down:connect(function()
---on off 
-if m_b10.Text == "" then --on
-m_b10.Text = "X"
-_G.m_b10 = true
-elseif m_b10.Text == "X" then --off
-m_b10.Text = ""
-_G.m_b10 = false
-end
-end)
-    
-    game:GetService('RunService').RenderStepped:connect(function()
-if _G.m_b10 then --script
-
-local pos = CFrame.new(-7686.40673828125, 5600.93701171875, -441.3550109863281) --check pos
-                    local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
-                  if Distance >= 3000 then                
-if game.Players.LocalPlayer.Character.Humanoid.Health > 0 then
-game.Players.LocalPlayer.Character.Humanoid.Health = 0
-elseif game.Players.LocalPlayer.Character.Humanoid.Health == 0 then
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-7686.40673828125, 5600.93701171875, -441.3550109863281)
-end end
-
-
-TP1(CFrame.new(-7686.40673828125, 5600.93701171875, -441.3550109863281))
-local humanoid = game.Players.LocalPlayer.Character.Humanoid 
-humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
-for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
-      if v.Name == "Shanda [Lv. 475]" then --name mob
-      local pos = v.HumanoidRootPart --check pos
-                    local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
-                  if Distance < 500 then
-                  Speed = 725
-                  elseif Distance < 200 then
-                  Speed = 7000
-                  elseif Distance < 150 then
-                  Speed = 200000
-                  elseif Distance < 1000 then
-                        Speed = 400        
-    elseif Distance >= 1500 then
-                  Speed = 100
-           end
-            
-       if v.Humanoid.Health > 0 then -- check health
-     usetool()
-     click() -- click          
-       v.Humanoid:ChangeState(14)
-      v.HumanoidRootPart.Size = Vector3.new(50, 50, 10)     --size hix box  
-      v.HumanoidRootPart.CanCollide = false                                                
-v.Head.CanCollide = false                                 
-if v.Humanoid:FindFirstChild("Animator") then
-                            v.Humanoid.Animator:Destroy()
-                        end
-                        
-game:GetService("TweenService"):Create(
-                        game.Players.LocalPlayer.Character.HumanoidRootPart,
-                        TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
-                        {CFrame = v.HumanoidRootPart.CFrame* CFrame.new(0, st_b5.Text, 0) }
-                    ):Play()       
-                    
-                    end end end end end)                
- 
-spawn(function()
-    while task.wait(_G.time) do       
-            pcall(function()          
-            if _G.m_b10 then
-            if _G.bringmob then       
-                for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
-                    if v.Name == "Shanda [Lv. 475]" and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= _G.distance then        
-if   st_b5.Text == "0" then                        
- v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
- elseif st_b5.Text == "10" then
- v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-9.5,0)
- elseif st_b5.Text == "20" then
- v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-19.5,0)
- elseif st_b5.Text == "30" then
- v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-29.5,0)
- elseif st_b5.Text == "40" then
- v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-39.5,0)
- elseif st_b5.Text == "50" then
- v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-49.5,0)
- end                       
-  v.Humanoid.JumpPower = 0                          
-  v.Humanoid.WalkSpeed = 0                           
-v.HumanoidRootPart.Size = Vector3.new(60,60,10)                  
- v.HumanoidRootPart.Transparency = 1                        
- v.HumanoidRootPart.CanCollide = false                           
- v.Head.CanCollide = false                           
- v.Humanoid:ChangeState(11)                           
- v.Humanoid:ChangeState(14)                       
-  setscriptable(game.Players.LocalPlayer,"SimulationRadius",true)                          
-  sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius",math.huge)                    
-    end end end end end) end end)           
-
-
 m_f3.Parent = b_page1
 m_f3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-m_f3.Position = UDim2.new(0, 0, 0.2400000000, 0)
+m_f3.Position = UDim2.new(0, 0, 0.1700000000, 0)
 m_f3.Size = UDim2.new(0, 498, 0, 30)
 m_f3.BorderColor3 = Color3.fromRGB(250, 250, 250)
 m_f3.Font = Enum.Font.Ubuntu
-m_f3.Text = "   Auto Farm Mob"
+m_f3.Text = "   Auto Fartory"
 m_f3.TextColor3 = Color3.fromRGB(255, 255, 255)
 m_f3.TextSize = 14.000
 m_f3.TextWrapped = true
@@ -1992,91 +1951,9 @@ stoptp()
 end
 end)
 
-game:GetService('RunService').RenderStepped:connect(function()
-if _G.m_b3 then --script
-for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
-      if v.ClassName == "Model" then --name mob
-      local pos = v.HumanoidRootPart --check pos
-                    local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
-                  if Distance < 500 then
-                  Speed = 725
-                  elseif Distance < 200 then
-                  Speed = 7000
-                  elseif Distance < 150 then
-                  Speed = 200000
-                  elseif Distance < 1000 then
-                        Speed = 400        
-    elseif Distance >= 1500 then
-                  Speed = 100
-           end
-            
-  
-     usetool()
-       if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 500 then
-       if v.Humanoid.Health > 0 then 
-       jump()
-       click() -- click          
-       v.Humanoid:ChangeState(14)
-      v.HumanoidRootPart.Size = Vector3.new(50, 50, 10)     --size hix box  
-      v.HumanoidRootPart.CanCollide = false                                                
-v.Head.CanCollide = false                                 
-if v.Humanoid:FindFirstChild("Animator") then
-                            v.Humanoid.Animator:Destroy()
-                        end
-                        
-game:GetService("TweenService"):Create(
-                        game.Players.LocalPlayer.Character.HumanoidRootPart,
-                        TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
-                        {CFrame = v.HumanoidRootPart.CFrame* CFrame.new(0, st_b5.Text, 0) }
-                    ):Play()       
-                                      
-                 end end end end 
-             
-end
-end)
-
-game:GetService('RunService').RenderStepped:connect(function()
-if  _G.m_b3 then
-  click() -- click        
-end end)
-
-m_f6.Parent = b_page1
-m_f6.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-m_f6.Position = UDim2.new(0, 0, 0.3100000000, 0)
-m_f6.Size = UDim2.new(0, 498, 0, 30)
-m_f6.BorderColor3 = Color3.fromRGB(250, 250, 250)
-m_f6.Font = Enum.Font.Ubuntu
-m_f6.Text = "   Auto Fartory"
-m_f6.TextColor3 = Color3.fromRGB(255, 255, 255)
-m_f6.TextSize = 14.000
-m_f6.TextWrapped = true
-m_f6.TextXAlignment = Enum.TextXAlignment.Left
-
-m_b6.Name = "m_b6"
-m_b6.Parent = m_f6
-m_b6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-m_b6.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-m_b6.Size = UDim2.new(0, 20, 0, 20)
-m_b6.BorderColor3 = Color3.fromRGB(250, 250, 250)
-m_b6.Font = Enum.Font.SourceSans
-m_b6.Text = ""
-m_b6.TextColor3 = Color3.fromRGB(250, 250, 250)
-m_b6.TextSize = 30.000
-m_b6.MouseButton1Down:connect(function()
---on off 
-if m_b6.Text == "" then --on
-m_b6.Text = "X"
-_G.m_b6 = true
-elseif m_b6.Text == "X" then --off
-m_b6.Text = ""
-_G.m_b6 = false
-stoptp()
-end
-end)
-
 -- // fartory
 game:GetService('RunService').RenderStepped:connect(function()
-if _G.m_b6 then --script
+if _G.m_b3 then --script
    for i,v in pairs(game:GetService("Workspace").Map.Dressrosa.SmileFactory:GetChildren()) do
             if v.Name == "Core" then
  if v.Humanoid.Health > 0  then
@@ -2093,7 +1970,7 @@ mele()
 
 m_f4.Parent = b_page1
 m_f4.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-m_f4.Position = UDim2.new(0, 0, 0.3800000000, 0)
+m_f4.Position = UDim2.new(0, 0, 0.2400000000, 0)
 m_f4.Size = UDim2.new(0, 498, 0, 30)
 m_f4.BorderColor3 = Color3.fromRGB(250, 250, 250)
 m_f4.Font = Enum.Font.Ubuntu
@@ -2140,7 +2017,7 @@ game.Players.LocalPlayer.Character.Humanoid.Sit = false
 TP1(CFrameMob)
       
 for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
-      if v.Name == Ms then --name mob
+      if v.Name == NameMob then --name mob
       local pos = v.HumanoidRootPart --check pos
                     local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
                   if Distance < 500 then
@@ -2180,9 +2057,9 @@ game:GetService("TweenService"):Create(
         if _G.m_b4 then     
         CheckQuest()
         for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
-      if v.Name == Ms then --name mob
+      if v.Name == NameMob then --name mob
       
-        if m_b7.Text == "1000" then
+        if m_b6.Text == "1000" then
         if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 60 then
                     if v.Humanoid.Health >= 1000 then -- check health                  
                     mele()  click()
@@ -2194,7 +2071,7 @@ game:GetService("TweenService"):Create(
                     Skill()
       end   end
 end           
-      if m_b7.Text == "2000" then
+      if m_b6.Text == "2000" then
       if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 60 then
                     if v.Humanoid.Health >= 2000 then -- check health                  
                     mele()  click()
@@ -2207,7 +2084,7 @@ end
                     Skill()
       end     end      
 end   
-      if m_b7.Text == "3000" then
+      if m_b6.Text == "3000" then
       if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 60 then
                     if v.Humanoid.Health >= 3000 then -- check health                  
                     mele()  click()
@@ -2220,7 +2097,7 @@ end
                     Skill()
       end     end   
 end      
-      if m_b7.Text == "4000" then
+      if m_b6.Text == "4000" then
       if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 60 then
                     if v.Humanoid.Health >= 4000 then -- check health                  
                     mele()  click()
@@ -2232,7 +2109,7 @@ end
                     Skill()
       end     end         
       end
-      if m_b7.Text == "5000" then
+      if m_b6.Text == "5000" then
       if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 60 then
                     if v.Humanoid.Health >= 5000 then -- check health                  
                     mele()  click()
@@ -2251,7 +2128,7 @@ end
 
 m_f5.Parent = b_page1
 m_f5.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-m_f5.Position = UDim2.new(0, 0, 0.4500000000, 0)
+m_f5.Position = UDim2.new(0, 0, 0.3100000000, 0)
 m_f5.Size = UDim2.new(0, 498, 0, 30)
 m_f5.BorderColor3 = Color3.fromRGB(250, 250, 250)
 m_f5.Font = Enum.Font.Ubuntu
@@ -2284,13 +2161,43 @@ end
 end)
 
 
+m_f6.Parent = b_page1
+m_f6.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+m_f6.Position = UDim2.new(0, 0, 0.3800000000, 0)
+m_f6.Size = UDim2.new(0, 498, 0, 30)
+m_f6.BorderColor3 = Color3.fromRGB(250, 250, 250)
+m_f6.Font = Enum.Font.Ubuntu
+m_f6.Text = "   Health Mob : "
+m_f6.TextColor3 = Color3.fromRGB(255, 255, 255)
+m_f6.TextSize = 14.000
+m_f6.TextWrapped = true
+m_f6.TextXAlignment = Enum.TextXAlignment.Left
+
+m_b6.Name = "m_b6"
+m_b6.Parent = m_f6
+m_b6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+m_b6.Position = UDim2.new(0.16000000, 0, 0, 0)
+m_b6.Size = UDim2.new(0, 30, 0, 30)
+m_b6.Font = Enum.Font.Ubuntu
+m_b6.BackgroundTransparency = 1.000
+m_b6.Text = "5000"
+m_b6.TextColor3 = Color3.fromRGB(250, 250, 250)
+m_b6.TextSize = 14.000
+m_b6.MouseButton1Down:connect(function()
+if m_b6.Text == "5000" then
+m_b6.Text = "1000"
+else 
+m_b6.Text = m_b6.Text + 1000
+end
+end)
+
 m_f7.Parent = b_page1
 m_f7.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-m_f7.Position = UDim2.new(0, 0, 0.5200000000, 0)
+m_f7.Position = UDim2.new(0, 0, 0.4500000000, 0)
 m_f7.Size = UDim2.new(0, 498, 0, 30)
 m_f7.BorderColor3 = Color3.fromRGB(250, 250, 250)
 m_f7.Font = Enum.Font.Ubuntu
-m_f7.Text = "   Health Mob : "
+m_f7.Text = "   Auto Farm Chest"
 m_f7.TextColor3 = Color3.fromRGB(255, 255, 255)
 m_f7.TextSize = 14.000
 m_f7.TextWrapped = true
@@ -2299,51 +2206,21 @@ m_f7.TextXAlignment = Enum.TextXAlignment.Left
 m_b7.Name = "m_b7"
 m_b7.Parent = m_f7
 m_b7.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-m_b7.Position = UDim2.new(0.16000000, 0, 0, 0)
-m_b7.Size = UDim2.new(0, 30, 0, 30)
-m_b7.Font = Enum.Font.Ubuntu
-m_b7.BackgroundTransparency = 1.000
-m_b7.Text = "5000"
+m_b7.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+m_b7.Size = UDim2.new(0, 20, 0, 20)
+m_b7.BorderColor3 = Color3.fromRGB(250, 250, 250)
+m_b7.Font = Enum.Font.SourceSans
+m_b7.Text = ""
 m_b7.TextColor3 = Color3.fromRGB(250, 250, 250)
-m_b7.TextSize = 14.000
+m_b7.TextSize = 30.000
 m_b7.MouseButton1Down:connect(function()
-if m_b7.Text == "5000" then
-m_b7.Text = "1000"
-else 
-m_b7.Text = m_b7.Text + 1000
-end
-end)
-
-m_f8.Parent = b_page1
-m_f8.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-m_f8.Position = UDim2.new(0, 0, 0.5900000000, 0)
-m_f8.Size = UDim2.new(0, 498, 0, 30)
-m_f8.BorderColor3 = Color3.fromRGB(250, 250, 250)
-m_f8.Font = Enum.Font.Ubuntu
-m_f8.Text = "   Auto Farm Chest"
-m_f8.TextColor3 = Color3.fromRGB(255, 255, 255)
-m_f8.TextSize = 14.000
-m_f8.TextWrapped = true
-m_f8.TextXAlignment = Enum.TextXAlignment.Left
-
-m_b8.Name = "m_b8"
-m_b8.Parent = m_f8
-m_b8.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-m_b8.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-m_b8.Size = UDim2.new(0, 20, 0, 20)
-m_b8.BorderColor3 = Color3.fromRGB(250, 250, 250)
-m_b8.Font = Enum.Font.SourceSans
-m_b8.Text = ""
-m_b8.TextColor3 = Color3.fromRGB(250, 250, 250)
-m_b8.TextSize = 30.000
-m_b8.MouseButton1Down:connect(function()
 --on off 
-if m_b8.Text == "" then --on
-m_b8.Text = "X"
-_G.m_b8 = true
-elseif m_b8.Text == "X" then --off
-m_b8.Text = ""
-_G.m_b8 = false
+if m_b7.Text == "" then --on
+m_b7.Text = "X"
+_G.m_b7 = true
+elseif m_b7.Text == "X" then --off
+m_b7.Text = ""
+_G.m_b7 = false
 end
 end)
 
@@ -2358,7 +2235,7 @@ function TPchest(P1)
               end
               
        game:GetService('RunService').RenderStepped:connect(function()       
-    if   _G.m_b8 then
+    if   _G.m_b7 then
     
       if game:GetService("Workspace"):FindFirstChild("Chest2") then
      TPchest( game:GetService("Workspace"):FindFirstChild("Chest2").CFrame)
@@ -2374,80 +2251,14 @@ end end)
 spawn(function()
     while task.wait(3.5) do
         pcall(function()
-            if _G.m_b8 then
+            if _G.m_b7 then
             game.Players.LocalPlayer.Character.Humanoid.Health = 0
             wait(5)
             
             end end) end end)
             
             
-m_f9.Parent = b_page1
-m_f9.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-m_f9.Position = UDim2.new(0, 0, 0.6600000000, 0)
-m_f9.Size = UDim2.new(0, 498, 0, 30)
-m_f9.BorderColor3 = Color3.fromRGB(250, 250, 250)
-m_f9.Font = Enum.Font.Ubuntu
-m_f9.Text = "   Auto Kill Sea Beast | Beta"
-m_f9.TextColor3 = Color3.fromRGB(255, 255, 255)
-m_f9.TextSize = 14.000
-m_f9.TextWrapped = true
-m_f9.TextXAlignment = Enum.TextXAlignment.Left
 
-m_b9.Name = "m_b9"
-m_b9.Parent = m_f9
-m_b9.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-m_b9.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-m_b9.Size = UDim2.new(0, 20, 0, 20)
-m_b9.BorderColor3 = Color3.fromRGB(250, 250, 250)
-m_b9.Font = Enum.Font.SourceSans
-m_b9.Text = ""
-m_b9.TextColor3 = Color3.fromRGB(250, 250, 250)
-m_b9.TextSize = 30.000
-m_b9.MouseButton1Down:connect(function()
---on off 
-if m_b9.Text == "" then --on
-m_b9.Text = "X"
-_G.m_b9 = true
-elseif m_b9.Text == "X" then --off
-m_b9.Text = ""
-_G.m_b9 = false
-end
-end)
-
--- // auto kill sea beat
-game:GetService('RunService').RenderStepped:connect(function()
-if _G.m_b9 then --script
-for i,v in pairs(game.Workspace.SeaBeasts:GetChildren()) do
-  if v:FindFirstChild("HumanoidRootPart") then
-  jump()
-  game.Players.LocalPlayer.Character.Animate.Disabled = false
-game.Players.LocalPlayer.Character.Humanoid.Sit = false
-     local Distance = (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
-               if Distance <200 then
-                        Speed = 120000
-                  elseif Distance > 1500 then
-                        Speed = 100
-                    end                    
-                   local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Distance/Speed), {CFrame = v.HumanoidRootPart.CFrame  }) tween:Play()                                                           
-end end end end)
-
-
-spawn(function() -- skill auto
-    while task.wait() do       
-            pcall(function()
-            if _G.m_b9 then
-            for i,v in pairs(game.Workspace.SeaBeasts:GetChildren()) do
-  if v:FindFirstChild("HumanoidRootPart") then
-if  (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 200 then
- mele()
-   Skill()
-   wait(1)
-   fruit()
-   Skill()
-   wait(1)
-   sword()
-   Skill()
-end end end end end) end end)         
 
 bartool()
 
@@ -4453,298 +4264,298 @@ function code(x)
 game:GetService("ReplicatedStorage").Remotes.Redeem:InvokeServer(x)
 end
 
-ms_t1.Parent = b_page4
-ms_t1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-ms_t1.Position = UDim2.new(0, 0, 0.0300000000, 0)
-ms_t1.Size = UDim2.new(0, 498, 0, 30)
-ms_t1.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ms_t1.Font = Enum.Font.Ubuntu
-ms_t1.Text = "Shop"
-ms_t1.TextColor3 = Color3.fromRGB(255, 255, 255)
-ms_t1.TextSize = 14.000
-ms_t1.TextWrapped = true
+shop_t1.Parent = b_page4
+shop_t1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+shop_t1.Position = UDim2.new(0, 0, 0.0300000000, 0)
+shop_t1.Size = UDim2.new(0, 498, 0, 30)
+shop_t1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+shop_t1.Font = Enum.Font.Ubuntu
+shop_t1.Text = "Shop"
+shop_t1.TextColor3 = Color3.fromRGB(255, 255, 255)
+shop_t1.TextSize = 14.000
+shop_t1.TextWrapped = true
 
-ms_f1.Parent = b_page4
-ms_f1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-ms_f1.Position = UDim2.new(0, 0, 0.1000000000, 0)
-ms_f1.Size = UDim2.new(0, 498, 0, 30)
-ms_f1.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ms_f1.Font = Enum.Font.Ubuntu
-ms_f1.Text = "   "
-ms_f1.TextColor3 = Color3.fromRGB(255, 255, 255)
-ms_f1.TextSize = 14.000
-ms_f1.TextWrapped = true
-ms_f1.TextXAlignment = Enum.TextXAlignment.Left
+shop_f1.Parent = b_page4
+shop_f1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+shop_f1.Position = UDim2.new(0, 0, 0.1000000000, 0)
+shop_f1.Size = UDim2.new(0, 498, 0, 30)
+shop_f1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+shop_f1.Font = Enum.Font.Ubuntu
+shop_f1.Text = "   "
+shop_f1.TextColor3 = Color3.fromRGB(255, 255, 255)
+shop_f1.TextSize = 14.000
+shop_f1.TextWrapped = true
+shop_f1.TextXAlignment = Enum.TextXAlignment.Left
 
-ms_slec.Name = "ms_slec"
-ms_slec.Parent = ms_f1
-ms_slec.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-ms_slec.Size = UDim2.new(0, 120, 0, 30)
-ms_slec.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ms_slec.Font = Enum.Font.SourceSans
-ms_slec.Text = "Mele : Select Buy"
-ms_slec.TextColor3 = Color3.fromRGB(250, 250, 250)
-ms_slec.TextSize = 18.000
-ms_slec.MouseButton1Down:connect(function()
-ms_melebar.Visible = true
+shop_slec.Name = "shop_slec"
+shop_slec.Parent = shop_f1
+shop_slec.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+shop_slec.Size = UDim2.new(0, 120, 0, 30)
+shop_slec.BorderColor3 = Color3.fromRGB(250, 250, 250)
+shop_slec.Font = Enum.Font.SourceSans
+shop_slec.Text = "Mele : Select Buy"
+shop_slec.TextColor3 = Color3.fromRGB(250, 250, 250)
+shop_slec.TextSize = 18.000
+shop_slec.MouseButton1Down:connect(function()
+shop_melebar.Visible = true
 end)
 
-ms_b1.Name = "ms_b1"
-ms_b1.Parent = ms_f1
-ms_b1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-ms_b1.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-ms_b1.Size = UDim2.new(0, 20, 0, 20)
-ms_b1.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ms_b1.Font = Enum.Font.SourceSans
-ms_b1.Text = ""
-ms_b1.TextColor3 = Color3.fromRGB(250, 250, 250)
-ms_b1.TextSize = 30.000
-ms_b1.MouseButton1Down:connect(function()
+shop_b1.Name = "shop_b1"
+shop_b1.Parent = shop_f1
+shop_b1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+shop_b1.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+shop_b1.Size = UDim2.new(0, 20, 0, 20)
+shop_b1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+shop_b1.Font = Enum.Font.SourceSans
+shop_b1.Text = ""
+shop_b1.TextColor3 = Color3.fromRGB(250, 250, 250)
+shop_b1.TextSize = 30.000
+shop_b1.MouseButton1Down:connect(function()
 --on off 
-if ms_b1.Text == "" then --on
-ms_b1.Text = "X"
-_G.ms_b1 = true
+if shop_b1.Text == "" then --on
+shop_b1.Text = "X"
+_G.shop_b1 = true
 
 game:GetService('RunService').RenderStepped:connect(function()
-if _G.ms_b1 then --script
-if ms_slec.Text == "Black Leg" then
+if _G.shop_b1 then --script
+if shop_slec.Text == "Black Leg" then
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyBlackLeg")
 end
 
-if ms_slec.Text == "Electro" then
+if shop_slec.Text == "Electro" then
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyElectro")
 end
 
-if ms_slec.Text == "Fishman Karate" then
+if shop_slec.Text == "Fishman Karate" then
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyFishmanKarate")
 end
 
-if ms_slec.Text == "Dragon Claw" then
+if shop_slec.Text == "Dragon Claw" then
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","DragonClaw","1")
                             game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","DragonClaw","2")
 end
 
-if ms_slec.Text == "Death Step" then
+if shop_slec.Text == "Death Step" then
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDeathStep")
 end
 
-if ms_slec.Text == "Electric Claw" then
+if shop_slec.Text == "Electric Claw" then
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyElectricClaw")
 end
 
-if ms_slec.Text == "Sharkman Karate" then
+if shop_slec.Text == "Sharkman Karate" then
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySharkmanKarate")
 end
 
-if ms_slec.Text == "Dragon Talon" then
+if shop_slec.Text == "Dragon Talon" then
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDragonTalon")
 end
 
-if ms_slec.Text == "Super Human" then
+if shop_slec.Text == "Super Human" then
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySuperhuman")
 end
 
-if ms_slec.Text == "God Human" then
+if shop_slec.Text == "God Human" then
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyGodhuman")
 end
 
 end
 end)
-elseif ms_b1.Text == "X" then --off
-ms_b1.Text = ""
-_G.ms_b1 = false
+elseif shop_b1.Text == "X" then --off
+shop_b1.Text = ""
+_G.shop_b1 = false
 end
 end)
 
 function melebar()
-ms_melebar.Name = "ms_melebar"
-ms_melebar.Parent = b_page4
-ms_melebar.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-ms_melebar.Position = UDim2.new(0, 0, 0.0850000000, 0)
-ms_melebar.Size = UDim2.new(0, 120, 0, 140)
-ms_melebar.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ms_melebar.Visible = false
+shop_melebar.Name = "shop_melebar"
+shop_melebar.Parent = b_page4
+shop_melebar.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+shop_melebar.Position = UDim2.new(0, 0, 0.0850000000, 0)
+shop_melebar.Size = UDim2.new(0, 120, 0, 140)
+shop_melebar.BorderColor3 = Color3.fromRGB(250, 250, 250)
+shop_melebar.Visible = false
 
-ms_mele1.Name = "ms_mele1"
-ms_mele1.Parent = ms_melebar
-ms_mele1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-ms_mele1.Size = UDim2.new(0, 120, 0, 20)
-ms_mele1.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ms_mele1.Font = Enum.Font.SourceSans
-ms_mele1.Text = "Black Leg"
-ms_mele1.TextColor3 = Color3.fromRGB(250, 250, 250)
-ms_mele1.TextSize = 15.000
-ms_mele1.MouseButton1Down:connect(function()
-ms_slec.Text = "Black Leg"
-ms_melebar.Visible = false
+shop_mele1.Name = "shop_mele1"
+shop_mele1.Parent = shop_melebar
+shop_mele1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+shop_mele1.Size = UDim2.new(0, 120, 0, 20)
+shop_mele1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+shop_mele1.Font = Enum.Font.SourceSans
+shop_mele1.Text = "Black Leg"
+shop_mele1.TextColor3 = Color3.fromRGB(250, 250, 250)
+shop_mele1.TextSize = 15.000
+shop_mele1.MouseButton1Down:connect(function()
+shop_slec.Text = "Black Leg"
+shop_melebar.Visible = false
 end)
 
-ms_mele2.Name = "ms_mele2"
-ms_mele2.Parent = ms_melebar
-ms_mele2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-ms_mele2.Size = UDim2.new(0, 120, 0, 20)
-ms_mele2.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ms_mele2.Font = Enum.Font.SourceSans
-ms_mele2.Position = UDim2.new(0, 0, 0.0500000000, 0)
-ms_mele2.Text = "Electro"
-ms_mele2.TextColor3 = Color3.fromRGB(250, 250, 250)
-ms_mele2.TextSize = 15.000
-ms_mele2.MouseButton1Down:connect(function()
-ms_slec.Text = "Electro"
-ms_melebar.Visible = false
+shop_mele2.Name = "shop_mele2"
+shop_mele2.Parent = shop_melebar
+shop_mele2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+shop_mele2.Size = UDim2.new(0, 120, 0, 20)
+shop_mele2.BorderColor3 = Color3.fromRGB(250, 250, 250)
+shop_mele2.Font = Enum.Font.SourceSans
+shop_mele2.Position = UDim2.new(0, 0, 0.0500000000, 0)
+shop_mele2.Text = "Electro"
+shop_mele2.TextColor3 = Color3.fromRGB(250, 250, 250)
+shop_mele2.TextSize = 15.000
+shop_mele2.MouseButton1Down:connect(function()
+shop_slec.Text = "Electro"
+shop_melebar.Visible = false
 end)
 
-ms_mele3.Name = "ms_mele3"
-ms_mele3.Parent = ms_melebar
-ms_mele3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-ms_mele3.Size = UDim2.new(0, 120, 0, 20)
-ms_mele3.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ms_mele3.Font = Enum.Font.SourceSans
-ms_mele3.Position = UDim2.new(0, 0, 0.1000000000, 0)
-ms_mele3.Text = "Fishman Karate"
-ms_mele3.TextColor3 = Color3.fromRGB(250, 250, 250)
-ms_mele3.TextSize = 15.000
-ms_mele3.MouseButton1Down:connect(function()
-ms_slec.Text = "Fishman Karate"
-ms_melebar.Visible = false
+shop_mele3.Name = "shop_mele3"
+shop_mele3.Parent = shop_melebar
+shop_mele3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+shop_mele3.Size = UDim2.new(0, 120, 0, 20)
+shop_mele3.BorderColor3 = Color3.fromRGB(250, 250, 250)
+shop_mele3.Font = Enum.Font.SourceSans
+shop_mele3.Position = UDim2.new(0, 0, 0.1000000000, 0)
+shop_mele3.Text = "Fishman Karate"
+shop_mele3.TextColor3 = Color3.fromRGB(250, 250, 250)
+shop_mele3.TextSize = 15.000
+shop_mele3.MouseButton1Down:connect(function()
+shop_slec.Text = "Fishman Karate"
+shop_melebar.Visible = false
 end)
 
-ms_mele4.Name = "ms_mele4"
-ms_mele4.Parent = ms_melebar
-ms_mele4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-ms_mele4.Size = UDim2.new(0, 120, 0, 20)
-ms_mele4.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ms_mele4.Font = Enum.Font.SourceSans
-ms_mele4.Position = UDim2.new(0, 0, 0.1500000000, 0)
-ms_mele4.Text = "Dragon Claw"
-ms_mele4.TextColor3 = Color3.fromRGB(250, 250, 250)
-ms_mele4.TextSize = 15.000
-ms_mele4.MouseButton1Down:connect(function()
-ms_slec.Text = "Dragon Claw"
-ms_melebar.Visible = false
+shop_mele4.Name = "shop_mele4"
+shop_mele4.Parent = shop_melebar
+shop_mele4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+shop_mele4.Size = UDim2.new(0, 120, 0, 20)
+shop_mele4.BorderColor3 = Color3.fromRGB(250, 250, 250)
+shop_mele4.Font = Enum.Font.SourceSans
+shop_mele4.Position = UDim2.new(0, 0, 0.1500000000, 0)
+shop_mele4.Text = "Dragon Claw"
+shop_mele4.TextColor3 = Color3.fromRGB(250, 250, 250)
+shop_mele4.TextSize = 15.000
+shop_mele4.MouseButton1Down:connect(function()
+shop_slec.Text = "Dragon Claw"
+shop_melebar.Visible = false
 end)
 
-ms_mele5.Name = "ms_mele5"
-ms_mele5.Parent = ms_melebar
-ms_mele5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-ms_mele5.Size = UDim2.new(0, 120, 0, 20)
-ms_mele5.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ms_mele5.Font = Enum.Font.SourceSans
-ms_mele5.Position = UDim2.new(0, 0, 0.2000000000, 0)
-ms_mele5.Text = "Death Step"
-ms_mele5.TextColor3 = Color3.fromRGB(250, 250, 250)
-ms_mele5.TextSize = 15.000
-ms_mele5.MouseButton1Down:connect(function()
-ms_slec.Text = "Death Step"
-ms_melebar.Visible = false
+shop_mele5.Name = "shop_mele5"
+shop_mele5.Parent = shop_melebar
+shop_mele5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+shop_mele5.Size = UDim2.new(0, 120, 0, 20)
+shop_mele5.BorderColor3 = Color3.fromRGB(250, 250, 250)
+shop_mele5.Font = Enum.Font.SourceSans
+shop_mele5.Position = UDim2.new(0, 0, 0.2000000000, 0)
+shop_mele5.Text = "Death Step"
+shop_mele5.TextColor3 = Color3.fromRGB(250, 250, 250)
+shop_mele5.TextSize = 15.000
+shop_mele5.MouseButton1Down:connect(function()
+shop_slec.Text = "Death Step"
+shop_melebar.Visible = false
 end)
 
-ms_mele6.Name = "ms_mele6"
-ms_mele6.Parent = ms_melebar
-ms_mele6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-ms_mele6.Size = UDim2.new(0, 120, 0, 20)
-ms_mele6.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ms_mele6.Font = Enum.Font.SourceSans
-ms_mele6.Position = UDim2.new(0, 0, 0.2500000000, 0)
-ms_mele6.Text = "Electric Claw"
-ms_mele6.TextColor3 = Color3.fromRGB(250, 250, 250)
-ms_mele6.TextSize = 15.000
-ms_mele6.MouseButton1Down:connect(function()
-ms_slec.Text = "Electric Claw"
-ms_melebar.Visible = false
+shop_mele6.Name = "shop_mele6"
+shop_mele6.Parent = shop_melebar
+shop_mele6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+shop_mele6.Size = UDim2.new(0, 120, 0, 20)
+shop_mele6.BorderColor3 = Color3.fromRGB(250, 250, 250)
+shop_mele6.Font = Enum.Font.SourceSans
+shop_mele6.Position = UDim2.new(0, 0, 0.2500000000, 0)
+shop_mele6.Text = "Electric Claw"
+shop_mele6.TextColor3 = Color3.fromRGB(250, 250, 250)
+shop_mele6.TextSize = 15.000
+shop_mele6.MouseButton1Down:connect(function()
+shop_slec.Text = "Electric Claw"
+shop_melebar.Visible = false
 end)
 
-ms_mele7.Name = "ms_mele7"
-ms_mele7.Parent = ms_melebar
-ms_mele7.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-ms_mele7.Size = UDim2.new(0, 120, 0, 20)
-ms_mele7.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ms_mele7.Font = Enum.Font.SourceSans
-ms_mele7.Position = UDim2.new(0, 0, 0.3000000000, 0)
-ms_mele7.Text = "Sharkman Karate"
-ms_mele7.TextColor3 = Color3.fromRGB(250, 250, 250)
-ms_mele7.TextSize = 15.000
-ms_mele7.MouseButton1Down:connect(function()
-ms_slec.Text = "Sharkman Karate"
-ms_melebar.Visible = false
+shop_mele7.Name = "shop_mele7"
+shop_mele7.Parent = shop_melebar
+shop_mele7.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+shop_mele7.Size = UDim2.new(0, 120, 0, 20)
+shop_mele7.BorderColor3 = Color3.fromRGB(250, 250, 250)
+shop_mele7.Font = Enum.Font.SourceSans
+shop_mele7.Position = UDim2.new(0, 0, 0.3000000000, 0)
+shop_mele7.Text = "Sharkman Karate"
+shop_mele7.TextColor3 = Color3.fromRGB(250, 250, 250)
+shop_mele7.TextSize = 15.000
+shop_mele7.MouseButton1Down:connect(function()
+shop_slec.Text = "Sharkman Karate"
+shop_melebar.Visible = false
 end)
 
-ms_mele8.Name = "ms_mele8"
-ms_mele8.Parent = ms_melebar
-ms_mele8.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-ms_mele8.Size = UDim2.new(0, 120, 0, 20)
-ms_mele8.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ms_mele8.Font = Enum.Font.SourceSans
-ms_mele8.Position = UDim2.new(0, 0, 0.3500000000, 0)
-ms_mele8.Text = "Dragon Talon"
-ms_mele8.TextColor3 = Color3.fromRGB(250, 250, 250)
-ms_mele8.TextSize = 15.000
-ms_mele8.MouseButton1Down:connect(function()
-ms_slec.Text = "Dragon Talon"
-ms_melebar.Visible = false
+shop_mele8.Name = "shop_mele8"
+shop_mele8.Parent = shop_melebar
+shop_mele8.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+shop_mele8.Size = UDim2.new(0, 120, 0, 20)
+shop_mele8.BorderColor3 = Color3.fromRGB(250, 250, 250)
+shop_mele8.Font = Enum.Font.SourceSans
+shop_mele8.Position = UDim2.new(0, 0, 0.3500000000, 0)
+shop_mele8.Text = "Dragon Talon"
+shop_mele8.TextColor3 = Color3.fromRGB(250, 250, 250)
+shop_mele8.TextSize = 15.000
+shop_mele8.MouseButton1Down:connect(function()
+shop_slec.Text = "Dragon Talon"
+shop_melebar.Visible = false
 end)
 
-ms_mele9.Name = "ms_mele9"
-ms_mele9.Parent = ms_melebar
-ms_mele9.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-ms_mele9.Size = UDim2.new(0, 120, 0, 20)
-ms_mele9.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ms_mele9.Font = Enum.Font.SourceSans
-ms_mele9.Position = UDim2.new(0, 0, 0.4000000000, 0)
-ms_mele9.Text = "Super Human"
-ms_mele9.TextColor3 = Color3.fromRGB(250, 250, 250)
-ms_mele9.TextSize = 15.000
-ms_mele9.MouseButton1Down:connect(function()
-ms_slec.Text = "Super Human"
-ms_melebar.Visible = false
+shop_mele9.Name = "shop_mele9"
+shop_mele9.Parent = shop_melebar
+shop_mele9.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+shop_mele9.Size = UDim2.new(0, 120, 0, 20)
+shop_mele9.BorderColor3 = Color3.fromRGB(250, 250, 250)
+shop_mele9.Font = Enum.Font.SourceSans
+shop_mele9.Position = UDim2.new(0, 0, 0.4000000000, 0)
+shop_mele9.Text = "Super Human"
+shop_mele9.TextColor3 = Color3.fromRGB(250, 250, 250)
+shop_mele9.TextSize = 15.000
+shop_mele9.MouseButton1Down:connect(function()
+shop_slec.Text = "Super Human"
+shop_melebar.Visible = false
 end)
 
-ms_mele10.Name = "ms_mele10"
-ms_mele10.Parent = ms_melebar
-ms_mele10.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-ms_mele10.Size = UDim2.new(0, 120, 0, 20)
-ms_mele10.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ms_mele10.Font = Enum.Font.SourceSans
-ms_mele10.Position = UDim2.new(0, 0, 0.4500000000, 0)
-ms_mele10.Text = "God Human"
-ms_mele10.TextColor3 = Color3.fromRGB(250, 250, 250)
-ms_mele10.TextSize = 15.000
-ms_mele10.MouseButton1Down:connect(function()
-ms_slec.Text = "God Human"
-ms_melebar.Visible = false
+shop_mele10.Name = "shop_mele10"
+shop_mele10.Parent = shop_melebar
+shop_mele10.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+shop_mele10.Size = UDim2.new(0, 120, 0, 20)
+shop_mele10.BorderColor3 = Color3.fromRGB(250, 250, 250)
+shop_mele10.Font = Enum.Font.SourceSans
+shop_mele10.Position = UDim2.new(0, 0, 0.4500000000, 0)
+shop_mele10.Text = "God Human"
+shop_mele10.TextColor3 = Color3.fromRGB(250, 250, 250)
+shop_mele10.TextSize = 15.000
+shop_mele10.MouseButton1Down:connect(function()
+shop_slec.Text = "God Human"
+shop_melebar.Visible = false
 end)
 end
 
-ms_f2.Parent = b_page4
-ms_f2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-ms_f2.Position = UDim2.new(0, 0, 0.1700000000, 0)
-ms_f2.Size = UDim2.new(0, 498, 0, 30)
-ms_f2.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ms_f2.Font = Enum.Font.Ubuntu
-ms_f2.Text = "   Auto Buy All Gun - Sword"
-ms_f2.TextColor3 = Color3.fromRGB(255, 255, 255)
-ms_f2.TextSize = 14.000
-ms_f2.TextWrapped = true
-ms_f2.TextXAlignment = Enum.TextXAlignment.Left
+shop_f2.Parent = b_page4
+shop_f2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+shop_f2.Position = UDim2.new(0, 0, 0.1700000000, 0)
+shop_f2.Size = UDim2.new(0, 498, 0, 30)
+shop_f2.BorderColor3 = Color3.fromRGB(250, 250, 250)
+shop_f2.Font = Enum.Font.Ubuntu
+shop_f2.Text = "   Auto Buy All Gun - Sword"
+shop_f2.TextColor3 = Color3.fromRGB(255, 255, 255)
+shop_f2.TextSize = 14.000
+shop_f2.TextWrapped = true
+shop_f2.TextXAlignment = Enum.TextXAlignment.Left
 
-ms_b2.Name = "ms_b2"
-ms_b2.Parent = ms_f2
-ms_b2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-ms_b2.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-ms_b2.Size = UDim2.new(0, 20, 0, 20)
-ms_b2.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ms_b2.Font = Enum.Font.SourceSans
-ms_b2.Text = ""
-ms_b2.TextColor3 = Color3.fromRGB(250, 250, 250)
-ms_b2.TextSize = 30.000
-ms_b2.MouseButton1Down:connect(function()
+shop_b2.Name = "shop_b2"
+shop_b2.Parent = shop_f2
+shop_b2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+shop_b2.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+shop_b2.Size = UDim2.new(0, 20, 0, 20)
+shop_b2.BorderColor3 = Color3.fromRGB(250, 250, 250)
+shop_b2.Font = Enum.Font.SourceSans
+shop_b2.Text = ""
+shop_b2.TextColor3 = Color3.fromRGB(250, 250, 250)
+shop_b2.TextSize = 30.000
+shop_b2.MouseButton1Down:connect(function()
 --on off 
-if ms_b2.Text == "" then --on
-ms_b2.Text = "X"
-_G.ms_b2 = true
+if shop_b2.Text == "" then --on
+shop_b2.Text = "X"
+_G.shop_b2 = true
 
 game:GetService('RunService').RenderStepped:connect(function()
-if _G.ms_b2 then --script
+if _G.shop_b2 then --script
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyItem","Swordsman Hat")
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyItem","Cutlass")
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyItem","Katana")
@@ -4764,81 +4575,81 @@ game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardRewa
     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Slingshot","2")
 end
 end)
-elseif ms_b2.Text == "X" then --off
-ms_b2.Text = ""
-_G.ms_b2 = false
+elseif shop_b2.Text == "X" then --off
+shop_b2.Text = ""
+_G.shop_b2 = false
 end
 end)
 
-ms_f3.Parent = b_page4
-ms_f3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-ms_f3.Position = UDim2.new(0, 0, 0.2400000000, 0)
-ms_f3.Size = UDim2.new(0, 498, 0, 30)
-ms_f3.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ms_f3.Font = Enum.Font.Ubuntu
-ms_f3.Text = "   Auto Random"
-ms_f3.TextColor3 = Color3.fromRGB(255, 255, 255)
-ms_f3.TextSize = 14.000
-ms_f3.TextWrapped = true
-ms_f3.TextXAlignment = Enum.TextXAlignment.Left
+shop_f3.Parent = b_page4
+shop_f3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+shop_f3.Position = UDim2.new(0, 0, 0.2400000000, 0)
+shop_f3.Size = UDim2.new(0, 498, 0, 30)
+shop_f3.BorderColor3 = Color3.fromRGB(250, 250, 250)
+shop_f3.Font = Enum.Font.Ubuntu
+shop_f3.Text = "   Auto Random"
+shop_f3.TextColor3 = Color3.fromRGB(255, 255, 255)
+shop_f3.TextSize = 14.000
+shop_f3.TextWrapped = true
+shop_f3.TextXAlignment = Enum.TextXAlignment.Left
 
-ms_b3.Name = "ms_b3"
-ms_b3.Parent = ms_f3
-ms_b3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-ms_b3.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-ms_b3.Size = UDim2.new(0, 20, 0, 20)
-ms_b3.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ms_b3.Font = Enum.Font.SourceSans
-ms_b3.Text = ""
-ms_b3.TextColor3 = Color3.fromRGB(250, 250, 250)
-ms_b3.TextSize = 30.000
-ms_b3.MouseButton1Down:connect(function()
+shop_b3.Name = "shop_b3"
+shop_b3.Parent = shop_f3
+shop_b3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+shop_b3.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+shop_b3.Size = UDim2.new(0, 20, 0, 20)
+shop_b3.BorderColor3 = Color3.fromRGB(250, 250, 250)
+shop_b3.Font = Enum.Font.SourceSans
+shop_b3.Text = ""
+shop_b3.TextColor3 = Color3.fromRGB(250, 250, 250)
+shop_b3.TextSize = 30.000
+shop_b3.MouseButton1Down:connect(function()
 --on off 
-if ms_b3.Text == "" then --on
-ms_b3.Text = "X"
-_G.ms_b3 = true
+if shop_b3.Text == "" then --on
+shop_b3.Text = "X"
+_G.shop_b3 = true
 
 game:GetService('RunService').RenderStepped:connect(function()
-if _G.ms_b3 then --script
+if _G.shop_b3 then --script
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Cousin","Buy")
 end
 end)
-elseif ms_b3.Text == "X" then --off
-ms_b3.Text = ""
-_G.ms_b3 = false
+elseif shop_b3.Text == "X" then --off
+shop_b3.Text = ""
+_G.shop_b3 = false
 end
 end)
 
-ms_f4.Parent = b_page4
-ms_f4.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-ms_f4.Position = UDim2.new(0, 0, 0.3100000000, 0)
-ms_f4.Size = UDim2.new(0, 498, 0, 30)
-ms_f4.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ms_f4.Font = Enum.Font.Ubuntu
-ms_f4.Text = "   Auto Random Bone"
-ms_f4.TextColor3 = Color3.fromRGB(255, 255, 255)
-ms_f4.TextSize = 14.000
-ms_f4.TextWrapped = true
-ms_f4.TextXAlignment = Enum.TextXAlignment.Left
+shop_f4.Parent = b_page4
+shop_f4.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+shop_f4.Position = UDim2.new(0, 0, 0.3100000000, 0)
+shop_f4.Size = UDim2.new(0, 498, 0, 30)
+shop_f4.BorderColor3 = Color3.fromRGB(250, 250, 250)
+shop_f4.Font = Enum.Font.Ubuntu
+shop_f4.Text = "   Auto Random Bone"
+shop_f4.TextColor3 = Color3.fromRGB(255, 255, 255)
+shop_f4.TextSize = 14.000
+shop_f4.TextWrapped = true
+shop_f4.TextXAlignment = Enum.TextXAlignment.Left
 
-ms_b4.Name = "ms_b4"
-ms_b4.Parent = ms_f4
-ms_b4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-ms_b4.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-ms_b4.Size = UDim2.new(0, 20, 0, 20)
-ms_b4.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ms_b4.Font = Enum.Font.SourceSans
-ms_b4.Text = ""
-ms_b4.TextColor3 = Color3.fromRGB(250, 250, 250)
-ms_b4.TextSize = 30.000
-ms_b4.MouseButton1Down:connect(function()
+shop_b4.Name = "shop_b4"
+shop_b4.Parent = shop_f4
+shop_b4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+shop_b4.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+shop_b4.Size = UDim2.new(0, 20, 0, 20)
+shop_b4.BorderColor3 = Color3.fromRGB(250, 250, 250)
+shop_b4.Font = Enum.Font.SourceSans
+shop_b4.Text = ""
+shop_b4.TextColor3 = Color3.fromRGB(250, 250, 250)
+shop_b4.TextSize = 30.000
+shop_b4.MouseButton1Down:connect(function()
 --on off 
-if ms_b4.Text == "" then --on
-ms_b4.Text = "X"
-_G.ms_b4 = true
+if shop_b4.Text == "" then --on
+shop_b4.Text = "X"
+_G.shop_b4 = true
 
 game:GetService('RunService').RenderStepped:connect(function()
-if _G.ms_b4 then --script
+if _G.shop_b4 then --script
 local args = {
     [1] = "Bones",
     [2] = "Buy",
@@ -4848,42 +4659,42 @@ local args = {
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
 end
 end)
-elseif ms_b4.Text == "X" then --off
-ms_b4.Text = ""
-_G.ms_b4 = false
+elseif shop_b4.Text == "X" then --off
+shop_b4.Text = ""
+_G.shop_b4 = false
 end
 end)
 
-ms_f5.Parent = b_page4
-ms_f5.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-ms_f5.Position = UDim2.new(0, 0, 0.3800000000, 0)
-ms_f5.Size = UDim2.new(0, 498, 0, 30)
-ms_f5.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ms_f5.Font = Enum.Font.Ubuntu
-ms_f5.Text = "   Auto Buy Sword Legend"
-ms_f5.TextColor3 = Color3.fromRGB(255, 255, 255)
-ms_f5.TextSize = 14.000
-ms_f5.TextWrapped = true
-ms_f5.TextXAlignment = Enum.TextXAlignment.Left
+shop_f5.Parent = b_page4
+shop_f5.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+shop_f5.Position = UDim2.new(0, 0, 0.3800000000, 0)
+shop_f5.Size = UDim2.new(0, 498, 0, 30)
+shop_f5.BorderColor3 = Color3.fromRGB(250, 250, 250)
+shop_f5.Font = Enum.Font.Ubuntu
+shop_f5.Text = "   Auto Buy Sword Legend"
+shop_f5.TextColor3 = Color3.fromRGB(255, 255, 255)
+shop_f5.TextSize = 14.000
+shop_f5.TextWrapped = true
+shop_f5.TextXAlignment = Enum.TextXAlignment.Left
 
-ms_b5.Name = "ms_b5"
-ms_b5.Parent = ms_f5
-ms_b5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-ms_b5.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-ms_b5.Size = UDim2.new(0, 20, 0, 20)
-ms_b5.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ms_b5.Font = Enum.Font.SourceSans
-ms_b5.Text = ""
-ms_b5.TextColor3 = Color3.fromRGB(250, 250, 250)
-ms_b5.TextSize = 30.000
-ms_b5.MouseButton1Down:connect(function()
+shop_b5.Name = "shop_b5"
+shop_b5.Parent = shop_f5
+shop_b5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+shop_b5.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+shop_b5.Size = UDim2.new(0, 20, 0, 20)
+shop_b5.BorderColor3 = Color3.fromRGB(250, 250, 250)
+shop_b5.Font = Enum.Font.SourceSans
+shop_b5.Text = ""
+shop_b5.TextColor3 = Color3.fromRGB(250, 250, 250)
+shop_b5.TextSize = 30.000
+shop_b5.MouseButton1Down:connect(function()
 --on off 
-if ms_b5.Text == "" then --on
-ms_b5.Text = "X"
-_G.ms_b5 = true
+if shop_b5.Text == "" then --on
+shop_b5.Text = "X"
+_G.shop_b5 = true
 
 game:GetService('RunService').RenderStepped:connect(function()
-if _G.ms_b5 then --script
+if _G.shop_b5 then --script
 local args = {
                    [1] = "LegendarySwordDealer",
                    [2] = "1"
@@ -4901,42 +4712,42 @@ local args = {
                 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
 end
 end)
-elseif ms_b5.Text == "X" then --off
-ms_b5.Text = ""
-_G.ms_b5 = false
+elseif shop_b5.Text == "X" then --off
+shop_b5.Text = ""
+_G.shop_b5 = false
 end
 end)
 
-ms_f6.Parent = b_page4
-ms_f6.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-ms_f6.Position = UDim2.new(0, 0, 0.4500000000, 0)
-ms_f6.Size = UDim2.new(0, 498, 0, 30)
-ms_f6.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ms_f6.Font = Enum.Font.Ubuntu
-ms_f6.Text = "   Auto Buy Haki Color"
-ms_f6.TextColor3 = Color3.fromRGB(255, 255, 255)
-ms_f6.TextSize = 14.000
-ms_f6.TextWrapped = true
-ms_f6.TextXAlignment = Enum.TextXAlignment.Left
+shop_f6.Parent = b_page4
+shop_f6.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+shop_f6.Position = UDim2.new(0, 0, 0.4500000000, 0)
+shop_f6.Size = UDim2.new(0, 498, 0, 30)
+shop_f6.BorderColor3 = Color3.fromRGB(250, 250, 250)
+shop_f6.Font = Enum.Font.Ubuntu
+shop_f6.Text = "   Auto Buy Haki Color"
+shop_f6.TextColor3 = Color3.fromRGB(255, 255, 255)
+shop_f6.TextSize = 14.000
+shop_f6.TextWrapped = true
+shop_f6.TextXAlignment = Enum.TextXAlignment.Left
 
-ms_b6.Name = "ms_b6"
-ms_b6.Parent = ms_f6
-ms_b6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-ms_b6.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-ms_b6.Size = UDim2.new(0, 20, 0, 20)
-ms_b6.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ms_b6.Font = Enum.Font.SourceSans
-ms_b6.Text = ""
-ms_b6.TextColor3 = Color3.fromRGB(250, 250, 250)
-ms_b6.TextSize = 30.000
-ms_b6.MouseButton1Down:connect(function()
+shop_b6.Name = "shop_b6"
+shop_b6.Parent = shop_f6
+shop_b6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+shop_b6.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+shop_b6.Size = UDim2.new(0, 20, 0, 20)
+shop_b6.BorderColor3 = Color3.fromRGB(250, 250, 250)
+shop_b6.Font = Enum.Font.SourceSans
+shop_b6.Text = ""
+shop_b6.TextColor3 = Color3.fromRGB(250, 250, 250)
+shop_b6.TextSize = 30.000
+shop_b6.MouseButton1Down:connect(function()
 --on off 
-if ms_b6.Text == "" then --on
-ms_b6.Text = "X"
-_G.ms_b6 = true
+if shop_b6.Text == "" then --on
+shop_b6.Text = "X"
+_G.shop_b6 = true
 
 game:GetService('RunService').RenderStepped:connect(function()
-if _G.ms_b6 then --script
+if _G.shop_b6 then --script
 local args = {
                   [1] = "ColorsDealer",
                   [2] = "2"
@@ -4944,253 +4755,59 @@ local args = {
            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
 end
 end)
-elseif ms_b6.Text == "X" then --off
-ms_b6.Text = ""
-_G.ms_b6 = false
+elseif shop_b6.Text == "X" then --off
+shop_b6.Text = ""
+_G.shop_b6 = false
 end
 end)
 
-ms_f7.Parent = b_page4
-ms_f7.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-ms_f7.Position = UDim2.new(0, 0, 0.5200000000, 0)
-ms_f7.Size = UDim2.new(0, 498, 0, 30)
-ms_f7.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ms_f7.Font = Enum.Font.Ubuntu
-ms_f7.Text = "   Auto Buy : Air Jump, Aura, Flash Step, Observation"
-ms_f7.TextColor3 = Color3.fromRGB(255, 255, 255)
-ms_f7.TextSize = 14.000
-ms_f7.TextWrapped = true
-ms_f7.TextXAlignment = Enum.TextXAlignment.Left
+shop_f7.Parent = b_page4
+shop_f7.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+shop_f7.Position = UDim2.new(0, 0, 0.5200000000, 0)
+shop_f7.Size = UDim2.new(0, 498, 0, 30)
+shop_f7.BorderColor3 = Color3.fromRGB(250, 250, 250)
+shop_f7.Font = Enum.Font.Ubuntu
+shop_f7.Text = "   Auto Buy : Air Jump, Aura, Flash Step, Observation"
+shop_f7.TextColor3 = Color3.fromRGB(255, 255, 255)
+shop_f7.TextSize = 14.000
+shop_f7.TextWrapped = true
+shop_f7.TextXAlignment = Enum.TextXAlignment.Left
 
-ms_b7.Name = "ms_b7"
-ms_b7.Parent = ms_f7
-ms_b7.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-ms_b7.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-ms_b7.Size = UDim2.new(0, 20, 0, 20)
-ms_b7.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ms_b7.Font = Enum.Font.SourceSans
-ms_b7.Text = ""
-ms_b7.TextColor3 = Color3.fromRGB(250, 250, 250)
-ms_b7.TextSize = 30.000
-ms_b7.MouseButton1Down:connect(function()
+shop_b7.Name = "shop_b7"
+shop_b7.Parent = shop_f7
+shop_b7.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+shop_b7.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+shop_b7.Size = UDim2.new(0, 20, 0, 20)
+shop_b7.BorderColor3 = Color3.fromRGB(250, 250, 250)
+shop_b7.Font = Enum.Font.SourceSans
+shop_b7.Text = ""
+shop_b7.TextColor3 = Color3.fromRGB(250, 250, 250)
+shop_b7.TextSize = 30.000
+shop_b7.MouseButton1Down:connect(function()
 --on off 
-if ms_b7.Text == "" then --on
-ms_b7.Text = "X"
-_G.ms_b7 = true
+if shop_b7.Text == "" then --on
+shop_b7.Text = "X"
+_G.shop_b7 = true
 
 game:GetService('RunService').RenderStepped:connect(function()
-if _G.ms_b7 then --script
+if _G.shop_b7 then --script
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("KenTalk","Buy")
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyHaki","Buso")
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyHaki","Geppo")
     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyHaki","Soru")
 end
 end)
-elseif ms_b7.Text == "X" then --off
-ms_b7.Text = ""
-_G.ms_b7 = false
-end
-end)
-
-ms_t2.Parent = b_page4
-ms_t2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-ms_t2.Position = UDim2.new(0, 0, 0.5900000000, 0)
-ms_t2.Size = UDim2.new(0, 498, 0, 30)
-ms_t2.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ms_t2.Font = Enum.Font.Ubuntu
-ms_t2.Text = "Miss"
-ms_t2.TextColor3 = Color3.fromRGB(255, 255, 255)
-ms_t2.TextSize = 14.000
-ms_t2.TextWrapped = true
-
-ms_f8.Parent = b_page4
-ms_f8.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-ms_f8.Position = UDim2.new(0, 0, 0.6600000000, 0)
-ms_f8.Size = UDim2.new(0, 498, 0, 30)
-ms_f8.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ms_f8.Font = Enum.Font.Ubuntu
-ms_f8.Text = "   Walk On Water"
-ms_f8.TextColor3 = Color3.fromRGB(255, 255, 255)
-ms_f8.TextSize = 14.000
-ms_f8.TextWrapped = true
-ms_f8.TextXAlignment = Enum.TextXAlignment.Left
-
-ms_b8.Name = "ms_b8"
-ms_b8.Parent = ms_f8
-ms_b8.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-ms_b8.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-ms_b8.Size = UDim2.new(0, 20, 0, 20)
-ms_b8.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ms_b8.Font = Enum.Font.SourceSans
-ms_b8.Text = ""
-ms_b8.TextColor3 = Color3.fromRGB(250, 250, 250)
-ms_b8.TextSize = 30.000
-ms_b8.MouseButton1Down:connect(function()
---on off 
-if ms_b8.Text == "" then --on
-ms_b8.Text = "X"
-_G.ms_b8 = true
-elseif ms_b8.Text == "X" then --off
-ms_b8.Text = ""
-_G.ms_b8 = false
-end
-end)
-
-spawn(function()
-    while task.wait() do    
-            pcall(function()    
-            if _G.ms_b8 then
-                    game:GetService("Workspace").Map["WaterBase-Plane"].Size = Vector3.new(1000,112,1000)
-                else
-                    game:GetService("Workspace").Map["WaterBase-Plane"].Size = Vector3.new(1000,80,1000)
-                end         
-        end)
-    end
-end)
-
-ms_f9.Parent = b_page4
-ms_f9.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-ms_f9.Position = UDim2.new(0, 0, 0.7300000000, 0)
-ms_f9.Size = UDim2.new(0, 498, 0, 30)
-ms_f9.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ms_f9.Font = Enum.Font.Ubuntu
-ms_f9.Text = "   Mink V4"
-ms_f9.TextColor3 = Color3.fromRGB(255, 255, 255)
-ms_f9.TextSize = 14.000
-ms_f9.TextWrapped = true
-ms_f9.TextXAlignment = Enum.TextXAlignment.Left
-
-ms_b9.Name = "ms_b9"
-ms_b9.Parent = ms_f9
-ms_b9.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-ms_b9.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-ms_b9.Size = UDim2.new(0, 20, 0, 20)
-ms_b9.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ms_b9.Font = Enum.Font.SourceSans
-ms_b9.Text = ""
-ms_b9.TextColor3 = Color3.fromRGB(250, 250, 250)
-ms_b9.TextSize = 30.000
-ms_b9.MouseButton1Down:connect(function()
---on off 
-if ms_b9.Text == "" then --on
-ms_b9.Text = "X"
-_G.ms_b9 = true
-sk1.Visible = true
-elseif ms_b9.Text == "X" then --off
-ms_b9.Text = ""
-_G.ms_b9 = false
-sk1.Visible = false
+elseif shop_b7.Text == "X" then --off
+shop_b7.Text = ""
+_G.shop_b7 = false
 end
 end)
 
 
-sk1 = Instance.new("TextButton")
-sk1.Name = "sk1"
-sk1.Parent = NTTGUI
-sk1.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-sk1.BorderSizePixel = 0
-sk1.Position = UDim2.new(0.85162201, 0, 0.383285708, 0)
-sk1.Size = UDim2.new(0, 40, 0, 40)
-sk1.Font = Enum.Font.Ubuntu
-sk1.Text = ""
-sk1.TextColor3 = Color3.fromRGB(250, 255, 250)
-sk1.TextSize = 20.000
-sk1.BackgroundTransparency = 1.000
-sk1.MouseButton1Down:connect(function()
-
-local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0.2), {CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame *CFrame.new(0,0,-80)}) tween:Play()       
-end)
-sk1.Visible = false
-
-ms_f10.Parent = b_page4
-ms_f10.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-ms_f10.Position = UDim2.new(0, 0, 0.8000000000, 0)
-ms_f10.Size = UDim2.new(0, 498, 0, 30)
-ms_f10.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ms_f10.Font = Enum.Font.Ubuntu
-ms_f10.Text = "   Ifn Jump"
-ms_f10.TextColor3 = Color3.fromRGB(255, 255, 255)
-ms_f10.TextSize = 14.000
-ms_f10.TextWrapped = true
-ms_f10.TextXAlignment = Enum.TextXAlignment.Left
-
-ms_b10.Name = "ms_b10"
-ms_b10.Parent = ms_f10
-ms_b10.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-ms_b10.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-ms_b10.Size = UDim2.new(0, 20, 0, 20)
-ms_b10.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ms_b10.Font = Enum.Font.SourceSans
-ms_b10.Text = ""
-ms_b10.TextColor3 = Color3.fromRGB(250, 250, 250)
-ms_b10.TextSize = 30.000
-ms_b10.MouseButton1Down:connect(function()
---on off 
-if ms_b10.Text == "" then --on
-ms_b10.Text = "X"
-_G.ifnjump = true
-elseif ms_b10.Text == "X" then --off
-ms_b10.Text = ""
-_G.ifnjump = false
-end
-end)
-
-ms_f11.Parent = b_page4
-ms_f11.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-ms_f11.Position = UDim2.new(0, 0, 0.8800000000, 0)
-ms_f11.Size = UDim2.new(0, 498, 0, 30)
-ms_f11.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ms_f11.Font = Enum.Font.Ubuntu
-ms_f11.Text = "   Auto Né Tránh"
-ms_f11.TextColor3 = Color3.fromRGB(255, 255, 255)
-ms_f11.TextSize = 14.000
-ms_f11.TextWrapped = true
-ms_f11.TextXAlignment = Enum.TextXAlignment.Left
-
-ms_b11.Name = "ms_b11"
-ms_b11.Parent = ms_f11
-ms_b11.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-ms_b11.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-ms_b11.Size = UDim2.new(0, 20, 0, 20)
-ms_b11.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ms_b11.Font = Enum.Font.SourceSans
-ms_b11.Text = ""
-ms_b11.TextColor3 = Color3.fromRGB(250, 250, 250)
-ms_b11.TextSize = 30.000
-ms_b11.MouseButton1Down:connect(function()
---on off 
-if ms_b11.Text == "" then --on
-ms_b11.Text = "X"
-_G.ms_b11 = true
-
-game:GetService('RunService').RenderStepped:connect(function()
-if _G.ms_b11 then --script
-local Players = game:GetService("Players")	
-		    for i, v in pairs(Players:GetPlayers()) do
-		        if v.Name ~= game.Players.LocalPlayer.Name then
-        if (v.Character.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <=  180 then
-        if game.Players.LocalPlayer.Character.Humanoid.Health >  game.Players.LocalPlayer.Character.Humanoid.MaxHealth / 3.5 then
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame * CFrame.new(0,0,-182)   
-end end end end
-end
-end)
-elseif ms_b11.Text == "X" then --off
-ms_b11.Text = ""
-_G.ms_b11 = false
-end
-end)
-
-spawn(function()
-    while task.wait(0.1) do
-        pcall(function()
-    if    _G.ms_b11 then --script
-        if game.Players.LocalPlayer.Character.Humanoid.Health <  game.Players.LocalPlayer.Character.Humanoid.MaxHealth / 3.5 then
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame  = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame* CFrame.new(0,1000,0)
-     end end end) end end)
 
 melebar()
 
--- // mob - item
+-- // item
 
 mi_fc.Parent = b_page6
 mi_fc.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
@@ -7653,7 +7270,7 @@ _G.bringmob = true
             if _G.bringmob then       
             if game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible == true then                 
                 for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
-                    if v.Name == Ms  and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= _G.distance then                           
+                    if v.Name == shop  and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= _G.distance then                           
 if   st_b5.Text == "0" then                        
  v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
  elseif st_b5.Text == "10" then
@@ -7980,11 +7597,7 @@ end)
 game:GetService('RunService').RenderStepped:connect(function()
 if _G.st_b12 then --script
 
-game.Lighting.GlobalColorCorrection.TintColor = "0,0,0"
-else
-game.Lighting.GlobalColorCorrection.TintColor = "250,250,250"
-end
-end)
+end end)
 
 
 -- // moon - race
@@ -8034,20 +7647,123 @@ mr_cmoon.Text = (""..game:GetService("Lighting").FantasySky.MoonTextureId)
  else
  mr_moon.Text = "   Not Full Moon"
  end end)
+ 
+ if game.PlaceId == 4442272183 or game.PlaceId == 7449423635 then
+
+mr_t2.Parent = b_page11
+mr_t2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+mr_t2.Position = UDim2.new(0, 0, 0.1700000000, 0)
+mr_t2.Size = UDim2.new(0, 498, 0, 30)
+mr_t2.BorderColor3 = Color3.fromRGB(250, 250, 250)
+mr_t2.Font = Enum.Font.Ubuntu
+mr_t2.Text = "Race"
+mr_t2.TextColor3 = Color3.fromRGB(255, 255, 255)
+mr_t2.TextSize = 14.000
+mr_t2.TextWrapped = true
+
+mr_f1.Parent = b_page11
+mr_f1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+mr_f1.Position = UDim2.new(0, 0, 0.2400000000, 0)
+mr_f1.Size = UDim2.new(0, 498, 0, 30)
+mr_f1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+mr_f1.Font = Enum.Font.Ubuntu
+mr_f1.Text = "   Teleport NPC Up Race"
+mr_f1.TextColor3 = Color3.fromRGB(255, 255, 255)
+mr_f1.TextSize = 14.000
+mr_f1.TextWrapped = true
+mr_f1.TextXAlignment = Enum.TextXAlignment.Left
+
+mr_b1.Name = "mr_b1"
+mr_b1.Parent = mr_f1
+mr_b1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+mr_b1.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+mr_b1.Size = UDim2.new(0, 20, 0, 20)
+mr_b1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+mr_b1.Font = Enum.Font.SourceSans
+mr_b1.Text = ""
+mr_b1.TextColor3 = Color3.fromRGB(250, 250, 250)
+mr_b1.TextSize = 30.000
+mr_b1.MouseButton1Down:connect(function()
+--on off 
+if mr_b1.Text == "" then --on
+mr_b1.Text = "X"
+_G.mr_b1 = true
+elseif mr_b1.Text == "X" then --off
+mr_b1.Text = ""
+_G.mr_b1 = false
+end
+end)
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.mr_b1 then --script
+if game.PlaceId == 4442272183 then -- sea2
+TP1(CFrame.new(-1990.1029052734375, 125.83656311035156, -71.35701751708984))
+jump()
+elseif game.PlaceId == 7449423635 then -- sea3
+TP1(CFrame.new(mr_b2))
+jump()
+end end end)
+
+end
+
+if game.PlaceId == 4442272183 then -- sea 2
+mr_f2.Parent = b_page11
+mr_f2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+mr_f2.Position = UDim2.new(0, 0, 0.3100000000, 0)
+mr_f2.Size = UDim2.new(0, 498, 0, 30)
+mr_f2.BorderColor3 = Color3.fromRGB(250, 250, 250)
+mr_f2.Font = Enum.Font.Ubuntu
+mr_f2.Text = "   Auto Up Race V2"
+mr_f2.TextColor3 = Color3.fromRGB(255, 255, 255)
+mr_f2.TextSize = 14.000
+mr_f2.TextWrapped = true
+mr_f2.TextXAlignment = Enum.TextXAlignment.Left
+
+mr_b2.Name = "mr_b2"
+mr_b2.Parent = mr_f2
+mr_b2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+mr_b2.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+mr_b2.Size = UDim2.new(0, 20, 0, 20)
+mr_b2.BorderColor3 = Color3.fromRGB(250, 250, 250)
+mr_b2.Font = Enum.Font.SourceSans
+mr_b2.Text = ""
+mr_b2.TextColor3 = Color3.fromRGB(250, 250, 250)
+mr_b2.TextSize = 30.000
+mr_b2.MouseButton1Down:connect(function()
+--on off 
+if mr_b2.Text == "" then --on
+mr_b2.Text = "X"
+_G.mr_b2 = true
+elseif mr_b2.Text == "X" then --off
+mr_b2.Text = ""
+_G.mr_b2 = false
+end
+end)
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.mr_b2 then --script
+
+
+
+end
+end)
+
+end -- sea 2
+
    
 -- // miss 2
-   ms_code.Name = "ms_code"
-ms_code.Parent = b_page10
-ms_code.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-ms_code.Position = UDim2.new(0.00000000, 0, 0.030000000, 0)
-ms_code.Size = UDim2.new(0, 498, 0, 30)
-ms_code.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ms_code.Font = Enum.Font.Ubuntu
-ms_code.Text = "   Click Redeem All Code"
-ms_code.TextColor3 = Color3.fromRGB(250, 250, 250)
-ms_code.TextSize = 14.000
-ms_code.TextXAlignment = Enum.TextXAlignment.Left
-ms_code.MouseButton1Down:connect(function()
+   miss_code.Name = "miss_code"
+miss_code.Parent = b_page10
+miss_code.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+miss_code.Position = UDim2.new(0.00000000, 0, 0.030000000, 0)
+miss_code.Size = UDim2.new(0, 498, 0, 30)
+miss_code.BorderColor3 = Color3.fromRGB(250, 250, 250)
+miss_code.Font = Enum.Font.Ubuntu
+miss_code.Text = "   Click Redeem All Code"
+miss_code.TextColor3 = Color3.fromRGB(250, 250, 250)
+miss_code.TextSize = 14.000
+miss_code.TextXAlignment = Enum.TextXAlignment.Left
+miss_code.MouseButton1Down:connect(function()
 code("Sub2Fer999")
 code("kittgaming")
 code("NOOB_REFUND")
@@ -8076,111 +7792,510 @@ code("THEGREATACE")
 
 end)
 
-m2_b1.Parent = b_page10
-m2_b1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-m2_b1.Position = UDim2.new(0, 0, 0.1000000000, 0)
-m2_b1.Size = UDim2.new(0, 498, 0, 30)
-m2_b1.BorderColor3 = Color3.fromRGB(250, 250, 250)
-m2_b1.Font = Enum.Font.Ubuntu
-m2_b1.Text = "   Jonl Pirate"
-m2_b1.TextColor3 = Color3.fromRGB(255, 255, 255)
-m2_b1.TextSize = 14.000
-m2_b1.TextWrapped = true
-m2_b1.TextXAlignment = Enum.TextXAlignment.Left
-m2_b1.MouseButton1Down:connect(function()
+miss_b1.Parent = b_page10
+miss_b1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+miss_b1.Position = UDim2.new(0, 0, 0.1000000000, 0)
+miss_b1.Size = UDim2.new(0, 498, 0, 30)
+miss_b1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+miss_b1.Font = Enum.Font.Ubuntu
+miss_b1.Text = "   Jonl Pirate"
+miss_b1.TextColor3 = Color3.fromRGB(255, 255, 255)
+miss_b1.TextSize = 14.000
+miss_b1.TextWrapped = true
+miss_b1.TextXAlignment = Enum.TextXAlignment.Left
+miss_b1.MouseButton1Down:connect(function()
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetTeam","Pirates") 
 end)
 
-m2_b2.Parent = b_page10
-m2_b2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-m2_b2.Position = UDim2.new(0, 0, 0.1700000000, 0)
-m2_b2.Size = UDim2.new(0, 498, 0, 30)
-m2_b2.BorderColor3 = Color3.fromRGB(250, 250, 250)
-m2_b2.Font = Enum.Font.Ubuntu
-m2_b2.Text = "   Jonl Marine"
-m2_b2.TextColor3 = Color3.fromRGB(255, 255, 255)
-m2_b2.TextSize = 14.000
-m2_b2.TextWrapped = true
-m2_b2.TextXAlignment = Enum.TextXAlignment.Left
-m2_b2.MouseButton1Down:connect(function()
+miss_b2.Parent = b_page10
+miss_b2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+miss_b2.Position = UDim2.new(0, 0, 0.1700000000, 0)
+miss_b2.Size = UDim2.new(0, 498, 0, 30)
+miss_b2.BorderColor3 = Color3.fromRGB(250, 250, 250)
+miss_b2.Font = Enum.Font.Ubuntu
+miss_b2.Text = "   Jonl Marine"
+miss_b2.TextColor3 = Color3.fromRGB(255, 255, 255)
+miss_b2.TextSize = 14.000
+miss_b2.TextWrapped = true
+miss_b2.TextXAlignment = Enum.TextXAlignment.Left
+miss_b2.MouseButton1Down:connect(function()
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetTeam","Marines") 
 end)
 
-m2_b3.Parent = b_page10
-m2_b3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-m2_b3.Position = UDim2.new(0, 0, 0.2400000000, 0)
-m2_b3.Size = UDim2.new(0, 498, 0, 30)
-m2_b3.BorderColor3 = Color3.fromRGB(250, 250, 250)
-m2_b3.Font = Enum.Font.Ubuntu
-m2_b3.Text = "   Open Shop"
-m2_b3.TextColor3 = Color3.fromRGB(255, 255, 255)
-m2_b3.TextSize = 14.000
-m2_b3.TextWrapped = true
-m2_b3.TextXAlignment = Enum.TextXAlignment.Left
-m2_b3.MouseButton1Down:connect(function()
+miss_b3.Parent = b_page10
+miss_b3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+miss_b3.Position = UDim2.new(0, 0, 0.2400000000, 0)
+miss_b3.Size = UDim2.new(0, 498, 0, 30)
+miss_b3.BorderColor3 = Color3.fromRGB(250, 250, 250)
+miss_b3.Font = Enum.Font.Ubuntu
+miss_b3.Text = "   Open Shop"
+miss_b3.TextColor3 = Color3.fromRGB(255, 255, 255)
+miss_b3.TextSize = 14.000
+miss_b3.TextWrapped = true
+miss_b3.TextXAlignment = Enum.TextXAlignment.Left
+miss_b3.MouseButton1Down:connect(function()
 game:GetService("Players").LocalPlayer.PlayerGui.Main.FruitShop.Visible = true
 end)
 
-m2_b4.Parent = b_page10
-m2_b4.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-m2_b4.Position = UDim2.new(0, 0, 0.3100000000, 0)
-m2_b4.Size = UDim2.new(0, 498, 0, 30)
-m2_b4.BorderColor3 = Color3.fromRGB(250, 250, 250)
-m2_b4.Font = Enum.Font.Ubuntu
-m2_b4.Text = "   Open Title"
-m2_b4.TextColor3 = Color3.fromRGB(255, 255, 255)
-m2_b4.TextSize = 14.000
-m2_b4.TextWrapped = true
-m2_b4.TextXAlignment = Enum.TextXAlignment.Left
-m2_b4.MouseButton1Down:connect(function()
+miss_b4.Parent = b_page10
+miss_b4.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+miss_b4.Position = UDim2.new(0, 0, 0.3100000000, 0)
+miss_b4.Size = UDim2.new(0, 498, 0, 30)
+miss_b4.BorderColor3 = Color3.fromRGB(250, 250, 250)
+miss_b4.Font = Enum.Font.Ubuntu
+miss_b4.Text = "   Open Title"
+miss_b4.TextColor3 = Color3.fromRGB(255, 255, 255)
+miss_b4.TextSize = 14.000
+miss_b4.TextWrapped = true
+miss_b4.TextXAlignment = Enum.TextXAlignment.Left
+miss_b4.MouseButton1Down:connect(function()
 game.Players.localPlayer.PlayerGui.Main.Titles.Visible = true
 end)
 
-m2_b5.Parent = b_page10
-m2_b5.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-m2_b5.Position = UDim2.new(0, 0, 0.3800000000, 0)
-m2_b5.Size = UDim2.new(0, 498, 0, 30)
-m2_b5.BorderColor3 = Color3.fromRGB(250, 250, 250)
-m2_b5.Font = Enum.Font.Ubuntu
-m2_b5.Text = "   Open Color Haki"
-m2_b5.TextColor3 = Color3.fromRGB(255, 255, 255)
-m2_b5.TextSize = 14.000
-m2_b5.TextWrapped = true
-m2_b5.TextXAlignment = Enum.TextXAlignment.Left
-m2_b5.MouseButton1Down:connect(function()
+miss_b5.Parent = b_page10
+miss_b5.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+miss_b5.Position = UDim2.new(0, 0, 0.3800000000, 0)
+miss_b5.Size = UDim2.new(0, 498, 0, 30)
+miss_b5.BorderColor3 = Color3.fromRGB(250, 250, 250)
+miss_b5.Font = Enum.Font.Ubuntu
+miss_b5.Text = "   Open Color Haki"
+miss_b5.TextColor3 = Color3.fromRGB(255, 255, 255)
+miss_b5.TextSize = 14.000
+miss_b5.TextWrapped = true
+miss_b5.TextXAlignment = Enum.TextXAlignment.Left
+miss_b5.MouseButton1Down:connect(function()
 game.Players.localPlayer.PlayerGui.Main.Colors.Visible = true
 end)
 
-m2_b6.Parent = b_page10
-m2_b6.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-m2_b6.Position = UDim2.new(0, 0, 0.4500000000, 0)
-m2_b6.Size = UDim2.new(0, 498, 0, 30)
-m2_b6.BorderColor3 = Color3.fromRGB(250, 250, 250)
-m2_b6.Font = Enum.Font.Ubuntu
-m2_b6.Text = "   Open Awakening"
-m2_b6.TextColor3 = Color3.fromRGB(255, 255, 255)
-m2_b6.TextSize = 14.000
-m2_b6.TextWrapped = true
-m2_b6.TextXAlignment = Enum.TextXAlignment.Left
-m2_b6.MouseButton1Down:connect(function()
+miss_b6.Parent = b_page10
+miss_b6.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+miss_b6.Position = UDim2.new(0, 0, 0.4500000000, 0)
+miss_b6.Size = UDim2.new(0, 498, 0, 30)
+miss_b6.BorderColor3 = Color3.fromRGB(250, 250, 250)
+miss_b6.Font = Enum.Font.Ubuntu
+miss_b6.Text = "   Open Awakening"
+miss_b6.TextColor3 = Color3.fromRGB(255, 255, 255)
+miss_b6.TextSize = 14.000
+miss_b6.TextWrapped = true
+miss_b6.TextXAlignment = Enum.TextXAlignment.Left
+miss_b6.MouseButton1Down:connect(function()
 
 end)
 
-m2_b7.Parent = b_page10
-m2_b7.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-m2_b7.Position = UDim2.new(0, 0, 0.5200000000, 0)
-m2_b7.Size = UDim2.new(0, 498, 0, 30)
-m2_b7.BorderColor3 = Color3.fromRGB(250, 250, 250)
-m2_b7.Font = Enum.Font.Ubuntu
-m2_b7.Text = "   Oppen Fly Gui"
-m2_b7.TextColor3 = Color3.fromRGB(255, 255, 255)
-m2_b7.TextSize = 14.000
-m2_b7.TextWrapped = true
-m2_b7.TextXAlignment = Enum.TextXAlignment.Left
-m2_b7.MouseButton1Down:connect(function()
+miss_b7.Parent = b_page10
+miss_b7.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+miss_b7.Position = UDim2.new(0, 0, 0.5200000000, 0)
+miss_b7.Size = UDim2.new(0, 498, 0, 30)
+miss_b7.BorderColor3 = Color3.fromRGB(250, 250, 250)
+miss_b7.Font = Enum.Font.Ubuntu
+miss_b7.Text = "   Oppen Fly Gui"
+miss_b7.TextColor3 = Color3.fromRGB(255, 255, 255)
+miss_b7.TextSize = 14.000
+miss_b7.TextWrapped = true
+miss_b7.TextXAlignment = Enum.TextXAlignment.Left
+miss_b7.MouseButton1Down:connect(function()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Fly%201')))()
 end)
 
+-- // buff
+buff_t1.Parent = b_page13
+buff_t1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+buff_t1.Position = UDim2.new(0, 0, 0.0300000000, 0)
+buff_t1.Size = UDim2.new(0, 498, 0, 30)
+buff_t1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+buff_t1.Font = Enum.Font.Ubuntu
+buff_t1.Text = "Buff"
+buff_t1.TextColor3 = Color3.fromRGB(255, 255, 255)
+buff_t1.TextSize = 14.000
+buff_t1.TextWrapped = true
+
+
+buff_f1.Parent = b_page13
+buff_f1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+buff_f1.Position = UDim2.new(0, 0, 0.1000000000, 0)
+buff_f1.Size = UDim2.new(0, 498, 0, 30)
+buff_f1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+buff_f1.Font = Enum.Font.Ubuntu
+buff_f1.Text = "   Walk On Water"
+buff_f1.TextColor3 = Color3.fromRGB(255, 255, 255)
+buff_f1.TextSize = 14.000
+buff_f1.TextWrapped = true
+buff_f1.TextXAlignment = Enum.TextXAlignment.Left
+
+buff_b1.Name = "buff_b1"
+buff_b1.Parent = buff_f1
+buff_b1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+buff_b1.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+buff_b1.Size = UDim2.new(0, 20, 0, 20)
+buff_b1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+buff_b1.Font = Enum.Font.SourceSans
+buff_b1.Text = ""
+buff_b1.TextColor3 = Color3.fromRGB(250, 250, 250)
+buff_b1.TextSize = 30.000
+buff_b1.MouseButton1Down:connect(function()
+--on off 
+if buff_b1.Text == "" then --on
+buff_b1.Text = "X"
+_G.buff_b1 = true
+elseif buff_b1.Text == "X" then --off
+buff_b1.Text = ""
+_G.buff_b1 = false
+end
+end)
+
+spawn(function()
+    while task.wait() do    
+            pcall(function()    
+            if _G.buff_b1 then
+                    game:GetService("Workspace").Map["WaterBase-Plane"].Size = Vector3.new(1000,112,1000)
+                else
+                    game:GetService("Workspace").Map["WaterBase-Plane"].Size = Vector3.new(1000,80,1000)
+                end         
+        end)
+    end
+end)
+
+buff_f2.Parent = b_page13
+buff_f2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+buff_f2.Position = UDim2.new(0, 0, 0.1700000000, 0)
+buff_f2.Size = UDim2.new(0, 498, 0, 30)
+buff_f2.BorderColor3 = Color3.fromRGB(250, 250, 250)
+buff_f2.Font = Enum.Font.Ubuntu
+buff_f2.Text = "   Mink V4"
+buff_f2.TextColor3 = Color3.fromRGB(255, 255, 255)
+buff_f2.TextSize = 14.000
+buff_f2.TextWrapped = true
+buff_f2.TextXAlignment = Enum.TextXAlignment.Left
+
+buff_b2.Name = "buff_b2"
+buff_b2.Parent = buff_f2
+buff_b2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+buff_b2.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+buff_b2.Size = UDim2.new(0, 20, 0, 20)
+buff_b2.BorderColor3 = Color3.fromRGB(250, 250, 250)
+buff_b2.Font = Enum.Font.SourceSans
+buff_b2.Text = ""
+buff_b2.TextColor3 = Color3.fromRGB(250, 250, 25)
+buff_b2.TextSize = 30.000
+buff_b2.MouseButton1Down:connect(function()
+--on off 
+if buff_b2.Text == "" then --on
+buff_b2.Text = "X"
+_G.buff_b2 = true
+sk1.Visible = true
+elseif buff_b2.Text == "X" then --off
+buff_b2.Text = ""
+_G.buff_b2 = false
+sk1.Visible = false
+end
+end)
+
+
+sk1 = Instance.new("TextButton")
+sk1.Name = "sk1"
+sk1.Parent = NTTGUI
+sk1.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+sk1.BorderSizePixel = 0
+sk1.Position = UDim2.new(0.85162201, 0, 0.383285708, 0)
+sk1.Size = UDim2.new(0, 40, 0, 40)
+sk1.Font = Enum.Font.Ubuntu
+sk1.Text = ""
+sk1.TextColor3 = Color3.fromRGB(250, 255, 250)
+sk1.TextSize = 20.000
+sk1.BackgroundTransparency = 1.000
+sk1.MouseButton1Down:connect(function()
+
+local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0), {CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame *CFrame.new(0,0,-50)}) tween:Play()       
+end)
+sk1.Visible = false
+sk1.Active = false
+sk1.Draggable = false
+
+buff_f3.Parent = b_page13
+buff_f3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+buff_f3.Position = UDim2.new(0, 0, 0.2400000000, 0)
+buff_f3.Size = UDim2.new(0, 498, 0, 30)
+buff_f3.BorderColor3 = Color3.fromRGB(250, 250, 250)
+buff_f3.Font = Enum.Font.Ubuntu
+buff_f3.Text = "   Sky V3"
+buff_f3.TextColor3 = Color3.fromRGB(255, 255, 255)
+buff_f3.TextSize = 14.000
+buff_f3.TextWrapped = true
+buff_f3.TextXAlignment = Enum.TextXAlignment.Left
+
+buff_b3.Name = "buff_b3"
+buff_b3.Parent = buff_f3
+buff_b3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+buff_b3.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+buff_b3.Size = UDim2.new(0, 20, 0, 20)
+buff_b3.BorderColor3 = Color3.fromRGB(250, 250, 250)
+buff_b3.Font = Enum.Font.SourceSans
+buff_b3.Text = ""
+buff_b3.TextColor3 = Color3.fromRGB(250, 250, 250)
+buff_b3.TextSize = 30.000
+buff_b3.MouseButton1Down:connect(function()
+--on off 
+if buff_b3.Text == "" then --on
+buff_b3.Text = "X"
+_G.buff_b3 = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.buff_b3 then --script
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = 60
+else
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = 25
+end
+end)
+elseif buff_b3.Text == "X" then --off
+buff_b3.Text = ""
+_G.buff_b3 = false
+end
+end)
+
+
+buff_f4.Parent = b_page13
+buff_f4.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+buff_f4.Position = UDim2.new(0, 0, 0.3100000000, 0)
+buff_f4.Size = UDim2.new(0, 498, 0, 30)
+buff_f4.BorderColor3 = Color3.fromRGB(250, 250, 250)
+buff_f4.Font = Enum.Font.Ubuntu
+buff_f4.Text = "   Ifn Jump"
+buff_f4.TextColor3 = Color3.fromRGB(255, 255, 255)
+buff_f4.TextSize = 14.000
+buff_f4.TextWrapped = true
+buff_f4.TextXAlignment = Enum.TextXAlignment.Left
+
+buff_b4.Name = "buff_b4"
+buff_b4.Parent = buff_f4
+buff_b4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+buff_b4.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+buff_b4.Size = UDim2.new(0, 20, 0, 20)
+buff_b4.BorderColor3 = Color3.fromRGB(250, 250, 250)
+buff_b4.Font = Enum.Font.SourceSans
+buff_b4.Text = ""
+buff_b4.TextColor3 = Color3.fromRGB(250, 250, 250)
+buff_b4.TextSize = 30.000
+buff_b4.MouseButton1Down:connect(function()
+--on off 
+if buff_b4.Text == "" then --on
+buff_b4.Text = "X"
+_G.ifnjump = true
+elseif buff_b4.Text == "X" then --off
+buff_b4.Text = ""
+_G.ifnjump = false
+end
+end)
+
+-- // mob
+mob_t1.Parent = b_page14
+mob_t1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+mob_t1.Position = UDim2.new(0, 0, 0.0300000000, 0)
+mob_t1.Size = UDim2.new(0, 498, 0, 30)
+mob_t1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+mob_t1.Font = Enum.Font.Ubuntu
+mob_t1.Text = "Mob"
+mob_t1.TextColor3 = Color3.fromRGB(255, 255, 255)
+mob_t1.TextSize = 14.000
+mob_t1.TextWrapped = true
+
+
+mob_f1.Parent = b_page14
+mob_f1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+mob_f1.Position = UDim2.new(0, 0, 0.1000000000, 0)
+mob_f1.Size = UDim2.new(0, 498, 0, 30)
+mob_f1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+mob_f1.Font = Enum.Font.Ubuntu
+mob_f1.Text = "   Auto Farm Mob"
+mob_f1.TextColor3 = Color3.fromRGB(255, 255, 255)
+mob_f1.TextSize = 14.000
+mob_f1.TextWrapped = true
+mob_f1.TextXAlignment = Enum.TextXAlignment.Left
+
+mob_b1.Name = "mob_b1"
+mob_b1.Parent = mob_f1
+mob_b1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+mob_b1.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+mob_b1.Size = UDim2.new(0, 20, 0, 20)
+mob_b1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+mob_b1.Font = Enum.Font.SourceSans
+mob_b1.Text = ""
+mob_b1.TextColor3 = Color3.fromRGB(250, 250, 250)
+mob_b1.TextSize = 30.000
+mob_b1.MouseButton1Down:connect(function()
+--on off 
+if mob_b1.Text == "" then --on
+mob_b1.Text = "X"
+_G.mob_b1 = true
+elseif mob_b1.Text == "X" then --off
+mob_b1.Text = ""
+_G.mob_b1 = false
+stoptp()
+end
+end)
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.mob_b1 then --script
+for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
+      if v.ClassName == "Model" then --name mob
+      local pos = v.HumanoidRootPart --check pos
+                    local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                  if Distance < 500 then
+                  Speed = 725
+                  elseif Distance < 200 then
+                  Speed = 7000
+                  elseif Distance < 150 then
+                  Speed = 200000
+                  elseif Distance < 1000 then
+                        Speed = 400        
+    elseif Distance >= 1500 then
+                  Speed = 100
+           end
+            
+  
+     usetool()
+       if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 500 then
+       if v.Humanoid.Health > 0 then 
+       jump()
+       click() -- click          
+       v.Humanoid:ChangeState(14)
+      v.HumanoidRootPart.Size = Vector3.new(50, 50, 10)     --size hix box  
+      v.HumanoidRootPart.CanCollide = false                                                
+v.Head.CanCollide = false                                 
+if v.Humanoid:FindFirstChild("Animator") then
+                            v.Humanoid.Animator:Destroy()
+                        end
+                        
+game:GetService("TweenService"):Create(
+                        game.Players.LocalPlayer.Character.HumanoidRootPart,
+                        TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
+                        {CFrame = v.HumanoidRootPart.CFrame* CFrame.new(0, st_b5.Text, 0) }
+                    ):Play()       
+                                      
+                 end end end end 
+             
+end
+end)
+
+game:GetService('RunService').RenderStepped:connect(function()
+if  _G.mob_b1 then
+  click() -- click        
+end end)
+
+mob_f2.Parent = b_page14
+mob_f2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+mob_f2.Position = UDim2.new(0, 0, 0.1700000000, 0)
+mob_f2.Size = UDim2.new(0, 498, 0, 30)
+mob_f2.BorderColor3 = Color3.fromRGB(250, 250, 250)
+mob_f2.Font = Enum.Font.Ubuntu
+mob_f2.Text = "   Auto Kill Sea Beast | Beta"
+mob_f2.TextColor3 = Color3.fromRGB(255, 255, 255)
+mob_f2.TextSize = 14.000
+mob_f2.TextWrapped = true
+mob_f2.TextXAlignment = Enum.TextXAlignment.Left
+
+mob_b2.Name = "mob_b2"
+mob_b2.Parent = mob_f2
+mob_b2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+mob_b2.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+mob_b2.Size = UDim2.new(0, 20, 0, 20)
+mob_b2.BorderColor3 = Color3.fromRGB(250, 250, 250)
+mob_b2.Font = Enum.Font.SourceSans
+mob_b2.Text = ""
+mob_b2.TextColor3 = Color3.fromRGB(250, 250, 250)
+mob_b2.TextSize = 30.000
+mob_b2.MouseButton1Down:connect(function()
+--on off 
+if mob_b2.Text == "" then --on
+mob_b2.Text = "X"
+_G.mob_b2 = true
+elseif mob_b2.Text == "X" then --off
+mob_b2.Text = ""
+_G.mob_b2 = false
+end
+end)
+
+-- // auto kill sea beat
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.mob_b2 then --script
+for i,v in pairs(game.Workspace.SeaBeasts:GetChildren()) do
+  if v:FindFirstChild("HumanoidRootPart") then
+  jump()
+  game.Players.LocalPlayer.Character.Animate.Disabled = false
+game.Players.LocalPlayer.Character.Humanoid.Sit = false
+     local Distance = (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+               if Distance <200 then
+                        Speed = 120000
+                  elseif Distance > 1500 then
+                        Speed = 100
+                    end                    
+                   local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Distance/Speed), {CFrame = v.HumanoidRootPart.CFrame  }) tween:Play()                                                           
+end end end end)
+
+
+spawn(function() -- skill auto
+    while task.wait() do       
+            pcall(function()
+            if _G.mob_b2 then
+            for i,v in pairs(game.Workspace.SeaBeasts:GetChildren()) do
+  if v:FindFirstChild("HumanoidRootPart") then
+if  (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 200 then
+ mele()
+   Skill()
+   wait(1)
+   fruit()
+   Skill()
+   wait(1)
+   sword()
+   Skill()
+end end end end end) end end)    
+
+     mob_f3.Parent = b_page14
+mob_f3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+mob_f3.Position = UDim2.new(0, 0, 0.2400000000, 0)
+mob_f3.Size = UDim2.new(0, 498, 0, 30)
+mob_f3.BorderColor3 = Color3.fromRGB(250, 250, 250)
+mob_f3.Font = Enum.Font.Ubuntu
+mob_f3.Text = "   Auto Hunt Elite | Not Have"
+mob_f3.TextColor3 = Color3.fromRGB(255, 255, 255)
+mob_f3.TextSize = 14.000
+mob_f3.TextWrapped = true
+mob_f3.TextXAlignment = Enum.TextXAlignment.Left
+
+mob_b3.Name = "mob_b3"
+mob_b3.Parent = mob_f3
+mob_b3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+mob_b3.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+mob_b3.Size = UDim2.new(0, 20, 0, 20)
+mob_b3.BorderColor3 = Color3.fromRGB(250, 250, 250)
+mob_b3.Font = Enum.Font.SourceSans
+mob_b3.Text = ""
+mob_b3.TextColor3 = Color3.fromRGB(250, 250, 250)
+mob_b3.TextSize = 30.000
+mob_b3.MouseButton1Down:connect(function()
+--on off 
+if mob_b3.Text == "" then --on
+mob_b3.Text = "X"
+_G.mob_b3 = true
+elseif mob_b3.Text == "X" then --off
+mob_b3.Text = ""
+_G.mob_b3 = false
+end
+end)
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.mob_b3 then --script
+if game.PlaceId == 7449423635 then -- sea3
+
+
+
+end end end)
+
+
+
+
+
+
+-----------------------------------------------------------------------
 
 -- // function Button
 
@@ -8199,6 +8314,8 @@ local function LDLMGWH_fake_script() -- // Farm
 		b_page10.Visible = false
 		b_page11.Visible = false
 		b_page12.Visible = false
+		b_page13.Visible = false
+		b_page14.Visible = false
     TextLabel.Text = "   NTT HUB | Farm"
 	end)
 end
@@ -8218,6 +8335,8 @@ local function OJTG_fake_script() -- scripts.LocalScript
 		b_page10.Visible = false
 		b_page11.Visible = false
 		b_page12.Visible = false
+		b_page13.Visible = false
+		b_page14.Visible = false
     TextLabel.Text = "   NTT HUB | Stat" 
 	end)
 end
@@ -8238,6 +8357,8 @@ local function OJTG1_fake_script() -- scripts.LocalScript
 		b_page10.Visible = false
 		b_page11.Visible = false
 		b_page12.Visible = false
+		b_page13.Visible = false
+		b_page14.Visible = false
     TextLabel.Text = "   NTT HUB | Raid" 
 	end)
 end
@@ -8258,7 +8379,9 @@ local function OJTG2_fake_script() -- scripts.LocalScript
 		b_page10.Visible = false
 		b_page11.Visible = false
 		b_page12.Visible = false
-    TextLabel.Text = "   NTT HUB | Miss - Shop" 
+		b_page13.Visible = false
+		b_page14.Visible = false
+    TextLabel.Text = "   NTT HUB | Shop" 
 	end)
 end
 
@@ -8278,6 +8401,8 @@ local function OJTG3_fake_script() -- scripts.LocalScript
 		b_page10.Visible = false
 		b_page11.Visible = false
 		b_page12.Visible = false
+		b_page13.Visible = false
+		b_page14.Visible = false
     TextLabel.Text = "   NTT HUB | Esp - Fruit" 
 	end)
 end
@@ -8298,6 +8423,8 @@ local function OJTG4_fake_script() -- scripts.LocalScript
 		b_page10.Visible = false
 		b_page11.Visible = false
 		b_page12.Visible = false
+		b_page13.Visible = false
+		b_page14.Visible = false
     TextLabel.Text = "   NTT HUB | Mob - Get Item" 
 	end)
 end
@@ -8318,6 +8445,8 @@ local function OJTG5_fake_script() -- scripts.LocalScript
 		b_page10.Visible = false
 		b_page11.Visible = false
 		b_page12.Visible = false
+		b_page13.Visible = false
+		b_page14.Visible = false
     TextLabel.Text = "   NTT HUB | Combat" 
 	end)
 end
@@ -8338,6 +8467,8 @@ local function OJTG6_fake_script() -- scripts.LocalScript
 		b_page10.Visible = false
 		b_page11.Visible = false
 		b_page12.Visible = false
+		b_page13.Visible = false
+		b_page14.Visible = false
     TextLabel.Text = "   NTT HUB | Teleport" 
 	end)
 end
@@ -8358,11 +8489,13 @@ local function OJTG7_fake_script() -- scripts.LocalScript
 		b_page10.Visible = false
 		b_page11.Visible = false
 		b_page12.Visible = false
+		b_page13.Visible = false
+		b_page14.Visible = false
     TextLabel.Text = "   NTT HUB | Setting" 
 	end)
 end
 
-coroutine.wrap(OJTG7_fake_script)() -- Setting
+coroutine.wrap(OJTG7_fake_script)() -- miss
 local function OJTG8_fake_script() -- scripts.LocalScript 
 	local script = Instance.new('LocalScript', b_10)
 	script.Parent.MouseButton1Down:connect(function()   
@@ -8378,10 +8511,12 @@ local function OJTG8_fake_script() -- scripts.LocalScript
 		b_page10.Visible = true
 		b_page11.Visible = false
 		b_page12.Visible = false
-    TextLabel.Text = "   NTT HUB | Miss 2" 
+		b_page13.Visible = false
+		b_page14.Visible = false
+    TextLabel.Text = "   NTT HUB | Miss" 
 	end)
 end
-coroutine.wrap(OJTG8_fake_script)() -- Setting
+coroutine.wrap(OJTG8_fake_script)() -- Mooon
 local function OJTG9_fake_script() -- scripts.LocalScript 
 	local script = Instance.new('LocalScript', b_11)
 	script.Parent.MouseButton1Down:connect(function()   
@@ -8397,6 +8532,8 @@ local function OJTG9_fake_script() -- scripts.LocalScript
 		b_page10.Visible = false
 		b_page11.Visible = true
 		b_page12.Visible = false
+		b_page13.Visible = false
+		b_page14.Visible = false
     TextLabel.Text = "   NTT HUB | Moon - Race" 
     if game.PlaceId == 2753915549 then -- sea1
     TextLabel.Text = "   NTT HUB | Moon"
@@ -8420,11 +8557,57 @@ local function OJTG10_fake_script() -- scripts.LocalScript
 		b_page10.Visible = false
 		b_page11.Visible = false
 		b_page12.Visible = true
+		b_page13.Visible = false
+		b_page14.Visible = false
     TextLabel.Text = "   NTT HUB | Share" 
 	end)
 end
 
-coroutine.wrap(OJTG10_fake_script)() -- Setting
+coroutine.wrap(OJTG10_fake_script)() -- Buff
+local function OJTG11_fake_script() -- scripts.LocalScript 
+	local script = Instance.new('LocalScript', b_13)
+	script.Parent.MouseButton1Down:connect(function()   
+	b_page1.Visible = false
+		b_page2.Visible = false
+		b_page3.Visible = false
+		b_page4.Visible = false
+		b_page5.Visible = false
+		b_page6.Visible = false
+		b_page7.Visible = false
+		b_page8.Visible = false
+		b_page9.Visible = false
+		b_page10.Visible = false
+		b_page11.Visible = false
+		b_page12.Visible = false
+		b_page13.Visible = true
+		b_page14.Visible = false
+    TextLabel.Text = "   NTT HUB | Buff" 
+	end)
+end
+
+coroutine.wrap(OJTG11_fake_script)() 
+local function OJTG12_fake_script() -- scripts.LocalScript 
+	local script = Instance.new('LocalScript', b_14)
+	script.Parent.MouseButton1Down:connect(function()   
+	b_page1.Visible = false
+		b_page2.Visible = false
+		b_page3.Visible = false
+		b_page4.Visible = false
+		b_page5.Visible = false
+		b_page6.Visible = false
+		b_page7.Visible = false
+		b_page8.Visible = false
+		b_page9.Visible = false
+		b_page10.Visible = false
+		b_page11.Visible = false
+		b_page12.Visible = false
+		b_page13.Visible = false
+		b_page14.Visible = true
+    TextLabel.Text = "   NTT HUB | Mob" 
+	end)
+end
+
+coroutine.wrap(OJTG12_fake_script)() 
 
 game:GetService('RunService').RenderStepped:connect(function()
 if game:GetService("ReplicatedStorage").Effect.Container:FindFirstChild("Death") then
