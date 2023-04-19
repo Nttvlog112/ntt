@@ -214,17 +214,17 @@ _G.check1 = true
                                     
                                     ["fields"]= {                    
                                     {
-                                            ["name"]= "Check Name Player",
+                                            ["name"]= "Name Player",
                                             ["value"]= "```Name : "..game.Players.LocalPlayer.Name.." | "..game.Players.LocalPlayer.DisplayName.."```";
                                             ["inline"]= true
                                         },                             
                                    {
-                                            ["name"]= "Check Key",
+                                            ["name"]= "Key",
                                             ["value"]= "```Key : Nhập Key Đúng```",
                                             ["inline"]= true
                                         },                                                                  
                                     {
-                                            ["name"]= "Check Game Play",
+                                            ["name"]= "Game Play",
                                             ["value"]= "```Link : https://www.roblox.com/games/"..Game.PlaceId.."/```",
                                             ["inline"]= true
                                         },
@@ -255,12 +255,12 @@ _G.check2= true
                                     
                                     ["fields"]= {                    
                                     {
-                                            ["name"]= "Check Name Player",
+                                            ["name"]= "Name Player",
                                             ["value"]= "```Name : "..game.Players.LocalPlayer.Name.." | "..game.Players.LocalPlayer.DisplayName.."```";
                                             ["inline"]= true
                                         },                             
                                    {
-                                            ["name"]= "Check Key",
+                                            ["name"]= "Key",
                                             ["value"]= "```Key : Nhập Key Sai```",
                                             ["inline"]= true
                                         },                                                                                                  
@@ -504,7 +504,12 @@ wait(3)--chrck time kicked
                                             ["value"]= "".."game.ReplicatedStorage['__ServerBrowser']:InvokeServer('teleport', '"..Job.."')".."",
                                             ["inline"]= true
                                         },              
-                                           
+
+                                      {
+                                            ["name"]= "Game Play",
+                                            ["value"]= "```Link : https://www.roblox.com/games/"..Game.PlaceId.."/```",
+                                            ["inline"]= true
+                                        },     
                                     }              
                                 }
                             }
