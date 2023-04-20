@@ -312,11 +312,11 @@ mr_t2 = Instance.new("TextLabel")
 mr_moon = Instance.new("TextLabel") 
 
 mr_f1 = Instance.new("TextLabel") 
-mr_b1 = Instance.new("TextLabel") 
+mr_b1 = Instance.new("TextButton") 
 mr_f2 = Instance.new("TextLabel") 
-mr_b2 = Instance.new("TextLabel") 
+mr_b2 = Instance.new("TextButton") 
 mr_f3 = Instance.new("TextLabel") 
-mr_b3 = Instance.new("TextLabel") 
+mr_b3 = Instance.new("TextButton") 
 
 -- // buff
 buff_t1 = Instance.new("TextLabel") 
@@ -970,7 +970,7 @@ tool("Buddha-Buddha")
 tool("Love-Love")
 tool("Spider-Spider")
 tool("Phoenix-Phoenix")
-tool("Protal-Protal")
+tool("Portal-Portal")
 tool("Rumble-Rumble")
 tool("Paw-Paw")
 tool("Blizzard-Blizzard")
@@ -7637,16 +7637,29 @@ mr_moon.TextSize = 14.000
 mr_moon.TextWrapped = true
 mr_moon.TextXAlignment = Enum.TextXAlignment.Left
 
+if game.PlaceId == 7449423635 then -- sea3
+
 game:GetService('RunService').RenderStepped:connect(function()
-mr_cmoon.Text = (""..game:GetService("Lighting").FantasySky.MoonTextureId)
-    end) 
-    
-   game:GetService('RunService').RenderStepped:connect(function()
- if mr_cmoon == "http://www.roblox.com/asset/?id=9709149431" then
- mr_moon.Text = "   Full Moon"
- else
- mr_moon.Text = "   Not Full Moon"
- end end)
+
+mr_cmoon.Text = (""..game:GetService("Lighting").Sky.MoonTextureId)
+
+ if mr_cmoon.Text=="http://www.roblox.com/asset/?id=9709149431" then
+    mr_moon.Text = "   Full Moon 100%";
+elseif mr_cmoon.Text=="http://www.roblox.com/asset/?id=9709149052" then
+    mr_moon.Text = "   Full Moon 75%";
+elseif mr_cmoon.Text=="http://www.roblox.com/asset/?id=9709143733" then
+    mr_moon.Text = "   Full Moon 50%";
+elseif mr_cmoon.Text=="http://www.roblox.com/asset/?id=9709150401" then
+    mr_moon.Text = "   Full Moon 25%";
+elseif mr_cmoon.Text=="http://www.roblox.com/asset/?id=9709149680" then
+    mr_moon.Text = "   Full Moon 10%";
+else
+    mr_moon.Text = "Full Moon 0%";
+end
+ end)
+ 
+ end--sea3
+ 
  
  if game.PlaceId == 4442272183 or game.PlaceId == 7449423635 then
 
@@ -7691,6 +7704,7 @@ _G.mr_b1 = true
 elseif mr_b1.Text == "X" then --off
 mr_b1.Text = ""
 _G.mr_b1 = false
+stoptp()
 end
 end)
 
@@ -7700,7 +7714,7 @@ if game.PlaceId == 4442272183 then -- sea2
 TP1(CFrame.new(-1990.1029052734375, 125.83656311035156, -71.35701751708984))
 jump()
 elseif game.PlaceId == 7449423635 then -- sea3
-TP1(CFrame.new(mr_b2))
+TP1(CFrame.new(2955.346435546875, 2282.495361328125, -7216.72265625))
 jump()
 end end end)
 
@@ -7975,7 +7989,7 @@ buff_b2.Size = UDim2.new(0, 20, 0, 20)
 buff_b2.BorderColor3 = Color3.fromRGB(250, 250, 250)
 buff_b2.Font = Enum.Font.SourceSans
 buff_b2.Text = ""
-buff_b2.TextColor3 = Color3.fromRGB(250, 250, 25)
+buff_b2.TextColor3 = Color3.fromRGB(250, 250, 250)
 buff_b2.TextSize = 30.000
 buff_b2.MouseButton1Down:connect(function()
 --on off 
