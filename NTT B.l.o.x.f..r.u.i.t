@@ -3930,7 +3930,9 @@ end  end end
                                         
              end end) end end)               
 
-game:GetService('RunService').RenderStepped:connect(function()
+spawn(function()
+    while task.wait(1) do
+        pcall(function()
 if _G.ef_b8 then --script
 if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Bomb Fruit") or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Bomb Fruit") then
                     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Bomb-Bomb",game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Bomb Fruit"))
@@ -4074,7 +4076,8 @@ if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Bomb Fruit")
                 if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Leopard Fruit") or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Leopard Fruit") then
                 mele()
                     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Leopard-Leopard",game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Leopard Fruit"))
-                end end end)
+                end 
+end end) end end)
 
 
 ef_f7.Parent = b_page5
@@ -4888,11 +4891,11 @@ game:GetService('RunService').RenderStepped:connect(function()
                     Request(Final1)
                                  
     elseif not game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Fist of Darkness") then 
-      if game:GetService("Workspace"):FindFirstChild("Chest2") then
-     TPchest( game:GetService("Workspace"):FindFirstChild("Chest2").CFrame)
-     end
-     if game:GetService("Workspace"):FindFirstChild("Chest1") then
+      if game:GetService("Workspace"):FindFirstChild("Chest1") then
      TPchest( game:GetService("Workspace"):FindFirstChild("Chest1").CFrame)
+     end
+     if game:GetService("Workspace"):FindFirstChild("Chest2") then
+     TPchest( game:GetService("Workspace"):FindFirstChild("Chest2").CFrame)
      end
      if game:GetService("Workspace"):FindFirstChild("Chest3") then
 TPchest( game:GetService("Workspace"):FindFirstChild("Chest3").CFrame)
@@ -4947,11 +4950,11 @@ game:GetService('RunService').RenderStepped:connect(function()
                     Request(Final1)
                                  
     elseif not game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("God's Chalice") then 
-      if game:GetService("Workspace"):FindFirstChild("Chest2") then
-     TPchest( game:GetService("Workspace"):FindFirstChild("Chest2").CFrame)
-     end
-     if game:GetService("Workspace"):FindFirstChild("Chest1") then
+      if game:GetService("Workspace"):FindFirstChild("Chest1") then
      TPchest( game:GetService("Workspace"):FindFirstChild("Chest1").CFrame)
+     end
+     if game:GetService("Workspace"):FindFirstChild("Chest2") then
+     TPchest( game:GetService("Workspace"):FindFirstChild("Chest2").CFrame)
      end
      if game:GetService("Workspace"):FindFirstChild("Chest3") then
 TPchest( game:GetService("Workspace"):FindFirstChild("Chest3").CFrame)
@@ -5184,9 +5187,9 @@ mi_f6.Visible = false
 end
 if game.PlaceId == 4442272183 then -- sea2
 mi_f2.Text = "   Auto Ectoplasm"
-mi_f3.Text = "   Auto Sharkman Karate | Not have"
-mi_f4.Text = "   Auto Death Step | Not have"
-mi_f5.Text = "   Auto Rengoku | Not have"
+mi_f3.Text = "   Auto Sharkman Karate | Chưa Có"
+mi_f4.Text = "   Auto Death Step | Chưa Có"
+mi_f5.Text = "   Auto Rengoku | Chưa Có"
 mi_f6.Visible = false
 end
 if game.PlaceId == 7449423635 then -- sea3
@@ -5360,30 +5363,38 @@ _G.item6=false
 _G.item7=false
 _G.item8= false
 
+mi_f1.Text = "   Auto Get All Item Boss | Coat"
 game:GetService('RunService').RenderStepped:connect(function()
 for i, v in pairs(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("getInventoryWeapons")) do
  if v.Name == "Coat" then
  _G.item1= true
+ mi_f1.Text = "   Auto Get All Item Boss | Wardens Sword"
  end
  if v.Name == "Wardens Sword" then
  _G.item2 = true
+ mi_f1.Text = "   Auto Get All Item Boss | Pink Coat"
  end
  if v.Name == "Pink Coat" then
  _G.item3= true 
+ mi_f1.Text = "   Auto Get All Item Boss | Refined Musket"
  end
    if v.Name == "Refined Musket" then
     _G.item4= true
+    mi_f1.Text = "   Auto Get All Item Boss | Trdent"
     end
     if v.Name == "Trident" then
     _G.item5= true
+    mi_f1.Text = "   Auto Get All Item Boss | Bazzoka"
     end
     if v.Name == "Bazzoka" then
     _G.item6= true
+    mi_f1.Text = "   Auto Get All Item Boss | Pole (1nd Form"
     end
     if v.Name == "Pole (1nd Form" then
     _G.item7 = true
     end  
     if v.Name == "Cool Shades" then
+    mi_f1.Text = "   You Complete Get All Item Boss Sea 1"
     _G.item8= true
     end
 end end)
@@ -5491,7 +5502,7 @@ spawn(function()
             elseif string.len(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner")) == 86 then
                 mi_f2.Text = ("   Auto Katakuri | Mob Killed Cake : "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,39))
             else
-                mi_f2.Text = ("   Auto Katakuri | Cake Prince Spawned")
+                mi_f2.Text = ("   Auto Katakuri | Have")
             end
         end)
     end
@@ -8276,7 +8287,7 @@ mob_f2.Position = UDim2.new(0, 0, 0.1700000000, 0)
 mob_f2.Size = UDim2.new(0, 498, 0, 30)
 mob_f2.BorderColor3 = Color3.fromRGB(250, 250, 250)
 mob_f2.Font = Enum.Font.Ubuntu
-mob_f2.Text = "   Auto Kill Sea Beast | Beta"
+mob_f2.Text = "   Auto Kill Sea Beast"
 mob_f2.TextColor3 = Color3.fromRGB(255, 255, 255)
 mob_f2.TextSize = 14.000
 mob_f2.TextWrapped = true
@@ -8304,6 +8315,15 @@ end
 end)
 
 -- // auto kill sea beat
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.mob_b2 then --script
+for i,v in pairs(game.Workspace.SeaBeasts:GetChildren()) do
+  if v:FindFirstChild("HumanoidRootPart") then
+  mob_f2.Text = "   Auto Kill Sea Beast | Have"
+  else
+  mob_f2.Text = "   Auto Kill Sea Beast | Not Have"
+  end end end end)
+
 game:GetService('RunService').RenderStepped:connect(function()
 if _G.mob_b2 then --script
 for i,v in pairs(game.Workspace.SeaBeasts:GetChildren()) do
@@ -8344,7 +8364,7 @@ mob_f3.Position = UDim2.new(0, 0, 0.2400000000, 0)
 mob_f3.Size = UDim2.new(0, 498, 0, 30)
 mob_f3.BorderColor3 = Color3.fromRGB(250, 250, 250)
 mob_f3.Font = Enum.Font.Ubuntu
-mob_f3.Text = "   Auto Hunt Elite | Not Have"
+mob_f3.Text = "   Auto Hunt Elite | Chưa Làm"
 mob_f3.TextColor3 = Color3.fromRGB(255, 255, 255)
 mob_f3.TextSize = 14.000
 mob_f3.TextWrapped = true
