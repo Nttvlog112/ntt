@@ -7307,7 +7307,7 @@ _G.bringmob = true
             if _G.bringmob then       
             if game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible == true then                 
                 for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
-                    if v.Name == shop  and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= _G.distance then                           
+                    if v.Name == NameMob  and (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= _G.distance then                           
 if   st_b5.Text == "0" then                        
  v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
  elseif st_b5.Text == "10" then
