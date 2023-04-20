@@ -5193,7 +5193,7 @@ if game.PlaceId == 7449423635 then -- sea3
 mi_f2.Text = "   Auto Katakuri"
 mi_f3.Text = "   Auto Bone"
 mi_f4.Text = "   Auto Conjured Cocoa"
-mi_f5.Text = "   Auto Yama | Not have"
+mi_f5.Text = "   Auto Sword Buddy"
 mi_f6.Visible = false
 end
 
@@ -5776,6 +5776,43 @@ v.HumanoidRootPart.Size = Vector3.new(60,60,10)
   sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius",math.huge)                    
     end end end end end) end end)           
                  
+    game:GetService('RunService').RenderStepped:connect(function()
+if _G.mi_b5 then --script
+
+TP1(CFrame.new(-728.7476806640625, 378.3321838378906, -10972.46484375))
+jump()
+for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
+      if v.Name == "Cake Queen [Lv. 2175]" then
+      local pos = v.HumanoidRootPart --check pos
+                    local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                  if Distance < 500 then
+                  Speed = 725
+                  elseif Distance < 200 then
+                  Speed = 7000
+                  elseif Distance < 150 then
+                  Speed = 200000
+                  elseif Distance < 1000 then
+                        Speed = 400        
+    elseif Distance >= 1500 then
+                  Speed = 100
+           end
+            
+       if v.Humanoid.Health > 0 then -- check health
+     usetool()
+     click() -- click          
+     jump()
+       v.Humanoid:ChangeState(14)
+      v.HumanoidRootPart.Size = Vector3.new(50, 50, 10)     --size hix box  
+      v.HumanoidRootPart.CanCollide = false                                                
+
+game:GetService("TweenService"):Create(
+                        game.Players.LocalPlayer.Character.HumanoidRootPart,
+                        TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
+                        {CFrame = v.HumanoidRootPart.CFrame* CFrame.new(0, st_b5.Text, 0) }
+                    ):Play()       
+                    
+                    end end end
+end end)                                             
 
 end -- sea 3
 
