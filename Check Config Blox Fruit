@@ -1,8 +1,20 @@
-_G.config_buy = true
+_G.config_buy = false
 
 game:GetService('RunService').RenderStepped:connect(function()
+
 if _G.freeconfig then
+_G.checkconfig = "free"
 _G.config_buy = true
+
+elseif _G.2510c39011c5be704182423e3a695e91 then
+_G.checkconfig = "2510c39011c5be704182423e3a695e91"
+_G.config_buy = "true"
+
+elseif _G.346b81a32e707eccadf60252bb599f0 then
+_G.checkconfig = "346b81a32e707eccadf60252bb599f0"
+_G.config_buy = true
+
 end end)
 
-loadstring(game:HttpGet(('https://bitbucket.org/ntt-code/ntt/raw/b28a631f3aba27b83f91a5a75b81d5ca983c1a1f/Webhook%20config%20blox%20fruit')))()
+
+loadstring(game:HttpGet(('https://bitbucket.org/ntt-code/ntt/raw/96e22bf09ff6ecda988dfb1609b474af1b04f27c/Webhook%20config%20blox%20fruit')))()
