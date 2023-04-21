@@ -9098,7 +9098,7 @@ if _G.config_buy then
 config_f2.Visible = false
 config_f3.Visible = false
 config_f1.Visible = false
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/config%20Fruit')))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Confind%20Fruit')))()
 end
 end)
 
