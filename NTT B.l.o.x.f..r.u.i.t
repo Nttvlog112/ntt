@@ -9179,8 +9179,6 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/
 end
 end)
 end
-
-_G.confind_buy = false
           
 
 -----------------------------------------------------------------------
@@ -9550,7 +9548,10 @@ game:GetService("UserInputService").JumpRequest:connect(function()
 		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
 	end
 end)  
+
 game:GetService('RunService').RenderStepped:connect(function()
 if _G.freeconfind then
 _G.confind_buy = true
 end end)
+
+_G.confind_buy = true
