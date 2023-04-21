@@ -24,6 +24,7 @@ local b_page6 = Instance.new("ScrollingFrame") --item - fruit
 local b_page7 = Instance.new("ScrollingFrame") --Comabt
 local b_page12= Instance.new("ScrollingFrame") --share
 local b_page13= Instance.new("ScrollingFrame") --share
+local b_page15= Instance.new("ScrollingFrame") --confind
 local b_page8 = Instance.new("ScrollingFrame") --teleport
 local b_page9 = Instance.new("ScrollingFrame") --setting
 
@@ -45,6 +46,7 @@ local b_6 = Instance.new("TextButton")-- item
 local b_14 = Instance.new("TextButton")-- Mob
 local b_7 = Instance.new("TextButton")--Comnat
 local b_12 = Instance.new("TextButton")--share
+local b_15= Instance.new("TextButton")--confind
 local b_8 = Instance.new("TextButton")--teleport
 local b_9 = Instance.new("TextButton")--setting
 
@@ -405,6 +407,17 @@ share_b6= Instance.new("TextButton")
 share_f7=Instance.new("TextLabel")
 share_b7= Instance.new("TextButton")
 
+-- // confind
+confind_t1 = Instance.new("TextLabel")
+confind_t2 = Instance.new("TextLabel")
+
+confind_f1 = Instance.new("TextLabel")
+confind_b1 = Instance.new("TextButton")
+confind_f2= Instance.new("TextLabel")
+confind_b2 = Instance.new("TextButton")
+confind_f3= Instance.new("TextLabel")
+confind_b3 = Instance.new("TextButton")
+
 
 -------------------------------------------------------------------------------
 
@@ -604,10 +617,23 @@ b_12.TextSize = 14.000
 b_12.TextWrapped = false
 b_12.TextXAlignment = Enum.TextXAlignment.Left
 
+b_15.Name = "b_15"
+b_15.Parent = bar1
+b_15.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+b_15.Position = UDim2.new(0, 0, 0.600000000, 0)
+b_15.Size = UDim2.new(0, 100, 0, 25)
+b_15.Font = Enum.Font.Ubuntu
+b_15.BorderColor3 = Color3.fromRGB(250, 250, 250)
+b_15.Text = "   Confind"
+b_15.TextColor3 = Color3.fromRGB(255, 255, 255)
+b_15.TextSize = 14.000
+b_15.TextWrapped = false
+b_15.TextXAlignment = Enum.TextXAlignment.Left
+
 b_8.Name = "b_8"
 b_8.Parent = bar1
 b_8.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-b_8.Position = UDim2.new(0, 0, 0.600000000, 0)
+b_8.Position = UDim2.new(0, 0, 0.650000000, 0)
 b_8.Size = UDim2.new(0, 100, 0, 25)
 b_8.Font = Enum.Font.Ubuntu
 b_8.BorderColor3 = Color3.fromRGB(250, 250, 250)
@@ -620,7 +646,7 @@ b_8.TextXAlignment = Enum.TextXAlignment.Left
 b_9.Name = "b_9"
 b_9.Parent = bar1
 b_9.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-b_9.Position = UDim2.new(0, 0, 0.650000000, 0)
+b_9.Position = UDim2.new(0, 0, 0.700000000, 0)
 b_9.Size = UDim2.new(0, 100, 0, 25)
 b_9.Font = Enum.Font.Ubuntu
 b_9.BorderColor3 = Color3.fromRGB(250, 250, 250)
@@ -709,6 +735,17 @@ b_page10.Size = UDim2.new(0, 498, 0, 230)
 b_page10.ScrollBarThickness = 0
 b_page10.Position = UDim2.new(0.17631148, 0, 0.094285722, 0)
 b_page10.Visible = false     
+
+b_page15.Name = "b_page15" --raid
+b_page15.Parent = main
+b_page15.Active = true
+b_page15.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+b_page15.BackgroundTransparency = 1.000
+b_page15.BorderSizePixel = 0
+b_page15.Size = UDim2.new(0, 498, 0, 230)
+b_page15.ScrollBarThickness = 0
+b_page15.Position = UDim2.new(0.17631148, 0, 0.094285722, 0)
+b_page15.Visible = false     
 
 b_page11.Name = "b_page11" --raid
 b_page11.Parent = main
@@ -4759,9 +4796,15 @@ game:GetService('RunService').RenderStepped:connect(function()
 if _G.shop_b6 then --script
 local args = {
                   [1] = "ColorsDealer",
+                  [2] = "1"
+            }
+           game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+local args = {
+                  [1] = "ColorsDealer",
                   [2] = "2"
             }
            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+           
 end
 end)
 elseif shop_b6.Text == "X" then --off
@@ -9011,6 +9054,135 @@ spawn(function()
             share_b5.Text = "Share"
             share_b6.Text = "Share"
             end end end) end end)
+            
+  -- // Confind
+confind_t1.Parent = b_page15
+confind_t1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+confind_t1.Position = UDim2.new(0, 0, 0.0300000000, 0)
+confind_t1.Size = UDim2.new(0, 498, 0, 30)
+confind_t1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+confind_t1.Font = Enum.Font.Ubuntu
+confind_t1.Text = "Confind"
+confind_t1.TextColor3 = Color3.fromRGB(255, 255, 255)
+confind_t1.TextSize = 14.000
+confind_t1.TextWrapped = true
+
+confind_f1.Parent = b_page15
+confind_f1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+confind_f1.Position = UDim2.new(0, 0, 0.1000000000, 0)
+confind_f1.Size = UDim2.new(0, 498, 0, 30)
+confind_f1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+confind_f1.Font = Enum.Font.Ubuntu
+confind_f1.Text = "   Auto Find Fruit - Sever Hop"
+confind_f1.TextColor3 = Color3.fromRGB(255, 255, 255)
+confind_f1.TextSize = 14.000
+confind_f1.TextWrapped = true
+confind_f1.TextXAlignment = Enum.TextXAlignment.Left
+
+confind_b1.Name = "confind_b1"
+confind_b1.Parent = confind_f1
+confind_b1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+confind_b1.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+confind_b1.Size = UDim2.new(0, 20, 0, 20)
+confind_b1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+confind_b1.Font = Enum.Font.SourceSans
+confind_b1.Text = ""
+confind_b1.TextColor3 = Color3.fromRGB(250, 250, 250)
+confind_b1.TextSize = 30.000
+confind_b1.MouseButton1Down:connect(function()
+if _G.confind_buy then
+confind_f2.Visible = false
+confind_f3.Visible = false
+confind_f1.Visible = false
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Auto%20find%20fruit')))()
+end
+end)
+
+confind_f2.Parent = b_page15
+confind_f2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+confind_f2.Position = UDim2.new(0, 0, 0.1700000000, 0)
+confind_f2.Size = UDim2.new(0, 498, 0, 30)
+confind_f2.BorderColor3 = Color3.fromRGB(250, 250, 250)
+confind_f2.Font = Enum.Font.Ubuntu
+confind_f2.Text = "   Auto Buy Haki Color - Sever Hop"
+confind_f2.TextColor3 = Color3.fromRGB(255, 255, 255)
+confind_f2.TextSize = 14.000
+confind_f2.TextWrapped = true
+confind_f2.TextXAlignment = Enum.TextXAlignment.Left
+
+confind_b2.Name = "confind_b2"
+confind_b2.Parent = confind_f2
+confind_b2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+confind_b2.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+confind_b2.Size = UDim2.new(0, 20, 0, 20)
+confind_b2.BorderColor3 = Color3.fromRGB(250, 250, 250)
+confind_b2.Font = Enum.Font.SourceSans
+confind_b2.Text = ""
+confind_b2.TextColor3 = Color3.fromRGB(250, 250, 250)
+confind_b2.TextSize = 30.000
+confind_b2.MouseButton1Down:connect(function()
+if _G.confind_buy then
+confind_f2.Visible = false
+confind_f3.Visible = false
+confind_f1.Visible = false
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Confind%20Buy%20Haki%20Color')))()
+end
+end)
+
+confind_f3.Parent = b_page15
+confind_f3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+confind_f3.Position = UDim2.new(0, 0, 0.2400000000, 0)
+confind_f3.Size = UDim2.new(0, 498, 0, 30)
+confind_f3.BorderColor3 = Color3.fromRGB(250, 250, 250)
+confind_f3.Font = Enum.Font.Ubuntu
+confind_f3.Text = "   Sea 2 - sea 3"
+confind_f3.TextColor3 = Color3.fromRGB(255, 255, 255)
+confind_f3.TextSize = 14.000
+confind_f3.TextWrapped = true
+confind_f3.TextXAlignment = Enum.TextXAlignment.Left
+
+confind_b3.Name = "confind_b3"
+confind_b3.Parent = confind_f3
+confind_b3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+confind_b3.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+confind_b3.Size = UDim2.new(0, 20, 0, 20)
+confind_b3.BorderColor3 = Color3.fromRGB(250, 250, 250)
+confind_b3.Font = Enum.Font.SourceSans
+confind_b3.Text = ""
+confind_b3.TextColor3 = Color3.fromRGB(250, 250, 250)
+confind_b3.TextSize = 30.000
+
+
+if game.PlaceId == 2753915549 then -- sea1
+confind_f2.Visible = false
+confind_f3.Visible = false
+confind_f1.Visible = false
+end
+if game.PlaceId == 4442272183 then -- sea2
+confind_f3.Text="Auto Buy Legend Sword Dealer - Sever Hop"
+confind_b3.MouseButton1Down:connect(function()
+if _G.confind_buy then
+confind_f2.Visible = false
+confind_f3.Visible = false
+confind_f1.Visible = false
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Confind%20Legend%20Sword%20Dealer')))()
+end
+end)
+end
+if game.PlaceId == 7449423635 then -- sea3
+confind_f3.Text="Auto Fint Mirage Island - Sever Hop"
+confind_b3.MouseButton1Down:connect(function()
+if _G.confind_buy then
+confind_f2.Visible = false
+confind_f3.Visible = false
+confind_f1.Visible = false
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Confind%20Mirage%20Island')))()
+end
+end)
+end
+
+_G.confind_buy = false
+          
 
 -----------------------------------------------------------------------
 
@@ -9033,6 +9205,7 @@ local function LDLMGWH_fake_script() -- // Farm
 		b_page12.Visible = false
 		b_page13.Visible = false
 		b_page14.Visible = false
+		b_page15.Visible = false
     TextLabel.Text = "   NTT HUB | Farm"
 	end)
 end
@@ -9054,6 +9227,7 @@ local function OJTG_fake_script() -- scripts.LocalScript
 		b_page12.Visible = false
 		b_page13.Visible = false
 		b_page14.Visible = false
+		b_page15.Visible = false
     TextLabel.Text = "   NTT HUB | Stat" 
 	end)
 end
@@ -9076,6 +9250,7 @@ local function OJTG1_fake_script() -- scripts.LocalScript
 		b_page12.Visible = false
 		b_page13.Visible = false
 		b_page14.Visible = false
+		b_page15.Visible = false
     TextLabel.Text = "   NTT HUB | Raid" 
 	end)
 end
@@ -9098,6 +9273,7 @@ local function OJTG2_fake_script() -- scripts.LocalScript
 		b_page12.Visible = false
 		b_page13.Visible = false
 		b_page14.Visible = false
+		b_page15.Visible = false
     TextLabel.Text = "   NTT HUB | Shop" 
 	end)
 end
@@ -9120,6 +9296,7 @@ local function OJTG3_fake_script() -- scripts.LocalScript
 		b_page12.Visible = false
 		b_page13.Visible = false
 		b_page14.Visible = false
+		b_page15.Visible = false
     TextLabel.Text = "   NTT HUB | Esp - Fruit" 
 	end)
 end
@@ -9142,6 +9319,7 @@ local function OJTG4_fake_script() -- scripts.LocalScript
 		b_page12.Visible = false
 		b_page13.Visible = false
 		b_page14.Visible = false
+		b_page15.Visible = false
     TextLabel.Text = "   NTT HUB | Mob - Get Item" 
 	end)
 end
@@ -9164,6 +9342,7 @@ local function OJTG5_fake_script() -- scripts.LocalScript
 		b_page12.Visible = false
 		b_page13.Visible = false
 		b_page14.Visible = false
+		b_page15.Visible = false
     TextLabel.Text = "   NTT HUB | Combat" 
 	end)
 end
@@ -9186,6 +9365,7 @@ local function OJTG6_fake_script() -- scripts.LocalScript
 		b_page12.Visible = false
 		b_page13.Visible = false
 		b_page14.Visible = false
+		b_page15.Visible = false
     TextLabel.Text = "   NTT HUB | Teleport" 
 	end)
 end
@@ -9208,6 +9388,7 @@ local function OJTG7_fake_script() -- scripts.LocalScript
 		b_page12.Visible = false
 		b_page13.Visible = false
 		b_page14.Visible = false
+		b_page15.Visible = false
     TextLabel.Text = "   NTT HUB | Setting" 
 	end)
 end
@@ -9230,6 +9411,7 @@ local function OJTG8_fake_script() -- scripts.LocalScript
 		b_page12.Visible = false
 		b_page13.Visible = false
 		b_page14.Visible = false
+		b_page15.Visible = false
     TextLabel.Text = "   NTT HUB | Miss" 
 	end)
 end
@@ -9251,6 +9433,7 @@ local function OJTG9_fake_script() -- scripts.LocalScript
 		b_page12.Visible = false
 		b_page13.Visible = false
 		b_page14.Visible = false
+		b_page15.Visible = false
     TextLabel.Text = "   NTT HUB | Moon - Race" 
     if game.PlaceId == 2753915549 then -- sea1
     TextLabel.Text = "   NTT HUB | Moon"
@@ -9276,6 +9459,7 @@ local function OJTG10_fake_script() -- scripts.LocalScript
 		b_page12.Visible = true
 		b_page13.Visible = false
 		b_page14.Visible = false
+		b_page15.Visible = false
     TextLabel.Text = "   NTT HUB | Share" 
 	end)
 end
@@ -9298,6 +9482,7 @@ local function OJTG11_fake_script() -- scripts.LocalScript
 		b_page12.Visible = false
 		b_page13.Visible = true
 		b_page14.Visible = false
+		b_page15.Visible = false
     TextLabel.Text = "   NTT HUB | Buff" 
 	end)
 end
@@ -9320,12 +9505,35 @@ local function OJTG12_fake_script() -- scripts.LocalScript
 		b_page12.Visible = false
 		b_page13.Visible = false
 		b_page14.Visible = true
+		b_page15.Visible = false
     TextLabel.Text = "   NTT HUB | Mob" 
 	end)
 end
 
 coroutine.wrap(OJTG12_fake_script)() 
+local function OJTG13_fake_script() -- scripts.LocalScript 
+	local script = Instance.new('LocalScript', b_15)
+	script.Parent.MouseButton1Down:connect(function()   
+	b_page1.Visible = false
+		b_page2.Visible = false
+		b_page3.Visible = false
+		b_page4.Visible = false
+		b_page5.Visible = false
+		b_page6.Visible = false
+		b_page7.Visible = false
+		b_page8.Visible = false
+		b_page9.Visible = false
+		b_page10.Visible = false
+		b_page11.Visible = false
+		b_page12.Visible = false
+		b_page13.Visible = false
+		b_page14.Visible = false
+		b_page15.Visible = true
+    TextLabel.Text = "   NTT HUB | Confind" 
+	end)
+end
 
+coroutine.wrap(OJTG13_fake_script)() 
 
 if game.PlaceId == 2753915549 or game.PlaceId == 4442272183 or game.PlaceId == 7449423635 then -- sea3
 game:GetService('RunService').RenderStepped:connect(function()
@@ -9343,3 +9551,7 @@ game:GetService("UserInputService").JumpRequest:connect(function()
 		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
 	end
 end)  
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.freeconfind then
+_G.confind_buy = true
+end end)
