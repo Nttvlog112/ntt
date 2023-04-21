@@ -1,3 +1,5 @@
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetTeam","Marines") 
+
 function jump()
 local humanoid = game.Players.LocalPlayer.Character.Humanoid 
 humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
@@ -28,7 +30,8 @@ spawn(function()
             
                 for i,v in pairs(game.Workspace:GetChildren()) do
              if string.find(v.Name, "Fruit") then
-             local pos = v.Handle --check pos             
+             local pos = v.Handle --check pos
+             if (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 2000 then
                     local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
                   if Distance < 500 then
                   Speed = 750
@@ -48,8 +51,26 @@ spawn(function()
                         TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
                         {CFrame =v.Handle.CFrame}
                     ):Play()    
-end                                                                   
-             end end) end end)               
+end end end 
+     for i,v in pairs(game.Workspace:GetChildren()) do
+             if string.find(v.Name, "Fruit") then
+             local pos = v.Handle --check pos
+             if (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude > 2000 then
+             local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                  if Distance >= 0 then
+                  Speed = 9999999
+                  end
+if game.Players.LocalPlayer.Character.Humanoid.Health > 0 then
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+end
+game:GetService("TweenService"):Create(
+                        game.Players.LocalPlayer.Character.HumanoidRootPart,
+                        TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
+                        {CFrame =v.Handle.CFrame * CFrame.new(0,20,0)}
+                    ):Play()     
+end  end end                                                             
+                                        
+              end) end end)                
              
            spawn(function()
     while task.wait(1) do
@@ -274,15 +295,10 @@ end
 connection = game:GetService("RunService").RenderStepped:Connect(onRenderStepped)
 
 local queueteleport = syn and syn.queue_on_teleport or queue_on_teleport or fluxus and fluxus.queue_on_teleport
-queueteleport("loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/NTT%20LOAD')))()")
+queueteleport("https://raw.githubusercontent.com/Nttvlog112/ntt/main/Auto%20find%20fruit')))()")
 
-wait(7)
 spawn(function()
-    while task.wait(1) do
-        pcall(function()              
-for i,v in pairs(game.Workspace:GetChildren()) do
-                    if v:IsA("Tool") or v.Name == "Fruit" then
-                        if v:FindFirstChild("Handle") then
-                            if not v.Handle:FindFirstChild("FruitESP") then
+    while task.wait(30) do
+        pcall(function()                
 	findServer()
-end end end end end) end end)
+	end) end end)
