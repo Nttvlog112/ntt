@@ -1,0 +1,48 @@
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetTeam","Marines") 
+game:GetService('RunService').RenderStepped:connect(function()
+local args = {
+                   [1] = "LegendarySwordDealer",
+                   [2] = "1"
+                }
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+local args = {
+                   [1] = "LegendarySwordDealer",
+                   [2] = "2"
+                }
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+local args = {
+                   [1] = "LegendarySwordDealer",
+                   [2] = "3"                                
+                }
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+
+
+-- confind
+
+local fruitExists = false
+
+game:GetService("UserInputService").InputBegan:Connect(function(io, p)
+	if io.KeyCode == Enum.KeyCode.M then
+		findServer()
+	elseif io.KeyCode == Enum.KeyCode.N then
+		fruitExists = true
+	end
+end)
+
+local connection
+function onRenderStepped()
+	
+end
+
+-- resume(create(function()
+connection = game:GetService("RunService").RenderStepped:Connect(onRenderStepped)
+
+local queueteleport = syn and syn.queue_on_teleport or queue_on_teleport or fluxus and fluxus.queue_on_teleport
+queueteleport("loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Auto%20find%20fruit')))()")
+
+spawn(function()
+    while task.wait(10) do
+        pcall(function()                
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Svv')))()
+	end) end end)
