@@ -24,7 +24,7 @@ local b_page6 = Instance.new("ScrollingFrame") --item - fruit
 local b_page7 = Instance.new("ScrollingFrame") --Comabt
 local b_page12= Instance.new("ScrollingFrame") --share
 local b_page13= Instance.new("ScrollingFrame") --share
-local b_page15= Instance.new("ScrollingFrame") --confind
+local b_page15= Instance.new("ScrollingFrame") --config
 local b_page8 = Instance.new("ScrollingFrame") --teleport
 local b_page9 = Instance.new("ScrollingFrame") --setting
 
@@ -46,7 +46,7 @@ local b_6 = Instance.new("TextButton")-- item
 local b_14 = Instance.new("TextButton")-- Mob
 local b_7 = Instance.new("TextButton")--Comnat
 local b_12 = Instance.new("TextButton")--share
-local b_15= Instance.new("TextButton")--confind
+local b_15= Instance.new("TextButton")--config
 local b_8 = Instance.new("TextButton")--teleport
 local b_9 = Instance.new("TextButton")--setting
 
@@ -407,16 +407,16 @@ share_b6= Instance.new("TextButton")
 share_f7=Instance.new("TextLabel")
 share_b7= Instance.new("TextButton")
 
--- // confind
-confind_t1 = Instance.new("TextLabel")
-confind_t2 = Instance.new("TextLabel")
+-- // config
+config_t1 = Instance.new("TextLabel")
+config_t2 = Instance.new("TextLabel")
 
-confind_f1 = Instance.new("TextLabel")
-confind_b1 = Instance.new("TextButton")
-confind_f2= Instance.new("TextLabel")
-confind_b2 = Instance.new("TextButton")
-confind_f3= Instance.new("TextLabel")
-confind_b3 = Instance.new("TextButton")
+config_f1 = Instance.new("TextLabel")
+config_b1 = Instance.new("TextButton")
+config_f2= Instance.new("TextLabel")
+config_b2 = Instance.new("TextButton")
+config_f3= Instance.new("TextLabel")
+config_b3 = Instance.new("TextButton")
 
 
 -------------------------------------------------------------------------------
@@ -624,7 +624,7 @@ b_15.Position = UDim2.new(0, 0, 0.600000000, 0)
 b_15.Size = UDim2.new(0, 100, 0, 25)
 b_15.Font = Enum.Font.Ubuntu
 b_15.BorderColor3 = Color3.fromRGB(250, 250, 250)
-b_15.Text = "   Confind"
+b_15.Text = "   config"
 b_15.TextColor3 = Color3.fromRGB(255, 255, 255)
 b_15.TextSize = 14.000
 b_15.TextWrapped = false
@@ -2558,7 +2558,7 @@ end)
 
 s_t1.Parent = b_page2
 s_t1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-s_t1.Position = UDim2.new(0, 0, 0.5200000000, 0)
+s_t1.Position = UDim2.new(0, 0, 0.4500000000, 0)
 s_t1.Size = UDim2.new(0, 498, 0, 30)
 s_t1.BorderColor3 = Color3.fromRGB(250, 250, 250)
 s_t1.Font = Enum.Font.Ubuntu
@@ -2569,7 +2569,7 @@ s_t1.TextWrapped = true
 
 s_name.Parent = b_page2
 s_name.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-s_name.Position = UDim2.new(0, 0, 0.5900000000, 0)
+s_name.Position = UDim2.new(0, 0, 0.5200000000, 0)
 s_name.Size = UDim2.new(0, 498, 0, 30)
 s_name.BorderColor3 = Color3.fromRGB(250, 250, 250)
 s_name.Font = Enum.Font.Ubuntu
@@ -2581,7 +2581,7 @@ s_name.TextXAlignment = Enum.TextXAlignment.Left
 
 s_race.Parent = b_page2
 s_race.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-s_race.Position = UDim2.new(0, 0, 0.6600000000, 0)
+s_race.Position = UDim2.new(0, 0, 0.5900000000, 0)
 s_race.Size = UDim2.new(0, 498, 0, 30)
 s_race.BorderColor3 = Color3.fromRGB(250, 250, 250)
 s_race.Font = Enum.Font.Ubuntu
@@ -2593,7 +2593,7 @@ s_race.TextXAlignment = Enum.TextXAlignment.Left
 
 s_level.Parent = b_page2
 s_level.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-s_level.Position = UDim2.new(0, 0, 0.7300000000, 0)
+s_level.Position = UDim2.new(0, 0, 0.6600000000, 0)
 s_level.Size = UDim2.new(0, 498, 0, 30)
 s_level.BorderColor3 = Color3.fromRGB(250, 250, 250)
 s_level.Font = Enum.Font.Ubuntu
@@ -2605,7 +2605,7 @@ s_level.TextXAlignment = Enum.TextXAlignment.Left
 
 s_beli.Parent = b_page2
 s_beli.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-s_beli.Position = UDim2.new(0, 0, 0.8000000000, 0)
+s_beli.Position = UDim2.new(0, 0, 0.7300000000, 0)
 s_beli.Size = UDim2.new(0, 498, 0, 30)
 s_beli.BorderColor3 = Color3.fromRGB(250, 250, 250)
 s_beli.Font = Enum.Font.Ubuntu
@@ -2617,7 +2617,7 @@ s_beli.TextXAlignment = Enum.TextXAlignment.Left
 
 s_fag.Parent = b_page2
 s_fag.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-s_fag.Position = UDim2.new(0, 0, 0.8700000000, 0)
+s_fag.Position = UDim2.new(0, 0, 0.8000000000, 0)
 s_fag.Size = UDim2.new(0, 498, 0, 30)
 s_fag.BorderColor3 = Color3.fromRGB(250, 250, 250)
 s_fag.Font = Enum.Font.Ubuntu
@@ -3276,6 +3276,8 @@ if v.Humanoid:FindFirstChild("Animator") then
 end
 end)
 
+if game.PlaceId == 4442272183 then -- sea2
+
 r_t2.Parent = b_page3
 r_t2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
 r_t2.Position = UDim2.new(0, 0, 0.5900000000, 0)
@@ -3434,6 +3436,8 @@ r_b7.Text = ""
 _G.r_b7 = false
 end
 end)
+
+end-- law
 
 barcore()
 
@@ -9055,127 +9059,127 @@ spawn(function()
             share_b6.Text = "Share"
             end end end) end end)
             
-  -- // Confind
-confind_t1.Parent = b_page15
-confind_t1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-confind_t1.Position = UDim2.new(0, 0, 0.0300000000, 0)
-confind_t1.Size = UDim2.new(0, 498, 0, 30)
-confind_t1.BorderColor3 = Color3.fromRGB(250, 250, 250)
-confind_t1.Font = Enum.Font.Ubuntu
-confind_t1.Text = "Confind"
-confind_t1.TextColor3 = Color3.fromRGB(255, 255, 255)
-confind_t1.TextSize = 14.000
-confind_t1.TextWrapped = true
+  -- // config
+config_t1.Parent = b_page15
+config_t1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+config_t1.Position = UDim2.new(0, 0, 0.0300000000, 0)
+config_t1.Size = UDim2.new(0, 498, 0, 30)
+config_t1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+config_t1.Font = Enum.Font.Ubuntu
+config_t1.Text = "config"
+config_t1.TextColor3 = Color3.fromRGB(255, 255, 255)
+config_t1.TextSize = 14.000
+config_t1.TextWrapped = true
 
-confind_f1.Parent = b_page15
-confind_f1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-confind_f1.Position = UDim2.new(0, 0, 0.1000000000, 0)
-confind_f1.Size = UDim2.new(0, 498, 0, 30)
-confind_f1.BorderColor3 = Color3.fromRGB(250, 250, 250)
-confind_f1.Font = Enum.Font.Ubuntu
-confind_f1.Text = "   Auto Find Fruit - Sever Hop"
-confind_f1.TextColor3 = Color3.fromRGB(255, 255, 255)
-confind_f1.TextSize = 14.000
-confind_f1.TextWrapped = true
-confind_f1.TextXAlignment = Enum.TextXAlignment.Left
+config_f1.Parent = b_page15
+config_f1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+config_f1.Position = UDim2.new(0, 0, 0.1000000000, 0)
+config_f1.Size = UDim2.new(0, 498, 0, 30)
+config_f1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+config_f1.Font = Enum.Font.Ubuntu
+config_f1.Text = "   Auto Find Fruit - Sever Hop"
+config_f1.TextColor3 = Color3.fromRGB(255, 255, 255)
+config_f1.TextSize = 14.000
+config_f1.TextWrapped = true
+config_f1.TextXAlignment = Enum.TextXAlignment.Left
 
-confind_b1.Name = "confind_b1"
-confind_b1.Parent = confind_f1
-confind_b1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-confind_b1.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-confind_b1.Size = UDim2.new(0, 20, 0, 20)
-confind_b1.BorderColor3 = Color3.fromRGB(250, 250, 250)
-confind_b1.Font = Enum.Font.SourceSans
-confind_b1.Text = ""
-confind_b1.TextColor3 = Color3.fromRGB(250, 250, 250)
-confind_b1.TextSize = 30.000
-confind_b1.MouseButton1Down:connect(function()
-if _G.confind_buy then
-confind_f2.Visible = false
-confind_f3.Visible = false
-confind_f1.Visible = false
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Confind%20Fruit')))()
+config_b1.Name = "config_b1"
+config_b1.Parent = config_f1
+config_b1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+config_b1.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+config_b1.Size = UDim2.new(0, 20, 0, 20)
+config_b1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+config_b1.Font = Enum.Font.SourceSans
+config_b1.Text = ""
+config_b1.TextColor3 = Color3.fromRGB(250, 250, 250)
+config_b1.TextSize = 30.000
+config_b1.MouseButton1Down:connect(function()
+if _G.config_buy then
+config_f2.Visible = false
+config_f3.Visible = false
+config_f1.Visible = false
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/config%20Fruit')))()
 end
 end)
 
-confind_f2.Parent = b_page15
-confind_f2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-confind_f2.Position = UDim2.new(0, 0, 0.1700000000, 0)
-confind_f2.Size = UDim2.new(0, 498, 0, 30)
-confind_f2.BorderColor3 = Color3.fromRGB(250, 250, 250)
-confind_f2.Font = Enum.Font.Ubuntu
-confind_f2.Text = "   Auto Buy Haki Color - Sever Hop"
-confind_f2.TextColor3 = Color3.fromRGB(255, 255, 255)
-confind_f2.TextSize = 14.000
-confind_f2.TextWrapped = true
-confind_f2.TextXAlignment = Enum.TextXAlignment.Left
+config_f2.Parent = b_page15
+config_f2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+config_f2.Position = UDim2.new(0, 0, 0.1700000000, 0)
+config_f2.Size = UDim2.new(0, 498, 0, 30)
+config_f2.BorderColor3 = Color3.fromRGB(250, 250, 250)
+config_f2.Font = Enum.Font.Ubuntu
+config_f2.Text = "   Auto Buy Haki Color - Sever Hop"
+config_f2.TextColor3 = Color3.fromRGB(255, 255, 255)
+config_f2.TextSize = 14.000
+config_f2.TextWrapped = true
+config_f2.TextXAlignment = Enum.TextXAlignment.Left
 
-confind_b2.Name = "confind_b2"
-confind_b2.Parent = confind_f2
-confind_b2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-confind_b2.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-confind_b2.Size = UDim2.new(0, 20, 0, 20)
-confind_b2.BorderColor3 = Color3.fromRGB(250, 250, 250)
-confind_b2.Font = Enum.Font.SourceSans
-confind_b2.Text = ""
-confind_b2.TextColor3 = Color3.fromRGB(250, 250, 250)
-confind_b2.TextSize = 30.000
-confind_b2.MouseButton1Down:connect(function()
-if _G.confind_buy then
-confind_f2.Visible = false
-confind_f3.Visible = false
-confind_f1.Visible = false
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Confind%20Buy%20Haki%20Color')))()
+config_b2.Name = "config_b2"
+config_b2.Parent = config_f2
+config_b2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+config_b2.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+config_b2.Size = UDim2.new(0, 20, 0, 20)
+config_b2.BorderColor3 = Color3.fromRGB(250, 250, 250)
+config_b2.Font = Enum.Font.SourceSans
+config_b2.Text = ""
+config_b2.TextColor3 = Color3.fromRGB(250, 250, 250)
+config_b2.TextSize = 30.000
+config_b2.MouseButton1Down:connect(function()
+if _G.config_buy then
+config_f2.Visible = false
+config_f3.Visible = false
+config_f1.Visible = false
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/config%20Buy%20Haki%20Color')))()
 end
 end)
 
-confind_f3.Parent = b_page15
-confind_f3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-confind_f3.Position = UDim2.new(0, 0, 0.2400000000, 0)
-confind_f3.Size = UDim2.new(0, 498, 0, 30)
-confind_f3.BorderColor3 = Color3.fromRGB(250, 250, 250)
-confind_f3.Font = Enum.Font.Ubuntu
-confind_f3.Text = "   Sea 2 - sea 3"
-confind_f3.TextColor3 = Color3.fromRGB(255, 255, 255)
-confind_f3.TextSize = 14.000
-confind_f3.TextWrapped = true
-confind_f3.TextXAlignment = Enum.TextXAlignment.Left
+config_f3.Parent = b_page15
+config_f3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+config_f3.Position = UDim2.new(0, 0, 0.2400000000, 0)
+config_f3.Size = UDim2.new(0, 498, 0, 30)
+config_f3.BorderColor3 = Color3.fromRGB(250, 250, 250)
+config_f3.Font = Enum.Font.Ubuntu
+config_f3.Text = "   Sea 2 - sea 3"
+config_f3.TextColor3 = Color3.fromRGB(255, 255, 255)
+config_f3.TextSize = 14.000
+config_f3.TextWrapped = true
+config_f3.TextXAlignment = Enum.TextXAlignment.Left
 
-confind_b3.Name = "confind_b3"
-confind_b3.Parent = confind_f3
-confind_b3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-confind_b3.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-confind_b3.Size = UDim2.new(0, 20, 0, 20)
-confind_b3.BorderColor3 = Color3.fromRGB(250, 250, 250)
-confind_b3.Font = Enum.Font.SourceSans
-confind_b3.Text = ""
-confind_b3.TextColor3 = Color3.fromRGB(250, 250, 250)
-confind_b3.TextSize = 30.000
+config_b3.Name = "config_b3"
+config_b3.Parent = config_f3
+config_b3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+config_b3.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+config_b3.Size = UDim2.new(0, 20, 0, 20)
+config_b3.BorderColor3 = Color3.fromRGB(250, 250, 250)
+config_b3.Font = Enum.Font.SourceSans
+config_b3.Text = ""
+config_b3.TextColor3 = Color3.fromRGB(250, 250, 250)
+config_b3.TextSize = 30.000
 
 
 if game.PlaceId == 2753915549 then -- sea1
-confind_f2.Visible = false
-confind_f3.Visible = false
+config_f2.Visible = false
+config_f3.Visible = false
 end
 if game.PlaceId == 4442272183 then -- sea2
-confind_f3.Text="Auto Buy Legend Sword Dealer - Sever Hop"
-confind_b3.MouseButton1Down:connect(function()
-if _G.confind_buy then
-confind_f2.Visible = false
-confind_f3.Visible = false
-confind_f1.Visible = false
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Confind%20Legend%20Sword%20Dealer')))()
+config_f3.Text="Auto Buy Legend Sword Dealer - Sever Hop"
+config_b3.MouseButton1Down:connect(function()
+if _G.config_buy then
+config_f2.Visible = false
+config_f3.Visible = false
+config_f1.Visible = false
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/config%20Legend%20Sword%20Dealer')))()
 end
 end)
 end
 if game.PlaceId == 7449423635 then -- sea3
-confind_f3.Text="Auto Fint Mirage Island - Sever Hop"
-confind_b3.MouseButton1Down:connect(function()
-if _G.confind_buy then
-confind_f2.Visible = false
-confind_f3.Visible = false
-confind_f1.Visible = false
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Confind%20Mirage%20Island')))()
+config_f3.Text="Auto Fint Mirage Island - Sever Hop"
+config_b3.MouseButton1Down:connect(function()
+if _G.config_buy then
+config_f2.Visible = false
+config_f3.Visible = false
+config_f1.Visible = false
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/config%20Mirage%20Island')))()
 end
 end)
 end
@@ -9526,7 +9530,7 @@ local function OJTG13_fake_script() -- scripts.LocalScript
 		b_page13.Visible = false
 		b_page14.Visible = false
 		b_page15.Visible = true
-    TextLabel.Text = "   NTT HUB | Confind" 
+    TextLabel.Text = "   NTT HUB | config" 
 	end)
 end
 
@@ -9549,9 +9553,4 @@ game:GetService("UserInputService").JumpRequest:connect(function()
 	end
 end)  
 
-game:GetService('RunService').RenderStepped:connect(function()
-if _G.freeconfind then
-_G.confind_buy = true
-end end)
-
-_G.confind_buy = true
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Check%20Config%20Blox%20Fruit')))()
