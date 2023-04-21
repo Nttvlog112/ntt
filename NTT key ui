@@ -1,18 +1,18 @@
 
 -- // key script and link get key
-_G.key = "968120"
-_G.linkkey = "https://link1s.com/VBun0"
-_G.tt = "Key sẻ đỏi vào lúc 20h - 00h mỗi ngày"
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/A%20code%20key%20script%20NTT%20HUB')))()
 --webhook
-loadstring(game:HttpGet(('https://bitbucket.org/ntt-code/ntt/raw/0f5f3439381c4de39008911f789493937f87cb00/Webhook%20key')))()
+loadstring(game:HttpGet(('https://bitbucket.org/ntt-code/ntt/raw/5978d7fd0a981dd1116506bf2e7f8a33931fc6d6/Webhook%20key')))()
 if game:GetService("CoreGui"):FindFirstChild("UIGUI") then
 _G.check1 = true
 _G.check2 = true
 _G.check3 = true
+_G.check4= true
 else
 _G.check1 = false
 _G.check2 = false
 _G.check3 = false
+_G.check4= false
 end
 
 
@@ -523,4 +523,33 @@ wait(3)--chrck time kicked
                     Request(Final1)
                                  end end) end end) end end)
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/A%20Gui%20Kick%20Player%20Use%20Script')))()
+--chẽk use
+if _G.check4 == false then
+_G.check4 = true
+local HttpService = game:GetService("HttpService")
+                    local Data =
+                        {                    
+                            ["embeds"]= {
+                                {            
+                                    ["title"]= "Thông Báo";                                                                 
+                                    ["color"]= tonumber(0x7269da);
+                                    
+                                    ["fields"]= {                    
+                                    {
+                                            ["name"]= "Name Player Use Script",
+                                            ["value"]= ""..game.Players.localPlayer.Name.."";
+                                            ["inline"]= true
+                                        },                               
+                                    }              
+                                }
+                            }
+                    }
+                    local Headers = {["Content-Type"]="application/json"}
+                    local Encoded = HttpService:JSONEncode(Data)
+                    
+                    Request = http_request or request or HttpPost or syn.request
+                    local Final1 = {Url = _G.urlcheckprl , Body = Encoded, Method = "POST", Headers = Headers}
+                   
+                    Request(Final1)
+end
 
