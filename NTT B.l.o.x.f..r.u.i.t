@@ -9156,7 +9156,6 @@ confind_b3.TextSize = 30.000
 if game.PlaceId == 2753915549 then -- sea1
 confind_f2.Visible = false
 confind_f3.Visible = false
-confind_f1.Visible = false
 end
 if game.PlaceId == 4442272183 then -- sea2
 confind_f3.Text="Auto Buy Legend Sword Dealer - Sever Hop"
