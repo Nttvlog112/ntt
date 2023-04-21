@@ -1,1 +1,3 @@
-12120
+local keyA = "1234"
+
+return keyA
