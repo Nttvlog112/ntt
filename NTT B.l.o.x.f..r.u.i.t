@@ -9094,7 +9094,7 @@ if _G.confind_buy then
 confind_f2.Visible = false
 confind_f3.Visible = false
 confind_f1.Visible = false
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Auto%20find%20fruit')))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Confind%20Fruit')))()
 end
 end)
 
