@@ -44,5 +44,5 @@ queueteleport("loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvl
 spawn(function()
     while task.wait(10) do
         pcall(function()                
-	loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Svv')))()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Confind%20Legend%20Sword%20Dealer')))()
 	end) end end)
