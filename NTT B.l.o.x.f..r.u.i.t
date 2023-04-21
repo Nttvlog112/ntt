@@ -1,7 +1,10 @@
 
 
 --game.CoreGui.NTTGUI:Destroy()
- loadstring(game:HttpGet(('https://bitbucket.org/ntt-code/ntt/raw/d435a830e7e531ed0c894d8beaf63b528ccff85f/Webhook%20Blox%20Fruit')))()
+
+-- // Webhook
+ loadstring(game:HttpGet(('https://bitbucket.org/ntt-code/ntt/raw/e958ea077b005777e07e51a1f83d389417fad631/Webhook%20Blox%20Fruit')))()
+ 
 local NTTGUI = Instance.new("ScreenGui")
 --main
 local main = Instance.new("Frame")
@@ -384,6 +387,24 @@ mob_f2 = Instance.new("TextLabel")
 mob_b2 = Instance.new("TextButton")
 mob_f3= Instance.new("TextLabel")
 mob_b3= Instance.new("TextButton")
+
+-- // Share
+share_t1 =Instance.new("TextLabel")
+share_f1 =Instance.new("TextLabel")
+share_b1 = Instance.new("TextButton")
+share_f2=Instance.new("TextLabel")
+share_b2 = Instance.new("TextButton")
+share_f3=Instance.new("TextLabel")
+share_b3= Instance.new("TextButton")
+share_f4=Instance.new("TextLabel")
+share_b4= Instance.new("TextButton")
+share_f5=Instance.new("TextLabel")
+share_b5= Instance.new("TextButton")
+share_f6=Instance.new("TextLabel")
+share_b6= Instance.new("TextButton")
+share_f7=Instance.new("TextLabel")
+share_b7= Instance.new("TextButton")
+
 
 -------------------------------------------------------------------------------
 
@@ -4674,7 +4695,7 @@ shop_f5.Position = UDim2.new(0, 0, 0.3800000000, 0)
 shop_f5.Size = UDim2.new(0, 498, 0, 30)
 shop_f5.BorderColor3 = Color3.fromRGB(250, 250, 250)
 shop_f5.Font = Enum.Font.Ubuntu
-shop_f5.Text = "   Auto Buy Sword Legend"
+shop_f5.Text = "   Chưa Rõ"
 shop_f5.TextColor3 = Color3.fromRGB(255, 255, 255)
 shop_f5.TextSize = 14.000
 shop_f5.TextWrapped = true
@@ -4698,21 +4719,6 @@ _G.shop_b5 = true
 
 game:GetService('RunService').RenderStepped:connect(function()
 if _G.shop_b5 then --script
-local args = {
-                   [1] = "LegendarySwordDealer",
-                   [2] = "1"
-                }
-                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-local args = {
-                   [1] = "LegendarySwordDealer",
-                   [2] = "2"
-                }
-                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-local args = {
-                   [1] = "LegendarySwordDealer",
-                   [2] = "3"                                
-                }
-                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
 end
 end)
 elseif shop_b5.Text == "X" then --off
@@ -5188,7 +5194,7 @@ end
 if game.PlaceId == 4442272183 then -- sea2
 mi_f2.Text = "   Auto Ectoplasm"
 mi_f3.Text = "   Auto Sharkman Karate | Chưa Có"
-mi_f4.Text = "   Auto Death Step | Chưa Có"
+mi_f4.Text = "   Auto Buy Legend Sword Dealer | Not Have"
 mi_f5.Text = "   Auto Rengoku | Chưa Có"
 mi_f6.Visible = false
 end
@@ -5486,6 +5492,24 @@ v.HumanoidRootPart.Size = Vector3.new(60,60,10)
   sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius",math.huge)                    
     end end end end end) end end)           
 
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.mi_b4 then --script
+local args = {
+                   [1] = "LegendarySwordDealer",
+                   [2] = "1"
+                }
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+local args = {
+                   [1] = "LegendarySwordDealer",
+                   [2] = "2"
+                }
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+local args = {
+                   [1] = "LegendarySwordDealer",
+                   [2] = "3"                                
+                }
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end end)
 
 end -- sea 2
 
@@ -5496,13 +5520,13 @@ spawn(function()
     while task.wait() do
         pcall(function()
             if string.len(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner")) == 88 then
-                mi_f2.Text = ("   Auto Katakuri | Mob Killed Cake : "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,41))
+                mi_f2.Text = ("   Auto Katakuri | Mob Killed : "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,41))
             elseif string.len(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner")) == 87 then
-                mi_f2.Text = ("   Auto Katakuri | Mob Killed Cake : "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,40))
+                mi_f2.Text = ("   Auto Katakuri | Mob Killed : "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,40))
             elseif string.len(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner")) == 86 then
-                mi_f2.Text = ("   Auto Katakuri | Mob Killed Cake : "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,39))
+                mi_f2.Text = ("   Auto Katakuri | Mob Killed : "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,39))
             else
-                mi_f2.Text = ("   Auto Katakuri | Have")
+                mi_f2.Text = ("   Auto Katakuri | Spawned")
             end
         end)
     end
@@ -5510,7 +5534,7 @@ end)
 
 game:GetService('RunService').RenderStepped:connect(function()
 if _G.mi_b2 then --script
-  if mi_f2.Text == "   Auto Katakuri | Cake Prince Spawned" then
+  if mi_f2.Text == "   Auto Katakuri | Spawned" then
   
 jump()
 if game:GetService("Workspace").Map.CakeLoaf.BigMirror.Other.Transparency == 0 and (CFrame.new(-1990.672607421875, 4532.99951171875, -14973.6748046875).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude >= 2000 then
@@ -5787,13 +5811,15 @@ v.HumanoidRootPart.Size = Vector3.new(60,60,10)
   sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius",math.huge)                    
     end end end end end) end end)           
                  
+                 
+-- // buddy sword                 
     game:GetService('RunService').RenderStepped:connect(function()
 if _G.mi_b5 then --script
 
 TP1(CFrame.new(-728.7476806640625, 378.3321838378906, -10972.46484375))
 jump()
 for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
-      if v.Name == "Cake Queen [Lv. 2175]" then
+      if v.Name == "Cake Queen [Lv. 2175] [Boss]" then
       local pos = v.HumanoidRootPart --check pos
                     local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
                   if Distance < 500 then
@@ -6114,7 +6140,7 @@ wait(4)
                                     ["fields"]= {                    
                                     {
                                             ["name"]= "Name Player",
-                                            ["value"]= "```Name : "..game.Players.LocalPlayer.Name.."```";
+                                            ["value"]= "```Name : "..game.Players.localPlayer.DisplayName.."```";
                                             ["inline"]= true
                                         },              
                  {
@@ -6124,7 +6150,7 @@ wait(4)
                                         },              
                                            {
                                             ["name"]= "kill Player Name ",
-                                            ["value"]= "```Name : "..target.Name.."```";
+                                            ["value"]= "```Name : "..target.Name.." | "..target.DisplayName.."```";
                                             ["inline"]= true
                                         },                                             
                          {
@@ -7693,6 +7719,7 @@ mr_cmoon.Text = (""..game:GetService("Lighting").Sky.MoonTextureId)
 
  if mr_cmoon.Text=="http://www.roblox.com/asset/?id=9709149431" then
     mr_moon.Text = "   Full Moon 100%";
+    share_f2.Text = "   Full Moon | Have"
 elseif mr_cmoon.Text=="http://www.roblox.com/asset/?id=9709149052" then
     mr_moon.Text = "   Full Moon 75%";
 elseif mr_cmoon.Text=="http://www.roblox.com/asset/?id=9709143733" then
@@ -8319,9 +8346,9 @@ game:GetService('RunService').RenderStepped:connect(function()
 if _G.mob_b2 then --script
 for i,v in pairs(game.Workspace.SeaBeasts:GetChildren()) do
   if v:FindFirstChild("HumanoidRootPart") then
-  mob_f2.Text = "   Auto Kill Sea Beast | Have"
+  mob_f2.Text = "   Auto Kill Sea Beast | Spawned"
   else
-  mob_f2.Text = "   Auto Kill Sea Beast | Not Have"
+  mob_f2.Text = "   Auto Kill Sea Beast | Not Spawned"
   end end end end)
 
 game:GetService('RunService').RenderStepped:connect(function()
@@ -8337,7 +8364,7 @@ game.Players.LocalPlayer.Character.Humanoid.Sit = false
                   elseif Distance > 1500 then
                         Speed = 100
                     end                    
-                   local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Distance/Speed), {CFrame = v.HumanoidRootPart.CFrame  }) tween:Play()                                                           
+                   local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Distance/Speed), {CFrame = v.HumanoidRootPart.CFrame  * CFrame.new(0,150,0) }) tween:Play()                                                           
 end end end end)
 
 
@@ -8399,10 +8426,591 @@ if game.PlaceId == 7449423635 then -- sea3
 
 end end end)
 
+-- // Share
+
+if game.PlaceId == 2753915549 then -- sea1
+_G.sea = "Sea 1"
+elseif game.PlaceId == 4442272183 then -- sea2
+_G.sea = "Sea 2"
+elseif game.PlaceId == 7449423635 then -- sea3
+_G.sea = "Sea 3"
+end
+
+local Job = game.JobId
+
+share_t1.Parent = b_page12
+share_t1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+share_t1.Position = UDim2.new(0, 0, 0.0300000000, 0)
+share_t1.Size = UDim2.new(0, 498, 0, 30)
+share_t1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+share_t1.Font = Enum.Font.Ubuntu
+share_t1.Text = "Click Share To Share Sever In Sever Discord"
+share_t1.TextColor3 = Color3.fromRGB(255, 255, 255)
+share_t1.TextSize = 14.000
+share_t1.TextWrapped = true
+
+share_f1.Parent = b_page12
+share_f1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+share_f1.Position = UDim2.new(0, 0, 0.1000000000, 0)
+share_f1.Size = UDim2.new(0, 498, 0, 30)
+share_f1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+share_f1.Font = Enum.Font.Ubuntu
+share_f1.Text = "   Chia Sẻ Lời Mời Thách Đấu"
+share_f1.TextColor3 = Color3.fromRGB(255, 255, 255)
+share_f1.TextSize = 14.000
+share_f1.TextWrapped = true
+share_f1.TextXAlignment = Enum.TextXAlignment.Left
+
+share_b1.Name = "share_b1"
+share_b1.Parent = share_f1
+share_b1.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+share_b1.Position = UDim2.new(0.84000000, 0, 0.050000000, 0)
+share_b1.Size = UDim2.new(0, 80, 0, 25)
+share_b1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+share_b1.Font = Enum.Font.SourceSans
+share_b1.Text = "Share"
+share_b1.TextColor3 = Color3.fromRGB(0, 0, 0)
+share_b1.TextSize = 16.000
+share_b1.MouseButton1Down:connect(function()
+if share_b1.Text == "Share" then
+share_b2.Text = "120"
+share_b1.Text = "119"
+share_b3.Text = "120"
+share_b4.Text = "120"
+share_b5.Text = "120"
+share_b6.Text = "120"
+
+local HttpService = game:GetService("HttpService")
+                    local Data =
+                        {                    
+                            ["embeds"]= {
+                                {            
+                                    ["title"]= "Thông Báo";                                                                 
+                                    ["color"]= tonumber(0x7269da);
+                                    
+                                    ["fields"]= {               
+     {
+                                            ["name"]= "Player Gửi Thách Đấu",
+                                            ["value"]= "```Name : "..game.Players.LocalPlayer.Name.." | "..game.Players.LocalPlayer.DisplayName.."```";
+                                            ["inline"]= true
+                                        },              
+                                    {
+                                            ["name"]= "Level Player",
+                                            ["value"]= "```Level : "..game.Players.LocalPlayer.Data.Level.Value.."```";
+                                            ["inline"]= true
+                                        },              
+                                        {
+                                            ["name"]= "Bounty Player",
+                                            ["value"]= "```Bounty : "..game:GetService("Players")["LocalPlayer"].leaderstats["Bounty/Honor"].Value.."```";
+                                            ["inline"]= true
+                                        },              
+                 {
+                                            ["name"]= "Coppy Excute Link Jonl Sever | ".._G.sea.."",
+                                            ["value"]= "".."game.ReplicatedStorage['__ServerBrowser']:InvokeServer('teleport', '"..Job.."')".."",
+                                            ["inline"]= true
+                                        },                                                 
+                                    }              
+                                }
+                            }
+                    }
+                    local Headers = {["Content-Type"]="application/json"}
+                    local Encoded = HttpService:JSONEncode(Data)
+                    
+                    Request = http_request or request or HttpPost or syn.request
+                    local Final1 = {Url = _G.urltd , Body = Encoded, Method = "POST", Headers = Headers}
+                   
+                    Request(Final1)
+end
+end)
+
+share_f2.Parent = b_page12
+share_f2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+share_f2.Position = UDim2.new(0, 0, 0.1700000000, 0)
+share_f2.Size = UDim2.new(0, 498, 0, 30)
+share_f2.BorderColor3 = Color3.fromRGB(250, 250, 250)
+share_f2.Font = Enum.Font.Ubuntu
+share_f2.Text = "   Full Moon | Not Have"
+share_f2.TextColor3 = Color3.fromRGB(255, 255, 255)
+share_f2.TextSize = 14.000
+share_f2.TextWrapped = true
+share_f2.TextXAlignment = Enum.TextXAlignment.Left
+
+share_b2.Name = "share_b2"
+share_b2.Parent = share_f2
+share_b2.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+share_b2.Position = UDim2.new(0.84000000, 0, 0.050000000, 0)
+share_b2.Size = UDim2.new(0, 80, 0, 25)
+share_b2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+share_b2.Font = Enum.Font.SourceSans
+share_b2.Text = "Share"
+share_b2.TextColor3 = Color3.fromRGB(0, 0, 0)
+share_b2.TextSize = 16.000
+share_b2.MouseButton1Down:connect(function()
+if share_b2.Text == "Share" then
+if share_f2.Text == "   Full Moon | Have" then
+share_b2.Text = "120"
+share_b1.Text = "119"
+share_b3.Text = "120"
+share_b4.Text = "120"
+share_b5.Text = "120"
+share_b6.Text = "120"
+local HttpService = game:GetService("HttpService")
+                    local Data =
+                        {                    
+                            ["embeds"]= {
+                                {            
+                                    ["title"]= "Thông Báo";                                                                 
+                                    ["color"]= tonumber(0x7269da);
+                                    
+                                    ["fields"]= {               
+     {
+                                            ["name"]= "Player Share : Full Moon",
+                                            ["value"]= "```Name : "..game.Players.LocalPlayer.Name.." | "..game.Players.LocalPlayer.DisplayName.."```";
+                                            ["inline"]= true
+                                        },                                                 
+                 {
+                                            ["name"]= "Coppy Excute Link Jonl Sever | ".._G.sea.."",
+                                            ["value"]= "".."game.ReplicatedStorage['__ServerBrowser']:InvokeServer('teleport', '"..Job.."')".."",
+                                            ["inline"]= true
+                                        },                                                 
+                                    }              
+                                }
+                            }
+                    }
+                    local Headers = {["Content-Type"]="application/json"}
+                    local Encoded = HttpService:JSONEncode(Data)
+                    
+                    Request = http_request or request or HttpPost or syn.request
+                    local Final1 = {Url = _G.urlshare , Body = Encoded, Method = "POST", Headers = Headers}
+                   
+                    Request(Final1)
+end  end
+end)
+
+share_f3.Parent = b_page12
+share_f3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+share_f3.Position = UDim2.new(0, 0, 0.2400000000, 0)
+share_f3.Size = UDim2.new(0, 498, 0, 30)
+share_f3.BorderColor3 = Color3.fromRGB(250, 250, 250)
+share_f3.Font = Enum.Font.Ubuntu
+share_f3.Text = "   Text"
+share_f3.TextColor3 = Color3.fromRGB(255, 255, 255)
+share_f3.TextSize = 14.000
+share_f3.TextWrapped = true
+share_f3.TextXAlignment = Enum.TextXAlignment.Left
+
+share_b3.Name = "share_b3"
+share_b3.Parent = share_f3
+share_b3.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+share_b3.Position = UDim2.new(0.84000000, 0, 0.050000000, 0)
+share_b3.Size = UDim2.new(0, 80, 0, 25)
+share_b3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+share_b3.Font = Enum.Font.SourceSans
+share_b3.Text = "Share"
+share_b3.TextColor3 = Color3.fromRGB(0, 0, 0)
+share_b3.TextSize = 16.000
+
+share_f4.Parent = b_page12
+share_f4.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+share_f4.Position = UDim2.new(0, 0, 0.3100000000, 0)
+share_f4.Size = UDim2.new(0, 498, 0, 30)
+share_f4.BorderColor3 = Color3.fromRGB(250, 250, 250)
+share_f4.Font = Enum.Font.Ubuntu
+share_f4.Text = "   Text"
+share_f4.TextColor3 = Color3.fromRGB(255, 255, 255)
+share_f4.TextSize = 14.000
+share_f4.TextWrapped = true
+share_f4.TextXAlignment = Enum.TextXAlignment.Left
+
+share_b4.Name = "share_b4"
+share_b4.Parent = share_f4
+share_b4.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+share_b4.Position = UDim2.new(0.84000000, 0, 0.050000000, 0)
+share_b4.Size = UDim2.new(0, 80, 0, 25)
+share_b4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+share_b4.Font = Enum.Font.SourceSans
+share_b4.Text = "Share"
+share_b4.TextColor3 = Color3.fromRGB(0, 0, 0)
+share_b4.TextSize = 16.000
 
 
+share_f5.Parent = b_page12
+share_f5.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+share_f5.Position = UDim2.new(0, 0, 0.3800000000, 0)
+share_f5.Size = UDim2.new(0, 498, 0, 30)
+share_f5.BorderColor3 = Color3.fromRGB(250, 250, 250)
+share_f5.Font = Enum.Font.Ubuntu
+share_f5.Text = "   Text"
+share_f5.TextColor3 = Color3.fromRGB(255, 255, 255)
+share_f5.TextSize = 14.000
+share_f5.TextWrapped = true
+share_f5.TextXAlignment = Enum.TextXAlignment.Left
+
+share_b5.Name = "share_b5"
+share_b5.Parent = share_f5
+share_b5.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+share_b5.Position = UDim2.new(0.84000000, 0, 0.050000000, 0)
+share_b5.Size = UDim2.new(0, 80, 0, 25)
+share_b5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+share_b5.Font = Enum.Font.SourceSans
+share_b5.Text = "Share"
+share_b5.TextColor3 = Color3.fromRGB(0, 0, 0)
+share_b5.TextSize = 16.000
 
 
+share_f6.Parent = b_page12
+share_f6.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+share_f6.Position = UDim2.new(0, 0, 0.4500000000, 0)
+share_f6.Size = UDim2.new(0, 498, 0, 30)
+share_f6.BorderColor3 = Color3.fromRGB(250, 250, 250)
+share_f6.Font = Enum.Font.Ubuntu
+share_f6.Text = "   Text"
+share_f6.TextColor3 = Color3.fromRGB(255, 255, 255)
+share_f6.TextSize = 14.000
+share_f6.TextWrapped = true
+share_f6.TextXAlignment = Enum.TextXAlignment.Left
+
+share_b6.Name = "share_b6"
+share_b6.Parent = share_f6
+share_b6.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+share_b6.Position = UDim2.new(0.84000000, 0, 0.050000000, 0)
+share_b6.Size = UDim2.new(0, 80, 0, 25)
+share_b6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+share_b6.Font = Enum.Font.SourceSans
+share_b6.Text = "Share"
+share_b6.TextColor3 = Color3.fromRGB(0, 0, 0)
+share_b6.TextSize = 16.000
+
+if game.PlaceId == 2753915549  then
+share_f3.Visible = false
+share_f4.Visible = false
+share_f5.Visible = false
+share_f6.Visible = false
+end
+
+if game.PlaceId == 4442272183 then
+share_f6.Visible = false
+share_f5.Visible = false
+share_f3.Text = "   Legendary Sword Dealer | Not Have"
+share_f4.Text = "   Fist of Darkness | Not Have"
+game:GetService('RunService').RenderStepped:connect(function()       
+if game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Fist of Darkness") then 
+share_f4.Text = "   Fist of Darkness | Have"
+else
+share_f4.Text = "   Fist of Darkness | Not Have"
+end
+
+if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Manager","2") == "Hey, I just saw him! He told me he would be in the area for 5 minutes. Good luck!" then
+share_f3.Text = "   Legendary Sword Dealer | Have"
+mi_f4.Text = "   Legendary Sword Dealer | Have"
+else
+share_f3.Text = "   Legendary Sword Dealer | Not Have"
+mi_f4.Text = "   Legendary Sword Dealer | Not Have"
+end
+end)
+
+share_b3.MouseButton1Down:connect(function()
+if share_b3.Text == "   Legendary Sword Dealer | Have" then
+if share_b3.Text == "Share" then
+share_b2.Text = "120"
+share_b1.Text = "119"
+share_b3.Text = "120"
+share_b4.Text = "120"
+share_b5.Text = "120"
+share_b6.Text = "120"
+
+local HttpService = game:GetService("HttpService")
+                    local Data =
+                        {                    
+                            ["embeds"]= {
+                                {            
+                                    ["title"]= "Thông Báo";                                                                 
+                                    ["color"]= tonumber(0x7269da);
+                                    
+                                    ["fields"]= {               
+     {
+                                            ["name"]= "Player Share : Legendary Sword Dealer",
+                                            ["value"]= "```Name : "..game.Players.LocalPlayer.Name.." | "..game.Players.LocalPlayer.DisplayName.."```";
+                                            ["inline"]= true
+                                        },                                                 
+                 {
+                                            ["name"]= "Coppy Excute Link Jonl Sever | ".._G.sea.."",
+                                            ["value"]= "".."game.ReplicatedStorage['__ServerBrowser']:InvokeServer('teleport', '"..Job.."')".."",
+                                            ["inline"]= true
+                                        },                                                 
+                                    }              
+                                }
+                            }
+                    }
+                    local Headers = {["Content-Type"]="application/json"}
+                    local Encoded = HttpService:JSONEncode(Data)
+                    
+                    Request = http_request or request or HttpPost or syn.request
+                    local Final1 = {Url = _G.urlshare , Body = Encoded, Method = "POST", Headers = Headers}
+                   
+                    Request(Final1)
+end end
+end)
+
+share_b4.MouseButton1Down:connect(function()
+if share_f4.Text == "Fist of Darkness | Have" then
+if share_b4.Text == "Share" then
+share_b2.Text = "120"
+share_b1.Text = "119"
+share_b3.Text = "120"
+share_b4.Text = "120"
+share_b5.Text = "120"
+share_b6.Text = "120"
+local HttpService = game:GetService("HttpService")
+                    local Data =
+                        {                    
+                            ["embeds"]= {
+                                {            
+                                    ["title"]= "Thông Báo";                                                                 
+                                    ["color"]= tonumber(0x7269da);
+                                    
+                                    ["fields"]= {               
+     {
+                                            ["name"]= "Player Share : Fist of Darkness",
+                                            ["value"]= "```Name : "..game.Players.LocalPlayer.Name.." | "..game.Players.LocalPlayer.DisplayName.."```";
+                                            ["inline"]= true
+                                        },                                                 
+                 {
+                                            ["name"]= "Coppy Excute Link Jonl Sever | ".._G.sea.."",
+                                            ["value"]= "".."game.ReplicatedStorage['__ServerBrowser']:InvokeServer('teleport', '"..Job.."')".."",
+                                            ["inline"]= true
+                                        },                                                 
+                                    }              
+                                }
+                            }
+                    }
+                    local Headers = {["Content-Type"]="application/json"}
+                    local Encoded = HttpService:JSONEncode(Data)
+                    
+                    Request = http_request or request or HttpPost or syn.request
+                    local Final1 = {Url = _G.urlshare , Body = Encoded, Method = "POST", Headers = Headers}
+                   
+                    Request(Final1)
+end end
+end)
+end
+           
+ if   game.PlaceId == 7449423635 then
+ share_f5.Text ="   Dough King | Not Have" 
+ share_f3.Text = "   Mirage Island | Not Have" 
+ share_f6.Text = "   Sweet Chalice | Not Have"
+ share_f4.Text = "   God's Chalice | Not Have" 
+ 
+ game:GetService('RunService').RenderStepped:connect(function()       
+ if game:GetService("Workspace")["_WorldOrigin"].Locations:FindFirstChild("Mirage Island") then
+ share_f3.Text = "   Mirage Island | Have" 
+ else
+ share_f3.Text = "   Mirage Island | Not Have" 
+ end
+     if game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("God's Chalice") then 
+      share_f4.Text = "   God's Chalice | Have" 
+     else
+     share_f4.Text = "   God's Chalice | Not Have" 
+     end
+ if game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Sweet Chalice") then 
+ share_f6.Text = "   Sweet Chalice | Have"
+ else
+ share_f6.Text = "   Sweet Chalice | Not Have"
+ end
+ end)
+ 
+ share_b3.MouseButton1Down:connect(function()
+ if share_f3.Text == "   Mirage Island | Have" then
+if share_b3.Text == "Share" then
+share_b2.Text = "120"
+share_b1.Text = "119"
+share_b3.Text = "120"
+share_b4.Text = "120"
+share_b5.Text = "120"
+share_b6.Text = "120"
+local HttpService = game:GetService("HttpService")
+                    local Data =
+                        {                    
+                            ["embeds"]= {
+                                {            
+                                    ["title"]= "Thông Báo";                                                                 
+                                    ["color"]= tonumber(0x7269da);
+                                    
+                                    ["fields"]= {               
+     {
+                                            ["name"]= "Player Share : Mirage Island",
+                                            ["value"]= "```Name : "..game.Players.LocalPlayer.Name.." | "..game.Players.LocalPlayer.DisplayName.."```";
+                                            ["inline"]= true
+                                        },                                                 
+                 {
+                                            ["name"]= "Coppy Excute Link Jonl Sever | ".._G.sea.."",
+                                            ["value"]= "".."game.ReplicatedStorage['__ServerBrowser']:InvokeServer('teleport', '"..Job.."')".."",
+                                            ["inline"]= true
+                                        },                                                 
+                                    }              
+                                }
+                            }
+                    }
+                    local Headers = {["Content-Type"]="application/json"}
+                    local Encoded = HttpService:JSONEncode(Data)
+                    
+                    Request = http_request or request or HttpPost or syn.request
+                    local Final1 = {Url = _G.urlshare , Body = Encoded, Method = "POST", Headers = Headers}
+                   
+                    Request(Final1)
+end end
+end)
+
+share_b4.MouseButton1Down:connect(function()
+if share_f4.Text == "   God's Chalice | Have" then
+if share_b4.Text == "Share" then
+share_b2.Text = "120"
+share_b1.Text = "119"
+share_b3.Text = "120"
+share_b4.Text = "120"
+share_b5.Text = "120"
+share_b6.Text = "120"
+local HttpService = game:GetService("HttpService")
+                    local Data =
+                        {                    
+                            ["embeds"]= {
+                                {            
+                                    ["title"]= "Thông Báo";                                                                 
+                                    ["color"]= tonumber(0x7269da);
+                                    
+                                    ["fields"]= {               
+     {
+                                            ["name"]= "Player Share : God's Chalice",
+                                            ["value"]= "```Name : "..game.Players.LocalPlayer.Name.." | "..game.Players.LocalPlayer.DisplayName.."```";
+                                            ["inline"]= true
+                                        },                                                 
+                 {
+                                            ["name"]= "Coppy Excute Link Jonl Sever | ".._G.sea.."",
+                                            ["value"]= "".."game.ReplicatedStorage['__ServerBrowser']:InvokeServer('teleport', '"..Job.."')".."",
+                                            ["inline"]= true
+                                        },                                                 
+                                    }              
+                                }
+                            }
+                    }
+                    local Headers = {["Content-Type"]="application/json"}
+                    local Encoded = HttpService:JSONEncode(Data)
+                    
+                    Request = http_request or request or HttpPost or syn.request
+                    local Final1 = {Url = _G.urlshare , Body = Encoded, Method = "POST", Headers = Headers}
+                   
+                    Request(Final1)
+
+end end
+end)
+
+share_b5.MouseButton1Down:connect(function()
+if share_f5.Text == "   Dough King | Have" then
+if share_b5.Text == "Share" then
+share_b2.Text = "120"
+share_b1.Text = "119"
+share_b3.Text = "120"
+share_b4.Text = "120"
+share_b5.Text = "120"
+share_b6.Text = "120"
+local HttpService = game:GetService("HttpService")
+                    local Data =
+                        {                    
+                            ["embeds"]= {
+                                {            
+                                    ["title"]= "Thông Báo";                                                                 
+                                    ["color"]= tonumber(0x7269da);
+                                    
+                                    ["fields"]= {               
+     {
+                                            ["name"]= "Player Share : Dough King",
+                                            ["value"]= "```Name : "..game.Players.LocalPlayer.Name.." | "..game.Players.LocalPlayer.DisplayName.."```";
+                                            ["inline"]= true
+                                        },                                                 
+                 {
+                                            ["name"]= "Coppy Excute Link Jonl Sever | ".._G.sea.."",
+                                            ["value"]= "".."game.ReplicatedStorage['__ServerBrowser']:InvokeServer('teleport', '"..Job.."')".."",
+                                            ["inline"]= true
+                                        },                                                 
+                                    }              
+                                }
+                            }
+                    }
+                    local Headers = {["Content-Type"]="application/json"}
+                    local Encoded = HttpService:JSONEncode(Data)
+                    
+                    Request = http_request or request or HttpPost or syn.request
+                    local Final1 = {Url = _G.urlshare , Body = Encoded, Method = "POST", Headers = Headers}
+                   
+                    Request(Final1)
+
+end end
+end)
+ 
+ share_b6.MouseButton1Down:connect(function()
+ if share_f6.Text == "   Sweet Chalice | Have" then
+if share_b6.Text == "Share" then
+share_b2.Text = "120"
+share_b1.Text = "119"
+share_b3.Text = "120"
+share_b4.Text = "120"
+share_b5.Text = "120"
+share_b6.Text = "120"
+local HttpService = game:GetService("HttpService")
+                    local Data =
+                        {                    
+                            ["embeds"]= {
+                                {            
+                                    ["title"]= "Thông Báo";                                                                 
+                                    ["color"]= tonumber(0x7269da);
+                                    
+                                    ["fields"]= {               
+     {
+                                            ["name"]= "Player Share : Sweet Chalice",
+                                            ["value"]= "```Name : "..game.Players.LocalPlayer.Name.." | "..game.Players.LocalPlayer.DisplayName.."```";
+                                            ["inline"]= true
+                                        },                                                 
+                 {
+                                            ["name"]= "Coppy Excute Link Jonl Sever | ".._G.sea.."",
+                                            ["value"]= "".."game.ReplicatedStorage['__ServerBrowser']:InvokeServer('teleport', '"..Job.."')".."",
+                                            ["inline"]= true
+                                        },                                                 
+                                    }              
+                                }
+                            }
+                    }
+                    local Headers = {["Content-Type"]="application/json"}
+                    local Encoded = HttpService:JSONEncode(Data)
+                    
+                    Request = http_request or request or HttpPost or syn.request
+                    local Final1 = {Url = _G.urlshare , Body = Encoded, Method = "POST", Headers = Headers}
+                   
+                    Request(Final1)
+                    
+end end
+end)
+ end
+            
+spawn(function()
+    while task.wait(1) do       
+            pcall(function()
+         if   share_b1.Text == "Share" then
+            _G.webhooktest = true
+            else
+            share_b1.Text = share_b1.Text - 1 
+            share_b2.Text = share_b1.Text - 1 
+            share_b3.Text = share_b1.Text - 1 
+            share_b4.Text = share_b1.Text - 1 
+            share_b5.Text = share_b1.Text - 1 
+            share_b6.Text = share_b1.Text - 1 
+            if share_b1.Text == "0" then
+            share_b1.Text = "Share"
+            share_b2.Text = "Share"
+            share_b3.Text = "Share"
+            share_b4.Text = "Share"
+            share_b5.Text = "Share"
+            share_b6.Text = "Share"
+            end end end) end end)
 
 -----------------------------------------------------------------------
 
@@ -8718,6 +9326,8 @@ end
 
 coroutine.wrap(OJTG12_fake_script)() 
 
+
+if game.PlaceId == 2753915549 or game.PlaceId == 4442272183 or game.PlaceId == 7449423635 then -- sea3
 game:GetService('RunService').RenderStepped:connect(function()
 if game:GetService("ReplicatedStorage").Effect.Container:FindFirstChild("Death") then
 	game:GetService("ReplicatedStorage").Effect.Container.Death:Destroy()
@@ -8726,7 +9336,7 @@ if game:GetService("ReplicatedStorage").Effect.Container:FindFirstChild("Respawn
 	game:GetService("ReplicatedStorage").Effect.Container.Respawn:Destroy()
 end   end)
 game.Players.LocalPlayer.PlayerGui.Main.Version.Text = "NTT HUB"
-
+end
 _G.ifnjump = false
 game:GetService("UserInputService").JumpRequest:connect(function()
 	if _G.ifnjump then
