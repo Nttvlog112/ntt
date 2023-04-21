@@ -1,0 +1,8 @@
+_G.config_buy = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.freeconfig then
+_G.config_buy = true
+end end)
+
+loadstring(game:HttpGet(('https://bitbucket.org/ntt-code/ntt/raw/b28a631f3aba27b83f91a5a75b81d5ca983c1a1f/Webhook%20config%20blox%20fruit')))()
