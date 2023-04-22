@@ -6,12 +6,12 @@ if _G.freeconfig then
 _G.checkconfig = "free"
 _G.config_buy = true
 
-elseif _G.2510c39011c5be704182423e3a695e91 then
-_G.checkconfig = "2510c39011c5be704182423e3a695e91"
+elseif _G.a2510c39011c5be704182423e3a695e91 then
+_G.checkconfig = "a2510c39011c5be704182423e3a695e91"
 _G.config_buy = "true"
 
-elseif _G.346b81a32e707eccadf60252bb599f0 then
-_G.checkconfig = "346b81a32e707eccadf60252bb599f0"
+elseif _G.a346b81a32e707eccadf60252bb599f0 then
+_G.checkconfig = "a346b81a32e707eccadf60252bb599f0"
 _G.config_buy = true
 
 end end)
