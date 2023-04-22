@@ -54,11 +54,9 @@ LoadSettings()
 _G.config_buy = true
 end
    
-game:GetService('RunService').RenderStepped:connect(function()
-
 if   _G.Settings.checkconfig["_G.config"] == "a2510c39011c5be704182423e3a695e91" then
 config()
-elseif   _G.Settings.checkconfig["_G.config"] == "c1d0e64dfb2081c7e79e8410478748fb" then
+elseif   _G.Settings.checkconfig["_G.config"] == "c1d0e64dfb2081c7e79e8410478748fba" then
 config()
 elseif   _G.Settings.checkconfig["_G.config"] == "d4e5c6931b9f7e94e157b9294825c" then
 config()
@@ -76,6 +74,6 @@ elseif   _G.Settings.checkconfig["_G.config"] == "c9a38590a3a751db06afd19816cb6f
 config()
 elseif   _G.Settings.checkconfig["_G.config"] == "a96c9b650563fb960f12d851eae6b6b" then
 config()
-end end)
+end
 
 loadstring(game:HttpGet(('https://bitbucket.org/ntt-code/ntt/raw/96e22bf09ff6ecda988dfb1609b474af1b04f27c/Webhook%20config%20blox%20fruit')))()
