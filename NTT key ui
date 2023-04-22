@@ -15,7 +15,55 @@ _G.check3 = false
 _G.check4= false
 end
 
+-- save key
 
+_G.Settings = {
+    checkkey = {
+        ["_G.loadkey"] = {""},     
+    },
+    }
+    
+    function LoadSettings()
+    if readfile and writefile and isfile and isfolder then
+        if not isfolder("NTT HUB") then
+            makefolder("NTT HUB")
+        end
+        if not isfolder("NTT HUB/Save Key/") then
+            makefolder("NTT HUB/Save Key/")
+        end
+        if not isfile("NTT HUB/Save Key/Key.json") then
+            writefile("NTT HUB/Save Key/Key.json", game:GetService("HttpService"):JSONEncode(_G.Settings))
+        else
+            local Decode = game:GetService("HttpService"):JSONDecode(readfile("NTT HUB/Save Key/Key.json"))
+            for i,v in pairs(Decode) do
+                _G.Settings[i] = v
+            end
+        end
+    else
+        return warn("Status : Undetected Executor")
+    end
+end
+
+function SaveSettings()
+    if readfile and writefile and isfile and isfolder then
+        if not isfile("NTT HUB/Save Key/Key.json") then
+            LoadSettings()
+        else
+            local Decode = game:GetService("HttpService"):JSONDecode(readfile("NTT HUB/Save Key/Key.json"))
+            local Array = {}
+            for i,v in pairs(_G.Settings) do
+                Array[i] = v
+            end
+            writefile("NTT HUB/Save Key/Key.json", game:GetService("HttpService"):JSONEncode(Array))
+        end
+    else
+        return warn("Status : Undetected Executor")
+    end
+end
+
+LoadSettings()
+
+-------------------------------------------------------------
 
 local UIGUI = Instance.new("ScreenGui")
 main= Instance.new("Frame")
@@ -198,10 +246,14 @@ key_b.TextColor3 = Color3.fromRGB(255, 255, 255)
 key_b.BorderColor3 = Color3.fromRGB(250, 250, 250)
 key_b.TextSize = 14.000
 key_b.MouseButton1Down:connect(function()
-
 if key_tb.Text == _G.key then
+
+_G.Settings.checkkey["_G.loadkey"] = key_tb.Text
+SaveSettings()
+
 bar.Text = "   NTT | Load"
 bar_4.Visible = true
+
 if _G.check1 == false then
 _G.check1 = true
                     local HttpService = game:GetService("HttpService")
@@ -473,7 +525,45 @@ end
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Loader%20NTT%201')))()
 end)
 
-local Job = game.JobId
+if _G.Settings.checkkey["_G.loadkey"]  == _G.key then
+bar.Text = "   NTT | Load"
+bar_4.Visible = true
+end
+
+
+local Job = game.JobId                            
+                                 
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/A%20Gui%20Kick%20Player%20Use%20Script')))()
+
+--chẽk use
+if _G.check4 == false then
+_G.check4 = true
+local HttpService = game:GetService("HttpService")
+                    local Data =
+                        {                    
+                            ["embeds"]= {
+                                {            
+                                    ["title"]= "Thông Báo";                                                                 
+                                    ["color"]= tonumber(0x7269da);
+                                    
+                                    ["fields"]= {                    
+                                    {
+                                            ["name"]= "Name Player Use Script",
+                                            ["value"]= ""..game.Players.localPlayer.Name.."";
+                                            ["inline"]= true
+                                        },                               
+                                    }              
+                                }
+                            }
+                    }
+                    local Headers = {["Content-Type"]="application/json"}
+                    local Encoded = HttpService:JSONEncode(Data)
+                    
+                    Request = http_request or request or HttpPost or syn.request
+                    local Final1 = {Url = _G.urlcheckprl , Body = Encoded, Method = "POST", Headers = Headers}
+                   
+                    Request(Final1)
+end
 
 _G.ckick = false
 spawn(function()
@@ -522,34 +612,3 @@ wait(3)--chrck time kicked
                    
                     Request(Final1)
                                  end end) end end) end end)
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/A%20Gui%20Kick%20Player%20Use%20Script')))()
---chẽk use
-if _G.check4 == false then
-_G.check4 = true
-local HttpService = game:GetService("HttpService")
-                    local Data =
-                        {                    
-                            ["embeds"]= {
-                                {            
-                                    ["title"]= "Thông Báo";                                                                 
-                                    ["color"]= tonumber(0x7269da);
-                                    
-                                    ["fields"]= {                    
-                                    {
-                                            ["name"]= "Name Player Use Script",
-                                            ["value"]= ""..game.Players.localPlayer.Name.."";
-                                            ["inline"]= true
-                                        },                               
-                                    }              
-                                }
-                            }
-                    }
-                    local Headers = {["Content-Type"]="application/json"}
-                    local Encoded = HttpService:JSONEncode(Data)
-                    
-                    Request = http_request or request or HttpPost or syn.request
-                    local Final1 = {Url = _G.urlcheckprl , Body = Encoded, Method = "POST", Headers = Headers}
-                   
-                    Request(Final1)
-end
-
