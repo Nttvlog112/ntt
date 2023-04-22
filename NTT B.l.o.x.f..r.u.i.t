@@ -1873,6 +1873,7 @@ elseif m_b2.Text == "X" then --off
 m_b2.Text = ""
 _G.m_b2 = false
 stoptp()
+game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible = false
 end
 end)
 
@@ -3951,7 +3952,7 @@ spawn(function()
                 for i,v in pairs(game.Workspace:GetChildren()) do
              if string.find(v.Name, "Fruit") then
              local pos = v.Handle --check pos
-             if (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 2000 then
+             if (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 3500 then
                     local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
                   if Distance < 500 then
                   Speed = 750
@@ -3975,7 +3976,7 @@ end end end
      for i,v in pairs(game.Workspace:GetChildren()) do
              if string.find(v.Name, "Fruit") then
              local pos = v.Handle --check pos
-             if (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude > 2000 then
+             if (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude > 3500 then
              local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
                   if Distance >= 0 then
                   Speed = 9999999
@@ -9173,7 +9174,7 @@ end
 end)
 end
 if game.PlaceId == 7449423635 then -- sea3
-config_f3.Text="Auto Fint Mirage Island - Sever Hop"
+config_f3.Text="   Auto Find Mirage Island - Sever Hop"
 config_b3.MouseButton1Down:connect(function()
 if _G.config_buy then
 config_f2.Visible = false
