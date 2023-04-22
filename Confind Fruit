@@ -31,7 +31,7 @@ spawn(function()
                 for i,v in pairs(game.Workspace:GetChildren()) do
              if string.find(v.Name, "Fruit") then
              local pos = v.Handle --check pos
-             if (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 2000 then
+             if (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 3500 then
                     local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
                   if Distance < 500 then
                   Speed = 750
@@ -55,7 +55,7 @@ end end end
      for i,v in pairs(game.Workspace:GetChildren()) do
              if string.find(v.Name, "Fruit") then
              local pos = v.Handle --check pos
-             if (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude > 2000 then
+             if (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude > 3500 then
              local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
                   if Distance >= 0 then
                   Speed = 9999999
