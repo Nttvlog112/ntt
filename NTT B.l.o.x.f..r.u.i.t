@@ -269,6 +269,7 @@ c_f3 = Instance.new("TextLabel")
 c_f4 = Instance.new("TextLabel")
 c_f5 = Instance.new("TextLabel")
 c_f6 = Instance.new("TextLabel")
+c_f7= Instance.new("TextLabel")
 
 c_b1 = Instance.new("TextButton")
 c_b2 = Instance.new("TextButton")
@@ -276,6 +277,7 @@ c_b3 = Instance.new("TextButton")
 c_b4 = Instance.new("TextButton")
 c_b5= Instance.new("TextButton")
 c_b6= Instance.new("TextButton")
+c_b7= Instance.new("TextButton")
 
 c_get= Instance.new("TextButton")
 
@@ -1093,363 +1095,282 @@ function TP1(P1)
                                             NameMob = "Bandit [Lv. 5]"
                                             NameQuest = "BanditQuest1"
                                             LevelQuest = 1
-                                            NameMon = "Bandit Quest Giver"
-                                            CFrameQuest = CFrame.new(1061.603271484375, 16.8598575592041, 1547.625)
-                                            CFrameMob = CFrame.new(1039.3878173828125, 80.12092590332031, 1592.404296875)
-                                            CFrameBring = CFrame.new(1192.048583984375, 16.7034969329834, 1611.431884765625)
+                                            NameMon = "Bandit"                                       
+                                            CFrameMob = CFrame.new(1039.3878173828125, 80.12092590332031, 1592.404296875)                                           
                                             
                                             elseif MyLevel == 10 or MyLevel <= 14 then --monkey
                                             NameMob = "Monkey [Lv. 14]"
                                             NameQuest = "JungleQuest"
                                             LevelQuest = 1
-                                            NameMon = "Adventurer"
-                                            CFrameQuest = CFrame.new(-1599.786865234375, 37.195369720458984, 156.74978637695312)
+                                            NameMon = "Monkey"
                                             CFrameMob = CFrame.new(-1776.05419921875, 74.84989166259766, 47.772865295410156)
-                                            CFrameBring = CFrame.new(-1633.2825927734375, 15.852092742919922, 96.47166442871094)
                                             
                                             elseif MyLevel == 15 or MyLevel <= 29 then --Gozila
                                             NameMob = "Gorilla [Lv. 20]"
                                             NameQuest = "JungleQuest"
                                             LevelQuest = 2
-                                            NameMon = "Adventurer"
-                                            CFrameQuest = CFrame.new(-1599.786865234375, 37.195369720458984, 156.74978637695312)
+                                            NameMon = "Gorilla"
                                             CFrameMob = CFrame.new(-1321.07080078125, 82.16122436523438, -456.7127380371094)
-                                            CFrameBring = CFrame.new(-1241.55078125, 6.27936315536499, -517.3883666992188)
                                             
                                             elseif MyLevel == 30 or MyLevel <= 39 then --pirate
                                             NameMob = "Pirate [Lv. 35]"
                                             NameQuest = "BuggyQuest1"
                                             LevelQuest = 1
-                                            NameMon = "Pirate Adventurer"
-                                            CFrameQuest = CFrame.new(-1139.61767578125, 5.095293998718262, 3828.553365625)
+                                            NameMon = "Pirate"
                                             CFrameMob = CFrame.new(-1147.6865234375, 59.39506149291992, 3995.663818359375)
-                                            CFrameBring = CFrame.new(-1179.3768310546875, 5.095293998718262, 3921.2919921875)
                                             
                                             elseif MyLevel == 40 or MyLevel <= 59 then --brute
                                             NameMob = "Brute [Lv. 45]"
                                             NameQuest = "BuggyQuest1"
                                             LevelQuest = 2
-                                            NameMon = "Pirate Adventurer"
-                                            CFrameQuest = CFrame.new(-1139.61767578125, 5.095293998718262, 3828.553365625)
+                                            NameMon = "Brute"
                                             CFrameMob = CFrame.new(-1134.163818359375, 93.64710235595703, 4317.65966796875)
-                                            CFrameBring = CFrame.new(-1098.1475830078125, 14.809873580932617, 4337.5419921875)
                                             
                                             elseif MyLevel == 60 or MyLevel <= 74 then --Desert Bandit
                                             NameMob = "Desert Bandit [Lv. 60]" --name mob
                                             NameQuest = "DesertQuest" --name get quest
                                             LevelQuest = 1         -- lv quest
-                                            NameMon = "Desert Adventurer"    --name npc
-                                            CFrameQuest = CFrame.new(897.031128, 6.43846416, 4388.97168, -0.804044724, 3.68233266e-08, 0.594568789, 6.97835176e-08, 1, 3.24365246e-08, -0.594568789, 6.75715199e-08, -0.804044724)
+                                            NameMon = "Desert Bandit"    --name npc
                                             CFrameMob = CFrame.new(1053.786865234375, 52.50192642211914, 4489.82421875)
-                                            CFrameBring = CFrame.new(922.7894897460938, 6.44875955581665, 4481.28125)
                                             
       elseif MyLevel == 75 or MyLevel <= 89 then --Desert Officre
                                             NameMob = "Desert Officer [Lv. 70]" --name mob
                                             NameQuest = "DesertQuest" --name get quest
                                             LevelQuest = 2        -- lv quest
-                                            NameMon = "Desert Adventurer"    --name npc
-                                            CFrameQuest = CFrame.new(897.031128, 6.43846416, 4388.97168, -0.804044724, 3.68233266e-08, 0.594568789, 6.97835176e-08, 1, 3.24365246e-08, -0.594568789, 6.75715199e-08, -0.804044724)
+                                            NameMon = "Desert Officer"    --name npc
                                             CFrameMob = CFrame.new(1561.3385009765625, 15.330206871032715, 4274.2587890625)      
-                                            CFrameBring = CFrame.new(1613.4285888671875, 1.6109551191329956, 4360.02294921875)
-
+                                            
     elseif MyLevel == 90 or MyLevel <= 99 then --Snow Bandit
                                             NameMob = "Snow Bandit [Lv. 90]" --name mob
                                             NameQuest = "SnowQuest" --name get quest
                                             LevelQuest = 1         -- lv quest
-                                            NameMon = "Villager"    --name npc
-                                            CFrameQuest = CFrame.new(1388.31689453125, 87.27276611328125, -1298.2066650390625)
+                                            NameMon = "Snow Bandit"    --name npc
                                             CFrameMob = CFrame.new(1419.9039306640625, 119.61993408203125, -1414.1715087890625)
-                                            CFrameBring = CFrame.new(1386.5888671875, 87.27276611328125, -1379.3212890625)
                                             
       elseif MyLevel == 100 or MyLevel <= 119 then --Snowman
                                             NameMob = "Snowman [Lv. 100]" --name mob
                                             NameQuest = "SnowQuest" --name get quest
                                             LevelQuest = 2        -- lv quest
-                                            NameMon = "Villager"    --name npc
-                                            CFrameQuest = CFrame.new(1388.31689453125, 87.27276611328125, -1298.2066650390625)
+                                            NameMon = "Snowman"    --name npc
                                             CFrameMob = CFrame.new(1220.4559326171875, 138.01181030273438, -1489.2388916015625)        
-                              CFrameBring = CFrame.new(1150.3426513671875, 106.23611450195312, -1516.80078125)
-
+                                            
   elseif MyLevel == 120 or MyLevel <= 149 then --Chief Petty Officer
                                             NameMob = "Chief Petty Officer [Lv. 120]" --name mob
                                             NameQuest = "MarineQuest2" --name get quest
                                             LevelQuest = 1         -- lv quest
-                                            NameMon = "Marine"    --name npc
-                                            CFrameQuest = CFrame.new(-5037.93017578125, 28.65203285217285, 4324.2392578125)
+                                            NameMon = "Chief Petty Officer"    --name npc
                                             CFrameMob = CFrame.new(-4760.70263671875, 74.91291046142578, 4461.4365234375)
-                                            CFrameBring = CFrame.new(-4867.0634765625, 20.65203285217285, 4359.71337890625) or CFrame.new(-4675.14697265625, 20.652034759521484, 4477.3232421875)
                                             
                                             elseif MyLevel == 150 or MyLevel <= 174 then --Sky Bandit [Lv. 150]
                                             NameMob = "Sky Bandit [Lv. 150]" --name mob
                                             NameQuest = "SkyQuest" --name get quest
                                             LevelQuest = 1         -- lv quest
-                                            NameMon = "Sky Adventurer"    --name npc
-                                            CFrameQuest = CFrame.new(-4840.443359375, 717.6693725585938, -2620.983154296875)
+                                            NameMon = "Sky Babdit"    --name npc
                                             CFrameMob = CFrame.new(-4954.38720703125, 365.4177551269531, -2911.190673828125)
-                                            CFrameBring = CFrame.new(-5003.708984375, 278.0669860839844, -2866.371826171875)
                                             
                                             elseif MyLevel == 175 or MyLevel <= 189 then --Dark Master [Lv. 175]
                                             NameMob = "Dark Master [Lv. 175]" --name mob
                                             NameQuest = "SkyQuest" --name get quest
                                             LevelQuest = 2         -- lv quest
-                                            NameMon = "Sky Adventurer"    --name npc
-                                            CFrameQuest = CFrame.new(-4840.443359375, 717.6693725585938, -2620.983154296875)
+                                            NameMon = "Dark Master"    --name npc
                                             CFrameMob = CFrame.new(-5181.4873046875, 448.37725830078125, -2172.572998046875)    
-     CFrameBring = CFrame.new(-5258.681640625, 388.6519470214844, -2278.768310546875)
-                                       
+                                            
                elseif MyLevel == 190 or MyLevel <= 209 then --m_b3
                                             NameMob = "Prisoner [Lv. 190]" --name mob
                                             NameQuest = "PrisonerQuest" --name get quest
                                             LevelQuest = 1         -- lv quest
-                                            NameMon = "Jail Keeper"    --name npc
-                                            CFrameQuest = CFrame.new(5307.03271484375, 1.6550424098968506, 473.080810546875)
+                                            NameMon = "Prisoner"    --name npc
                                             CFrameMob = CFrame.new(5246.40869140625, 72.6520004272461, 355.7655029296875)
-                                            CFrameBring = CFrame.new(5166.82177734375, 1.798761248588562, 457.5108337402344)
-   
+                                            
   elseif MyLevel == 210 or MyLevel <= 249 then --m_b3
                                             NameMob = "Dangerous Prisoner [Lv. 210]" --name mob
                                             NameQuest = "PrisonerQuest" --name get quest
                                             LevelQuest = 2         -- lv quest
-                                            NameMon = "Jail Keeper"    --name npc
-                                            CFrameQuest = CFrame.new(5307.03271484375, 1.6550424098968506, 473.080810546875)
+                                            NameMon = "Dangerous Prisoner"    --name npc
                                             CFrameMob = CFrame.new(5664.5263671875, 72.6520004272461, 663.6072998046875)       
-                                                         CFrameBring = CFrame.new(5609.08935546875, 1.6338006258010864, 659.2885131835938)     
-                                       
+                                            
    elseif MyLevel == 250 or MyLevel <= 299 then --Toga Warrior [Lv. 225]
                                             NameMob = "Toga Warrior [Lv. 250]" --name mob
                                             NameQuest = "ColosseumQuest" --name get quest
                                             LevelQuest = 1         -- lv quest
-                                            NameMon = "Colosseum Quest Giver"    --name npc
-                                            CFrameQuest = CFrame.new(-1578.853759765625, 7.38933801651001, -2985.190185546875)
+                                            NameMon = "Toga Warrior"    --name npc
                                             CFrameMob = CFrame.new(-1780.4468994140625, 45.20888900756836, -2735.003173828125) 
-                                      CFrameBring = CFrame.new(-1909.5372314453125, 7.289072513580322, -2760.071044921875)
                
   elseif MyLevel == 300 or MyLevel <= 324 then --Military Soldier [Lv. 300]
                                             NameMob = "Military Soldier [Lv. 300]" --name mob
                                             NameQuest = "MagmaQuest" --name get quest
                                             LevelQuest = 1         -- lv quest
-                                            NameMon = "The Mayor"    --name npc
-                                            CFrameQuest = CFrame.new(-5315.4609375, 12.23685073852539, 8516.6962890625)
+                                            NameMon = "Military Soldier"    --name npc
                                             CFrameMob = CFrame.new(-5615.11962890625, 59.20390701293945, 8445.76953125)
-                                            CFrameBring = CFrame.new(-5377.1494140625, 8.990673065185547, 8493.80859375)
-   
+                                            
   elseif MyLevel == 325 or MyLevel <= 449 then --Military Spy [Lv. 325]
                                             NameMob = "Military Spy [Lv. 325]" --name mob
                                             NameQuest = "MagmaQuest" --name get quest
                                             LevelQuest = 2       -- lv quest
-                                            NameMon = "The Mayor"    --name npc
-                                            CFrameQuest = CFrame.new(-5315.4609375, 12.23685073852539, 8516.6962890625)
+                                            NameMon = "Military Spy"    --name npc
                                             CFrameMob = CFrame.new(-5729.09130859375, 115.57196807861328, 8622.763671875)         
-  CFrameBring = CFrame.new(-5849.50927734375, 77.23063659667969, 8823.505859375)
-
+                                            
  elseif MyLevel == 450 or MyLevel <= 474 then --God's Guard [Lv. 450]
                                             NameMob = "God's Guard [Lv. 450]" --name mob
                                             NameQuest = "SkyExp1Quest" --name get quest
                                             LevelQuest = 1         -- lv quest
-                                            NameMon = "Mole"    --name npc
-                                            CFrameQuest = CFrame.new(-4722.51416015625, 845.2769775390625, -1951.57275390625)
+                                            NameMon = "God's Guard"    --name npc
                                             CFrameMob = CFrame.new(-4627.7509765625, 866.9027709960938, -1938.8880615234375)
-                                            CFrameBring = CFrame.new(-4740.54541015625, 845.2769775390625, -1903.8253173828125)
-   
+                                            
   elseif MyLevel == 475 or MyLevel <= 524 then --Shanda [Lv. 475]
                                             NameMob = "Shanda [Lv. 475]" --name mob
                                             NameQuest = "SkyExp1Quest" --name get quest
                                             LevelQuest = 2         -- lv quest
-                                            NameMon = "Mole"    --name npc
-                                            CFrameQuest = CFrame.new(-7860.5810546875, 5545.49169921875, -380.9195251464844)
+                                            NameMon = "Shanda"    --name npc
                                             CFrameMob = CFrame.new(-7686.40673828125, 5600.93701171875, -441.3550109863281)   
-              CFrameBring = CFrame.new(-7651.97216796875, 5545.49169921875, -519.1795043945312)
 
      elseif MyLevel == 525 or MyLevel <= 549 then --Royal Squad [Lv. 525]
                                             NameMob = "Royal Squad [Lv. 525]" --name mob
                                             NameQuest = "SkyExp2Quest" --name get quest
                                             LevelQuest = 1         -- lv quest
-                                            NameMon = "Gan Fall Adventurer"    --name npc
-                                            CFrameQuest = CFrame.new(-7905.001953125, 5635.96240234375, -1412.4091796875)
+                                            NameMon = "Royal Squad"    --name npc
                                             CFrameMob = CFrame.new(-7634.65771484375, 5637.08056640625, -1411.266845703125)
-                                            CFrameBring = CFrame.new(-7690.3349609375, 5606.876953125, -1456.149658203125)
    
   elseif MyLevel == 550 or MyLevel <= 624 then --Royal Soldier [Lv. 550]
                                             NameMob = "Royal Soldier [Lv. 550]" --name mob
                                             NameQuest = "SkyExp2Quest" --name get quest
                                             LevelQuest = 2        -- lv quest
-                                            NameMon = "Gan Fall Adventurer"    --name npc
-                                            CFrameQuest = CFrame.new(-7905.001953125, 5635.96240234375, -1412.4091796875)
+                                            NameMon = "Royal Soldier"    --name npc
                                             CFrameMob = CFrame.new(-7837.5185546875, 5681.2587890625, -1790.808837890625)     
-       CFrameBring = CFrame.new(-7838.7861328125, 5606.876953125, -1820.982666015625)
-
+                                            
       elseif MyLevel == 625 or MyLevel <= 649 then --Galley Pirate [Lv. 625]
                                             NameMob = "Galley Pirate [Lv. 625]" --name mob
                                             NameQuest = "FountainQuest" --name get quest
                                             LevelQuest = 1         -- lv quest
-                                            NameMon = "Freezeburg Quest Giver"    --name npc
-                                            CFrameQuest = CFrame.new(5257.8203125, 38.501129150390625, 4049.2529296875)
+                                            NameMon = "Galley Pirate"    --name npc
                                             CFrameMob = CFrame.new(5559.6796875, 152.30133056640625, 4002.3876953125)
-                                            CFrameBring = CFrame.new(5576.9287109375, 38.501129150390625, 3942.519287109375)
-   
+                                            
   elseif MyLevel == 650 or MyLevel >= 675 then --Galley Captain [Lv. 650]
                                             NameMob = "Galley Captain [Lv. 650]" --name mob
                                             NameQuest = "FountainQuest" --name get quest
+                                            NameMon = "Galley Captain"
                                             LevelQuest = 2        -- lv quest
-                                            NameMon = "Freezeburg Quest Giver"    --name npc
-                                            CFrameQuest = CFrame.new(5257.8203125, 38.501129150390625, 4049.2529296875)
                                             CFrameMob = CFrame.new(5527.89501953125, 89.71221923828125, 4855.52490234375)    
-                                                  CFrameBring = CFrame.new(5474.2099609375, 43.79754638671875, 4858.40478515625)            
-end end    
-
+end end
     if game.PlaceId == 4442272183 then -- sea2                                                                                 
  if MyLevel == 700 or MyLevel <= 724 then --Raider [Lv. 700]
                                             NameMob = "Raider [Lv. 700]" --name mob
                                             NameQuest = "Area1Quest" --name get quest
                                             LevelQuest = 1         -- lv quest
-                                            NameMon = "Area 1 Quest Giver"    --name npc
-                                            CFrameQuest = CFrame.new(-427.6253662109375, 73.31376647949219, 1836.4666748046875)
-                                            CFrameBring = CFrame.new(-721.4496459960938, 39.483028411865234, 2367.37353515625) 
+                                            NameMon = "Raider"    --name npc
                                             CFrameMob = CFrame.new(-477.41650390625, 99.85147857666016, 2325.179443359375)
                                             
                                             elseif MyLevel == 725 or MyLevel <= 774 then --Mercenary [Lv. 725]"
                                             NameMob = "Mercenary [Lv. 725]" --name mob
                                             NameQuest = "Area1Quest" --name get quest
                                             LevelQuest = 2        -- lv quest
-                                            NameMon = "Area 1 Quest Giver"    --name npc
-                                            CFrameQuest = CFrame.new(-427.6253662109375, 73.31376647949219, 1836.4666748046875)
+                                            NameMon = "Mercenary"    --name npc
                                             CFrameMob = CFrame.new(-856.7423095703125, 135.76040649414062, 1488.4263916015625)
-                                            CFrameBring = CFrame.new(-933.7117919921875, 73.30294036865234, 1704.3751220703125) or CFrame.new(-1089.43212890625, 73.30294036865234, 1176.912353515625) 
                                             
                                             elseif MyLevel == 775 or MyLevel <= 874 then --Swan Pirate [Lv. 775]
                                             NameMob = "Swan Pirate [Lv. 775]" --name mob
                                             NameQuest = "Area2Quest" --name get quest
                                             LevelQuest = 1         -- lv quest
-                                            NameMon = "Area 2 Quest Giver"    --name npc
-                                            CFrameQuest = CFrame.new(635.6129150390625, 73.41377258300781, 918.0537109375)
+                                            NameMon = "Swan Pirate"    --name npc
                                             CFrameMob = CFrame.new(930.8262329101562, 151.6645965576172, 1192.30859375)
-                                            CFrameBring = CFrame.new(929.234130859375, 73.30294036865234, 1210.5303955078125)
-                                                                                                            
+                                
   elseif MyLevel == 875 or MyLevel <= 899 then --Marine Lieutenant [Lv. 875]
                                             NameMob = "Marine Lieutenant [Lv. 875]" --name mob
                                             NameQuest = "MarineQuest3" --name get quest
                                             LevelQuest = 1      -- lv quest
-                                            NameMon = "Marine Quest Giver"    --name npc
-                                            CFrameQuest = CFrame.new(-2441.47705078125, 73.35932922363281, -3217.752685546875)
+                                            NameMon = "Marine Lieutenant"    --name npc
                                             CFrameMob = CFrame.new(-2921.725341796875, 152.91773986816406, -3089.07470703125)
-                                            CFrameBring = CFrame.new(-2843.622314453125, 73.30936431884766, -2990.433349609375)                                           
-
+                                            
       elseif MyLevel == 900 or MyLevel <= 949 then --Marine Captain [Lv. 900]
                                             NameMob = "Marine Captain [Lv. 900]" --name mob
                                             NameQuest = "MarineQuest3" --name get quest
                                             LevelQuest = 2         -- lv quest
-                                            NameMon = "Marine Quest Giver"    --name npc
-                                            CFrameQuest = CFrame.new(-2441.47705078125, 73.35932922363281, -3217.752685546875)
+                                            NameMon = "Marine Captain"    --name npc
                                             CFrameMob = CFrame.new(-2007.395751953125, 120.147216796875, -3203.88916015625)
-                                            CFrameBring = CFrame.new(-1955.32568359375, 73.30936431884766, -3273.25341796875)   
                                             
                                             elseif MyLevel == 950 or MyLevel <= 974 then --Zombie [Lv. 950]
                                             NameMob = "Zombie [Lv. 950]" --name mob
                                             NameQuest = "ZombieQuest" --name get quest
                                             LevelQuest = 1         -- lv quest
                                             NameMon = "Graveyard Quest Giver"    --name npc
-                                            CFrameQuest = CFrame.new(-5495.4521484375, 48.823360443115234, -794.7634887695312)
                                             CFrameMob = CFrame.new(-5727.2783203125, 126.3752212524414, -728.1871337890625)
-                                            CFrameBring = CFrame.new(-5677.216796875, 48.82343673706055, -696.4016723632812)
                                             
   elseif MyLevel == 975 or MyLevel <= 999 then --Vampire [Lv. 975]
                                             NameMob = "Vampire [Lv. 975]" --name mob
                                             NameQuest = "ZombieQuest" --name get quest
                                             LevelQuest = 2        -- lv quest
-                                            NameMon = "Graveyard Quest Giver"    --name npc
-                                            CFrameQuest = CFrame.new(-5495.4521484375, 48.823360443115234, -794.7634887695312)
+                                            NameMon = "Vampire"    --name npc
                                             CFrameMob = CFrame.new(-5922.28125, 42.31851577758789, -1084.8621826171875)
-                                            CFrameBring = CFrame.new(-6050.15869140625, 6.745943546295166, -1314.393328125)                
 
                              elseif MyLevel == 1000 or MyLevel <= 1049 then --Snow Trooper [Lv. 1000]
                                             NameMob = "Snow Trooper [Lv. 1000]" --name mob
                                             NameQuest = "SnowMountainQuest" --name get quest
                                             LevelQuest = 1         -- lv quest
-                                            NameMon = "Snow Quest Giver"    --name npc
-                                            CFrameQuest = CFrame.new(607.1868286132812, 401.7651672363281, -5372.98046875)
+                                            NameMon = "Snow Trooper"    --name npc
                                             CFrameMob = CFrame.new(538.6248168945312, 428.3368835449219, -5546.4677734375)
-                                            CFrameBring = CFrame.new(604.3399047851562, 401.7651672363281, -5566.1025390625)
                                             
   elseif MyLevel == 1050 or MyLevel <= 1099 then --Winter Warrior [Lv. 1050]
                                             NameMob = "Winter Warrior [Lv. 1050]" --name mob
                                             NameQuest = "SnowMountainQuest" --name get quest
                                             LevelQuest = 2        -- lv quest
-                                            NameMon = "Snow Quest Giver"    --name npc
-                                            CFrameQuest = CFrame.new(607.018310546875, 401.7651672363281, -5371.32080078125)
+                                            NameMon = "Winter Warrior"    --name npc
                                             CFrameMob = CFrame.new(1397.455078125, 465.8684387207031, -5203.23388671875)
-                                            CFrameBring = CFrame.new(1316.513916015625, 429.7651062011719, -5313.61572265625)   
 
                                           elseif MyLevel == 1100 or MyLevel <= 1124 then --Lab Subordinate [Lv. 1100]
                                             NameMob = "Lab Subordinate [Lv. 1100]" --name mob
                                             NameQuest = "IceSideQuest" --name get quest
                                             LevelQuest = 1         -- lv quest
-                                            NameMon = "Ice Quest Giver"    --name npc
-                                            CFrameQuest = CFrame.new(-6062.630859375, 16.295000076293945, -4903.611328125)
+                                            NameMon = "Lab Subordinate"   --name npc
                                             CFrameMob = CFrame.new(-5836.0224609375, 48.78202819824219, -4508.833984375)
-                                            CFrameBring = CFrame.new(-5737.90966796875, 16.295000076293945, -4500.74365234375)
                                             
   elseif MyLevel == 1125 or MyLevel <= 1174 then --Horned Warrior [Lv. 1125]
                                             NameMob = "Horned Warrior [Lv. 1125]" --name mob
                                             NameQuest = "IceSideQuest" --name get quest
                                             LevelQuest = 2        -- lv quest
-                                            NameMon = "Ice Quest Giver"    --name npc
-                                            CFrameQuest = CFrame.new(-6062.630859375, 16.295000076293945, -4903.611328125)
+                                            NameMon = "Horned Warrior"    --name npc
                                             CFrameMob = CFrame.new(-6400.66796875, 25.011735916137695, -5818.05712890625)
-                                            CFrameBring = CFrame.new(-6466.91748046875, 16.29500389099121, -5705.90283203125)           
 
                 elseif MyLevel == 1175 or MyLevel <= 1199 then --Magma Ninja [Lv. 1175]
                                             NameMob = "Magma Ninja [Lv. 1175]" --name mob
                                             NameQuest = "FireSideQuest" --name& get quest
                                             LevelQuest = 1         -- lv quest
-                                            NameMon = "Fire Quest Giver"    --name npc
-                                            CFrameQuest = CFrame.new(-5428.10595703125, 16.295000076293945, -5297.57177734375)
+                                            NameMon = "Magma Ninja"    --name npc
                                             CFrameMob = CFrame.new(-5750.71630859375, 62.33693313598633, -5983.71435546875)
-                                            CFrameBring = CFrame.new(-5720.39404296875, 16.295000076293945, -5812.42138671875) or CFrame.new(-5185.24169921875, 16.295122146606445, -6091.33935546875)                       
                                             
   elseif MyLevel == 1200 or MyLevel <= 1349 then --Lava Pirate [Lv. 1200]
                                             NameMob = "Lava Pirate [Lv. 1200]" --name mob
                                             NameQuest = "FireSideQuest" --name get quest
                                             LevelQuest = 2        -- lv quest
-                                            NameMon = "Fire Quest Giver"    --name npc
-                                            CFrameQuest = CFrame.new(-5428.10595703125, 16.295000076293945, -5297.57177734375)
+                                            NameMon = "Lava Pirate"    --name npc
                                             CFrameMob = CFrame.new(-5283.6630859375, 47.871910095214844, -4677.29345703125)
-                                            CFrameBring = CFrame.new(-5289.73193359375, 16.295000076293945, -4558.72412109375)    
 
                      elseif MyLevel == 1350 or MyLevel <= 1374 then --Arctic Warrior [Lv. 1350]
                                             NameMob = "Arctic Warrior [Lv. 1350]" --name mob
                                             NameQuest = "FrostQuest" --name get quest
                                             LevelQuest = 1         -- lv quest
-                                            NameMon = "Frost Quest Giver"    --name npc
-                                            CFrameQuest = CFrame.new(5667.05908203125, 28.51487159729004, -6484.171875)
+                                            NameMon = "Arctic Warrior"   --name npc
                                             CFrameMob = CFrame.new(5993.02587890625, 58.28438186645508, -6174.68896484375)
-                                            CFrameBring = CFrame.new(6118.96240234375, 28.71002769470215, -6218.337890625)
                                             
   elseif MyLevel == 1375 or MyLevel <= 1424 then --Snow Lurker [Lv. 1375]
                                             NameMob = "Snow Lurker [Lv. 1375]" --name mob
                                             NameQuest = "FrostQuest" --name get quest
                                             LevelQuest = 2        -- lv quest
-                                            NameMon = "Frost Quest Giver"    --name npc
-                                            CFrameQuest = CFrame.new(5667.05908203125, 28.51487159729004, -6484.171875)
+                                            NameMon = "Snow Lurker"   --name npc
                                             CFrameMob = CFrame.new(5557.3349609375, 57.892425537109375, -6598.27685546875)
-                                            CFrameBring = CFrame.new(5601.07373046875, 28.939659118652344, -6723.14306640625)     
-
+                                            
                            elseif MyLevel == 1425 or MyLevel <= 1449 then --Sea Soldier [Lv. 1425]
                                             NameMob = "Sea Soldier [Lv. 1425]" --name mob
                                             NameQuest = "ForgottenQuest" --name get quest
                                             LevelQuest = 1         -- lv quest
-                                            NameMon = "Forgotten Quest Giver"    --name npc
-                                            CFrameQuest = CFrame.new(-3053.992431640625, 237.1895294189453, -10146.0830078125)
+                                            NameMon = "Sea Soldier"    --name npc
                                             CFrameMob = CFrame.new(-3519.587646484375, 74.93817138671875, -9724.068359375)
-                                            CFrameBring = CFrame.new(-3368.539794921875, 27.295886993408203, -9782.5263671875)
                                             
   elseif MyLevel == 1450 or MyLevel >= 1474 then --Water Fighter [Lv. 1450]
                                             NameMob = "Water Fighter [Lv. 1450]" --name mob
                                             NameQuest = "ForgottenQuest" --name get quest
                                             LevelQuest = 2        -- lv quest
-                                            NameMon = "Forgotten Quest Giver"    --name npc
-                                            CFrameQuest = CFrame.new(-3053.992431640625, 237.1895294189453, -10146.0830078125)
-                                            CFrameMob = CFrame.new(-3435.46923828125, 290.52178955078125, -10501.794921875)
-                                            CFrameBring = CFrame.new(-3419.48974609375, 239.18936157226562, -10508.7607421875)                                                                                                
+                                            NameMon = "Water Fighter"  --name npc
+                                            CFrameMob = CFrame.new(-3435.46923828125, 290.52178955078125, -10501.794921875)                                                
                                             end end
                                             
                    if game.PlaceId == 7449423635 then -- sea3    
@@ -1457,282 +1378,220 @@ if MyLevel == 1500 or MyLevel <= 1524 then --Pirate Millionaire [Lv. 1500]
                                             NameMob = "Pirate Millionaire [Lv. 1500]" --name mob
                                             NameQuest = "PiratePortQuest" --name get quest
                                             LevelQuest = 1         -- lv quest
-                                            NameMon = "Pirate Port Quest Giver"    --name npc
-                                            CFrameQuest = CFrame.new(-289.6327819824219, 44.136451721191406, 5579.84228515625)
+                                            NameMon = "Pirate Millionaire"   --name npc
                                             CFrameMob = CFrame.new(-506.41162109375, 81.82060241699219, 5568.873046875)
-                                            CFrameBring = CFrame.new(-565.9216918945312, 44.15378952026367, 5530.4326171875) 
                                             
   elseif MyLevel == 1525 or MyLevel <= 1574 then --Pistol Billionaire [Lv. 1525] 
                                             NameMob = "Pistol Billionaire [Lv. 1525]" --name mob
                                             NameQuest = "PiratePortQuest" --name get quest
                                             LevelQuest = 2        -- lv quest
-                                            NameMon = "Pirate Port Quest Giver"    --name npc
-                                            CFrameQuest = CFrame.new(-289.6327819824219, 44.136451721191406, 5579.84228515625)
+                                            NameMon = "Pistol Billionaire"    --name npc
                                             CFrameMob = CFrame.new(46.07829666137695, 134.91697692871094, 6076.12109375)
-                                            CFrameBring = CFrame.new(-5.446301460266113, 74.13822937011719, 6129.6318359375)       
                                             
                                             elseif MyLevel == 1575 or MyLevel <= 1599 then --m_b3
                                             NameMob = "Dragon Crew Warrior [Lv. 1575]" --name mob
                                             NameQuest = "AmazonQuest1" --name get quest
                                             LevelQuest = 1         -- lv quest
                                             NameMon = "Amazon Area 1 Quest Giver"    --name npc
-                                            CFrameQuest = CFrame.new(5834.0126953125, 51.69459533691406, -1103.0084228515625)
                                             CFrameMob = CFrame.new(6297.81591796875, 109.59271240234375, -1086.8896484375)
-                                            CFrameBring = CFrame.new(6491.39453125, 51.83952331542969, -979.994384765625)
                                             
   elseif MyLevel == 1600 or MyLevel <= 1624 then --m_b3
-                                            NameMob = "m_b31" --name mob
+                                            NameMob = "Dragon Crew Archer [Lv. 1600]" --name mob
                                             NameQuest = "AmazonQuest1" --name get quest
                                             LevelQuest = 2        -- lv quest
-                                            NameMon = "Amazon Area 1 Quest Giver"    --name npc
-                                            CFrameQuest = CFrame.new(5834.0126953125, 51.69459533691406, -1103.0084228515625)
+                                            NameMon = "Dragon Crew"    --name npc
                                             CFrameMob = CFrame.new(6710.20361328125, 427.42218017578125, 115.1513900756836)
-                                            CFrameBring = CFrame.new(6630.39697265625, 378.73773193359375, 262.2434387207031)                                             
-
+                                            
                 elseif MyLevel == 1625 or MyLevel <= 1649 then --m_b3
                                             NameMob = "Female Islander [Lv. 1625]" --name mob
                                             NameQuest = "AmazonQuest2" --name get quest
                                             LevelQuest = 1         -- lv quest
-                                            NameMon = "Amazon Area 2 Quest Giver"    --name npc
-                                            CFrameQuest = CFrame.new(5447.1455078125, 601.9468994140625, 750.1180419921875)
+                                            NameMon = "Female Islander"   --name npc
                                             CFrameMob = CFrame.new(4646.63916015625, 792.59423828125, 776.8380126953125)
-                                            CFrameBring = CFrame.new(4746.7080078125, 730.677001953125, 692.0280151367188)
                                             
   elseif MyLevel == 1650 or MyLevel <= 1699 then --Giant Islander [Lv. 1650]
                                             NameMob = "Giant Islander [Lv. 1650]" --name mob
                                             NameQuest = "AmazonQuest2" --name get quest
                                             LevelQuest = 2        -- lv quest
-                                            NameMon = "Amazon Area 2 Quest Giver"    --name npc
-                                            CFrameQuest = CFrame.new(5447.1455078125, 601.9468994140625, 750.1180419921875)
+                                            NameMon = "Giant Islander"   --name npc
                                             CFrameMob = CFrame.new(4920.9521484375, 670.2709350585938, -8.560141563415527)
-                                            CFrameBring = CFrame.new(4763.189453125, 590.780029296875, -36.859249114990234)          
-
+                                            
              elseif MyLevel == 1700 or MyLevel <= 1724 then --Marine Commodore [Lv. 1700]
                                             NameMob = "Marine Commodore [Lv. 1700]" --name mob
                                             NameQuest = "MarineTreeIsland" --name get quest
                                             LevelQuest = 1         -- lv quest
-                                            NameMon = "Marine Tree Quest Giver"    --name npc
-                                            CFrameQuest = CFrame.new(2179.129150390625, 29.04867935180664, -6738.630859375)
+                                            NameMon = "Marine Commodore"   --name npc
                                             CFrameMob = CFrame.new(2440.161376953125, 126.5625991821289, -7372.95263671875)
-                                            CFrameBring = CFrame.new(2339.177001953125, 73.4631576538086, -7515.31396484375)
                                             
   elseif MyLevel == 1725 or MyLevel <= 1774 then --Marine Rear Admiral [Lv. 1725]
                                             NameMob = "Marine Rear Admiral [Lv. 1725]" --name mob
                                             NameQuest = "MarineTreeIsland" --name get quest
                                             LevelQuest = 2        -- lv quest
-                                            NameMon = "Marine Tree Quest Giver"    --name npc
-                                            CFrameQuest = CFrame.new(2179.129150390625, 29.04867935180664, -6738.630859375)
+                                            NameMon = "Marine Rear Admiral"   --name npc
                                             CFrameMob = CFrame.new(3785.75634765625, 191.74342346191406, -7079.556640625)
-                                            CFrameBring = CFrame.new(3670.998046875, 160.86729431152344, -7010.044921875)                
-
+                                            
              elseif MyLevel == 1775 or MyLevel <= 1799 then --Fishman Raider [Lv. 1775]
                                             NameMob = "Fishman Raider [Lv. 1775]" --name mob
                                             NameQuest = "DeepForestIsland3" --name get quest
                                             LevelQuest = 1         -- lv quest
-                                            NameMon = "Turtle Adventure Quest Giver"    --name npc
-                                            CFrameQuest = CFrame.new(-10584.568359375, 332.1058654785156, -8758.7568359375)
+                                            NameMon = "Fishman Raider"    --name npc
                                             CFrameMob = CFrame.new(-10532.115234375, 374.5972900390625, -8267.361328125)
-                                            CFrameBring = CFrame.new(-10686.943359375, 332.1058654785156, -8476.6474609375) or CFrame.new(-10408.716796875, 332.1058654785156, -8357.494140625)
                                             
   elseif MyLevel == 1800 or MyLevel <= 1824 then --Fishman Captain [Lv. 1800]
                                             NameMob = "Fishman Captain [Lv. 1800]" --name mob
                                             NameQuest = "DeepForestIsland3" --name get quest
                                             LevelQuest = 2        -- lv quest
-                                            NameMon = "Turtle Adventure Quest Giver"    --name npc
-                                            CFrameQuest = CFrame.new(-10584.568359375, 332.1058654785156, -8758.7568359375)
+                                            NameMon = "Fishman Captain"   --name npc
                                             CFrameMob = CFrame.new(-10308.4921875, 376.1828308105469, -8790.044921875)
-                                            CFrameBring = CFrame.new(-10957.3740234375, 332.1058654785156, -8808.9951171875)   or CFrame.new(-11094.2783203125, 332.0664367675781, -9118.0009765625)              
-
+                                            
                                              elseif MyLevel == 1825 or MyLevel <= 1849 then --Forest Pirate [Lv. 1825]
                                             NameMob = "Forest Pirate [Lv. 1825]" --name mob
                                             NameQuest = "DeepForestIsland" --name get quest
                                             LevelQuest = 1         -- lv quest
-                                            NameMon = "Deep Forest Quest Giver"    --name npc
-                                            CFrameQuest = CFrame.new(-13233.65625, 332.72137451171875, -7627.02490234375)
+                                            NameMon = "Forest Pirate"    --name npc
                                             CFrameMob = CFrame.new(-13497.9482421875, 391.09967041015625, -7907.6767578125)
-                                            CFrameBring = CFrame.new(-13482.9677734375, 332.72137451171875, -7868.55712890625)
                                             
   elseif MyLevel == 1850 or MyLevel <= 1899 then --Mythological Pirate [Lv. 1850]
                                             NameMob = "Mythological Pirate [Lv. 1850]" --name mob
                                             NameQuest = "DeepForestIsland" --name get quest
                                             LevelQuest = 2        -- lv quest
-                                            NameMon = "Deep Forest Quest Giver"    --name npc
-                                            CFrameQuest = CFrame.new(-13233.65625, 332.72137451171875, -7627.02490234375)
+                                            NameMon = "Mythological Pirate"    --name npc
                                             CFrameMob = CFrame.new(-13506.3642578125, 581.2453002929688, -6984.3818359375)
-                                            CFrameBring = CFrame.new(-13658.9287109375, 470.13092041015625, -6991.89794921875)    or CFrame.new(  -13249.5517578125, 520.3683471679688, -6797.69970703125)                                   
-
+                                            
 elseif MyLevel == 1900 or MyLevel <= 1924 then --Jungle Pirate [Lv. 1900]
                                             NameMob = "Jungle Pirate [Lv. 1900]" --name mob
                                             NameQuest = "DeepForestIsland2" --name get quest
                                             LevelQuest = 1         -- lv quest
-                                            NameMon = "Deep Forest Area 2 Quest Giver"    --name npc
-                                            CFrameQuest = CFrame.new(-12683.2880859375, 391.20391845703125, -9901.1484375)
+                                            NameMon = "Jungle Pirate"    --name npc
                                             CFrameMob = CFrame.new(-12090.5185546875, 447.84625244140625, -10561.8701171875)
-                                            CFrameBring = CFrame.new(-11803.9326171875, 332.0815124511719, -10570.623046875) or CFrame.new(-12265.771484375, 332.0815124511719, -10488.734375)
                                             
   elseif MyLevel == 1925 or MyLevel <= 1974 then --Jungle Pirate [Lv. 1900]
                                             NameMob = "Jungle Pirate [Lv. 1900]" --name mob
                                             NameQuest = "DeepForestIsland2" --name get quest
                                             LevelQuest = 2        -- lv quest
-                                            NameMon = "Deep Forest Area 2 Quest Giver"    --name npc
-                                            CFrameQuest = CFrame.new(-12683.2880859375, 391.20391845703125, -9901.1484375)
+                                            NameMon = "Jungle Pirate"    --name npc
                                             CFrameMob = CFrame.new(-13335.2841796875, 446.6105041503906, -9916.2177734375)
-                                            CFrameBring = CFrame.new(-13365.779296875, 391.8888854980469, -9815.4404296875)          
-
+                                            
                                    elseif MyLevel == 1975 or MyLevel <= 1999 then --Reborn Skeleton [Lv. 1975]
                                             NameMob = "Reborn Skeleton [Lv. 1975]" --name mob
                                             NameQuest = "HauntedQuest1" --name get quest
                                             LevelQuest = 1         -- lv quest
-                                            NameMon = "Haunted Castle Quest Giver 1"    --name npc
-                                            CFrameQuest = CFrame.new(-9480.8701171875, 142.4469451904297, 5567.6015625)
+                                            NameMon = "Reborn Skeleton"   --name npc
                                             CFrameMob = CFrame.new(-8761.7587890625, 176.92678833007812, 6178.2587890625)
-                                            CFrameBring = CFrame.new(-8753.0634765625, 142.44805908203125, 6054.65185546875)
                                             
   elseif MyLevel == 2000 or MyLevel <= 2024 then --Living Zombie [Lv. 2000]
                                             NameMob = "Living Zombie [Lv. 2000]" --name mob
                                             NameQuest = "HauntedQuest1" --name get quest
                                             LevelQuest = 2        -- lv quest
-                                            NameMon = "Haunted Castle Quest Giver 1"    --name npc
-                                            CFrameQuest = CFrame.new(-9480.8701171875, 142.4469451904297, 5567.6015625)
+                                            NameMon = "Living Zombie"   --name npc
                                             CFrameMob = CFrame.new(-10080.99609375, 238.17595214844, 5915.44775390625)
-                                            CFrameBring = CFrame.new(-10151.8662109375, 138.96990966796875, 5999.3056640625)                     
-
+                                            
                         elseif MyLevel == 2025 or MyLevel <= 2049 then --Demonic Soul [Lv. 2025]
                                             NameMob = "Demonic Soul [Lv. 2025]" --name mob
                                             NameQuest = "HauntedQuest2" --name get quest
                                             LevelQuest = 1         -- lv quest
-                                            NameMon = "Haunted Castle Quest Giver 2"    --name npc
-                                            CFrameQuest = CFrame.new(-9515.3583984375, 172.44805908203125, 6077.98193359375)
+                                            NameMon = "Demonic Soul" --name npc
                                             CFrameMob = CFrame.new(-9567.6455078125, 205.01329040527344, 6041.50439453125)
-                                            CFrameBring = CFrame.new(-9628.9521484375, 172.44805908203125, 6135.67529296875) or CFrame.new(-9355.6806640625, 172.44805908203125, 6128.958984375)
                                             
   elseif MyLevel == 2050 or MyLevel <= 2074 then --m_b3
                                             NameMob = "Posessed Mummy [Lv. 2050]" --name mob
                                             NameQuest = "HauntedQuest2" --name get quest
                                             LevelQuest = 2        -- lv quest
-                                            NameMon = "Haunted Castle Quest Giver 2"    --name npc
-                                            CFrameQuest = CFrame.new(-9515.3583984375, 172.44805908203125, 6077.98193359375)
+                                            NameMon = "Posessed Mummy"   --name npc
                                             CFrameMob = CFrame.new(-9683.0595703125, 30.237384796142578, 6359.37890625)
-                                            CFrameBring = CFrame.new(-9592.609375, 6.502960681915283, 6304.86767578125)          
-
+                                            
                       elseif MyLevel == 2075 or MyLevel <= 2099 then --m_b3
                                             NameMob = "Peanut Scout [Lv. 2075]" --name mob
                                             NameQuest = "NutsIslandQuest" --name get quest
                                             LevelQuest = 1        -- lv quest
-                                            NameMon = "Peanut Quest Giver"    --name npc
-                                            CFrameQuest = CFrame.new(-2103.4658203125, 38.44702911376953, -10192.3759765625)
+                                            NameMon = "Peanut Scout"   --name npc
                                             CFrameMob = CFrame.new(-1938.1060791015625, 92.89632415771484, -10194.41015625)
-                                            CFrameBring = CFrame.new(-1981.99462890625, 38.44697189331055, -10212.177734375)          
                                             
      elseif MyLevel == 2100 or MyLevel <= 2124 then --m_b3
                                             NameMob = "Peanut President [Lv. 2100]" --name mob
                                             NameQuest = "NutsIslandQuest" --name get quest
                                             LevelQuest = 2       -- lv quest
-                                            NameMon = "Peanut Quest Giver"    --name npc
-                                            CFrameQuest = CFrame.new(-2103.4658203125, 38.44702911376953, -10192.3759765625)
+                                            NameMon = "Peanut President"   --name npc
                                             CFrameMob = CFrame.new(-1955.168701171875, 80.96415710449219, -10534.24609375)
-                                            CFrameBring = CFrame.new(-1981.7294921875, 38.44706344604492, -10583.0283203125)             
-
+                                            
         elseif MyLevel == 2125 or MyLevel <= 2149 then --m_b3
                                             NameMob = "Ice Cream Chef [Lv. 2125]" --name mob
                                             NameQuest = "IceCreamIslandQuest" --name get quest
                                             LevelQuest = 1        -- lv quest
-                                            NameMon = "Ice Cream Quest Giver"    --name npc
-                                            CFrameQuest = CFrame.new(-819.2644653320312, 66.16277313232422, -10965.35546875)
+                                            NameMon = "Ice Cream Chef"  --name npc
                                             CFrameMob = CFrame.new(-875.36962890625, 118.58836364746094, -11034.2578125)
-                                            CFrameBring = CFrame.new(-966.68450195312, 66.16276550292969, -11046.341796875)
                                             
      elseif MyLevel == 2150 or MyLevel <= 2199 then --m_b3
                                             NameMob = "Ice Cream Commander [Lv. 2150]" --name mob
                                             NameQuest = "IceCreamIslandQuest" --name get quest
                                             LevelQuest = 2       -- lv quest
-                                            NameMon = "Ice Cream Quest Giver"    --name npc
-                                            CFrameQuest = CFrame.new(-819.2644653320312, 66.16277313232422, -10965.35546875)
+                                            NameMon = "Ice Cream Commander"  --name npc
                                             CFrameMob = CFrame.new(-697.4462280273438, 173.2466278076172, -11212.94140625)
-                                            CFrameBring = CFrame.new(-638.2747192382812, 66.16278076171875, -11293.0546875)       
-
+                                            
                      elseif MyLevel == 2200 or MyLevel <= 2224 then --m_b3
                                             NameMob = "Cookie Crafter [Lv. 2200]"
                                             NameQuest = "CakeQuest1" --name get quest
                                             LevelQuest = 1        -- lv quest
-                                            NameMon = "Cake Quest Giver"    --name npc
-                                            CFrameQuest = CFrame.new(-2020.8443603515625, 38.141448974609375, -12029.701171875)
+                                            NameMon = "Cookie Crafter"   --name npc
                                             CFrameMob = CFrame.new(-2289.203369140625, 92.37846374511719, -12041.884765625)
-                                            CFrameBring = CFrame.new(-2367.436279296875, 38.14149856567383, -12120.3876953125)
                                             
      elseif MyLevel == 2225 or MyLevel <= 2249  then --m_b3
                                             NameMob = "Cake Guard [Lv. 2225]"
                                             NameQuest = "CakeQuest2" --name get quest
                                             LevelQuest = 1      -- lv quest
-                                            NameMon = "Cake Quest Giver 2"    --name npc
-                                            CFrameQuest = CFrame.new(-1930.0250244140625, 38.14136505126953, -12839.5126953125)
+                                            NameMon = "Cake Guard"    --name npc
                                             CFrameMob = CFrame.new(-1770.3917236328125, 81.48420715332031, -12207.4453125)
-                                            CFrameBring = CFrame.new(-1550.4625244140625, 38.14139175415039, -12253.3388671875)     
-
+                                            
         elseif MyLevel == 2250 or MyLevel <= 2299  then --m_b3
-                                            NameMob = "Cake Guard [Lv. 2250]"
+                                            NameMob = "Baking Staff [Lv. 2250]"
                                             NameQuest = "CakeQuest2" --name get quest
                                             LevelQuest = 2       -- lv quest
-                                            NameMon = "Cake Quest Giver 2"    --name npc
-                                            CFrameQuest = CFrame.new(-1930.0250244140625, 38.14136505126953, -12839.5126953125)
+                                            NameMon = "Baking Staff"   --name npc
                                             CFrameMob = CFrame.new(-2313.727294921875, 106.16911315917969, -12928.9609375)
-                                            CFrameBring = CFrame.new(-2277.978271484375, 53.741302490234375, -12882.1669921875)
                                             
      elseif MyLevel == 2300 or MyLevel <= 2324 then --m_b3
                                             NameMob = "Cocoa Warrior [Lv. 2300]"
                                             NameQuest = "ChocQuest1" --name get quest
                                             LevelQuest = 1        -- lv quest
-                                            NameMon = "Chocolate Quest Giver 1"    --name npc
-                                            CFrameQuest = CFrame.new(232.68365478515625, 25.07747459411621, -12198.4609375)
+                                            NameMon = "Cocoa Warrior"   --name npc
                                             CFrameMob = CFrame.new(141.66293334960938, 68.89732360839844, -12254.884765625)
-                                            CFrameBring = CFrame.new(-59.606964328125, 25.077518463134766, -12293.5009765625)
                                             
      elseif MyLevel == 2325 or MyLevel <= 2349 then --m_b3
                                             NameMob = "Chocolate Bar Battler [Lv. 2325]"
                                             NameQuest = "ChocQuest1" --name get quest
                                             LevelQuest = 2       -- lv quest
-                                            NameMon = "Chocolate Quest Giver 1"    --name npc
-                                            CFrameQuest = CFrame.new(232.68365478515625, 25.07747459411621, -12198.4609375)
+                                            NameMon = "Chocolate Bar Battler"   --name npc
                                             CFrameMob = CFrame.new(601.5966186523438, 74.49623107910156, -12581.8505859375)
-                                            CFrameBring = CFrame.new(645.4754638671875, 25.077503204345703, -12556.8251953125)
                                             
          elseif MyLevel == 2350 or MyLevel <= 2374 then --m_b3
                                             NameMob = "Sweet Thief [Lv. 2350]"
                                             NameQuest = "ChocQuest2" --name get quest
                                             LevelQuest = 1        -- lv quest
-                                            NameMon = "Chocolate Quest Giver 2"  --name npc
-                                            CFrameQuest = CFrame.new(149.07852172851562, 25.136638641357422, -12773.7724609375)
+                                            NameMon = "Sweet Thief"  --name npc
                                             CFrameMob = CFrame.new(-98.89625549316406, 141.48594665527344, -12260.88671875)
-                                            CFrameBring = CFrame.new(-62.194541931152344, 25.07767105102539, -12263.3408203125)
                                             
      elseif MyLevel == 2375 or MyLevel <= 2399  then --m_b3
                                             NameMob = "Candy Rebel [Lv. 2375]"
                                             NameQuest = "ChocQuest2" --name get quest
                                             LevelQuest = 2       -- lv quest
-                                            NameMon = "Chocolate Quest Giver 2"   --name npc
-                                            CFrameQuest = CFrame.new(149.07852172851562, 25.136638641357422, -12773.7724609375)
+                                            NameMon = "Candy Rebel"   --name npc
                                             CFrameMob = CFrame.new(722.8572387695312, 66.84835052490234, -12589.693359375)
-                                            CFrameBring = CFrame.new(758.705865625, 25.077476501464844, -12648.5390625)               
-
+                                            
             elseif MyLevel == 2400 or MyLevel <= 2424 then --m_b3
                                             NameMob = "Candy Pirate [Lv. 2400]"
                                             NameQuest = "CandyQuest1" --name get quest
                                             LevelQuest = 1        -- lv quest
-                                            NameMon = "Candy Cane Quest Giver"  --name npc
-                                            CFrameQuest = CFrame.new(-1147.3931884765625, 14.45048999786377, -14445.3056640625)
+                                            NameMon = "Candy Pirate"  --name npc
                                             CFrameMob = CFrame.new(-1409.4703369140625, 70.9400405883789, -14846.0751953125)
-                                            CFrameBring = CFrame.new(-1331.5687255859375, 15.250885009765625, -14735.1865234375)
                                             
      elseif MyLevel == 2425 or MyLevel >= 2000  then --m_b3
                                             NameMob = "Snow Demon [Lv. 2425]"
                                             NameQuest = "CandyQuest1" --name get quest
                                             LevelQuest = 2       -- lv quest
-                                            NameMon = "Candy Cane Quest Giver"   --name npc
-                                            CFrameQuest = CFrame.new(-1147.3931884765625, 14.45048999786377, -14445.3056640625)
+                                            NameMon = "Snow Demon"  --name npc
                                             CFrameMob = CFrame.new(-846.505126953125, 114.67166900634766, -14408.7978515625)
-                                            CFrameBring = CFrame.new(-860.7842407226562, 15.250883102416992, -14339.814453125)        
-end end                                                                                                        
-                end
+end end   end                                        
+                
 
     
 --end scrit thu gọn
@@ -1873,34 +1732,34 @@ elseif m_b2.Text == "X" then --off
 m_b2.Text = ""
 _G.m_b2 = false
 stoptp()
-game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible = false
 end
 end)
 
 
 -- // auto farm lv
 
-spawn(function() -- fix erol quest
-    while task.wait() do       
+spawn(function() 
+    while task.wait(5) do       
             pcall(function()
       if _G.m_b2 then
-   if   game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible == true then
-wait(140)
-if _G.m_b2 then
-game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible = false
- end end end end) end end)
-          
-                _G.bring2 = true
+      CheckQuest()
+   TP1(CFrameMob)
+end end) end end)
+
+
    game:GetService('RunService').RenderStepped:connect(function()
  if _G.m_b2 then
+ 
  CheckQuest() 
+ 
+ TP1(CFrameMob)
+ 
 game.Players.LocalPlayer.Character.Animate.Disabled = false
           local humanoid = game.Players.LocalPlayer.Character.Humanoid 
 humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
 game.Players.LocalPlayer.Character.Humanoid.Sit = false
              
 if game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible == true then
-TP1(CFrameMob)
       
 for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
       if v.Name == NameMob then --name mob
@@ -1950,31 +1809,32 @@ for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
   end end end end
 end end)
 
-  
- _G.getquest = true
-game:GetService('RunService').RenderStepped:connect(function() -- get quest
-if _G.getquest then
- if _G.m_b2 then
- _G.getquest = false
- CheckQuest()
-  if game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible == false then                 
-       TP1(CFrameQuest)
- for i,v in pairs(game.Workspace.NPCs:GetDescendants()) do
-      if v.Name == NameMon then
-      
-local pos =  v.Head--check pos
-                    local Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
-                  if Distance <=10 then
-                  wait(5.3)           
-                  if game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible == false then             
-local args = {
+  -- // get quest
+ spawn(function() 
+    while task.wait() do       
+            pcall(function()
+      if _G.m_b2 then
+      CheckQuest()
+   if   game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible == true then
+   
+   if string.find(game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text, NameMon) then
+game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Visible = true
+end
+if not string.find(game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text, NameMon) then
+game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Visible = false
+end end
+
+ if   game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible == false then
+ 
+ local args = {
     [1] = "StartQuest",
     [2] = NameQuest,
     [3] = LevelQuest
 }
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
 end
-           end  end end end end end wait(5.5) _G.getquest = true end)       
+end end) end end)
+
            
 m_f3.Parent = b_page1
 m_f3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
@@ -2118,72 +1978,52 @@ game:GetService("TweenService"):Create(
         for i,v in pairs(game.Workspace.Enemies:GetDescendants()) do
       if v.Name == NameMob then --name mob
       
-        if m_b6.Text == "1000" then
-        if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 60 then
-                    if v.Humanoid.Health >= 1000 then -- check health                  
-                    mele()  click()
-                    v.HumanoidRootPart.Size = Vector3.new(50, 50, 10)     --size hix box  
-                    else
-                    v.HumanoidRootPart.Size = Vector3.new(0.1,0.1,0.1)     --size hix box  
-                    click()
-                    fruit() 
-                    Skill()
-      end   end
-end           
-      if m_b6.Text == "2000" then
-      if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 60 then
-                    if v.Humanoid.Health >= 2000 then -- check health                  
-                    mele()  click()
-                    
-                    v.HumanoidRootPart.Size = Vector3.new(50, 50, 10)     --size hix box  
-                    else
-                    v.HumanoidRootPart.Size = Vector3.new(0.1,0.1,0.1)     --size hix box  
-                    click()
-                    fruit() 
-                    Skill()
-      end     end      
-end   
-      if m_b6.Text == "3000" then
-      if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 60 then
-                    if v.Humanoid.Health >= 3000 then -- check health                  
-                    mele()  click()
-                   
-                    v.HumanoidRootPart.Size = Vector3.new(50, 50, 10)     --size hix box  
-                    else
-                    v.HumanoidRootPart.Size = Vector3.new(0.1,0.1,0.1)     --size hix box  
-                    click()
-                    fruit() 
-                    Skill()
-      end     end   
-end      
-      if m_b6.Text == "4000" then
-      if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 60 then
-                    if v.Humanoid.Health >= 4000 then -- check health                  
-                    mele()  click()
-                    v.HumanoidRootPart.Size = Vector3.new(50, 50, 10)     --size hix box  
-                    else
-                    v.HumanoidRootPart.Size = Vector3.new(0.1,0.1,0.1)     --size hix box  
-                    click()
-                    fruit() 
-                    Skill()
-      end     end         
+      if m_b6.Text == "10" then
+      _G.health = 10
+      elseif m_b6.Text == "20" then
+      _G.health = 20
+      elseif m_b6.Text == "30" then
+      _G.health = 30
+      elseif m_b6.Text == "40" then
+      _G.health = 40
+      elseif m_b6.Text == "50" then
+      _G.health = 50
       end
-      if m_b6.Text == "5000" then
-      if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 60 then
-                    if v.Humanoid.Health >= 5000 then -- check health                  
+      
+        if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 60 then
+                    if v.Humanoid.Health >= v.Humanoid.MaxHealth * _G.health / 100 then           
                     mele()  click()
                     v.HumanoidRootPart.Size = Vector3.new(50, 50, 10)     --size hix box  
                     else
                     v.HumanoidRootPart.Size = Vector3.new(0.1,0.1,0.1)     --size hix box  
+                 PositionSkillMastery = v.HumanoidRootPart.Position
                     click()
                     fruit() 
-                    Skill()
-      end              end end   
-    
-                    end end end end) end end)
+                    Skill()          
+                 end end   end end end end) end end)
         
-        
-   
+   local gg = getrawmetatable(game)
+    local old = gg.__namecall
+    setreadonly(gg,false)
+    gg.__namecall = newcclosure(function(...)
+        local method = getnamecallmethod()
+        local args = {...}
+        if tostring(method) == "FireServer" then
+            if tostring(args[1]) == "RemoteEvent" then
+                if tostring(args[2]) ~= "true" and tostring(args[2]) ~= "false" then
+                    if _G.m_b4 then
+                        if type(args[2]) == "vector" then
+                            args[2] = PositionSkillMastery
+                        else
+                            args[2] = CFrame.new(PositionSkillMastery)
+                        end
+                        return old(unpack(args))
+                    end
+                end
+            end
+        end
+        return old(...)
+    end)
 
 m_f5.Parent = b_page1
 m_f5.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
@@ -2226,7 +2066,7 @@ m_f6.Position = UDim2.new(0, 0, 0.3800000000, 0)
 m_f6.Size = UDim2.new(0, 498, 0, 30)
 m_f6.BorderColor3 = Color3.fromRGB(250, 250, 250)
 m_f6.Font = Enum.Font.Ubuntu
-m_f6.Text = "   Health Mob : "
+m_f6.Text = "   Health Mob % : "
 m_f6.TextColor3 = Color3.fromRGB(255, 255, 255)
 m_f6.TextSize = 14.000
 m_f6.TextWrapped = true
@@ -2235,18 +2075,18 @@ m_f6.TextXAlignment = Enum.TextXAlignment.Left
 m_b6.Name = "m_b6"
 m_b6.Parent = m_f6
 m_b6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-m_b6.Position = UDim2.new(0.16000000, 0, 0, 0)
+m_b6.Position = UDim2.new(0.17000000, 0, 0, 0)
 m_b6.Size = UDim2.new(0, 30, 0, 30)
 m_b6.Font = Enum.Font.Ubuntu
 m_b6.BackgroundTransparency = 1.000
-m_b6.Text = "5000"
+m_b6.Text = "30"
 m_b6.TextColor3 = Color3.fromRGB(250, 250, 250)
 m_b6.TextSize = 14.000
 m_b6.MouseButton1Down:connect(function()
-if m_b6.Text == "5000" then
-m_b6.Text = "1000"
+if m_b6.Text == "50" then
+m_b6.Text = "10"
 else 
-m_b6.Text = m_b6.Text + 1000
+m_b6.Text = m_b6.Text + 10
 end
 end)
 
@@ -6419,6 +6259,8 @@ end)
 game:GetService('RunService').RenderStepped:connect(function()
 if _G.c_b2 then --script
 local target = unpack(GetPlayer(c_tb.Text)).Character
+PositionSkillPlayer = target.HumanoidRootPart.Position
+--[[
 local args = { [1] = target.HumanoidRootPart.Position }
    game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
    local args = { [1] = target.HumanoidRootPart.Position }
@@ -6429,10 +6271,100 @@ local args = { [1] = target.HumanoidRootPart.Position }
    game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
    local args = { [1] = target.HumanoidRootPart.Position }
    game:GetService("Players").LocalPlayer.Character[game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name].RemoteEvent:FireServer(unpack(args))
-   
+   ]]
 end
 end)
 
+local gg = getrawmetatable(game)
+    local old = gg.__namecall
+    setreadonly(gg,false)
+    gg.__namecall = newcclosure(function(...)
+        local method = getnamecallmethod()
+        local args = {...}
+        if tostring(method) == "FireServer" then
+            if tostring(args[1]) == "RemoteEvent" then
+                if tostring(args[2]) ~= "true" and tostring(args[2]) ~= "false" then
+                    if _G.c_b2 then
+                        if type(args[2]) == "vector" then
+                            args[2] = PositionSkillPlayer
+                        else
+                            args[2] = CFrame.new(PositionSkillPlayer)
+                        end
+                        return old(unpack(args))
+                    end
+                end
+            end
+        end
+        return old(...)
+    end)
+
+c_f7.Parent = b_page7
+c_f7.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+c_f7.Position = UDim2.new(0, 0, 0.7300000000, 0)
+c_f7.Size = UDim2.new(0, 498, 0, 30)
+c_f7.BorderColor3 = Color3.fromRGB(250, 250, 250)
+c_f7.Font = Enum.Font.Ubuntu
+c_f7.Text = "   Auto Aim Skill Player Distance <= 500"
+c_f7.TextColor3 = Color3.fromRGB(255, 255, 255)
+c_f7.TextSize = 14.000
+c_f7.TextWrapped = true
+c_f7.TextXAlignment = Enum.TextXAlignment.Left
+
+c_b7.Name = "c_b7"
+c_b7.Parent = c_f7
+c_b7.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+c_b7.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+c_b7.Size = UDim2.new(0, 20, 0, 20)
+c_b7.BorderColor3 = Color3.fromRGB(250, 250, 250)
+c_b7.Font = Enum.Font.SourceSans
+c_b7.Text = ""
+c_b7.TextColor3 = Color3.fromRGB(250, 250, 250)
+c_b7.TextSize = 30.000
+c_b7.MouseButton1Down:connect(function()
+--on off 
+if c_b7.Text == "" then --on
+c_b7.Text = "X"
+_G.c_b7 = true
+elseif c_b7.Text == "X" then --off
+c_b7.Text = ""
+_G.c_b7 = false
+end
+end)
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.c_b7 then --script
+
+local Players = game:GetService("Players")	
+		    for i, v in pairs(Players:GetPlayers()) do
+		        if v.Name ~= game.Players.LocalPlayer.Name then
+        if (v.Character.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <=  500 then
+        PositionSkillAuto = v.Character.HumanoidRootPart.Position
+end end end
+end
+end)
+
+local gg = getrawmetatable(game)
+    local old = gg.__namecall
+    setreadonly(gg,false)
+    gg.__namecall = newcclosure(function(...)
+        local method = getnamecallmethod()
+        local args = {...}
+        if tostring(method) == "FireServer" then
+            if tostring(args[1]) == "RemoteEvent" then
+                if tostring(args[2]) ~= "true" and tostring(args[2]) ~= "false" then
+                    if _G.c_b7 then
+                        if type(args[2]) == "vector" then
+                            args[2] = PositionSkillAuto
+                        else
+                            args[2] = CFrame.new(PositionSkillAuto)
+                        end
+                        return old(unpack(args))
+                    end
+                end
+            end
+        end
+        return old(...)
+    end)
 
 --// tp
 t_t1.Parent = b_page8
