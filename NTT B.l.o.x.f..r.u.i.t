@@ -1466,10 +1466,10 @@ elseif MyLevel == 1900 or MyLevel <= 1924 then --Jungle Pirate [Lv. 1900]
                                             CFrameMob = CFrame.new(-12090.5185546875, 447.84625244140625, -10561.8701171875)
                                             
   elseif MyLevel == 1925 or MyLevel <= 1974 then --Jungle Pirate [Lv. 1900]
-                                            NameMob = "Jungle Pirate [Lv. 1900]" --name mob
+                                            NameMob = "Musketeer Pirate [Lv. 1925]" --name mob
                                             NameQuest = "DeepForestIsland2" --name get quest
                                             LevelQuest = 2        -- lv quest
-                                            NameMon = "Jungle Pirate"    --name npc
+                                            NameMon = "Musketeer Pirate"    --name npc
                                             CFrameMob = CFrame.new(-13335.2841796875, 446.6105041503906, -9916.2177734375)
                                             
                                    elseif MyLevel == 1975 or MyLevel <= 1999 then --Reborn Skeleton [Lv. 1975]
