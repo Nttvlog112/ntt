@@ -371,21 +371,22 @@ bm2.MouseButton1Down:connect(function()
 if bm2.Text == "" then --on
 bm2.Text = "X"
 _G.bm2 = true
-
-game:GetService('RunService').RenderStepped:connect(function()
-if _G.bm2 then --script
-
-     for i,v in pairs(game:GetService("Workspace")["__THINGS"].Lootbags:GetChildren()) do
-                    v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-                end
-
-end
-end)
 elseif bm2.Text == "X" then --off
 bm2.Text = ""
 _G.bm2 = false
 end
 end)
+
+spawn(function()
+    while task.wait(1) do
+        pcall(function()
+if _G.bm2 then
+for i,v in pairs(game:GetService("Workspace")["__THINGS"].Lootbags:GetChildren()) do
+                    v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+                end
+end end) end end)
+
+
 
 -- Scripts:
 
