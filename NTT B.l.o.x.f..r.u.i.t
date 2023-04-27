@@ -9300,7 +9300,7 @@ target.HumanoidRootPart.Transparency = 1
 game:GetService("TweenService"):Create(
                         game.Players.LocalPlayer.Character.HumanoidRootPart,
                         TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
-                        {CFrame = target.HumanoidRootPart.CFrame* CFrame.new(0, 20, 0) }
+                        {CFrame = target.HumanoidRootPart.CFrame* CFrame.new(0, 35, 0) }
                     ):Play()       
      else
      local humanoid = game.Players.LocalPlayer.Character.Humanoid 
