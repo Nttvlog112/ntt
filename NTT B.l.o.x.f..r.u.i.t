@@ -9037,21 +9037,9 @@ local script = Instance.new('LocalScript')
 	end
 end)
 
-c_t2.Parent = b_page7
-c_t2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-c_t2.Position = UDim2.new(0, 0, 0.3100000000, 0)
-c_t2.Size = UDim2.new(0, 498, 0, 30)
-c_t2.BorderColor3 = Color3.fromRGB(250, 250, 250)
-c_t2.Font = Enum.Font.Ubuntu
-c_t2.Text = "Player"
-c_t2.TextColor3 = Color3.fromRGB(255, 255, 255)
-c_t2.TextSize = 14.000
-c_t2.TextWrapped = true
-
-
 c_get.Parent = b_page7
 c_get.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-c_get.Position = UDim2.new(0, 0, 0.3800000000, 0)
+c_get.Position = UDim2.new(0, 0, 0.3100000000, 0)
 c_get.Size = UDim2.new(0, 498, 0, 30)
 c_get.BorderColor3 = Color3.fromRGB(250, 250, 250)
 c_get.Font = Enum.Font.Ubuntu
@@ -9068,7 +9056,7 @@ end)
 
 c_f1.Parent = b_page7
 c_f1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-c_f1.Position = UDim2.new(0, 0, 0.4500000000, 0)
+c_f1.Position = UDim2.new(0, 0, 0.3800000000, 0)
 c_f1.Size = UDim2.new(0, 498, 0, 30)
 c_f1.BorderColor3 = Color3.fromRGB(250, 250, 250)
 c_f1.Font = Enum.Font.Ubuntu
@@ -9133,7 +9121,7 @@ game:GetService("TweenService"):Create(
 
 c_f2.Parent = b_page7
 c_f2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-c_f2.Position = UDim2.new(0, 0, 0.5900000000, 0)
+c_f2.Position = UDim2.new(0, 0, 0.5200000000, 0)
 c_f2.Size = UDim2.new(0, 498, 0, 30)
 c_f2.BorderColor3 = Color3.fromRGB(250, 250, 250)
 c_f2.Font = Enum.Font.Ubuntu
@@ -9252,7 +9240,7 @@ end end) end end)
 
 c_f3.Parent = b_page7
 c_f3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-c_f3.Position = UDim2.new(0, 0, 0.5200000000, 0)
+c_f3.Position = UDim2.new(0, 0, 0.4500000000, 0)
 c_f3.Size = UDim2.new(0, 498, 0, 30)
 c_f3.BorderColor3 = Color3.fromRGB(250, 250, 250)
 c_f3.Font = Enum.Font.Ubuntu
@@ -9369,7 +9357,7 @@ local gg = getrawmetatable(game)
 
 c_t3.Parent = b_page7
 c_t3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-c_t3.Position = UDim2.new(0, 0, 0.6600000000, 0)
+c_t3.Position = UDim2.new(0, 0, 0.5900000000, 0)
 c_t3.Size = UDim2.new(0, 498, 0, 30)
 c_t3.BorderColor3 = Color3.fromRGB(250, 250, 250)
 c_t3.Font = Enum.Font.Ubuntu
@@ -9380,7 +9368,7 @@ c_t3.TextWrapped = true
 
 c_f4.Parent = b_page7
 c_f4.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-c_f4.Position = UDim2.new(0, 0, 0.7300000000, 0)
+c_f4.Position = UDim2.new(0, 0, 0.6600000000, 0)
 c_f4.Size = UDim2.new(0, 498, 0, 30)
 c_f4.BorderColor3 = Color3.fromRGB(250, 250, 250)
 c_f4.Font = Enum.Font.Ubuntu
