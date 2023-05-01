@@ -48,8 +48,9 @@ if game.PlaceId == 3623096087 then --Muscle Legends
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/BoaHacker/ROBLOX/main/Games/Muscle-Legends', true))()
 end
 if game.PlaceId == 6284583030 or game.PlaceId == 7722306047 then --Pet Simulator X
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Pet%20simulator%20x')))()
+--loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Pet%20simulator%20x')))()
 --loadstring(game:HttpGet"https://raw.githubusercontent.com/QwertyzSZ/SAZAISBEST/main/GameSupport/psxmobile.lua")()
+loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/jmesfo0/RobloxScripts/main/psx-jmes.lua"))()
 end
 if game.PlaceId == 7577073048 then --Red Light, Green Light
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/BoaHacker/ROBLOX/main/Games/Red-Light-Green-Light', true))()
