@@ -1,0 +1,375 @@
+-- // make ui
+function screengui(name1)
+name1.Name = "name1"
+name1.Parent = game.CoreGui
+name1.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+end
+
+function make_scrollingframe(name1, parent, X)
+
+name1.Name = "name1"--farm
+name1.Parent = main
+name1.Active = true
+name1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+name1.BackgroundTransparency = 1.000
+name1.BorderSizePixel = 0
+name1.Size = UDim2.new(0, 498, 0, 230)
+name1.ScrollBarThickness = 0
+name1.Position = UDim2.new(0.17631148, 0, 0.094285722, 0)
+name1.Visible = X           
+
+end
+
+function make_textlabel(name1, parent,text, position)
+
+name1.Parent = parent
+name1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+name1.Position = position
+name1.Size = UDim2.new(0, 498, 0, 30)
+name1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+name1.Font = Enum.Font.Ubuntu
+name1.Text = text
+name1.TextColor3 = Color3.fromRGB(255, 255, 255)
+name1.TextSize = 14.000
+name1.TextWrapped = true
+
+end
+
+function make_button(name1, parent, text, position)
+
+name1.Parent = parent
+name1.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+name1.Position = position
+name1.Size = UDim2.new(0, 100, 0, 25)
+name1.Font = Enum.Font.Ubuntu
+name1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+name1.Text = text
+name1.TextColor3 = Color3.fromRGB(255, 255, 255)
+name1.TextSize = 14.000
+name1.TextWrapped = false
+name1.TextXAlignment = Enum.TextXAlignment.Left
+
+end
+
+function make_together(name1, name2 , parent, text,  position)
+
+name1.Parent = parent
+name1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+name1.Position = position
+name1.Size = UDim2.new(0, 498, 0, 30)
+name1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+name1.Font = Enum.Font.Ubuntu
+name1.Text = text
+name1.TextColor3 = Color3.fromRGB(255, 255, 255)
+name1.TextSize = 14.000
+name1.TextWrapped = true
+name1.TextXAlignment = Enum.TextXAlignment.Left
+
+name2.Name = "name2"
+name2.Parent = name1
+name2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+name2.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+name2.Size = UDim2.new(0, 20, 0, 20)
+name2.BorderColor3 = Color3.fromRGB(250, 250, 250)
+name2.Font = Enum.Font.SourceSans
+name2.Text = ""
+name2.TextColor3 = Color3.fromRGB(250, 250, 250)
+name2.TextSize = 30.000
+
+end
+
+function make_select2(name1, name2, name3, parent, text, position)
+
+name1.Parent = parent
+name1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+name1.Position = UDim2.new(0, 0, 0.1000000000, 0)
+name1.Size = UDim2.new(0, 498, 0, 30)
+name1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+name1.Font = Enum.Font.Ubuntu
+name1.Text = "   "
+name1.TextColor3 = Color3.fromRGB(255, 255, 255)
+name1.TextSize = 14.000
+name1.TextWrapped = true
+name1.TextXAlignment = Enum.TextXAlignment.Left
+
+name2.Name = "name2"
+name2.Parent = name1
+name2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+name2.Size = UDim2.new(0, 180, 0, 30)
+name2.BorderColor3 = Color3.fromRGB(250, 250, 250)
+name2.Font = Enum.Font.SourceSans
+name2.Text = text
+name2.TextColor3 = Color3.fromRGB(250, 250, 250)
+name2.TextSize = 18.000
+name2.TextXAlignment = Enum.TextXAlignment.Left
+
+name3.Name = "name3"
+name3.Parent = name1
+name3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+name3.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+name3.Size = UDim2.new(0, 20, 0, 20)
+name3.BorderColor3 = Color3.fromRGB(250, 250, 250)
+name3.Font = Enum.Font.SourceSans
+name3.Text = ""
+name3.TextColor3 = Color3.fromRGB(250, 250, 250)
+name3.TextSize = 30.000
+end
+
+function make_selectbutton(name1, name2, name3, parent, text1, text2, position)
+
+name1 = Instance.new("TextLabel")
+name1.Parent = parent
+name1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+name1.Position = position
+name1.Size = UDim2.new(0, 130, 0, 20)
+name1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+name1.Font = Enum.Font.Ubuntu
+name1.Text = text1
+name1.TextColor3 = Color3.fromRGB(255, 255, 255)
+name1.TextSize = 14.000
+name1.TextWrapped = true
+name1.TextXAlignment = Enum.TextXAlignment.Left
+
+name2 = Instance.new("TextButton")
+name2.Parent = name1
+name2.BackgroundColor3 = Color3.fromRGB(250,250,250)
+name2.Position = UDim2.new(0.80000000, 0, 0, 0)
+name2.Size = UDim2.new(0, 60, 0, 20)
+name2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+name2.Font = Enum.Font.SourceSans
+name2.Text = "Chọn"
+name2.TextColor3 = Color3.fromRGB(0, 0, 0)
+name2.TextSize = 14.000
+name2.MouseButton1Down:connect(function()
+name3.Text = text2
+parent.Visible = false
+end)
+end
+
+function make_selectscrollingframe(name1, parent,  position)
+
+name1.Name = "name1"
+name1.Parent = parent
+name1.Active = true
+name1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+name1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+name1.Position = position
+name1.Size = UDim2.new(0, 180, 0, 140)
+name1.BorderSizePixel = 1
+name1.Visible = false
+end
+
+function make_mainfram(name1, name2, name3, parent,  text)
+
+name1.Name = "name1"
+name1.Parent = parent -- nằm trên khung ẩn
+name1.BackgroundColor3 = Color3.fromRGB(0, 0, 0) --màu khung
+name1.Position = UDim2.new(0.180126051, 0, 0.228999169, 0) -- vị trí đứng
+name1.Size = UDim2.new(0, 640, 0, 280) -- kích cở
+name1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+name1.Active = true
+name1.Draggable = true
+name1.Visible = false
+
+name2.Parent = name1
+name2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+name2.BackgroundTransparency = 0
+name2.Position = UDim2.new(0, 0, 0, 0)
+name2.Size = UDim2.new(0, 640, 0, 26)
+name2.Font = Enum.Font.Ubuntu
+name2.Text = text
+name2.TextColor3 = Color3.fromRGB(255, 255, 255)
+name2.TextSize = 14.000
+name2.TextWrapped = true
+name2.TextXAlignment = Enum.TextXAlignment.Left
+name2.BorderColor3 = Color3.fromRGB(250, 250, 250)
+
+name3.Name = "name3"
+name3.Parent = name1
+name3.Active = true
+name3.BackgroundColor3 = Color3.fromRGB(5,5,5)
+name3.Size = UDim2.new(0, 100, 0, 250)
+name3.ScrollBarThickness = 0
+name3.BorderColor3 = Color3.fromRGB(250, 250, 250)
+name3.Position = UDim2.new(0, 0, 0.102285722, 0)
+
+end
+
+function make_select1(name1, name2, parent, text, position)
+name1.Parent = parent
+name1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+name1.Position = position
+name1.Size = UDim2.new(0, 498, 0, 30)
+name1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+name1.Font = Enum.Font.Ubuntu
+name1.Text = "   "
+name1.TextColor3 = Color3.fromRGB(255, 255, 255)
+name1.TextSize = 14.000
+name1.TextWrapped = true
+name1.TextXAlignment = Enum.TextXAlignment.Left
+
+name2.Name = "name2"
+name2.Parent = name1
+name2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+name2.Size = UDim2.new(0, 180, 0, 30)
+name2.BorderColor3 = Color3.fromRGB(250, 250, 250)
+name2.Font = Enum.Font.SourceSans
+name2.Text = text
+name2.TextColor3 = Color3.fromRGB(250, 250, 250)
+name2.TextSize = 18.000
+name2.TextXAlignment = Enum.TextXAlignment.Left
+
+end
+
+function make_buttonwhite(name1, name2, parent, text,  position)
+name1.Parent = parent
+name1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+name1.Position = position
+name1.Size = UDim2.new(0, 498, 0, 30)
+name1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+name1.Font = Enum.Font.Ubuntu
+name1.Text = text
+name1.TextColor3 = Color3.fromRGB(255, 255, 255)
+name1.TextSize = 14.000
+name1.TextWrapped = true
+name1.TextXAlignment = Enum.TextXAlignment.Left
+
+name2.Name = "name2"
+name2.Parent = name1
+name2.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+name2.Position = UDim2.new(0.84000000, 0, 0.050000000, 0)
+name2.Size = UDim2.new(0, 80, 0, 25)
+name2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+name2.Font = Enum.Font.SourceSans
+name2.Text = "Button"
+name2.TextColor3 = Color3.fromRGB(0, 0, 0)
+name2.TextSize = 16.000
+end
+
+NTTGUI = Instance.new("ScreenGui")
+main = Instance.new("Frame")
+main_t = Instance.new("TextLabel")
+main_f = Instance.new("ScrollingFrame") --farm
+sea = Instance.new("TextLabel")
+exit = Instance.new("TextButton")
+
+b_1  = Instance.new("TextButton")
+b_page1 = Instance.new("ScrollingFrame") --farm
+
+m_f1 = Instance.new("TextLabel")
+m_b1 = Instance.new("TextButton")
+m_f2 = Instance.new("TextLabel")
+m_b2 = Instance.new("TextButton")
+m_f3 = Instance.new("TextLabel")
+m_b3 = Instance.new("TextButton")
+m_f4 = Instance.new("TextLabel")
+m_b4 = Instance.new("TextButton")
+m_f5= Instance.new("TextLabel")
+m_b5 = Instance.new("TextButton")
+
+screengui(NTTGUI)
+make_mainfram(main, main_t, main_f , NTTGUI,  "   NTT HUB")
+
+sea.Parent = main
+sea.BackgroundTransparency = 1.000
+sea.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+sea.BorderSizePixel = 0
+sea.Position = UDim2.new(0.85000000, 0, 0, 0)
+sea.Size = UDim2.new(0, 90, 0, 26)
+sea.Font = Enum.Font.Ubuntu
+sea.Text = "Pet Simulator X"
+sea.TextColor3 = Color3.fromRGB(255, 255, 255)
+sea.TextSize = 14.000
+
+exit.Name = "exit"
+exit.Parent = NTTGUI
+exit.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+exit.Position = UDim2.new(0.15162201, 0, 0.083285708, 0)
+exit.Size = UDim2.new(0, 50, 0, 50)
+exit.Font = Enum.Font.ArialBold
+exit.Text = "Open"
+exit.TextColor3 = Color3.fromRGB(250, 255, 250)
+exit.TextSize = 20.000
+exit.BorderColor3 = Color3.fromRGB(250, 250, 250)
+
+exit.MouseButton1Down:connect(function()
+--on off 
+if exit.Text == "Open" then --on
+exit.Text = "Close"
+main.Visible = true
+elseif exit.Text == "Close" then --off
+exit.Text = "Open"
+main.Visible = false
+end
+end)
+
+
+make_button(b_1, main_f, "   Main", UDim2.new(0, 0, 0.000000000, 0))
+make_scrollingframe(b_page1, nain, true)
+
+make_buttonwhite(m_f1, m_b1, b_page1, "   Teleport Cyber Cavern",  UDim2.new(0, 0, 0.030000000, 0))
+m_b1.MouseButton1Down:connect(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(8784.203125, -15.64000415802002, 3041.23681640625)
+end)
+
+make_buttonwhite(m_f2, m_b2, b_page1, "   Teleport Chest Diamond AFK",  UDim2.new(0, 0, 0.100000000, 0))
+m_b2.MouseButton1Down:connect(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(8429.509765625, -15.518845558166504, 2989.340087890625)
+end)
+
+make_buttonwhite(m_f3, m_b3, b_page1, "   Teleport Mystic Mine",  UDim2.new(0, 0, 0.170000000, 0))
+m_b3.MouseButton1Down:connect(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(9021.8662109375, -13.342757225036621, 2508.83984375)
+end)
+
+make_buttonwhite(m_f4, m_b4, b_page1, "   Teleport Chest Diamond AFK",  UDim2.new(0, 0, 0.240000000, 0))
+m_b4.MouseButton1Down:connect(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(9100.677734375, -14.353901863098145, 2169.66552734375)
+end)
+
+make_buttonwhite(m_f5, m_b5, b_page1, "   Sever Hop",  UDim2.new(0, 0, 0.310000000, 0))
+m_b5.MouseButton1Down:connect(function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Svv')))()
+end)
+
+game:GetService('RunService').RenderStepped:connect(function()
+
+for i,v in pairs(game:GetService("Workspace")["__THINGS"].Orbs:GetChildren()) do
+                    v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+                
+end
+end)
+
+spawn(function()
+    while task.wait(4) do
+        pcall(function()
+for i,v in pairs(game:GetService("Workspace")["__THINGS"].Lootbags:GetChildren()) do
+                    v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+                
+end end) end end)
+
+
+
+
+
+
+local fruitExists = false
+
+game:GetService("UserInputService").InputBegan:Connect(function(io, p)
+	if io.KeyCode == Enum.KeyCode.M then
+		findServer()
+	elseif io.KeyCode == Enum.KeyCode.N then
+		fruitExists = true
+	end
+end)
+
+local connection
+function onRenderStepped()
+	
+end
+
+-- resume(create(function()
+connection = game:GetService("RunService").RenderStepped:Connect(onRenderStepped)
+
+local queueteleport = syn and syn.queue_on_teleport or queue_on_teleport or fluxus and fluxus.queue_on_teleport
+queueteleport("loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Pet%20Simulator%20X%20Diamond')))()")
