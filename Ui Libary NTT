@@ -245,28 +245,3 @@ name2.Text = "Button"
 name2.TextColor3 = Color3.fromRGB(0, 0, 0)
 name2.TextSize = 16.000
 end
-
-function onof(name1, name2, name3, parent)
-name3 = Instance.new("UICorner")
-name1 = Instance.new("TextButton")
-name1.Name = "name1"
-name1.Parent = parent
-name1.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-name1.Position = UDim2.new(0.15162201, 0, 0.083285708, 0)
-name1.Size = UDim2.new(0, 50, 0, 50)
-name1.Font = Enum.Font.ArialBold
-name1.Text = "Open"
-name1.TextColor3 = Color3.fromRGB(250, 255, 250)
-name1.TextSize = 20.000
-name1.BorderColor3 = Color3.fromRGB(250, 250, 250)
-name3.Parent = name1
-name1.MouseButton1Down:connect(function()
---on off 
-if name1.Text == "Open" then --on
-name1.Text = "Close"
-name2.Visible = true
-elseif name1.Text == "Close" then --off
-name1.Text = "Open"
-name2.Visible = false
-end
-end)
