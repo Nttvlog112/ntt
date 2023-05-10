@@ -1,11 +1,11 @@
 -- // make ui
-function screengui(name1)
+function make_screengui(name1)
 name1.Name = "name1"
 name1.Parent = game.CoreGui
 name1.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 end
 
-function make_mainscrollingframe(name1, parent, position)
+function make_mainscrollingframe(name1, parent, X)
 
 name1.Name = "name1"--farm
 name1.Parent = main
@@ -16,7 +16,7 @@ name1.BorderSizePixel = 0
 name1.Size = UDim2.new(0, 498, 0, 230)
 name1.ScrollBarThickness = 0
 name1.Position = UDim2.new(0.17631148, 0, 0.094285722, 0)
-name1.Visible = position           
+name1.Visible = X           
 
 end
 
@@ -221,27 +221,26 @@ name2.TextXAlignment = Enum.TextXAlignment.Left
 
 end
 
-function make_mainbuttonwhite(name1, name2, parent, text,  position)
-name1.Parent = parent
-name1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-name1.Position = position
-name1.Size = UDim2.new(0, 498, 0, 30)
-name1.BorderColor3 = Color3.fromRGB(250, 250, 250)
-name1.Font = Enum.Font.Ubuntu
-name1.Text = text
-name1.TextColor3 = Color3.fromRGB(255, 255, 255)
-name1.TextSize = 14.000
-name1.TextWrapped = true
-name1.TextXAlignment = Enum.TextXAlignment.Left
-
-name2.Name = "name2"
-name2.Parent = name1
-name2.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
-name2.Position = UDim2.new(0.84000000, 0, 0.050000000, 0)
-name2.Size = UDim2.new(0, 80, 0, 25)
-name2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-name2.Font = Enum.Font.SourceSans
-name2.Text = "Button"
-name2.TextColor3 = Color3.fromRGB(0, 0, 0)
-name2.TextSize = 16.000
+function onof(name1, parent)
+local onof = Instance.new("TextButton") 
+local uionof = Instance.new("UICorner")
+onof.Parent = parent
+onof.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+onof.Position = UDim2.new(0.15162201, 0, 0.083285708, 0)
+onof.Size = UDim2.new(0, 50, 0, 50)
+onof.Font = Enum.Font.ArialBold
+onof.Text = "Open"
+onof.TextColor3 = Color3.fromRGB(250, 255, 250)
+onof.TextSize = 20.000
+onof.BorderColor3 = Color3.fromRGB(250, 250, 250)
+uionof.Parent = onof
+onof.MouseButton1Down:connect(function()
+--on off 
+if onof.Text == "Open" then --on
+onof.Text = "Close"
+name1.Visible = true
+elseif onof.Text == "Close" then --off
+onof.Text = "Open"
+name1.Visible = false
+end end)
 end
