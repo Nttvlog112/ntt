@@ -30,4 +30,4 @@ game.Players.localPlayer:Kick(_G.baned)
 end 
 
 _G.baotri="Script Hiện Tại Đang Được Bảo Trì Từ Ngày 6/5 - 15/15"
-game.Players.localPlayer:Kick(_G.baotri)
+--  game.Players.localPlayer:Kick(_G.baotri)
