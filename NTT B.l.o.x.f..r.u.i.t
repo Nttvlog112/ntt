@@ -1,3 +1,5 @@
+
+
 game.Players.LocalPlayer.Name = "0"
 
 --game.CoreGui.NTTGUI:Destroy()
@@ -57,13 +59,9 @@ local prl = Instance.new("TextButton")--Name Player
 --check position
 local pos_1 = Instance.new("TextLabel")
 
---on off
-local exit = Instance.new("TextButton") 
-local uiexit = Instance.new("UICorner")
-
 -- // farm
 -- // t = tool
-m_tbar = Instance.new("Frame")
+m_tbar = Instance.new("ScrollingFrame")
 m_t1 = Instance.new("TextButton")
 m_t2 = Instance.new("TextButton")
 m_t3 = Instance.new("TextButton")
@@ -121,15 +119,6 @@ r_btp2= Instance.new("TextButton")
 
 -- // c = chip
 r_cbar = Instance.new("ScrollingFrame")
-r_c1 = Instance.new("TextButton")
-r_c2 = Instance.new("TextButton")
-r_c3 = Instance.new("TextButton")
-r_c4 = Instance.new("TextButton")
-r_c5 = Instance.new("TextButton")
-r_c6 = Instance.new("TextButton")
-r_c7 = Instance.new("TextButton")
-r_c8 = Instance.new("TextButton")
-r_c9 = Instance.new("TextButton")
 
 r_cbuy = Instance.new("TextButton")
 r_f1 = Instance.new("TextLabel")
@@ -256,18 +245,6 @@ c_tb = Instance.new("TextButton")
 c_prlreset = Instance.new("TextButton")
 
 c_prlbar = Instance.new("ScrollingFrame")
-c_bprl1 = Instance.new("TextButton")
-c_bprl2 = Instance.new("TextButton")
-c_bprl3 = Instance.new("TextButton")
-c_bprl4 = Instance.new("TextButton")
-c_bprl5= Instance.new("TextButton")
-c_bprl6 = Instance.new("TextButton")
-c_bprl7 = Instance.new("TextButton")
-c_bprl8 = Instance.new("TextButton")
-c_bprl9 = Instance.new("TextButton")
-c_bprl10 = Instance.new("TextButton")
-c_bprl11= Instance.new("TextButton")
-c_bprl12 = Instance.new("TextButton")
 
 c_fprl1 = Instance.new("TextButton")
 c_fprl2 = Instance.new("TextButton")
@@ -447,248 +424,283 @@ config_b3 = Instance.new("TextButton")
 
 -------------------------------------------------------------------------------
 
+--// Libary Ui
+
+function make_screengui(name1)
+name1.Name = "name1"
+name1.Parent = game.CoreGui
+name1.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+end
+
+function make_mainscrollingframe(name1, parent, X)
+
+name1.Name = "name1"--farm
+name1.Parent = main
+name1.Active = true
+name1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+name1.BackgroundTransparency = 1.000
+name1.BorderSizePixel = 0
+name1.Size = UDim2.new(0, 498, 0, 230)
+name1.ScrollBarThickness = 0
+name1.Position = UDim2.new(0.17631148, 0, 0.094285722, 0)
+name1.Visible = X           
+
+end
+
+function make_textlabel(name1, parent,text, position)
+
+name1.Parent = parent
+name1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+name1.Position = position
+name1.Size = UDim2.new(0, 498, 0, 30)
+name1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+name1.Font = Enum.Font.Ubuntu
+name1.Text = text
+name1.TextColor3 = Color3.fromRGB(255, 255, 255)
+name1.TextSize = 14.000
+name1.TextWrapped = true
+
+end
+
+function make_mainbutton(name1, parent, text, position)
+
+name1.Parent = parent
+name1.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+name1.Position = position
+name1.Size = UDim2.new(0, 100, 0, 25)
+name1.Font = Enum.Font.Ubuntu
+name1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+name1.Text = text
+name1.TextColor3 = Color3.fromRGB(255, 255, 255)
+name1.TextSize = 14.000
+name1.TextWrapped = false
+name1.TextXAlignment = Enum.TextXAlignment.Left
+
+end
+
+function make_together(name1, name2 , parent, text,  position)
+
+name1.Parent = parent
+name1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+name1.Position = position
+name1.Size = UDim2.new(0, 498, 0, 30)
+name1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+name1.Font = Enum.Font.Ubuntu
+name1.Text = text
+name1.TextColor3 = Color3.fromRGB(255, 255, 255)
+name1.TextSize = 14.000
+name1.TextWrapped = true
+name1.TextXAlignment = Enum.TextXAlignment.Left
+
+name2.Name = "name2"
+name2.Parent = name1
+name2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+name2.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+name2.Size = UDim2.new(0, 20, 0, 20)
+name2.BorderColor3 = Color3.fromRGB(250, 250, 250)
+name2.Font = Enum.Font.SourceSans
+name2.Text = ""
+name2.TextColor3 = Color3.fromRGB(250, 250, 250)
+name2.TextSize = 30.000
+
+end
+
+function make_select2(name1, name2, name3, parent, text, position)
+
+name1.Parent = parent
+name1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+name1.Position = UDim2.new(0, 0, 0.1000000000, 0)
+name1.Size = UDim2.new(0, 498, 0, 30)
+name1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+name1.Font = Enum.Font.Ubuntu
+name1.Text = "   "
+name1.TextColor3 = Color3.fromRGB(255, 255, 255)
+name1.TextSize = 14.000
+name1.TextWrapped = true
+name1.TextXAlignment = Enum.TextXAlignment.Left
+
+name2.Name = "name2"
+name2.Parent = name1
+name2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+name2.Size = UDim2.new(0, 180, 0, 30)
+name2.BorderColor3 = Color3.fromRGB(250, 250, 250)
+name2.Font = Enum.Font.SourceSans
+name2.Text = text
+name2.TextColor3 = Color3.fromRGB(250, 250, 250)
+name2.TextSize = 18.000
+name2.TextXAlignment = Enum.TextXAlignment.Left
+
+name3.Name = "name3"
+name3.Parent = name1
+name3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+name3.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
+name3.Size = UDim2.new(0, 20, 0, 20)
+name3.BorderColor3 = Color3.fromRGB(250, 250, 250)
+name3.Font = Enum.Font.SourceSans
+name3.Text = ""
+name3.TextColor3 = Color3.fromRGB(250, 250, 250)
+name3.TextSize = 30.000
+end
+
+function make_selectbutton(name1, name2, name3, parent, text1, text2, position)
+
+name1 = Instance.new("TextLabel")
+name1.Parent = parent
+name1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+name1.Position = position
+name1.Size = UDim2.new(0, 130, 0, 20)
+name1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+name1.Font = Enum.Font.Ubuntu
+name1.Text = text1
+name1.TextColor3 = Color3.fromRGB(255, 255, 255)
+name1.TextSize = 14.000
+name1.TextWrapped = true
+name1.TextXAlignment = Enum.TextXAlignment.Left
+
+name2 = Instance.new("TextButton")
+name2.Parent = name1
+name2.BackgroundColor3 = Color3.fromRGB(250,250,250)
+name2.Position = UDim2.new(0.80000000, 0, 0, 0)
+name2.Size = UDim2.new(0, 60, 0, 20)
+name2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+name2.Font = Enum.Font.SourceSans
+name2.Text = "Chọn"
+name2.TextColor3 = Color3.fromRGB(0, 0, 0)
+name2.TextSize = 14.000
+name2.MouseButton1Down:connect(function()
+name3.Text = text2
+parent.Visible = false
+end)
+end
+
+function make_selectscrollingframe(name1, parent,  position)
+
+name1.Name = "name1"
+name1.Parent = parent
+name1.Active = true
+name1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+name1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+name1.Position = position
+name1.Size = UDim2.new(0, 180, 0, 140)
+name1.BorderSizePixel = 1
+name1.Visible = false
+end
+
+function make_mainframe(name1, name2, name3, parent,  text)
+
+name1.Name = "name1"
+name1.Parent = parent -- nằm trên khung ẩn
+name1.BackgroundColor3 = Color3.fromRGB(0, 0, 0) --màu khung
+name1.Position = UDim2.new(0.180126051, 0, 0.228999169, 0) -- vị trí đứng
+name1.Size = UDim2.new(0, 640, 0, 280) -- kích cở
+name1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+name1.Active = true
+name1.Draggable = true
+name1.Visible = false
+
+name2.Parent = name1
+name2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+name2.BackgroundTransparency = 0
+name2.Position = UDim2.new(0, 0, 0, 0)
+name2.Size = UDim2.new(0, 640, 0, 26)
+name2.Font = Enum.Font.Ubuntu
+name2.Text = text
+name2.TextColor3 = Color3.fromRGB(255, 255, 255)
+name2.TextSize = 14.000
+name2.TextWrapped = true
+name2.TextXAlignment = Enum.TextXAlignment.Left
+name2.BorderColor3 = Color3.fromRGB(250, 250, 250)
+
+name3.Name = "name3"
+name3.Parent = name1
+name3.Active = true
+name3.BackgroundColor3 = Color3.fromRGB(5,5,5)
+name3.Size = UDim2.new(0, 100, 0, 250)
+name3.ScrollBarThickness = 0
+name3.BorderColor3 = Color3.fromRGB(250, 250, 250)
+name3.Position = UDim2.new(0, 0, 0.102285722, 0)
+
+end
+
+function make_select1(name1, name2, parent, text, position)
+name1.Parent = parent
+name1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+name1.Position = position
+name1.Size = UDim2.new(0, 498, 0, 30)
+name1.BorderColor3 = Color3.fromRGB(250, 250, 250)
+name1.Font = Enum.Font.Ubuntu
+name1.Text = "   "
+name1.TextColor3 = Color3.fromRGB(255, 255, 255)
+name1.TextSize = 14.000
+name1.TextWrapped = true
+name1.TextXAlignment = Enum.TextXAlignment.Left
+
+name2.Name = "name2"
+name2.Parent = name1
+name2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+name2.Size = UDim2.new(0, 180, 0, 30)
+name2.BorderColor3 = Color3.fromRGB(250, 250, 250)
+name2.Font = Enum.Font.SourceSans
+name2.Text = text
+name2.TextColor3 = Color3.fromRGB(250, 250, 250)
+name2.TextSize = 18.000
+name2.TextXAlignment = Enum.TextXAlignment.Left
+
+end
+
+function make_onof(name1, parent)
+local onof = Instance.new("TextButton") 
+local uionof = Instance.new("UICorner")
+onof.Parent = parent
+onof.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+onof.Position = UDim2.new(0.15162201, 0, 0.083285708, 0)
+onof.Size = UDim2.new(0, 50, 0, 50)
+onof.Font = Enum.Font.ArialBold
+onof.Text = "Open"
+onof.TextColor3 = Color3.fromRGB(250, 255, 250)
+onof.TextSize = 20.000
+onof.BorderColor3 = Color3.fromRGB(250, 250, 250)
+uionof.Parent = onof
+onof.MouseButton1Down:connect(function()
+--on off 
+if onof.Text == "Open" then --on
+onof.Text = "Close"
+name1.Visible = true
+elseif onof.Text == "Close" then --off
+onof.Text = "Open"
+name1.Visible = false
+end end)
+end
+
+-------------------------------------
+
 --main code frame button script
 
-NTTGUI.Name = "NTTGUI"
-NTTGUI.Parent = game.CoreGui
-NTTGUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-screen.Name = "screen"--
-screen.Parent = NTTGUI
-screen.Active = true
-screen.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-screen.Size = UDim2.new(0, 2008, 0, 900)
-screen.Visible = false               
-
-main.Name = "main"
-main.Parent = NTTGUI -- nằm trên khung ẩn
-main.BackgroundColor3 = Color3.fromRGB(0, 0, 0) --màu khung
-main.Position = UDim2.new(0.180126051, 0, 0.228999169, 0) -- vị trí đứng
-main.Size = UDim2.new(0, 640, 0, 280) -- kích cở
-main.BorderColor3 = Color3.fromRGB(250, 250, 250)
-
-main.Active = true
-main.Draggable = true
-main.Visible = false
-
-bar1.Name = "bar1"
-bar1.Parent = main
-bar1.Active = true
-bar1.BackgroundColor3 = Color3.fromRGB(5,5,5)
-bar1.Size = UDim2.new(0, 100, 0, 250)
-bar1.ScrollBarThickness = 0
-bar1.BorderColor3 = Color3.fromRGB(250, 250, 250)
-bar1.Position = UDim2.new(0, 0, 0.102285722, 0)
-
+make_screengui(NTTGUI)
+make_mainframe(main, TextLabel, bar1, NTTGUI,  "   NTT HUB | Farm")
 
 -- // Button
-b_1.Name = "b_1"
-b_1.Parent = bar1
-b_1.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-b_1.Position = UDim2.new(0, 0, 0.0000000, 0)
-b_1.Size = UDim2.new(0, 100, 0, 25)
-b_1.Font = Enum.Font.Ubuntu
-b_1.BorderColor3 = Color3.fromRGB(250, 250, 250)
-b_1.Text = "   Main"
-b_1.TextColor3 = Color3.fromRGB(255, 255, 255)
-b_1.TextSize = 14.000
-b_1.TextWrapped = false
-b_1.TextXAlignment = Enum.TextXAlignment.Left
-
-b_2.Name = "b_2"
-b_2.Parent = bar1
-b_2.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-b_2.Position = UDim2.new(0, 0, 0.050000000, 0)
-b_2.Size = UDim2.new(0, 100, 0, 25)
-b_2.Font = Enum.Font.Ubuntu
-b_2.BorderColor3 = Color3.fromRGB(250, 250, 250)
-b_2.Text = "   Stat"
-b_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-b_2.TextSize = 14.000
-b_2.TextWrapped = false
-b_2.TextXAlignment = Enum.TextXAlignment.Left
-
-b_3.Name = "b_3"
-b_3.Parent = bar1
-b_3.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-b_3.Position = UDim2.new(0, 0, 0.100000000, 0)
-b_3.Size = UDim2.new(0, 100, 0, 25)
-b_3.Font = Enum.Font.Ubuntu
-b_3.BorderColor3 = Color3.fromRGB(250, 250, 250)
-b_3.Text = "   Raid"
-b_3.TextColor3 = Color3.fromRGB(255, 255, 255)
-b_3.TextSize = 14.000
-b_3.TextWrapped = false
-b_3.TextXAlignment = Enum.TextXAlignment.Left
-
-b_4.Name = "b_4"
-b_4.Parent = bar1
-b_4.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-b_4.Position = UDim2.new(0, 0, 0.150000000, 0)
-b_4.Size = UDim2.new(0, 100, 0, 25)
-b_4.Font = Enum.Font.Ubuntu
-b_4.BorderColor3 = Color3.fromRGB(250, 250, 250)
-b_4.Text = "   Shop"
-b_4.TextColor3 = Color3.fromRGB(255, 255, 255)
-b_4.TextSize = 14.000
-b_4.TextWrapped = false
-b_4.TextXAlignment = Enum.TextXAlignment.Left
-
-b_10.Name = "b_10"
-b_10.Parent = bar1
-b_10.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-b_10.Position = UDim2.new(0, 0, 0.200000000, 0)
-b_10.Size = UDim2.new(0, 100, 0, 25)
-b_10.Font = Enum.Font.Ubuntu
-b_10.BorderColor3 = Color3.fromRGB(250, 250, 250)
-b_10.Text = "   Miss"
-b_10.TextColor3 = Color3.fromRGB(255, 255, 255)
-b_10.TextSize = 14.000
-b_10.TextWrapped = false
-b_10.TextXAlignment = Enum.TextXAlignment.Left
-
-b_13.Name = "b_13"
-b_13.Parent = bar1
-b_13.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-b_13.Position = UDim2.new(0, 0, 0.250000000, 0)
-b_13.Size = UDim2.new(0, 100, 0, 25)
-b_13.Font = Enum.Font.Ubuntu
-b_13.BorderColor3 = Color3.fromRGB(250, 250, 250)
-b_13.Text = "   Buff"
-b_13.TextColor3 = Color3.fromRGB(255, 255, 255)
-b_13.TextSize = 14.000
-b_13.TextWrapped = false
-b_13.TextXAlignment = Enum.TextXAlignment.Left
-
-b_11.Name = "b_11"
-b_11.Parent = bar1
-b_11.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-b_11.Position = UDim2.new(0, 0, 0.300000000, 0)
-b_11.Size = UDim2.new(0, 100, 0, 25)
-b_11.Font = Enum.Font.Ubuntu
-b_11.BorderColor3 = Color3.fromRGB(250, 250, 250)
-b_11.Text = "   Moon - Race"
-b_11.TextColor3 = Color3.fromRGB(255, 255, 255)
-b_11.TextSize = 14.000
-b_11.TextWrapped = false
-b_11.TextXAlignment = Enum.TextXAlignment.Left
-
+make_mainbutton(b_1, bar1, "   Main", UDim2.new(0, 0, 0.000000000, 0))
+make_mainbutton(b_2, bar1,"   Stat", UDim2.new(0, 0, 0.050000000, 0))
+make_mainbutton(b_3, bar1, "   Raid", UDim2.new(0, 0, 0.100000000, 0))
+make_mainbutton(b_4, bar1, "   Shop", UDim2.new(0, 0, 0.150000000, 0))
+make_mainbutton(b_10, bar1,"   Miss", UDim2.new(0, 0, 0.20000000, 0))
+make_mainbutton(b_13, bar1, "   Buff",UDim2.new(0, 0, 0.250000000, 0))
+make_mainbutton(b_11, bar1, "   Moon - Race",UDim2.new(0, 0, 0.30000000, 0))
+make_mainbutton(b_5, bar1, "   Esp - Fruit",UDim2.new(0, 0, 0.350000000, 0))
+make_mainbutton(b_6, bar1,"   Get Item", UDim2.new(0, 0, 0.400000000, 0))
+make_mainbutton(b_14, bar1, "   Mob",UDim2.new(0, 0, 0.450000000, 0))
+make_mainbutton(b_7, bar1, "   Combat",UDim2.new(0, 0, 0.50000000, 0))
+make_mainbutton(b_12, bar1, "   Share",UDim2.new(0, 0, 0.550000000, 0))
+make_mainbutton(b_15, bar1,"   Config",  UDim2.new(0, 0, 0.600000000, 0))
+make_mainbutton(b_8, bar1, "   Teleport",UDim2.new(0, 0, 0.650000000, 0))
+make_mainbutton(b_9, bar1,"   Setting", UDim2.new(0, 0, 0.700000000, 0))
 if game.PlaceId == 2753915549 then -- sea1
 b_11.Text = "   Moon"
 end
 
-b_5.Name = "b_5"
-b_5.Parent = bar1
-b_5.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-b_5.Position = UDim2.new(0, 0, 0.350000000, 0)
-b_5.Size = UDim2.new(0, 100, 0, 25)
-b_5.Font = Enum.Font.Ubuntu
-b_5.BorderColor3 = Color3.fromRGB(250, 250, 250)
-b_5.Text = "   Esp - Fruit"
-b_5.TextColor3 = Color3.fromRGB(255, 255, 255)
-b_5.TextSize = 14.000
-b_5.TextWrapped = false
-b_5.TextXAlignment = Enum.TextXAlignment.Left
-
-b_6.Name = "b_6"
-b_6.Parent = bar1
-b_6.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-b_6.Position = UDim2.new(0, 0, 0.400000000, 0)
-b_6.Size = UDim2.new(0, 100, 0, 25)
-b_6.Font = Enum.Font.Ubuntu
-b_6.BorderColor3 = Color3.fromRGB(250, 250, 250)
-b_6.Text = "   Get Item"
-b_6.TextColor3 = Color3.fromRGB(255, 255, 255)
-b_6.TextSize = 14.000
-b_6.TextWrapped = false
-b_6.TextXAlignment = Enum.TextXAlignment.Left
-
-b_14.Name = "b_14"
-b_14.Parent = bar1
-b_14.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-b_14.Position = UDim2.new(0, 0, 0.450000000, 0)
-b_14.Size = UDim2.new(0, 100, 0, 25)
-b_14.Font = Enum.Font.Ubuntu
-b_14.BorderColor3 = Color3.fromRGB(250, 250, 250)
-b_14.Text = "   Mob"
-b_14.TextColor3 = Color3.fromRGB(255, 255, 255)
-b_14.TextSize = 14.000
-b_14.TextWrapped = false
-b_14.TextXAlignment = Enum.TextXAlignment.Left
-
-
-b_7.Name = "b_7"
-b_7.Parent = bar1
-b_7.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-b_7.Position = UDim2.new(0, 0, 0.500000000, 0)
-b_7.Size = UDim2.new(0, 100, 0, 25)
-b_7.Font = Enum.Font.Ubuntu
-b_7.BorderColor3 = Color3.fromRGB(250, 250, 250)
-b_7.Text = "   Combat"
-b_7.TextColor3 = Color3.fromRGB(255, 255, 255)
-b_7.TextSize = 14.000
-b_7.TextWrapped = false
-b_7.TextXAlignment = Enum.TextXAlignment.Left
-
-b_12.Name = "b_12"
-b_12.Parent = bar1
-b_12.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-b_12.Position = UDim2.new(0, 0, 0.550000000, 0)
-b_12.Size = UDim2.new(0, 100, 0, 25)
-b_12.Font = Enum.Font.Ubuntu
-b_12.BorderColor3 = Color3.fromRGB(250, 250, 250)
-b_12.Text = "   Share"
-b_12.TextColor3 = Color3.fromRGB(255, 255, 255)
-b_12.TextSize = 14.000
-b_12.TextWrapped = false
-b_12.TextXAlignment = Enum.TextXAlignment.Left
-
-b_15.Name = "b_15"
-b_15.Parent = bar1
-b_15.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-b_15.Position = UDim2.new(0, 0, 0.600000000, 0)
-b_15.Size = UDim2.new(0, 100, 0, 25)
-b_15.Font = Enum.Font.Ubuntu
-b_15.BorderColor3 = Color3.fromRGB(250, 250, 250)
-b_15.Text = "   config"
-b_15.TextColor3 = Color3.fromRGB(255, 255, 255)
-b_15.TextSize = 14.000
-b_15.TextWrapped = false
-b_15.TextXAlignment = Enum.TextXAlignment.Left
-
-b_8.Name = "b_8"
-b_8.Parent = bar1
-b_8.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-b_8.Position = UDim2.new(0, 0, 0.650000000, 0)
-b_8.Size = UDim2.new(0, 100, 0, 25)
-b_8.Font = Enum.Font.Ubuntu
-b_8.BorderColor3 = Color3.fromRGB(250, 250, 250)
-b_8.Text = "   Teleport"
-b_8.TextColor3 = Color3.fromRGB(255, 255, 255)
-b_8.TextSize = 14.000
-b_8.TextWrapped = false
-b_8.TextXAlignment = Enum.TextXAlignment.Left
-
-b_9.Name = "b_9"
-b_9.Parent = bar1
-b_9.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-b_9.Position = UDim2.new(0, 0, 0.700000000, 0)
-b_9.Size = UDim2.new(0, 100, 0, 25)
-b_9.Font = Enum.Font.Ubuntu
-b_9.BorderColor3 = Color3.fromRGB(250, 250, 250)
-b_9.Text = "   Setting"
-b_9.TextColor3 = Color3.fromRGB(255, 255, 255)
-b_9.TextSize = 14.000
-b_9.TextWrapped = false
-b_9.TextXAlignment = Enum.TextXAlignment.Left
 
 -- // Name Player
-
-bar_1.Name = "bar_1"
-bar_1.Parent = main
-bar_1.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-bar_1.Position = UDim2.new(0, 0, 0.910000000, 0)
-bar_1.Size = UDim2.new(0, 100, 0, 25)
 
 prl.Name = "prl"
 prl.Parent = main
@@ -707,215 +719,25 @@ prl.Active = false
 prl.Draggable = true
 
 -- // Page
-b_page1.Name = "b_page1"--farm
-b_page1.Parent = main
-b_page1.Active = true
-b_page1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-b_page1.BackgroundTransparency = 1.000
-b_page1.BorderSizePixel = 0
-b_page1.Size = UDim2.new(0, 498, 0, 230)
-b_page1.ScrollBarThickness = 0
-b_page1.Position = UDim2.new(0.17631148, 0, 0.094285722, 0)
-b_page1.Visible = true                         
-
-b_page2.Name = "b_page2" --stat
-b_page2.Parent = main
-b_page2.Active = true
-b_page2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-b_page2.BackgroundTransparency = 1.000
-b_page2.BorderSizePixel = 0
-b_page2.Size = UDim2.new(0, 498, 0, 230)
-b_page2.ScrollBarThickness = 0
-b_page2.Position = UDim2.new(0.17631148, 0, 0.094285722, 0)
-b_page2.Visible = false     
-
-b_page3.Name = "b_page3" --raid
-b_page3.Parent = main
-b_page3.Active = true
-b_page3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-b_page3.BackgroundTransparency = 1.000
-b_page3.BorderSizePixel = 0
-b_page3.Size = UDim2.new(0, 498, 0, 230)
-b_page3.ScrollBarThickness = 0
-b_page3.Position = UDim2.new(0.17631148, 0, 0.094285722, 0)
-b_page3.Visible = false     
-
-b_page4.Name = "b_page4" --raid
-b_page4.Parent = main
-b_page4.Active = true
-b_page4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-b_page4.BackgroundTransparency = 1.000
-b_page4.BorderSizePixel = 0
-b_page4.Size = UDim2.new(0, 498, 0, 230)
-b_page4.ScrollBarThickness = 0
-b_page4.Position = UDim2.new(0.17631148, 0, 0.094285722, 0)
-b_page4.Visible = false     
-
-b_page10.Name = "b_page10" --raid
-b_page10.Parent = main
-b_page10.Active = true
-b_page10.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-b_page10.BackgroundTransparency = 1.000
-b_page10.BorderSizePixel = 0
-b_page10.Size = UDim2.new(0, 498, 0, 230)
-b_page10.ScrollBarThickness = 0
-b_page10.Position = UDim2.new(0.17631148, 0, 0.094285722, 0)
-b_page10.Visible = false     
-
-b_page15.Name = "b_page15" --raid
-b_page15.Parent = main
-b_page15.Active = true
-b_page15.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-b_page15.BackgroundTransparency = 1.000
-b_page15.BorderSizePixel = 0
-b_page15.Size = UDim2.new(0, 498, 0, 230)
-b_page15.ScrollBarThickness = 0
-b_page15.Position = UDim2.new(0.17631148, 0, 0.094285722, 0)
-b_page15.Visible = false     
-
-b_page11.Name = "b_page11" --raid
-b_page11.Parent = main
-b_page11.Active = true
-b_page11.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-b_page11.BackgroundTransparency = 1.000
-b_page11.BorderSizePixel = 0
-b_page11.Size = UDim2.new(0, 498, 0, 230)
-b_page11.ScrollBarThickness = 0
-b_page11.Position = UDim2.new(0.17631148, 0, 0.094285722, 0)
-b_page11.Visible = false     
-
-b_page14.Name = "b_page14" --raid
-b_page14.Parent = main
-b_page14.Active = true
-b_page14.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-b_page14.BackgroundTransparency = 1.000
-b_page14.BorderSizePixel = 0
-b_page14.Size = UDim2.new(0, 498, 0, 230)
-b_page14.ScrollBarThickness = 0
-b_page14.Position = UDim2.new(0.17631148, 0, 0.094285722, 0)
-b_page14.Visible = false     
-
-b_page5.Name = "b_page5" --raid
-b_page5.Parent = main
-b_page5.Active = true
-b_page5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-b_page5.BackgroundTransparency = 1.000
-b_page5.BorderSizePixel = 0
-b_page5.Size = UDim2.new(0, 498, 0, 230)
-b_page5.ScrollBarThickness = 0
-b_page5.Position = UDim2.new(0.17631148, 0, 0.094285722, 0)
-b_page5.Visible = false     
-
-b_page6.Name = "b_page6" --raid
-b_page6.Parent = main
-b_page6.Active = true
-b_page6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-b_page6.BackgroundTransparency = 1.000
-b_page6.BorderSizePixel = 0
-b_page6.Size = UDim2.new(0, 498, 0, 230)
-b_page6.ScrollBarThickness = 0
-b_page6.Position = UDim2.new(0.17631148, 0, 0.094285722, 0)
-b_page6.Visible = false     
-
-b_page7.Name = "b_page7" --raid
-b_page7.Parent = main
-b_page7.Active = true
-b_page7.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-b_page7.BackgroundTransparency = 1.000
-b_page7.BorderSizePixel = 0
-b_page7.Size = UDim2.new(0, 498, 0, 230)
-b_page7.ScrollBarThickness = 0
-b_page7.Position = UDim2.new(0.17631148, 0, 0.094285722, 0)
-b_page7.Visible = false     
-
-b_page12.Name = "b_page12" --raid
-b_page12.Parent = main
-b_page12.Active = true
-b_page12.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-b_page12.BackgroundTransparency = 1.000
-b_page12.BorderSizePixel = 0
-b_page12.Size = UDim2.new(0, 498, 0, 230)
-b_page12.ScrollBarThickness = 0
-b_page12.Position = UDim2.new(0.17631148, 0, 0.094285722, 0)
-b_page12.Visible = false     
-
-b_page8.Name = "b_page8" --raid
-b_page8.Parent = main
-b_page8.Active = true
-b_page8.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-b_page8.BackgroundTransparency = 1.000
-b_page8.BorderSizePixel = 0
-b_page8.Size = UDim2.new(0, 498, 0, 230)
-b_page8.ScrollBarThickness = 0
-b_page8.Position = UDim2.new(0.17631148, 0, 0.094285722, 0)
-b_page8.Visible = false     
-
-b_page9.Name = "b_page9" --raid
-b_page9.Parent = main
-b_page9.Active = true
-b_page9.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-b_page9.BackgroundTransparency = 1.000
-b_page9.BorderSizePixel = 0
-b_page9.Size = UDim2.new(0, 498, 0, 230)
-b_page9.ScrollBarThickness = 0
-b_page9.Position = UDim2.new(0.17631148, 0, 0.094285722, 0)
-b_page9.Visible = false     
-
-b_page13.Name = "b_page13" --raid
-b_page13.Parent = main
-b_page13.Active = true
-b_page13.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-b_page13.BackgroundTransparency = 1.000
-b_page13.BorderSizePixel = 0
-b_page13.Size = UDim2.new(0, 498, 0, 230)
-b_page13.ScrollBarThickness = 0
-b_page13.Position = UDim2.new(0.17631148, 0, 0.094285722, 0)
-b_page13.Visible = false     
-
---bar
-
-bar.Name = "bar"
-bar.Parent = main
-bar.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-bar.Size = UDim2.new(0, 640, 0, 26)
-bar.BorderColor3 = Color3.fromRGB(250, 250, 250)
-
-TextLabel.Parent = main
-TextLabel.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-TextLabel.BackgroundTransparency = 1.000
-TextLabel.Position = UDim2.new(0, 0, 0, 0)
-TextLabel.Size = UDim2.new(0, 150, 0, 26)
-TextLabel.Font = Enum.Font.Ubuntu
-TextLabel.Text = "   NTT HUB | Farm"
-TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.TextSize = 14.000
-TextLabel.TextWrapped = true
-TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+make_mainscrollingframe(b_page1, main, true)
+make_mainscrollingframe(b_page2, main, false)
+make_mainscrollingframe(b_page3, main, false)
+make_mainscrollingframe(b_page4, main, false)
+make_mainscrollingframe(b_page5, main, false)
+make_mainscrollingframe(b_page6, main, false)
+make_mainscrollingframe(b_page7, main, false)
+make_mainscrollingframe(b_page8, main, false)
+make_mainscrollingframe(b_page9, main, false)
+make_mainscrollingframe(b_page10, main, false)
+make_mainscrollingframe(b_page11, main, false)
+make_mainscrollingframe(b_page12, main, false)
+make_mainscrollingframe(b_page13, main, false)
+make_mainscrollingframe(b_page14, main, false)
+make_mainscrollingframe(b_page15, main, false)
 
 --đóng  mở
 
-exit.Name = "exit"
-exit.Parent = NTTGUI
-exit.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-exit.Position = UDim2.new(0.15162201, 0, 0.083285708, 0)
-exit.Size = UDim2.new(0, 50, 0, 50)
-exit.Font = Enum.Font.ArialBold
-exit.Text = "Open"
-exit.TextColor3 = Color3.fromRGB(250, 255, 250)
-exit.TextSize = 20.000
-exit.BorderColor3 = Color3.fromRGB(250, 250, 250)
-uiexit.Parent = exit
-exit.MouseButton1Down:connect(function()
---on off 
-if exit.Text == "Open" then --on
-exit.Text = "Close"
-main.Visible = true
-elseif exit.Text == "Close" then --off
-exit.Text = "Open"
-main.Visible = false
-end
-end)
-
+make_onof(main, NTTGUI)
 
 --setting sea
 
@@ -1001,8 +823,8 @@ tool("Dual Katana")
 tool("Cutlass")
 tool("Bisento")
 tool("Koko")
-tool("Pole (2nd Form")
-tool("Pole (1nd Form")
+tool("Pole (2nd Form)")
+tool("Pole (1nd Form)")
 tool("Saddi")
 tool("Wando")
 tool("Dual-Headed Blade")
@@ -1647,111 +1469,24 @@ end
     
 
 -- // [ Frame ]
-m_f1.Parent = b_page1
-m_f1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-m_f1.Position = UDim2.new(0, 0, 0.0300000000, 0)
-m_f1.Size = UDim2.new(0, 498, 0, 30)
-m_f1.BorderColor3 = Color3.fromRGB(250, 250, 250)
-m_f1.Font = Enum.Font.Ubuntu
-m_f1.Text = "   "
-m_f1.TextColor3 = Color3.fromRGB(255, 255, 255)
-m_f1.TextSize = 14.000
-m_f1.TextWrapped = true
-m_f1.TextXAlignment = Enum.TextXAlignment.Left
-
-m_b1.Name = "m_b1"
-m_b1.Parent = m_f1
-m_b1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-m_b1.Size = UDim2.new(0, 80, 0, 30)
-m_b1.BorderColor3 = Color3.fromRGB(250, 250, 250)
-m_b1.Font = Enum.Font.SourceSans
-m_b1.Text = "Tool : Mele"
-m_b1.TextColor3 = Color3.fromRGB(250, 250, 250)
-m_b1.TextSize = 18.000
+make_select1(m_f1, m_b1, b_page1, "Tool : Mele", UDim2.new(0, 0, 0.0300000000, 0))
 m_b1.MouseButton1Down:connect(function()
 m_tbar.Visible = true
 end)
 
 function bartool()
-m_tbar.Name = "m_tbar"
-m_tbar.Parent = b_page1
-m_tbar.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-m_tbar.Position = UDim2.new(0, 0, 0.0850000000, 0)
-m_tbar.Size = UDim2.new(0, 80, 0, 60)
-m_tbar.BorderColor3 = Color3.fromRGB(250, 250, 250)
-m_tbar.Visible = false
+make_selectscrollingframe(m_tbar, b_page1, UDim2.new(0, 0, 0.1000000, 0))
+make_selectbutton(m_t1, m_cb1, m_b1, m_tbar, "Mele", "Tool :  Mele", UDim2.new(0, 0, 0.0000000, 0))
+make_selectbutton(m_t2, m_cb2, m_b1, m_tbar, "Sword", "Tool :  Sword", UDim2.new(0, 0, 0.0500000, 0))
+make_selectbutton(m_t3, m_cb3,m_b1, m_tbar, "Fruit", "Tool :  Fruit", UDim2.new(0, 0, 0.1000000, 0))
+end
 
-m_t1.Name = "m_t1"
-m_t1.Parent = m_tbar
-m_t1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-m_t1.Size = UDim2.new(0, 80, 0, 20)
-m_t1.BorderColor3 = Color3.fromRGB(250, 250, 250)
-m_t1.Font = Enum.Font.SourceSans
-m_t1.Text = "Mele"
-m_t1.TextColor3 = Color3.fromRGB(250, 250, 250)
-m_t1.TextSize = 15.000
-m_t1.MouseButton1Down:connect(function()
-m_b1.Text = "Tool : Mele"
-m_tbar.Visible = false
-end)
-
-m_t2.Name = "m_t2"
-m_t2.Parent = m_tbar
-m_t2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-m_t2.Size = UDim2.new(0, 80, 0, 20)
-m_t2.BorderColor3 = Color3.fromRGB(250, 250, 250)
-m_t2.Font = Enum.Font.SourceSans
-m_t2.Position = UDim2.new(0, 0, 0.3500000000, 0)
-m_t2.Text = "Sword"
-m_t2.TextColor3 = Color3.fromRGB(250, 250, 250)
-m_t2.TextSize = 15.000
-m_t2.MouseButton1Down:connect(function()
-m_b1.Text = "Tool : Sword"
-m_tbar.Visible = false
-end)
-
-m_t3.Name = "m_t3"
-m_t3.Parent = m_tbar
-m_t3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-m_t3.Size = UDim2.new(0, 80, 0, 20)
-m_t3.BorderColor3 = Color3.fromRGB(250, 250, 250)
-m_t3.Font = Enum.Font.SourceSans
-m_t3.Position = UDim2.new(0, 0, 0.7000000000, 0)
-m_t3.Text = "Fruit"
-m_t3.TextColor3 = Color3.fromRGB(250, 250, 250)
-m_t3.TextSize = 15.000
-m_t3.MouseButton1Down:connect(function()
-m_b1.Text = "Tool : Fruit"
-m_tbar.Visible = false
-end) end
-
-m_f2.Parent = b_page1
-m_f2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-m_f2.Position = UDim2.new(0, 0, 0.1000000000, 0)
-m_f2.Size = UDim2.new(0, 498, 0, 30)
-m_f2.BorderColor3 = Color3.fromRGB(250, 250, 250)
-m_f2.Font = Enum.Font.Ubuntu
-m_f2.Text = "   Auto Farm Level"
-m_f2.TextColor3 = Color3.fromRGB(255, 255, 255)
-m_f2.TextSize = 14.000
-m_f2.TextWrapped = true
-m_f2.TextXAlignment = Enum.TextXAlignment.Left
-
-m_b2.Name = "m_b2"
-m_b2.Parent = m_f2
-m_b2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-m_b2.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-m_b2.Size = UDim2.new(0, 20, 0, 20)
-m_b2.BorderColor3 = Color3.fromRGB(250, 250, 250)
-m_b2.Font = Enum.Font.SourceSans
-m_b2.Text = ""
-m_b2.TextColor3 = Color3.fromRGB(250, 250, 250)
-m_b2.TextSize = 30.000
+make_together(m_f2, m_b2, b_page1, "   Auto Farm Level", UDim2.new(0, 0, 0.100000000, 0))
 m_b2.MouseButton1Down:connect(function()
 --on off 
 if m_b2.Text == "" then --on
 m_b2.Text = "X"
-_G.m_b2 = true
+_G.m_b2 = true 
 elseif m_b2.Text == "X" then --off
 m_b2.Text = ""
 _G.m_b2 = false
@@ -1860,28 +1595,7 @@ end
 end end) end end)
 
            
-m_f3.Parent = b_page1
-m_f3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-m_f3.Position = UDim2.new(0, 0, 0.1700000000, 0)
-m_f3.Size = UDim2.new(0, 498, 0, 30)
-m_f3.BorderColor3 = Color3.fromRGB(250, 250, 250)
-m_f3.Font = Enum.Font.Ubuntu
-m_f3.Text = "   Auto Fartory"
-m_f3.TextColor3 = Color3.fromRGB(255, 255, 255)
-m_f3.TextSize = 14.000
-m_f3.TextWrapped = true
-m_f3.TextXAlignment = Enum.TextXAlignment.Left
-
-m_b3.Name = "m_b3"
-m_b3.Parent = m_f3
-m_b3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-m_b3.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-m_b3.Size = UDim2.new(0, 20, 0, 20)
-m_b3.BorderColor3 = Color3.fromRGB(250, 250, 250)
-m_b3.Font = Enum.Font.SourceSans
-m_b3.Text = ""
-m_b3.TextColor3 = Color3.fromRGB(250, 250, 250)
-m_b3.TextSize = 30.000
+make_together(m_f3, m_b3, b_page1, "   Auto Fartory", UDim2.new(0, 0, 0.170000000, 0))
 m_b3.MouseButton1Down:connect(function()
 --on off 
 if m_b3.Text == "" then --on
@@ -1899,7 +1613,6 @@ game:GetService('RunService').RenderStepped:connect(function()
 if _G.m_b3 then --script
    for i,v in pairs(game:GetService("Workspace").Map.Dressrosa.SmileFactory:GetChildren()) do
             if v.Name == "Core" then
- if v.Humanoid.Health > 0  then
  local humanoid = game.Players.LocalPlayer.Character.Humanoid 
 humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
 v.HumanoidRootPart.Size = Vector3.new(60,60,60)                                                                
@@ -1908,31 +1621,10 @@ v.HumanoidRootPart.CanCollide = false
 mele()
  click()
  TP1(CFrame.new(407.5114440917969, 194.4268798828125, -412.55828857421875))
- end end end end end)
+ end end end end)
 
 
-m_f4.Parent = b_page1
-m_f4.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-m_f4.Position = UDim2.new(0, 0, 0.2400000000, 0)
-m_f4.Size = UDim2.new(0, 498, 0, 30)
-m_f4.BorderColor3 = Color3.fromRGB(250, 250, 250)
-m_f4.Font = Enum.Font.Ubuntu
-m_f4.Text = "   Auto Farm Mastery Fruit"
-m_f4.TextColor3 = Color3.fromRGB(255, 255, 255)
-m_f4.TextSize = 14.000
-m_f4.TextWrapped = true
-m_f4.TextXAlignment = Enum.TextXAlignment.Left
-
-m_b4.Name = "m_b4"
-m_b4.Parent = m_f4
-m_b4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-m_b4.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-m_b4.Size = UDim2.new(0, 20, 0, 20)
-m_b4.BorderColor3 = Color3.fromRGB(250, 250, 250)
-m_b4.Font = Enum.Font.SourceSans
-m_b4.Text = ""
-m_b4.TextColor3 = Color3.fromRGB(250, 250, 250)
-m_b4.TextSize = 30.000
+make_together(m_f4, m_b4, b_page1, "   Auto Farm Mastery Fruit", UDim2.new(0, 0, 0.240000000, 0))
 m_b4.MouseButton1Down:connect(function()
 --on off 
 if m_b4.Text == "" then --on
@@ -2049,28 +1741,7 @@ game:GetService("TweenService"):Create(
         return old(...)
     end)
 
-m_f5.Parent = b_page1
-m_f5.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-m_f5.Position = UDim2.new(0, 0, 0.3100000000, 0)
-m_f5.Size = UDim2.new(0, 498, 0, 30)
-m_f5.BorderColor3 = Color3.fromRGB(250, 250, 250)
-m_f5.Font = Enum.Font.Ubuntu
-m_f5.Text = "   Auto Farm Mastery Gun"
-m_f5.TextColor3 = Color3.fromRGB(255, 255, 255)
-m_f5.TextSize = 14.000
-m_f5.TextWrapped = true
-m_f5.TextXAlignment = Enum.TextXAlignment.Left
-
-m_b5.Name = "m_b5"
-m_b5.Parent = m_f5
-m_b5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-m_b5.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-m_b5.Size = UDim2.new(0, 20, 0, 20)
-m_b5.BorderColor3 = Color3.fromRGB(250, 250, 250)
-m_b5.Font = Enum.Font.SourceSans
-m_b5.Text = ""
-m_b5.TextColor3 = Color3.fromRGB(250, 250, 250)
-m_b5.TextSize = 30.000
+make_together(m_f5, m_b5, b_page1, "   Auto Farm Mastery Gun", UDim2.new(0, 0, 0.310000000, 0))
 m_b5.MouseButton1Down:connect(function()
 --on off 
 if m_b5.Text == "" then --on
@@ -2114,28 +1785,7 @@ m_b6.Text = m_b6.Text + 10
 end
 end)
 
-m_f7.Parent = b_page1
-m_f7.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-m_f7.Position = UDim2.new(0, 0, 0.4500000000, 0)
-m_f7.Size = UDim2.new(0, 498, 0, 30)
-m_f7.BorderColor3 = Color3.fromRGB(250, 250, 250)
-m_f7.Font = Enum.Font.Ubuntu
-m_f7.Text = "   Auto Farm Chest"
-m_f7.TextColor3 = Color3.fromRGB(255, 255, 255)
-m_f7.TextSize = 14.000
-m_f7.TextWrapped = true
-m_f7.TextXAlignment = Enum.TextXAlignment.Left
-
-m_b7.Name = "m_b7"
-m_b7.Parent = m_f7
-m_b7.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-m_b7.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-m_b7.Size = UDim2.new(0, 20, 0, 20)
-m_b7.BorderColor3 = Color3.fromRGB(250, 250, 250)
-m_b7.Font = Enum.Font.SourceSans
-m_b7.Text = ""
-m_b7.TextColor3 = Color3.fromRGB(250, 250, 250)
-m_b7.TextSize = 30.000
+make_together(m_f7, m_b7, b_page1, "   Auto Farm Chest", UDim2.new(0, 0, 0.450000000, 0))
 m_b7.MouseButton1Down:connect(function()
 --on off 
 if m_b7.Text == "" then --on
@@ -2186,43 +1836,13 @@ spawn(function()
 bartool()
 
 --// [ stat ]
-s_cp.Parent = b_page2
-s_cp.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-s_cp.Position = UDim2.new(0, 0, 0.0300000000, 0)
-s_cp.Size = UDim2.new(0, 498, 0, 30)
-s_cp.BorderColor3 = Color3.fromRGB(250, 250, 250)
-s_cp.Font = Enum.Font.Ubuntu
-s_cp.Text = "Point : ..."
-s_cp.TextColor3 = Color3.fromRGB(255, 255, 255)
-s_cp.TextSize = 14.000
-s_cp.TextWrapped = true
+make_textlabel(s_cp, b_page2, "Point", UDim2.new(0, 0, 0.0300000000, 0))
 if game.PlaceId == 2753915549 or game.PlaceId == 4442272183 or game.PlaceId == 7449423635 then -- sea3
 game:GetService('RunService').RenderStepped:connect(function()
 s_cp.Text = (" Point : "..game:GetService("Players")["LocalPlayer"].Data.Points.Value)
 end) end
 
-s_f1.Parent = b_page2
-s_f1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-s_f1.Position = UDim2.new(0, 0, 0.1000000000, 0)
-s_f1.Size = UDim2.new(0, 498, 0, 30)
-s_f1.BorderColor3 = Color3.fromRGB(250, 250, 250)
-s_f1.Font = Enum.Font.Ubuntu
-s_f1.Text = "   Mele"
-s_f1.TextColor3 = Color3.fromRGB(255, 255, 255)
-s_f1.TextSize = 14.000
-s_f1.TextWrapped = true
-s_f1.TextXAlignment = Enum.TextXAlignment.Left
-
-s_b1.Name = "s_b1"
-s_b1.Parent = s_f1
-s_b1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-s_b1.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-s_b1.Size = UDim2.new(0, 20, 0, 20)
-s_b1.BorderColor3 = Color3.fromRGB(250, 250, 250)
-s_b1.Font = Enum.Font.SourceSans
-s_b1.Text = ""
-s_b1.TextColor3 = Color3.fromRGB(250, 250, 250)
-s_b1.TextSize = 30.000
+make_together(s_f1, s_b1, b_page2, "   Mele", UDim2.new(0, 0, 0.100000000, 0))
 s_b1.MouseButton1Down:connect(function()
 --on off 
 if s_b1.Text == "" then --on
@@ -2245,28 +1865,7 @@ _G.s_b1 = false
 end
 end)
 
-s_f2.Parent = b_page2
-s_f2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-s_f2.Position = UDim2.new(0, 0, 0.1700000000, 0)
-s_f2.Size = UDim2.new(0, 498, 0, 30)
-s_f2.BorderColor3 = Color3.fromRGB(250, 250, 250)
-s_f2.Font = Enum.Font.Ubuntu
-s_f2.Text = "   Health"
-s_f2.TextColor3 = Color3.fromRGB(255, 255, 255)
-s_f2.TextSize = 14.000
-s_f2.TextWrapped = true
-s_f2.TextXAlignment = Enum.TextXAlignment.Left
-
-s_b2.Name = "s_b2"
-s_b2.Parent = s_f2
-s_b2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-s_b2.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-s_b2.Size = UDim2.new(0, 20, 0, 20)
-s_b2.BorderColor3 = Color3.fromRGB(250, 250, 250)
-s_b2.Font = Enum.Font.SourceSans
-s_b2.Text = ""
-s_b2.TextColor3 = Color3.fromRGB(250, 250, 250)
-s_b2.TextSize = 30.000
+make_together(s_f2, s_b2, b_page2, "   Health", UDim2.new(0, 0, 0.170000000, 0))
 s_b2.MouseButton1Down:connect(function()
 --on off 
 if s_b2.Text == "" then --on
@@ -2289,28 +1888,7 @@ _G.s_b2 = false
 end
 end)
 
-s_f3.Parent = b_page2
-s_f3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-s_f3.Position = UDim2.new(0, 0, 0.2400000000, 0)
-s_f3.Size = UDim2.new(0, 498, 0, 30)
-s_f3.BorderColor3 = Color3.fromRGB(250, 250, 250)
-s_f3.Font = Enum.Font.Ubuntu
-s_f3.Text = "   Sword"
-s_f3.TextColor3 = Color3.fromRGB(255, 255, 255)
-s_f3.TextSize = 14.000
-s_f3.TextWrapped = true
-s_f3.TextXAlignment = Enum.TextXAlignment.Left
-
-s_b3.Name = "s_b3"
-s_b3.Parent = s_f3
-s_b3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-s_b3.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-s_b3.Size = UDim2.new(0, 20, 0, 20)
-s_b3.BorderColor3 = Color3.fromRGB(250, 250, 250)
-s_b3.Font = Enum.Font.SourceSans
-s_b3.Text = ""
-s_b3.TextColor3 = Color3.fromRGB(250, 250, 250)
-s_b3.TextSize = 30.000
+make_together(s_f3, s_b3, b_page2, "   Sword", UDim2.new(0, 0, 0.240000000, 0))
 s_b3.MouseButton1Down:connect(function()
 --on off 
 if s_b3.Text == "" then --on
@@ -2333,28 +1911,7 @@ _G.s_b3 = false
 end
 end)
 
-s_f4.Parent = b_page2
-s_f4.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-s_f4.Position = UDim2.new(0, 0, 0.3100000000, 0)
-s_f4.Size = UDim2.new(0, 498, 0, 30)
-s_f4.BorderColor3 = Color3.fromRGB(250, 250, 250)
-s_f4.Font = Enum.Font.Ubuntu
-s_f4.Text = "   Gun"
-s_f4.TextColor3 = Color3.fromRGB(255, 255, 255)
-s_f4.TextSize = 14.000
-s_f4.TextWrapped = true
-s_f4.TextXAlignment = Enum.TextXAlignment.Left
-
-s_b4.Name = "s_b4"
-s_b4.Parent = s_f4
-s_b4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-s_b4.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-s_b4.Size = UDim2.new(0, 20, 0, 20)
-s_b4.BorderColor3 = Color3.fromRGB(250, 250, 250)
-s_b4.Font = Enum.Font.SourceSans
-s_b4.Text = ""
-s_b4.TextColor3 = Color3.fromRGB(250, 250, 250)
-s_b4.TextSize = 30.000
+make_together(s_f4, s_b4, b_page2, "   gun", UDim2.new(0, 0, 0.310000000, 0))
 s_b4.MouseButton1Down:connect(function()
 --on off 
 if s_b4.Text == "" then --on
@@ -2377,28 +1934,7 @@ _G.s_b4 = false
 end
 end)
 
-s_f5.Parent = b_page2
-s_f5.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-s_f5.Position = UDim2.new(0, 0, 0.3800000000, 0)
-s_f5.Size = UDim2.new(0, 498, 0, 30)
-s_f5.BorderColor3 = Color3.fromRGB(250, 250, 250)
-s_f5.Font = Enum.Font.Ubuntu
-s_f5.Text = "   Fruit"
-s_f5.TextColor3 = Color3.fromRGB(255, 255, 255)
-s_f5.TextSize = 14.000
-s_f5.TextWrapped = true
-s_f5.TextXAlignment = Enum.TextXAlignment.Left
-
-s_b5.Name = "s_b5"
-s_b5.Parent = s_f5
-s_b5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-s_b5.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-s_b5.Size = UDim2.new(0, 20, 0, 20)
-s_b5.BorderColor3 = Color3.fromRGB(250, 250, 250)
-s_b5.Font = Enum.Font.SourceSans
-s_b5.Text = ""
-s_b5.TextColor3 = Color3.fromRGB(250, 250, 250)
-s_b5.TextSize = 30.000
+make_together(s_f5, s_b5, b_page2, "   Fruit", UDim2.new(0, 0, 0.380000000, 0))
 s_b5.MouseButton1Down:connect(function()
 --on off 
 if s_b5.Text == "" then --on
@@ -2421,75 +1957,21 @@ _G.s_b5 = false
 end
 end)
 
-s_t1.Parent = b_page2
-s_t1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-s_t1.Position = UDim2.new(0, 0, 0.4500000000, 0)
-s_t1.Size = UDim2.new(0, 498, 0, 30)
-s_t1.BorderColor3 = Color3.fromRGB(250, 250, 250)
-s_t1.Font = Enum.Font.Ubuntu
-s_t1.Text = "Data Player"
-s_t1.TextColor3 = Color3.fromRGB(255, 255, 255)
-s_t1.TextSize = 14.000
-s_t1.TextWrapped = true
+make_textlabel(s_t1, b_page2, "Data Player",UDim2.new(0, 0, 0.4500000000, 0))
 
-s_name.Parent = b_page2
-s_name.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-s_name.Position = UDim2.new(0, 0, 0.5200000000, 0)
-s_name.Size = UDim2.new(0, 498, 0, 30)
-s_name.BorderColor3 = Color3.fromRGB(250, 250, 250)
-s_name.Font = Enum.Font.Ubuntu
-s_name.Text = "Name"
-s_name.TextColor3 = Color3.fromRGB(255, 255, 255)
-s_name.TextSize = 14.000
-s_name.TextWrapped = true
+make_textlabel(s_name, b_page2, "Name", UDim2.new(0, 0, 0.5200000000, 0))
 s_name.TextXAlignment = Enum.TextXAlignment.Left
 
-s_race.Parent = b_page2
-s_race.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-s_race.Position = UDim2.new(0, 0, 0.5900000000, 0)
-s_race.Size = UDim2.new(0, 498, 0, 30)
-s_race.BorderColor3 = Color3.fromRGB(250, 250, 250)
-s_race.Font = Enum.Font.Ubuntu
-s_race.Text = "Race"
-s_race.TextColor3 = Color3.fromRGB(255, 255, 255)
-s_race.TextSize = 14.000
-s_race.TextWrapped = true
+make_textlabel(s_race, b_page2, "Race", UDim2.new(0, 0, 0.5900000000, 0))
 s_race.TextXAlignment = Enum.TextXAlignment.Left
 
-s_level.Parent = b_page2
-s_level.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-s_level.Position = UDim2.new(0, 0, 0.6600000000, 0)
-s_level.Size = UDim2.new(0, 498, 0, 30)
-s_level.BorderColor3 = Color3.fromRGB(250, 250, 250)
-s_level.Font = Enum.Font.Ubuntu
-s_level.Text = "Beli"
-s_level.TextColor3 = Color3.fromRGB(255, 255, 255)
-s_level.TextSize = 14.000
-s_level.TextWrapped = true
+make_textlabel(s_level, b_page2, "Level", UDim2.new(0, 0, 0.6600000000, 0))
 s_level.TextXAlignment = Enum.TextXAlignment.Left
 
-s_beli.Parent = b_page2
-s_beli.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-s_beli.Position = UDim2.new(0, 0, 0.7300000000, 0)
-s_beli.Size = UDim2.new(0, 498, 0, 30)
-s_beli.BorderColor3 = Color3.fromRGB(250, 250, 250)
-s_beli.Font = Enum.Font.Ubuntu
-s_beli.Text = "Level"
-s_beli.TextColor3 = Color3.fromRGB(255, 255, 255)
-s_beli.TextSize = 14.000
-s_beli.TextWrapped = true
+make_textlabel(s_beli, b_page2, "Beli", UDim2.new(0, 0, 0.7300000000, 0))
 s_beli.TextXAlignment = Enum.TextXAlignment.Left
 
-s_fag.Parent = b_page2
-s_fag.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-s_fag.Position = UDim2.new(0, 0, 0.8000000000, 0)
-s_fag.Size = UDim2.new(0, 498, 0, 30)
-s_fag.BorderColor3 = Color3.fromRGB(250, 250, 250)
-s_fag.Font = Enum.Font.Ubuntu
-s_fag.Text = "Fragments"
-s_fag.TextColor3 = Color3.fromRGB(255, 255, 255)
-s_fag.TextSize = 14.000
-s_fag.TextWrapped = true
+make_textlabel(s_fag, b_page2, "Fragment", UDim2.new(0, 0, 0.8000000000, 0))
 s_fag.TextXAlignment = Enum.TextXAlignment.Left
 
 game:GetService('RunService').RenderStepped:connect(function()
@@ -2498,63 +1980,27 @@ s_name.Text = ("   Name : "..game.Players.localPlayer.DisplayName)
 s_race.Text = ("   Race : "..game:GetService("Players")["LocalPlayer"].Data.Race.Value)
 s_level.Text = ("   Level : "..game.Players.LocalPlayer.Data.Level.Value)
 s_beli.Text = ("   Beli : " ..game:GetService("Players")["LocalPlayer"].Data.Beli.Value)
-s_fag.Text = ("   Fragments : "..game:GetService("Players")["LocalPlayer"].Data.Fragments.Value)
+s_fag.Text = ("   Fragment : "..game:GetService("Players")["LocalPlayer"].Data.Fragments.Value)
 end end)
 
 
 -- // raid
-r_t1.Parent = b_page3
-r_t1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-r_t1.Position = UDim2.new(0, 0, 0.0300000000, 0)
-r_t1.Size = UDim2.new(0, 498, 0, 30)
-r_t1.BorderColor3 = Color3.fromRGB(250, 250, 250)
-r_t1.Font = Enum.Font.Ubuntu
-r_t1.Text = "Raid"
-r_t1.TextColor3 = Color3.fromRGB(255, 255, 255)
-r_t1.TextSize = 14.000
-r_t1.TextWrapped = true
+make_textlabel(r_t1, b_page3, "Raid", UDim2.new(0, 0, 0.0300000000, 0))
 
-r_f1.Parent = b_page3
-r_f1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-r_f1.Position = UDim2.new(0, 0, 0.1000000000, 0)
-r_f1.Size = UDim2.new(0, 498, 0, 30)
-r_f1.BorderColor3 = Color3.fromRGB(250, 250, 250)
-r_f1.Font = Enum.Font.Ubuntu
-r_f1.Text = "  "
-r_f1.TextColor3 = Color3.fromRGB(255, 255, 255)
-r_f1.TextSize = 14.000
-r_f1.TextWrapped = true
-r_f1.TextXAlignment = Enum.TextXAlignment.Left
-
-r_b1.Name = "r_b1"
-r_b1.Parent = r_f1
-r_b1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-r_b1.Size = UDim2.new(0, 110, 0, 30)
-r_b1.BorderColor3 = Color3.fromRGB(250, 250, 250)
-r_b1.Font = Enum.Font.SourceSans
-r_b1.Text = "Core : Select"
-r_b1.TextColor3 = Color3.fromRGB(250, 250, 250)
-r_b1.TextSize = 18.000
+make_select2(r_f1,r_b1,r_cbuy, b_page3, "Core : Select", UDim2.new(0, 0, 0.1000000, 0))
 r_b1.MouseButton1Down:connect(function()
 r_cbar.Visible = true
 end)
-
-r_cbuy.Name = "r_cbuy"
-r_cbuy.Parent = r_f1
-r_cbuy.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-r_cbuy.Position = UDim2.new(0.94000000, 0, 0.190000000, 0)
-r_cbuy.Size = UDim2.new(0, 20, 0, 20)
-r_cbuy.BorderColor3 = Color3.fromRGB(250, 250, 250)
-r_cbuy.Font = Enum.Font.SourceSans
-r_cbuy.Text = ""
-r_cbuy.TextColor3 = Color3.fromRGB(250, 250, 250)
-r_cbuy.TextSize = 30.000
 r_cbuy.MouseButton1Down:connect(function()
 --on off 
 if r_cbuy.Text == "" then --on
 r_cbuy.Text = "X"
 _G.r_cbuy = true
-
+elseif r_cbuy.Text == "X" then --off
+r_cbuy.Text = ""
+_G.r_cbuy = false
+end
+end)
 game:GetService('RunService').RenderStepped:connect(function()
 if _G.r_cbuy then --script
 --buy core
@@ -2572,192 +2018,33 @@ elseif r_b1.Text == "Core : Quake" then
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("RaidsNpc","Select","Quake")
 elseif r_b1.Text == "Core : Human" then
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("RaidsNpc","Select","Human")
-elseif r_b1.Text == "Core : Phonix" then
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("RaidsNpc","Select","Phonix")
-elseif r_b1.Text == "Core : Mochi" then
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("RaidsNpc","Select","Mochi")
+elseif r_b1.Text == "Core : Phoenix" then
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("RaidsNpc","Select","Phoenix")
+elseif r_b1.Text == "Core : Dough" then
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("RaidsNpc","Select","Dough")
 end --end script
-end
-end)
-elseif r_cbuy.Text == "X" then --off
-r_cbuy.Text = ""
-_G.r_cbuy = false
 end
 end)
 
 
 function barcore()
 
-r_cbar.Name = "r_cbar"
-r_cbar.Parent = b_page3
-r_cbar.Active = true
-r_cbar.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-r_cbar.BorderColor3 = Color3.fromRGB(250, 250, 250)
-r_cbar.Position = UDim2.new(0, 0, 0.1000000000, 0)
-r_cbar.Size = UDim2.new(0, 110, 0, 140)
-r_cbar.BorderSizePixel = 1
-r_cbar.Visible = false
-
-r_c1.Name = "r_c1" --chip flame
-r_c1.Parent = r_cbar
-r_c1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-r_c1.Position = UDim2.new(0.00000000, 0, 0.000000000, 0)
-r_c1.Size = UDim2.new(0, 100, 0, 20)
-r_c1.BorderColor3 = Color3.fromRGB(250, 250, 250)
-r_c1.Font = Enum.Font.SourceSans
-r_c1.Text = "Flame"
-r_c1.TextColor3 = Color3.fromRGB(250, 250, 250)
-r_c1.TextSize = 14.000
-r_c1.MouseButton1Down:connect(function()
-r_cbar.Visible = false
-r_b1.Text = "Core : Flame"
-end)
-
-r_c2.Name = "r_c2" --sand
-r_c2.Parent = r_cbar
-r_c2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-r_c2.Position = UDim2.new(0.00000000, 0, 0.050000000, 0)
-r_c2.Size = UDim2.new(0, 100, 0, 20)
-r_c2.BorderColor3 = Color3.fromRGB(250, 250, 250)
-r_c2.Font = Enum.Font.SourceSans
-r_c2.Text = "Ice"
-r_c2.TextColor3 = Color3.fromRGB(250, 250, 250)
-r_c2.TextSize = 14.000
-r_c2.MouseButton1Down:connect(function()
-r_cbar.Visible = false
-r_b1.Text = "Core : Ice"
-end)
-
-r_c3.Name = "r_c3"
-r_c3.Parent = r_cbar
-r_c3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-r_c3.Position = UDim2.new(0.00000000, 0, 0.100000000, 0)
-r_c3.Size = UDim2.new(0, 100, 0, 20)
-r_c3.BorderColor3 = Color3.fromRGB(250, 250, 250)
-r_c3.Font = Enum.Font.SourceSans
-r_c3.Text = "Sand"
-r_c3.TextColor3 = Color3.fromRGB(250, 250, 250)
-r_c3.TextSize = 14.000
-r_c3.MouseButton1Down:connect(function()
-r_cbar.Visible = false
-r_b1.Text = "Core : Sand"
-end)
-
-r_c4.Name = "r_c4"
-r_c4.Parent = r_cbar
-r_c4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-r_c4.Position = UDim2.new(0.00000000, 0, 0.150000000, 0)
-r_c4.Size = UDim2.new(0, 100, 0, 20)
-r_c4.BorderColor3 = Color3.fromRGB(250, 250, 250)
-r_c4.Font = Enum.Font.SourceSans
-r_c4.Text = "Dark"
-r_c4.TextColor3 = Color3.fromRGB(250, 250, 250)
-r_c4.TextSize = 14.000
-r_c4.MouseButton1Down:connect(function()
-r_cbar.Visible = false
-r_b1.Text = "Core : Dark"
-end)
-
-r_c5.Name = "r_c5"
-r_c5.Parent = r_cbar
-r_c5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-r_c5.Position = UDim2.new(0.00000000, 0, 0.200000000, 0)
-r_c5.Size = UDim2.new(0, 100, 0, 20)
-r_c5.BorderColor3 = Color3.fromRGB(250, 250, 250)
-r_c5.Font = Enum.Font.SourceSans
-r_c5.Text = "Light"
-r_c5.TextColor3 = Color3.fromRGB(250, 250, 250)
-r_c5.TextSize = 14.000
-r_c5.MouseButton1Down:connect(function()
-r_cbar.Visible = false
-r_b1.Text = "Core : Light"
-end)
-
-r_c6.Name = "r_c6"
-r_c6.Parent = r_cbar
-r_c6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-r_c6.Position = UDim2.new(0.00000000, 0, 0.250000000, 0)
-r_c6.Size = UDim2.new(0, 100, 0, 20)
-r_c6.BorderColor3 = Color3.fromRGB(250, 250, 250)
-r_c6.Font = Enum.Font.SourceSans
-r_c6.Text = "Quake"
-r_c6.TextColor3 = Color3.fromRGB(250, 250, 250)
-r_c6.TextSize = 14.000
-r_c6.MouseButton1Down:connect(function()
-r_cbar.Visible = false
-r_b1.Text = "Core : Quake"
-end)
-
-r_c7.Name = "r_c7"
-r_c7.Parent = r_cbar
-r_c7.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-r_c7.Position = UDim2.new(0.00000000, 0, 0.300000000, 0)
-r_c7.Size = UDim2.new(0, 100, 0, 20)
-r_c7.BorderColor3 = Color3.fromRGB(250, 250, 250)
-r_c7.Font = Enum.Font.SourceSans
-r_c7.Text = "Human"
-r_c7.TextColor3 = Color3.fromRGB(250, 250, 250)
-r_c7.TextSize = 14.000
-r_c7.MouseButton1Down:connect(function()
-r_cbar.Visible = false
-r_b1.Text = "Core : Human"
-end)
-
-r_c8.Name = "r_c8"
-r_c8.Parent = r_cbar
-r_c8.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-r_c8.Position = UDim2.new(0.00000000, 0, 0.350000000, 0)
-r_c8.Size = UDim2.new(0, 100, 0, 20)
-r_c8.BorderColor3 = Color3.fromRGB(250, 250, 250)
-r_c8.Font = Enum.Font.SourceSans
-r_c8.Text = "Phonix"
-r_c8.TextColor3 = Color3.fromRGB(250, 250, 250)
-r_c8.TextSize = 14.000
-r_c8.MouseButton1Down:connect(function()
-r_cbar.Visible = false
-r_b1.Text = "Core : Phonix"
-end)
-
-r_c9.Name = "r_c9"
-r_c9.Parent = r_cbar
-r_c9.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-r_c9.Position = UDim2.new(0.00000000, 0, 0.400000000, 0)
-r_c9.Size = UDim2.new(0, 100, 0, 20)
-r_c9.BorderColor3 = Color3.fromRGB(250, 250, 250)
-r_c9.Font = Enum.Font.SourceSans
-r_c9.Text = "Mochi"
-r_c9.TextColor3 = Color3.fromRGB(250, 250, 250)
-r_c9.TextSize = 14.000
-r_c9.MouseButton1Down:connect(function()
-r_cbar.Visible = false
-r_b1.Text = "Core : Mochi"
-end)
-
+make_selectscrollingframe(r_cbar, b_page3, UDim2.new(0, 0, 0.1700000, 0))
+make_selectbutton(r_cf1, r_cb1,r_b1, r_cbar, "Flame", "Core :  Flame", UDim2.new(0, 0, 0.0000000, 0))
+make_selectbutton(r_cf2, r_cb2,r_b1, r_cbar, "Ice", "Core :  Ice", UDim2.new(0, 0, 0.0500000, 0))
+make_selectbutton(r_cf3, r_cb3,r_b1, r_cbar, "Sand", "Core :  Sand", UDim2.new(0, 0, 0.1000000, 0))
+make_selectbutton(r_cf4, r_cb4,r_b1, r_cbar, "Dark", "Core :  Dark", UDim2.new(0, 0, 0.1500000, 0))
+make_selectbutton(r_cf5, r_cb5,r_b1, r_cbar, "Light", "Core :  Light", UDim2.new(0, 0, 0.2000000, 0))
+make_selectbutton(r_cf6, r_cb6,r_b1, r_cbar, "Magma", "Core :  Magma", UDim2.new(0, 0, 0.2500000, 0))
+make_selectbutton(r_cf7, r_cb7,r_b1, r_cbar, "Quake", "Core :  Quake", UDim2.new(0, 0, 0.3000000, 0))
+make_selectbutton(r_cf8, r_cb8,r_b1, r_cbar, "Human", "Core :  Human", UDim2.new(0, 0, 0.3500000, 0))
+make_selectbutton(r_cf9, r_cb9,r_b1, r_cbar, "Spider", "Core :  Spider", UDim2.new(0, 0, 0.4000000, 0))
+make_selectbutton(r_cf10, r_cb10,r_b1, r_cbar, "Phoenix", "Core :  Phoenix", UDim2.new(0, 0, 0.4500000, 0))
+make_selectbutton(r_cf11, r_cb11,r_b1, r_cbar, "Dough", "Core :  Dough", UDim2.new(0, 0, 0.5000000, 0))
 --end bar core
 end
 
-r_ftp1.Parent = b_page3
-r_ftp1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-r_ftp1.Position = UDim2.new(0, 0, 0.1700000000, 0)
-r_ftp1.Size = UDim2.new(0, 498, 0, 30)
-r_ftp1.BorderColor3 = Color3.fromRGB(250, 250, 250)
-r_ftp1.Font = Enum.Font.Ubuntu
-r_ftp1.Text = "   Teleport Lab"
-r_ftp1.TextColor3 = Color3.fromRGB(255, 255, 255)
-r_ftp1.TextSize = 14.000
-r_ftp1.TextWrapped = true
-r_ftp1.TextXAlignment = Enum.TextXAlignment.Left
-
-r_btp1.Name = "r_btp1"
-r_btp1.Parent = r_ftp1
-r_btp1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-r_btp1.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-r_btp1.Size = UDim2.new(0, 20, 0, 20)
-r_btp1.BorderColor3 = Color3.fromRGB(250, 250, 250)
-r_btp1.Font = Enum.Font.SourceSans
-r_btp1.Text = ""
-r_btp1.TextColor3 = Color3.fromRGB(250, 250, 250)
-r_btp1.TextSize = 30.000
+make_together(r_ftp1, r_btp1 , b_page3, "   Teleport Lab",  UDim2.new(0, 0, 0.1700000000, 0))
 r_btp1.MouseButton1Down:connect(function()
 --on off 
 if r_btp1.Text == "" then --on
@@ -2779,29 +2066,7 @@ stoptp()
 end
 end)
 
-
-f_awaken.Parent = b_page3
-f_awaken.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-f_awaken.Position = UDim2.new(0, 0, 0.2400000000, 0)
-f_awaken.Size = UDim2.new(0, 498, 0, 30)
-f_awaken.BorderColor3 = Color3.fromRGB(250, 250, 250)
-f_awaken.Font = Enum.Font.Ubuntu
-f_awaken.Text = "   Auto Awaken"
-f_awaken.TextColor3 = Color3.fromRGB(255, 255, 255)
-f_awaken.TextSize = 14.000
-f_awaken.TextWrapped = true
-f_awaken.TextXAlignment = Enum.TextXAlignment.Left
-
-b_awaken.Name = "b_awaken"
-b_awaken.Parent = f_awaken
-b_awaken.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-b_awaken.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-b_awaken.Size = UDim2.new(0, 20, 0, 20)
-b_awaken.BorderColor3 = Color3.fromRGB(250, 250, 250)
-b_awaken.Font = Enum.Font.SourceSans
-b_awaken.Text = ""
-b_awaken.TextColor3 = Color3.fromRGB(250, 250, 250)
-b_awaken.TextSize = 30.000
+make_together(f_awaken, b_awaken , b_page3, "   Auto Awaken",  UDim2.new(0, 0, 0.2400000000, 0))
 b_awaken.MouseButton1Down:connect(function()
 --on off 
 if b_awaken.Text == "" then --on
@@ -2819,30 +2084,7 @@ _G.b_awaken = false
 end
 end)
 
-
-
-r_f2.Parent = b_page3
-r_f2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-r_f2.Position = UDim2.new(0, 0, 0.3100000000, 0)
-r_f2.Size = UDim2.new(0, 498, 0, 30)
-r_f2.BorderColor3 = Color3.fromRGB(250, 250, 250)
-r_f2.Font = Enum.Font.Ubuntu
-r_f2.Text = "   Auto Start"
-r_f2.TextColor3 = Color3.fromRGB(255, 255, 255)
-r_f2.TextSize = 14.000
-r_f2.TextWrapped = true
-r_f2.TextXAlignment = Enum.TextXAlignment.Left
-
-r_b2.Name = "r_b2"
-r_b2.Parent = r_f2
-r_b2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-r_b2.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-r_b2.Size = UDim2.new(0, 20, 0, 20)
-r_b2.BorderColor3 = Color3.fromRGB(250, 250, 250)
-r_b2.Font = Enum.Font.SourceSans
-r_b2.Text = ""
-r_b2.TextColor3 = Color3.fromRGB(250, 250, 250)
-r_b2.TextSize = 30.000
+make_together(r_f2, r_b2 , b_page3, "   Auto Start",  UDim2.new(0, 0, 0.3100000000, 0))
 r_b2.MouseButton1Down:connect(function()
 --on off 
 if r_b2.Text == "" then --on
@@ -2869,28 +2111,7 @@ _G.r_b2 = false
 end
 end)
 
-r_f3.Parent = b_page3
-r_f3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-r_f3.Position = UDim2.new(0, 0, 0.3800000000, 0)
-r_f3.Size = UDim2.new(0, 498, 0, 30)
-r_f3.BorderColor3 = Color3.fromRGB(250, 250, 250)
-r_f3.Font = Enum.Font.Ubuntu
-r_f3.Text = "   Auto Next Island"
-r_f3.TextColor3 = Color3.fromRGB(255, 255, 255)
-r_f3.TextSize = 14.000
-r_f3.TextWrapped = true
-r_f3.TextXAlignment = Enum.TextXAlignment.Left
-
-r_b3.Name = "r_b3"
-r_b3.Parent = r_f3
-r_b3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-r_b3.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-r_b3.Size = UDim2.new(0, 20, 0, 20)
-r_b3.BorderColor3 = Color3.fromRGB(250, 250, 250)
-r_b3.Font = Enum.Font.SourceSans
-r_b3.Text = ""
-r_b3.TextColor3 = Color3.fromRGB(250, 250, 250)
-r_b3.TextSize = 30.000
+make_together(r_f3, r_b3 , b_page3, "   Auto Next Island",  UDim2.new(0, 0, 0.3800000000, 0))
 r_b3.MouseButton1Down:connect(function()
 --on off 
 if r_b3.Text == "" then --on
@@ -3003,29 +2224,7 @@ local pos = v.CFrame --check pos
 end
 end)
 
-
-r_f4.Parent = b_page3
-r_f4.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-r_f4.Position = UDim2.new(0, 0, 0.4500000000, 0)
-r_f4.Size = UDim2.new(0, 498, 0, 30)
-r_f4.BorderColor3 = Color3.fromRGB(250, 250, 250)
-r_f4.Font = Enum.Font.Ubuntu
-r_f4.Text = "   Auto Raid Farm"
-r_f4.TextColor3 = Color3.fromRGB(255, 255, 255)
-r_f4.TextSize = 14.000
-r_f4.TextWrapped = true
-r_f4.TextXAlignment = Enum.TextXAlignment.Left
-
-r_b4.Name = "r_b4"
-r_b4.Parent = r_f4
-r_b4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-r_b4.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-r_b4.Size = UDim2.new(0, 20, 0, 20)
-r_b4.BorderColor3 = Color3.fromRGB(250, 250, 250)
-r_b4.Font = Enum.Font.SourceSans
-r_b4.Text = ""
-r_b4.TextColor3 = Color3.fromRGB(250, 250, 250)
-r_b4.TextSize = 30.000
+make_together(r_f4, r_b4 , b_page3, "   Auto Raid Farm",  UDim2.new(0, 0, 0.4500000000, 0))
 r_b4.MouseButton1Down:connect(function()
 --on off 
 if r_b4.Text == "" then --on
@@ -3083,29 +2282,8 @@ game:GetService("TweenService"):Create(
 end
 end)
 
-
-r_f5.Parent = b_page3
-r_f5.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-r_f5.Position = UDim2.new(0, 0, 0.5200000000, 0)
-r_f5.Size = UDim2.new(0, 498, 0, 30)
-r_f5.BorderColor3 = Color3.fromRGB(250, 250, 250)
-r_f5.Font = Enum.Font.Ubuntu
-r_f5.Text = "   Auto Kill Aura"
-r_f5.TextColor3 = Color3.fromRGB(255, 255, 255)
-r_f5.TextSize = 14.000
-r_f5.TextWrapped = true
-r_f5.TextXAlignment = Enum.TextXAlignment.Left
-
-r_b5.Name = "r_b5"
-r_b5.Parent = r_f5
-r_b5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-r_b5.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-r_b5.Size = UDim2.new(0, 20, 0, 20)
-r_b5.BorderColor3 = Color3.fromRGB(250, 250, 250)
-r_b5.Font = Enum.Font.SourceSans
-r_b5.Text = ""
-r_b5.TextColor3 = Color3.fromRGB(250, 250, 250)
 r_b5.TextSize = 30.000
+make_together(r_f5, r_b5 , b_page3, "   Auto Kill Aura",  UDim2.new(0, 0, 0.5200000000, 0))
 r_b5.MouseButton1Down:connect(function()
 --on off 
 if r_b5.Text == "" then --on
@@ -3143,39 +2321,9 @@ end)
 
 if game.PlaceId == 4442272183 then -- sea2
 
-r_t2.Parent = b_page3
-r_t2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-r_t2.Position = UDim2.new(0, 0, 0.5900000000, 0)
-r_t2.Size = UDim2.new(0, 498, 0, 30)
-r_t2.BorderColor3 = Color3.fromRGB(250, 250, 250)
-r_t2.Font = Enum.Font.Ubuntu
-r_t2.Text = "Raid Law"
-r_t2.TextColor3 = Color3.fromRGB(255, 255, 255)
-r_t2.TextSize = 14.000
-r_t2.TextWrapped = true
+make_textlabel(r_t2, b_page3, "Raid Law", UDim2.new(0, 0, 0.5900000000, 0))
 
-r_ftp2.Parent = b_page3
-r_ftp2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-r_ftp2.Position = UDim2.new(0, 0, 0.6600000000, 0)
-r_ftp2.Size = UDim2.new(0, 498, 0, 30)
-r_ftp2.BorderColor3 = Color3.fromRGB(250, 250, 250)
-r_ftp2.Font = Enum.Font.Ubuntu
-r_ftp2.Text = "   Teleport Lab"
-r_ftp2.TextColor3 = Color3.fromRGB(255, 255, 255)
-r_ftp2.TextSize = 14.000
-r_ftp2.TextWrapped = true
-r_ftp2.TextXAlignment = Enum.TextXAlignment.Left
-
-r_btp2.Name = "r_btp2"
-r_btp2.Parent = r_ftp2
-r_btp2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-r_btp2.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-r_btp2.Size = UDim2.new(0, 20, 0, 20)
-r_btp2.BorderColor3 = Color3.fromRGB(250, 250, 250)
-r_btp2.Font = Enum.Font.SourceSans
-r_btp2.Text = ""
-r_btp2.TextColor3 = Color3.fromRGB(250, 250, 250)
-r_btp2.TextSize = 30.000
+make_together(r_ftp2, r_btp2 , b_page3, "   Teleport Lab",  UDim2.new(0, 0, 0.6600000000, 0))
 r_btp2.MouseButton1Down:connect(function()
 --on off 
 if r_btp2.Text == "" then --on
@@ -3194,35 +2342,12 @@ stoptp()
 end
 end)
 
-
-r_f6.Parent = b_page3
-r_f6.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-r_f6.Position = UDim2.new(0, 0, 0.7300000000, 0)
-r_f6.Size = UDim2.new(0, 498, 0, 30)
-r_f6.BorderColor3 = Color3.fromRGB(250, 250, 250)
-r_f6.Font = Enum.Font.Ubuntu
-r_f6.Text = "   Auto Buy Core Law"
-r_f6.TextColor3 = Color3.fromRGB(255, 255, 255)
-r_f6.TextSize = 14.000
-r_f6.TextWrapped = true
-r_f6.TextXAlignment = Enum.TextXAlignment.Left
-
-r_b6.Name = "r_b6"
-r_b6.Parent = r_f6
-r_b6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-r_b6.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-r_b6.Size = UDim2.new(0, 20, 0, 20)
-r_b6.BorderColor3 = Color3.fromRGB(250, 250, 250)
-r_b6.Font = Enum.Font.SourceSans
-r_b6.Text = ""
-r_b6.TextColor3 = Color3.fromRGB(250, 250, 250)
-r_b6.TextSize = 30.000
+make_together(r_f6, r_b6 , b_page3, "   Auto Buy Core Law",  UDim2.new(0, 0, 0.7300000000, 0))
 r_b6.MouseButton1Down:connect(function()
 --on off 
 if r_b6.Text == "" then --on
 r_b6.Text = "X"
 _G.r_b6 = true
-
 elseif r_b6.Text == "X" then --off
 r_b6.Text = ""
 _G.r_b6 = false
@@ -3247,28 +2372,7 @@ end
 end)
 end end)
 
-r_f7.Parent = b_page3
-r_f7.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-r_f7.Position = UDim2.new(0, 0, 0.8000000000, 0)
-r_f7.Size = UDim2.new(0, 498, 0, 30)
-r_f7.BorderColor3 = Color3.fromRGB(250, 250, 250)
-r_f7.Font = Enum.Font.Ubuntu
-r_f7.Text = "   Auto Raid Law"
-r_f7.TextColor3 = Color3.fromRGB(255, 255, 255)
-r_f7.TextSize = 14.000
-r_f7.TextWrapped = true
-r_f7.TextXAlignment = Enum.TextXAlignment.Left
-
-r_b7.Name = "r_b7"
-r_b7.Parent = r_f7
-r_b7.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-r_b7.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-r_b7.Size = UDim2.new(0, 20, 0, 20)
-r_b7.BorderColor3 = Color3.fromRGB(250, 250, 250)
-r_b7.Font = Enum.Font.SourceSans
-r_b7.Text = ""
-r_b7.TextColor3 = Color3.fromRGB(250, 250, 250)
-r_b7.TextSize = 30.000
+make_together(r_f7, r_b7 , b_page3, "   Auto Raid Law",  UDim2.new(0, 0, 0.8000000000, 0))
 r_b7.MouseButton1Down:connect(function()
 --on off 
 if r_b7.Text == "" then --on
@@ -3307,39 +2411,9 @@ end-- law
 barcore()
 
 -- // esp - fruit
-ef_t1.Parent = b_page5
-ef_t1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-ef_t1.Position = UDim2.new(0, 0, 0.0300000000, 0)
-ef_t1.Size = UDim2.new(0, 498, 0, 30)
-ef_t1.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ef_t1.Font = Enum.Font.Ubuntu
-ef_t1.Text = "Esp"
-ef_t1.TextColor3 = Color3.fromRGB(255, 255, 255)
-ef_t1.TextSize = 14.000
-ef_t1.TextWrapped = true
+make_textlabel(ef_t1, b_page5, "Esp", UDim2.new(0, 0, 0.0300000000, 0))
 
-ef_f1.Parent = b_page5
-ef_f1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-ef_f1.Position = UDim2.new(0, 0, 0.1000000000, 0)
-ef_f1.Size = UDim2.new(0, 498, 0, 30)
-ef_f1.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ef_f1.Font = Enum.Font.Ubuntu
-ef_f1.Text = "   Esp Player"
-ef_f1.TextColor3 = Color3.fromRGB(255, 255, 255)
-ef_f1.TextSize = 14.000
-ef_f1.TextWrapped = true
-ef_f1.TextXAlignment = Enum.TextXAlignment.Left
-
-ef_b1.Name = "ef_b1"
-ef_b1.Parent = ef_f1
-ef_b1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-ef_b1.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-ef_b1.Size = UDim2.new(0, 20, 0, 20)
-ef_b1.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ef_b1.Font = Enum.Font.SourceSans
-ef_b1.Text = ""
-ef_b1.TextColor3 = Color3.fromRGB(250, 250, 250)
-ef_b1.TextSize = 30.000
+make_together(ef_f1, ef_b1 , b_page5, "   Esp Player",  UDim2.new(0, 0, 0.1000000000, 0))
 ef_b1.MouseButton1Down:connect(function()
 --on off 
 if ef_b1.Text == "" then --on
@@ -3402,28 +2476,7 @@ spawn(function()
 end)
 
 
-ef_f2.Parent = b_page5
-ef_f2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-ef_f2.Position = UDim2.new(0, 0, 0.1700000000, 0)
-ef_f2.Size = UDim2.new(0, 498, 0, 30)
-ef_f2.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ef_f2.Font = Enum.Font.Ubuntu
-ef_f2.Text = "   Esp Fruit"
-ef_f2.TextColor3 = Color3.fromRGB(255, 255, 255)
-ef_f2.TextSize = 14.000
-ef_f2.TextWrapped = true
-ef_f2.TextXAlignment = Enum.TextXAlignment.Left
-
-ef_b2.Name = "ef_b2"
-ef_b2.Parent = ef_f2
-ef_b2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-ef_b2.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-ef_b2.Size = UDim2.new(0, 20, 0, 20)
-ef_b2.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ef_b2.Font = Enum.Font.SourceSans
-ef_b2.Text = ""
-ef_b2.TextColor3 = Color3.fromRGB(250, 250, 250)
-ef_b2.TextSize = 30.000
+make_together(ef_f2, ef_b2 , b_page5, "   Esp Fruit",  UDim2.new(0, 0, 0.1700000000, 0))
 ef_b2.MouseButton1Down:connect(function()
 --on off 
 if ef_b2.Text == "" then --on
@@ -3507,28 +2560,7 @@ spawn(function()
 end)
 
 
-ef_f3.Parent = b_page5
-ef_f3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-ef_f3.Position = UDim2.new(0, 0, 0.2400000000, 0)
-ef_f3.Size = UDim2.new(0, 498, 0, 30)
-ef_f3.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ef_f3.Font = Enum.Font.Ubuntu
-ef_f3.Text = "   Esp Chest"
-ef_f3.TextColor3 = Color3.fromRGB(255, 255, 255)
-ef_f3.TextSize = 14.000
-ef_f3.TextWrapped = true
-ef_f3.TextXAlignment = Enum.TextXAlignment.Left
-
-ef_b3.Name = "ef_b3"
-ef_b3.Parent = ef_f3
-ef_b3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-ef_b3.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-ef_b3.Size = UDim2.new(0, 20, 0, 20)
-ef_b3.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ef_b3.Font = Enum.Font.SourceSans
-ef_b3.Text = ""
-ef_b3.TextColor3 = Color3.fromRGB(250, 250, 250)
-ef_b3.TextSize = 30.000
+make_together(ef_f3, ef_b3 , b_page5, "   Esp Chest",  UDim2.new(0, 0, 0.2400000000, 0))
 ef_b3.MouseButton1Down:connect(function()
 --on off 
 if ef_b3.Text == "" then --on
@@ -3594,28 +2626,7 @@ spawn(function()
 end)
 
 
-ef_f4.Parent = b_page5
-ef_f4.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-ef_f4.Position = UDim2.new(0, 0, 0.3100000000, 0)
-ef_f4.Size = UDim2.new(0, 498, 0, 30)
-ef_f4.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ef_f4.Font = Enum.Font.Ubuntu
-ef_f4.Text = "   Esp Flower"
-ef_f4.TextColor3 = Color3.fromRGB(255, 255, 255)
-ef_f4.TextSize = 14.000
-ef_f4.TextWrapped = true
-ef_f4.TextXAlignment = Enum.TextXAlignment.Left
-
-ef_b4.Name = "ef_b4"
-ef_b4.Parent = ef_f4
-ef_b4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-ef_b4.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-ef_b4.Size = UDim2.new(0, 20, 0, 20)
-ef_b4.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ef_b4.Font = Enum.Font.SourceSans
-ef_b4.Text = ""
-ef_b4.TextColor3 = Color3.fromRGB(250, 250, 250)
-ef_b4.TextSize = 30.000
+make_together(ef_f4, ef_b4 , b_page5, "   Esp Flower",  UDim2.new(0, 0, 0.3100000000, 0))
 ef_b4.MouseButton1Down:connect(function()
 --on off 
 if ef_b4.Text == "" then --on
@@ -3627,28 +2638,7 @@ _G.ef_b4 = false
 end
 end)
 
-ef_f5.Parent = b_page5
-ef_f5.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-ef_f5.Position = UDim2.new(0, 0, 0.3800000000, 0)
-ef_f5.Size = UDim2.new(0, 498, 0, 30)
-ef_f5.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ef_f5.Font = Enum.Font.Ubuntu
-ef_f5.Text = "   Esp Island"
-ef_f5.TextColor3 = Color3.fromRGB(255, 255, 255)
-ef_f5.TextSize = 14.000
-ef_f5.TextWrapped = true
-ef_f5.TextXAlignment = Enum.TextXAlignment.Left
-
-ef_b5.Name = "ef_b5"
-ef_b5.Parent = ef_f5
-ef_b5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-ef_b5.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-ef_b5.Size = UDim2.new(0, 20, 0, 20)
-ef_b5.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ef_b5.Font = Enum.Font.SourceSans
-ef_b5.Text = ""
-ef_b5.TextColor3 = Color3.fromRGB(250, 250, 250)
-ef_b5.TextSize = 30.000
+make_together(ef_f5, ef_b5 , b_page5, "   Esp Island",  UDim2.new(0, 0, 0.3800000000, 0))
 ef_b5.MouseButton1Down:connect(function()
 --on off 
 if ef_b5.Text == "" then --on
@@ -3702,39 +2692,9 @@ spawn(function()
     end
 end)
 
-ef_t2.Parent = b_page5
-ef_t2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-ef_t2.Position = UDim2.new(0, 0, 0.4500000000, 0)
-ef_t2.Size = UDim2.new(0, 498, 0, 30)
-ef_t2.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ef_t2.Font = Enum.Font.Ubuntu
-ef_t2.Text = "Fruit"
-ef_t2.TextColor3 = Color3.fromRGB(255, 255, 255)
-ef_t2.TextSize = 14.000
-ef_t2.TextWrapped = true
+make_textlabel(ef_t2, b_page5, "Fruit", UDim2.new(0, 0, 0.4500000000, 0))
 
-ef_f6.Parent = b_page5
-ef_f6.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-ef_f6.Position = UDim2.new(0, 0, 0.5200000000, 0)
-ef_f6.Size = UDim2.new(0, 498, 0, 30)
-ef_f6.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ef_f6.Font = Enum.Font.Ubuntu
-ef_f6.Text = "   Auto Teleport Fruit"
-ef_f6.TextColor3 = Color3.fromRGB(255, 255, 255)
-ef_f6.TextSize = 14.000
-ef_f6.TextWrapped = true
-ef_f6.TextXAlignment = Enum.TextXAlignment.Left
-
-ef_b6.Name = "ef_b6"
-ef_b6.Parent = ef_f6
-ef_b6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-ef_b6.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-ef_b6.Size = UDim2.new(0, 20, 0, 20)
-ef_b6.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ef_b6.Font = Enum.Font.SourceSans
-ef_b6.Text = ""
-ef_b6.TextColor3 = Color3.fromRGB(250, 250, 250)
-ef_b6.TextSize = 30.000
+make_together(ef_f6, ef_b6 , b_page5, "   Auto Teleport Fruit",  UDim2.new(0, 0, 0.5200000000, 0))
 ef_b6.MouseButton1Down:connect(function()
 --on off 
 if ef_b6.Text == "" then --on
@@ -3776,28 +2736,7 @@ spawn(function()
 end end                                                                       
              end end) end end)               
              
-ef_f8.Parent = b_page5
-ef_f8.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-ef_f8.Position = UDim2.new(0, 0, 0.5900000000, 0)
-ef_f8.Size = UDim2.new(0, 498, 0, 30)
-ef_f8.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ef_f8.Font = Enum.Font.Ubuntu
-ef_f8.Text = "   Auto Teleport Fruit Bypass - Store"
-ef_f8.TextColor3 = Color3.fromRGB(255, 255, 255)
-ef_f8.TextSize = 14.000
-ef_f8.TextWrapped = true
-ef_f8.TextXAlignment = Enum.TextXAlignment.Left
-
-ef_b8.Name = "ef_b8"
-ef_b8.Parent = ef_f8
-ef_b8.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-ef_b8.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-ef_b8.Size = UDim2.new(0, 20, 0, 20)
-ef_b8.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ef_b8.Font = Enum.Font.SourceSans
-ef_b8.Text = ""
-ef_b8.TextColor3 = Color3.fromRGB(250, 250, 250)
-ef_b8.TextSize = 30.000
+make_together(ef_f8, ef_b8 , b_page5, "   Auto Teleport Fruit Bypass - Store",  UDim2.new(0, 0, 0.5900000000, 0))
 ef_b8.MouseButton1Down:connect(function()
 --on off 
 if ef_b8.Text == "" then --on
@@ -4006,29 +2945,7 @@ if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Bomb Fruit")
                 end 
 end end) end end)
 
-
-ef_f7.Parent = b_page5
-ef_f7.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-ef_f7.Position = UDim2.new(0, 0, 0.6600000000, 0)
-ef_f7.Size = UDim2.new(0, 498, 0, 30)
-ef_f7.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ef_f7.Font = Enum.Font.Ubuntu
-ef_f7.Text = "   Auto Store Fruit"
-ef_f7.TextColor3 = Color3.fromRGB(255, 255, 255)
-ef_f7.TextSize = 14.000
-ef_f7.TextWrapped = true
-ef_f7.TextXAlignment = Enum.TextXAlignment.Left
-
-ef_b7.Name = "ef_b7"
-ef_b7.Parent = ef_f7
-ef_b7.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-ef_b7.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-ef_b7.Size = UDim2.new(0, 20, 0, 20)
-ef_b7.BorderColor3 = Color3.fromRGB(250, 250, 250)
-ef_b7.Font = Enum.Font.SourceSans
-ef_b7.Text = ""
-ef_b7.TextColor3 = Color3.fromRGB(250, 250, 250)
-ef_b7.TextSize = 30.000
+make_together(ef_f7, ef_b7 , b_page5, "   Auto Store Fruit",  UDim2.new(0, 0, 0.6600000000, 0))
 ef_b7.MouseButton1Down:connect(function()
 --on off 
 if ef_b7.Text == "" then --on
@@ -4194,290 +3111,84 @@ function code(x)
 game:GetService("ReplicatedStorage").Remotes.Redeem:InvokeServer(x)
 end
 
-shop_t1.Parent = b_page4
-shop_t1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-shop_t1.Position = UDim2.new(0, 0, 0.0300000000, 0)
-shop_t1.Size = UDim2.new(0, 498, 0, 30)
-shop_t1.BorderColor3 = Color3.fromRGB(250, 250, 250)
-shop_t1.Font = Enum.Font.Ubuntu
-shop_t1.Text = "Shop"
-shop_t1.TextColor3 = Color3.fromRGB(255, 255, 255)
-shop_t1.TextSize = 14.000
-shop_t1.TextWrapped = true
+make_textlabel(shop_t1, b_page4, "Shop", UDim2.new(0, 0, 0.0300000000, 0))
 
-shop_f1.Parent = b_page4
-shop_f1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-shop_f1.Position = UDim2.new(0, 0, 0.1000000000, 0)
-shop_f1.Size = UDim2.new(0, 498, 0, 30)
-shop_f1.BorderColor3 = Color3.fromRGB(250, 250, 250)
-shop_f1.Font = Enum.Font.Ubuntu
-shop_f1.Text = "   "
-shop_f1.TextColor3 = Color3.fromRGB(255, 255, 255)
-shop_f1.TextSize = 14.000
-shop_f1.TextWrapped = true
-shop_f1.TextXAlignment = Enum.TextXAlignment.Left
-
-shop_slec.Name = "shop_slec"
-shop_slec.Parent = shop_f1
-shop_slec.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-shop_slec.Size = UDim2.new(0, 120, 0, 30)
-shop_slec.BorderColor3 = Color3.fromRGB(250, 250, 250)
-shop_slec.Font = Enum.Font.SourceSans
-shop_slec.Text = "Mele : Select Buy"
-shop_slec.TextColor3 = Color3.fromRGB(250, 250, 250)
-shop_slec.TextSize = 18.000
+make_select2(shop_f1,shop_slec,shop_b1, b_page4, "Mele : Select", UDim2.new(0, 0, 0.1000000, 0))
 shop_slec.MouseButton1Down:connect(function()
 shop_melebar.Visible = true
 end)
-
-shop_b1.Name = "shop_b1"
-shop_b1.Parent = shop_f1
-shop_b1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-shop_b1.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-shop_b1.Size = UDim2.new(0, 20, 0, 20)
-shop_b1.BorderColor3 = Color3.fromRGB(250, 250, 250)
-shop_b1.Font = Enum.Font.SourceSans
-shop_b1.Text = ""
-shop_b1.TextColor3 = Color3.fromRGB(250, 250, 250)
-shop_b1.TextSize = 30.000
 shop_b1.MouseButton1Down:connect(function()
 --on off 
 if shop_b1.Text == "" then --on
 shop_b1.Text = "X"
 _G.shop_b1 = true
-
-game:GetService('RunService').RenderStepped:connect(function()
-if _G.shop_b1 then --script
-if shop_slec.Text == "Black Leg" then
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyBlackLeg")
-end
-
-if shop_slec.Text == "Electro" then
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyElectro")
-end
-
-if shop_slec.Text == "Fishman Karate" then
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyFishmanKarate")
-end
-
-if shop_slec.Text == "Dragon Claw" then
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","DragonClaw","1")
-                            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","DragonClaw","2")
-end
-
-if shop_slec.Text == "Death Step" then
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDeathStep")
-end
-
-if shop_slec.Text == "Electric Claw" then
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyElectricClaw")
-end
-
-if shop_slec.Text == "Sharkman Karate" then
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySharkmanKarate")
-end
-
-if shop_slec.Text == "Dragon Talon" then
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDragonTalon")
-end
-
-if shop_slec.Text == "Super Human" then
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySuperhuman")
-end
-
-if shop_slec.Text == "God Human" then
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyGodhuman")
-end
-
-end
-end)
 elseif shop_b1.Text == "X" then --off
 shop_b1.Text = ""
 _G.shop_b1 = false
 end
 end)
 
-function melebar()
-shop_melebar.Name = "shop_melebar"
-shop_melebar.Parent = b_page4
-shop_melebar.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-shop_melebar.Position = UDim2.new(0, 0, 0.0850000000, 0)
-shop_melebar.Size = UDim2.new(0, 120, 0, 140)
-shop_melebar.BorderColor3 = Color3.fromRGB(250, 250, 250)
-shop_melebar.Visible = false
-
-shop_mele1.Name = "shop_mele1"
-shop_mele1.Parent = shop_melebar
-shop_mele1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-shop_mele1.Size = UDim2.new(0, 120, 0, 20)
-shop_mele1.BorderColor3 = Color3.fromRGB(250, 250, 250)
-shop_mele1.Font = Enum.Font.SourceSans
-shop_mele1.Text = "Black Leg"
-shop_mele1.TextColor3 = Color3.fromRGB(250, 250, 250)
-shop_mele1.TextSize = 15.000
-shop_mele1.MouseButton1Down:connect(function()
-shop_slec.Text = "Black Leg"
-shop_melebar.Visible = false
-end)
-
-shop_mele2.Name = "shop_mele2"
-shop_mele2.Parent = shop_melebar
-shop_mele2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-shop_mele2.Size = UDim2.new(0, 120, 0, 20)
-shop_mele2.BorderColor3 = Color3.fromRGB(250, 250, 250)
-shop_mele2.Font = Enum.Font.SourceSans
-shop_mele2.Position = UDim2.new(0, 0, 0.0500000000, 0)
-shop_mele2.Text = "Electro"
-shop_mele2.TextColor3 = Color3.fromRGB(250, 250, 250)
-shop_mele2.TextSize = 15.000
-shop_mele2.MouseButton1Down:connect(function()
-shop_slec.Text = "Electro"
-shop_melebar.Visible = false
-end)
-
-shop_mele3.Name = "shop_mele3"
-shop_mele3.Parent = shop_melebar
-shop_mele3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-shop_mele3.Size = UDim2.new(0, 120, 0, 20)
-shop_mele3.BorderColor3 = Color3.fromRGB(250, 250, 250)
-shop_mele3.Font = Enum.Font.SourceSans
-shop_mele3.Position = UDim2.new(0, 0, 0.1000000000, 0)
-shop_mele3.Text = "Fishman Karate"
-shop_mele3.TextColor3 = Color3.fromRGB(250, 250, 250)
-shop_mele3.TextSize = 15.000
-shop_mele3.MouseButton1Down:connect(function()
-shop_slec.Text = "Fishman Karate"
-shop_melebar.Visible = false
-end)
-
-shop_mele4.Name = "shop_mele4"
-shop_mele4.Parent = shop_melebar
-shop_mele4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-shop_mele4.Size = UDim2.new(0, 120, 0, 20)
-shop_mele4.BorderColor3 = Color3.fromRGB(250, 250, 250)
-shop_mele4.Font = Enum.Font.SourceSans
-shop_mele4.Position = UDim2.new(0, 0, 0.1500000000, 0)
-shop_mele4.Text = "Dragon Claw"
-shop_mele4.TextColor3 = Color3.fromRGB(250, 250, 250)
-shop_mele4.TextSize = 15.000
-shop_mele4.MouseButton1Down:connect(function()
-shop_slec.Text = "Dragon Claw"
-shop_melebar.Visible = false
-end)
-
-shop_mele5.Name = "shop_mele5"
-shop_mele5.Parent = shop_melebar
-shop_mele5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-shop_mele5.Size = UDim2.new(0, 120, 0, 20)
-shop_mele5.BorderColor3 = Color3.fromRGB(250, 250, 250)
-shop_mele5.Font = Enum.Font.SourceSans
-shop_mele5.Position = UDim2.new(0, 0, 0.2000000000, 0)
-shop_mele5.Text = "Death Step"
-shop_mele5.TextColor3 = Color3.fromRGB(250, 250, 250)
-shop_mele5.TextSize = 15.000
-shop_mele5.MouseButton1Down:connect(function()
-shop_slec.Text = "Death Step"
-shop_melebar.Visible = false
-end)
-
-shop_mele6.Name = "shop_mele6"
-shop_mele6.Parent = shop_melebar
-shop_mele6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-shop_mele6.Size = UDim2.new(0, 120, 0, 20)
-shop_mele6.BorderColor3 = Color3.fromRGB(250, 250, 250)
-shop_mele6.Font = Enum.Font.SourceSans
-shop_mele6.Position = UDim2.new(0, 0, 0.2500000000, 0)
-shop_mele6.Text = "Electric Claw"
-shop_mele6.TextColor3 = Color3.fromRGB(250, 250, 250)
-shop_mele6.TextSize = 15.000
-shop_mele6.MouseButton1Down:connect(function()
-shop_slec.Text = "Electric Claw"
-shop_melebar.Visible = false
-end)
-
-shop_mele7.Name = "shop_mele7"
-shop_mele7.Parent = shop_melebar
-shop_mele7.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-shop_mele7.Size = UDim2.new(0, 120, 0, 20)
-shop_mele7.BorderColor3 = Color3.fromRGB(250, 250, 250)
-shop_mele7.Font = Enum.Font.SourceSans
-shop_mele7.Position = UDim2.new(0, 0, 0.3000000000, 0)
-shop_mele7.Text = "Sharkman Karate"
-shop_mele7.TextColor3 = Color3.fromRGB(250, 250, 250)
-shop_mele7.TextSize = 15.000
-shop_mele7.MouseButton1Down:connect(function()
-shop_slec.Text = "Sharkman Karate"
-shop_melebar.Visible = false
-end)
-
-shop_mele8.Name = "shop_mele8"
-shop_mele8.Parent = shop_melebar
-shop_mele8.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-shop_mele8.Size = UDim2.new(0, 120, 0, 20)
-shop_mele8.BorderColor3 = Color3.fromRGB(250, 250, 250)
-shop_mele8.Font = Enum.Font.SourceSans
-shop_mele8.Position = UDim2.new(0, 0, 0.3500000000, 0)
-shop_mele8.Text = "Dragon Talon"
-shop_mele8.TextColor3 = Color3.fromRGB(250, 250, 250)
-shop_mele8.TextSize = 15.000
-shop_mele8.MouseButton1Down:connect(function()
-shop_slec.Text = "Dragon Talon"
-shop_melebar.Visible = false
-end)
-
-shop_mele9.Name = "shop_mele9"
-shop_mele9.Parent = shop_melebar
-shop_mele9.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-shop_mele9.Size = UDim2.new(0, 120, 0, 20)
-shop_mele9.BorderColor3 = Color3.fromRGB(250, 250, 250)
-shop_mele9.Font = Enum.Font.SourceSans
-shop_mele9.Position = UDim2.new(0, 0, 0.4000000000, 0)
-shop_mele9.Text = "Super Human"
-shop_mele9.TextColor3 = Color3.fromRGB(250, 250, 250)
-shop_mele9.TextSize = 15.000
-shop_mele9.MouseButton1Down:connect(function()
-shop_slec.Text = "Super Human"
-shop_melebar.Visible = false
-end)
-
-shop_mele10.Name = "shop_mele10"
-shop_mele10.Parent = shop_melebar
-shop_mele10.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-shop_mele10.Size = UDim2.new(0, 120, 0, 20)
-shop_mele10.BorderColor3 = Color3.fromRGB(250, 250, 250)
-shop_mele10.Font = Enum.Font.SourceSans
-shop_mele10.Position = UDim2.new(0, 0, 0.4500000000, 0)
-shop_mele10.Text = "God Human"
-shop_mele10.TextColor3 = Color3.fromRGB(250, 250, 250)
-shop_mele10.TextSize = 15.000
-shop_mele10.MouseButton1Down:connect(function()
-shop_slec.Text = "God Human"
-shop_melebar.Visible = false
-end)
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.shop_b1 then --script
+if shop_slec.Text == "Mele : Black Leg" then
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyBlackLeg")
 end
 
-shop_f2.Parent = b_page4
-shop_f2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-shop_f2.Position = UDim2.new(0, 0, 0.1700000000, 0)
-shop_f2.Size = UDim2.new(0, 498, 0, 30)
-shop_f2.BorderColor3 = Color3.fromRGB(250, 250, 250)
-shop_f2.Font = Enum.Font.Ubuntu
-shop_f2.Text = "   Auto Buy All Gun - Sword"
-shop_f2.TextColor3 = Color3.fromRGB(255, 255, 255)
-shop_f2.TextSize = 14.000
-shop_f2.TextWrapped = true
-shop_f2.TextXAlignment = Enum.TextXAlignment.Left
+if shop_slec.Text == "Mele : Electro" then
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyElectro")
+end
 
-shop_b2.Name = "shop_b2"
-shop_b2.Parent = shop_f2
-shop_b2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-shop_b2.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-shop_b2.Size = UDim2.new(0, 20, 0, 20)
-shop_b2.BorderColor3 = Color3.fromRGB(250, 250, 250)
-shop_b2.Font = Enum.Font.SourceSans
-shop_b2.Text = ""
-shop_b2.TextColor3 = Color3.fromRGB(250, 250, 250)
-shop_b2.TextSize = 30.000
+if shop_slec.Text == "Mele : Fishman Karate" then
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyFishmanKarate")
+end
+
+if shop_slec.Text == "Mele: Dragon Claw" then
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","DragonClaw","1")
+                            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","DragonClaw","2")
+end
+
+if shop_slec.Text == "Mele : Death Step" then
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDeathStep")
+end
+
+if shop_slec.Text == "Mele : Electric Claw" then
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyElectricClaw")
+end
+
+if shop_slec.Text == "Mele : Sharkman Karate" then
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySharkmanKarate")
+end
+
+if shop_slec.Text == "Mele : Dragon Talon" then
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDragonTalon")
+end
+
+if shop_slec.Text == "Mele : Super Human" then
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySuperhuman")
+end
+
+if shop_slec.Text == "Mele : God Human" then
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyGodhuman")
+end
+
+end
+end)
+
+function melebar()
+make_selectscrollingframe(shop_melebar, b_page4, UDim2.new(0, 0, 0.1700000, 0))
+make_selectbutton(s_mf1, s_mb1,shop_slec, shop_melebar, "Black Leg", "Mele : Black Leg", UDim2.new(0, 0, 0.0000000, 0))
+make_selectbutton(s_mf2, s_mb2, shop_slec,shop_melebar, "Electro", "Mele : Electro", UDim2.new(0, 0, 0.0500000, 0))
+make_selectbutton(s_mf3, s_mb3,shop_slec, shop_melebar, "Fishman Karate", "Mele : Fishman Karate", UDim2.new(0, 0, 0.1000000, 0))
+make_selectbutton(s_mf4, s_mb4, shop_slec,shop_melebar, "Dragon Claw", "Mele : Dragon Claw", UDim2.new(0, 0, 0.1500000, 0))
+make_selectbutton(s_mf5, s_mb5, shop_slec,shop_melebar, "Death Step", "Mele : Death Steo", UDim2.new(0, 0, 0.2000000, 0))
+make_selectbutton(s_mf6, s_mb6, shop_slec,shop_melebar, "Electric Claw", "Mele : Electric Claw", UDim2.new(0, 0, 0.2500000, 0))
+make_selectbutton(s_mf7, s_mb7,shop_slec, shop_melebar, "Sharkman Karate", "Mele : Sharkman Karate", UDim2.new(0, 0, 0.3000000, 0))
+make_selectbutton(s_mf8, s_mb8, shop_slec,shop_melebar, "Dragon Talon", "Mele : Dragon Talon", UDim2.new(0, 0, 0.3500000, 0))
+make_selectbutton(s_mf9, s_mb9,shop_slec, shop_melebar, "Super Human", "Mele : Super Human", UDim2.new(0, 0, 0.4000000, 0))
+make_selectbutton(s_mf10, s_mb10, shop_slec,shop_melebar, "God Human", "Mele : God Human", UDim2.new(0, 0, 0.4500000, 0))
+end
+
+make_together(shop_f2, shop_b2 , b_page4, "   Auto Buy All Gun - Sword",  UDim2.new(0, 0, 0.1700000000, 0))
 shop_b2.MouseButton1Down:connect(function()
 --on off 
 if shop_b2.Text == "" then --on
@@ -4511,28 +3222,7 @@ _G.shop_b2 = false
 end
 end)
 
-shop_f3.Parent = b_page4
-shop_f3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-shop_f3.Position = UDim2.new(0, 0, 0.2400000000, 0)
-shop_f3.Size = UDim2.new(0, 498, 0, 30)
-shop_f3.BorderColor3 = Color3.fromRGB(250, 250, 250)
-shop_f3.Font = Enum.Font.Ubuntu
-shop_f3.Text = "   Auto Random"
-shop_f3.TextColor3 = Color3.fromRGB(255, 255, 255)
-shop_f3.TextSize = 14.000
-shop_f3.TextWrapped = true
-shop_f3.TextXAlignment = Enum.TextXAlignment.Left
-
-shop_b3.Name = "shop_b3"
-shop_b3.Parent = shop_f3
-shop_b3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-shop_b3.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-shop_b3.Size = UDim2.new(0, 20, 0, 20)
-shop_b3.BorderColor3 = Color3.fromRGB(250, 250, 250)
-shop_b3.Font = Enum.Font.SourceSans
-shop_b3.Text = ""
-shop_b3.TextColor3 = Color3.fromRGB(250, 250, 250)
-shop_b3.TextSize = 30.000
+make_together(shop_f3, shop_b3 , b_page4, "   Auto Random",  UDim2.new(0, 0, 0.2400000000, 0))
 shop_b3.MouseButton1Down:connect(function()
 --on off 
 if shop_b3.Text == "" then --on
@@ -4550,28 +3240,7 @@ _G.shop_b3 = false
 end
 end)
 
-shop_f4.Parent = b_page4
-shop_f4.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-shop_f4.Position = UDim2.new(0, 0, 0.3100000000, 0)
-shop_f4.Size = UDim2.new(0, 498, 0, 30)
-shop_f4.BorderColor3 = Color3.fromRGB(250, 250, 250)
-shop_f4.Font = Enum.Font.Ubuntu
-shop_f4.Text = "   Auto Random Bone"
-shop_f4.TextColor3 = Color3.fromRGB(255, 255, 255)
-shop_f4.TextSize = 14.000
-shop_f4.TextWrapped = true
-shop_f4.TextXAlignment = Enum.TextXAlignment.Left
-
-shop_b4.Name = "shop_b4"
-shop_b4.Parent = shop_f4
-shop_b4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-shop_b4.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-shop_b4.Size = UDim2.new(0, 20, 0, 20)
-shop_b4.BorderColor3 = Color3.fromRGB(250, 250, 250)
-shop_b4.Font = Enum.Font.SourceSans
-shop_b4.Text = ""
-shop_b4.TextColor3 = Color3.fromRGB(250, 250, 250)
-shop_b4.TextSize = 30.000
+make_together(shop_f4, shop_b4 , b_page4, "   Auto Random Bone",  UDim2.new(0, 0, 0.3100000000, 0))
 shop_b4.MouseButton1Down:connect(function()
 --on off 
 if shop_b4.Text == "" then --on
@@ -4595,71 +3264,12 @@ _G.shop_b4 = false
 end
 end)
 
-shop_f5.Parent = b_page4
-shop_f5.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-shop_f5.Position = UDim2.new(0, 0, 0.3800000000, 0)
-shop_f5.Size = UDim2.new(0, 498, 0, 30)
-shop_f5.BorderColor3 = Color3.fromRGB(250, 250, 250)
-shop_f5.Font = Enum.Font.Ubuntu
-shop_f5.Text = "   Chưa Rõ"
-shop_f5.TextColor3 = Color3.fromRGB(255, 255, 255)
-shop_f5.TextSize = 14.000
-shop_f5.TextWrapped = true
-shop_f5.TextXAlignment = Enum.TextXAlignment.Left
-
-shop_b5.Name = "shop_b5"
-shop_b5.Parent = shop_f5
-shop_b5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-shop_b5.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-shop_b5.Size = UDim2.new(0, 20, 0, 20)
-shop_b5.BorderColor3 = Color3.fromRGB(250, 250, 250)
-shop_b5.Font = Enum.Font.SourceSans
-shop_b5.Text = ""
-shop_b5.TextColor3 = Color3.fromRGB(250, 250, 250)
-shop_b5.TextSize = 30.000
+make_together(shop_f5, shop_b5 , b_page4, "   Auto Buy Haki Color",  UDim2.new(0, 0, 0.3800000000, 0))
 shop_b5.MouseButton1Down:connect(function()
 --on off 
 if shop_b5.Text == "" then --on
 shop_b5.Text = "X"
 _G.shop_b5 = true
-
-game:GetService('RunService').RenderStepped:connect(function()
-if _G.shop_b5 then --script
-end
-end)
-elseif shop_b5.Text == "X" then --off
-shop_b5.Text = ""
-_G.shop_b5 = false
-end
-end)
-
-shop_f6.Parent = b_page4
-shop_f6.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-shop_f6.Position = UDim2.new(0, 0, 0.4500000000, 0)
-shop_f6.Size = UDim2.new(0, 498, 0, 30)
-shop_f6.BorderColor3 = Color3.fromRGB(250, 250, 250)
-shop_f6.Font = Enum.Font.Ubuntu
-shop_f6.Text = "   Auto Buy Haki Color"
-shop_f6.TextColor3 = Color3.fromRGB(255, 255, 255)
-shop_f6.TextSize = 14.000
-shop_f6.TextWrapped = true
-shop_f6.TextXAlignment = Enum.TextXAlignment.Left
-
-shop_b6.Name = "shop_b6"
-shop_b6.Parent = shop_f6
-shop_b6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-shop_b6.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-shop_b6.Size = UDim2.new(0, 20, 0, 20)
-shop_b6.BorderColor3 = Color3.fromRGB(250, 250, 250)
-shop_b6.Font = Enum.Font.SourceSans
-shop_b6.Text = ""
-shop_b6.TextColor3 = Color3.fromRGB(250, 250, 250)
-shop_b6.TextSize = 30.000
-shop_b6.MouseButton1Down:connect(function()
---on off 
-if shop_b6.Text == "" then --on
-shop_b6.Text = "X"
-_G.shop_b6 = true
 
 game:GetService('RunService').RenderStepped:connect(function()
 if _G.shop_b6 then --script
@@ -4676,82 +3286,39 @@ local args = {
            
 end
 end)
-elseif shop_b6.Text == "X" then --off
-shop_b6.Text = ""
-_G.shop_b6 = false
+elseif shop_b5.Text == "X" then --off
+shop_b5.Text = ""
+_G.shop_b5 = false
 end
 end)
 
-shop_f7.Parent = b_page4
-shop_f7.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-shop_f7.Position = UDim2.new(0, 0, 0.5200000000, 0)
-shop_f7.Size = UDim2.new(0, 498, 0, 30)
-shop_f7.BorderColor3 = Color3.fromRGB(250, 250, 250)
-shop_f7.Font = Enum.Font.Ubuntu
-shop_f7.Text = "   Auto Buy : Air Jump, Aura, Flash Step, Observation"
-shop_f7.TextColor3 = Color3.fromRGB(255, 255, 255)
-shop_f7.TextSize = 14.000
-shop_f7.TextWrapped = true
-shop_f7.TextXAlignment = Enum.TextXAlignment.Left
-
-shop_b7.Name = "shop_b7"
-shop_b7.Parent = shop_f7
-shop_b7.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-shop_b7.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-shop_b7.Size = UDim2.new(0, 20, 0, 20)
-shop_b7.BorderColor3 = Color3.fromRGB(250, 250, 250)
-shop_b7.Font = Enum.Font.SourceSans
-shop_b7.Text = ""
-shop_b7.TextColor3 = Color3.fromRGB(250, 250, 250)
-shop_b7.TextSize = 30.000
-shop_b7.MouseButton1Down:connect(function()
+make_together(shop_f6, shop_b6 , b_page4, "   Auto Buy : Air Jump, Aura, Flash Step, Observation",  UDim2.new(0, 0, 0.4500000000, 0))
+shop_b6.MouseButton1Down:connect(function()
 --on off 
-if shop_b7.Text == "" then --on
-shop_b7.Text = "X"
-_G.shop_b7 = true
+if shop_b6.Text == "" then --on
+shop_b6.Text = "X"
+_G.shop_b6 = true
 
 game:GetService('RunService').RenderStepped:connect(function()
-if _G.shop_b7 then --script
+if _G.shop_b6 then --script
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("KenTalk","Buy")
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyHaki","Buso")
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyHaki","Geppo")
     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyHaki","Soru")
 end
 end)
-elseif shop_b7.Text == "X" then --off
-shop_b7.Text = ""
-_G.shop_b7 = false
+elseif shop_b6.Text == "X" then --off
+shop_b6.Text = ""
+_G.shop_b6 = false
 end
 end)
-
 
 
 melebar()
 
 -- // item
 
-mi_fc.Parent = b_page6
-mi_fc.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-mi_fc.Position = UDim2.new(0, 0, 0.0300000000, 0)
-mi_fc.Size = UDim2.new(0, 498, 0, 30)
-mi_fc.BorderColor3 = Color3.fromRGB(250, 250, 250)
-mi_fc.Font = Enum.Font.Ubuntu
-mi_fc.Text = "   Auto Key râu đen - cup"
-mi_fc.TextColor3 = Color3.fromRGB(255, 255, 255)
-mi_fc.TextSize = 14.000
-mi_fc.TextWrapped = true
-mi_fc.TextXAlignment = Enum.TextXAlignment.Left
-
-mi_bc.Name = "mi_bc"
-mi_bc.Parent = mi_fc
-mi_bc.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-mi_bc.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-mi_bc.Size = UDim2.new(0, 20, 0, 20)
-mi_bc.BorderColor3 = Color3.fromRGB(250, 250, 250)
-mi_bc.Font = Enum.Font.SourceSans
-mi_bc.Text = ""
-mi_bc.TextColor3 = Color3.fromRGB(250, 250, 250)
-mi_bc.TextSize = 30.000
+make_together(mi_fc, mi_bc , b_page6, "Auto key - cup",  UDim2.new(0, 0, 0.03, 0)) -- together
 mi_bc.MouseButton1Down:connect(function()
 --on off 
 if mi_bc.Text == "" then --on
@@ -4776,38 +3343,10 @@ end
 if game.PlaceId == 4442272183 then -- sea2
 
 game:GetService('RunService').RenderStepped:connect(function()       
-     if _G.mi_bc then
+     if _G.mi_bc then    
     if game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Fist of Darkness") then 
-    _G.mi_bc = false
+    _G.mi_bc = false   
     mi_bc.Text = ""
-    
-                local HttpService = game:GetService("HttpService")
-                    local Data =
-                        {                    
-                            ["embeds"]= {
-                                {            
-                                    ["title"]= "Thông Báo";                                                                 
-                                    ["color"]= tonumber(0x7269da);
-                                    
-                                    ["fields"]= {                    
-                                    {
-                                            ["name"]= "Name Player Have Fist of Darkness",
-                                            ["value"]= "```Name : "..game.Players.LocalPlayer.Name.." | "..game.Players.LocalPlayer.DisplayName.."```";
-                                            ["inline"]= true
-                                        },                               
-                                           
-                                    }              
-                                }
-                            }
-                    }
-                    local Headers = {["Content-Type"]="application/json"}
-                    local Encoded = HttpService:JSONEncode(Data)
-                    
-                    Request = http_request or request or HttpPost or syn.request
-                    local Final1 = {Url = _G.keycup , Body = Encoded, Method = "POST", Headers = Headers}
-                   
-                    Request(Final1)
-                                 
     elseif not game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Fist of Darkness") then 
       if game:GetService("Workspace"):FindFirstChild("Chest1") then
      TPchest( game:GetService("Workspace"):FindFirstChild("Chest1").CFrame)
@@ -4839,34 +3378,7 @@ game:GetService('RunService').RenderStepped:connect(function()
     if game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("God's Chalice") then 
     _G.mi_bc = false
     mi_bc.Text = ""
-    
-                local HttpService = game:GetService("HttpService")
-                    local Data =
-                        {                    
-                            ["embeds"]= {
-                                {            
-                                    ["title"]= "Thông Báo";                                                                 
-                                    ["color"]= tonumber(0x7269da);
-                                    
-                                    ["fields"]= {                    
-                                    {
-                                            ["name"]= "Name Player Have God's Chalice",
-                                            ["value"]= "```Name : "..game.Players.LocalPlayer.Name.." | "..game.Players.LocalPlayer.DisplayName.."```";
-                                            ["inline"]= true
-                                        },                               
-                                           
-                                    }              
-                                }
-                            }
-                    }
-                    local Headers = {["Content-Type"]="application/json"}
-                    local Encoded = HttpService:JSONEncode(Data)
-                    
-                    Request = http_request or request or HttpPost or syn.request
-                    local Final1 = {Url = _G.keycup , Body = Encoded, Method = "POST", Headers = Headers}
-                   
-                    Request(Final1)
-                                 
+                 
     elseif not game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("God's Chalice") then 
       if game:GetService("Workspace"):FindFirstChild("Chest1") then
      TPchest( game:GetService("Workspace"):FindFirstChild("Chest1").CFrame)
@@ -5766,52 +4278,14 @@ end end)
 end -- sea 3
 
 --// tp
-t_t1.Parent = b_page8
-t_t1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-t_t1.Position = UDim2.new(0, 0, 0.0300000000, 0)
-t_t1.Size = UDim2.new(0, 498, 0, 30)
-t_t1.BorderColor3 = Color3.fromRGB(250, 250, 250)
-t_t1.Font = Enum.Font.Ubuntu
-t_t1.Text = "Teleport Island"
-t_t1.TextColor3 = Color3.fromRGB(255, 255, 255)
-t_t1.TextSize = 14.000
-t_t1.TextWrapped = true
+make_textlabel(t_t1, b_page8, "Teleport Island", UDim2.new(0, 0, 0.0300000000, 0))
 
-t_f1.Parent = b_page8
-t_f1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-t_f1.Position = UDim2.new(0, 0, 0.1000000000, 0)
-t_f1.Size = UDim2.new(0, 498, 0, 30)
-t_f1.BorderColor3 = Color3.fromRGB(250, 250, 250)
-t_f1.Font = Enum.Font.Ubuntu
-t_f1.Text = "  "
-t_f1.TextColor3 = Color3.fromRGB(255, 255, 255)
-t_f1.TextSize = 14.000
-t_f1.TextWrapped = true
-t_f1.TextXAlignment = Enum.TextXAlignment.Left
 
-t_b1.Name = "t_b1"
-t_b1.Parent = t_f1
-t_b1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-t_b1.Size = UDim2.new(0, 160, 0, 30)
-t_b1.BorderColor3 = Color3.fromRGB(250, 250, 250)
-t_b1.Font = Enum.Font.SourceSans
-t_b1.Text = "Island : Select"
-t_b1.TextColor3 = Color3.fromRGB(250, 250, 250)
-t_b1.TextSize = 18.000
+make_select2(t_f1,t_b1, t_itp , b_page8, "Island : Select", UDim2.new(0, 0, 0.1000000, 0))
 t_b1.MouseButton1Down:connect(function()
 t_ibar.Visible = true
 end)
 
-t_itp.Name = "t_itp"
-t_itp.Parent = t_f1
-t_itp.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-t_itp.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-t_itp.Size = UDim2.new(0, 20, 0, 20)
-t_itp.BorderColor3 = Color3.fromRGB(250, 250, 250)
-t_itp.Font = Enum.Font.SourceSans
-t_itp.Text = ""
-t_itp.TextColor3 = Color3.fromRGB(250, 250, 250)
-t_itp.TextSize = 30.000
 t_itp.MouseButton1Down:connect(function()
 --on off 
 if t_itp.Text == "" then --on
@@ -5822,7 +4296,6 @@ _G.t_itp = false
 t_itp.Text = ""
 stoptp()
 end end)
-
 game:GetService('RunService').RenderStepped:connect(function()
 if _G.t_itp then --script
 -- // sea 1
@@ -5916,386 +4389,66 @@ end end)
 
 
 function ibar()
-
-t_ibar.Name = "t_ibar"
-t_ibar.Parent = b_page8
-t_ibar.Active = true
-t_ibar.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-t_ibar.BorderColor3 = Color3.fromRGB(250, 250, 250)
-t_ibar.Position = UDim2.new(0, 0, 0.1700000000, 0)
-t_ibar.Size = UDim2.new(0, 150, 0, 140)
-t_ibar.BorderSizePixel = 1
-t_ibar.Visible = false
-
-t_i1.Name = "t_i1" 
-t_i1.Parent = t_ibar
-t_i1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-t_i1.Position = UDim2.new(0.00000000, 0, 0.000000000, 0)
-t_i1.Size = UDim2.new(0, 140, 0, 20)
-t_i1.BorderColor3 = Color3.fromRGB(250, 250, 250)
-t_i1.Font = Enum.Font.SourceSans
-t_i1.TextColor3 = Color3.fromRGB(250, 250, 250)
-t_i1.TextSize = 14.000
-
-t_i2.Name = "t_i2" 
-t_i2.Parent = t_ibar
-t_i2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-t_i2.Position = UDim2.new(0.00000000, 0, 0.050000000, 0)
-t_i2.Size = UDim2.new(0, 140, 0, 20)
-t_i2.BorderColor3 = Color3.fromRGB(250, 250, 250)
-t_i2.Font = Enum.Font.SourceSans
-t_i2.TextColor3 = Color3.fromRGB(250, 250, 250)
-t_i2.TextSize = 14.000
-
-t_i3.Name = "t_i3"
-t_i3.Parent = t_ibar
-t_i3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-t_i3.Position = UDim2.new(0.00000000, 0, 0.100000000, 0)
-t_i3.Size = UDim2.new(0, 140, 0, 20)
-t_i3.BorderColor3 = Color3.fromRGB(250, 250, 250)
-t_i3.Font = Enum.Font.SourceSans
-t_i3.TextColor3 = Color3.fromRGB(250, 250, 250)
-t_i3.TextSize = 14.000
-
-t_i4.Name = "t_i4"
-t_i4.Parent = t_ibar
-t_i4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-t_i4.Position = UDim2.new(0.00000000, 0, 0.150000000, 0)
-t_i4.Size = UDim2.new(0, 140, 0, 20)
-t_i4.BorderColor3 = Color3.fromRGB(250, 250, 250)
-t_i4.Font = Enum.Font.SourceSans
-t_i4.TextColor3 = Color3.fromRGB(250, 250, 250)
-t_i4.TextSize = 14.000
-
-t_i5.Name = "t_i5"
-t_i5.Parent = t_ibar
-t_i5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-t_i5.Position = UDim2.new(0.00000000, 0, 0.200000000, 0)
-t_i5.Size = UDim2.new(0, 140, 0, 20)
-t_i5.BorderColor3 = Color3.fromRGB(250, 250, 250)
-t_i5.Font = Enum.Font.SourceSans
-t_i5.TextColor3 = Color3.fromRGB(250, 250, 250)
-t_i5.TextSize = 14.000
-
-t_i6.Name = "t_i6"
-t_i6.Parent = t_ibar
-t_i6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-t_i6.Position = UDim2.new(0.00000000, 0, 0.250000000, 0)
-t_i6.Size = UDim2.new(0, 140, 0, 20)
-t_i6.BorderColor3 = Color3.fromRGB(250, 250, 250)
-t_i6.Font = Enum.Font.SourceSans
-t_i6.TextColor3 = Color3.fromRGB(250, 250, 250)
-t_i6.TextSize = 14.000
-
-t_i7.Name = "t_i7"
-t_i7.Parent = t_ibar
-t_i7.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-t_i7.Position = UDim2.new(0.00000000, 0, 0.300000000, 0)
-t_i7.Size = UDim2.new(0, 140, 0, 20)
-t_i7.BorderColor3 = Color3.fromRGB(250, 250, 250)
-t_i7.Font = Enum.Font.SourceSans
-t_i7.TextColor3 = Color3.fromRGB(250, 250, 250)
-t_i7.TextSize = 14.000
-
-t_i8.Name = "t_i8"
-t_i8.Parent = t_ibar
-t_i8.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-t_i8.Position = UDim2.new(0.00000000, 0, 0.350000000, 0)
-t_i8.Size = UDim2.new(0, 140, 0, 20)
-t_i8.BorderColor3 = Color3.fromRGB(250, 250, 250)
-t_i8.Font = Enum.Font.SourceSans
-t_i8.TextColor3 = Color3.fromRGB(250, 250, 250)
-t_i8.TextSize = 14.000
-
-t_i9.Name = "t_i9"
-t_i9.Parent = t_ibar
-t_i9.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-t_i9.Position = UDim2.new(0.00000000, 0, 0.400000000, 0)
-t_i9.Size = UDim2.new(0, 140, 0, 20)
-t_i9.BorderColor3 = Color3.fromRGB(250, 250, 250)
-t_i9.Font = Enum.Font.SourceSans
-t_i9.TextColor3 = Color3.fromRGB(250, 250, 250)
-t_i9.TextSize = 14.000
-
-t_i10.Name = "t_i10"
-t_i10.Parent = t_ibar
-t_i10.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-t_i10.Position = UDim2.new(0.00000000, 0, 0.450000000, 0)
-t_i10.Size = UDim2.new(0, 140, 0, 20)
-t_i10.BorderColor3 = Color3.fromRGB(250, 250, 250)
-t_i10.Font = Enum.Font.SourceSans
-t_i10.TextColor3 = Color3.fromRGB(250, 250, 250)
-t_i10.TextSize = 14.000
-
-t_i11.Name = "t_i11"
-t_i11.Parent = t_ibar
-t_i11.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-t_i11.Position = UDim2.new(0.00000000, 0, 0.500000000, 0)
-t_i11.Size = UDim2.new(0, 140, 0, 20)
-t_i11.BorderColor3 = Color3.fromRGB(250, 250, 250)
-t_i11.Font = Enum.Font.SourceSans
-t_i11.TextColor3 = Color3.fromRGB(250, 250, 250)
-t_i11.TextSize = 14.000
-
-t_i12.Name = "t_i12"
-t_i12.Parent = t_ibar
-t_i12.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-t_i12.Position = UDim2.new(0.00000000, 0, 0.550000000, 0)
-t_i12.Size = UDim2.new(0, 140, 0, 20)
-t_i12.BorderColor3 = Color3.fromRGB(250, 250, 250)
-t_i12.Font = Enum.Font.SourceSans
-t_i12.TextColor3 = Color3.fromRGB(250, 250, 250)
-t_i12.TextSize = 14.000
-
-t_i13.Name = "t_i13"
-t_i13.Parent = t_ibar
-t_i13.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-t_i13.Position = UDim2.new(0.00000000, 0, 0.600000000, 0)
-t_i13.Size = UDim2.new(0, 140, 0, 20)
-t_i13.BorderColor3 = Color3.fromRGB(250, 250, 250)
-t_i13.Font = Enum.Font.SourceSans
-t_i13.TextColor3 = Color3.fromRGB(250, 250, 250)
-t_i13.TextSize = 14.000
-
-t_i14.Name = "t_i14"
-t_i14.Parent = t_ibar
-t_i14.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-t_i14.Position = UDim2.new(0.00000000, 0, 0.650000000, 0)
-t_i14.Size = UDim2.new(0, 140, 0, 20)
-t_i14.BorderColor3 = Color3.fromRGB(250, 250, 250)
-t_i14.Font = Enum.Font.SourceSans
-t_i14.TextColor3 = Color3.fromRGB(250, 250, 250)
-t_i14.TextSize = 14.000
-
-t_i15.Name = "t_i15"
-t_i15.Parent = t_ibar
-t_i15.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-t_i15.Position = UDim2.new(0.00000000, 0, 0.700000000, 0)
-t_i15.Size = UDim2.new(0, 140, 0, 20)
-t_i15.BorderColor3 = Color3.fromRGB(250, 250, 250)
-t_i15.Font = Enum.Font.SourceSans
-t_i15.TextColor3 = Color3.fromRGB(250, 250, 250)
-t_i15.TextSize = 14.000
-
-t_i16.Name = "t_i16"
-t_i16.Parent = t_ibar
-t_i16.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-t_i16.Position = UDim2.new(0.00000000, 0, 0.750000000, 0)
-t_i16.Size = UDim2.new(0, 140, 0, 20)
-t_i16.BorderColor3 = Color3.fromRGB(250, 250, 250)
-t_i16.Font = Enum.Font.SourceSans
-t_i16.TextColor3 = Color3.fromRGB(250, 250, 250)
-t_i16.TextSize = 14.000
-
-t_i17.Name = "t_i17"
-t_i17.Parent = t_ibar
-t_i17.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-t_i17.Position = UDim2.new(0.00000000, 0, 0.800000000, 0)
-t_i17.Size = UDim2.new(0, 140, 0, 20)
-t_i17.BorderColor3 = Color3.fromRGB(250, 250, 250)
-t_i17.Font = Enum.Font.SourceSans
-t_i17.TextColor3 = Color3.fromRGB(250, 250, 250)
-t_i17.TextSize = 14.000
-
+make_selectscrollingframe(t_ibar, b_page8,  UDim2.new(0, 0, 0.1700000000, 0))
 --end bar core
 end
 
 --code check sea tp
 if game.PlaceId == 2753915549 then -- sea1
-t_i1.Text = "Pirate Start"
-t_i2.Text = "Marine Start"
-t_i3.Text = "Middle Town"
-t_i4.Text = "Jungle"
-t_i5.Text = "Pirate Village"
-t_i6.Text = "Desert"
-t_i7.Text = "Frozen Village"
-t_i8.Text = "Marine Ford"
-t_i9.Text = "Colosseum"
-t_i10.Text = "Sky 1"
-t_i11.Text = "Sky 2"
-t_i12.Text = "Sky 3"
-t_i13.Text = "Magma Village"
-t_i14.Text = "Fountain City"
-t_i15.Text = "UndeyWater City"
-t_i16.Text = "Whilr Pool"
-t_i17.Text = "Prison"
-
-t_i1.MouseButton1Down:connect(function()
-t_ibar.Visible = false
-t_b1.Text = "Island : Pirate Start"
-end)
-t_i2.MouseButton1Down:connect(function()
-t_ibar.Visible = false
-t_b1.Text = "Island : Marine Start"
-end)
-t_i3.MouseButton1Down:connect(function()
-t_ibar.Visible = false
-t_b1.Text = "Island : Middle Town"
-end)
-t_i4.MouseButton1Down:connect(function()
-t_ibar.Visible = false
-t_b1.Text = "Island : Jungle"
-end)
-t_i5.MouseButton1Down:connect(function()
-t_ibar.Visible = false
-t_b1.Text = "Island : Pirate Village"
-end)
-t_i6.MouseButton1Down:connect(function()
-t_ibar.Visible = false
-t_b1.Text = "Island : Desert"
-end)
-t_i7.MouseButton1Down:connect(function()
-t_ibar.Visible = false
-t_b1.Text = "Island : Frozen Village"
-end)
-t_i8.MouseButton1Down:connect(function()
-t_ibar.Visible = false
-t_b1.Text = "Island : Marine Ford"
-end)
-t_i9.MouseButton1Down:connect(function()
-t_ibar.Visible = false
-t_b1.Text = "Island : Colosseum"
-end)
-t_i10.MouseButton1Down:connect(function()
-t_ibar.Visible = false
-t_b1.Text = "Island : Sky 1"
-end)
-t_i11.MouseButton1Down:connect(function()
-t_ibar.Visible = false
-t_b1.Text = "Island : Sky 2"
-end)
-t_i12.MouseButton1Down:connect(function()
-t_ibar.Visible = false
-t_b1.Text = "Island : Sky3"
-end)
-t_i13.MouseButton1Down:connect(function()
-t_ibar.Visible = false
-t_b1.Text = "Island : Magma Village"
-end)
-t_i14.MouseButton1Down:connect(function()
-t_ibar.Visible = false
-t_b1.Text = "Island : Fountain City"
-end)
-t_i15.MouseButton1Down:connect(function()
-t_ibar.Visible = false
-t_b1.Text = "Island : UndeyWater City"
-end)
-t_i16.MouseButton1Down:connect(function()
-t_ibar.Visible = false
-t_b1.Text = "Island : Whirl Pool"
-end)
-t_i17.MouseButton1Down:connect(function()
-t_ibar.Visible = false
-t_b1.Text = "Island : Prison"
-end)
+make_selectbutton(t_fi1, t_ci1, t_b1, t_ibar, "Pirate Start", "Island : Pirate Start", UDim2.new(0.00000000, 0, 0.000000000, 0))
+make_selectbutton(t_fi2, t_ci2, t_b1, t_ibar, "Marine Start", "Island : Marine Start", UDim2.new(0.00000000, 0, 0.050000000, 0))
+make_selectbutton(t_fi3, t_ci3, t_b1, t_ibar, "Middle Town", "Island : Middle Town", UDim2.new(0.00000000, 0, 0.100000000, 0))
+make_selectbutton(t_fi4, t_ci4, t_b1, t_ibar, "Jungle", "Island : Jungle", UDim2.new(0.00000000, 0, 0.150000000, 0))
+make_selectbutton(t_fi5, t_ci5, t_b1, t_ibar, "Pirate Village", "Island : Pirate Village", UDim2.new(0.00000000, 0, 0.200000000, 0))
+make_selectbutton(t_fi6, t_ci6, t_b1, t_ibar, "Desert", "Island : Desert", UDim2.new(0.00000000, 0, 0.250000000, 0))
+make_selectbutton(t_fi7, t_ci7, t_b1, t_ibar, "Frozen Village", "Island : Frozen", UDim2.new(0.00000000, 0, 0.300000000, 0))
+make_selectbutton(t_fi8, t_ci8, t_b1, t_ibar, "Marine Ford", "Island : Marine Ford", UDim2.new(0.00000000, 0, 0.350000000, 0))
+make_selectbutton(t_fi9, t_ci9, t_b1, t_ibar, "Colosseum", "Island : Colosseum", UDim2.new(0.00000000, 0, 0.400000000, 0))
+make_selectbutton(t_fi10, t_ci10, t_b1, t_ibar, "Sky 1", "Island : Sky 1", UDim2.new(0.00000000, 0, 0.450000000, 0))
+make_selectbutton(t_fi11, t_ci11, t_b1, t_ibar, "Sky 2", "Island : Sky 2", UDim2.new(0.00000000, 0, 0.500000000, 0))
+make_selectbutton(t_fi12, t_ci12, t_b1, t_ibar, "Sky 3", "Island : Sky 3", UDim2.new(0.00000000, 0, 0.550000000, 0))
+make_selectbutton(t_fi13, t_ci13, t_b1, t_ibar, "Magma Village", "Island : Magma Village", UDim2.new(0.00000000, 0, 0.600000000, 0))
+make_selectbutton(t_fi14, t_ci14, t_b1, t_ibar, "Fountain City", "Island : Fountain City", UDim2.new(0.00000000, 0, 0.650000000, 0))
+make_selectbutton(t_fi15, t_ci15, t_b1, t_ibar, "UnderWater City", "Island : UnderWater City", UDim2.new(0.00000000, 0, 0.700000000, 0))
+make_selectbutton(t_fi16, t_ci16, t_b1, t_ibar, "Prison", "Island : Prison", UDim2.new(0.00000000, 0, 0.750000000, 0))
+make_selectbutton(t_fi17, t_ci17, t_b1, t_ibar, "Whilr Pool", "Island : Whilr Pool", UDim2.new(0.00000000, 0, 0.800000000, 0))
 
 elseif game.PlaceId == 4442272183 then -- sea2
-t_i1.Text = "KingDom of Rose"
-t_i2.Text = "Café"
-t_i3.Text = "Green Zone"
-t_i4.Text = "Hot and Cold"
-t_i5.Text = "Snow Moutain"
-t_i6.Text = "Dark Arena"
-t_i7.Text = "Cursed Ship"
-t_i8.Text = "Ice Castle"
-t_i9.Text = "Graveyard"
-t_i10.Text = "Fogotten"
-t_i11.Visible = false
-t_i12.Visible = false
-t_i14.Visible = false
-t_i13.Visible = false
-t_i15.Visible = false
-t_i16.Visible = false
-t_i17.Visible = false
-
-t_i1.MouseButton1Down:connect(function()
-t_ibar.Visible = false
-t_b1.Text = "Island : KingDom of Rose"
-end)
-t_i2.MouseButton1Down:connect(function()
-t_ibar.Visible = false
-t_b1.Text = "Island : Café"
-end)
-t_i3.MouseButton1Down:connect(function()
-t_ibar.Visible = false
-t_b1.Text = "Island : Green Zone"
-end)
-t_i4.MouseButton1Down:connect(function()
-t_ibar.Visible = false
-t_b1.Text = "Island : Hot and Cold"
-end)
-t_i5.MouseButton1Down:connect(function()
-t_ibar.Visible = false
-t_b1.Text = "Island : Snow Moutain"
-end)
-t_i6.MouseButton1Down:connect(function()
-t_ibar.Visible = false
-t_b1.Text = "Island : Dark Arena"
-end)
-t_i7.MouseButton1Down:connect(function()
-t_ibar.Visible = false
-t_b1.Text = "Island : Cursed Ship"
-end)
-t_i8.MouseButton1Down:connect(function()
-t_ibar.Visible = false
-t_b1.Text = "Island : Ice Castle"
-end)
-t_i9.MouseButton1Down:connect(function()
-t_ibar.Visible = false
-t_b10.Text = "Island : Graveyard"
-end)
-t_i10.MouseButton1Down:connect(function()
-t_ibar.Visible = false
-t_b1.Text = "Island : Fogotten"
-end)
+make_selectbutton(t_fi1, t_ci1, t_b1, t_ibar, "KingDom of Rose", "Island : KingDom of Rose", UDim2.new(0.00000000, 0, 0.000000000, 0))
+make_selectbutton(t_fi2, t_ci2, t_b1, t_ibar, "Café", "Island : Café", UDim2.new(0.00000000, 0, 0.050000000, 0))
+make_selectbutton(t_fi3, t_ci3, t_b1, t_ibar, "Green Zone", "Island : Green Zone", UDim2.new(0.00000000, 0, 0.100000000, 0))
+make_selectbutton(t_fi4, t_ci4, t_b1, t_ibar, "Hot and Cold", "Island : Hot and Cold", UDim2.new(0.00000000, 0, 0.150000000, 0))
+make_selectbutton(t_fi5, t_ci5, t_b1, t_ibar, "Snow Moutain", "Island : Snow Moutain", UDim2.new(0.00000000, 0, 0.200000000, 0))
+make_selectbutton(t_fi6, t_ci6, t_b1, t_ibar, "Dark Arena", "Island : Dark Arena", UDim2.new(0.00000000, 0, 0.250000000, 0))
+make_selectbutton(t_fi7, t_ci7, t_b1, t_ibar, "Cursed Ship", "Island : Cursed Ship", UDim2.new(0.00000000, 0, 0.300000000, 0))
+make_selectbutton(t_fi8, t_ci8, t_b1, t_ibar, "Ice Castle", "Island : Ice Castle", UDim2.new(0.00000000, 0, 0.350000000, 0))
+make_selectbutton(t_fi9, t_ci9, t_b1, t_ibar, "Graveyard", "Island : Graveyard", UDim2.new(0.00000000, 0, 0.400000000, 0))
+make_selectbutton(t_fi10, t_ci10, t_b1, t_ibar, "Fogotten", "Island : Fogotten", UDim2.new(0.00000000, 0, 0.450000000, 0))
 
 elseif game.PlaceId == 7449423635 then -- sea3
-t_i1.Text = "t_b2"
-t_i2.Text = "t_b2"
-t_i3.Text = "t_b2"
-t_i4.Text = "t_b2"
-t_i5.Text = "t_b2"
-t_i6.Text = "t_b2"
-t_i7.Text = "t_b2"
-t_i8.Text = "t_b2"
-t_i9.Text = "t_b2"
-t_i10.Text = "t_b2"
+make_selectbutton(t_fi1, t_ci1, t_b1, t_ibar, "Button", "Island : Button", UDim2.new(0.00000000, 0, 0.000000000, 0))
+make_selectbutton(t_fi2, t_ci2, t_b1, t_ibar, "Button", "Island : Button", UDim2.new(0.00000000, 0, 0.050000000, 0))
+make_selectbutton(t_fi3, t_ci3, t_b1, t_ibar, "Button", "Island : Button", UDim2.new(0.00000000, 0, 0.100000000, 0))
+make_selectbutton(t_fi4, t_ci4, t_b1, t_ibar, "Button", "Island : Button", UDim2.new(0.00000000, 0, 0.150000000, 0))
+make_selectbutton(t_fi5, t_ci5, t_b1, t_ibar, "Button", "Island : Button", UDim2.new(0.00000000, 0, 0.200000000, 0))
+make_selectbutton(t_fi6, t_ci6, t_b1, t_ibar, "Button", "Island : Button", UDim2.new(0.00000000, 0, 0.250000000, 0))
+make_selectbutton(t_fi7, t_ci7, t_b1, t_ibar, "Button", "Island : Button", UDim2.new(0.00000000, 0, 0.300000000, 0))
+make_selectbutton(t_fi8, t_ci8, t_b1, t_ibar, "Button", "Island : Button", UDim2.new(0.00000000, 0, 0.350000000, 0))
+make_selectbutton(t_fi9, t_ci9, t_b1, t_ibar, "Button", "Island : Button", UDim2.new(0.00000000, 0, 0.400000000, 0))
+make_selectbutton(t_fi10, t_ci10, t_b1, t_ibar, "Button", "Island : Button", UDim2.new(0.00000000, 0, 0.450000000, 0))
+make_selectbutton(t_fi11, t_ci11, t_b1, t_ibar, "Button", "Island : Button", UDim2.new(0.00000000, 0, 0.500000000, 0))
+make_selectbutton(t_fi12, t_ci12, t_b1, t_ibar, "Button", "Island : Button", UDim2.new(0.00000000, 0, 0.550000000, 0))
+make_selectbutton(t_fi13, t_ci13, t_b1, t_ibar, "Button", "Island : Button", UDim2.new(0.00000000, 0, 0.600000000, 0))
+make_selectbutton(t_fi14, t_ci14, t_b1, t_ibar, "Button", "Island : Button", UDim2.new(0.00000000, 0, 0.650000000, 0))
+make_selectbutton(t_fi15, t_ci15, t_b1, t_ibar, "Button", "Island : Button", UDim2.new(0.00000000, 0, 0.700000000, 0))
+make_selectbutton(t_fi16, t_ci16, t_b1, t_ibar, "Button", "Island : Button", UDim2.new(0.00000000, 0, 0.750000000, 0))
+make_selectbutton(t_fi17, t_ci17, t_b1, t_ibar, "Button", "Island : Button", UDim2.new(0.00000000, 0, 0.800000000, 0))
 
 end
 
-t_t2.Parent = b_page8
-t_t2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-t_t2.Position = UDim2.new(0, 0, 0.1700000000, 0)
-t_t2.Size = UDim2.new(0, 498, 0, 30)
-t_t2.BorderColor3 = Color3.fromRGB(250, 250, 250)
-t_t2.Font = Enum.Font.Ubuntu
-t_t2.Text = "Teleport Sea"
-t_t2.TextColor3 = Color3.fromRGB(255, 255, 255)
-t_t2.TextSize = 14.000
-t_t2.TextWrapped = true
+make_textlabel(t_t2, b_page8,"Teleport Sea", UDim2.new(0, 0, 0.1700000000, 0))
 
-t_f2.Parent = b_page8
-t_f2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-t_f2.Position = UDim2.new(0, 0, 0.2400000000, 0)
-t_f2.Size = UDim2.new(0, 498, 0, 30)
-t_f2.BorderColor3 = Color3.fromRGB(250, 250, 250)
-t_f2.Font = Enum.Font.Ubuntu
-t_f2.Text = "   Auto Teleport Sea1"
-t_f2.TextColor3 = Color3.fromRGB(255, 255, 255)
-t_f2.TextSize = 14.000
-t_f2.TextWrapped = true
-t_f2.TextXAlignment = Enum.TextXAlignment.Left
-
-t_b2.Name = "t_b2"
-t_b2.Parent = t_f2
-t_b2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-t_b2.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-t_b2.Size = UDim2.new(0, 20, 0, 20)
-t_b2.BorderColor3 = Color3.fromRGB(250, 250, 250)
-t_b2.Font = Enum.Font.SourceSans
-t_b2.Text = ""
-t_b2.TextColor3 = Color3.fromRGB(250, 250, 250)
-t_b2.TextSize = 30.000
+make_together(t_f2, t_b2 , b_page8, "   Auto Teleport Sea 1",  UDim2.new(0, 0, 0.2400000000, 0))
 t_b2.MouseButton1Down:connect(function()
 --on off 
 if t_b2.Text == "" then --on
@@ -6318,28 +4471,7 @@ local args = {
 end
 end)
 
-t_f3.Parent = b_page8
-t_f3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-t_f3.Position = UDim2.new(0, 0, 0.3100000000, 0)
-t_f3.Size = UDim2.new(0, 498, 0, 30)
-t_f3.BorderColor3 = Color3.fromRGB(250, 250, 250)
-t_f3.Font = Enum.Font.Ubuntu
-t_f3.Text = "   Auto Teleport Sea 2"
-t_f3.TextColor3 = Color3.fromRGB(255, 255, 255)
-t_f3.TextSize = 14.000
-t_f3.TextWrapped = true
-t_f3.TextXAlignment = Enum.TextXAlignment.Left
-
-t_b3.Name = "t_b3"
-t_b3.Parent = t_f3
-t_b3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-t_b3.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-t_b3.Size = UDim2.new(0, 20, 0, 20)
-t_b3.BorderColor3 = Color3.fromRGB(250, 250, 250)
-t_b3.Font = Enum.Font.SourceSans
-t_b3.Text = ""
-t_b3.TextColor3 = Color3.fromRGB(250, 250, 250)
-t_b3.TextSize = 30.000
+make_together(t_f3 , t_b3 , b_page8, "   Auto Teleport Sea 2",  UDim2.new(0, 0, 0.3100000000, 0))
 t_b3.MouseButton1Down:connect(function()
 --on off 
 if t_b3.Text == "" then --on
@@ -6359,28 +4491,7 @@ game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelDressros
 end
 end)
 
-t_f4.Parent = b_page8
-t_f4.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-t_f4.Position = UDim2.new(0, 0, 0.3800000000, 0)
-t_f4.Size = UDim2.new(0, 498, 0, 30)
-t_f4.BorderColor3 = Color3.fromRGB(250, 250, 250)
-t_f4.Font = Enum.Font.Ubuntu
-t_f4.Text = "   Auto Teleport Sea 3"
-t_f4.TextColor3 = Color3.fromRGB(255, 255, 255)
-t_f4.TextSize = 14.000
-t_f4.TextWrapped = true
-t_f4.TextXAlignment = Enum.TextXAlignment.Left
-
-t_b4.Name = "t_b4"
-t_b4.Parent = t_f4
-t_b4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-t_b4.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-t_b4.Size = UDim2.new(0, 20, 0, 20)
-t_b4.BorderColor3 = Color3.fromRGB(250, 250, 250)
-t_b4.Font = Enum.Font.SourceSans
-t_b4.Text = ""
-t_b4.TextColor3 = Color3.fromRGB(250, 250, 250)
-t_b4.TextSize = 30.000
+make_together(t_f4, t_b4, b_page8, "   Auto Teleport Sea 3",  UDim2.new(0, 0, 0.3800000000, 0))
 t_b4.MouseButton1Down:connect(function()
 --on off 
 if t_b4.Text == "" then --on
@@ -6401,39 +4512,9 @@ game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelZou")
 end
 end)
 
-t_t3.Parent = b_page8
-t_t3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-t_t3.Position = UDim2.new(0, 0, 0.4500000000, 0)
-t_t3.Size = UDim2.new(0, 498, 0, 30)
-t_t3.BorderColor3 = Color3.fromRGB(250, 250, 250)
-t_t3.Font = Enum.Font.Ubuntu
-t_t3.Text = "Sever"
-t_t3.TextColor3 = Color3.fromRGB(255, 255, 255)
-t_t3.TextSize = 14.000
-t_t3.TextWrapped = true
+make_textlabel(t_t3, b_page8,"Sever", UDim2.new(0, 0, 0.4500000000, 0))
 
-t_f5.Parent = b_page8
-t_f5.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-t_f5.Position = UDim2.new(0, 0, 0.5900000000, 0)
-t_f5.Size = UDim2.new(0, 498, 0, 30)
-t_f5.BorderColor3 = Color3.fromRGB(250, 250, 250)
-t_f5.Font = Enum.Font.Ubuntu
-t_f5.Text = "   Teleport Sever Hop"
-t_f5.TextColor3 = Color3.fromRGB(255, 255, 255)
-t_f5.TextSize = 14.000
-t_f5.TextWrapped = true
-t_f5.TextXAlignment = Enum.TextXAlignment.Left
-
-t_b5.Name = "t_b5"
-t_b5.Parent = t_f5
-t_b5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-t_b5.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-t_b5.Size = UDim2.new(0, 20, 0, 20)
-t_b5.BorderColor3 = Color3.fromRGB(250, 250, 250)
-t_b5.Font = Enum.Font.SourceSans
-t_b5.Text = ""
-t_b5.TextColor3 = Color3.fromRGB(250, 250, 250)
-t_b5.TextSize = 30.000
+make_together(t_f5, t_b5, b_page8, "   Auto Teleport Hop",  UDim2.new(0, 0, 0.5900000000, 0))
 t_b5.MouseButton1Down:connect(function()
 --on off 
 if t_b5.Text == "" then --on
@@ -6444,28 +4525,7 @@ t_b5.Text = ""
 end
 end)
 
-t_f6.Parent = b_page8
-t_f6.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-t_f6.Position = UDim2.new(0, 0, 0.5200000000, 0)
-t_f6.Size = UDim2.new(0, 498, 0, 30)
-t_f6.BorderColor3 = Color3.fromRGB(250, 250, 250)
-t_f6.Font = Enum.Font.Ubuntu
-t_f6.Text = "   Rejon Sever"
-t_f6.TextColor3 = Color3.fromRGB(255, 255, 255)
-t_f6.TextSize = 14.000
-t_f6.TextWrapped = true
-t_f6.TextXAlignment = Enum.TextXAlignment.Left
-
-t_b6.Name = "t_b6"
-t_b6.Parent = t_f6
-t_b6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-t_b6.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-t_b6.Size = UDim2.new(0, 20, 0, 20)
-t_b6.BorderColor3 = Color3.fromRGB(250, 250, 250)
-t_b6.Font = Enum.Font.SourceSans
-t_b6.Text = ""
-t_b6.TextColor3 = Color3.fromRGB(250, 250, 250)
-t_b6.TextSize = 30.000
+make_together(t_f6, t_b6 , b_page8, "   Rejon",  UDim2.new(0, 0, 0.5200000000, 0))
 t_b6.MouseButton1Down:connect(function()
 --on off 
 if t_b6.Text == "" then --on
@@ -6479,29 +4539,7 @@ end
 end)
 
 if game.PlaceId == 7449423635 then -- sea3
-
-t_f7.Parent = b_page8
-t_f7.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-t_f7.Position = UDim2.new(0, 0, 0.1700000000, 0)
-t_f7.Size = UDim2.new(0, 498, 0, 30)
-t_f7.BorderColor3 = Color3.fromRGB(250, 250, 250)
-t_f7.Font = Enum.Font.Ubuntu
-t_f7.Text = "   Teleport Mirage Island"
-t_f7.TextColor3 = Color3.fromRGB(255, 255, 255)
-t_f7.TextSize = 14.000
-t_f7.TextWrapped = true
-t_f7.TextXAlignment = Enum.TextXAlignment.Left
-
-t_b7.Name = "t_b7"
-t_b7.Parent = t_f7
-t_b7.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-t_b7.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-t_b7.Size = UDim2.new(0, 20, 0, 20)
-t_b7.BorderColor3 = Color3.fromRGB(250, 250, 250)
-t_b7.Font = Enum.Font.SourceSans
-t_b7.Text = ""
-t_b7.TextColor3 = Color3.fromRGB(250, 250, 250)
-t_b7.TextSize = 30.000
+make_together(t_f7, t_b7 , b_page8, "   Teleport Mirage Island" ,  UDim2.new(0, 0, 0.1700000000, 0))
 t_b7.MouseButton1Down:connect(function()
 --on off 
 if t_b7.Text == "" then --on
@@ -6540,39 +4578,9 @@ end
 ibar()
 
 -- // Setting
-st_t1.Parent = b_page9
-st_t1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-st_t1.Position = UDim2.new(0, 0, 0.0300000000, 0)
-st_t1.Size = UDim2.new(0, 498, 0, 30)
-st_t1.BorderColor3 = Color3.fromRGB(250, 250, 250)
-st_t1.Font = Enum.Font.Ubuntu
-st_t1.Text = "Setting"
-st_t1.TextColor3 = Color3.fromRGB(255, 255, 255)
-st_t1.TextSize = 14.000
-st_t1.TextWrapped = true
+make_textlabel(st_t1, b_page9,"Setting", UDim2.new(0, 0, 0.0300000000, 0))
 
-st_f1.Parent = b_page9
-st_f1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-st_f1.Position = UDim2.new(0, 0, 0.1000000000, 0)
-st_f1.Size = UDim2.new(0, 498, 0, 30)
-st_f1.BorderColor3 = Color3.fromRGB(250, 250, 250)
-st_f1.Font = Enum.Font.Ubuntu
-st_f1.Text = "   Auto Spawn Point"
-st_f1.TextColor3 = Color3.fromRGB(255, 255, 255)
-st_f1.TextSize = 14.000
-st_f1.TextWrapped = true
-st_f1.TextXAlignment = Enum.TextXAlignment.Left
-
-st_b1.Name = "st_b1"
-st_b1.Parent = st_f1
-st_b1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-st_b1.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-st_b1.Size = UDim2.new(0, 20, 0, 20)
-st_b1.BorderColor3 = Color3.fromRGB(250, 250, 250)
-st_b1.Font = Enum.Font.SourceSans
-st_b1.Text = ""
-st_b1.TextColor3 = Color3.fromRGB(250, 250, 250)
-st_b1.TextSize = 30.000
+make_together(st_f1, st_b1 , b_page9, "   Auto Spawn Point",  UDim2.new(0, 0, 0.1000000000, 0))
 st_b1.MouseButton1Down:connect(function()
 --on off 
 if st_b1.Text == "" then --on
@@ -6594,28 +4602,7 @@ _G.st_b1 = false
 end
 end)
 
-st_f2.Parent = b_page9
-st_f2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-st_f2.Position = UDim2.new(0, 0, 0.1700000000, 0)
-st_f2.Size = UDim2.new(0, 498, 0, 30)
-st_f2.BorderColor3 = Color3.fromRGB(250, 250, 250)
-st_f2.Font = Enum.Font.Ubuntu
-st_f2.Text = "   Auto Buso"
-st_f2.TextColor3 = Color3.fromRGB(255, 255, 255)
-st_f2.TextSize = 14.000
-st_f2.TextWrapped = true
-st_f2.TextXAlignment = Enum.TextXAlignment.Left
-
-st_b2.Name = "st_b2"
-st_b2.Parent = st_f2
-st_b2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-st_b2.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-st_b2.Size = UDim2.new(0, 20, 0, 20)
-st_b2.BorderColor3 = Color3.fromRGB(250, 250, 250)
-st_b2.Font = Enum.Font.SourceSans
-st_b2.Text = "X"
-st_b2.TextColor3 = Color3.fromRGB(250, 250, 250)
-st_b2.TextSize = 30.000
+make_together(st_f2, st_b2 , b_page9, "   Auto Buso",  UDim2.new(0, 0, 0.1700000000, 0))
 st_b2.MouseButton1Down:connect(function()
 --on off 
 if st_b2.Text == "" then --on
@@ -6641,28 +4628,7 @@ end
 end) end
 
 
-st_f3.Parent = b_page9
-st_f3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-st_f3.Position = UDim2.new(0, 0, 0.2400000000, 0)
-st_f3.Size = UDim2.new(0, 498, 0, 30)
-st_f3.BorderColor3 = Color3.fromRGB(250, 250, 250)
-st_f3.Font = Enum.Font.Ubuntu
-st_f3.Text = "   Fast Attack"
-st_f3.TextColor3 = Color3.fromRGB(255, 255, 255)
-st_f3.TextSize = 14.000
-st_f3.TextWrapped = true
-st_f3.TextXAlignment = Enum.TextXAlignment.Left
-
-st_b3.Name = "st_b3"
-st_b3.Parent = st_f3
-st_b3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-st_b3.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-st_b3.Size = UDim2.new(0, 20, 0, 20)
-st_b3.BorderColor3 = Color3.fromRGB(250, 250, 250)
-st_b3.Font = Enum.Font.SourceSans
-st_b3.Text = "X"
-st_b3.TextColor3 = Color3.fromRGB(250, 250, 250)
-st_b3.TextSize = 30.000
+make_together(st_f3, st_b3 , b_page9, "   Fast Attack",  UDim2.new(0, 0, 0.2400000000, 0))
 st_b3.MouseButton1Down:connect(function()
 --on off 
 if st_b3.Text == "" then --on
@@ -6676,29 +4642,9 @@ _G.FastAttack = false --on
 end
 end)
 _G.FastAttack = true --on
+st_b3.Text = "X"
 
-st_f4.Parent = b_page9
-st_f4.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-st_f4.Position = UDim2.new(0, 0, 0.3100000000, 0)
-st_f4.Size = UDim2.new(0, 498, 0, 30)
-st_f4.BorderColor3 = Color3.fromRGB(250, 250, 250)
-st_f4.Font = Enum.Font.Ubuntu
-st_f4.Text = "   Bring Mob"
-st_f4.TextColor3 = Color3.fromRGB(255, 255, 255)
-st_f4.TextSize = 14.000
-st_f4.TextWrapped = true
-st_f4.TextXAlignment = Enum.TextXAlignment.Left
-
-st_b4.Name = "st_b4"
-st_b4.Parent = st_f4
-st_b4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-st_b4.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-st_b4.Size = UDim2.new(0, 20, 0, 20)
-st_b4.BorderColor3 = Color3.fromRGB(250, 250, 250)
-st_b4.Font = Enum.Font.SourceSans
-st_b4.Text = "X"
-st_b4.TextColor3 = Color3.fromRGB(250, 250, 250)
-st_b4.TextSize = 30.000
+make_together(st_f4, st_b4 , b_page9, "   Bring Mob",  UDim2.new(0, 0, 0.3100000000, 0))
 st_b4.MouseButton1Down:connect(function()
 --on off 
 if st_b4.Text == "" then --on
@@ -6711,6 +4657,8 @@ _G.st_b4 = false
 _G.bringmob = false
 end
 end)
+st_b4.Text = "X"
+
 _G.bringmob = true
   _G.time = 2
   _G.distance = 400
@@ -6780,28 +4728,9 @@ st_b5.Text = st_b5.Text + 10
 end
 end)
 
-st_f6.Parent = b_page9
-st_f6.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-st_f6.Position = UDim2.new(0, 0, 0.3800000000, 0)
-st_f6.Size = UDim2.new(0, 498, 0, 30)
-st_f6.BorderColor3 = Color3.fromRGB(250, 250, 250)
-st_f6.Font = Enum.Font.Ubuntu
-st_f6.Text = "   Auto Rejoin"
-st_f6.TextColor3 = Color3.fromRGB(255, 255, 255)
-st_f6.TextSize = 14.000
-st_f6.TextWrapped = true
-st_f6.TextXAlignment = Enum.TextXAlignment.Left
 
-st_b6.Name = "st_b6"
-st_b6.Parent = st_f6
-st_b6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-st_b6.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-st_b6.Size = UDim2.new(0, 20, 0, 20)
-st_b6.BorderColor3 = Color3.fromRGB(250, 250, 250)
-st_b6.Font = Enum.Font.SourceSans
+make_together(st_f6, st_b6 , b_page9, "   Auto Rejoin",  UDim2.new(0, 0, 0.3800000000, 0))
 st_b6.Text = "X"
-st_b6.TextColor3 = Color3.fromRGB(250, 250, 250)
-st_b6.TextSize = 30.000
 st_b6.MouseButton1Down:connect(function()
 --on off 
 if st_b6.Text == "" then --on
@@ -6823,39 +4752,10 @@ end)
 end
 end)
 
-st_t2.Parent = b_page9
-st_t2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-st_t2.Position = UDim2.new(0, 0, 0.5200000000, 0)
-st_t2.Size = UDim2.new(0, 498, 0, 30)
-st_t2.BorderColor3 = Color3.fromRGB(250, 250, 250)
-st_t2.Font = Enum.Font.Ubuntu
-st_t2.Text = "Setting Skill"
-st_t2.TextColor3 = Color3.fromRGB(255, 255, 255)
-st_t2.TextSize = 14.000
-st_t2.TextWrapped = true
+make_textlabel(st_t2, b_page9,"Setting Skill", UDim2.new(0, 0, 0.5200000000, 0))
 
-st_f7.Parent = b_page9
-st_f7.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-st_f7.Position = UDim2.new(0, 0, 0.5900000000, 0)
-st_f7.Size = UDim2.new(0, 498, 0, 30)
-st_f7.BorderColor3 = Color3.fromRGB(250, 250, 250)
-st_f7.Font = Enum.Font.Ubuntu
-st_f7.Text = "   Skill Z"
-st_f7.TextColor3 = Color3.fromRGB(255, 255, 255)
-st_f7.TextSize = 14.000
-st_f7.TextWrapped = true
-st_f7.TextXAlignment = Enum.TextXAlignment.Left
-
-st_b7.Name = "st_b7"
-st_b7.Parent = st_f7
-st_b7.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-st_b7.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-st_b7.Size = UDim2.new(0, 20, 0, 20)
-st_b7.BorderColor3 = Color3.fromRGB(250, 250, 250)
-st_b7.Font = Enum.Font.SourceSans
+make_together(st_f7, st_b7 , b_page9, "   Skill Z",  UDim2.new(0, 0, 0.5900000000, 0))
 st_b7.Text = "X"
-st_b7.TextColor3 = Color3.fromRGB(250, 250, 250)
-st_b7.TextSize = 30.000
 st_b7.MouseButton1Down:connect(function()
 --on off 
 if st_b7.Text == "" then --on
@@ -6868,28 +4768,8 @@ end
 end)
 _G.st_b7 = true
 
-st_f8.Parent = b_page9
-st_f8.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-st_f8.Position = UDim2.new(0, 0, 0.6600000000, 0)
-st_f8.Size = UDim2.new(0, 498, 0, 30)
-st_f8.BorderColor3 = Color3.fromRGB(250, 250, 250)
-st_f8.Font = Enum.Font.Ubuntu
-st_f8.Text = "   Skill X"
-st_f8.TextColor3 = Color3.fromRGB(255, 255, 255)
-st_f8.TextSize = 14.000
-st_f8.TextWrapped = true
-st_f8.TextXAlignment = Enum.TextXAlignment.Left
-
-st_b8.Name = "st_b8"
-st_b8.Parent = st_f8
-st_b8.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-st_b8.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-st_b8.Size = UDim2.new(0, 20, 0, 20)
-st_b8.BorderColor3 = Color3.fromRGB(250, 250, 250)
-st_b8.Font = Enum.Font.SourceSans
+make_together(st_f8, st_b8 , b_page9, "   Skill X",  UDim2.new(0, 0, 0.6600000000, 0))
 st_b8.Text = "X"
-st_b8.TextColor3 = Color3.fromRGB(250, 250, 250)
-st_b8.TextSize = 30.000
 st_b8.MouseButton1Down:connect(function()
 --on off 
 if st_b8.Text == "" then --on
@@ -6902,28 +4782,9 @@ end
 end)
 _G.st_b8 = true
 
-st_f9.Parent = b_page9
-st_f9.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-st_f9.Position = UDim2.new(0, 0, 0.7300000000, 0)
-st_f9.Size = UDim2.new(0, 498, 0, 30)
-st_f9.BorderColor3 = Color3.fromRGB(250, 250, 250)
-st_f9.Font = Enum.Font.Ubuntu
-st_f9.Text = "   Skill C"
-st_f9.TextColor3 = Color3.fromRGB(255, 255, 255)
-st_f9.TextSize = 14.000
-st_f9.TextWrapped = true
-st_f9.TextXAlignment = Enum.TextXAlignment.Left
 
-st_b9.Name = "st_b9"
-st_b9.Parent = st_f9
-st_b9.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-st_b9.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-st_b9.Size = UDim2.new(0, 20, 0, 20)
-st_b9.BorderColor3 = Color3.fromRGB(250, 250, 250)
-st_b9.Font = Enum.Font.SourceSans
+make_together(st_f9, st_b9 , b_page9, "   Skill C",  UDim2.new(0, 0, 0.7300000000, 0))
 st_b9.Text = "X"
-st_b9.TextColor3 = Color3.fromRGB(250, 250, 250)
-st_b9.TextSize = 30.000
 st_b9.MouseButton1Down:connect(function()
 --on off 
 if st_b9.Text == "" then --on
@@ -6936,28 +4797,8 @@ end
 end)
 _G.st_b9 = true
 
-st_f10.Parent = b_page9
-st_f10.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-st_f10.Position = UDim2.new(0, 0, 0.8000000000, 0)
-st_f10.Size = UDim2.new(0, 498, 0, 30)
-st_f10.BorderColor3 = Color3.fromRGB(250, 250, 250)
-st_f10.Font = Enum.Font.Ubuntu
-st_f10.Text = "   Skill V"
-st_f10.TextColor3 = Color3.fromRGB(255, 255, 255)
-st_f10.TextSize = 14.000
-st_f10.TextWrapped = true
-st_f10.TextXAlignment = Enum.TextXAlignment.Left
-
-st_b10.Name = "st_b10"
-st_b10.Parent = st_f10
-st_b10.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-st_b10.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-st_b10.Size = UDim2.new(0, 20, 0, 20)
-st_b10.BorderColor3 = Color3.fromRGB(250, 250, 250)
-st_b10.Font = Enum.Font.SourceSans
+make_together(st_f10, st_b10 , b_page9, "   Skill V",  UDim2.new(0, 0, 0.8000000000, 0))
 st_b10.Text = "X"
-st_b10.TextColor3 = Color3.fromRGB(250, 250, 250)
-st_b10.TextSize = 30.000
 st_b10.MouseButton1Down:connect(function()
 --on off 
 if st_b10.Text == "" then --on
@@ -6970,28 +4811,9 @@ end
 end)
 _G.st_b10 = true
 
-st_f11.Parent = b_page9
-st_f11.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-st_f11.Position = UDim2.new(0, 0, 0.8700000000, 0)
-st_f11.Size = UDim2.new(0, 498, 0, 30)
-st_f11.BorderColor3 = Color3.fromRGB(250, 250, 250)
-st_f11.Font = Enum.Font.Ubuntu
-st_f11.Text = "   Skill F"
-st_f11.TextColor3 = Color3.fromRGB(255, 255, 255)
-st_f11.TextSize = 14.000
-st_f11.TextWrapped = true
-st_f11.TextXAlignment = Enum.TextXAlignment.Left
 
-st_b11.Name = "st_b11"
-st_b11.Parent = st_f11
-st_b11.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-st_b11.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-st_b11.Size = UDim2.new(0, 20, 0, 20)
-st_b11.BorderColor3 = Color3.fromRGB(250, 250, 250)
-st_b11.Font = Enum.Font.SourceSans
+make_together(st_f11, st_b11, b_page9, "   Skill F",  UDim2.new(0, 0, 0.8700000000, 0))
 st_b11.Text = "X"
-st_b11.TextColor3 = Color3.fromRGB(250, 250, 250)
-st_b11.TextSize = 30.000
 st_b11.MouseButton1Down:connect(function()
 --on off 
 if st_b11.Text == "" then --on
@@ -7004,66 +4826,9 @@ end
 end)
 _G.st_b11 = true
 
-st_t3.Parent = b_page9
-st_t3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-st_t3.Position = UDim2.new(0, 0, 0.9400000000, 0)
-st_t3.Size = UDim2.new(0, 498, 0, 30)
-st_t3.BorderColor3 = Color3.fromRGB(250, 250, 250)
-st_t3.Font = Enum.Font.Ubuntu
-st_t3.Text = "Screen Gui"
-st_t3.TextColor3 = Color3.fromRGB(255, 255, 255)
-st_t3.TextSize = 14.000
-st_t3.TextWrapped = true
-
-st_f12.Parent = b_page9
-st_f12.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-st_f12.Position = UDim2.new(0, 0, 1.0100000000, 0)
-st_f12.Size = UDim2.new(0, 498, 0, 30)
-st_f12.BorderColor3 = Color3.fromRGB(250, 250, 250)
-st_f12.Font = Enum.Font.Ubuntu
-st_f12.Text = "   Black Screen"
-st_f12.TextColor3 = Color3.fromRGB(255, 255, 255)
-st_f12.TextSize = 14.000
-st_f12.TextWrapped = true
-st_f12.TextXAlignment = Enum.TextXAlignment.Left
-
-st_b12.Name = "st_b12"
-st_b12.Parent = st_f12
-st_b12.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-st_b12.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-st_b12.Size = UDim2.new(0, 20, 0, 20)
-st_b12.BorderColor3 = Color3.fromRGB(250, 250, 250)
-st_b12.Font = Enum.Font.SourceSans
-st_b12.Text = ""
-st_b12.TextColor3 = Color3.fromRGB(250, 250, 250)
-st_b12.TextSize = 30.000
-st_b12.MouseButton1Down:connect(function()
---on off 
-if st_b12.Text == "" then --on
-st_b12.Text = "X"
-_G.st_b12 = true
-elseif st_b12.Text == "X" then --off
-st_b12.Text = ""
-_G.st_b12 = false
-end
-end)
-game:GetService('RunService').RenderStepped:connect(function()
-if _G.st_b12 then --script
-
-end end)
-
 
 -- // moon - race
-mr_t1.Parent = b_page11
-mr_t1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-mr_t1.Position = UDim2.new(0, 0, 0.0300000000, 0)
-mr_t1.Size = UDim2.new(0, 498, 0, 30)
-mr_t1.BorderColor3 = Color3.fromRGB(250, 250, 250)
-mr_t1.Font = Enum.Font.Ubuntu
-mr_t1.Text = "Check Moon"
-mr_t1.TextColor3 = Color3.fromRGB(255, 255, 255)
-mr_t1.TextSize = 14.000
-mr_t1.TextWrapped = true
+make_textlabel(mr_t1, b_page11 ,"Check Moon", UDim2.new(0, 0, 0.0300000000, 0))
 
 mr_cmoon = Instance.new("TextLabel")
 mr_cmoon.Parent = b_page11
@@ -7117,39 +4882,9 @@ end
  
  if game.PlaceId == 4442272183 or game.PlaceId == 7449423635 then
 
-mr_t2.Parent = b_page11
-mr_t2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-mr_t2.Position = UDim2.new(0, 0, 0.1700000000, 0)
-mr_t2.Size = UDim2.new(0, 498, 0, 30)
-mr_t2.BorderColor3 = Color3.fromRGB(250, 250, 250)
-mr_t2.Font = Enum.Font.Ubuntu
-mr_t2.Text = "Race"
-mr_t2.TextColor3 = Color3.fromRGB(255, 255, 255)
-mr_t2.TextSize = 14.000
-mr_t2.TextWrapped = true
+make_textlabel(mr_t2, b_page11 ,"Race", UDim2.new(0, 0, 0.1700000000, 0))
 
-mr_f1.Parent = b_page11
-mr_f1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-mr_f1.Position = UDim2.new(0, 0, 0.2400000000, 0)
-mr_f1.Size = UDim2.new(0, 498, 0, 30)
-mr_f1.BorderColor3 = Color3.fromRGB(250, 250, 250)
-mr_f1.Font = Enum.Font.Ubuntu
-mr_f1.Text = "   Teleport NPC Up Race"
-mr_f1.TextColor3 = Color3.fromRGB(255, 255, 255)
-mr_f1.TextSize = 14.000
-mr_f1.TextWrapped = true
-mr_f1.TextXAlignment = Enum.TextXAlignment.Left
-
-mr_b1.Name = "mr_b1"
-mr_b1.Parent = mr_f1
-mr_b1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-mr_b1.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-mr_b1.Size = UDim2.new(0, 20, 0, 20)
-mr_b1.BorderColor3 = Color3.fromRGB(250, 250, 250)
-mr_b1.Font = Enum.Font.SourceSans
-mr_b1.Text = ""
-mr_b1.TextColor3 = Color3.fromRGB(250, 250, 250)
-mr_b1.TextSize = 30.000
+make_together(mr_f1, mr_b1 , b_page10, "   Teleport Npc Up Race",  UDim2.new(0, 0, 0.2400000000, 0))
 mr_b1.MouseButton1Down:connect(function()
 --on off 
 if mr_b1.Text == "" then --on
@@ -7175,28 +4910,8 @@ end end end)
 end
 
 if game.PlaceId == 4442272183 then -- sea 2
-mr_f2.Parent = b_page11
-mr_f2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-mr_f2.Position = UDim2.new(0, 0, 0.3100000000, 0)
-mr_f2.Size = UDim2.new(0, 498, 0, 30)
-mr_f2.BorderColor3 = Color3.fromRGB(250, 250, 250)
-mr_f2.Font = Enum.Font.Ubuntu
-mr_f2.Text = "   Auto Up Race V2"
-mr_f2.TextColor3 = Color3.fromRGB(255, 255, 255)
-mr_f2.TextSize = 14.000
-mr_f2.TextWrapped = true
-mr_f2.TextXAlignment = Enum.TextXAlignment.Left
 
-mr_b2.Name = "mr_b2"
-mr_b2.Parent = mr_f2
-mr_b2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-mr_b2.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-mr_b2.Size = UDim2.new(0, 20, 0, 20)
-mr_b2.BorderColor3 = Color3.fromRGB(250, 250, 250)
-mr_b2.Font = Enum.Font.SourceSans
-mr_b2.Text = ""
-mr_b2.TextColor3 = Color3.fromRGB(250, 250, 250)
-mr_b2.TextSize = 30.000
+make_together(mr_f2, mr_b2 , b_page10, "   Auto Up Race V2",  UDim2.new(0, 0, 0.3100000000, 0))
 mr_b2.MouseButton1Down:connect(function()
 --on off 
 if mr_b2.Text == "" then --on
@@ -8392,39 +6107,9 @@ spawn(function()
             end end end) end end)
             
   -- // config
-config_t1.Parent = b_page15
-config_t1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-config_t1.Position = UDim2.new(0, 0, 0.0300000000, 0)
-config_t1.Size = UDim2.new(0, 498, 0, 30)
-config_t1.BorderColor3 = Color3.fromRGB(250, 250, 250)
-config_t1.Font = Enum.Font.Ubuntu
-config_t1.Text = "config"
-config_t1.TextColor3 = Color3.fromRGB(255, 255, 255)
-config_t1.TextSize = 14.000
-config_t1.TextWrapped = true
+make_textlabel(config_t1, b_page15, "Config", UDim2.new(0, 0, 0.0300000000, 0))
 
-config_f1.Parent = b_page15
-config_f1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-config_f1.Position = UDim2.new(0, 0, 0.1000000000, 0)
-config_f1.Size = UDim2.new(0, 498, 0, 30)
-config_f1.BorderColor3 = Color3.fromRGB(250, 250, 250)
-config_f1.Font = Enum.Font.Ubuntu
-config_f1.Text = "   Auto Find Fruit - Sever Hop"
-config_f1.TextColor3 = Color3.fromRGB(255, 255, 255)
-config_f1.TextSize = 14.000
-config_f1.TextWrapped = true
-config_f1.TextXAlignment = Enum.TextXAlignment.Left
-
-config_b1.Name = "config_b1"
-config_b1.Parent = config_f1
-config_b1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-config_b1.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-config_b1.Size = UDim2.new(0, 20, 0, 20)
-config_b1.BorderColor3 = Color3.fromRGB(250, 250, 250)
-config_b1.Font = Enum.Font.SourceSans
-config_b1.Text = ""
-config_b1.TextColor3 = Color3.fromRGB(250, 250, 250)
-config_b1.TextSize = 30.000
+make_together(config_f1, config_b1 , b_page15, "   Auto Find Fruit - Sever Hop",  UDim2.new(0, 0, 0.1000000000, 0))
 config_b1.MouseButton1Down:connect(function()
 if _G.config_buy then
 config_f2.Visible = false
@@ -8434,28 +6119,7 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/
 end
 end)
 
-config_f2.Parent = b_page15
-config_f2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-config_f2.Position = UDim2.new(0, 0, 0.1700000000, 0)
-config_f2.Size = UDim2.new(0, 498, 0, 30)
-config_f2.BorderColor3 = Color3.fromRGB(250, 250, 250)
-config_f2.Font = Enum.Font.Ubuntu
-config_f2.Text = "   Auto Buy Haki Color - Sever Hop"
-config_f2.TextColor3 = Color3.fromRGB(255, 255, 255)
-config_f2.TextSize = 14.000
-config_f2.TextWrapped = true
-config_f2.TextXAlignment = Enum.TextXAlignment.Left
-
-config_b2.Name = "config_b2"
-config_b2.Parent = config_f2
-config_b2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-config_b2.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-config_b2.Size = UDim2.new(0, 20, 0, 20)
-config_b2.BorderColor3 = Color3.fromRGB(250, 250, 250)
-config_b2.Font = Enum.Font.SourceSans
-config_b2.Text = ""
-config_b2.TextColor3 = Color3.fromRGB(250, 250, 250)
-config_b2.TextSize = 30.000
+make_together(config_f2, config_b2 , b_page15, "   Auto Buy Haki Color - Sever Hop",  UDim2.new(0, 0, 0.1700000000, 0))
 config_b2.MouseButton1Down:connect(function()
 if _G.config_buy then
 config_f2.Visible = false
@@ -8465,29 +6129,7 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/
 end
 end)
 
-config_f3.Parent = b_page15
-config_f3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-config_f3.Position = UDim2.new(0, 0, 0.2400000000, 0)
-config_f3.Size = UDim2.new(0, 498, 0, 30)
-config_f3.BorderColor3 = Color3.fromRGB(250, 250, 250)
-config_f3.Font = Enum.Font.Ubuntu
-config_f3.Text = "   Sea 2 - sea 3"
-config_f3.TextColor3 = Color3.fromRGB(255, 255, 255)
-config_f3.TextSize = 14.000
-config_f3.TextWrapped = true
-config_f3.TextXAlignment = Enum.TextXAlignment.Left
-
-config_b3.Name = "config_b3"
-config_b3.Parent = config_f3
-config_b3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-config_b3.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-config_b3.Size = UDim2.new(0, 20, 0, 20)
-config_b3.BorderColor3 = Color3.fromRGB(250, 250, 250)
-config_b3.Font = Enum.Font.SourceSans
-config_b3.Text = ""
-config_b3.TextColor3 = Color3.fromRGB(250, 250, 250)
-config_b3.TextSize = 30.000
-
+make_together(config_f3, config_b3 , b_page15, "   Sea2 '- Sea3",  UDim2.new(0, 0, 0.2400000000, 0))
 
 if game.PlaceId == 2753915549 then -- sea1
 config_f2.Visible = false
@@ -8518,16 +6160,7 @@ end
           
  -- // combat
 
-c_t1.Parent = b_page7
-c_t1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-c_t1.Position = UDim2.new(0, 0, 0.0300000000, 0)
-c_t1.Size = UDim2.new(0, 498, 0, 30)
-c_t1.BorderColor3 = Color3.fromRGB(250, 250, 250)
-c_t1.Font = Enum.Font.Ubuntu
-c_t1.Text = "Data Player"
-c_t1.TextColor3 = Color3.fromRGB(255, 255, 255)
-c_t1.TextSize = 14.000
-c_t1.TextWrapped = true
+make_textlabel(c_t1, b_page7, "Data Player", UDim2.new(0, 0, 0.0300000000, 0))
 
 c_cbar.Parent = b_page7
 c_cbar.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
@@ -8620,7 +6253,7 @@ return f
 end
 
 game:GetService('RunService').RenderStepped:connect(function()
-if c_tb.Text == "Vui lòng nhập tên Người Chơi" then
+if c_tb.Text == "Player : Select" then
 else
 local target = unpack(GetPlayer(c_tb.Text)).Character
 local tar = unpack(GetPlayer(c_tb.Text))
@@ -8645,6 +6278,25 @@ c_tb.MouseButton1Down:connect(function()
 c_prlbar.Visible = true
 end)
 
+-- player combat
+function c_bprl(name1, parent)
+name1 = Instance.new("TextButton")
+name1.Name = "name1"
+name1.Parent = parent
+name1.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
+name1.Position = UDim2.new(0.80000000, 0, 0.050000000, 0)
+name1.Size = UDim2.new(0, 80, 0, 25)
+name1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+name1.Font = Enum.Font.SourceSans
+name1.Text = "Chọn"
+name1.TextColor3 = Color3.fromRGB(0, 0, 0)
+name1.TextSize = 16.000
+name1.MouseButton1Down:connect(function()
+c_prlbar.Visible = false
+c_tb.Text = parent.Text
+end) end
+
+
 function prlbar()
 
 c_prlbar.Name = "c_prlbar" --raid
@@ -8668,21 +6320,7 @@ c_fprl1.TextColor3 = Color3.fromRGB(255, 255, 255)
 c_fprl1.TextSize = 14.000
 c_fprl1.TextWrapped = true
 c_fprl1.TextXAlignment = Enum.TextXAlignment.Left
-
-c_bprl1.Name = "c_bprl1"
-c_bprl1.Parent = c_fprl1
-c_bprl1.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
-c_bprl1.Position = UDim2.new(0.80000000, 0, 0.050000000, 0)
-c_bprl1.Size = UDim2.new(0, 80, 0, 25)
-c_bprl1.BorderColor3 = Color3.fromRGB(0, 0, 0)
-c_bprl1.Font = Enum.Font.SourceSans
-c_bprl1.Text = "Chọn"
-c_bprl1.TextColor3 = Color3.fromRGB(0, 0, 0)
-c_bprl1.TextSize = 16.000
-c_bprl1.MouseButton1Down:connect(function()
-c_prlbar.Visible = false
-c_tb.Text = c_fprl1.Text
-end)
+c_bprl(c_bprl1, c_fprl1)
 
 c_fprl2.Parent = c_prlbar
 c_fprl2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
@@ -8695,21 +6333,7 @@ c_fprl2.TextColor3 = Color3.fromRGB(255, 255, 255)
 c_fprl2.TextSize = 14.000
 c_fprl2.TextWrapped = true
 c_fprl2.TextXAlignment = Enum.TextXAlignment.Left
-
-c_bprl2.Name = "c_bprl2"
-c_bprl2.Parent = c_fprl2
-c_bprl2.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
-c_bprl2.Position = UDim2.new(0.80000000, 0, 0.050000000, 0)
-c_bprl2.Size = UDim2.new(0, 80, 0, 25)
-c_bprl2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-c_bprl2.Font = Enum.Font.SourceSans
-c_bprl2.Text = "Chọn"
-c_bprl2.TextColor3 = Color3.fromRGB(0, 0, 0)
-c_bprl2.TextSize = 16.000
-c_bprl2.MouseButton1Down:connect(function()
-c_prlbar.Visible = false
-c_tb.Text = c_fprl2.Text
-end)
+c_bprl(c_bprl2, c_fprl2)
 
 c_fprl3.Parent = c_prlbar
 c_fprl3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
@@ -8722,21 +6346,7 @@ c_fprl3.TextColor3 = Color3.fromRGB(255, 255, 255)
 c_fprl3.TextSize = 14.000
 c_fprl3.TextWrapped = true
 c_fprl3.TextXAlignment = Enum.TextXAlignment.Left
-
-c_bprl3.Name = "c_bprl3"
-c_bprl3.Parent = c_fprl3
-c_bprl3.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
-c_bprl3.Position = UDim2.new(0.80000000, 0, 0.050000000, 0)
-c_bprl3.Size = UDim2.new(0, 80, 0, 25)
-c_bprl3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-c_bprl3.Font = Enum.Font.SourceSans
-c_bprl3.Text = "Chọn"
-c_bprl3.TextColor3 = Color3.fromRGB(0, 0, 0)
-c_bprl3.TextSize = 16.000
-c_bprl3.MouseButton1Down:connect(function()
-c_prlbar.Visible = false
-c_tb.Text = c_fprl3.Text
-end)
+c_bprl(c_bprl3, c_fprl3)
 
 c_fprl4.Parent = c_prlbar
 c_fprl4.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
@@ -8749,21 +6359,7 @@ c_fprl4.TextColor3 = Color3.fromRGB(255, 255, 255)
 c_fprl4.TextSize = 14.000
 c_fprl4.TextWrapped = true
 c_fprl4.TextXAlignment = Enum.TextXAlignment.Left
-
-c_bprl4.Name = "c_bprl4"
-c_bprl4.Parent = c_fprl4
-c_bprl4.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
-c_bprl4.Position = UDim2.new(0.80000000, 0, 0.050000000, 0)
-c_bprl4.Size = UDim2.new(0, 80, 0, 25)
-c_bprl4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-c_bprl4.Font = Enum.Font.SourceSans
-c_bprl4.Text = "Chọn"
-c_bprl4.TextColor3 = Color3.fromRGB(0, 0, 0)
-c_bprl4.TextSize = 16.000
-c_bprl4.MouseButton1Down:connect(function()
-c_prlbar.Visible = false
-c_tb.Text = c_fprl4.Text
-end)
+c_bprl(c_bprl4, c_fprl4)
 
 c_fprl5.Parent = c_prlbar
 c_fprl5.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
@@ -8776,21 +6372,7 @@ c_fprl5.TextColor3 = Color3.fromRGB(255, 255, 255)
 c_fprl5.TextSize = 14.000
 c_fprl5.TextWrapped = true
 c_fprl5.TextXAlignment = Enum.TextXAlignment.Left
-
-c_bprl5.Name = "c_bprl5"
-c_bprl5.Parent = c_fprl5
-c_bprl5.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
-c_bprl5.Position = UDim2.new(0.80000000, 0, 0.050000000, 0)
-c_bprl5.Size = UDim2.new(0, 80, 0, 25)
-c_bprl5.BorderColor3 = Color3.fromRGB(0, 0, 0)
-c_bprl5.Font = Enum.Font.SourceSans
-c_bprl5.Text = "Chọn"
-c_bprl5.TextColor3 = Color3.fromRGB(0, 0, 0)
-c_bprl5.TextSize = 16.000
-c_bprl5.MouseButton1Down:connect(function()
-c_prlbar.Visible = false
-c_tb.Text = c_fprl5.Text
-end)
+c_bprl(c_bprl5, c_fprl5)
 
 c_fprl6.Parent = c_prlbar
 c_fprl6.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
@@ -8803,21 +6385,7 @@ c_fprl6.TextColor3 = Color3.fromRGB(255, 255, 255)
 c_fprl6.TextSize = 14.000
 c_fprl6.TextWrapped = true
 c_fprl6.TextXAlignment = Enum.TextXAlignment.Left
-
-c_bprl6.Name = "c_bprl6"
-c_bprl6.Parent = c_fprl6
-c_bprl6.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
-c_bprl6.Position = UDim2.new(0.80000000, 0, 0.050000000, 0)
-c_bprl6.Size = UDim2.new(0, 80, 0, 25)
-c_bprl6.BorderColor3 = Color3.fromRGB(0, 0, 0)
-c_bprl6.Font = Enum.Font.SourceSans
-c_bprl6.Text = "Chọn"
-c_bprl6.TextColor3 = Color3.fromRGB(0, 0, 0)
-c_bprl6.TextSize = 16.000
-c_bprl6.MouseButton1Down:connect(function()
-c_prlbar.Visible = false
-c_tb.Text = c_fprl6.Text
-end)
+c_bprl(c_bprl6, c_fprl6)
 
 c_fprl7.Parent = c_prlbar
 c_fprl7.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
@@ -8830,21 +6398,7 @@ c_fprl7.TextColor3 = Color3.fromRGB(255, 255, 255)
 c_fprl7.TextSize = 14.000
 c_fprl7.TextWrapped = true
 c_fprl7.TextXAlignment = Enum.TextXAlignment.Left
-
-c_bprl7.Name = "c_bprl7"
-c_bprl7.Parent = c_fprl7
-c_bprl7.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
-c_bprl7.Position = UDim2.new(0.80000000, 0, 0.050000000, 0)
-c_bprl7.Size = UDim2.new(0, 80, 0, 25)
-c_bprl7.BorderColor3 = Color3.fromRGB(0, 0, 0)
-c_bprl7.Font = Enum.Font.SourceSans
-c_bprl7.Text = "Chọn"
-c_bprl7.TextColor3 = Color3.fromRGB(0, 0, 0)
-c_bprl7.TextSize = 16.000
-c_bprl7.MouseButton1Down:connect(function()
-c_prlbar.Visible = false
-c_tb.Text = c_fprl7.Text
-end)
+c_bprl(c_bprl7, c_fprl7)
 
 c_fprl8.Parent = c_prlbar
 c_fprl8.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
@@ -8857,21 +6411,7 @@ c_fprl8.TextColor3 = Color3.fromRGB(255, 255, 255)
 c_fprl8.TextSize = 14.000
 c_fprl8.TextWrapped = true
 c_fprl8.TextXAlignment = Enum.TextXAlignment.Left
-
-c_bprl8.Name = "c_bprl8"
-c_bprl8.Parent = c_fprl8
-c_bprl8.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
-c_bprl8.Position = UDim2.new(0.80000000, 0, 0.050000000, 0)
-c_bprl8.Size = UDim2.new(0, 80, 0, 25)
-c_bprl8.BorderColor3 = Color3.fromRGB(0, 0, 0)
-c_bprl8.Font = Enum.Font.SourceSans
-c_bprl8.Text = "Chọn"
-c_bprl8.TextColor3 = Color3.fromRGB(0, 0, 0)
-c_bprl8.TextSize = 16.000
-c_bprl8.MouseButton1Down:connect(function()
-c_prlbar.Visible = false
-c_tb.Text = c_fprl8.Text
-end)
+c_bprl(c_bprl8, c_fprl8)
 
 c_fprl9.Parent = c_prlbar
 c_fprl9.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
@@ -8884,21 +6424,7 @@ c_fprl9.TextColor3 = Color3.fromRGB(255, 255, 255)
 c_fprl9.TextSize = 14.000
 c_fprl9.TextWrapped = true
 c_fprl9.TextXAlignment = Enum.TextXAlignment.Left
-
-c_bprl9.Name = "c_bprl9"
-c_bprl9.Parent = c_fprl9
-c_bprl9.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
-c_bprl9.Position = UDim2.new(0.80000000, 0, 0.050000000, 0)
-c_bprl9.Size = UDim2.new(0, 80, 0, 25)
-c_bprl9.BorderColor3 = Color3.fromRGB(0, 0, 0)
-c_bprl9.Font = Enum.Font.SourceSans
-c_bprl9.Text = "Chọn"
-c_bprl9.TextColor3 = Color3.fromRGB(0, 0, 0)
-c_bprl9.TextSize = 16.000
-c_bprl9.MouseButton1Down:connect(function()
-c_prlbar.Visible = false
-c_tb.Text = c_fprl9.Text
-end)
+c_bprl(c_bprl9, c_fprl9)
 
 c_fprl10.Parent = c_prlbar
 c_fprl10.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
@@ -8911,21 +6437,7 @@ c_fprl10.TextColor3 = Color3.fromRGB(255, 255, 255)
 c_fprl10.TextSize = 14.000
 c_fprl10.TextWrapped = true
 c_fprl10.TextXAlignment = Enum.TextXAlignment.Left
-
-c_bprl10.Name = "c_bprl10"
-c_bprl10.Parent = c_fprl10
-c_bprl10.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
-c_bprl10.Position = UDim2.new(0.80000000, 0, 0.050000000, 0)
-c_bprl10.Size = UDim2.new(0, 80, 0, 25)
-c_bprl10.BorderColor3 = Color3.fromRGB(0, 0, 0)
-c_bprl10.Font = Enum.Font.SourceSans
-c_bprl10.Text = "Chọn"
-c_bprl10.TextColor3 = Color3.fromRGB(0, 0, 0)
-c_bprl10.TextSize = 16.000
-c_bprl10.MouseButton1Down:connect(function()
-c_prlbar.Visible = false
-c_tb.Text = c_fprl10.Text
-end)
+c_bprl(c_bprl10, c_fprl10)
 
 c_fprl11.Parent = c_prlbar
 c_fprl11.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
@@ -8938,21 +6450,7 @@ c_fprl11.TextColor3 = Color3.fromRGB(255, 255, 255)
 c_fprl11.TextSize = 14.000
 c_fprl11.TextWrapped = true
 c_fprl11.TextXAlignment = Enum.TextXAlignment.Left
-
-c_bprl11.Name = "c_bprl11"
-c_bprl11.Parent = c_fprl11
-c_bprl11.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
-c_bprl11.Position = UDim2.new(0.80000000, 0, 0.050000000, 0)
-c_bprl11.Size = UDim2.new(0, 80, 0, 25)
-c_bprl11.BorderColor3 = Color3.fromRGB(0, 0, 0)
-c_bprl11.Font = Enum.Font.SourceSans
-c_bprl11.Text = "Chọn"
-c_bprl11.TextColor3 = Color3.fromRGB(0, 0, 0)
-c_bprl11.TextSize = 16.000
-c_bprl11.MouseButton1Down:connect(function()
-c_prlbar.Visible = false
-c_tb.Text = c_fprl11.Text
-end)
+c_bprl(c_bprl11, c_fprl11)
 
 c_fprl12.Parent = c_prlbar
 c_fprl12.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
@@ -8965,21 +6463,7 @@ c_fprl12.TextColor3 = Color3.fromRGB(255, 255, 255)
 c_fprl12.TextSize = 14.000
 c_fprl12.TextWrapped = true
 c_fprl12.TextXAlignment = Enum.TextXAlignment.Left
-
-c_bprl12.Name = "c_bprl12"
-c_bprl12.Parent = c_fprl12
-c_bprl12.BackgroundColor3 = Color3.fromRGB(250, 250, 250)
-c_bprl12.Position = UDim2.new(0.80000000, 0, 0.050000000, 0)
-c_bprl12.Size = UDim2.new(0, 80, 0, 25)
-c_bprl12.BorderColor3 = Color3.fromRGB(0, 0, 0)
-c_bprl12.Font = Enum.Font.SourceSans
-c_bprl12.Text = "Chọn"
-c_bprl12.TextColor3 = Color3.fromRGB(0, 0, 0)
-c_bprl12.TextSize = 16.000
-c_bprl12.MouseButton1Down:connect(function()
-c_prlbar.Visible = false
-c_tb.Text = c_fprl12.Text
-end)
+c_bprl(c_bprl12, c_fprl12)
 
 end
 
@@ -9037,16 +6521,7 @@ local script = Instance.new('LocalScript')
 	end
 end)
 
-c_get.Parent = b_page7
-c_get.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-c_get.Position = UDim2.new(0, 0, 0.3100000000, 0)
-c_get.Size = UDim2.new(0, 498, 0, 30)
-c_get.BorderColor3 = Color3.fromRGB(250, 250, 250)
-c_get.Font = Enum.Font.Ubuntu
-c_get.Text = "Click Get Quest Hunt Player"
-c_get.TextColor3 = Color3.fromRGB(255, 255, 255)
-c_get.TextSize = 14.000
-c_get.TextWrapped = true
+make_textlabel(c_get, b_page7, "Get Quest Hunt Player", UDim2.new(0, 0, 0.3100000000, 0))
 c_get.MouseButton1Down:connect(function()
 local args = {
     [1] = "PlayerHunter"
@@ -9054,28 +6529,7 @@ local args = {
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
 end)
 
-c_f1.Parent = b_page7
-c_f1.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-c_f1.Position = UDim2.new(0, 0, 0.3800000000, 0)
-c_f1.Size = UDim2.new(0, 498, 0, 30)
-c_f1.BorderColor3 = Color3.fromRGB(250, 250, 250)
-c_f1.Font = Enum.Font.Ubuntu
-c_f1.Text = "   Teleport Player"
-c_f1.TextColor3 = Color3.fromRGB(255, 255, 255)
-c_f1.TextSize = 14.000
-c_f1.TextWrapped = true
-c_f1.TextXAlignment = Enum.TextXAlignment.Left
-
-c_b1.Name = "c_b1"
-c_b1.Parent = c_f1
-c_b1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-c_b1.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-c_b1.Size = UDim2.new(0, 20, 0, 20)
-c_b1.BorderColor3 = Color3.fromRGB(250, 250, 250)
-c_b1.Font = Enum.Font.SourceSans
-c_b1.Text = ""
-c_b1.TextColor3 = Color3.fromRGB(250, 250, 250)
-c_b1.TextSize = 30.000
+make_together(c_f1, c_b1 , b_page7, "   Teleport Player",  UDim2.new(0, 0, 0.3800000000, 0))
 c_b1.MouseButton1Down:connect(function()
 --on off 
 if c_b1.Text == "" then --on
@@ -9119,28 +6573,7 @@ game:GetService("TweenService"):Create(
                     ):Play()       
                     end end)
 
-c_f2.Parent = b_page7
-c_f2.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-c_f2.Position = UDim2.new(0, 0, 0.5200000000, 0)
-c_f2.Size = UDim2.new(0, 498, 0, 30)
-c_f2.BorderColor3 = Color3.fromRGB(250, 250, 250)
-c_f2.Font = Enum.Font.Ubuntu
-c_f2.Text = "   Kill Player | Tool"
-c_f2.TextColor3 = Color3.fromRGB(255, 255, 255)
-c_f2.TextSize = 14.000
-c_f2.TextWrapped = true
-c_f2.TextXAlignment = Enum.TextXAlignment.Left
-
-c_b2.Name = "c_b2"
-c_b2.Parent = c_f2
-c_b2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-c_b2.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-c_b2.Size = UDim2.new(0, 20, 0, 20)
-c_b2.BorderColor3 = Color3.fromRGB(250, 250, 250)
-c_b2.Font = Enum.Font.SourceSans
-c_b2.Text = ""
-c_b2.TextColor3 = Color3.fromRGB(250, 250, 250)
-c_b2.TextSize = 30.000
+make_together(c_f2, c_b2 , b_page7, "   Kill Player | Tool",  UDim2.new(0, 0, 0.5200000000, 0))
 c_b2.MouseButton1Down:connect(function()
 --on off 
 if c_b2.Text == "" then --on
@@ -9238,28 +6671,7 @@ end end) end end)
             
 
 
-c_f3.Parent = b_page7
-c_f3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-c_f3.Position = UDim2.new(0, 0, 0.4500000000, 0)
-c_f3.Size = UDim2.new(0, 498, 0, 30)
-c_f3.BorderColor3 = Color3.fromRGB(250, 250, 250)
-c_f3.Font = Enum.Font.Ubuntu
-c_f3.Text = "   Kill Player - Auto Skill"
-c_f3.TextColor3 = Color3.fromRGB(255, 255, 255)
-c_f3.TextSize = 14.000
-c_f3.TextWrapped = true
-c_f3.TextXAlignment = Enum.TextXAlignment.Left
-
-c_b3.Name = "c_b3"
-c_b3.Parent = c_f3
-c_b3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-c_b3.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-c_b3.Size = UDim2.new(0, 20, 0, 20)
-c_b3.BorderColor3 = Color3.fromRGB(250, 250, 250)
-c_b3.Font = Enum.Font.SourceSans
-c_b3.Text = ""
-c_b3.TextColor3 = Color3.fromRGB(250, 250, 250)
-c_b3.TextSize = 30.000
+make_together(c_f3, c_b3 , b_page7, "   Kill Player - Auto Skill",  UDim2.new(0, 0, 0.4500000000, 0))
 c_b3.MouseButton1Down:connect(function()
 --on off 
 if c_b3.Text == "" then --on
@@ -9276,7 +6688,7 @@ game:GetService('RunService').RenderStepped:connect(function()
 if _G.c_b3 then --script
 local target = unpack(GetPlayer(c_tb.Text)).Character
 
-if game.Players.LocalPlayer.Character.Humanoid.MaxHealth >= game.Players.LocalPlayer.Character.Humanoid.MaxHealth * 30 / 100 then
+if game.Players.LocalPlayer.Character.Humanoid.MaxHealth > game.Players.LocalPlayer.Character.Humanoid.MaxHealth * 30 / 100 then
 local humanoid = game.Players.LocalPlayer.Character.Humanoid 
 humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
 
@@ -9308,7 +6720,7 @@ humanoid:ChangeState(Enum.HumanoidStateType.Jumping)  -- jump
                target.HumanoidRootPart.Transparency = 1
 game:GetService("TweenService"):Create(
                         game.Players.LocalPlayer.Character.HumanoidRootPart,
-                        TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
+                        TweenInfo.new(0, Enum.EasingStyle.Linear),
                         {CFrame = target.HumanoidRootPart.CFrame* CFrame.new(0, 2500, 0) }
                     ):Play()       
                    end end end)
@@ -9355,39 +6767,9 @@ local gg = getrawmetatable(game)
         return old(...)
     end)
 
-c_t3.Parent = b_page7
-c_t3.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-c_t3.Position = UDim2.new(0, 0, 0.5900000000, 0)
-c_t3.Size = UDim2.new(0, 498, 0, 30)
-c_t3.BorderColor3 = Color3.fromRGB(250, 250, 250)
-c_t3.Font = Enum.Font.Ubuntu
-c_t3.Text = "Aim Bot"
-c_t3.TextColor3 = Color3.fromRGB(255, 255, 255)
-c_t3.TextSize = 14.000
-c_t3.TextWrapped = true
+make_textlabel(c_t3, b_page7, "Aim Bot", UDim2.new(0, 0, 0.5900000000, 0))
 
-c_f4.Parent = b_page7
-c_f4.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
-c_f4.Position = UDim2.new(0, 0, 0.6600000000, 0)
-c_f4.Size = UDim2.new(0, 498, 0, 30)
-c_f4.BorderColor3 = Color3.fromRGB(250, 250, 250)
-c_f4.Font = Enum.Font.Ubuntu
-c_f4.Text = "   Aim Skill"
-c_f4.TextColor3 = Color3.fromRGB(255, 255, 255)
-c_f4.TextSize = 14.000
-c_f4.TextWrapped = true
-c_f4.TextXAlignment = Enum.TextXAlignment.Left
-
-c_b4.Name = "c_b4"
-c_b4.Parent = c_f4
-c_b4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-c_b4.Position = UDim2.new(0.94000000, 0, 0.120000000, 0)
-c_b4.Size = UDim2.new(0, 20, 0, 20)
-c_b4.BorderColor3 = Color3.fromRGB(250, 250, 250)
-c_b4.Font = Enum.Font.SourceSans
-c_b4.Text = ""
-c_b4.TextColor3 = Color3.fromRGB(250, 250, 250)
-c_b4.TextSize = 30.000
+make_together(c_f4, c_b4 , b_page7, "   Aim Skill",  UDim2.new(0, 0, 0.6600000000, 0))
 c_b4.MouseButton1Down:connect(function()
 --on off 
 if c_b4.Text == "" then --on
@@ -9812,12 +7194,6 @@ local function OJTG14_fake_script() -- scripts.LocalScript
 	        buttons[i].Visible = true
 	    end
 	end)
-	
-	for i,v in pairs(script.Parent:GetChildren()) do
-		if v.Text == "Player" then
-			v.Text = ""
-		end
-	end
 
 end
 
@@ -9841,3 +7217,4 @@ game:GetService("UserInputService").JumpRequest:connect(function()
 end)  
 
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Check%20Config%20Blox%20Fruit')))()
+
