@@ -74,6 +74,16 @@ spawn(function()
 
 -- //
 
+local fruitExists = false
+
+game:GetService("UserInputService").InputBegan:Connect(function(io, p)
+	if io.KeyCode == Enum.KeyCode.M then
+		findServer()
+	elseif io.KeyCode == Enum.KeyCode.N then
+		fruitExists = true
+	end
+end)
+
 local connection
 function onRenderStepped()
 end
