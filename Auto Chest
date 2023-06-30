@@ -1,3 +1,29 @@
+local NTTGUI = Instance.new("ScreenGui")
+name = Instance.new("TextLabel")
+
+function make_screengui(name1)
+name1.Name = "name1"
+name1.Parent = game.CoreGui
+name1.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+end
+
+make_screengui(NTTGUI)
+
+name.Parent = NTTGUI
+name.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+name.Position = UDim2.new(0, 0, 0.0000000000, 0)
+name.Size = UDim2.new(0, 208, 0, 30)
+name.BorderColor3 = Color3.fromRGB(250, 250, 250)
+name.Font = Enum.Font.Ubuntu
+name.Text = "   beli"
+name.TextColor3 = Color3.fromRGB(255, 255, 255)
+name.TextSize = 14.000
+name.TextWrapped = true
+name.TextXAlignment = Enum.TextXAlignment.Left
+game:GetService('RunService').RenderStepped:connect(function()
+name.Text = ("   Beli : " ..game:GetService("Players")["LocalPlayer"].Data.Beli.Value)
+end)
+
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetTeam","Marines") 
 
 function TPchest(P1)          
@@ -37,14 +63,14 @@ spawn(function()
   
   spawn(function()
     while task.wait(3.5) do
-        pcall(function()        
+        
             game.Players.LocalPlayer.Character.Humanoid.Health = 0
             wait(.1)
             game.Players.LocalPlayer.Character.Humanoid.Health = 0
             wait(.1)
             game.Players.LocalPlayer.Character.Humanoid.Health = 0            
             wait(5)         
-           end end) end end)
+           end end)
 
 -- //
 
@@ -54,4 +80,4 @@ end
 
 connection = game:GetService("RunService").RenderStepped:Connect(onRenderStepped)
 local queueteleport = syn and syn.queue_on_teleport or queue_on_teleport or fluxus and fluxus.queue_on_teleport
-queueteleport("loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nttvlog112/ntt/main/Auto%20Chest')))()")
+queueteleport("loadstring(game:HttpGet(('111')))()")
