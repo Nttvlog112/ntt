@@ -1,3 +1,4 @@
+game.Players.localPlayer:Kick("yêu cầu liên hệ với người bán script giá 200k")
 _G.config_buy=false
 _G.Settings = {
     checkconfig = {
